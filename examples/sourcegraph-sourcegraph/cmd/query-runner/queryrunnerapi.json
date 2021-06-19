@@ -1,0 +1,409 @@
+{
+  "pathID": "/cmd/query-runner/queryrunnerapi",
+  "documentation": {
+    "identifier": "queryrunnerapi",
+    "newPage": true,
+    "searchKey": "cmd/query-runner/queryrunnerapi",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package queryrunnerapi"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package queryrunnerapi implements a client for the query-runner service. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/query-runner/queryrunnerapi#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#PathSavedQueryWasCreatedOrUpdated",
+              "documentation": {
+                "identifier": "PathSavedQueryWasCreatedOrUpdated",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.PathSavedQueryWasCreatedOrUpdated",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PathSavedQueryWasCreatedOrUpdated"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PathSavedQueryWasCreatedOrUpdated = \"/saved-query-was-created-or-updated\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#PathSavedQueryWasDeleted",
+              "documentation": {
+                "identifier": "PathSavedQueryWasDeleted",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.PathSavedQueryWasDeleted",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PathSavedQueryWasDeleted"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PathSavedQueryWasDeleted = \"/saved-query-was-deleted\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#PathTestNotification",
+              "documentation": {
+                "identifier": "PathTestNotification",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.PathTestNotification",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PathTestNotification"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PathTestNotification = \"/test-notification\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/query-runner/queryrunnerapi#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#queryRunnerURL",
+              "documentation": {
+                "identifier": "queryRunnerURL",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.queryRunnerURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var queryRunnerURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar queryRunnerURL = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Client = &client{\n\tclient: &http.Client{\n\t\tTimeout: 5 * time.Second,\n\t},\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/query-runner/queryrunnerapi#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#SubjectAndConfig",
+              "documentation": {
+                "identifier": "SubjectAndConfig",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.SubjectAndConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SubjectAndConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SubjectAndConfig struct {\n\tSubject api.SettingsSubject\n\tConfig  api.PartialConfigSavedQueries\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#ErrorResponse",
+              "documentation": {
+                "identifier": "ErrorResponse",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.ErrorResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrorResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrorResponse struct {\n\tMessage string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.client",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype client struct {\n\tclient *http.Client\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner/queryrunnerapi#client.SavedQueryWasCreatedOrUpdated",
+                    "documentation": {
+                      "identifier": "client.SavedQueryWasCreatedOrUpdated",
+                      "newPage": false,
+                      "searchKey": "queryrunnerapi.client.SavedQueryWasCreatedOrUpdated",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) SavedQueryWasCreatedOrUpdated(ctx context.Context, subject api.SettingsSubject, config api.PartialConfigSavedQueries, disableSubscriptionNotifications bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) SavedQueryWasCreatedOrUpdated(ctx context.Context, subject api.SettingsSubject, config api.PartialConfigSavedQueries, disableSubscriptionNotifications bool) error\n```\n\nSavedQueryWasCreated should be called whenever a saved query was created or updated after the server has started. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner/queryrunnerapi#client.SavedQueryWasDeleted",
+                    "documentation": {
+                      "identifier": "client.SavedQueryWasDeleted",
+                      "newPage": false,
+                      "searchKey": "queryrunnerapi.client.SavedQueryWasDeleted",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) SavedQueryWasDeleted(ctx context.Context, spec api.SavedQueryIDSpec, disableSubscriptionNotifications bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) SavedQueryWasDeleted(ctx context.Context, spec api.SavedQueryIDSpec, disableSubscriptionNotifications bool) error\n```\n\nSavedQueryWasDeleted should be called whenever a saved query was deleted after the server has started. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner/queryrunnerapi#client.TestNotification",
+                    "documentation": {
+                      "identifier": "client.TestNotification",
+                      "newPage": false,
+                      "searchKey": "queryrunnerapi.client.TestNotification",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) TestNotification(ctx context.Context, savedSearch api.SavedQuerySpecAndConfig)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) TestNotification(ctx context.Context, savedSearch api.SavedQuerySpecAndConfig)\n```\n\nTestNotification is called to send a test notification for a saved search. Users may perform this action to test that the configured notifications are working. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner/queryrunnerapi#client.post",
+                    "documentation": {
+                      "identifier": "client.post",
+                      "newPage": false,
+                      "searchKey": "queryrunnerapi.client.post",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) post(path string, data interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) post(path string, data interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#SavedQueryWasCreatedOrUpdatedArgs",
+              "documentation": {
+                "identifier": "SavedQueryWasCreatedOrUpdatedArgs",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.SavedQueryWasCreatedOrUpdatedArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SavedQueryWasCreatedOrUpdatedArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SavedQueryWasCreatedOrUpdatedArgs struct {\n\tSubjectAndConfig                 *SubjectAndConfig\n\tDisableSubscriptionNotifications bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#SavedQueryWasDeletedArgs",
+              "documentation": {
+                "identifier": "SavedQueryWasDeletedArgs",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.SavedQueryWasDeletedArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SavedQueryWasDeletedArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SavedQueryWasDeletedArgs struct {\n\tSpec                             api.SavedQueryIDSpec\n\tDisableSubscriptionNotifications bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner/queryrunnerapi#TestNotificationArgs",
+              "documentation": {
+                "identifier": "TestNotificationArgs",
+                "newPage": false,
+                "searchKey": "queryrunnerapi.TestNotificationArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestNotificationArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestNotificationArgs struct {\n\tSavedSearch api.SavedQuerySpecAndConfig\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

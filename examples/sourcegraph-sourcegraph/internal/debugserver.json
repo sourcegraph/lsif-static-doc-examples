@@ -1,0 +1,352 @@
+{
+  "pathID": "/internal/debugserver",
+  "documentation": {
+    "identifier": "debugserver",
+    "newPage": true,
+    "searchKey": "internal/debugserver",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package debugserver"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/debugserver#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/debugserver#addr",
+              "documentation": {
+                "identifier": "addr",
+                "newPage": false,
+                "searchKey": "debugserver.addr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var addr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar addr = env.Get(\"SRC_PROF_HTTP\", \":6060\", \"net/http/pprof http bind address.\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#Services",
+              "documentation": {
+                "identifier": "Services",
+                "newPage": false,
+                "searchKey": "debugserver.Services",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Services"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Services []Service\n```\n\nServices is the list of registered services' debug addresses. Populated from SRC_PROF_MAP. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/debugserver#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/debugserver#Endpoint",
+              "documentation": {
+                "identifier": "Endpoint",
+                "newPage": false,
+                "searchKey": "debugserver.Endpoint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Endpoint struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Endpoint struct {\n\t// Name is the name shown on the index page for the endpoint\n\tName string\n\t// Path is passed to http.Mux.Handle as the pattern.\n\tPath string\n\t// Handler is the debug handler\n\tHandler http.Handler\n}\n```\n\nEndpoint is a handler for the debug server. It will be displayed on the debug index page. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#Service",
+              "documentation": {
+                "identifier": "Service",
+                "newPage": false,
+                "searchKey": "debugserver.Service",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Service struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Service struct {\n\t// Name of the service. Always the binary name. example: \"gitserver\"\n\tName string\n\n\t// Host is the host:port for the services SRC_PROF_HTTP. example:\n\t// \"127.0.0.1:6060\"\n\tHost string\n\n\t// DefaultPath is the path to the service we should link to.\n\tDefaultPath string\n}\n```\n\nService is a service's debug addr (host:port). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#Dumper",
+              "documentation": {
+                "identifier": "Dumper",
+                "newPage": false,
+                "searchKey": "debugserver.Dumper",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Dumper interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Dumper interface {\n\t// DebugDump returns a snapshot of the current state.\n\tDebugDump() interface{}\n}\n```\n\nDumper is a service which can dump its state for debugging. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/debugserver#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/debugserver#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "debugserver.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#NewServerRoutine",
+              "documentation": {
+                "identifier": "NewServerRoutine",
+                "newPage": false,
+                "searchKey": "debugserver.NewServerRoutine",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewServerRoutine(ready <-chan struct{}, extra ...Endpoint) goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewServerRoutine(ready <-chan struct{}, extra ...Endpoint) goroutine.BackgroundRoutine\n```\n\nNewServerRoutine returns a background routine that exposes pprof and metrics endpoints. The given channel should be closed once the ready endpoint should begin to return 200 OK. Any extra endpoints supplied will be registered via their own declared path. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#expvarHandler",
+              "documentation": {
+                "identifier": "expvarHandler",
+                "newPage": false,
+                "searchKey": "debugserver.expvarHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expvarHandler(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expvarHandler(w http.ResponseWriter, r *http.Request)\n```\n\nexpvarHandler is copied from package expvar and exported so that it can be mounted on any ServeMux, not just http.DefaultServeMux. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#gcHandler",
+              "documentation": {
+                "identifier": "gcHandler",
+                "newPage": false,
+                "searchKey": "debugserver.gcHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gcHandler(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gcHandler(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#freeOSMemoryHandler",
+              "documentation": {
+                "identifier": "freeOSMemoryHandler",
+                "newPage": false,
+                "searchKey": "debugserver.freeOSMemoryHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func freeOSMemoryHandler(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc freeOSMemoryHandler(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#registerMetadataGauge",
+              "documentation": {
+                "identifier": "registerMetadataGauge",
+                "newPage": false,
+                "searchKey": "debugserver.registerMetadataGauge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func registerMetadataGauge()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc registerMetadataGauge()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#healthzHandler",
+              "documentation": {
+                "identifier": "healthzHandler",
+                "newPage": false,
+                "searchKey": "debugserver.healthzHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func healthzHandler(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc healthzHandler(w http.ResponseWriter, r *http.Request)\n```\n\nhealthzHandler is the http.HandlerFunc that responds to /healthz requests on the debugserver port. This always returns a 200 OK while the binary can be reached. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/debugserver#readyHandler",
+              "documentation": {
+                "identifier": "readyHandler",
+                "newPage": false,
+                "searchKey": "debugserver.readyHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readyHandler(ready <-chan struct{}) http.HandlerFunc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readyHandler(ready <-chan struct{}) http.HandlerFunc\n```\n\nreadyHandler returns an http.HandlerFunc that responds to the /ready requests on the debugserver port. This will return a 200 OK once the given channel is closed, and a 503 Service Unavailable otherwise. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

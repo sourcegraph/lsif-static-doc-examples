@@ -1,0 +1,864 @@
+{
+  "pathID": "/internal/search/streaming/api",
+  "documentation": {
+    "identifier": "api",
+    "newPage": true,
+    "searchKey": "internal/search/streaming/api",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package api"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/search/streaming/api#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#DocumentMatchLimit",
+              "documentation": {
+                "identifier": "DocumentMatchLimit",
+                "newPage": false,
+                "searchKey": "api.DocumentMatchLimit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DocumentMatchLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DocumentMatchLimit SkippedReason = \"document-match-limit\"\n```\n\nDocumentMatchLimit is when we found too many matches in a document, so we stopped searching it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#ShardMatchLimit",
+              "documentation": {
+                "identifier": "ShardMatchLimit",
+                "newPage": false,
+                "searchKey": "api.ShardMatchLimit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ShardMatchLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ShardMatchLimit SkippedReason = \"shard-match-limit\"\n```\n\nShardMatchLimit is when we found too many matches in a shard/repository, so we stopped searching it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#DisplayLimit",
+              "documentation": {
+                "identifier": "DisplayLimit",
+                "newPage": false,
+                "searchKey": "api.DisplayLimit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DisplayLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DisplayLimit SkippedReason = \"display\"\n```\n\nDisplayLimit is when we found too many matches during a search so we stopped displaying results. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#RepositoryLimit",
+              "documentation": {
+                "identifier": "RepositoryLimit",
+                "newPage": false,
+                "searchKey": "api.RepositoryLimit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepositoryLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepositoryLimit SkippedReason = \"repository-limit\"\n```\n\nRepositoryLimit is when we did not search a repository because the set of repositories to search was too large. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#ShardTimeout",
+              "documentation": {
+                "identifier": "ShardTimeout",
+                "newPage": false,
+                "searchKey": "api.ShardTimeout",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ShardTimeout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ShardTimeout SkippedReason = \"shard-timeout\"\n```\n\nShardTimeout is when we ran out of time before searching a shard/repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#RepositoryCloning",
+              "documentation": {
+                "identifier": "RepositoryCloning",
+                "newPage": false,
+                "searchKey": "api.RepositoryCloning",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepositoryCloning"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepositoryCloning SkippedReason = \"repository-cloning\"\n```\n\nRepositoryCloning is when we could not search a repository because it is not cloned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#RepositoryMissing",
+              "documentation": {
+                "identifier": "RepositoryMissing",
+                "newPage": false,
+                "searchKey": "api.RepositoryMissing",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepositoryMissing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepositoryMissing SkippedReason = \"repository-missing\"\n```\n\nRepositoryMissing is when we could not search a repository because it is not cloned and we failed to find it on the remote code host. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#ExcludedFork",
+              "documentation": {
+                "identifier": "ExcludedFork",
+                "newPage": false,
+                "searchKey": "api.ExcludedFork",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ExcludedFork"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ExcludedFork SkippedReason = \"repository-fork\"\n```\n\nExcludedFork is when we did not search a repository because it is a fork. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#ExcludedArchive",
+              "documentation": {
+                "identifier": "ExcludedArchive",
+                "newPage": false,
+                "searchKey": "api.ExcludedArchive",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ExcludedArchive"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ExcludedArchive SkippedReason = \"excluded-archive\"\n```\n\nExcludedArchive is when we did not search a repository because it is archived. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#SeverityInfo",
+              "documentation": {
+                "identifier": "SeverityInfo",
+                "newPage": false,
+                "searchKey": "api.SeverityInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SeverityInfo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SeverityInfo SkippedSeverity = \"info\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#SeverityWarn",
+              "documentation": {
+                "identifier": "SeverityWarn",
+                "newPage": false,
+                "searchKey": "api.SeverityWarn",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SeverityWarn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SeverityWarn SkippedSeverity = \"warn\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/streaming/api#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#skippedHandlers",
+              "documentation": {
+                "identifier": "skippedHandlers",
+                "newPage": false,
+                "searchKey": "api.skippedHandlers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var skippedHandlers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar skippedHandlers = ...\n```\n\nTODO implement all skipped reasons \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#updateGolden",
+              "documentation": {
+                "identifier": "updateGolden",
+                "newPage": false,
+                "searchKey": "api.updateGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var updateGolden"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar updateGolden = flag.Bool(\"update\", false, \"Updastdata goldens\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/streaming/api#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#Namer",
+              "documentation": {
+                "identifier": "Namer",
+                "newPage": false,
+                "searchKey": "api.Namer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Namer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Namer interface {\n\tName() string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#ProgressStats",
+              "documentation": {
+                "identifier": "ProgressStats",
+                "newPage": false,
+                "searchKey": "api.ProgressStats",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ProgressStats struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ProgressStats struct {\n\tMatchCount          int\n\tElapsedMilliseconds int\n\tRepositoriesCount   *int\n\tExcludedArchived    int\n\tExcludedForks       int\n\n\tTimedout []Namer\n\tMissing  []Namer\n\tCloning  []Namer\n\n\tLimitHit bool\n\n\t// SuggestedLimit is what to suggest to the user for count if needed.\n\tSuggestedLimit int\n\n\tTrace string // only filled if requested\n\n\tDisplayLimit int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#Progress",
+              "documentation": {
+                "identifier": "Progress",
+                "newPage": false,
+                "searchKey": "api.Progress",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Progress struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Progress struct {\n\t// Done is true if this is a final progress event.\n\tDone bool `json:\"done\"`\n\n\t// RepositoriesCount is the number of repositories being searched. It is\n\t// non-nil once the set of repositories has been resolved.\n\tRepositoriesCount *int `json:\"repositoriesCount,omitempty\"`\n\n\t// MatchCount is number of non-overlapping matches. If skipped is\n\t// non-empty, then this is a lower bound.\n\tMatchCount int `json:\"matchCount\"`\n\n\t// DurationMs is the wall clock time in milliseconds for this search.\n\tDurationMs int `json:\"durationMs\"`\n\n\t// Skipped is a description of shards or documents that were skipped. This\n\t// has a deterministic ordering. More important reasons will be listed\n\t// first. If a search is repeated, the final skipped list will be the\n\t// same.  However, within a search stream when a new skipped reason is\n\t// found, it may appear anywhere in the list.\n\tSkipped []Skipped `json:\"skipped\"`\n\n\t// Trace is the URL of an associated trace if the query is logging one.\n\tTrace string `json:\"trace,omitempty\"`\n}\n```\n\nProgress is an aggregate type representing a progress update. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#BuildProgressEvent",
+                    "documentation": {
+                      "identifier": "BuildProgressEvent",
+                      "newPage": false,
+                      "searchKey": "api.BuildProgressEvent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func BuildProgressEvent(stats ProgressStats) Progress"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc BuildProgressEvent(stats ProgressStats) Progress\n```\n\nBuildProgressEvent builds a progress event from a final results resolver. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#Skipped",
+              "documentation": {
+                "identifier": "Skipped",
+                "newPage": false,
+                "searchKey": "api.Skipped",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Skipped struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Skipped struct {\n\t// Reason is why a document/shard/repository was skipped. We group counts\n\t// by reason. eg ShardTimeout\n\tReason SkippedReason `json:\"reason\"`\n\t// Title is a short message. eg \"1,200 timed out\".\n\tTitle string `json:\"title\"`\n\t// Message is a message to show the user. Usually includes information\n\t// explaining the reason, count as well as a sample of the missing items.\n\tMessage  string          `json:\"message\"`\n\tSeverity SkippedSeverity `json:\"severity\"`\n\t// Suggested is a query expression to remedy the skip. eg \"archived:yes\".\n\tSuggested *SkippedSuggested `json:\"suggested,omitempty\"`\n}\n```\n\nSkipped is a description of shards or documents that were skipped. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#skippedReposHandler",
+                    "documentation": {
+                      "identifier": "skippedReposHandler",
+                      "newPage": false,
+                      "searchKey": "api.skippedReposHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Skipped) (Skipped, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc skippedReposHandler(repos []Namer, titleVerb, messageReason string, base Skipped) (Skipped, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#repositoryCloningHandler",
+                    "documentation": {
+                      "identifier": "repositoryCloningHandler",
+                      "newPage": false,
+                      "searchKey": "api.repositoryCloningHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func repositoryCloningHandler(resultsResolver ProgressStats) (Skipped, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc repositoryCloningHandler(resultsResolver ProgressStats) (Skipped, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#repositoryMissingHandler",
+                    "documentation": {
+                      "identifier": "repositoryMissingHandler",
+                      "newPage": false,
+                      "searchKey": "api.repositoryMissingHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func repositoryMissingHandler(resultsResolver ProgressStats) (Skipped, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc repositoryMissingHandler(resultsResolver ProgressStats) (Skipped, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#shardTimeoutHandler",
+                    "documentation": {
+                      "identifier": "shardTimeoutHandler",
+                      "newPage": false,
+                      "searchKey": "api.shardTimeoutHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc shardTimeoutHandler(resultsResolver ProgressStats) (Skipped, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#displayLimitHandler",
+                    "documentation": {
+                      "identifier": "displayLimitHandler",
+                      "newPage": false,
+                      "searchKey": "api.displayLimitHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc displayLimitHandler(resultsResolver ProgressStats) (Skipped, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#shardMatchLimitHandler",
+                    "documentation": {
+                      "identifier": "shardMatchLimitHandler",
+                      "newPage": false,
+                      "searchKey": "api.shardMatchLimitHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func shardMatchLimitHandler(resultsResolver ProgressStats) (Skipped, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc shardMatchLimitHandler(resultsResolver ProgressStats) (Skipped, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#excludedForkHandler",
+                    "documentation": {
+                      "identifier": "excludedForkHandler",
+                      "newPage": false,
+                      "searchKey": "api.excludedForkHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc excludedForkHandler(resultsResolver ProgressStats) (Skipped, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#excludedArchiveHandler",
+                    "documentation": {
+                      "identifier": "excludedArchiveHandler",
+                      "newPage": false,
+                      "searchKey": "api.excludedArchiveHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc excludedArchiveHandler(resultsResolver ProgressStats) (Skipped, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#SkippedSuggested",
+              "documentation": {
+                "identifier": "SkippedSuggested",
+                "newPage": false,
+                "searchKey": "api.SkippedSuggested",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SkippedSuggested struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SkippedSuggested struct {\n\tTitle           string `json:\"title\"`\n\tQueryExpression string `json:\"queryExpression\"`\n}\n```\n\nSkippedSuggested is a query to suggest to the user to resolve the reason for skipping. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#SkippedReason",
+              "documentation": {
+                "identifier": "SkippedReason",
+                "newPage": false,
+                "searchKey": "api.SkippedReason",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SkippedReason string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SkippedReason string\n```\n\nSkippedReason is an enum for Skipped.Reason. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#SkippedSeverity",
+              "documentation": {
+                "identifier": "SkippedSeverity",
+                "newPage": false,
+                "searchKey": "api.SkippedSeverity",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SkippedSeverity string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SkippedSeverity string\n```\n\nSkippedSeverity is an enum for Skipped.Severity. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#repo",
+              "documentation": {
+                "identifier": "repo",
+                "newPage": false,
+                "searchKey": "api.repo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type repo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype repo struct {\n\tname string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming/api#repo.Name",
+                    "documentation": {
+                      "identifier": "repo.Name",
+                      "newPage": false,
+                      "searchKey": "api.repo.Name",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r repo) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r repo) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/streaming/api#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#number",
+              "documentation": {
+                "identifier": "number",
+                "newPage": false,
+                "searchKey": "api.number",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func number(i int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc number(i int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#plural",
+              "documentation": {
+                "identifier": "plural",
+                "newPage": false,
+                "searchKey": "api.plural",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func plural(one, many string, n int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc plural(one, many string, n int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#TestSearchProgress",
+              "documentation": {
+                "identifier": "TestSearchProgress",
+                "newPage": false,
+                "searchKey": "api.TestSearchProgress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchProgress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchProgress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#TestNumber",
+              "documentation": {
+                "identifier": "TestNumber",
+                "newPage": false,
+                "searchKey": "api.TestNumber",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNumber(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNumber(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming/api#intPtr",
+              "documentation": {
+                "identifier": "intPtr",
+                "newPage": false,
+                "searchKey": "api.intPtr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func intPtr(i int) *int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc intPtr(i int) *int\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

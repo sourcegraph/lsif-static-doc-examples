@@ -1,0 +1,126 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/authz",
+  "documentation": {
+    "identifier": "authz",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/authz",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package authz"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/authz#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz#clock",
+              "documentation": {
+                "identifier": "clock",
+                "newPage": false,
+                "searchKey": "authz.clock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var clock"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar clock = timeutil.Now\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/authz#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "authz.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/authz#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "authz.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/cmd/frontend/internal/authz/resolvers"
+    }
+  ]
+}

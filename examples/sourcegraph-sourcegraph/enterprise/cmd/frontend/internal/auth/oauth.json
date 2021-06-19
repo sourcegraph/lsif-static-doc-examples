@@ -1,0 +1,906 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/auth/oauth",
+  "documentation": {
+    "identifier": "oauth",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/auth/oauth",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package oauth"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#LoginStateOpCreateAccount",
+              "documentation": {
+                "identifier": "LoginStateOpCreateAccount",
+                "newPage": false,
+                "searchKey": "oauth.LoginStateOpCreateAccount",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoginStateOpCreateAccount"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoginStateOpCreateAccount LoginStateOp = \"\"\n```\n\nNOTE: OAuth is almost always used for creating new accounts, therefore we don't need a special name for it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#LoginStateOpCreateCodeHostConnection",
+              "documentation": {
+                "identifier": "LoginStateOpCreateCodeHostConnection",
+                "newPage": false,
+                "searchKey": "oauth.LoginStateOpCreateCodeHostConnection",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoginStateOpCreateCodeHostConnection"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoginStateOpCreateCodeHostConnection LoginStateOp = \"createCodeHostConnection\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#extraScopes",
+              "documentation": {
+                "identifier": "extraScopes",
+                "newPage": false,
+                "searchKey": "oauth.extraScopes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var extraScopes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar extraScopes = ...\n```\n\nserviceType -> scopes \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#traceLogEnabled",
+              "documentation": {
+                "identifier": "traceLogEnabled",
+                "newPage": false,
+                "searchKey": "oauth.traceLogEnabled",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var traceLogEnabled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar traceLogEnabled, _ = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#isOAuths",
+              "documentation": {
+                "identifier": "isOAuths",
+                "newPage": false,
+                "searchKey": "oauth.isOAuths",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isOAuths"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isOAuths []func(p schema.AuthProviders) bool\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#loggingRoundTripper",
+              "documentation": {
+                "identifier": "loggingRoundTripper",
+                "newPage": false,
+                "searchKey": "oauth.loggingRoundTripper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type loggingRoundTripper struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype loggingRoundTripper struct {\n\tunderlying http.RoundTripper\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#loggingRoundTripper.RoundTrip",
+                    "documentation": {
+                      "identifier": "loggingRoundTripper.RoundTrip",
+                      "newPage": false,
+                      "searchKey": "oauth.loggingRoundTripper.RoundTrip",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *loggingRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *loggingRoundTripper) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#Provider",
+              "documentation": {
+                "identifier": "Provider",
+                "newPage": false,
+                "searchKey": "oauth.Provider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Provider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Provider struct {\n\tProviderOp\n\n\tLogin    func(oauth2.Config) http.Handler\n\tCallback func(oauth2.Config) http.Handler\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#getExactlyOneOAuthProvider",
+                    "documentation": {
+                      "identifier": "getExactlyOneOAuthProvider",
+                      "newPage": false,
+                      "searchKey": "oauth.getExactlyOneOAuthProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getExactlyOneOAuthProvider() *Provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getExactlyOneOAuthProvider() *Provider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#GetProvider",
+                    "documentation": {
+                      "identifier": "GetProvider",
+                      "newPage": false,
+                      "searchKey": "oauth.GetProvider",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetProvider(serviceType, id string) *Provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetProvider(serviceType, id string) *Provider\n```\n\nGetProvider returns a provider with given serviceType and ID. It returns nil if no such provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#NewProvider",
+                    "documentation": {
+                      "identifier": "NewProvider",
+                      "newPage": false,
+                      "searchKey": "oauth.NewProvider",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewProvider(op ProviderOp) *Provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewProvider(op ProviderOp) *Provider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#Provider.ConfigID",
+                    "documentation": {
+                      "identifier": "Provider.ConfigID",
+                      "newPage": false,
+                      "searchKey": "oauth.Provider.ConfigID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) ConfigID() providers.ConfigID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) ConfigID() providers.ConfigID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#Provider.Config",
+                    "documentation": {
+                      "identifier": "Provider.Config",
+                      "newPage": false,
+                      "searchKey": "oauth.Provider.Config",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) Config() schema.AuthProviders"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) Config() schema.AuthProviders\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#Provider.CachedInfo",
+                    "documentation": {
+                      "identifier": "Provider.CachedInfo",
+                      "newPage": false,
+                      "searchKey": "oauth.Provider.CachedInfo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) CachedInfo() *providers.Info"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) CachedInfo() *providers.Info\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#Provider.Refresh",
+                    "documentation": {
+                      "identifier": "Provider.Refresh",
+                      "newPage": false,
+                      "searchKey": "oauth.Provider.Refresh",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) Refresh(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) Refresh(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#ProviderOp",
+              "documentation": {
+                "identifier": "ProviderOp",
+                "newPage": false,
+                "searchKey": "oauth.ProviderOp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ProviderOp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ProviderOp struct {\n\tAuthPrefix   string\n\tOAuth2Config func(extraScopes ...string) oauth2.Config\n\tSourceConfig schema.AuthProviders\n\tStateConfig  gologin.CookieConfig\n\tServiceID    string\n\tServiceType  string\n\tLogin        func(oauth2.Config) http.Handler\n\tCallback     func(oauth2.Config) http.Handler\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#LoginStateOp",
+              "documentation": {
+                "identifier": "LoginStateOp",
+                "newPage": false,
+                "searchKey": "oauth.LoginStateOp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LoginStateOp string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LoginStateOp string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#LoginState",
+              "documentation": {
+                "identifier": "LoginState",
+                "newPage": false,
+                "searchKey": "oauth.LoginState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LoginState struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LoginState struct {\n\t// Redirect is the URL path to redirect to after login.\n\tRedirect string\n\n\t// ProviderID is the service ID of the provider that is handling the auth flow.\n\tProviderID string\n\n\t// CSRF is the random string that ensures the encoded state is sufficiently random to be checked\n\t// for CSRF purposes.\n\tCSRF string\n\n\t// Op is the operation to be done after OAuth flow. The default operation is to create a new account.\n\tOp LoginStateOp\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#DecodeState",
+                    "documentation": {
+                      "identifier": "DecodeState",
+                      "newPage": false,
+                      "searchKey": "oauth.DecodeState",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func DecodeState(encoded string) (*LoginState, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc DecodeState(encoded string) (*LoginState, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#LoginState.Encode",
+                    "documentation": {
+                      "identifier": "LoginState.Encode",
+                      "newPage": false,
+                      "searchKey": "oauth.LoginState.Encode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s LoginState) Encode() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s LoginState) Encode() (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#SessionData",
+              "documentation": {
+                "identifier": "SessionData",
+                "newPage": false,
+                "searchKey": "oauth.SessionData",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SessionData struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SessionData struct {\n\tID providers.ConfigID\n\n\t// Store only the oauth2.Token fields we need, to avoid hitting the ~4096-byte session data\n\t// limit.\n\tAccessToken string\n\tTokenType   string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#SessionIssuerHelper",
+              "documentation": {
+                "identifier": "SessionIssuerHelper",
+                "newPage": false,
+                "searchKey": "oauth.SessionIssuerHelper",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SessionIssuerHelper interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SessionIssuerHelper interface {\n\tGetOrCreateUser(ctx context.Context, token *oauth2.Token, anonymousUserID, firstSourceURL string) (actr *actor.Actor, safeErrMsg string, err error)\n\tCreateCodeHostConnection(ctx context.Context, token *oauth2.Token, providerID string) (safeErrMsg string, err error)\n\tDeleteStateCookie(w http.ResponseWriter)\n\tSessionData(token *oauth2.Token) SessionData\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#NewCookie",
+              "documentation": {
+                "identifier": "NewCookie",
+                "newPage": false,
+                "searchKey": "oauth.NewCookie",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewCookie(config gologin.CookieConfig, value string) *http.Cookie"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewCookie(config gologin.CookieConfig, value string) *http.Cookie\n```\n\nNewCookie returns a new http.Cookie with the given value and CookieConfig properties (name, max-age, etc.). \n\nThe MaxAge field is used to determine whether an Expires field should be added for Internet Explorer compatibility and what its value should be. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#expiresTime",
+              "documentation": {
+                "identifier": "expiresTime",
+                "newPage": false,
+                "searchKey": "oauth.expiresTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expiresTime(maxAge int) (time.Time, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expiresTime(maxAge int) (time.Time, bool)\n```\n\nexpiresTime converts a maxAge time in seconds to a time.Time in the future if the maxAge is positive or the beginning of the epoch if maxAge is negative. If maxAge is exactly 0, an empty time and false are returned (so the Cookie Expires field should not be set). [http://golang.org/src/net/http/cookie.go?s=618:801#L23](http://golang.org/src/net/http/cookie.go?s=618:801#L23) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#NewHandler",
+              "documentation": {
+                "identifier": "NewHandler",
+                "newPage": false,
+                "searchKey": "oauth.NewHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewHandler(db dbutil.DB, serviceType, authPrefix string, isAPIHandler bool, next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewHandler(db dbutil.DB, serviceType, authPrefix string, isAPIHandler bool, next http.Handler) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#newOAuthFlowHandler",
+              "documentation": {
+                "identifier": "newOAuthFlowHandler",
+                "newPage": false,
+                "searchKey": "oauth.newOAuthFlowHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newOAuthFlowHandler(db dbutil.DB, serviceType string) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newOAuthFlowHandler(db dbutil.DB, serviceType string) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#getExtraScopes",
+              "documentation": {
+                "identifier": "getExtraScopes",
+                "newPage": false,
+                "searchKey": "oauth.getExtraScopes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getExtraScopes(ctx context.Context, db dbutil.DB, serviceType string) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getExtraScopes(ctx context.Context, db dbutil.DB, serviceType string) ([]string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#withOAuthExternalHTTPClient",
+              "documentation": {
+                "identifier": "withOAuthExternalHTTPClient",
+                "newPage": false,
+                "searchKey": "oauth.withOAuthExternalHTTPClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func withOAuthExternalHTTPClient(r *http.Request) *http.Request"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc withOAuthExternalHTTPClient(r *http.Request) *http.Request\n```\n\nwithOAuthExternalHTTPClient updates client such that the golang.org/x/oauth2 package will use our http client which is configured with proxy and TLS settings/etc. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#previewAndDuplicateReader",
+              "documentation": {
+                "identifier": "previewAndDuplicateReader",
+                "newPage": false,
+                "searchKey": "oauth.previewAndDuplicateReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func previewAndDuplicateReader(reader io.ReadCloser) (preview string, freshReader io.ReadCloser, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc previewAndDuplicateReader(reader io.ReadCloser) (preview string, freshReader io.ReadCloser, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#AddIsOAuth",
+              "documentation": {
+                "identifier": "AddIsOAuth",
+                "newPage": false,
+                "searchKey": "oauth.AddIsOAuth",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AddIsOAuth(f func(p schema.AuthProviders) bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AddIsOAuth(f func(p schema.AuthProviders) bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#isOAuth",
+              "documentation": {
+                "identifier": "isOAuth",
+                "newPage": false,
+                "searchKey": "oauth.isOAuth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isOAuth(p schema.AuthProviders) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isOAuth(p schema.AuthProviders) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#isHuman",
+              "documentation": {
+                "identifier": "isHuman",
+                "newPage": false,
+                "searchKey": "oauth.isHuman",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isHuman(req *http.Request) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isHuman(req *http.Request) bool\n```\n\nisHuman returns true if the request probably came from a human, rather than a bot. Used to prevent unfurling the wrong URL preview. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#stateHandler",
+              "documentation": {
+                "identifier": "stateHandler",
+                "newPage": false,
+                "searchKey": "oauth.stateHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stateHandler(isLogin bool, providerID string, config gologin.CookieConfig, success func(oauth2.Config) http.Handler) func(oauth2.Config) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stateHandler(isLogin bool, providerID string, config gologin.CookieConfig, success func(oauth2.Config) http.Handler) func(oauth2.Config) http.Handler\n```\n\nstateHandler decodes the state from the gologin cookie and sets it in the context. It checked by some downstream handler to ensure equality with the value of the state URL param. \n\nThis is very similar to gologin's default StateHandler function, but we define our own, because we encode the returnTo URL in the state. We could use the `redirect_uri` parameter to do this, but doing so would require using Sourcegraph's external hostname and making sure it is consistent with what is specified in the OAuth app config as the \"callback URL.\" \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#randomState",
+              "documentation": {
+                "identifier": "randomState",
+                "newPage": false,
+                "searchKey": "oauth.randomState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func randomState() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc randomState() (string, error)\n```\n\nReturns a base64 encoded random 32 byte string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#getRedirect",
+              "documentation": {
+                "identifier": "getRedirect",
+                "newPage": false,
+                "searchKey": "oauth.getRedirect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRedirect(req *http.Request) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRedirect(req *http.Request) (string, error)\n```\n\nif we have a redirect param use that, otherwise we'll try and pull the 'returnTo' param from the referrer URL, this is usually the login page where the user has been dumped to after following a link. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#canRedirect",
+              "documentation": {
+                "identifier": "canRedirect",
+                "newPage": false,
+                "searchKey": "oauth.canRedirect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func canRedirect(redirect string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc canRedirect(redirect string) bool\n```\n\ncanRedirect is used to limit the set of URLs we will redirect to after login to prevent open redirect exploits for things like phishing \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#SessionIssuer",
+              "documentation": {
+                "identifier": "SessionIssuer",
+                "newPage": false,
+                "searchKey": "oauth.SessionIssuer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SessionIssuer(s SessionIssuerHelper, sessionKey string) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SessionIssuer(s SessionIssuerHelper, sessionKey string) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/oauth#TestCanRedirect",
+              "documentation": {
+                "identifier": "TestCanRedirect",
+                "newPage": false,
+                "searchKey": "oauth.TestCanRedirect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCanRedirect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCanRedirect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

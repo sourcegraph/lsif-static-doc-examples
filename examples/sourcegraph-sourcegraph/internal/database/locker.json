@@ -1,0 +1,395 @@
+{
+  "pathID": "/internal/database/locker",
+  "documentation": {
+    "identifier": "locker",
+    "newPage": true,
+    "searchKey": "internal/database/locker",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package locker"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/database/locker#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/locker#lockQuery",
+              "documentation": {
+                "identifier": "lockQuery",
+                "newPage": false,
+                "searchKey": "locker.lockQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const lockQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst lockQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/locker#tryLockQuery",
+              "documentation": {
+                "identifier": "tryLockQuery",
+                "newPage": false,
+                "searchKey": "locker.tryLockQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const tryLockQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst tryLockQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/locker#unlockQuery",
+              "documentation": {
+                "identifier": "unlockQuery",
+                "newPage": false,
+                "searchKey": "locker.unlockQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const unlockQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst unlockQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/locker#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/locker#Locker",
+              "documentation": {
+                "identifier": "Locker",
+                "newPage": false,
+                "searchKey": "locker.Locker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Locker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Locker struct {\n\t*basestore.Store\n\tnamespace int32\n}\n```\n\nLocker is a wrapper around a base store with methods that control advisory locks. A locker should be used when work needs to be coordinated with other remote services. \n\nFor example, an advisory lock can be taken around an expensive calculation related to a particular repository to ensure that no other service is performing the same task. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/locker#NewWithDB",
+                    "documentation": {
+                      "identifier": "NewWithDB",
+                      "newPage": false,
+                      "searchKey": "locker.NewWithDB",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWithDB(db dbutil.DB, namespace string) *Locker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWithDB(db dbutil.DB, namespace string) *Locker\n```\n\nNewWithDB creates a new Locker with the given namespace. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/locker#Locker.With",
+                    "documentation": {
+                      "identifier": "Locker.With",
+                      "newPage": false,
+                      "searchKey": "locker.Locker.With",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Locker) With(other basestore.ShareableStore) *Locker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Locker) With(other basestore.ShareableStore) *Locker\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/locker#Locker.Transact",
+                    "documentation": {
+                      "identifier": "Locker.Transact",
+                      "newPage": false,
+                      "searchKey": "locker.Locker.Transact",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Locker) Transact(ctx context.Context) (*Locker, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Locker) Transact(ctx context.Context) (*Locker, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/locker#Locker.Lock",
+                    "documentation": {
+                      "identifier": "Locker.Lock",
+                      "newPage": false,
+                      "searchKey": "locker.Locker.Lock",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Locker) Lock(ctx context.Context, key int, blocking bool) (locked bool, _ UnlockFunc, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Locker) Lock(ctx context.Context, key int, blocking bool) (locked bool, _ UnlockFunc, err error)\n```\n\nLock attempts to take an advisory lock on the given key. If successful, this method will return a true-valued flag along with a function that must be called to release the lock. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/locker#Locker.lock",
+                    "documentation": {
+                      "identifier": "Locker.lock",
+                      "newPage": false,
+                      "searchKey": "locker.Locker.lock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Locker) lock(ctx context.Context, key int) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Locker) lock(ctx context.Context, key int) (bool, error)\n```\n\nlock blocks until an advisory lock is taken on the given key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/locker#Locker.tryLock",
+                    "documentation": {
+                      "identifier": "Locker.tryLock",
+                      "newPage": false,
+                      "searchKey": "locker.Locker.tryLock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Locker) tryLock(ctx context.Context, key int) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Locker) tryLock(ctx context.Context, key int) (bool, error)\n```\n\ntryLock attempts to take an advisory lock on the given key. Returns true on success and false on failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/locker#Locker.unlock",
+                    "documentation": {
+                      "identifier": "Locker.unlock",
+                      "newPage": false,
+                      "searchKey": "locker.Locker.unlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Locker) unlock(key int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Locker) unlock(key int) error\n```\n\nunlock releases the advisory lock on the given key. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/locker#UnlockFunc",
+              "documentation": {
+                "identifier": "UnlockFunc",
+                "newPage": false,
+                "searchKey": "locker.UnlockFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnlockFunc func(err error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnlockFunc func(err error) error\n```\n\nUnlockFunc unlocks the advisory lock taken by a successful call to Lock. If an error occurs during unlock, the error is added to the resulting error value. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/locker#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/locker#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "locker.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/locker#TestLock",
+              "documentation": {
+                "identifier": "TestLock",
+                "newPage": false,
+                "searchKey": "locker.TestLock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/locker#TestLockBlockingAcquire",
+              "documentation": {
+                "identifier": "TestLockBlockingAcquire",
+                "newPage": false,
+                "searchKey": "locker.TestLockBlockingAcquire",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLockBlockingAcquire(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLockBlockingAcquire(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

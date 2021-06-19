@@ -1,0 +1,591 @@
+{
+  "pathID": "/enterprise/dev/ci/internal/buildkite",
+  "documentation": {
+    "identifier": "buildkite",
+    "newPage": true,
+    "searchKey": "enterprise/dev/ci/internal/buildkite",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package buildkite"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package buildkite defines data types that reflect Buildkite's YAML pipeline format. \n\nUsage: \n\n```\npipeline := buildkite.Pipeline{}\npipeline.AddStep(\"check_mark\", buildkite.Cmd(\"./dev/check/all.sh\"))\n\n```\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/dev/ci/internal/buildkite#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#Plugins",
+              "documentation": {
+                "identifier": "Plugins",
+                "newPage": false,
+                "searchKey": "buildkite.Plugins",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Plugins"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Plugins = make(map[string]interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#BeforeEveryStepOpts",
+              "documentation": {
+                "identifier": "BeforeEveryStepOpts",
+                "newPage": false,
+                "searchKey": "buildkite.BeforeEveryStepOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var BeforeEveryStepOpts"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar BeforeEveryStepOpts []StepOpt\n```\n\nBeforeEveryStepOpts are e.g. commands that are run before every AddStep, similar to Plugins. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#AfterEveryStepOpts",
+              "documentation": {
+                "identifier": "AfterEveryStepOpts",
+                "newPage": false,
+                "searchKey": "buildkite.AfterEveryStepOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var AfterEveryStepOpts"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar AfterEveryStepOpts []StepOpt\n```\n\nAfterEveryStepOpts are e.g. that are run at the end of every AddStep, helpful for post-processing \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/dev/ci/internal/buildkite#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#Pipeline",
+              "documentation": {
+                "identifier": "Pipeline",
+                "newPage": false,
+                "searchKey": "buildkite.Pipeline",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Pipeline struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Pipeline struct {\n\tEnv   map[string]string `json:\"env,omitempty\"`\n\tSteps []interface{}     `json:\"steps\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Pipeline.AddStep",
+                    "documentation": {
+                      "identifier": "Pipeline.AddStep",
+                      "newPage": false,
+                      "searchKey": "buildkite.Pipeline.AddStep",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) AddStep(label string, opts ...StepOpt)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) AddStep(label string, opts ...StepOpt)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Pipeline.AddTrigger",
+                    "documentation": {
+                      "identifier": "Pipeline.AddTrigger",
+                      "newPage": false,
+                      "searchKey": "buildkite.Pipeline.AddTrigger",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) AddTrigger(label string, opts ...StepOpt)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) AddTrigger(label string, opts ...StepOpt)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Pipeline.WriteTo",
+                    "documentation": {
+                      "identifier": "Pipeline.WriteTo",
+                      "newPage": false,
+                      "searchKey": "buildkite.Pipeline.WriteTo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) WriteTo(w io.Writer) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) WriteTo(w io.Writer) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Pipeline.AddWait",
+                    "documentation": {
+                      "identifier": "Pipeline.AddWait",
+                      "newPage": false,
+                      "searchKey": "buildkite.Pipeline.AddWait",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) AddWait()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) AddWait()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#BuildOptions",
+              "documentation": {
+                "identifier": "BuildOptions",
+                "newPage": false,
+                "searchKey": "buildkite.BuildOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BuildOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BuildOptions struct {\n\tMessage  string                 `json:\"message,omitempty\"`\n\tCommit   string                 `json:\"commit,omitempty\"`\n\tBranch   string                 `json:\"branch,omitempty\"`\n\tMetaData map[string]interface{} `json:\"meta_data,omitempty\"`\n\tEnv      map[string]string      `json:\"env,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#Step",
+              "documentation": {
+                "identifier": "Step",
+                "newPage": false,
+                "searchKey": "buildkite.Step",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Step struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Step struct {\n\tLabel            string                 `json:\"label\"`\n\tCommand          []string               `json:\"command,omitempty\"`\n\tTimeoutInMinutes string                 `json:\"timeout_in_minutes,omitempty\"`\n\tTrigger          string                 `json:\"trigger,omitempty\"`\n\tAsync            bool                   `json:\"async,omitempty\"`\n\tBuild            *BuildOptions          `json:\"build,omitempty\"`\n\tEnv              map[string]string      `json:\"env,omitempty\"`\n\tPlugins          map[string]interface{} `json:\"plugins,omitempty\"`\n\tArtifactPaths    string                 `json:\"artifact_paths,omitempty\"`\n\tConcurrencyGroup string                 `json:\"concurrency_group,omitempty\"`\n\tConcurrency      int                    `json:\"concurrency,omitempty\"`\n\tSoftFail         bool                   `json:\"soft_fail,omitempty\"`\n\tRetry            *RetryOptions          `json:\"retry,omitempty\"`\n\tAgents           map[string]string      `json:\"agents,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#RetryOptions",
+              "documentation": {
+                "identifier": "RetryOptions",
+                "newPage": false,
+                "searchKey": "buildkite.RetryOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RetryOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RetryOptions struct {\n\tAutomatic *AutomaticRetryOptions `json:\"automatic,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#AutomaticRetryOptions",
+              "documentation": {
+                "identifier": "AutomaticRetryOptions",
+                "newPage": false,
+                "searchKey": "buildkite.AutomaticRetryOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AutomaticRetryOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AutomaticRetryOptions struct {\n\tLimit int `json:\"limit,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/dev/ci/internal/buildkite#StepOpt",
+              "documentation": {
+                "identifier": "StepOpt",
+                "newPage": false,
+                "searchKey": "buildkite.StepOpt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StepOpt func(step *github.com/sourcegraph/sourcegraph/enterprise/dev/ci/internal/buildkite.Step)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StepOpt func(step *Step)\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Cmd",
+                    "documentation": {
+                      "identifier": "Cmd",
+                      "newPage": false,
+                      "searchKey": "buildkite.Cmd",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Cmd(command string) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Cmd(command string) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Trigger",
+                    "documentation": {
+                      "identifier": "Trigger",
+                      "newPage": false,
+                      "searchKey": "buildkite.Trigger",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Trigger(pipeline string) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Trigger(pipeline string) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Async",
+                    "documentation": {
+                      "identifier": "Async",
+                      "newPage": false,
+                      "searchKey": "buildkite.Async",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Async(async bool) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Async(async bool) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Build",
+                    "documentation": {
+                      "identifier": "Build",
+                      "newPage": false,
+                      "searchKey": "buildkite.Build",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Build(buildOptions BuildOptions) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Build(buildOptions BuildOptions) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#ConcurrencyGroup",
+                    "documentation": {
+                      "identifier": "ConcurrencyGroup",
+                      "newPage": false,
+                      "searchKey": "buildkite.ConcurrencyGroup",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ConcurrencyGroup(group string) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ConcurrencyGroup(group string) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Concurrency",
+                    "documentation": {
+                      "identifier": "Concurrency",
+                      "newPage": false,
+                      "searchKey": "buildkite.Concurrency",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Concurrency(limit int) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Concurrency(limit int) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Env",
+                    "documentation": {
+                      "identifier": "Env",
+                      "newPage": false,
+                      "searchKey": "buildkite.Env",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Env(name, value string) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Env(name, value string) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#SoftFail",
+                    "documentation": {
+                      "identifier": "SoftFail",
+                      "newPage": false,
+                      "searchKey": "buildkite.SoftFail",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func SoftFail(softFail bool) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc SoftFail(softFail bool) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#AutomaticRetry",
+                    "documentation": {
+                      "identifier": "AutomaticRetry",
+                      "newPage": false,
+                      "searchKey": "buildkite.AutomaticRetry",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func AutomaticRetry(limit int) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc AutomaticRetry(limit int) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#ArtifactPaths",
+                    "documentation": {
+                      "identifier": "ArtifactPaths",
+                      "newPage": false,
+                      "searchKey": "buildkite.ArtifactPaths",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ArtifactPaths(paths string) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ArtifactPaths(paths string) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/dev/ci/internal/buildkite#Agent",
+                    "documentation": {
+                      "identifier": "Agent",
+                      "newPage": false,
+                      "searchKey": "buildkite.Agent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Agent(key, value string) StepOpt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Agent(key, value string) StepOpt\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

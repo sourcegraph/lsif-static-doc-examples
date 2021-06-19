@@ -1,0 +1,130 @@
+{
+  "pathID": "/monitoring",
+  "documentation": {
+    "identifier": "monitoring",
+    "newPage": true,
+    "searchKey": "monitoring",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/monitoring#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring#optsFromEnv",
+              "documentation": {
+                "identifier": "optsFromEnv",
+                "newPage": false,
+                "searchKey": "main.optsFromEnv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func optsFromEnv() monitoring.GenerateOptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc optsFromEnv() monitoring.GenerateOptions\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring#getEnvStr",
+              "documentation": {
+                "identifier": "getEnvStr",
+                "newPage": false,
+                "searchKey": "main.getEnvStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getEnvStr(key, defaultValue string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getEnvStr(key, defaultValue string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring#getEnvBool",
+              "documentation": {
+                "identifier": "getEnvBool",
+                "newPage": false,
+                "searchKey": "main.getEnvBool",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getEnvBool(key string, defaultValue bool) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getEnvBool(key string, defaultValue bool) bool\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/monitoring/definitions"
+    },
+    {
+      "pathID": "/monitoring/monitoring"
+    }
+  ]
+}

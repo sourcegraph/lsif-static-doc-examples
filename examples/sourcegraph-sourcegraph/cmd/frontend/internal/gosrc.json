@@ -1,0 +1,494 @@
+{
+  "pathID": "/cmd/frontend/internal/gosrc",
+  "documentation": {
+    "identifier": "gosrc",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/gosrc",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package gosrc"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/gosrc#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#RuntimeVersion",
+              "documentation": {
+                "identifier": "RuntimeVersion",
+                "newPage": false,
+                "searchKey": "gosrc.RuntimeVersion",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RuntimeVersion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RuntimeVersion = runtime.Version()\n```\n\nRuntimeVersion is the version of go stdlib to use. We allow it to be different to runtime.Version for test data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#errNoMatch",
+              "documentation": {
+                "identifier": "errNoMatch",
+                "newPage": false,
+                "searchKey": "gosrc.errNoMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errNoMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errNoMatch = errors.New(\"no match\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#gopkgSrcTemplate",
+              "documentation": {
+                "identifier": "gopkgSrcTemplate",
+                "newPage": false,
+                "searchKey": "gosrc.gopkgSrcTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var gopkgSrcTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar gopkgSrcTemplate = lazyregexp.New(`https://(github.com/[^/]*/[^/]*)/tree/([^/]*)\\{/dir\\}`)\n```\n\ngopkgSrcTemplate matches the go-source dir templates specified by the popular gopkg.in \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#stdlibInternalPackagePrefixes",
+              "documentation": {
+                "identifier": "stdlibInternalPackagePrefixes",
+                "newPage": false,
+                "searchKey": "gosrc.stdlibInternalPackagePrefixes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stdlibInternalPackagePrefixes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stdlibInternalPackagePrefixes = ...\n```\n\nfind path/to/golang/source -name internal | awk -F '/' '{ print \"\\\"\" $2 \"/\\\",\" }' | sort | uniq | grep -v vendor \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#stdlibPackagePaths",
+              "documentation": {
+                "identifier": "stdlibPackagePaths",
+                "newPage": false,
+                "searchKey": "gosrc.stdlibPackagePaths",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stdlibPackagePaths"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stdlibPackagePaths = ...\n```\n\ngo list std | awk '{ print \"\\\"\" $1 \"\\\": struct{}{},\" }' \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/gosrc#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#Directory",
+              "documentation": {
+                "identifier": "Directory",
+                "newPage": false,
+                "searchKey": "gosrc.Directory",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Directory struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Directory struct {\n\tImportPath  string // the Go import path for this package\n\tProjectRoot string // import path prefix for all packages in the project\n\tCloneURL    string // the VCS clone URL\n\tRepoPrefix  string // the path to this directory inside the repo, if set\n\tVCS         string // one of \"git\", \"hg\", \"svn\", etc.\n\tRev         string // the VCS revision specifier, if any\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#ResolveImportPath",
+                    "documentation": {
+                      "identifier": "ResolveImportPath",
+                      "newPage": false,
+                      "searchKey": "gosrc.ResolveImportPath",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ResolveImportPath(client httpcli.Doer, importPath string) (*Directory, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ResolveImportPath(client httpcli.Doer, importPath string) (*Directory, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#resolveStaticImportPath",
+                    "documentation": {
+                      "identifier": "resolveStaticImportPath",
+                      "newPage": false,
+                      "searchKey": "gosrc.resolveStaticImportPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func resolveStaticImportPath(importPath string) (*Directory, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc resolveStaticImportPath(importPath string) (*Directory, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#resolveDynamicImportPath",
+                    "documentation": {
+                      "identifier": "resolveDynamicImportPath",
+                      "newPage": false,
+                      "searchKey": "gosrc.resolveDynamicImportPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func resolveDynamicImportPath(client httpcli.Doer, importPath string) (*Directory, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc resolveDynamicImportPath(client httpcli.Doer, importPath string) (*Directory, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#importMeta",
+              "documentation": {
+                "identifier": "importMeta",
+                "newPage": false,
+                "searchKey": "gosrc.importMeta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type importMeta struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype importMeta struct {\n\tprefix string // the import path corresponding to the repository root\n\tvcs    string // one of \"git\", \"hg\", \"svn\", etc.\n\trepo   string // root of the VCS repo containing a scheme and not containing a .vcs qualifier\n}\n```\n\nimportMeta represents the values in a go-import meta tag. \n\nSee [https://golang.org/cmd/go/#hdr-Remote_import_paths](https://golang.org/cmd/go/#hdr-Remote_import_paths). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#fetchMeta",
+                    "documentation": {
+                      "identifier": "fetchMeta",
+                      "newPage": false,
+                      "searchKey": "gosrc.fetchMeta",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#parseMeta",
+                    "documentation": {
+                      "identifier": "parseMeta",
+                      "newPage": false,
+                      "searchKey": "gosrc.parseMeta",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#sourceMeta",
+              "documentation": {
+                "identifier": "sourceMeta",
+                "newPage": false,
+                "searchKey": "gosrc.sourceMeta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sourceMeta struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sourceMeta struct {\n\tprefix       string\n\tprojectURL   string\n\tdirTemplate  string\n\tfileTemplate string\n}\n```\n\nsourceMeta represents the values in a go-source meta tag. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#fetchMeta",
+                    "documentation": {
+                      "identifier": "fetchMeta",
+                      "newPage": false,
+                      "searchKey": "gosrc.fetchMeta",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc fetchMeta(client httpcli.Doer, importPath string) (scheme string, im *importMeta, sm *sourceMeta, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#parseMeta",
+                    "documentation": {
+                      "identifier": "parseMeta",
+                      "newPage": false,
+                      "searchKey": "gosrc.parseMeta",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseMeta(scheme, importPath string, r io.Reader) (im *importMeta, sm *sourceMeta, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#testTransport",
+              "documentation": {
+                "identifier": "testTransport",
+                "newPage": false,
+                "searchKey": "gosrc.testTransport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testTransport map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testTransport map[string]string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/gosrc#testTransport.RoundTrip",
+                    "documentation": {
+                      "identifier": "testTransport.RoundTrip",
+                      "newPage": false,
+                      "searchKey": "gosrc.testTransport.RoundTrip",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t testTransport) RoundTrip(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t testTransport) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/gosrc#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#attrValue",
+              "documentation": {
+                "identifier": "attrValue",
+                "newPage": false,
+                "searchKey": "gosrc.attrValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func attrValue(attrs []xml.Attr, name string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc attrValue(attrs []xml.Attr, name string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#IsStdlibPkg",
+              "documentation": {
+                "identifier": "IsStdlibPkg",
+                "newPage": false,
+                "searchKey": "gosrc.IsStdlibPkg",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsStdlibPkg(importPath string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsStdlibPkg(importPath string) bool\n```\n\nIsStdlibPkg returns true if the package path is part of the stdlib. This uses a static copy of the output of \"go list std\", so may be out of date as new versions of Go are released. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/gosrc#TestResolveImportPath",
+              "documentation": {
+                "identifier": "TestResolveImportPath",
+                "newPage": false,
+                "searchKey": "gosrc.TestResolveImportPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolveImportPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolveImportPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

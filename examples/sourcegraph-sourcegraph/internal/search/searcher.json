@@ -1,0 +1,267 @@
+{
+  "pathID": "/internal/search/searcher",
+  "documentation": {
+    "identifier": "searcher",
+    "newPage": true,
+    "searchKey": "internal/search/searcher",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package searcher"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package searcher provides a client for our just in time text searching service \"searcher\". \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/search/searcher#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/searcher#requestCounter",
+              "documentation": {
+                "identifier": "requestCounter",
+                "newPage": false,
+                "searchKey": "searcher.requestCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searcher#searchHTTPClient",
+              "documentation": {
+                "identifier": "searchHTTPClient",
+                "newPage": false,
+                "searchKey": "searcher.searchHTTPClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var searchHTTPClient"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar searchHTTPClient = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searcher#MockSearch",
+              "documentation": {
+                "identifier": "MockSearch",
+                "newPage": false,
+                "searchKey": "searcher.MockSearch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockSearch func(ctx context.Context, repo api.RepoName, commit api.CommitID, p *search.TextPatternInfo, fetchTimeout time.Duration) (matches []*protocol.FileMatch, limitHit bool, err error) = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/searcher#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/searcher#searcherError",
+              "documentation": {
+                "identifier": "searcherError",
+                "newPage": false,
+                "searchKey": "searcher.searcherError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type searcherError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype searcherError struct {\n\tStatusCode int\n\tMessage    string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/searcher#searcherError.BadRequest",
+                    "documentation": {
+                      "identifier": "searcherError.BadRequest",
+                      "newPage": false,
+                      "searchKey": "searcher.searcherError.BadRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *searcherError) BadRequest() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *searcherError) BadRequest() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/searcher#searcherError.Temporary",
+                    "documentation": {
+                      "identifier": "searcherError.Temporary",
+                      "newPage": false,
+                      "searchKey": "searcher.searcherError.Temporary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *searcherError) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *searcherError) Temporary() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/searcher#searcherError.Error",
+                    "documentation": {
+                      "identifier": "searcherError.Error",
+                      "newPage": false,
+                      "searchKey": "searcher.searcherError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *searcherError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *searcherError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/searcher#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/searcher#Search",
+              "documentation": {
+                "identifier": "Search",
+                "newPage": false,
+                "searchKey": "searcher.Search",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Search(ctx context.Context, searcherURLs *endpoint.Map, repo api.RepoName, branch string, commit api.CommitID, indexed bool, p *search.TextPatternInfo, fetchTimeout time.Duration, indexerEndpoints []string) (matches []*protocol.FileMatch, limitHit bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Search(ctx context.Context, searcherURLs *endpoint.Map, repo api.RepoName, branch string, commit api.CommitID, indexed bool, p *search.TextPatternInfo, fetchTimeout time.Duration, indexerEndpoints []string) (matches []*protocol.FileMatch, limitHit bool, err error)\n```\n\nSearch searches repo@commit with p. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/searcher#textSearchURL",
+              "documentation": {
+                "identifier": "textSearchURL",
+                "newPage": false,
+                "searchKey": "searcher.textSearchURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func textSearchURL(ctx context.Context, url string) ([]*protocol.FileMatch, bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc textSearchURL(ctx context.Context, url string) ([]*protocol.FileMatch, bool, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

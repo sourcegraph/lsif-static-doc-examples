@@ -1,0 +1,806 @@
+{
+  "pathID": "/internal/cmd/ghe-feeder",
+  "documentation": {
+    "identifier": "ghe-feeder",
+    "newPage": true,
+    "searchKey": "internal/cmd/ghe-feeder",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/cmd/ghe-feeder#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#reposProcessedCounter",
+              "documentation": {
+                "identifier": "reposProcessedCounter",
+                "newPage": false,
+                "searchKey": "main.reposProcessedCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposProcessedCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposProcessedCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#reposFailedCounter",
+              "documentation": {
+                "identifier": "reposFailedCounter",
+                "newPage": false,
+                "searchKey": "main.reposFailedCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposFailedCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposFailedCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#reposSucceededCounter",
+              "documentation": {
+                "identifier": "reposSucceededCounter",
+                "newPage": false,
+                "searchKey": "main.reposSucceededCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposSucceededCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposSucceededCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#reposAlreadyDoneCounter",
+              "documentation": {
+                "identifier": "reposAlreadyDoneCounter",
+                "newPage": false,
+                "searchKey": "main.reposAlreadyDoneCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposAlreadyDoneCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposAlreadyDoneCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#remainingWorkGauge",
+              "documentation": {
+                "identifier": "remainingWorkGauge",
+                "newPage": false,
+                "searchKey": "main.remainingWorkGauge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var remainingWorkGauge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar remainingWorkGauge = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#left",
+              "documentation": {
+                "identifier": "left",
+                "newPage": false,
+                "searchKey": "main.left",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var left"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar left = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#right",
+              "documentation": {
+                "identifier": "right",
+                "newPage": false,
+                "searchKey": "main.right",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var right"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar right = ...\n```\n\nDocker, starting from 0.7.x, generates names from notable scientists and hackers. Please, for any amazing man that you add to the list, consider adding an equally amazing woman to it, and vice versa. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/cmd/ghe-feeder#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#feederDB",
+              "documentation": {
+                "identifier": "feederDB",
+                "newPage": false,
+                "searchKey": "main.feederDB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type feederDB struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype feederDB struct {\n\t// sqlite is not thread-safe, this mutex protects access to it\n\tsync.Mutex\n\t// where the DB file is\n\tpath string\n\t// the opened DB\n\tdb *sql.DB\n\t// logger for this feeder DB\n\tlogger log15.Logger\n}\n```\n\nfeederDB is a front to a sqlite DB that records ownerRepo processed, orgs created and whether processing was successful or failed \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#newFeederDB",
+                    "documentation": {
+                      "identifier": "newFeederDB",
+                      "newPage": false,
+                      "searchKey": "main.newFeederDB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newFeederDB(path string) (*feederDB, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newFeederDB(path string) (*feederDB, error)\n```\n\nnewFeederDB creates or opens the DB, creating the two tables if necessary \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#feederDB.declareRepo",
+                    "documentation": {
+                      "identifier": "feederDB.declareRepo",
+                      "newPage": false,
+                      "searchKey": "main.feederDB.declareRepo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fdr *feederDB) declareRepo(ownerRepo string) (alreadyDone bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fdr *feederDB) declareRepo(ownerRepo string) (alreadyDone bool, err error)\n```\n\ndeclareRepo adds the ownerRepo to the DB when it gets pumped into the pipe and made available to the workers for processing. if ownerRepo was already done in a previous run, then returns true, so pump can skip it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#feederDB.failed",
+                    "documentation": {
+                      "identifier": "feederDB.failed",
+                      "newPage": false,
+                      "searchKey": "main.feederDB.failed",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fdr *feederDB) failed(ownerRepo string, errType string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fdr *feederDB) failed(ownerRepo string, errType string) error\n```\n\nfailed records the fact that the worker processing the specified ownerRepo failed to process it. errType is recorded because specific errTypes are not worth rerunning in a subsequent run (for example if repo is private on github.com and we don't have credentials for it, it's not worth trying again in a next run). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#feederDB.succeeded",
+                    "documentation": {
+                      "identifier": "feederDB.succeeded",
+                      "newPage": false,
+                      "searchKey": "main.feederDB.succeeded",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fdr *feederDB) succeeded(ownerRepo string, org string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fdr *feederDB) succeeded(ownerRepo string, org string) error\n```\n\nsucceeded records that a worker has successfully processed the specified ownerRepo. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#feederDB.declareOrg",
+                    "documentation": {
+                      "identifier": "feederDB.declareOrg",
+                      "newPage": false,
+                      "searchKey": "main.feederDB.declareOrg",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fdr *feederDB) declareOrg(org string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fdr *feederDB) declareOrg(org string) error\n```\n\ndeclareOrg adds a newly created org from one of the workers. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#producer",
+              "documentation": {
+                "identifier": "producer",
+                "newPage": false,
+                "searchKey": "main.producer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type producer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype producer struct {\n\t// how many lines are remaining to be processed\n\tremaining int64\n\t// where to send each ownerRepo. the workers expect 'owner/repo' strings\n\tpipe chan<- string\n\t// sqlite DB where each ownerRepo is declared (to keep progress and to implement resume functionality)\n\tfdr *feederDB\n\t// how many we have already processed\n\tnumAlreadyDone int64\n\t// logger for the pump\n\tlogger log15.Logger\n\t// terminal UI progress bar\n\tbar *progressbar.ProgressBar\n\t// skips this many lines from the input before starting to feed into the pipe\n\tskipNumLines int64\n}\n```\n\nproducer is pumping input line by line into the pipe channel for processing by the workers. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#producer.pumpFile",
+                    "documentation": {
+                      "identifier": "producer.pumpFile",
+                      "newPage": false,
+                      "searchKey": "main.producer.pumpFile",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (prdc *producer) pumpFile(ctx context.Context, path string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (prdc *producer) pumpFile(ctx context.Context, path string) error\n```\n\npumpFile reads the specified file line by line and feeds ownerRepo strings into the pipe \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#producer.pump",
+                    "documentation": {
+                      "identifier": "producer.pump",
+                      "newPage": false,
+                      "searchKey": "main.producer.pump",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (prdc *producer) pump(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (prdc *producer) pump(ctx context.Context) error\n```\n\npump finds all the input files specified as command line by recursively going through all specified directories and looking for '*.csv', '*.json' and '*.txt' files. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#feederError",
+              "documentation": {
+                "identifier": "feederError",
+                "newPage": false,
+                "searchKey": "main.feederError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type feederError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype feederError struct {\n\t// one of: api, clone, push, unknown\n\terrType string\n\t// underlying error\n\terr error\n}\n```\n\nfeederError is an error while processing an ownerRepo line. errType partitions the errors in 4 major categories to use in metrics in logging: api, clone, push and unknown. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#feederError.Error",
+                    "documentation": {
+                      "identifier": "feederError.Error",
+                      "newPage": false,
+                      "searchKey": "main.feederError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *feederError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *feederError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#feederError.Unwrap",
+                    "documentation": {
+                      "identifier": "feederError.Unwrap",
+                      "newPage": false,
+                      "searchKey": "main.feederError.Unwrap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *feederError) Unwrap() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *feederError) Unwrap() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#worker",
+              "documentation": {
+                "identifier": "worker",
+                "newPage": false,
+                "searchKey": "main.worker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type worker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype worker struct {\n\t// used in logs and metrics\n\tname string\n\t// index of the worker (which one in range [0, numWorkers)\n\tindex int\n\t// directory to use for cloning from github.com\n\tscratchDir string\n\n\t// GHE API client\n\tclient *github.Client\n\tadmin  string\n\ttoken  string\n\n\t// gets the lines of work from this channel (each line has a owner/repo string in some format)\n\twork <-chan string\n\t// wait group to decrement when this worker is done working\n\twg *sync.WaitGroup\n\t// terminal UI progress bar\n\tbar *progressbar.ProgressBar\n\n\t// some stats\n\tnumFailed    int64\n\tnumSucceeded int64\n\n\t// feeder DB is a sqlite DB, worker marks processed ownerRepos as successfully processed or failed\n\tfdr *feederDB\n\t// keeps track of org to which to add repos\n\t// (when currentNumRepos reaches currentMaxRepos, it generates a new random triple of these)\n\tcurrentOrg      string\n\tcurrentNumRepos int\n\tcurrentMaxRepos int\n\n\t// logger has worker name inprinted\n\tlogger log15.Logger\n\n\t// rate limiter for the GHE API calls\n\trateLimiter *rate.Limiter\n\t// how many simultaneous `git push` operations to the GHE\n\tpushSem chan struct{}\n\t// how many simultaneous `git clone` operations from github.com\n\tcloneSem chan struct{}\n\t// how many times to try to clone from github.com\n\tnumCloningAttempts int\n\t// how long to wait before cutting short a cloning from github.com\n\tcloneRepoTimeout time.Duration\n\n\t// host to add as a remote to a cloned repo pointing to GHE instance\n\thost string\n}\n```\n\nworker processes ownerRepo strings, feeding them to GHE instance. it declares orgs if needed, clones from github.com, adds GHE as a remote, declares repo in GHE through API and does a git push to the GHE. there's many workers working at the same time, taking work from a work channel fed by a pump that reads lines from the input. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.run",
+                    "documentation": {
+                      "identifier": "worker.run",
+                      "newPage": false,
+                      "searchKey": "main.worker.run",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) run(ctx context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) run(ctx context.Context)\n```\n\nrun spins until work channel closes or context cancels \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.process",
+                    "documentation": {
+                      "identifier": "worker.process",
+                      "newPage": false,
+                      "searchKey": "main.worker.process",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) process(ctx context.Context, owner, repo string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) process(ctx context.Context, owner, repo string) error\n```\n\nprocess does the necessary work for one ownerRepo string: clone, declare repo in GHE through API, add remote and push \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.cloneRepo",
+                    "documentation": {
+                      "identifier": "worker.cloneRepo",
+                      "newPage": false,
+                      "searchKey": "main.worker.cloneRepo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) cloneRepo(ctx context.Context, owner, repo string) error\n```\n\ncloneRepo clones the specified repo from github.com into the scratchDir \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.addRemote",
+                    "documentation": {
+                      "identifier": "worker.addRemote",
+                      "newPage": false,
+                      "searchKey": "main.worker.addRemote",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) addRemote(ctx context.Context, gheRepo *github.Repository, owner, repo string) error\n```\n\naddRemote declares the GHE as a remote to the cloned repo \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.pushToGHE",
+                    "documentation": {
+                      "identifier": "worker.pushToGHE",
+                      "newPage": false,
+                      "searchKey": "main.worker.pushToGHE",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) pushToGHE(ctx context.Context, owner, repo string) error\n```\n\npushToGHE does a `git push` command to the GHE remote \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.addGHEOrg",
+                    "documentation": {
+                      "identifier": "worker.addGHEOrg",
+                      "newPage": false,
+                      "searchKey": "main.worker.addGHEOrg",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) addGHEOrg(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) addGHEOrg(ctx context.Context) error\n```\n\naddGHEOrg uses the GHE API to declare the org at the GHE \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/cmd/ghe-feeder#worker.addGHERepo",
+                    "documentation": {
+                      "identifier": "worker.addGHERepo",
+                      "newPage": false,
+                      "searchKey": "main.worker.addGHERepo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (wkr *worker) addGHERepo(ctx context.Context, owner, repo string) (*github.Repository, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (wkr *worker) addGHERepo(ctx context.Context, owner, repo string) (*github.Repository, error)\n```\n\naddGHEOrg uses the GHE API to declare the repo at the GHE \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/cmd/ghe-feeder#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#stats",
+              "documentation": {
+                "identifier": "stats",
+                "newPage": false,
+                "searchKey": "main.stats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stats(wkrs []*worker, prdc *producer) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stats(wkrs []*worker, prdc *producer) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#getRandomName",
+              "documentation": {
+                "identifier": "getRandomName",
+                "newPage": false,
+                "searchKey": "main.getRandomName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRandomName(retry int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRandomName(retry int) string\n```\n\nGetRandomName generates a random name from the list of adjectives and surnames in this package formatted as \"adjective_surname\". For example 'focused_turing'. If retry is non-zero, a random integer between 0 and 10 will be added to the end of the name, e.g `focused_turing3` \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#extractOwnerRepoFromCSVLine",
+              "documentation": {
+                "identifier": "extractOwnerRepoFromCSVLine",
+                "newPage": false,
+                "searchKey": "main.extractOwnerRepoFromCSVLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func extractOwnerRepoFromCSVLine(line string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc extractOwnerRepoFromCSVLine(line string) string\n```\n\nextractOwnerRepoFromCSVLine extracts the owner and repo from a line that comes from a CSV file that a GHE instance created in a repo report (so it has a certain number of fields). for example: 2019-05-23 15:24:16 -0700,4,Organization,sourcegraph,9,tsenart-vegeta,public,1.64 MB,1683,0,false,false we're looking for field number 6 (tsenart-vegeta in the example) and split it into owner/repo by replacing the first '-' with a '/' (the owner and repo were merged when added, this is the owner on github.com, not in the GHE) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#numLinesInFile",
+              "documentation": {
+                "identifier": "numLinesInFile",
+                "newPage": false,
+                "searchKey": "main.numLinesInFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func numLinesInFile(path string, skipNumLines int64) (int64, int64, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc numLinesInFile(path string, skipNumLines int64) (int64, int64, error)\n```\n\nnumLinesInFile counts how many lines are in the specified file (it starts counting only after skipNumLines have been skipped from the file). Returns counted lines, how many lines were skipped and any errors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#numLinesTotal",
+              "documentation": {
+                "identifier": "numLinesTotal",
+                "newPage": false,
+                "searchKey": "main.numLinesTotal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func numLinesTotal(skipNumLines int64) (int64, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc numLinesTotal(skipNumLines int64) (int64, error)\n```\n\nnumLinesTotal goes through all the inputs and counts how many lines are available for processing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#newGHEClient",
+              "documentation": {
+                "identifier": "newGHEClient",
+                "newPage": false,
+                "searchKey": "main.newGHEClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newGHEClient(ctx context.Context, baseURL, uploadURL, token string) (*github.Client, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "main.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/ghe-feeder#randomOrgNameAndSize",
+              "documentation": {
+                "identifier": "randomOrgNameAndSize",
+                "newPage": false,
+                "searchKey": "main.randomOrgNameAndSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func randomOrgNameAndSize() (string, int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc randomOrgNameAndSize() (string, int)\n```\n\nrandomOrgNameAndSize returns a random, unique name for an org and a random size of repos it should have \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

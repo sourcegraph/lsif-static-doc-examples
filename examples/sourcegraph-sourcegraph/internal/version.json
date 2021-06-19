@@ -1,0 +1,395 @@
+{
+  "pathID": "/internal/version",
+  "documentation": {
+    "identifier": "version",
+    "newPage": true,
+    "searchKey": "internal/version",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package version"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/version#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/version#devVersion",
+              "documentation": {
+                "identifier": "devVersion",
+                "newPage": false,
+                "searchKey": "version.devVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const devVersion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst devVersion = \"0.0.0+dev\" // version string for unreleased development builds\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/version#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/version#devTimestamp",
+              "documentation": {
+                "identifier": "devTimestamp",
+                "newPage": false,
+                "searchKey": "version.devTimestamp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var devTimestamp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar devTimestamp // build timestamp for unreleased development builds\n = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#version",
+              "documentation": {
+                "identifier": "version",
+                "newPage": false,
+                "searchKey": "version.version",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var version"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar version = devVersion\n```\n\nversion is configured at build time via ldflags like this: -ldflags \"-X github.com/sourcegraph/sourcegraph/internal/version.version=1.2.3\" \n\nThe version may not be semver-compatible, e.g. `insiders` or `65769_2020-06-05_9bd91a3`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#timestamp",
+              "documentation": {
+                "identifier": "timestamp",
+                "newPage": false,
+                "searchKey": "version.timestamp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var timestamp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar timestamp = devTimestamp\n```\n\ntimestamp is the build timestamp configured at build time via ldflags like this: -ldflags \"-X github.com/sourcegraph/sourcegraph/internal/version.timestamp=$UNIX_SECONDS\" \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/version#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/version#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "version.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#Version",
+              "documentation": {
+                "identifier": "Version",
+                "newPage": false,
+                "searchKey": "version.Version",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Version() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Version() string\n```\n\nVersion returns the version string configured at build time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#IsDev",
+              "documentation": {
+                "identifier": "IsDev",
+                "newPage": false,
+                "searchKey": "version.IsDev",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsDev(version string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsDev(version string) bool\n```\n\nIsDev reports whether the version string is an unreleased development build. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#Mock",
+              "documentation": {
+                "identifier": "Mock",
+                "newPage": false,
+                "searchKey": "version.Mock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Mock(mockVersion string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Mock(mockVersion string)\n```\n\nMock is used by tests to mock the result of Version and IsDev. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#MockTimestamp",
+              "documentation": {
+                "identifier": "MockTimestamp",
+                "newPage": false,
+                "searchKey": "version.MockTimestamp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockTimestamp(mockTimestamp string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockTimestamp(mockTimestamp string)\n```\n\nMockTimeStamp is used by tests to mock the current build timestamp \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#HowLongOutOfDate",
+              "documentation": {
+                "identifier": "HowLongOutOfDate",
+                "newPage": false,
+                "searchKey": "version.HowLongOutOfDate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HowLongOutOfDate(now time.Time) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HowLongOutOfDate(now time.Time) (int, error)\n```\n\nHowLongOutOfDate returns a time in months since this build of Sourcegraph was created. It is based on a constant baked into the Go binary at build time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#monthsFromDays",
+              "documentation": {
+                "identifier": "monthsFromDays",
+                "newPage": false,
+                "searchKey": "version.monthsFromDays",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func monthsFromDays(days float64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc monthsFromDays(days float64) int\n```\n\nmonthsFromDays roughly determines the number of months given days \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#TestVersion",
+              "documentation": {
+                "identifier": "TestVersion",
+                "newPage": false,
+                "searchKey": "version.TestVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVersion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVersion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#TestIsDev",
+              "documentation": {
+                "identifier": "TestIsDev",
+                "newPage": false,
+                "searchKey": "version.TestIsDev",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsDev(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsDev(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#Test_monthsFromDays",
+              "documentation": {
+                "identifier": "Test_monthsFromDays",
+                "newPage": false,
+                "searchKey": "version.Test_monthsFromDays",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_monthsFromDays(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_monthsFromDays(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/version#TestHowLongOutOfDate",
+              "documentation": {
+                "identifier": "TestHowLongOutOfDate",
+                "newPage": false,
+                "searchKey": "version.TestHowLongOutOfDate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHowLongOutOfDate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHowLongOutOfDate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/version/minversion"
+    }
+  ]
+}

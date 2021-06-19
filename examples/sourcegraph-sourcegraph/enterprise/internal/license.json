@@ -1,0 +1,560 @@
+{
+  "pathID": "/enterprise/internal/license",
+  "documentation": {
+    "identifier": "license",
+    "newPage": true,
+    "searchKey": "enterprise/internal/license",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package license"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package license provides license key generation and verification. \n\nLicense keys are generated and signed using Sourcegraph's private key. Sourcegraph instances must be able to verify the license key offline, so all license information (such as the max user count) is encoded in the license itself. \n\nKey rotation, license key revocation, etc., are not implemented. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/license#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#formatVersion",
+              "documentation": {
+                "identifier": "formatVersion",
+                "newPage": false,
+                "searchKey": "license.formatVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const formatVersion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst formatVersion = 1 // (encodedInfo).Version value\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/license#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#privateKey",
+              "documentation": {
+                "identifier": "privateKey",
+                "newPage": false,
+                "searchKey": "license.privateKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var privateKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar privateKey ssh.Signer\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#publicKey",
+              "documentation": {
+                "identifier": "publicKey",
+                "newPage": false,
+                "searchKey": "license.publicKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var publicKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar publicKey ssh.PublicKey\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#timeFixture",
+              "documentation": {
+                "identifier": "timeFixture",
+                "newPage": false,
+                "searchKey": "license.timeFixture",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var timeFixture"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar timeFixture = time.Date(2018, time.September, 22, 21, 33, 44, 0, time.UTC)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#infoFixture",
+              "documentation": {
+                "identifier": "infoFixture",
+                "newPage": false,
+                "searchKey": "license.infoFixture",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var infoFixture"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar infoFixture = Info{Tags: []string{\"a\"}, UserCount: 123, ExpiresAt: timeFixture}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/license#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#Info",
+              "documentation": {
+                "identifier": "Info",
+                "newPage": false,
+                "searchKey": "license.Info",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Info struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Info struct {\n\tTags      []string  `json:\"t\"` // tags that denote features/restrictions (e.g., \"starter\" or \"dev\")\n\tUserCount uint      `json:\"u\"` // the number of users that this license is valid for\n\tExpiresAt time.Time `json:\"e\"` // the date when this license expires\n}\n```\n\nInfo contains information about a license key. In the signed license key that Sourcegraph provides to customers, this value is signed but not encrypted. This value is not secret, and anyone with a license key can view (but not forge) this information. \n\nNOTE: If you change these fields, you MUST handle backward compatibility. Existing licenses that were generated with the old fields must still work until all customers have added the new license. Increment (encodedInfo).Version and formatVersion when you make backward-incompatbile changes. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/license#ParseSignedKey",
+                    "documentation": {
+                      "identifier": "ParseSignedKey",
+                      "newPage": false,
+                      "searchKey": "license.ParseSignedKey",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ParseSignedKey(text string, publicKey ssh.PublicKey) (info *Info, signature string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ParseSignedKey(text string, publicKey ssh.PublicKey) (info *Info, signature string, err error)\n```\n\nParseSignedKey parses and verifies the signed license key. If parsing or verification fails, a non-nil error is returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/license#Info.IsExpired",
+                    "documentation": {
+                      "identifier": "Info.IsExpired",
+                      "newPage": false,
+                      "searchKey": "license.Info.IsExpired",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l Info) IsExpired() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l Info) IsExpired() bool\n```\n\nIsExpired reports whether the license has expired. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/license#Info.IsExpiredWithGracePeriod",
+                    "documentation": {
+                      "identifier": "Info.IsExpiredWithGracePeriod",
+                      "newPage": false,
+                      "searchKey": "license.Info.IsExpiredWithGracePeriod",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l Info) IsExpiredWithGracePeriod() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l Info) IsExpiredWithGracePeriod() bool\n```\n\nIsExpiredWithGracePeriod reports whether the license has expired, adding a grace period of 3 days after the license's expiration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/license#Info.HasTag",
+                    "documentation": {
+                      "identifier": "Info.HasTag",
+                      "newPage": false,
+                      "searchKey": "license.Info.HasTag",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l Info) HasTag(tag string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l Info) HasTag(tag string) bool\n```\n\nHasTag reports whether tag is in l's list of tags. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/license#Info.String",
+                    "documentation": {
+                      "identifier": "Info.String",
+                      "newPage": false,
+                      "searchKey": "license.Info.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Info) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Info) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/license#Info.encode",
+                    "documentation": {
+                      "identifier": "Info.encode",
+                      "newPage": false,
+                      "searchKey": "license.Info.encode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l Info) encode() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l Info) encode() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/license#Info.decode",
+                    "documentation": {
+                      "identifier": "Info.decode",
+                      "newPage": false,
+                      "searchKey": "license.Info.decode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Info) decode(data []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Info) decode(data []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#encodedInfo",
+              "documentation": {
+                "identifier": "encodedInfo",
+                "newPage": false,
+                "searchKey": "license.encodedInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encodedInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encodedInfo struct {\n\tVersion int     `json:\"v\"` // version number of the license key info format (not Sourcegraph product/build version)\n\tNonce   [8]byte `json:\"n\"` // random nonce so that licenses with identical Info values\n\tInfo\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#signedKey",
+              "documentation": {
+                "identifier": "signedKey",
+                "newPage": false,
+                "searchKey": "license.signedKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type signedKey struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype signedKey struct {\n\tSignature   *ssh.Signature `json:\"sig\"`\n\tEncodedInfo []byte         `json:\"info\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/license#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#ParseTagsInput",
+              "documentation": {
+                "identifier": "ParseTagsInput",
+                "newPage": false,
+                "searchKey": "license.ParseTagsInput",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseTagsInput(tagsStr string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseTagsInput(tagsStr string) []string\n```\n\nParseTagsInput parses a string of comma-separated tags. It removes whitespace around tags and removes empty tags before returning the list of tags. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#GenerateSignedKey",
+              "documentation": {
+                "identifier": "GenerateSignedKey",
+                "newPage": false,
+                "searchKey": "license.GenerateSignedKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GenerateSignedKey(info Info, privateKey ssh.Signer) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GenerateSignedKey(info Info, privateKey ssh.Signer) (string, error)\n```\n\nGenerateSignedKey generates a new signed license key with the given license information, using the private key for the signature. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#TestParseTagsInput",
+              "documentation": {
+                "identifier": "TestParseTagsInput",
+                "newPage": false,
+                "searchKey": "license.TestParseTagsInput",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseTagsInput(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseTagsInput(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "license.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#TestInfo_EncodeDecode",
+              "documentation": {
+                "identifier": "TestInfo_EncodeDecode",
+                "newPage": false,
+                "searchKey": "license.TestInfo_EncodeDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInfo_EncodeDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInfo_EncodeDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#TestGenerateParseSignedKey",
+              "documentation": {
+                "identifier": "TestGenerateParseSignedKey",
+                "newPage": false,
+                "searchKey": "license.TestGenerateParseSignedKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGenerateParseSignedKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGenerateParseSignedKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/license#TestParseSignedKey",
+              "documentation": {
+                "identifier": "TestParseSignedKey",
+                "newPage": false,
+                "searchKey": "license.TestParseSignedKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseSignedKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseSignedKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

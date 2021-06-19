@@ -1,0 +1,1450 @@
+{
+  "pathID": "/enterprise/internal/batches/state",
+  "documentation": {
+    "identifier": "state",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/state",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package state"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/state#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#timestampCount",
+              "documentation": {
+                "identifier": "timestampCount",
+                "newPage": false,
+                "searchKey": "state.timestampCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const timestampCount"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst timestampCount = 150\n```\n\ntimestampCount defines how many timestamps we will return for a given dateframe. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/state#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#RequiredEventTypesForHistory",
+              "documentation": {
+                "identifier": "RequiredEventTypesForHistory",
+                "newPage": false,
+                "searchKey": "state.RequiredEventTypesForHistory",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RequiredEventTypesForHistory"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RequiredEventTypesForHistory = ...\n```\n\nRequiredEventTypesForHistory keeps track of all event kinds required for calculating the history of a changeset. \n\nWe specifically ignore ChangesetEventKindGitHubReviewDismissed events since GitHub updates the original ChangesetEventKindGitHubReviewed event when a review has been dismissed. See: [https://github.com/sourcegraph/sourcegraph/pull/9461](https://github.com/sourcegraph/sourcegraph/pull/9461) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ComputeLabelsRequiredEventTypes",
+              "documentation": {
+                "identifier": "ComputeLabelsRequiredEventTypes",
+                "newPage": false,
+                "searchKey": "state.ComputeLabelsRequiredEventTypes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ComputeLabelsRequiredEventTypes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ComputeLabelsRequiredEventTypes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/state#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ChangesetEvents",
+              "documentation": {
+                "identifier": "ChangesetEvents",
+                "newPage": false,
+                "searchKey": "state.ChangesetEvents",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetEvents []*types.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetEvents []*btypes.ChangesetEvent\n```\n\nChangesetEvents is a collection of changeset events \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/state#ChangesetEvents.Len",
+                    "documentation": {
+                      "identifier": "ChangesetEvents.Len",
+                      "newPage": false,
+                      "searchKey": "state.ChangesetEvents.Len",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ce ChangesetEvents) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ce ChangesetEvents) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/state#ChangesetEvents.Swap",
+                    "documentation": {
+                      "identifier": "ChangesetEvents.Swap",
+                      "newPage": false,
+                      "searchKey": "state.ChangesetEvents.Swap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ce ChangesetEvents) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ce ChangesetEvents) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/state#ChangesetEvents.Less",
+                    "documentation": {
+                      "identifier": "ChangesetEvents.Less",
+                      "newPage": false,
+                      "searchKey": "state.ChangesetEvents.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ce ChangesetEvents) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ce ChangesetEvents) Less(i, j int) bool\n```\n\nLess sorts changeset events by their Timestamps \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#changesetHistory",
+              "documentation": {
+                "identifier": "changesetHistory",
+                "newPage": false,
+                "searchKey": "state.changesetHistory",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type changesetHistory []state.changesetStatesAtTime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype changesetHistory []changesetStatesAtTime\n```\n\nchangesetHistory is a collection of external changeset states (open/closed/merged state and review state) over time. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/state#computeHistory",
+                    "documentation": {
+                      "identifier": "computeHistory",
+                      "newPage": false,
+                      "searchKey": "state.computeHistory",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func computeHistory(ch *btypes.Changeset, ce ChangesetEvents) (changesetHistory, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc computeHistory(ch *btypes.Changeset, ce ChangesetEvents) (changesetHistory, error)\n```\n\ncomputeHistory calculates the changesetHistory for the given Changeset and its ChangesetEvents. The ChangesetEvents MUST be sorted by their Timestamp. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/state#changesetHistory.StatesAtTime",
+                    "documentation": {
+                      "identifier": "changesetHistory.StatesAtTime",
+                      "newPage": false,
+                      "searchKey": "state.changesetHistory.StatesAtTime",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h changesetHistory) StatesAtTime(t time.Time) (changesetStatesAtTime, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h changesetHistory) StatesAtTime(t time.Time) (changesetStatesAtTime, bool)\n```\n\nStatesAtTime returns the changeset's states valid at the given time. If the changeset didn't exist yet, the second parameter is false. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#changesetStatesAtTime",
+              "documentation": {
+                "identifier": "changesetStatesAtTime",
+                "newPage": false,
+                "searchKey": "state.changesetStatesAtTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type changesetStatesAtTime struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype changesetStatesAtTime struct {\n\tt             time.Time\n\texternalState btypes.ChangesetExternalState\n\treviewState   btypes.ChangesetReviewState\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ChangesetCounts",
+              "documentation": {
+                "identifier": "ChangesetCounts",
+                "newPage": false,
+                "searchKey": "state.ChangesetCounts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetCounts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetCounts struct {\n\tTime                 time.Time\n\tTotal                int32\n\tMerged               int32\n\tClosed               int32\n\tDraft                int32\n\tOpen                 int32\n\tOpenApproved         int32\n\tOpenChangesRequested int32\n\tOpenPending          int32\n}\n```\n\nChangesetCounts represents the states in which a given set of Changesets was at a given point in time \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/state#ChangesetCounts.String",
+                    "documentation": {
+                      "identifier": "ChangesetCounts.String",
+                      "newPage": false,
+                      "searchKey": "state.ChangesetCounts.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cc *ChangesetCounts) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cc *ChangesetCounts) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/state#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#reduceReviewStates",
+              "documentation": {
+                "identifier": "reduceReviewStates",
+                "newPage": false,
+                "searchKey": "state.reduceReviewStates",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reduceReviewStates(statesByAuthor map[string]btypes.ChangesetReviewState) btypes.ChangesetReviewState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reduceReviewStates(statesByAuthor map[string]btypes.ChangesetReviewState) btypes.ChangesetReviewState\n```\n\nreduceReviewStates reduces the given a map of review per author down to a single overall ChangesetReviewState. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#initialExternalState",
+              "documentation": {
+                "identifier": "initialExternalState",
+                "newPage": false,
+                "searchKey": "state.initialExternalState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initialExternalState(ch *btypes.Changeset, ce ChangesetEvents) btypes.ChangesetExternalState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initialExternalState(ch *btypes.Changeset, ce ChangesetEvents) btypes.ChangesetExternalState\n```\n\ninitialExternalState infers from the changeset state and the list of events in which ChangesetExternalState the changeset must have been when it has been created. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#CalcCounts",
+              "documentation": {
+                "identifier": "CalcCounts",
+                "newPage": false,
+                "searchKey": "state.CalcCounts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CalcCounts(start, end time.Time, cs []*btypes.Changeset, es ...*btypes.ChangesetEvent) ([]*ChangesetCounts, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CalcCounts(start, end time.Time, cs []*btypes.Changeset, es ...*btypes.ChangesetEvent) ([]*ChangesetCounts, error)\n```\n\nCalcCounts calculates ChangesetCounts for the given Changesets and their ChangesetEvents in the timeframe specified by the start and end parameters. The number of ChangesetCounts returned is always `timestampCount`. Between start and end, it generates `timestampCount` datapoints with each ChangesetCounts representing a point in time. `es` are expected to be pre-sorted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#GenerateTimestamps",
+              "documentation": {
+                "identifier": "GenerateTimestamps",
+                "newPage": false,
+                "searchKey": "state.GenerateTimestamps",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GenerateTimestamps(start, end time.Time) []time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GenerateTimestamps(start, end time.Time) []time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#SetDerivedState",
+              "documentation": {
+                "identifier": "SetDerivedState",
+                "newPage": false,
+                "searchKey": "state.SetDerivedState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetDerivedState(ctx context.Context, repoStore *database.RepoStore, c *btypes.Changeset, es []*btypes.ChangesetEvent)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetDerivedState(ctx context.Context, repoStore *database.RepoStore, c *btypes.Changeset, es []*btypes.ChangesetEvent)\n```\n\nSetDerivedState will update the external state fields on the Changeset based on the current state of the changeset and associated events. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeCheckState",
+              "documentation": {
+                "identifier": "computeCheckState",
+                "newPage": false,
+                "searchKey": "state.computeCheckState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeCheckState(c *btypes.Changeset, events ChangesetEvents) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeCheckState(c *btypes.Changeset, events ChangesetEvents) btypes.ChangesetCheckState\n```\n\ncomputeCheckState computes the overall check state based on the current synced check state and any webhook events that have arrived after the most recent sync. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeExternalState",
+              "documentation": {
+                "identifier": "computeExternalState",
+                "newPage": false,
+                "searchKey": "state.computeExternalState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeExternalState(c *btypes.Changeset, history []changesetStatesAtTime) (btypes.ChangesetExternalState, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeExternalState(c *btypes.Changeset, history []changesetStatesAtTime) (btypes.ChangesetExternalState, error)\n```\n\ncomputeExternalState computes the external state for the changeset and its associated events. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeReviewState",
+              "documentation": {
+                "identifier": "computeReviewState",
+                "newPage": false,
+                "searchKey": "state.computeReviewState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeReviewState(c *btypes.Changeset, history []changesetStatesAtTime) (btypes.ChangesetReviewState, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeReviewState(c *btypes.Changeset, history []changesetStatesAtTime) (btypes.ChangesetReviewState, error)\n```\n\ncomputeReviewState computes the review state for the changeset and its associated events. The events should be presorted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeBitbucketBuildStatus",
+              "documentation": {
+                "identifier": "computeBitbucketBuildStatus",
+                "newPage": false,
+                "searchKey": "state.computeBitbucketBuildStatus",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeBitbucketBuildStatus(lastSynced time.Time, pr *bitbucketserver.PullRequest, events []*btypes.ChangesetEvent) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeBitbucketBuildStatus(lastSynced time.Time, pr *bitbucketserver.PullRequest, events []*btypes.ChangesetEvent) btypes.ChangesetCheckState\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#parseBitbucketBuildState",
+              "documentation": {
+                "identifier": "parseBitbucketBuildState",
+                "newPage": false,
+                "searchKey": "state.parseBitbucketBuildState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseBitbucketBuildState(s string) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseBitbucketBuildState(s string) btypes.ChangesetCheckState\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeGitHubCheckState",
+              "documentation": {
+                "identifier": "computeGitHubCheckState",
+                "newPage": false,
+                "searchKey": "state.computeGitHubCheckState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeGitHubCheckState(lastSynced time.Time, pr *github.PullRequest, events []*btypes.ChangesetEvent) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeGitHubCheckState(lastSynced time.Time, pr *github.PullRequest, events []*btypes.ChangesetEvent) btypes.ChangesetCheckState\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#combineCheckStates",
+              "documentation": {
+                "identifier": "combineCheckStates",
+                "newPage": false,
+                "searchKey": "state.combineCheckStates",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func combineCheckStates(states []btypes.ChangesetCheckState) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc combineCheckStates(states []btypes.ChangesetCheckState) btypes.ChangesetCheckState\n```\n\ncombineCheckStates combines multiple check states into an overall state pending takes highest priority followed by error success return only if all successful \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#parseGithubCheckState",
+              "documentation": {
+                "identifier": "parseGithubCheckState",
+                "newPage": false,
+                "searchKey": "state.parseGithubCheckState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseGithubCheckState(s string) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseGithubCheckState(s string) btypes.ChangesetCheckState\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#parseGithubCheckSuiteState",
+              "documentation": {
+                "identifier": "parseGithubCheckSuiteState",
+                "newPage": false,
+                "searchKey": "state.parseGithubCheckSuiteState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseGithubCheckSuiteState(status, conclusion string) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseGithubCheckSuiteState(status, conclusion string) btypes.ChangesetCheckState\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeGitLabCheckState",
+              "documentation": {
+                "identifier": "computeGitLabCheckState",
+                "newPage": false,
+                "searchKey": "state.computeGitLabCheckState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeGitLabCheckState(lastSynced time.Time, mr *gitlab.MergeRequest, events []*btypes.ChangesetEvent) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeGitLabCheckState(lastSynced time.Time, mr *gitlab.MergeRequest, events []*btypes.ChangesetEvent) btypes.ChangesetCheckState\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#parseGitLabPipelineStatus",
+              "documentation": {
+                "identifier": "parseGitLabPipelineStatus",
+                "newPage": false,
+                "searchKey": "state.parseGitLabPipelineStatus",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseGitLabPipelineStatus(status gitlab.PipelineStatus) btypes.ChangesetCheckState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseGitLabPipelineStatus(status gitlab.PipelineStatus) btypes.ChangesetCheckState\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeSingleChangesetExternalState",
+              "documentation": {
+                "identifier": "computeSingleChangesetExternalState",
+                "newPage": false,
+                "searchKey": "state.computeSingleChangesetExternalState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeSingleChangesetExternalState(c *btypes.Changeset) (s btypes.ChangesetExternalState, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeSingleChangesetExternalState(c *btypes.Changeset) (s btypes.ChangesetExternalState, err error)\n```\n\ncomputeSingleChangesetExternalState of a Changeset based on the metadata. It does NOT reflect the final calculated state, use `ExternalState` instead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeSingleChangesetReviewState",
+              "documentation": {
+                "identifier": "computeSingleChangesetReviewState",
+                "newPage": false,
+                "searchKey": "state.computeSingleChangesetReviewState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeSingleChangesetReviewState(c *btypes.Changeset) (s btypes.ChangesetReviewState, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeSingleChangesetReviewState(c *btypes.Changeset) (s btypes.ChangesetReviewState, err error)\n```\n\ncomputeSingleChangesetReviewState computes the review state of a Changeset. GitHub doesn't keep the review state on a changeset, so a GitHub Changeset will always return ChangesetReviewStatePending. \n\nThis method should NOT be called directly. Use computeReviewState instead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#selectReviewState",
+              "documentation": {
+                "identifier": "selectReviewState",
+                "newPage": false,
+                "searchKey": "state.selectReviewState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func selectReviewState(states map[btypes.ChangesetReviewState]bool) btypes.ChangesetReviewState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc selectReviewState(states map[btypes.ChangesetReviewState]bool) btypes.ChangesetReviewState\n```\n\nselectReviewState computes the single review state for a given set of ChangesetReviewStates. Since a pull request, for example, can have multiple reviews with different states, we need a function to determine what the state for the pull request is. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeDiffStat",
+              "documentation": {
+                "identifier": "computeDiffStat",
+                "newPage": false,
+                "searchKey": "state.computeDiffStat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeDiffStat(ctx context.Context, c *btypes.Changeset, repo api.RepoName) (*diff.Stat, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeDiffStat(ctx context.Context, c *btypes.Changeset, repo api.RepoName) (*diff.Stat, error)\n```\n\ncomputeDiffStat computes the up to date diffstat for the changeset, based on the values in c.SyncState. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeSyncState",
+              "documentation": {
+                "identifier": "computeSyncState",
+                "newPage": false,
+                "searchKey": "state.computeSyncState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeSyncState(ctx context.Context, c *btypes.Changeset, repo api.RepoName) (*btypes.ChangesetSyncState, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeSyncState(ctx context.Context, c *btypes.Changeset, repo api.RepoName) (*btypes.ChangesetSyncState, error)\n```\n\ncomputeSyncState computes the up to date sync state based on the changeset as it currently exists on the external provider. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#computeRev",
+              "documentation": {
+                "identifier": "computeRev",
+                "newPage": false,
+                "searchKey": "state.computeRev",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeRev(ctx context.Context, repo api.RepoName, getOid, getRef func() (string, error)) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeRev(ctx context.Context, repo api.RepoName, getOid, getRef func() (string, error)) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#changesetRepoName",
+              "documentation": {
+                "identifier": "changesetRepoName",
+                "newPage": false,
+                "searchKey": "state.changesetRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func changesetRepoName(ctx context.Context, repoStore *database.RepoStore, c *btypes.Changeset) (api.RepoName, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc changesetRepoName(ctx context.Context, repoStore *database.RepoStore, c *btypes.Changeset) (api.RepoName, error)\n```\n\nchangesetRepoName looks up a api.RepoName based on the RepoID within a changeset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#unixMilliToTime",
+              "documentation": {
+                "identifier": "unixMilliToTime",
+                "newPage": false,
+                "searchKey": "state.unixMilliToTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unixMilliToTime(ms int64) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unixMilliToTime(ms int64) time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ComputeLabels",
+              "documentation": {
+                "identifier": "ComputeLabels",
+                "newPage": false,
+                "searchKey": "state.ComputeLabels",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ComputeLabels(c *btypes.Changeset, events ChangesetEvents) []btypes.ChangesetLabel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ComputeLabels(c *btypes.Changeset, events ChangesetEvents) []btypes.ChangesetLabel\n```\n\nComputeLabels returns a sorted list of current labels based the starting set of labels found in the Changeset and looking at ChangesetEvents that have occurred after the Changeset.UpdatedAt. The events should be presorted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#TestCalcCounts",
+              "documentation": {
+                "identifier": "TestCalcCounts",
+                "newPage": false,
+                "searchKey": "state.TestCalcCounts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCalcCounts(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCalcCounts(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ghChangeset",
+              "documentation": {
+                "identifier": "ghChangeset",
+                "newPage": false,
+                "searchKey": "state.ghChangeset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ghChangeset(id int64, t time.Time) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ghChangeset(id int64, t time.Time) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#bbsChangeset",
+              "documentation": {
+                "identifier": "bbsChangeset",
+                "newPage": false,
+                "searchKey": "state.bbsChangeset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bbsChangeset(id int64, t time.Time) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bbsChangeset(id int64, t time.Time) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#glChangeset",
+              "documentation": {
+                "identifier": "glChangeset",
+                "newPage": false,
+                "searchKey": "state.glChangeset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func glChangeset(id int64, t time.Time) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc glChangeset(id int64, t time.Time) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#setExternalDeletedAt",
+              "documentation": {
+                "identifier": "setExternalDeletedAt",
+                "newPage": false,
+                "searchKey": "state.setExternalDeletedAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setExternalDeletedAt(c *btypes.Changeset, t time.Time) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setExternalDeletedAt(c *btypes.Changeset, t time.Time) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#event",
+              "documentation": {
+                "identifier": "event",
+                "newPage": false,
+                "searchKey": "state.event",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func event(t *testing.T, ti time.Time, kind btypes.ChangesetEventKind, id int64) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc event(t *testing.T, ti time.Time, kind btypes.ChangesetEventKind, id int64) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ghReview",
+              "documentation": {
+                "identifier": "ghReview",
+                "newPage": false,
+                "searchKey": "state.ghReview",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ghReview(id int64, t time.Time, login, state string) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ghReview(id int64, t time.Time, login, state string) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ghReviewDismissed",
+              "documentation": {
+                "identifier": "ghReviewDismissed",
+                "newPage": false,
+                "searchKey": "state.ghReviewDismissed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ghReviewDismissed(id int64, t time.Time, login, reviewer string) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ghReviewDismissed(id int64, t time.Time, login, reviewer string) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ghReadyForReview",
+              "documentation": {
+                "identifier": "ghReadyForReview",
+                "newPage": false,
+                "searchKey": "state.ghReadyForReview",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ghReadyForReview(id int64, t time.Time, login string) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ghReadyForReview(id int64, t time.Time, login string) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#ghConvertToDraft",
+              "documentation": {
+                "identifier": "ghConvertToDraft",
+                "newPage": false,
+                "searchKey": "state.ghConvertToDraft",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ghConvertToDraft(id int64, t time.Time, login string) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ghConvertToDraft(id int64, t time.Time, login string) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#glUnmarkWorkInProgress",
+              "documentation": {
+                "identifier": "glUnmarkWorkInProgress",
+                "newPage": false,
+                "searchKey": "state.glUnmarkWorkInProgress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func glUnmarkWorkInProgress(id int64, t time.Time, login string) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc glUnmarkWorkInProgress(id int64, t time.Time, login string) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#glMarkWorkInProgress",
+              "documentation": {
+                "identifier": "glMarkWorkInProgress",
+                "newPage": false,
+                "searchKey": "state.glMarkWorkInProgress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func glMarkWorkInProgress(id int64, t time.Time, login string) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc glMarkWorkInProgress(id int64, t time.Time, login string) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#glClosed",
+              "documentation": {
+                "identifier": "glClosed",
+                "newPage": false,
+                "searchKey": "state.glClosed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func glClosed(id int64, t time.Time, login string) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc glClosed(id int64, t time.Time, login string) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#glReopen",
+              "documentation": {
+                "identifier": "glReopen",
+                "newPage": false,
+                "searchKey": "state.glReopen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func glReopen(id int64, t time.Time, login string) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc glReopen(id int64, t time.Time, login string) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#bbsActivity",
+              "documentation": {
+                "identifier": "bbsActivity",
+                "newPage": false,
+                "searchKey": "state.bbsActivity",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bbsActivity(id int64, t time.Time, username string, kind btypes.ChangesetEventKind) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bbsActivity(id int64, t time.Time, username string, kind btypes.ChangesetEventKind) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#bbsParticipantEvent",
+              "documentation": {
+                "identifier": "bbsParticipantEvent",
+                "newPage": false,
+                "searchKey": "state.bbsParticipantEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bbsParticipantEvent(id int64, t time.Time, username string, kind btypes.ChangesetEventKind) *btypes.ChangesetEvent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bbsParticipantEvent(id int64, t time.Time, username string, kind btypes.ChangesetEventKind) *btypes.ChangesetEvent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#setDraft",
+              "documentation": {
+                "identifier": "setDraft",
+                "newPage": false,
+                "searchKey": "state.setDraft",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setDraft(c *btypes.Changeset) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setDraft(c *btypes.Changeset) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#timeToUnixMilli",
+              "documentation": {
+                "identifier": "timeToUnixMilli",
+                "newPage": false,
+                "searchKey": "state.timeToUnixMilli",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func timeToUnixMilli(t time.Time) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc timeToUnixMilli(t time.Time) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#TestComputeGithubCheckState",
+              "documentation": {
+                "identifier": "TestComputeGithubCheckState",
+                "newPage": false,
+                "searchKey": "state.TestComputeGithubCheckState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestComputeGithubCheckState(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestComputeGithubCheckState(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#TestComputeBitbucketBuildStatus",
+              "documentation": {
+                "identifier": "TestComputeBitbucketBuildStatus",
+                "newPage": false,
+                "searchKey": "state.TestComputeBitbucketBuildStatus",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestComputeBitbucketBuildStatus(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestComputeBitbucketBuildStatus(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#TestComputeGitLabCheckState",
+              "documentation": {
+                "identifier": "TestComputeGitLabCheckState",
+                "newPage": false,
+                "searchKey": "state.TestComputeGitLabCheckState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestComputeGitLabCheckState(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestComputeGitLabCheckState(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#TestComputeReviewState",
+              "documentation": {
+                "identifier": "TestComputeReviewState",
+                "newPage": false,
+                "searchKey": "state.TestComputeReviewState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestComputeReviewState(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestComputeReviewState(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#TestComputeExternalState",
+              "documentation": {
+                "identifier": "TestComputeExternalState",
+                "newPage": false,
+                "searchKey": "state.TestComputeExternalState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestComputeExternalState(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestComputeExternalState(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#TestComputeLabels",
+              "documentation": {
+                "identifier": "TestComputeLabels",
+                "newPage": false,
+                "searchKey": "state.TestComputeLabels",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestComputeLabels(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestComputeLabels(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#bitbucketChangeset",
+              "documentation": {
+                "identifier": "bitbucketChangeset",
+                "newPage": false,
+                "searchKey": "state.bitbucketChangeset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bitbucketChangeset(updatedAt time.Time, state, reviewStatus string) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bitbucketChangeset(updatedAt time.Time, state, reviewStatus string) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#githubChangeset",
+              "documentation": {
+                "identifier": "githubChangeset",
+                "newPage": false,
+                "searchKey": "state.githubChangeset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func githubChangeset(updatedAt time.Time, state string) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc githubChangeset(updatedAt time.Time, state string) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#gitLabChangeset",
+              "documentation": {
+                "identifier": "gitLabChangeset",
+                "newPage": false,
+                "searchKey": "state.gitLabChangeset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gitLabChangeset(updatedAt time.Time, state gitlab.MergeRequestState, notes []*gitlab.Note) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gitLabChangeset(updatedAt time.Time, state gitlab.MergeRequestState, notes []*gitlab.Note) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/state#setDeletedAt",
+              "documentation": {
+                "identifier": "setDeletedAt",
+                "newPage": false,
+                "searchKey": "state.setDeletedAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setDeletedAt(c *btypes.Changeset, deletedAt time.Time) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setDeletedAt(c *btypes.Changeset, deletedAt time.Time) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

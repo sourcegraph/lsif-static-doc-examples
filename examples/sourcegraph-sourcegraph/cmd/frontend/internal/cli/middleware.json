@@ -1,0 +1,228 @@
+{
+  "pathID": "/cmd/frontend/internal/cli/middleware",
+  "documentation": {
+    "identifier": "middleware",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/cli/middleware",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package middleware"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package middleware contains HTTP middlewares. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/cli/middleware#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli/middleware#goImportMetaTagTemplate",
+              "documentation": {
+                "identifier": "goImportMetaTagTemplate",
+                "newPage": false,
+                "searchKey": "middleware.goImportMetaTagTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goImportMetaTagTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goImportMetaTagTemplate = ...\n```\n\ngoImportMetaTagTemplate is an HTML template for rendering a blank page with a go-import meta tag. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli/middleware#httpTrace",
+              "documentation": {
+                "identifier": "httpTrace",
+                "newPage": false,
+                "searchKey": "middleware.httpTrace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var httpTrace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar httpTrace, _ = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/cli/middleware#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli/middleware#goImportMetaTag",
+              "documentation": {
+                "identifier": "goImportMetaTag",
+                "newPage": false,
+                "searchKey": "middleware.goImportMetaTag",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type goImportMetaTag struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype goImportMetaTag struct {\n\t// ImportPrefix is the import path corresponding to the repository root.\n\t// It must be a prefix or an exact match of the package being fetched with \"go get\".\n\t// If it's not an exact match, another http request is made at the prefix to verify\n\t// the <meta> tags match.\n\tImportPrefix string\n\n\t// VCS is one of \"git\", \"hg\", \"svn\", etc.\n\tVCS string\n\n\t// RepoRoot is the root of the version control system containing a scheme and\n\t// not containing a .vcs qualifier.\n\tRepoRoot string\n}\n```\n\ngoImportMetaTag represents a go-import meta tag. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/cli/middleware#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli/middleware#BlackHole",
+              "documentation": {
+                "identifier": "BlackHole",
+                "newPage": false,
+                "searchKey": "middleware.BlackHole",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BlackHole(next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BlackHole(next http.Handler) http.Handler\n```\n\nBlackHole is a middleware which returns StatusGone on removed URLs that external systems still regularly hit. \n\n🚨 SECURITY: This handler is served to all clients, even on private servers to clients who have not authenticated. It must not reveal any sensitive information. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli/middleware#isBlackhole",
+              "documentation": {
+                "identifier": "isBlackhole",
+                "newPage": false,
+                "searchKey": "middleware.isBlackhole",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isBlackhole(r *http.Request) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isBlackhole(r *http.Request) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli/middleware#SourcegraphComGoGetHandler",
+              "documentation": {
+                "identifier": "SourcegraphComGoGetHandler",
+                "newPage": false,
+                "searchKey": "middleware.SourcegraphComGoGetHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SourcegraphComGoGetHandler(next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SourcegraphComGoGetHandler(next http.Handler) http.Handler\n```\n\nSourcegraphComGoGetHandler is middleware for serving go-import meta tags for requests with ?go-get=1 query on sourcegraph.com. \n\nIt implements the following mapping: \n\n1. If the username (first path element) is \"sourcegraph\", consider it to be a vanity \n\n```\nimport path pointing to github.com/sourcegraph/<repo> as the clone URL.\n\n```\n2. All other requests are served with 404 Not Found. \n\n🚨 SECURITY: This handler is served to all clients, even on private servers to clients who have not authenticated. It must not reveal any sensitive information. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cli/middleware#Trace",
+              "documentation": {
+                "identifier": "Trace",
+                "newPage": false,
+                "searchKey": "middleware.Trace",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Trace(next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Trace(next http.Handler) http.Handler\n```\n\nTrace is an HTTP middleware that dumps the HTTP request body (to stderr) if the env var `HTTP_TRACE=1`. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

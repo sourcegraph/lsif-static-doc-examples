@@ -1,0 +1,217 @@
+{
+  "pathID": "/cmd/frontend/enterprise",
+  "documentation": {
+    "identifier": "enterprise",
+    "newPage": true,
+    "searchKey": "cmd/frontend/enterprise",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package enterprise"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/enterprise#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/enterprise#Services",
+              "documentation": {
+                "identifier": "Services",
+                "newPage": false,
+                "searchKey": "enterprise.Services",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Services struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Services struct {\n\tGitHubWebhook             webhooks.Registerer\n\tGitLabWebhook             http.Handler\n\tBitbucketServerWebhook    http.Handler\n\tNewCodeIntelUploadHandler NewCodeIntelUploadHandler\n\tNewExecutorProxyHandler   NewExecutorProxyHandler\n\tAuthzResolver             graphqlbackend.AuthzResolver\n\tBatchChangesResolver      graphqlbackend.BatchChangesResolver\n\tCodeIntelResolver         graphqlbackend.CodeIntelResolver\n\tInsightsResolver          graphqlbackend.InsightsResolver\n\tCodeMonitorsResolver      graphqlbackend.CodeMonitorsResolver\n\tLicenseResolver           graphqlbackend.LicenseResolver\n\tDotcomResolver            graphqlbackend.DotcomRootResolver\n}\n```\n\nServices is a bag of HTTP handlers and factory functions that are registered by the enterprise frontend setup hook. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/enterprise#DefaultServices",
+                    "documentation": {
+                      "identifier": "DefaultServices",
+                      "newPage": false,
+                      "searchKey": "enterprise.DefaultServices",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func DefaultServices() Services"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc DefaultServices() Services\n```\n\nDefaultServices creates a new Services value that has default implementations for all services. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/enterprise#NewCodeIntelUploadHandler",
+              "documentation": {
+                "identifier": "NewCodeIntelUploadHandler",
+                "newPage": false,
+                "searchKey": "enterprise.NewCodeIntelUploadHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NewCodeIntelUploadHandler func(internal bool) net/http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NewCodeIntelUploadHandler func(internal bool) http.Handler\n```\n\nNewCodeIntelUploadHandler creates a new handler for the LSIF upload endpoint. The resulting handler skips auth checks when the internal flag is true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/enterprise#NewExecutorProxyHandler",
+              "documentation": {
+                "identifier": "NewExecutorProxyHandler",
+                "newPage": false,
+                "searchKey": "enterprise.NewExecutorProxyHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NewExecutorProxyHandler func() net/http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NewExecutorProxyHandler func() http.Handler\n```\n\nNewExecutorProxyHandler creates a new proxy handler for routes accessible to the executor services deployed separately from the k8s cluster. This handler is protected via a shared username and password. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/enterprise#registerFunc",
+              "documentation": {
+                "identifier": "registerFunc",
+                "newPage": false,
+                "searchKey": "enterprise.registerFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type registerFunc func(webhook *github.com/sourcegraph/sourcegraph/cmd/frontend/webhooks.GitHubWebhook)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype registerFunc func(webhook *webhooks.GitHubWebhook)\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/enterprise#registerFunc.Register",
+                    "documentation": {
+                      "identifier": "registerFunc.Register",
+                      "newPage": false,
+                      "searchKey": "enterprise.registerFunc.Register",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fn registerFunc) Register(w *webhooks.GitHubWebhook)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fn registerFunc) Register(w *webhooks.GitHubWebhook)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/enterprise#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/enterprise#makeNotFoundHandler",
+              "documentation": {
+                "identifier": "makeNotFoundHandler",
+                "newPage": false,
+                "searchKey": "enterprise.makeNotFoundHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeNotFoundHandler(handlerName string) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeNotFoundHandler(handlerName string) http.Handler\n```\n\nmakeNotFoundHandler returns an HTTP handler that respond 404 for all requests. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

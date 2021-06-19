@@ -1,0 +1,1241 @@
+{
+  "pathID": "/internal/api",
+  "documentation": {
+    "identifier": "api",
+    "newPage": true,
+    "searchKey": "internal/api",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package api"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package api contains an API client and types for cross-service communication. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/api#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/api#frontendInternal",
+              "documentation": {
+                "identifier": "frontendInternal",
+                "newPage": false,
+                "searchKey": "api.frontendInternal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var frontendInternal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar frontendInternal = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#InternalClient",
+              "documentation": {
+                "identifier": "InternalClient",
+                "newPage": false,
+                "searchKey": "api.InternalClient",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var InternalClient"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar InternalClient = &internalClient{URL: \"http://\" + frontendInternal}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#requestDuration",
+              "documentation": {
+                "identifier": "requestDuration",
+                "newPage": false,
+                "searchKey": "api.requestDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestDuration = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#MockOrgsListUsers",
+              "documentation": {
+                "identifier": "MockOrgsListUsers",
+                "newPage": false,
+                "searchKey": "api.MockOrgsListUsers",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockOrgsListUsers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockOrgsListUsers func(orgID int32) (users []int32, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#MockInternalClientConfiguration",
+              "documentation": {
+                "identifier": "MockInternalClientConfiguration",
+                "newPage": false,
+                "searchKey": "api.MockInternalClientConfiguration",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockInternalClientConfiguration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockInternalClientConfiguration func() (conftypes.RawUnified, error)\n```\n\nMockInternalClientConfiguration mocks (*internalClient).Configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#MockExternalServiceConfigs",
+              "documentation": {
+                "identifier": "MockExternalServiceConfigs",
+                "newPage": false,
+                "searchKey": "api.MockExternalServiceConfigs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockExternalServiceConfigs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockExternalServiceConfigs func(kind string, result interface{}) error\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/api#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/api#RepoID",
+              "documentation": {
+                "identifier": "RepoID",
+                "newPage": false,
+                "searchKey": "api.RepoID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoID int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoID int32\n```\n\nRepoID is the unique identifier for a repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#RepoName",
+              "documentation": {
+                "identifier": "RepoName",
+                "newPage": false,
+                "searchKey": "api.RepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoName string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoName string\n```\n\nRepoName is the name of a repository, consisting of one or more \"/\"-separated path components. \n\nPreviously, this was called RepoURI. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#CommitID",
+              "documentation": {
+                "identifier": "CommitID",
+                "newPage": false,
+                "searchKey": "api.CommitID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitID string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitID string\n```\n\nCommitID is the 40-character SHA-1 hash for a Git commit. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/api#CommitID.Short",
+                    "documentation": {
+                      "identifier": "CommitID.Short",
+                      "newPage": false,
+                      "searchKey": "api.CommitID.Short",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitID) Short() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitID) Short() string\n```\n\nShort returns the SHA-1 commit hash truncated to 7 characters \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#Repo",
+              "documentation": {
+                "identifier": "Repo",
+                "newPage": false,
+                "searchKey": "api.Repo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repo struct {\n\t// ID is the unique numeric ID for this repository on Sourcegraph.\n\tID RepoID\n\n\t// ExternalRepo identifies this repository by its ID on the external service where it resides (and the external\n\t// service itself).\n\tExternalRepo *ExternalRepoSpec\n\n\t// Name is the name of the repository (such as \"github.com/user/repo\").\n\tName RepoName\n\t// Enabled is whether the repository is enabled. Disabled repositories are\n\t// not accessible by users (except site admins).\n\tEnabled bool\n}\n```\n\nRepo represents a source code repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#ExternalRepoSpec",
+              "documentation": {
+                "identifier": "ExternalRepoSpec",
+                "newPage": false,
+                "searchKey": "api.ExternalRepoSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalRepoSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalRepoSpec struct {\n\t// ID is the repository's ID on the external service. Its value is opaque except to the repo-updater.\n\t//\n\t// For GitHub, this is the GitHub GraphQL API's node ID for the repository.\n\tID string\n\n\t// ServiceType is the type of external service. Its value is opaque except to the repo-updater.\n\t//\n\t// Example: \"github\", \"gitlab\", etc.\n\tServiceType string\n\n\t// ServiceID is the particular instance of the external service where this repository resides. Its value is\n\t// opaque but typically consists of the canonical base URL to the service.\n\t//\n\t// Implementations must take care to normalize this URL. For example, if different GitHub.com repository code\n\t// paths used slightly different values here (such as \"https://github.com/\" and \"https://github.com\", note the\n\t// lack of trailing slash), then the same logical repository would be incorrectly treated as multiple distinct\n\t// repositories depending on the code path that provided its ServiceID value.\n\t//\n\t// Example: \"https://github.com/\", \"https://github-enterprise.example.com/\"\n\tServiceID string\n}\n```\n\nExternalRepoSpec specifies a repository on an external service (such as GitHub or GitLab). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/api#ExternalRepoSpec.Equal",
+                    "documentation": {
+                      "identifier": "ExternalRepoSpec.Equal",
+                      "newPage": false,
+                      "searchKey": "api.ExternalRepoSpec.Equal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ExternalRepoSpec) Equal(s *ExternalRepoSpec) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ExternalRepoSpec) Equal(s *ExternalRepoSpec) bool\n```\n\nEqual returns true if r is equal to s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#ExternalRepoSpec.Compare",
+                    "documentation": {
+                      "identifier": "ExternalRepoSpec.Compare",
+                      "newPage": false,
+                      "searchKey": "api.ExternalRepoSpec.Compare",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ExternalRepoSpec) Compare(s ExternalRepoSpec) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ExternalRepoSpec) Compare(s ExternalRepoSpec) int\n```\n\nCompare returns -1 if r < s, 0 if r == s or 1 if r > s \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#ExternalRepoSpec.String",
+                    "documentation": {
+                      "identifier": "ExternalRepoSpec.String",
+                      "newPage": false,
+                      "searchKey": "api.ExternalRepoSpec.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ExternalRepoSpec) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ExternalRepoSpec) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#SettingsSubject",
+              "documentation": {
+                "identifier": "SettingsSubject",
+                "newPage": false,
+                "searchKey": "api.SettingsSubject",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SettingsSubject struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SettingsSubject struct {\n\tDefault bool   // whether this is for default settings\n\tSite    bool   // whether this is for global settings\n\tOrg     *int32 // the org's ID\n\tUser    *int32 // the user's ID\n}\n```\n\nA SettingsSubject is something that can have settings. Exactly 1 field must be nonzero. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/api#SettingsSubject.String",
+                    "documentation": {
+                      "identifier": "SettingsSubject.String",
+                      "newPage": false,
+                      "searchKey": "api.SettingsSubject.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s SettingsSubject) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s SettingsSubject) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#Settings",
+              "documentation": {
+                "identifier": "Settings",
+                "newPage": false,
+                "searchKey": "api.Settings",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Settings struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Settings struct {\n\tID           int32           // the unique ID of this settings value\n\tSubject      SettingsSubject // the subject of these settings\n\tAuthorUserID *int32          // the ID of the user who authored this settings value\n\tContents     string          // the raw JSON (with comments and trailing commas allowed)\n\tCreatedAt    time.Time       // the date when this settings value was created\n}\n```\n\nSettings contains settings for a subject. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#ExternalService",
+              "documentation": {
+                "identifier": "ExternalService",
+                "newPage": false,
+                "searchKey": "api.ExternalService",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalService struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalService struct {\n\tID              int64\n\tKind            string\n\tDisplayName     string\n\tConfig          string\n\tCreatedAt       time.Time\n\tUpdatedAt       time.Time\n\tDeletedAt       time.Time\n\tLastSyncAt      time.Time\n\tNextSyncAt      time.Time\n\tNamespaceUserID int32\n\tUnrestricted    bool\n\tCloudDefault    bool\n}\n```\n\nExternalService represents an complete external service record. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#RepoCreateOrUpdateRequest",
+              "documentation": {
+                "identifier": "RepoCreateOrUpdateRequest",
+                "newPage": false,
+                "searchKey": "api.RepoCreateOrUpdateRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoCreateOrUpdateRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoCreateOrUpdateRequest struct {\n\t// ExternalRepo identifies this repository by its ID on the external service where it resides (and the external\n\t// service itself).\n\tExternalRepo ExternalRepoSpec\n\n\t// RepoName is the repository's name.\n\t//\n\t// TODO(sqs): Add a way for callers to request that this repository be renamed.\n\tRepoName `json:\"repo\"`\n\n\t// Enabled is whether the repository should be enabled when initially created.\n\t//\n\t// NOTE: If the repository already exists when this request is received, its enablement is not updated. This\n\t// field is used only when creating the repository.\n\tEnabled bool `json:\"enabled\"`\n\n\t// Description is the repository's description on its external origin.\n\tDescription string `json:\"description\"`\n\n\t// Fork is whether this repository is a fork (according to its external origin).\n\tFork bool `json:\"fork\"`\n\n\t// Archived is whether this repository is archived (according to its external origin).\n\tArchived bool `json:\"archived\"`\n}\n```\n\nRepoCreateOrUpdateRequest is a request to create or update a repository. \n\nThe request handler determines if the request refers to an existing repository (and should therefore update instead of create). If ExternalRepo is set, then it tries to find a stored repository with the same ExternalRepo values. If ExternalRepo is not set, then it tries to find a stored repository with the same RepoName value. \n\nNOTE: Some fields are only used during creation (and are not used to update an existing repository). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#PhabricatorRepoCreateRequest",
+              "documentation": {
+                "identifier": "PhabricatorRepoCreateRequest",
+                "newPage": false,
+                "searchKey": "api.PhabricatorRepoCreateRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PhabricatorRepoCreateRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PhabricatorRepoCreateRequest struct {\n\tRepoName `json:\"repo\"`\n\tCallsign string `json:\"callsign\"`\n\tURL      string `json:\"url\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#ExternalServiceConfigsRequest",
+              "documentation": {
+                "identifier": "ExternalServiceConfigsRequest",
+                "newPage": false,
+                "searchKey": "api.ExternalServiceConfigsRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalServiceConfigsRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalServiceConfigsRequest struct {\n\tKind    string `json:\"kind\"`\n\tLimit   int    `json:\"limit\"`\n\tAfterID int    `json:\"after_id\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#ExternalServicesListRequest",
+              "documentation": {
+                "identifier": "ExternalServicesListRequest",
+                "newPage": false,
+                "searchKey": "api.ExternalServicesListRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalServicesListRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalServicesListRequest struct {\n\t// NOTE(tsenart): We must keep this field in addition to the\n\t// Kinds field until after we roll-out this change, for backwards compatibility.\n\tKind    string   `json:\"kind\"`\n\tKinds   []string `json:\"kinds\"`\n\tLimit   int      `json:\"limit\"`\n\tAfterID int      `json:\"after_id\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#internalClient",
+              "documentation": {
+                "identifier": "internalClient",
+                "newPage": false,
+                "searchKey": "api.internalClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type internalClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype internalClient struct {\n\t// URL is the root to the internal API frontend server.\n\tURL string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.WaitForFrontend",
+                    "documentation": {
+                      "identifier": "internalClient.WaitForFrontend",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.WaitForFrontend",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) WaitForFrontend(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) WaitForFrontend(ctx context.Context) error\n```\n\nWaitForFrontend retries a noop request to the internal API until it is able to reach the endpoint, indicating that the frontend is available. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.SavedQueriesListAll",
+                    "documentation": {
+                      "identifier": "internalClient.SavedQueriesListAll",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.SavedQueriesListAll",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) SavedQueriesListAll(ctx context.Context) (map[SavedQueryIDSpec]ConfigSavedQuery, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) SavedQueriesListAll(ctx context.Context) (map[SavedQueryIDSpec]ConfigSavedQuery, error)\n```\n\nSavedQueriesListAll lists all saved queries, from every user, org, etc. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.SavedQueriesGetInfo",
+                    "documentation": {
+                      "identifier": "internalClient.SavedQueriesGetInfo",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.SavedQueriesGetInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) SavedQueriesGetInfo(ctx context.Context, query string) (*SavedQueryInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) SavedQueriesGetInfo(ctx context.Context, query string) (*SavedQueryInfo, error)\n```\n\nSavedQueriesGetInfo gets the info from the DB for the given saved query. nil is returned if there is no existing info for the saved query. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.SavedQueriesSetInfo",
+                    "documentation": {
+                      "identifier": "internalClient.SavedQueriesSetInfo",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.SavedQueriesSetInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) SavedQueriesSetInfo(ctx context.Context, info *SavedQueryInfo) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) SavedQueriesSetInfo(ctx context.Context, info *SavedQueryInfo) error\n```\n\nSavedQueriesSetInfo sets the info in the DB for the given query. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.SavedQueriesDeleteInfo",
+                    "documentation": {
+                      "identifier": "internalClient.SavedQueriesDeleteInfo",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.SavedQueriesDeleteInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) SavedQueriesDeleteInfo(ctx context.Context, query string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) SavedQueriesDeleteInfo(ctx context.Context, query string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.SettingsGetForSubject",
+                    "documentation": {
+                      "identifier": "internalClient.SettingsGetForSubject",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.SettingsGetForSubject",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) SettingsGetForSubject(ctx context.Context, subject SettingsSubject) (parsed *schema.Settings, settings *Settings, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) SettingsGetForSubject(ctx context.Context, subject SettingsSubject) (parsed *schema.Settings, settings *Settings, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.OrgsListUsers",
+                    "documentation": {
+                      "identifier": "internalClient.OrgsListUsers",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.OrgsListUsers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) OrgsListUsers(ctx context.Context, orgID int32) (users []int32, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) OrgsListUsers(ctx context.Context, orgID int32) (users []int32, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.OrgsGetByName",
+                    "documentation": {
+                      "identifier": "internalClient.OrgsGetByName",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.OrgsGetByName",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) OrgsGetByName(ctx context.Context, orgName string) (orgID *int32, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) OrgsGetByName(ctx context.Context, orgName string) (orgID *int32, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.UsersGetByUsername",
+                    "documentation": {
+                      "identifier": "internalClient.UsersGetByUsername",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.UsersGetByUsername",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) UsersGetByUsername(ctx context.Context, username string) (user *int32, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) UsersGetByUsername(ctx context.Context, username string) (user *int32, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.UserEmailsGetEmail",
+                    "documentation": {
+                      "identifier": "internalClient.UserEmailsGetEmail",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.UserEmailsGetEmail",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) UserEmailsGetEmail(ctx context.Context, userID int32) (email *string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) UserEmailsGetEmail(ctx context.Context, userID int32) (email *string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.ExternalURL",
+                    "documentation": {
+                      "identifier": "internalClient.ExternalURL",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.ExternalURL",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) ExternalURL(ctx context.Context) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) ExternalURL(ctx context.Context) (string, error)\n```\n\nTODO(slimsag): In the future, once we're no longer using environment variables to build ExternalURL, remove this in favor of services just reading it directly from the configuration file. \n\nTODO(slimsag): needs cleanup as part of upcoming configuration refactor. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.CanSendEmail",
+                    "documentation": {
+                      "identifier": "internalClient.CanSendEmail",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.CanSendEmail",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) CanSendEmail(ctx context.Context) (canSendEmail bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) CanSendEmail(ctx context.Context) (canSendEmail bool, err error)\n```\n\nTODO(slimsag): needs cleanup as part of upcoming configuration refactor. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.SendEmail",
+                    "documentation": {
+                      "identifier": "internalClient.SendEmail",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.SendEmail",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) SendEmail(ctx context.Context, message txtypes.Message) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) SendEmail(ctx context.Context, message txtypes.Message) error\n```\n\nTODO(slimsag): needs cleanup as part of upcoming configuration refactor. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.ReposListEnabled",
+                    "documentation": {
+                      "identifier": "internalClient.ReposListEnabled",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.ReposListEnabled",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) ReposListEnabled(ctx context.Context) ([]RepoName, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) ReposListEnabled(ctx context.Context) ([]RepoName, error)\n```\n\nReposListEnabled returns a list of all enabled repository names. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.Configuration",
+                    "documentation": {
+                      "identifier": "internalClient.Configuration",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.Configuration",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) Configuration(ctx context.Context) (conftypes.RawUnified, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) Configuration(ctx context.Context) (conftypes.RawUnified, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.ReposGetByName",
+                    "documentation": {
+                      "identifier": "internalClient.ReposGetByName",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.ReposGetByName",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) ReposGetByName(ctx context.Context, repoName RepoName) (*Repo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) ReposGetByName(ctx context.Context, repoName RepoName) (*Repo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.PhabricatorRepoCreate",
+                    "documentation": {
+                      "identifier": "internalClient.PhabricatorRepoCreate",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.PhabricatorRepoCreate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) PhabricatorRepoCreate(ctx context.Context, repo RepoName, callsign, url string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) PhabricatorRepoCreate(ctx context.Context, repo RepoName, callsign, url string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.ExternalServiceConfigs",
+                    "documentation": {
+                      "identifier": "internalClient.ExternalServiceConfigs",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.ExternalServiceConfigs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) ExternalServiceConfigs(ctx context.Context, kind string, result interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) ExternalServiceConfigs(ctx context.Context, kind string, result interface{}) error\n```\n\nExternalServiceConfigs fetches external service configs of a single kind into the result parameter, which should be a slice of the expected config type. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.ExternalServicesList",
+                    "documentation": {
+                      "identifier": "internalClient.ExternalServicesList",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.ExternalServicesList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) ExternalServicesList(ctx context.Context, opts ExternalServicesListRequest) ([]*ExternalService, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) ExternalServicesList(ctx context.Context, opts ExternalServicesListRequest) ([]*ExternalService, error)\n```\n\nExternalServicesList returns all external services of the given kind. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.LogTelemetry",
+                    "documentation": {
+                      "identifier": "internalClient.LogTelemetry",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.LogTelemetry",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) LogTelemetry(ctx context.Context, reqBody interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) LogTelemetry(ctx context.Context, reqBody interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.postInternal",
+                    "documentation": {
+                      "identifier": "internalClient.postInternal",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.postInternal",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) postInternal(ctx context.Context, route string, reqBody, respBody interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) postInternal(ctx context.Context, route string, reqBody, respBody interface{}) error\n```\n\npostInternal sends an HTTP post request to the internal route. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.meteredPost",
+                    "documentation": {
+                      "identifier": "internalClient.meteredPost",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.meteredPost",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) meteredPost(ctx context.Context, route string, reqBody, respBody interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) meteredPost(ctx context.Context, route string, reqBody, respBody interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/api#internalClient.post",
+                    "documentation": {
+                      "identifier": "internalClient.post",
+                      "newPage": false,
+                      "searchKey": "api.internalClient.post",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *internalClient) post(ctx context.Context, route string, reqBody, respBody interface{}) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *internalClient) post(ctx context.Context, route string, reqBody, respBody interface{}) (int, error)\n```\n\npost sends an HTTP post request to the provided route. If reqBody is non-nil it will Marshal it as JSON and set that as the Request body. If respBody is non-nil the response body will be JSON unmarshalled to resp. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#SavedQueryIDSpec",
+              "documentation": {
+                "identifier": "SavedQueryIDSpec",
+                "newPage": false,
+                "searchKey": "api.SavedQueryIDSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SavedQueryIDSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SavedQueryIDSpec struct {\n\tSubject SettingsSubject\n\tKey     string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#ConfigSavedQuery",
+              "documentation": {
+                "identifier": "ConfigSavedQuery",
+                "newPage": false,
+                "searchKey": "api.ConfigSavedQuery",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ConfigSavedQuery struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ConfigSavedQuery struct {\n\tKey             string  `json:\"key,omitempty\"`\n\tDescription     string  `json:\"description\"`\n\tQuery           string  `json:\"query\"`\n\tNotify          bool    `json:\"notify,omitempty\"`\n\tNotifySlack     bool    `json:\"notifySlack,omitempty\"`\n\tUserID          *int32  `json:\"userID\"`\n\tOrgID           *int32  `json:\"orgID\"`\n\tSlackWebhookURL *string `json:\"slackWebhookURL\"`\n}\n```\n\nConfigSavedQuery is the JSON shape of a saved query entry in the JSON configuration (i.e., an entry in the {\"search.savedQueries\": [...]} array). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/api#ConfigSavedQuery.Equals",
+                    "documentation": {
+                      "identifier": "ConfigSavedQuery.Equals",
+                      "newPage": false,
+                      "searchKey": "api.ConfigSavedQuery.Equals",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sq ConfigSavedQuery) Equals(other ConfigSavedQuery) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sq ConfigSavedQuery) Equals(other ConfigSavedQuery) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#PartialConfigSavedQueries",
+              "documentation": {
+                "identifier": "PartialConfigSavedQueries",
+                "newPage": false,
+                "searchKey": "api.PartialConfigSavedQueries",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PartialConfigSavedQueries struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PartialConfigSavedQueries struct {\n\tSavedQueries []ConfigSavedQuery `json:\"search.savedQueries\"`\n}\n```\n\nPartialConfigSavedQueries is the JSON configuration shape, including only the search.savedQueries section. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#SavedQuerySpecAndConfig",
+              "documentation": {
+                "identifier": "SavedQuerySpecAndConfig",
+                "newPage": false,
+                "searchKey": "api.SavedQuerySpecAndConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SavedQuerySpecAndConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SavedQuerySpecAndConfig struct {\n\tSpec   SavedQueryIDSpec\n\tConfig ConfigSavedQuery\n}\n```\n\nSavedQuerySpecAndConfig represents a saved query configuration its unique ID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#SavedQueryInfo",
+              "documentation": {
+                "identifier": "SavedQueryInfo",
+                "newPage": false,
+                "searchKey": "api.SavedQueryInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SavedQueryInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SavedQueryInfo struct {\n\t// Query is the search query in question.\n\tQuery string\n\n\t// LastExecuted is the timestamp of the last time that the search query was\n\t// executed.\n\tLastExecuted time.Time\n\n\t// LatestResult is the timestamp of the latest-known result for the search\n\t// query. Therefore, searching `after:<LatestResult>` will return the new\n\t// search results not yet seen.\n\tLatestResult time.Time\n\n\t// ExecDuration is the amount of time it took for the query to execute.\n\tExecDuration time.Duration\n}\n```\n\nSavedQueryInfo represents information about a saved query that was executed. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/api#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/api#cmp",
+              "documentation": {
+                "identifier": "cmp",
+                "newPage": false,
+                "searchKey": "api.cmp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cmp(a, b string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cmp(a, b string) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/api#checkAPIResponse",
+              "documentation": {
+                "identifier": "checkAPIResponse",
+                "newPage": false,
+                "searchKey": "api.checkAPIResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkAPIResponse(resp *http.Response) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkAPIResponse(resp *http.Response) error\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

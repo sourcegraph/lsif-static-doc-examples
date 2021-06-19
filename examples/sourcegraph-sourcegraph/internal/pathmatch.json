@@ -1,0 +1,456 @@
+{
+  "pathID": "/internal/pathmatch",
+  "documentation": {
+    "identifier": "pathmatch",
+    "newPage": true,
+    "searchKey": "internal/pathmatch",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package pathmatch"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package pathmatch provides helpers for matching paths against globs and regular expressions. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/pathmatch#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/pathmatch#PathMatcher",
+              "documentation": {
+                "identifier": "PathMatcher",
+                "newPage": false,
+                "searchKey": "pathmatch.PathMatcher",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PathMatcher interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PathMatcher interface {\n\tMatchPath(path string) bool\n\n\t// String returns the source text used to compile the PatchMatcher.\n\tString() string\n}\n```\n\nPathMatcher reports whether the path was matched. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#CompilePattern",
+                    "documentation": {
+                      "identifier": "CompilePattern",
+                      "newPage": false,
+                      "searchKey": "pathmatch.CompilePattern",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func CompilePattern(pattern string, options CompileOptions) (PathMatcher, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc CompilePattern(pattern string, options CompileOptions) (PathMatcher, error)\n```\n\nCompilePattern compiles pattern into a PathMatcher func. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#CompilePatterns",
+                    "documentation": {
+                      "identifier": "CompilePatterns",
+                      "newPage": false,
+                      "searchKey": "pathmatch.CompilePatterns",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func CompilePatterns(patterns []string, options CompileOptions) (PathMatcher, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc CompilePatterns(patterns []string, options CompileOptions) (PathMatcher, error)\n```\n\nCompilePatterns compiles the patterns into a PathMatcher func that matches a path iff all patterns match the path. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#CompilePathPatterns",
+                    "documentation": {
+                      "identifier": "CompilePathPatterns",
+                      "newPage": false,
+                      "searchKey": "pathmatch.CompilePathPatterns",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func CompilePathPatterns(includePatterns []string, excludePattern string, options CompileOptions) (PathMatcher, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc CompilePathPatterns(includePatterns []string, excludePattern string, options CompileOptions) (PathMatcher, error)\n```\n\nCompilePathPatterns returns a PathMatcher func that matches a path iff: \n\n* all of the includePatterns match the path; AND * the excludePattern does NOT match the path. \n\nThis is the most common behavior for include/exclude paths in a search interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pathmatch#pathMatcherFunc",
+              "documentation": {
+                "identifier": "pathMatcherFunc",
+                "newPage": false,
+                "searchKey": "pathmatch.pathMatcherFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pathMatcherFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pathMatcherFunc struct {\n\tmatcher func(path string) bool\n\tpattern string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#pathMatcherFunc.MatchPath",
+                    "documentation": {
+                      "identifier": "pathMatcherFunc.MatchPath",
+                      "newPage": false,
+                      "searchKey": "pathmatch.pathMatcherFunc.MatchPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *pathMatcherFunc) MatchPath(path string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *pathMatcherFunc) MatchPath(path string) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#pathMatcherFunc.String",
+                    "documentation": {
+                      "identifier": "pathMatcherFunc.String",
+                      "newPage": false,
+                      "searchKey": "pathmatch.pathMatcherFunc.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *pathMatcherFunc) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *pathMatcherFunc) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pathmatch#regexpMatcher",
+              "documentation": {
+                "identifier": "regexpMatcher",
+                "newPage": false,
+                "searchKey": "pathmatch.regexpMatcher",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type regexpMatcher regexp.Regexp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype regexpMatcher regexp.Regexp\n```\n\nregexpMatcher is a PathMatcher backed by a regexp. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#regexpMatcher.MatchPath",
+                    "documentation": {
+                      "identifier": "regexpMatcher.MatchPath",
+                      "newPage": false,
+                      "searchKey": "pathmatch.regexpMatcher.MatchPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *regexpMatcher) MatchPath(path string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *regexpMatcher) MatchPath(path string) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#regexpMatcher.String",
+                    "documentation": {
+                      "identifier": "regexpMatcher.String",
+                      "newPage": false,
+                      "searchKey": "pathmatch.regexpMatcher.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *regexpMatcher) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *regexpMatcher) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pathmatch#CompileOptions",
+              "documentation": {
+                "identifier": "CompileOptions",
+                "newPage": false,
+                "searchKey": "pathmatch.CompileOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CompileOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CompileOptions struct {\n\tRegExp        bool // whether the patterns are regular expressions (false means globs)\n\tCaseSensitive bool // whether the patterns are case sensitive\n}\n```\n\nCompileOptions specifies options about the patterns to compile. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pathmatch#pathMatcherAnd",
+              "documentation": {
+                "identifier": "pathMatcherAnd",
+                "newPage": false,
+                "searchKey": "pathmatch.pathMatcherAnd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pathMatcherAnd []pathmatch.PathMatcher"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pathMatcherAnd []PathMatcher\n```\n\npathMatcherAnd is a PathMatcher that matches a path iff all of the underlying matchers match the path. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#pathMatcherAnd.MatchPath",
+                    "documentation": {
+                      "identifier": "pathMatcherAnd.MatchPath",
+                      "newPage": false,
+                      "searchKey": "pathmatch.pathMatcherAnd.MatchPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pm pathMatcherAnd) MatchPath(path string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pm pathMatcherAnd) MatchPath(path string) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#pathMatcherAnd.String",
+                    "documentation": {
+                      "identifier": "pathMatcherAnd.String",
+                      "newPage": false,
+                      "searchKey": "pathmatch.pathMatcherAnd.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pm pathMatcherAnd) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pm pathMatcherAnd) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pathmatch#pathMatcherIncludeExclude",
+              "documentation": {
+                "identifier": "pathMatcherIncludeExclude",
+                "newPage": false,
+                "searchKey": "pathmatch.pathMatcherIncludeExclude",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pathMatcherIncludeExclude struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pathMatcherIncludeExclude struct {\n\tinclude PathMatcher\n\texclude PathMatcher\n}\n```\n\npathMatcherIncludeExclude is a PathMatcher that matches a path iff it matches the include matcher AND it does not match the exclude matcher. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#pathMatcherIncludeExclude.MatchPath",
+                    "documentation": {
+                      "identifier": "pathMatcherIncludeExclude.MatchPath",
+                      "newPage": false,
+                      "searchKey": "pathmatch.pathMatcherIncludeExclude.MatchPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pm pathMatcherIncludeExclude) MatchPath(path string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pm pathMatcherIncludeExclude) MatchPath(path string) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/pathmatch#pathMatcherIncludeExclude.String",
+                    "documentation": {
+                      "identifier": "pathMatcherIncludeExclude.String",
+                      "newPage": false,
+                      "searchKey": "pathmatch.pathMatcherIncludeExclude.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pm pathMatcherIncludeExclude) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pm pathMatcherIncludeExclude) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/pathmatch#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/pathmatch#TestCompilePattern",
+              "documentation": {
+                "identifier": "TestCompilePattern",
+                "newPage": false,
+                "searchKey": "pathmatch.TestCompilePattern",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCompilePattern(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCompilePattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pathmatch#TestCompilePathPatterns",
+              "documentation": {
+                "identifier": "TestCompilePathPatterns",
+                "newPage": false,
+                "searchKey": "pathmatch.TestCompilePathPatterns",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCompilePathPatterns(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCompilePathPatterns(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

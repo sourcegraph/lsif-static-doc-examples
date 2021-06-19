@@ -1,0 +1,66 @@
+{
+  "pathID": "/cmd/frontend/hooks",
+  "documentation": {
+    "identifier": "hooks",
+    "newPage": true,
+    "searchKey": "cmd/frontend/hooks",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package hooks"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package hooks allow hooking into the frontend. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/hooks#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/hooks#PostAuthMiddleware",
+              "documentation": {
+                "identifier": "PostAuthMiddleware",
+                "newPage": false,
+                "searchKey": "hooks.PostAuthMiddleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PostAuthMiddleware"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PostAuthMiddleware func(http.Handler) http.Handler\n```\n\nPostAuthMiddleware is an HTTP handler middleware that, if set, runs just before auth-related middleware. The client is authenticated when PostAuthMiddleware is called. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

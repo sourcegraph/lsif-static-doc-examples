@@ -1,0 +1,573 @@
+{
+  "pathID": "/internal/trace/ot",
+  "documentation": {
+    "identifier": "ot",
+    "newPage": true,
+    "searchKey": "internal/trace/ot",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package ot"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package ot wraps github.com/opentracing/opentracing-go and github.com./opentracing-contrib/go-stdlib with selective tracing behavior that is toggled on and off with the presence of a context item (uses context.Context). This context item is propagated across API boundaries through a HTTP header (X-Sourcegraph-Should-Trace). \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/trace/ot#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#TraceNone",
+              "documentation": {
+                "identifier": "TraceNone",
+                "newPage": false,
+                "searchKey": "ot.TraceNone",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TraceNone"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TraceNone tracePolicy = \"none\"\n```\n\nTraceNone turns off tracing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#TraceSelective",
+              "documentation": {
+                "identifier": "TraceSelective",
+                "newPage": false,
+                "searchKey": "ot.TraceSelective",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TraceSelective"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TraceSelective tracePolicy = \"selective\"\n```\n\nTraceSelective turns on tracing only for requests with the X-Sourcegraph-Should-Trace header set to a truthy value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#TraceAll",
+              "documentation": {
+                "identifier": "TraceAll",
+                "newPage": false,
+                "searchKey": "ot.TraceAll",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TraceAll"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TraceAll tracePolicy = \"all\"\n```\n\nComprehensive turns on tracing for all requests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#traceHeader",
+              "documentation": {
+                "identifier": "traceHeader",
+                "newPage": false,
+                "searchKey": "ot.traceHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const traceHeader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst traceHeader = \"X-Sourcegraph-Should-Trace\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#traceQuery",
+              "documentation": {
+                "identifier": "traceQuery",
+                "newPage": false,
+                "searchKey": "ot.traceQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const traceQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst traceQuery = \"trace\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#shouldTraceKey",
+              "documentation": {
+                "identifier": "shouldTraceKey",
+                "newPage": false,
+                "searchKey": "ot.shouldTraceKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const shouldTraceKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst shouldTraceKey key = iota\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/trace/ot#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#trPolicy",
+              "documentation": {
+                "identifier": "trPolicy",
+                "newPage": false,
+                "searchKey": "ot.trPolicy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var trPolicy"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar trPolicy = atomic.NewString(string(TraceNone))\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/trace/ot#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#tracePolicy",
+              "documentation": {
+                "identifier": "tracePolicy",
+                "newPage": false,
+                "searchKey": "ot.tracePolicy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type tracePolicy string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype tracePolicy string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace/ot#GetTracePolicy",
+                    "documentation": {
+                      "identifier": "GetTracePolicy",
+                      "newPage": false,
+                      "searchKey": "ot.GetTracePolicy",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetTracePolicy() tracePolicy"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetTracePolicy() tracePolicy\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#Transport",
+              "documentation": {
+                "identifier": "Transport",
+                "newPage": false,
+                "searchKey": "ot.Transport",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Transport struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Transport struct {\n\thttp.RoundTripper\n}\n```\n\nTransport wraps an underlying HTTP RoundTripper, injecting the X-Sourcegraph-Should-Trace header into outgoing requests whenever the shouldTraceKey context value is true. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace/ot#Transport.RoundTrip",
+                    "documentation": {
+                      "identifier": "Transport.RoundTrip",
+                      "newPage": false,
+                      "searchKey": "ot.Transport.RoundTrip",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Transport) RoundTrip(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Transport) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#key",
+              "documentation": {
+                "identifier": "key",
+                "newPage": false,
+                "searchKey": "ot.key",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type key int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype key int\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/trace/ot#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#SetTracePolicy",
+              "documentation": {
+                "identifier": "SetTracePolicy",
+                "newPage": false,
+                "searchKey": "ot.SetTracePolicy",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetTracePolicy(newTracePolicy tracePolicy)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetTracePolicy(newTracePolicy tracePolicy)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#Middleware",
+              "documentation": {
+                "identifier": "Middleware",
+                "newPage": false,
+                "searchKey": "ot.Middleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Middleware(h http.Handler, opts ...nethttp.MWOption) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Middleware(h http.Handler, opts ...nethttp.MWOption) http.Handler\n```\n\nMiddleware wraps the handler with the following: \n\n- If the HTTP header, X-Sourcegraph-Should-Trace, is set to a truthy value, set the \n\n```\nshouldTraceKey context.Context value to true\n\n```\n- github.com/opentracing-contrib/go-stdlib/nethttp.Middleware, which creates a new span to track \n\n```\nthe request handler from the global tracer.\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#MiddlewareWithTracer",
+              "documentation": {
+                "identifier": "MiddlewareWithTracer",
+                "newPage": false,
+                "searchKey": "ot.MiddlewareWithTracer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MiddlewareWithTracer(tr opentracing.Tracer, h http.Handler, opts ...nethttp.MWOption) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MiddlewareWithTracer(tr opentracing.Tracer, h http.Handler, opts ...nethttp.MWOption) http.Handler\n```\n\nMiddlewareWithTracer is like Middleware, but uses the specified tracer instead of the global tracer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#requestWantsTracing",
+              "documentation": {
+                "identifier": "requestWantsTracing",
+                "newPage": false,
+                "searchKey": "ot.requestWantsTracing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func requestWantsTracing(r *http.Request) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc requestWantsTracing(r *http.Request) bool\n```\n\nrequestWantsTrace returns true if a request is opting into tracing either via our HTTP Header or our URL Query. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#ShouldTrace",
+              "documentation": {
+                "identifier": "ShouldTrace",
+                "newPage": false,
+                "searchKey": "ot.ShouldTrace",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ShouldTrace(ctx context.Context) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ShouldTrace(ctx context.Context) bool\n```\n\nShouldTrace returns true if the shouldTraceKey context value is true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#WithShouldTrace",
+              "documentation": {
+                "identifier": "WithShouldTrace",
+                "newPage": false,
+                "searchKey": "ot.WithShouldTrace",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithShouldTrace(ctx context.Context, shouldTrace bool) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithShouldTrace(ctx context.Context, shouldTrace bool) context.Context\n```\n\nWithShouldTrace sets the shouldTraceKey context value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#GetTracer",
+              "documentation": {
+                "identifier": "GetTracer",
+                "newPage": false,
+                "searchKey": "ot.GetTracer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetTracer(ctx context.Context) opentracing.Tracer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetTracer(ctx context.Context) opentracing.Tracer\n```\n\nGetTracer returns the tracer to use for the given context. If ShouldTrace returns true, it returns the global tracer. Otherwise, it returns the NoopTracer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#getTracer",
+              "documentation": {
+                "identifier": "getTracer",
+                "newPage": false,
+                "searchKey": "ot.getTracer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getTracer(ctx context.Context, tracer opentracing.Tracer) opentracing.Tracer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getTracer(ctx context.Context, tracer opentracing.Tracer) opentracing.Tracer\n```\n\ngetTracer is like GetTracer, but accepts a tracer as an argument. If ShouldTrace returns false, it returns the NoopTracer. If it returns true and the passed-in tracer is not nil, it returns the passed-in tracer. Otherwise, it returns the global tracer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#StartSpanFromContext",
+              "documentation": {
+                "identifier": "StartSpanFromContext",
+                "newPage": false,
+                "searchKey": "ot.StartSpanFromContext",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StartSpanFromContext(ctx context.Context, operationName string, opts ...opentracing.StartSpanOption) (opentracing.Span, context.Context)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StartSpanFromContext(ctx context.Context, operationName string, opts ...opentracing.StartSpanOption) (opentracing.Span, context.Context)\n```\n\nStartSpanFromContext starts a span using the tracer returned by GetTracer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace/ot#StartSpanFromContextWithTracer",
+              "documentation": {
+                "identifier": "StartSpanFromContextWithTracer",
+                "newPage": false,
+                "searchKey": "ot.StartSpanFromContextWithTracer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StartSpanFromContextWithTracer(ctx context.Context, tracer opentracing.Tracer, operationName string, opts ...opentracing.StartSpanOption) (opentracing.Span, context.Context)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StartSpanFromContextWithTracer(ctx context.Context, tracer opentracing.Tracer, operationName string, opts ...opentracing.StartSpanOption) (opentracing.Span, context.Context)\n```\n\nStartSpanFromContext starts a span using the tracer returned by invoking getTracer with the passed-in tracer. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

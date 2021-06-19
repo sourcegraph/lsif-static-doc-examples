@@ -1,0 +1,1312 @@
+{
+  "pathID": "/internal/authz/gitlab",
+  "documentation": {
+    "identifier": "gitlab",
+    "newPage": true,
+    "searchKey": "internal/authz/gitlab",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package gitlab"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/authz/gitlab#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#NewOAuthProvider",
+              "documentation": {
+                "identifier": "NewOAuthProvider",
+                "newPage": false,
+                "searchKey": "gitlab.NewOAuthProvider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NewOAuthProvider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NewOAuthProvider = func(op OAuthProviderOp) authz.Provider {\n\treturn newOAuthProvider(op, nil)\n}\n```\n\nNewOAuthProvider is a mockable constructor for new OAuthProvider instances. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#NewSudoProvider",
+              "documentation": {
+                "identifier": "NewSudoProvider",
+                "newPage": false,
+                "searchKey": "gitlab.NewSudoProvider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NewSudoProvider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NewSudoProvider = func(op SudoProviderOp) authz.Provider {\n\treturn newSudoProvider(op, nil)\n}\n```\n\nNewSudoProvider is a mockable constructor for new SudoProvider instances. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/authz/gitlab#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#OAuthProvider",
+              "documentation": {
+                "identifier": "OAuthProvider",
+                "newPage": false,
+                "searchKey": "gitlab.OAuthProvider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OAuthProvider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OAuthProvider struct {\n\t// The token is the access token used for syncing repositories from the code host,\n\t// but it may or may not be a sudo-scoped.\n\ttoken     string\n\ttokenType gitlab.TokenType\n\n\turn            string\n\tclientProvider *gitlab.ClientProvider\n\tclientURL      *url.URL\n\tcodeHost       *extsvc.CodeHost\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#newOAuthProvider",
+                    "documentation": {
+                      "identifier": "newOAuthProvider",
+                      "newPage": false,
+                      "searchKey": "gitlab.newOAuthProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newOAuthProvider(op OAuthProviderOp, cli httpcli.Doer) *OAuthProvider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newOAuthProvider(op OAuthProviderOp, cli httpcli.Doer) *OAuthProvider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#OAuthProvider.Validate",
+                    "documentation": {
+                      "identifier": "OAuthProvider.Validate",
+                      "newPage": false,
+                      "searchKey": "gitlab.OAuthProvider.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *OAuthProvider) Validate() (problems []string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *OAuthProvider) Validate() (problems []string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#OAuthProvider.URN",
+                    "documentation": {
+                      "identifier": "OAuthProvider.URN",
+                      "newPage": false,
+                      "searchKey": "gitlab.OAuthProvider.URN",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *OAuthProvider) URN() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *OAuthProvider) URN() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#OAuthProvider.ServiceID",
+                    "documentation": {
+                      "identifier": "OAuthProvider.ServiceID",
+                      "newPage": false,
+                      "searchKey": "gitlab.OAuthProvider.ServiceID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *OAuthProvider) ServiceID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *OAuthProvider) ServiceID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#OAuthProvider.ServiceType",
+                    "documentation": {
+                      "identifier": "OAuthProvider.ServiceType",
+                      "newPage": false,
+                      "searchKey": "gitlab.OAuthProvider.ServiceType",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *OAuthProvider) ServiceType() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *OAuthProvider) ServiceType() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#OAuthProvider.FetchAccount",
+                    "documentation": {
+                      "identifier": "OAuthProvider.FetchAccount",
+                      "newPage": false,
+                      "searchKey": "gitlab.OAuthProvider.FetchAccount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *OAuthProvider) FetchAccount(context.Context, *types.User, []*extsvc.Account, []string) (mine *extsvc.Account, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *OAuthProvider) FetchAccount(context.Context, *types.User, []*extsvc.Account, []string) (mine *extsvc.Account, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#OAuthProvider.FetchUserPerms",
+                    "documentation": {
+                      "identifier": "OAuthProvider.FetchUserPerms",
+                      "newPage": false,
+                      "searchKey": "gitlab.OAuthProvider.FetchUserPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *OAuthProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *OAuthProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)\n```\n\nFetchUserPerms returns a list of private project IDs (on code host) that the given account has read access to. The project ID has the same value as it would be used as api.ExternalRepoSpec.ID. The returned list only includes private project IDs. \n\nThis method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\nAPI docs: [https://docs.gitlab.com/ee/api/projects.html#list-all-projects](https://docs.gitlab.com/ee/api/projects.html#list-all-projects) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#OAuthProvider.FetchRepoPerms",
+                    "documentation": {
+                      "identifier": "OAuthProvider.FetchRepoPerms",
+                      "newPage": false,
+                      "searchKey": "gitlab.OAuthProvider.FetchRepoPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *OAuthProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *OAuthProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)\n```\n\nFetchRepoPerms returns a list of user IDs (on code host) who have read access to the given project on the code host. The user ID has the same value as it would be used as extsvc.Account.AccountID. The returned list includes both direct access and inherited from the group membership. \n\nThis method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\nAPI docs: [https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project-including-inherited-members](https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project-including-inherited-members) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#OAuthProviderOp",
+              "documentation": {
+                "identifier": "OAuthProviderOp",
+                "newPage": false,
+                "searchKey": "gitlab.OAuthProviderOp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OAuthProviderOp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OAuthProviderOp struct {\n\t// The unique resource identifier of the external service where the provider is defined.\n\tURN string\n\n\t// BaseURL is the URL of the GitLab instance.\n\tBaseURL *url.URL\n\n\t// Token is an access token with api scope, it may or may not have sudo scope.\n\t//\n\t// 🚨 SECURITY: This value contains secret information that must not be shown to non-site-admins.\n\tToken string\n\n\t// TokenType is the type of the access token. Default is gitlab.TokenTypePAT.\n\tTokenType gitlab.TokenType\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#SudoProvider",
+              "documentation": {
+                "identifier": "SudoProvider",
+                "newPage": false,
+                "searchKey": "gitlab.SudoProvider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SudoProvider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SudoProvider struct {\n\t// sudoToken is the sudo-scoped access token. This is different from the Sudo parameter, which\n\t// is set per client and defines which user to impersonate.\n\tsudoToken string\n\n\turn               string\n\tclientProvider    *gitlab.ClientProvider\n\tclientURL         *url.URL\n\tcodeHost          *extsvc.CodeHost\n\tgitlabProvider    string\n\tauthnConfigID     providers.ConfigID\n\tuseNativeUsername bool\n}\n```\n\nSudoProvider is an implementation of AuthzProvider that provides repository permissions as determined from a GitLab instance API. For documentation of specific fields, see the docstrings of SudoProviderOp. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#newSudoProvider",
+                    "documentation": {
+                      "identifier": "newSudoProvider",
+                      "newPage": false,
+                      "searchKey": "gitlab.newSudoProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newSudoProvider(op SudoProviderOp, cli httpcli.Doer) *SudoProvider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newSudoProvider(op SudoProviderOp, cli httpcli.Doer) *SudoProvider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.Validate",
+                    "documentation": {
+                      "identifier": "SudoProvider.Validate",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) Validate() (problems []string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) Validate() (problems []string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.URN",
+                    "documentation": {
+                      "identifier": "SudoProvider.URN",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.URN",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) URN() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) URN() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.ServiceID",
+                    "documentation": {
+                      "identifier": "SudoProvider.ServiceID",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.ServiceID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) ServiceID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) ServiceID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.ServiceType",
+                    "documentation": {
+                      "identifier": "SudoProvider.ServiceType",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.ServiceType",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) ServiceType() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) ServiceType() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.FetchAccount",
+                    "documentation": {
+                      "identifier": "SudoProvider.FetchAccount",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.FetchAccount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) FetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, _ []string) (mine *extsvc.Account, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) FetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, _ []string) (mine *extsvc.Account, err error)\n```\n\nFetchAccount satisfies the authz.Provider interface. It iterates through the current list of linked external accounts, find the one (if it exists) that matches the authn provider specified in the SudoProvider struct, and fetches the user account from the GitLab API using that identity. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.fetchAccountByExternalUID",
+                    "documentation": {
+                      "identifier": "SudoProvider.fetchAccountByExternalUID",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.fetchAccountByExternalUID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) fetchAccountByExternalUID(ctx context.Context, uid string) (*gitlab.User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) fetchAccountByExternalUID(ctx context.Context, uid string) (*gitlab.User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.fetchAccountByUsername",
+                    "documentation": {
+                      "identifier": "SudoProvider.fetchAccountByUsername",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.fetchAccountByUsername",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) fetchAccountByUsername(ctx context.Context, username string) (*gitlab.User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) fetchAccountByUsername(ctx context.Context, username string) (*gitlab.User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.FetchUserPerms",
+                    "documentation": {
+                      "identifier": "SudoProvider.FetchUserPerms",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.FetchUserPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)\n```\n\nFetchUserPerms returns a list of project IDs (on code host) that the given account has read access on the code host. The project ID has the same value as it would be used as api.ExternalRepoSpec.ID. The returned list only includes private project IDs. \n\nThis method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\nAPI docs: [https://docs.gitlab.com/ee/api/projects.html#list-all-projects](https://docs.gitlab.com/ee/api/projects.html#list-all-projects) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#SudoProvider.FetchRepoPerms",
+                    "documentation": {
+                      "identifier": "SudoProvider.FetchRepoPerms",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoProvider.FetchRepoPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *SudoProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *SudoProvider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)\n```\n\nFetchRepoPerms returns a list of user IDs (on code host) who have read access to the given project on the code host. The user ID has the same value as it would be used as extsvc.Account.AccountID. The returned list includes both direct access and inherited from the group membership. \n\nThis method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\nAPI docs: [https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project-including-inherited-members](https://docs.gitlab.com/ee/api/members.html#list-all-members-of-a-group-or-project-including-inherited-members) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#SudoProviderOp",
+              "documentation": {
+                "identifier": "SudoProviderOp",
+                "newPage": false,
+                "searchKey": "gitlab.SudoProviderOp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SudoProviderOp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SudoProviderOp struct {\n\t// The unique resource identifier of the external service where the provider is defined.\n\tURN string\n\n\t// BaseURL is the URL of the GitLab instance.\n\tBaseURL *url.URL\n\n\t// AuthnConfigID identifies the authn provider to use to lookup users on the GitLab instance.\n\t// This should be the authn provider that's used to sign into the GitLab instance.\n\tAuthnConfigID providers.ConfigID\n\n\t// GitLabProvider is the id of the authn provider to GitLab. It will be used in the\n\t// `users?extern_uid=$uid&provider=$provider` API query.\n\tGitLabProvider string\n\n\t// SudoToken is an access token with sudo *and* api scope.\n\t//\n\t// 🚨 SECURITY: This value contains secret information that must not be shown to non-site-admins.\n\tSudoToken string\n\n\t// UseNativeUsername, if true, maps Sourcegraph users to GitLab users using username equivalency\n\t// instead of the authn provider user ID. This is *very* insecure (Sourcegraph usernames can be\n\t// changed at the user's will) and should only be used in development environments.\n\tUseNativeUsername bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#mockGitLab",
+              "documentation": {
+                "identifier": "mockGitLab",
+                "newPage": false,
+                "searchKey": "gitlab.mockGitLab",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockGitLab struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockGitLab struct {\n\tt *testing.T\n\n\t// projs is a map of all projects on the instance, keyed by project ID\n\tprojs map[int]*gitlab.Project\n\n\t// users is a list of all users\n\tusers []*gitlab.User\n\n\t// privateGuest is a map from GitLab user ID to list of metadata-accessible private project IDs on GitLab\n\tprivateGuest map[int32][]int\n\n\t// privateRepo is a map from GitLab user ID to list of repo-content-accessible private project IDs on GitLab.\n\t// Projects in each list are also metadata-accessible.\n\tprivateRepo map[int32][]int\n\n\t// oauthToks is a map from OAuth token to GitLab user account ID\n\toauthToks map[string]int32\n\n\t// sudoTok is the sudo token, if there is one\n\tsudoTok string\n\n\t// madeGetProject records what GetProject calls have been made. It's a map from oauth token -> GetProjectOp -> count.\n\tmadeGetProject map[string]map[gitlab.GetProjectOp]int\n\n\t// madeListProjects records what ListProjects calls have been made. It's a map from oauth token -> string (urlStr) -> count.\n\tmadeListProjects map[string]map[string]int\n\n\t// madeListTree records what ListTree calls have been made. It's a map from oauth token -> ListTreeOp -> count.\n\tmadeListTree map[string]map[gitlab.ListTreeOp]int\n\n\t// madeUsers records what ListUsers calls have been made. It's a map from oauth token -> URL string -> count\n\tmadeUsers map[string]map[string]int\n}\n```\n\nmockGitLab is a mock for the GitLab client that can be used by tests. Instantiating a mockGitLab instance itself does nothing, but its methods can be used to replace the mock functions (e.g., MockListProjects). \n\nWe prefer to do it this way, instead of defining an interface for the GitLab client, because this preserves the ability to jump-to-def around the actual implementation. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#newMockGitLab",
+                    "documentation": {
+                      "identifier": "newMockGitLab",
+                      "newPage": false,
+                      "searchKey": "gitlab.newMockGitLab",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newMockGitLab(op mockGitLabOp) mockGitLab"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newMockGitLab(op mockGitLabOp) mockGitLab\n```\n\nnewMockGitLab returns a new mockGitLab instance \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockGitLab.GetProject",
+                    "documentation": {
+                      "identifier": "mockGitLab.GetProject",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockGitLab.GetProject",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockGitLab) GetProject(c *gitlab.Client, ctx context.Context, op gitlab.GetProjectOp) (*gitlab.Project, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockGitLab) GetProject(c *gitlab.Client, ctx context.Context, op gitlab.GetProjectOp) (*gitlab.Project, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockGitLab.ListProjects",
+                    "documentation": {
+                      "identifier": "mockGitLab.ListProjects",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockGitLab.ListProjects",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockGitLab) ListProjects(c *gitlab.Client, ctx context.Context, urlStr string) (projs []*gitlab.Project, nextPageURL *string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockGitLab) ListProjects(c *gitlab.Client, ctx context.Context, urlStr string) (projs []*gitlab.Project, nextPageURL *string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockGitLab.ListTree",
+                    "documentation": {
+                      "identifier": "mockGitLab.ListTree",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockGitLab.ListTree",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockGitLab) ListTree(c *gitlab.Client, ctx context.Context, op gitlab.ListTreeOp) ([]*gitlab.Tree, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockGitLab) ListTree(c *gitlab.Client, ctx context.Context, op gitlab.ListTreeOp) ([]*gitlab.Tree, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockGitLab.isClientAuthenticated",
+                    "documentation": {
+                      "identifier": "mockGitLab.isClientAuthenticated",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockGitLab.isClientAuthenticated",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockGitLab) isClientAuthenticated(c *gitlab.Client) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockGitLab) isClientAuthenticated(c *gitlab.Client) bool\n```\n\nisClientAuthenticated returns true if the client is authenticated. User is authenticated if OAuth token is non-empty (note: this mock impl doesn't verify validity of the OAuth token) or if the personal access token is non-empty (note: this mock impl requires that the PAT be equivalent to the mock GitLab sudo token). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockGitLab.getAcctID",
+                    "documentation": {
+                      "identifier": "mockGitLab.getAcctID",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockGitLab.getAcctID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockGitLab) getAcctID(c *gitlab.Client) int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockGitLab) getAcctID(c *gitlab.Client) int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockGitLab.ListUsers",
+                    "documentation": {
+                      "identifier": "mockGitLab.ListUsers",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockGitLab.ListUsers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockGitLab) ListUsers(c *gitlab.Client, ctx context.Context, urlStr string) (users []*gitlab.User, nextPageURL *string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockGitLab) ListUsers(c *gitlab.Client, ctx context.Context, urlStr string) (users []*gitlab.User, nextPageURL *string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#mockGitLabOp",
+              "documentation": {
+                "identifier": "mockGitLabOp",
+                "newPage": false,
+                "searchKey": "gitlab.mockGitLabOp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockGitLabOp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockGitLabOp struct {\n\tt *testing.T\n\n\t// users is a list of users on the GitLab instance\n\tusers []*gitlab.User\n\n\t// publicProjs is the list of public project IDs\n\tpublicProjs []int\n\n\t// internalProjs is the list of internal project IDs\n\tinternalProjs []int\n\n\t// privateProjs is a map from { privateProjectID -> [ guestUserIDs, contentUserIDs ] } It\n\t// determines the structure of private project permissions. A \"guest\" user can access private\n\t// project metadata, but not project repository contents. A \"content\" user can access both.\n\tprivateProjs map[int][2][]int32\n\n\t// oauthToks is a map from OAuth tokens to the corresponding GitLab user ID\n\toauthToks map[string]int32\n\n\t// sudoTok, if non-empty, is the personal access token accepted with sudo permissions on this\n\t// instance. The mock implementation only supports having one such token value.\n\tsudoTok string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#mockAuthnProvider",
+              "documentation": {
+                "identifier": "mockAuthnProvider",
+                "newPage": false,
+                "searchKey": "gitlab.mockAuthnProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockAuthnProvider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockAuthnProvider struct {\n\tconfigID  providers.ConfigID\n\tserviceID string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockAuthnProvider.ConfigID",
+                    "documentation": {
+                      "identifier": "mockAuthnProvider.ConfigID",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockAuthnProvider.ConfigID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m mockAuthnProvider) ConfigID() providers.ConfigID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m mockAuthnProvider) ConfigID() providers.ConfigID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockAuthnProvider.Config",
+                    "documentation": {
+                      "identifier": "mockAuthnProvider.Config",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockAuthnProvider.Config",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m mockAuthnProvider) Config() schema.AuthProviders"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m mockAuthnProvider) Config() schema.AuthProviders\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockAuthnProvider.CachedInfo",
+                    "documentation": {
+                      "identifier": "mockAuthnProvider.CachedInfo",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockAuthnProvider.CachedInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m mockAuthnProvider) CachedInfo() *providers.Info"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m mockAuthnProvider) CachedInfo() *providers.Info\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockAuthnProvider.Refresh",
+                    "documentation": {
+                      "identifier": "mockAuthnProvider.Refresh",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockAuthnProvider.Refresh",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m mockAuthnProvider) Refresh(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m mockAuthnProvider) Refresh(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#projSort",
+              "documentation": {
+                "identifier": "projSort",
+                "newPage": false,
+                "searchKey": "gitlab.projSort",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type projSort []*gitlab.Project"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype projSort []*gitlab.Project\n```\n\nprojSort sorts Projects in order of ID \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#projSort.Len",
+                    "documentation": {
+                      "identifier": "projSort.Len",
+                      "newPage": false,
+                      "searchKey": "gitlab.projSort.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p projSort) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p projSort) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#projSort.Less",
+                    "documentation": {
+                      "identifier": "projSort.Less",
+                      "newPage": false,
+                      "searchKey": "gitlab.projSort.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p projSort) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p projSort) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#projSort.Swap",
+                    "documentation": {
+                      "identifier": "projSort.Swap",
+                      "newPage": false,
+                      "searchKey": "gitlab.projSort.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p projSort) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p projSort) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#mockDoer",
+              "documentation": {
+                "identifier": "mockDoer",
+                "newPage": false,
+                "searchKey": "gitlab.mockDoer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockDoer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockDoer struct {\n\tdo func(*http.Request) (*http.Response, error)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/gitlab#mockDoer.Do",
+                    "documentation": {
+                      "identifier": "mockDoer.Do",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockDoer.Do",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *mockDoer) Do(r *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *mockDoer) Do(r *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/authz/gitlab#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#NewAuthzProviders",
+              "documentation": {
+                "identifier": "NewAuthzProviders",
+                "newPage": false,
+                "searchKey": "gitlab.NewAuthzProviders",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewAuthzProviders(cfg *conf.Unified,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewAuthzProviders(\n\tcfg *conf.Unified,\n\tconns []*types.GitLabConnection,\n) (ps []authz.Provider, problems []string, warnings []string)\n```\n\nNewAuthzProviders returns the set of GitLab authz providers derived from the connections. It also returns any validation problems with the config, separating these into \"serious problems\" and \"warnings\". \"Serious problems\" are those that should make Sourcegraph set authz.allowAccessByDefault to false. \"Warnings\" are all other validation problems. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#newAuthzProvider",
+              "documentation": {
+                "identifier": "newAuthzProvider",
+                "newPage": false,
+                "searchKey": "gitlab.newAuthzProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newAuthzProvider(urn string, a *schema.GitLabAuthorization, instanceURL, token string, tokenType gitlab.TokenType, ps []schema.AuthProviders) (authz.Provider, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newAuthzProvider(urn string, a *schema.GitLabAuthorization, instanceURL, token string, tokenType gitlab.TokenType, ps []schema.AuthProviders) (authz.Provider, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#ValidateAuthz",
+              "documentation": {
+                "identifier": "ValidateAuthz",
+                "newPage": false,
+                "searchKey": "gitlab.ValidateAuthz",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateAuthz(cfg *schema.GitLabConnection, ps []schema.AuthProviders) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateAuthz(cfg *schema.GitLabConnection, ps []schema.AuthProviders) error\n```\n\nValidateAuthz validates the authorization fields of the given GitLab external service config. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#listProjects",
+              "documentation": {
+                "identifier": "listProjects",
+                "newPage": false,
+                "searchKey": "gitlab.listProjects",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func listProjects(ctx context.Context, client *gitlab.Client) (*authz.ExternalUserPermissions, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc listProjects(ctx context.Context, client *gitlab.Client) (*authz.ExternalUserPermissions, error)\n```\n\nlistProjects is a helper function to request for all private projects that are accessible (access level: 20 => Reporter access) by the authenticated or impersonated user in the client. It may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#listMembers",
+              "documentation": {
+                "identifier": "listMembers",
+                "newPage": false,
+                "searchKey": "gitlab.listMembers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func listMembers(ctx context.Context, client *gitlab.Client, repoID string) ([]extsvc.AccountID, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc listMembers(ctx context.Context, client *gitlab.Client, repoID string) ([]extsvc.AccountID, error)\n```\n\nlistMembers is a helper function to request for all users who has read access (access level: 20 => Reporter access) to given project on the code host, including both direct access and inherited from the group membership. It may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "gitlab.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#acct",
+              "documentation": {
+                "identifier": "acct",
+                "newPage": false,
+                "searchKey": "gitlab.acct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func acct(t *testing.T, userID int32, serviceType, serviceID, accountID, oauthTok string) *extsvc.Account"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc acct(t *testing.T, userID int32, serviceType, serviceID, accountID, oauthTok string) *extsvc.Account\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#mustURL",
+              "documentation": {
+                "identifier": "mustURL",
+                "newPage": false,
+                "searchKey": "gitlab.mustURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustURL(t *testing.T, u string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustURL(t *testing.T, u string) *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#getIntOrDefault",
+              "documentation": {
+                "identifier": "getIntOrDefault",
+                "newPage": false,
+                "searchKey": "gitlab.getIntOrDefault",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getIntOrDefault(str string, def int) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getIntOrDefault(str string, def int) (int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "gitlab.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#TestOAuthProvider_FetchUserPerms",
+              "documentation": {
+                "identifier": "TestOAuthProvider_FetchUserPerms",
+                "newPage": false,
+                "searchKey": "gitlab.TestOAuthProvider_FetchUserPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOAuthProvider_FetchUserPerms(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOAuthProvider_FetchUserPerms(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#TestOAuthProvider_FetchRepoPerms",
+              "documentation": {
+                "identifier": "TestOAuthProvider_FetchRepoPerms",
+                "newPage": false,
+                "searchKey": "gitlab.TestOAuthProvider_FetchRepoPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOAuthProvider_FetchRepoPerms(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOAuthProvider_FetchRepoPerms(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#Test_GitLab_FetchAccount",
+              "documentation": {
+                "identifier": "Test_GitLab_FetchAccount",
+                "newPage": false,
+                "searchKey": "gitlab.Test_GitLab_FetchAccount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_GitLab_FetchAccount(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_GitLab_FetchAccount(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#TestSudoProvider_FetchUserPerms",
+              "documentation": {
+                "identifier": "TestSudoProvider_FetchUserPerms",
+                "newPage": false,
+                "searchKey": "gitlab.TestSudoProvider_FetchUserPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSudoProvider_FetchUserPerms(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSudoProvider_FetchUserPerms(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/gitlab#TestSudoProvider_FetchRepoPerms",
+              "documentation": {
+                "identifier": "TestSudoProvider_FetchRepoPerms",
+                "newPage": false,
+                "searchKey": "gitlab.TestSudoProvider_FetchRepoPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSudoProvider_FetchRepoPerms(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSudoProvider_FetchRepoPerms(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

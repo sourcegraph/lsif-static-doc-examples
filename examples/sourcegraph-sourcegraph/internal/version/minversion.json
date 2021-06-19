@@ -1,0 +1,60 @@
+{
+  "pathID": "/internal/version/minversion",
+  "documentation": {
+    "identifier": "minversion",
+    "newPage": true,
+    "searchKey": "internal/version/minversion",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Command minversion ensures users are running the minimum required Go version. If not, it will exit with a non-zero exit code. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/version/minversion#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/version/minversion#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

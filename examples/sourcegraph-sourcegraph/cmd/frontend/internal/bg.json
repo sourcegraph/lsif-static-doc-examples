@@ -1,0 +1,209 @@
+{
+  "pathID": "/cmd/frontend/internal/bg",
+  "documentation": {
+    "identifier": "bg",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/bg",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package bg"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package bg defines init and background tasks. \n\nBecause there can be multiple frontend processes running, these tasks must be idempotent and not racy amid concurrent frontend processes. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/bg#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/bg#recommendedPolicy",
+              "documentation": {
+                "identifier": "recommendedPolicy",
+                "newPage": false,
+                "searchKey": "bg.recommendedPolicy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const recommendedPolicy"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst recommendedPolicy = \"allkeys-lru\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/bg#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/bg#CheckRedisCacheEvictionPolicy",
+              "documentation": {
+                "identifier": "CheckRedisCacheEvictionPolicy",
+                "newPage": false,
+                "searchKey": "bg.CheckRedisCacheEvictionPolicy",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CheckRedisCacheEvictionPolicy()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CheckRedisCacheEvictionPolicy()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/bg#getRunID",
+              "documentation": {
+                "identifier": "getRunID",
+                "newPage": false,
+                "searchKey": "bg.getRunID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRunID(c redis.Conn) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRunID(c redis.Conn) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/bg#DeleteOldCacheDataInRedis",
+              "documentation": {
+                "identifier": "DeleteOldCacheDataInRedis",
+                "newPage": false,
+                "searchKey": "bg.DeleteOldCacheDataInRedis",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DeleteOldCacheDataInRedis()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DeleteOldCacheDataInRedis()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/bg#DeleteOldEventLogsInPostgres",
+              "documentation": {
+                "identifier": "DeleteOldEventLogsInPostgres",
+                "newPage": false,
+                "searchKey": "bg.DeleteOldEventLogsInPostgres",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DeleteOldEventLogsInPostgres(ctx context.Context, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DeleteOldEventLogsInPostgres(ctx context.Context, db dbutil.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/bg#DeleteOldSecurityEventLogsInPostgres",
+              "documentation": {
+                "identifier": "DeleteOldSecurityEventLogsInPostgres",
+                "newPage": false,
+                "searchKey": "bg.DeleteOldSecurityEventLogsInPostgres",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DeleteOldSecurityEventLogsInPostgres(ctx context.Context, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DeleteOldSecurityEventLogsInPostgres(ctx context.Context, db dbutil.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/bg#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "bg.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

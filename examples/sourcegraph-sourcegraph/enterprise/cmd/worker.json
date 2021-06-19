@@ -1,0 +1,87 @@
+{
+  "pathID": "/enterprise/cmd/worker",
+  "documentation": {
+    "identifier": "worker",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/worker",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "pathID": "/enterprise/cmd/worker/internal"
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/worker#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker#setAuthzProviders",
+              "documentation": {
+                "identifier": "setAuthzProviders",
+                "newPage": false,
+                "searchKey": "main.setAuthzProviders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setAuthzProviders()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setAuthzProviders()\n```\n\nsetAuthProviders waits for the database to be initialized, then periodically refreshes the global authz providers. This changes the repositories that are visible for reads based on the current actor stored in an operation's context, which is likely an internal actor for many of the jobs configured in this service. This also enables repository update operations to fetch permissions from code hosts. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

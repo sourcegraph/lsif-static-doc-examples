@@ -1,0 +1,530 @@
+{
+  "pathID": "/internal/authz/github",
+  "documentation": {
+    "identifier": "github",
+    "newPage": true,
+    "searchKey": "internal/authz/github",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package github"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/authz/github#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/github#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "github.client",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type client interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype client interface {\n\tListAffiliatedRepositories(ctx context.Context, visibility github.Visibility, page int) (repos []*github.Repository, hasNextPage bool, rateLimitCost int, err error)\n\tListRepositoryCollaborators(ctx context.Context, owner, repo string, page int) (users []*github.Collaborator, hasNextPage bool, _ error)\n\tWithToken(token string) client\n}\n```\n\nclient defines the set of GitHub API client methods used by the authz provider. \n\nNOTE: All methods are sorted in alphabetical order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/github#ClientAdapter",
+              "documentation": {
+                "identifier": "ClientAdapter",
+                "newPage": false,
+                "searchKey": "github.ClientAdapter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ClientAdapter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ClientAdapter struct {\n\t*github.V3Client\n}\n```\n\nClientAdapter is an adapter for GitHub API client. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#ClientAdapter.WithToken",
+                    "documentation": {
+                      "identifier": "ClientAdapter.WithToken",
+                      "newPage": false,
+                      "searchKey": "github.ClientAdapter.WithToken",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *ClientAdapter) WithToken(token string) client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *ClientAdapter) WithToken(token string) client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/github#mockClient",
+              "documentation": {
+                "identifier": "mockClient",
+                "newPage": false,
+                "searchKey": "github.mockClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockClient struct {\n\tMockListAffiliatedRepositories  func(ctx context.Context, visibility github.Visibility, page int) (repos []*github.Repository, hasNextPage bool, rateLimitCost int, err error)\n\tMockListRepositoryCollaborators func(ctx context.Context, owner, repo string, page int) (users []*github.Collaborator, hasNextPage bool, _ error)\n\tMockWithToken                   func(token string) client\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#mockClient.ListAffiliatedRepositories",
+                    "documentation": {
+                      "identifier": "mockClient.ListAffiliatedRepositories",
+                      "newPage": false,
+                      "searchKey": "github.mockClient.ListAffiliatedRepositories",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockClient) ListAffiliatedRepositories(ctx context.Context, visibility github.Visibility, page int) ([]*github.Repository, bool, int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockClient) ListAffiliatedRepositories(ctx context.Context, visibility github.Visibility, page int) ([]*github.Repository, bool, int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#mockClient.ListRepositoryCollaborators",
+                    "documentation": {
+                      "identifier": "mockClient.ListRepositoryCollaborators",
+                      "newPage": false,
+                      "searchKey": "github.mockClient.ListRepositoryCollaborators",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockClient) ListRepositoryCollaborators(ctx context.Context, owner, repo string, page int) ([]*github.Collaborator, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockClient) ListRepositoryCollaborators(ctx context.Context, owner, repo string, page int) ([]*github.Collaborator, bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#mockClient.WithToken",
+                    "documentation": {
+                      "identifier": "mockClient.WithToken",
+                      "newPage": false,
+                      "searchKey": "github.mockClient.WithToken",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *mockClient) WithToken(token string) client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *mockClient) WithToken(token string) client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/github#Provider",
+              "documentation": {
+                "identifier": "Provider",
+                "newPage": false,
+                "searchKey": "github.Provider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Provider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Provider struct {\n\turn      string\n\tclient   client\n\tcodeHost *extsvc.CodeHost\n}\n```\n\nProvider implements authz.Provider for GitHub repository permissions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#NewProvider",
+                    "documentation": {
+                      "identifier": "NewProvider",
+                      "newPage": false,
+                      "searchKey": "github.NewProvider",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewProvider(urn string, githubURL *url.URL, baseToken string, client *github.V3Client) *Provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewProvider(urn string, githubURL *url.URL, baseToken string, client *github.V3Client) *Provider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#Provider.FetchAccount",
+                    "documentation": {
+                      "identifier": "Provider.FetchAccount",
+                      "newPage": false,
+                      "searchKey": "github.Provider.FetchAccount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchAccount(context.Context, *types.User, []*extsvc.Account, []string) (mine *extsvc.Account, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchAccount(context.Context, *types.User, []*extsvc.Account, []string) (mine *extsvc.Account, err error)\n```\n\nFetchAccount implements the authz.Provider interface. It always returns nil, because the GitHub API doesn't currently provide a way to fetch user by external SSO account. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#Provider.URN",
+                    "documentation": {
+                      "identifier": "Provider.URN",
+                      "newPage": false,
+                      "searchKey": "github.Provider.URN",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) URN() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) URN() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#Provider.ServiceID",
+                    "documentation": {
+                      "identifier": "Provider.ServiceID",
+                      "newPage": false,
+                      "searchKey": "github.Provider.ServiceID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) ServiceID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) ServiceID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#Provider.ServiceType",
+                    "documentation": {
+                      "identifier": "Provider.ServiceType",
+                      "newPage": false,
+                      "searchKey": "github.Provider.ServiceType",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) ServiceType() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) ServiceType() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#Provider.Validate",
+                    "documentation": {
+                      "identifier": "Provider.Validate",
+                      "newPage": false,
+                      "searchKey": "github.Provider.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) Validate() (problems []string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) Validate() (problems []string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#Provider.FetchUserPerms",
+                    "documentation": {
+                      "identifier": "Provider.FetchUserPerms",
+                      "newPage": false,
+                      "searchKey": "github.Provider.FetchUserPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)\n```\n\nFetchUserPerms returns a list of repository IDs (on code host) that the given account has read access on the code host. The repository ID has the same value as it would be used as api.ExternalRepoSpec.ID. The returned list only includes private repository IDs. \n\nThis method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\nAPI docs: [https://developer.github.com/v3/repos/#list-repositories-for-the-authenticated-user](https://developer.github.com/v3/repos/#list-repositories-for-the-authenticated-user) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/github#Provider.FetchRepoPerms",
+                    "documentation": {
+                      "identifier": "Provider.FetchRepoPerms",
+                      "newPage": false,
+                      "searchKey": "github.Provider.FetchRepoPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)\n```\n\nFetchRepoPerms returns a list of user IDs (on code host) who have read access to the given project on the code host. The user ID has the same value as it would be used as extsvc.Account.AccountID. The returned list includes both direct access and inherited from the organization membership. \n\nThis method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\nAPI docs: [https://developer.github.com/v4/object/repositorycollaboratorconnection/](https://developer.github.com/v4/object/repositorycollaboratorconnection/) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/authz/github#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/github#NewAuthzProviders",
+              "documentation": {
+                "identifier": "NewAuthzProviders",
+                "newPage": false,
+                "searchKey": "github.NewAuthzProviders",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewAuthzProviders(conns []*types.GitHubConnection) (ps []authz.Provider, problems []string, warnings []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewAuthzProviders(\n\tconns []*types.GitHubConnection,\n) (ps []authz.Provider, problems []string, warnings []string)\n```\n\nNewAuthzProviders returns the set of GitHub authz providers derived from the connections. It also returns any validation problems with the config, separating these into \"serious problems\" and \"warnings\". \"Serious problems\" are those that should make Sourcegraph set authz.allowAccessByDefault to false. \"Warnings\" are all other validation problems. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/github#newAuthzProvider",
+              "documentation": {
+                "identifier": "newAuthzProvider",
+                "newPage": false,
+                "searchKey": "github.newAuthzProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newAuthzProvider(urn string, a *schema.GitHubAuthorization, instanceURL, token string) (authz.Provider, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newAuthzProvider(urn string, a *schema.GitHubAuthorization, instanceURL, token string) (authz.Provider, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/github#ValidateAuthz",
+              "documentation": {
+                "identifier": "ValidateAuthz",
+                "newPage": false,
+                "searchKey": "github.ValidateAuthz",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateAuthz(cfg *schema.GitHubConnection) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateAuthz(cfg *schema.GitHubConnection) error\n```\n\nValidateAuthz validates the authorization fields of the given GitHub external service config. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/github#mustURL",
+              "documentation": {
+                "identifier": "mustURL",
+                "newPage": false,
+                "searchKey": "github.mustURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustURL(t *testing.T, u string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustURL(t *testing.T, u string) *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/github#TestProvider_FetchUserPerms",
+              "documentation": {
+                "identifier": "TestProvider_FetchUserPerms",
+                "newPage": false,
+                "searchKey": "github.TestProvider_FetchUserPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProvider_FetchUserPerms(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProvider_FetchUserPerms(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/github#TestProvider_FetchRepoPerms",
+              "documentation": {
+                "identifier": "TestProvider_FetchRepoPerms",
+                "newPage": false,
+                "searchKey": "github.TestProvider_FetchRepoPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProvider_FetchRepoPerms(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProvider_FetchRepoPerms(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

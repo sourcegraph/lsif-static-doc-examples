@@ -1,0 +1,1580 @@
+{
+  "pathID": "/cmd/frontend/internal/httpapi",
+  "documentation": {
+    "identifier": "httpapi",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/httpapi",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package httpapi"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package httpapi contains the HTTP API. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/httpapi#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#traceGraphQLQueriesSample",
+              "documentation": {
+                "identifier": "traceGraphQLQueriesSample",
+                "newPage": false,
+                "searchKey": "httpapi.traceGraphQLQueriesSample",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var traceGraphQLQueriesSample"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar traceGraphQLQueriesSample = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#schemaDecoder",
+              "documentation": {
+                "identifier": "schemaDecoder",
+                "newPage": false,
+                "searchKey": "httpapi.schemaDecoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var schemaDecoder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar schemaDecoder = schema.NewDecoder()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#srcCliDownloadsURL",
+              "documentation": {
+                "identifier": "srcCliDownloadsURL",
+                "newPage": false,
+                "searchKey": "httpapi.srcCliDownloadsURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var srcCliDownloadsURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar srcCliDownloadsURL = \"https://github.com/sourcegraph/src-cli/releases/download\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#allowedFilenames",
+              "documentation": {
+                "identifier": "allowedFilenames",
+                "newPage": false,
+                "searchKey": "httpapi.allowedFilenames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var allowedFilenames"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar allowedFilenames = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/httpapi#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#graphQLQueryParams",
+              "documentation": {
+                "identifier": "graphQLQueryParams",
+                "newPage": false,
+                "searchKey": "httpapi.graphQLQueryParams",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type graphQLQueryParams struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype graphQLQueryParams struct {\n\tQuery         string                 `json:\"query\"`\n\tOperationName string                 `json:\"operationName\"`\n\tVariables     map[string]interface{} `json:\"variables\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#traceData",
+              "documentation": {
+                "identifier": "traceData",
+                "newPage": false,
+                "searchKey": "httpapi.traceData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type traceData struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype traceData struct {\n\tqueryParams   graphQLQueryParams\n\texecStart     time.Time\n\tuid           string\n\tanonymous     bool\n\tisInternal    bool\n\trequestName   string\n\trequestSource string\n\tqueryErrors   []*gqlerrors.QueryError\n\n\tcost      *graphqlbackend.QueryCost\n\tcostError error\n\n\tlimited     bool\n\tlimitError  error\n\tlimitResult throttled.RateLimitResult\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#errorHandler",
+              "documentation": {
+                "identifier": "errorHandler",
+                "newPage": false,
+                "searchKey": "httpapi.errorHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errorHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errorHandler struct {\n\tWriteErrBody bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#errorHandler.Handle",
+                    "documentation": {
+                      "identifier": "errorHandler.Handle",
+                      "newPage": false,
+                      "searchKey": "httpapi.errorHandler.Handle",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *errorHandler) Handle(w http.ResponseWriter, r *http.Request, status int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *errorHandler) Handle(w http.ResponseWriter, r *http.Request, status int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#reposListServer",
+              "documentation": {
+                "identifier": "reposListServer",
+                "newPage": false,
+                "searchKey": "httpapi.reposListServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type reposListServer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype reposListServer struct {\n\t// SourcegraphDotComMode is true if this instance of Sourcegraph is http://sourcegraph.com\n\tSourcegraphDotComMode bool\n\n\t// Repos is the subset of backend.Repos methods we use. Declared as an\n\t// interface for testing.\n\tRepos interface {\n\t\t// ListIndexable returns the repositories to index on Sourcegraph.com\n\t\tListIndexable(context.Context) ([]types.RepoName, error)\n\t\t// List returns a list of repositories\n\t\tList(context.Context, database.ReposListOptions) ([]*types.Repo, error)\n\t}\n\n\t// Indexers is the subset of searchbackend.Indexers methods we\n\t// use. reposListServer is used by indexed-search to get the list of\n\t// repositories to index. These methods are used to return the correct\n\t// subset for horizontal indexed search. Declared as an interface for\n\t// testing.\n\tIndexers interface {\n\t\t// ReposSubset returns the subset of repoNames that hostname should\n\t\t// index.\n\t\tReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)\n\t\t// Enabled is true if horizontal indexed search is enabled.\n\t\tEnabled() bool\n\t}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#reposListServer.serveIndex",
+                    "documentation": {
+                      "identifier": "reposListServer.serveIndex",
+                      "newPage": false,
+                      "searchKey": "httpapi.reposListServer.serveIndex",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *reposListServer) serveIndex(w http.ResponseWriter, r *http.Request) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *reposListServer) serveIndex(w http.ResponseWriter, r *http.Request) error\n```\n\nserveIndex is used by zoekt to get the list of repositories for it to index. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#gitServiceHandler",
+              "documentation": {
+                "identifier": "gitServiceHandler",
+                "newPage": false,
+                "searchKey": "httpapi.gitServiceHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gitServiceHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gitServiceHandler struct {\n\tGitserver interface {\n\t\tAddrForRepo(api.RepoName) string\n\t}\n}\n```\n\ngitServiceHandler are handlers which redirect git clone requests to the gitserver for the repo. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#gitServiceHandler.serveInfoRefs",
+                    "documentation": {
+                      "identifier": "gitServiceHandler.serveInfoRefs",
+                      "newPage": false,
+                      "searchKey": "httpapi.gitServiceHandler.serveInfoRefs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *gitServiceHandler) serveInfoRefs(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#gitServiceHandler.serveGitUploadPack",
+                    "documentation": {
+                      "identifier": "gitServiceHandler.serveGitUploadPack",
+                      "newPage": false,
+                      "searchKey": "httpapi.gitServiceHandler.serveGitUploadPack",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *gitServiceHandler) serveGitUploadPack(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#gitServiceHandler.redirectToGitServer",
+                    "documentation": {
+                      "identifier": "gitServiceHandler.redirectToGitServer",
+                      "newPage": false,
+                      "searchKey": "httpapi.gitServiceHandler.redirectToGitServer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *gitServiceHandler) redirectToGitServer(w http.ResponseWriter, r *http.Request, gitPath string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *gitServiceHandler) redirectToGitServer(w http.ResponseWriter, r *http.Request, gitPath string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#mockAddrForRepo",
+              "documentation": {
+                "identifier": "mockAddrForRepo",
+                "newPage": false,
+                "searchKey": "httpapi.mockAddrForRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockAddrForRepo struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockAddrForRepo struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#mockAddrForRepo.AddrForRepo",
+                    "documentation": {
+                      "identifier": "mockAddrForRepo.AddrForRepo",
+                      "newPage": false,
+                      "searchKey": "httpapi.mockAddrForRepo.AddrForRepo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mockAddrForRepo) AddrForRepo(name api.RepoName) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mockAddrForRepo) AddrForRepo(name api.RepoName) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#mockRepos",
+              "documentation": {
+                "identifier": "mockRepos",
+                "newPage": false,
+                "searchKey": "httpapi.mockRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockRepos struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockRepos struct {\n\tdefaultRepos []string\n\trepos        []string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#mockRepos.ListIndexable",
+                    "documentation": {
+                      "identifier": "mockRepos.ListIndexable",
+                      "newPage": false,
+                      "searchKey": "httpapi.mockRepos.ListIndexable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *mockRepos) ListIndexable(context.Context) ([]types.RepoName, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#mockRepos.List",
+                    "documentation": {
+                      "identifier": "mockRepos.List",
+                      "newPage": false,
+                      "searchKey": "httpapi.mockRepos.List",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *mockRepos) List(ctx context.Context, opt database.ReposListOptions) ([]*types.Repo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *mockRepos) List(ctx context.Context, opt database.ReposListOptions) ([]*types.Repo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#suffixIndexers",
+              "documentation": {
+                "identifier": "suffixIndexers",
+                "newPage": false,
+                "searchKey": "httpapi.suffixIndexers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type suffixIndexers bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype suffixIndexers bool\n```\n\nsuffixIndexers mocks Indexers. ReposSubset will return all repoNames with the suffix of hostname. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#suffixIndexers.ReposSubset",
+                    "documentation": {
+                      "identifier": "suffixIndexers.ReposSubset",
+                      "newPage": false,
+                      "searchKey": "httpapi.suffixIndexers.ReposSubset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b suffixIndexers) ReposSubset(ctx context.Context, hostname string, indexed map[string]struct{}, repoNames []string) ([]string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/httpapi#suffixIndexers.Enabled",
+                    "documentation": {
+                      "identifier": "suffixIndexers.Enabled",
+                      "newPage": false,
+                      "searchKey": "httpapi.suffixIndexers.Enabled",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b suffixIndexers) Enabled() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b suffixIndexers) Enabled() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/httpapi#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#AccessTokenAuthMiddleware",
+              "documentation": {
+                "identifier": "AccessTokenAuthMiddleware",
+                "newPage": false,
+                "searchKey": "httpapi.AccessTokenAuthMiddleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AccessTokenAuthMiddleware(db dbutil.DB, next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AccessTokenAuthMiddleware(db dbutil.DB, next http.Handler) http.Handler\n```\n\nAccessTokenAuthMiddleware authenticates the user based on the token query parameter or the \"Authorization\" header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveGraphQL",
+              "documentation": {
+                "identifier": "serveGraphQL",
+                "newPage": false,
+                "searchKey": "httpapi.serveGraphQL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInternal bool) func(w http.ResponseWriter, r *http.Request) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveGraphQL(schema *graphql.Schema, rlw graphqlbackend.LimitWatcher, isInternal bool) func(w http.ResponseWriter, r *http.Request) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#traceGraphQL",
+              "documentation": {
+                "identifier": "traceGraphQL",
+                "newPage": false,
+                "searchKey": "httpapi.traceGraphQL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func traceGraphQL(data traceData)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc traceGraphQL(data traceData)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#getUID",
+              "documentation": {
+                "identifier": "getUID",
+                "newPage": false,
+                "searchKey": "httpapi.getUID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getUID(r *http.Request) (uid string, ip bool, anonymous bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getUID(r *http.Request) (uid string, ip bool, anonymous bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#writeJSON",
+              "documentation": {
+                "identifier": "writeJSON",
+                "newPage": false,
+                "searchKey": "httpapi.writeJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writeJSON(w http.ResponseWriter, v interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writeJSON(w http.ResponseWriter, v interface{}) error\n```\n\nwriteJSON writes a JSON Content-Type header and a JSON-encoded object to the http.ResponseWriter. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#NewHandler",
+              "documentation": {
+                "identifier": "NewHandler",
+                "newPage": false,
+                "searchKey": "httpapi.NewHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewHandler(db dbutil.DB, m *mux.Router, schema *graphql.Schema, githubWebhook webhooks.Registerer, gitlabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimiter graphqlbackend.LimitWatcher) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewHandler(db dbutil.DB, m *mux.Router, schema *graphql.Schema, githubWebhook webhooks.Registerer, gitlabWebhook, bitbucketServerWebhook http.Handler, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimiter graphqlbackend.LimitWatcher) http.Handler\n```\n\nNewHandler returns a new API handler that uses the provided API router, which must have been created by httpapi/router.New, or creates a new one if nil. \n\n🚨 SECURITY: The caller MUST wrap the returned handler in middleware that checks authentication and sets the actor in the request context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#NewInternalHandler",
+              "documentation": {
+                "identifier": "NewInternalHandler",
+                "newPage": false,
+                "searchKey": "httpapi.NewInternalHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewInternalHandler(m *mux.Router, db dbutil.DB, schema *graphql.Schema, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimitWatcher graphqlbackend.LimitWatcher) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewInternalHandler(m *mux.Router, db dbutil.DB, schema *graphql.Schema, newCodeIntelUploadHandler enterprise.NewCodeIntelUploadHandler, rateLimitWatcher graphqlbackend.LimitWatcher) http.Handler\n```\n\nNewInternalHandler returns a new API handler for internal endpoints that uses the provided API router, which must have been created by httpapi/router.NewInternal. \n\n🚨 SECURITY: This handler should not be served on a publicly exposed port. 🚨 This handler is not guaranteed to provide the same authorization checks as public API handlers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "httpapi.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#jsonMiddleware",
+              "documentation": {
+                "identifier": "jsonMiddleware",
+                "newPage": false,
+                "searchKey": "httpapi.jsonMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc jsonMiddleware(errorHandler *errorHandler) func(func(http.ResponseWriter, *http.Request) error) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveReposGetByName",
+              "documentation": {
+                "identifier": "serveReposGetByName",
+                "newPage": false,
+                "searchKey": "httpapi.serveReposGetByName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveReposGetByName(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveReposGetByName(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#servePhabricatorRepoCreate",
+              "documentation": {
+                "identifier": "servePhabricatorRepoCreate",
+                "newPage": false,
+                "searchKey": "httpapi.servePhabricatorRepoCreate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc servePhabricatorRepoCreate(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveExternalServiceConfigs",
+              "documentation": {
+                "identifier": "serveExternalServiceConfigs",
+                "newPage": false,
+                "searchKey": "httpapi.serveExternalServiceConfigs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveExternalServiceConfigs(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveExternalServiceConfigs(w http.ResponseWriter, r *http.Request) error\n```\n\nserveExternalServiceConfigs serves a JSON response that is an array of all external service configs that match the requested kind. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveExternalServicesList",
+              "documentation": {
+                "identifier": "serveExternalServicesList",
+                "newPage": false,
+                "searchKey": "httpapi.serveExternalServicesList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveExternalServicesList(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveExternalServicesList(w http.ResponseWriter, r *http.Request) error\n```\n\nserveExternalServicesList serves a JSON response that is an array of all external services of the given kind \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveConfiguration",
+              "documentation": {
+                "identifier": "serveConfiguration",
+                "newPage": false,
+                "searchKey": "httpapi.serveConfiguration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveConfiguration(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveConfiguration(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#repoRankFromConfig",
+              "documentation": {
+                "identifier": "repoRankFromConfig",
+                "newPage": false,
+                "searchKey": "httpapi.repoRankFromConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repoRankFromConfig(siteConfig schema.SiteConfiguration, repoName string) float64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveSearchConfiguration",
+              "documentation": {
+                "identifier": "serveSearchConfiguration",
+                "newPage": false,
+                "searchKey": "httpapi.serveSearchConfiguration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSearchConfiguration(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSearchConfiguration(w http.ResponseWriter, r *http.Request) error\n```\n\nserveSearchConfiguration is _only_ used by the zoekt index server. Zoekt does not depend on frontend and therefore does not have access to `conf.Watch`. Additionally, it only cares about certain search specific settings so this search specific endpoint is used rather than serving the entire site settings from /.internal/configuration. \n\nThis endpoint also supports batch requests to avoid managing concurrency in zoekt. On vertically scaled instances we have observed zoekt requesting this endpoint concurrently leading to socket starvation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveReposListEnabled",
+              "documentation": {
+                "identifier": "serveReposListEnabled",
+                "newPage": false,
+                "searchKey": "httpapi.serveReposListEnabled",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveReposListEnabled(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveReposListEnabled(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveSavedQueriesListAll",
+              "documentation": {
+                "identifier": "serveSavedQueriesListAll",
+                "newPage": false,
+                "searchKey": "httpapi.serveSavedQueriesListAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSavedQueriesListAll(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveSavedQueriesGetInfo",
+              "documentation": {
+                "identifier": "serveSavedQueriesGetInfo",
+                "newPage": false,
+                "searchKey": "httpapi.serveSavedQueriesGetInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSavedQueriesGetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveSavedQueriesSetInfo",
+              "documentation": {
+                "identifier": "serveSavedQueriesSetInfo",
+                "newPage": false,
+                "searchKey": "httpapi.serveSavedQueriesSetInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSavedQueriesSetInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveSavedQueriesDeleteInfo",
+              "documentation": {
+                "identifier": "serveSavedQueriesDeleteInfo",
+                "newPage": false,
+                "searchKey": "httpapi.serveSavedQueriesDeleteInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSavedQueriesDeleteInfo(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveSettingsGetForSubject",
+              "documentation": {
+                "identifier": "serveSettingsGetForSubject",
+                "newPage": false,
+                "searchKey": "httpapi.serveSettingsGetForSubject",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSettingsGetForSubject(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveOrgsListUsers",
+              "documentation": {
+                "identifier": "serveOrgsListUsers",
+                "newPage": false,
+                "searchKey": "httpapi.serveOrgsListUsers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveOrgsListUsers(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveOrgsGetByName",
+              "documentation": {
+                "identifier": "serveOrgsGetByName",
+                "newPage": false,
+                "searchKey": "httpapi.serveOrgsGetByName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveOrgsGetByName(db dbutil.DB) func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveUsersGetByUsername",
+              "documentation": {
+                "identifier": "serveUsersGetByUsername",
+                "newPage": false,
+                "searchKey": "httpapi.serveUsersGetByUsername",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveUsersGetByUsername(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveUserEmailsGetEmail",
+              "documentation": {
+                "identifier": "serveUserEmailsGetEmail",
+                "newPage": false,
+                "searchKey": "httpapi.serveUserEmailsGetEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveUserEmailsGetEmail(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveExternalURL",
+              "documentation": {
+                "identifier": "serveExternalURL",
+                "newPage": false,
+                "searchKey": "httpapi.serveExternalURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveExternalURL(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveExternalURL(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveCanSendEmail",
+              "documentation": {
+                "identifier": "serveCanSendEmail",
+                "newPage": false,
+                "searchKey": "httpapi.serveCanSendEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveCanSendEmail(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveCanSendEmail(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveSendEmail",
+              "documentation": {
+                "identifier": "serveSendEmail",
+                "newPage": false,
+                "searchKey": "httpapi.serveSendEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSendEmail(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSendEmail(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveGitResolveRevision",
+              "documentation": {
+                "identifier": "serveGitResolveRevision",
+                "newPage": false,
+                "searchKey": "httpapi.serveGitResolveRevision",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveGitResolveRevision(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveGitTar",
+              "documentation": {
+                "identifier": "serveGitTar",
+                "newPage": false,
+                "searchKey": "httpapi.serveGitTar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveGitTar(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveGitTar(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveGitExec",
+              "documentation": {
+                "identifier": "serveGitExec",
+                "newPage": false,
+                "searchKey": "httpapi.serveGitExec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveGitExec(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveGitExec(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#handlePing",
+              "documentation": {
+                "identifier": "handlePing",
+                "newPage": false,
+                "searchKey": "httpapi.handlePing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func handlePing(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc handlePing(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveRepoRefresh",
+              "documentation": {
+                "identifier": "serveRepoRefresh",
+                "newPage": false,
+                "searchKey": "httpapi.serveRepoRefresh",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveRepoRefresh(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveRepoRefresh(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#badgeValue",
+              "documentation": {
+                "identifier": "badgeValue",
+                "newPage": false,
+                "searchKey": "httpapi.badgeValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func badgeValue(r *http.Request) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc badgeValue(r *http.Request) (int, error)\n```\n\nNOTE: Keep in sync with services/backend/httpapi/repo_shield.go \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#badgeValueFmt",
+              "documentation": {
+                "identifier": "badgeValueFmt",
+                "newPage": false,
+                "searchKey": "httpapi.badgeValueFmt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func badgeValueFmt(totalRefs int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc badgeValueFmt(totalRefs int) string\n```\n\nNOTE: Keep in sync with services/backend/httpapi/repo_shield.go \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#serveRepoShield",
+              "documentation": {
+                "identifier": "serveRepoShield",
+                "newPage": false,
+                "searchKey": "httpapi.serveRepoShield",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveRepoShield(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveRepoShield(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#srcCliVersionServe",
+              "documentation": {
+                "identifier": "srcCliVersionServe",
+                "newPage": false,
+                "searchKey": "httpapi.srcCliVersionServe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func srcCliVersionServe(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc srcCliVersionServe(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#srcCliDownloadServe",
+              "documentation": {
+                "identifier": "srcCliDownloadServe",
+                "newPage": false,
+                "searchKey": "httpapi.srcCliDownloadServe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func srcCliDownloadServe(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc srcCliDownloadServe(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#srcCliVersion",
+              "documentation": {
+                "identifier": "srcCliVersion",
+                "newPage": false,
+                "searchKey": "httpapi.srcCliVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func srcCliVersion() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc srcCliVersion() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#isExpectedRelease",
+              "documentation": {
+                "identifier": "isExpectedRelease",
+                "newPage": false,
+                "searchKey": "httpapi.isExpectedRelease",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isExpectedRelease(filename string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isExpectedRelease(filename string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#telemetryHandler",
+              "documentation": {
+                "identifier": "telemetryHandler",
+                "newPage": false,
+                "searchKey": "httpapi.telemetryHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func telemetryHandler(db dbutil.DB) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc telemetryHandler(db dbutil.DB) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "httpapi.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#newTest",
+              "documentation": {
+                "identifier": "newTest",
+                "newPage": false,
+                "searchKey": "httpapi.newTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newTest() *httptestutil.Client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newTest() *httptestutil.Client\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#TestAccessTokenAuthMiddleware",
+              "documentation": {
+                "identifier": "TestAccessTokenAuthMiddleware",
+                "newPage": false,
+                "searchKey": "httpapi.TestAccessTokenAuthMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAccessTokenAuthMiddleware(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAccessTokenAuthMiddleware(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "httpapi.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#TestGitServiceHandlers",
+              "documentation": {
+                "identifier": "TestGitServiceHandlers",
+                "newPage": false,
+                "searchKey": "httpapi.TestGitServiceHandlers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGitServiceHandlers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGitServiceHandlers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#TestReposIndex",
+              "documentation": {
+                "identifier": "TestReposIndex",
+                "newPage": false,
+                "searchKey": "httpapi.TestReposIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReposIndex(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReposIndex(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#TestRepoRankFromConfig",
+              "documentation": {
+                "identifier": "TestRepoRankFromConfig",
+                "newPage": false,
+                "searchKey": "httpapi.TestRepoRankFromConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoRankFromConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoRankFromConfig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#TestRepoRefresh",
+              "documentation": {
+                "identifier": "TestRepoRefresh",
+                "newPage": false,
+                "searchKey": "httpapi.TestRepoRefresh",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoRefresh(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoRefresh(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#TestRepoShieldFmt",
+              "documentation": {
+                "identifier": "TestRepoShieldFmt",
+                "newPage": false,
+                "searchKey": "httpapi.TestRepoShieldFmt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoShieldFmt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoShieldFmt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi#TestRepoShield",
+              "documentation": {
+                "identifier": "TestRepoShield",
+                "newPage": false,
+                "searchKey": "httpapi.TestRepoShield",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoShield(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoShield(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/cmd/frontend/internal/httpapi/router"
+    },
+    {
+      "pathID": "/cmd/frontend/internal/httpapi/webhookhandlers"
+    }
+  ]
+}

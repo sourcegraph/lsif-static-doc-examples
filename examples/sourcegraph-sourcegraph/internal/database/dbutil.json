@@ -1,0 +1,859 @@
+{
+  "pathID": "/internal/database/dbutil",
+  "documentation": {
+    "identifier": "dbutil",
+    "newPage": true,
+    "searchKey": "internal/database/dbutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package dbutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/database/dbutil#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#DB",
+              "documentation": {
+                "identifier": "DB",
+                "newPage": false,
+                "searchKey": "dbutil.DB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DB interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DB interface {\n\tQueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)\n\tExecContext(ctx context.Context, query string, args ...interface{}) (sql.Result, error)\n\tQueryRowContext(ctx context.Context, query string, args ...interface{}) *sql.Row\n}\n```\n\nA DB captures the essential method of a sql.DB: QueryContext. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#Tx",
+              "documentation": {
+                "identifier": "Tx",
+                "newPage": false,
+                "searchKey": "dbutil.Tx",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Tx interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Tx interface {\n\tRollback() error\n\tCommit() error\n}\n```\n\nA Tx captures the essential methods of a sql.Tx. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#TxBeginner",
+              "documentation": {
+                "identifier": "TxBeginner",
+                "newPage": false,
+                "searchKey": "dbutil.TxBeginner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TxBeginner interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TxBeginner interface {\n\tBeginTx(context.Context, *sql.TxOptions) (*sql.Tx, error)\n}\n```\n\nA TxBeginner captures BeginTx method of a sql.DB \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#NullTime",
+              "documentation": {
+                "identifier": "NullTime",
+                "newPage": false,
+                "searchKey": "dbutil.NullTime",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NullTime struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NullTime struct{ *time.Time }\n```\n\nNullTime represents a time.Time that may be null. nullTime implements the sql.Scanner interface so it can be used as a scan destination, similar to sql.NullString. When the scanned value is null, Time is set to the zero value. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullTime.Scan",
+                    "documentation": {
+                      "identifier": "NullTime.Scan",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullTime.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nt *NullTime) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nt *NullTime) Scan(value interface{}) error\n```\n\nScan implements the Scanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullTime.Value",
+                    "documentation": {
+                      "identifier": "NullTime.Value",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullTime.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nt NullTime) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nt NullTime) Value() (driver.Value, error)\n```\n\nValue implements the driver Valuer interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#NullString",
+              "documentation": {
+                "identifier": "NullString",
+                "newPage": false,
+                "searchKey": "dbutil.NullString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NullString struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NullString struct{ S *string }\n```\n\nNullString represents a string that may be null. NullString implements the sql.Scanner interface so it can be used as a scan destination, similar to sql.NullString. When the scanned value is null, String is set to the zero value. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NewNullString",
+                    "documentation": {
+                      "identifier": "NewNullString",
+                      "newPage": false,
+                      "searchKey": "dbutil.NewNullString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewNullString(s string) NullString"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewNullString(s string) NullString\n```\n\nNewNullString returns a NullString treating zero value as null. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullString.Scan",
+                    "documentation": {
+                      "identifier": "NullString.Scan",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullString.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nt *NullString) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nt *NullString) Scan(value interface{}) error\n```\n\nScan implements the Scanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullString.Value",
+                    "documentation": {
+                      "identifier": "NullString.Value",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullString.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nt NullString) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nt NullString) Value() (driver.Value, error)\n```\n\nValue implements the driver Valuer interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#NullInt32",
+              "documentation": {
+                "identifier": "NullInt32",
+                "newPage": false,
+                "searchKey": "dbutil.NullInt32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NullInt32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NullInt32 struct{ N *int32 }\n```\n\nNullInt32 represents an int32 that may be null. NullInt32 implements the sql.Scanner interface so it can be used as a scan destination, similar to sql.NullString. When the scanned value is null, int32 is set to the zero value. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullInt32.Scan",
+                    "documentation": {
+                      "identifier": "NullInt32.Scan",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullInt32.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *NullInt32) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *NullInt32) Scan(value interface{}) error\n```\n\nScan implements the Scanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullInt32.Value",
+                    "documentation": {
+                      "identifier": "NullInt32.Value",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullInt32.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n NullInt32) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n NullInt32) Value() (driver.Value, error)\n```\n\nValue implements the driver Valuer interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#NullInt64",
+              "documentation": {
+                "identifier": "NullInt64",
+                "newPage": false,
+                "searchKey": "dbutil.NullInt64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NullInt64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NullInt64 struct{ N *int64 }\n```\n\nNullInt64 represents an int64 that may be null. NullInt64 implements the sql.Scanner interface so it can be used as a scan destination, similar to sql.NullString. When the scanned value is null, int64 is set to the zero value. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NewNullInt64",
+                    "documentation": {
+                      "identifier": "NewNullInt64",
+                      "newPage": false,
+                      "searchKey": "dbutil.NewNullInt64",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewNullInt64(i int64) NullInt64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewNullInt64(i int64) NullInt64\n```\n\nNewNullInt64 returns a NullInt64 treating zero value as null. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullInt64.Scan",
+                    "documentation": {
+                      "identifier": "NullInt64.Scan",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullInt64.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *NullInt64) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *NullInt64) Scan(value interface{}) error\n```\n\nScan implements the Scanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullInt64.Value",
+                    "documentation": {
+                      "identifier": "NullInt64.Value",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullInt64.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n NullInt64) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n NullInt64) Value() (driver.Value, error)\n```\n\nValue implements the driver Valuer interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#NullInt",
+              "documentation": {
+                "identifier": "NullInt",
+                "newPage": false,
+                "searchKey": "dbutil.NullInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NullInt struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NullInt struct{ N *int }\n```\n\nNullInt represents an int that may be null. NullInt implements the sql.Scanner interface so it can be used as a scan destination, similar to sql.NullString. When the scanned value is null, int is set to the zero value. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NewNullInt",
+                    "documentation": {
+                      "identifier": "NewNullInt",
+                      "newPage": false,
+                      "searchKey": "dbutil.NewNullInt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewNullInt(i int) NullInt"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewNullInt(i int) NullInt\n```\n\nNewNullInt returns a NullInt treating zero value as null. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullInt.Scan",
+                    "documentation": {
+                      "identifier": "NullInt.Scan",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullInt.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *NullInt) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *NullInt) Scan(value interface{}) error\n```\n\nScan implements the Scanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullInt.Value",
+                    "documentation": {
+                      "identifier": "NullInt.Value",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullInt.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n NullInt) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n NullInt) Value() (driver.Value, error)\n```\n\nValue implements the driver Valuer interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#JSONInt64Set",
+              "documentation": {
+                "identifier": "JSONInt64Set",
+                "newPage": false,
+                "searchKey": "dbutil.JSONInt64Set",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type JSONInt64Set struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype JSONInt64Set struct{ Set *[]int64 }\n```\n\nJSONInt64Set represents an int64 set as a JSONB object where the keys are the ids and the values are null. It implements the sql.Scanner interface so it can be used as a scan destination, similar to sql.NullString. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#JSONInt64Set.Scan",
+                    "documentation": {
+                      "identifier": "JSONInt64Set.Scan",
+                      "newPage": false,
+                      "searchKey": "dbutil.JSONInt64Set.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *JSONInt64Set) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *JSONInt64Set) Scan(value interface{}) error\n```\n\nScan implements the Scanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#JSONInt64Set.Value",
+                    "documentation": {
+                      "identifier": "JSONInt64Set.Value",
+                      "newPage": false,
+                      "searchKey": "dbutil.JSONInt64Set.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n JSONInt64Set) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n JSONInt64Set) Value() (driver.Value, error)\n```\n\nValue implements the driver Valuer interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#NullJSONRawMessage",
+              "documentation": {
+                "identifier": "NullJSONRawMessage",
+                "newPage": false,
+                "searchKey": "dbutil.NullJSONRawMessage",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NullJSONRawMessage struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NullJSONRawMessage struct {\n\tRaw json.RawMessage\n}\n```\n\nNullJSONRawMessage represents a json.RawMessage that may be null. NullJSONRawMessage implements the sql.Scanner interface so it can be used as a scan destination, similar to sql.NullString. When the scanned value is null, Raw is left as nil. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullJSONRawMessage.Scan",
+                    "documentation": {
+                      "identifier": "NullJSONRawMessage.Scan",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullJSONRawMessage.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *NullJSONRawMessage) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *NullJSONRawMessage) Scan(value interface{}) error\n```\n\nScan implements the Scanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#NullJSONRawMessage.Value",
+                    "documentation": {
+                      "identifier": "NullJSONRawMessage.Value",
+                      "newPage": false,
+                      "searchKey": "dbutil.NullJSONRawMessage.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *NullJSONRawMessage) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *NullJSONRawMessage) Value() (driver.Value, error)\n```\n\nValue implements the driver Valuer interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#CommitBytea",
+              "documentation": {
+                "identifier": "CommitBytea",
+                "newPage": false,
+                "searchKey": "dbutil.CommitBytea",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitBytea string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitBytea string\n```\n\nCommitBytea represents a hex-encoded string that is efficiently encoded in Postgres and should be used in place of a text or varchar type when the table is large (e.g. a record per commit). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#CommitBytea.Scan",
+                    "documentation": {
+                      "identifier": "CommitBytea.Scan",
+                      "newPage": false,
+                      "searchKey": "dbutil.CommitBytea.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *CommitBytea) Scan(value interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *CommitBytea) Scan(value interface{}) error\n```\n\nScan implements the Scanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbutil#CommitBytea.Value",
+                    "documentation": {
+                      "identifier": "CommitBytea.Value",
+                      "newPage": false,
+                      "searchKey": "dbutil.CommitBytea.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CommitBytea) Value() (driver.Value, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CommitBytea) Value() (driver.Value, error)\n```\n\nValue implements the driver Valuer interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#Scanner",
+              "documentation": {
+                "identifier": "Scanner",
+                "newPage": false,
+                "searchKey": "dbutil.Scanner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Scanner interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Scanner interface {\n\tScan(dst ...interface{}) error\n}\n```\n\nScanner captures the Scan method of sql.Rows and sql.Row \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#ScanFunc",
+              "documentation": {
+                "identifier": "ScanFunc",
+                "newPage": false,
+                "searchKey": "dbutil.ScanFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ScanFunc func(github.com/sourcegraph/sourcegraph/internal/database/dbutil.Scanner) (last int64, count int64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ScanFunc func(Scanner) (last, count int64, err error)\n```\n\nA ScanFunc scans one or more rows from a scanner, returning the last id column scanned and the count of scanned rows. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/dbutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#Transaction",
+              "documentation": {
+                "identifier": "Transaction",
+                "newPage": false,
+                "searchKey": "dbutil.Transaction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Transaction(ctx context.Context, db *sql.DB, f func(tx *sql.Tx) error) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Transaction(ctx context.Context, db *sql.DB, f func(tx *sql.Tx) error) (err error)\n```\n\nTransaction calls f within a transaction, rolling back if any error is returned by the function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#IsPostgresError",
+              "documentation": {
+                "identifier": "IsPostgresError",
+                "newPage": false,
+                "searchKey": "dbutil.IsPostgresError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsPostgresError(err error, codename string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsPostgresError(err error, codename string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#PostgresDSN",
+              "documentation": {
+                "identifier": "PostgresDSN",
+                "newPage": false,
+                "searchKey": "dbutil.PostgresDSN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PostgresDSN(prefix, currentUser string, getenv func(string) string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PostgresDSN(prefix, currentUser string, getenv func(string) string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbutil#TestPostgresDSN",
+              "documentation": {
+                "identifier": "TestPostgresDSN",
+                "newPage": false,
+                "searchKey": "dbutil.TestPostgresDSN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPostgresDSN(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPostgresDSN(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

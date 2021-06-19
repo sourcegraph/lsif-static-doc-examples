@@ -1,0 +1,339 @@
+{
+  "pathID": "/internal/logging",
+  "documentation": {
+    "identifier": "logging",
+    "newPage": true,
+    "searchKey": "internal/logging",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package logging"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/logging#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/logging#logColors",
+              "documentation": {
+                "identifier": "logColors",
+                "newPage": false,
+                "searchKey": "logging.logColors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var logColors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar logColors = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/logging#logLabels",
+              "documentation": {
+                "identifier": "logLabels",
+                "newPage": false,
+                "searchKey": "logging.logLabels",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var logLabels"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar logLabels = ...\n```\n\nWe'd prefer these in caps, not lowercase, and don't need the 4-character alignment \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/logging#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/logging#ErrorLogger",
+              "documentation": {
+                "identifier": "ErrorLogger",
+                "newPage": false,
+                "searchKey": "logging.ErrorLogger",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrorLogger interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrorLogger interface {\n\tError(msg string, ctx ...interface{})\n}\n```\n\nErrorLogger captures the method required for logging an error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/logging#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "logging.Options",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\tfilters     []func(*log15.Record) bool\n\tserviceName string\n}\n```\n\nOptions control the behavior of a tracer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/logging#Option",
+              "documentation": {
+                "identifier": "Option",
+                "newPage": false,
+                "searchKey": "logging.Option",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Option func(*github.com/sourcegraph/sourcegraph/internal/logging.Options)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Option func(*Options)\n```\n\nIf this idiom seems strange: [https://github.com/tmrts/go-patterns/blob/master/idiom/functional-options.md](https://github.com/tmrts/go-patterns/blob/master/idiom/functional-options.md) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/logging#ServiceName",
+                    "documentation": {
+                      "identifier": "ServiceName",
+                      "newPage": false,
+                      "searchKey": "logging.ServiceName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ServiceName(s string) Option"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ServiceName(s string) Option\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/logging#Filter",
+                    "documentation": {
+                      "identifier": "Filter",
+                      "newPage": false,
+                      "searchKey": "logging.Filter",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Filter(f func(*log15.Record) bool) Option"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Filter(f func(*log15.Record) bool) Option\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/logging#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/logging#Log",
+              "documentation": {
+                "identifier": "Log",
+                "newPage": false,
+                "searchKey": "logging.Log",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Log(lg ErrorLogger, msg string, err *error, ctx ...interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Log(lg ErrorLogger, msg string, err *error, ctx ...interface{})\n```\n\nLog logs the given message and context when the given error is defined. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/logging#condensedFormat",
+              "documentation": {
+                "identifier": "condensedFormat",
+                "newPage": false,
+                "searchKey": "logging.condensedFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func condensedFormat(r *log15.Record) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc condensedFormat(r *log15.Record) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/logging#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "logging.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/logging#LogEntryLevelString",
+              "documentation": {
+                "identifier": "LogEntryLevelString",
+                "newPage": false,
+                "searchKey": "logging.LogEntryLevelString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LogEntryLevelString(l log15.Lvl) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LogEntryLevelString(l log15.Lvl) string\n```\n\nFor severity field, see [https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry](https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/logging#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "logging.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(options ...Option)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(options ...Option)\n```\n\nInit initializes log15's root logger based on Sourcegraph-wide logging configuration variables. See [https://docs.sourcegraph.com/admin/observability#logs](https://docs.sourcegraph.com/admin/observability#logs) \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

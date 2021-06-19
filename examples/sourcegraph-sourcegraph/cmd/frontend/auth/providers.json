@@ -1,0 +1,388 @@
+{
+  "pathID": "/cmd/frontend/auth/providers",
+  "documentation": {
+    "identifier": "providers",
+    "newPage": true,
+    "searchKey": "cmd/frontend/auth/providers",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package providers"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/auth/providers#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#curProviders",
+              "documentation": {
+                "identifier": "curProviders",
+                "newPage": false,
+                "searchKey": "providers.curProviders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var curProviders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar curProviders = map[string]map[string]Provider{}\n```\n\ncurProviders is a map (package name -> (config string -> Provider)). The first key is the package name under which the provider was registered (this should be unique among packages). The second key is the normalized JSON serialization of Provider.Config().  We keep track of providers by package, so that when a given package updates its set of registered providers, we can easily remove its providers that are no longer present. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#curProvidersMu",
+              "documentation": {
+                "identifier": "curProvidersMu",
+                "newPage": false,
+                "searchKey": "providers.curProvidersMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var curProvidersMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar curProvidersMu sync.RWMutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#MockProviders",
+              "documentation": {
+                "identifier": "MockProviders",
+                "newPage": false,
+                "searchKey": "providers.MockProviders",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockProviders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockProviders []Provider\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/auth/providers#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#Provider",
+              "documentation": {
+                "identifier": "Provider",
+                "newPage": false,
+                "searchKey": "providers.Provider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Provider interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Provider interface {\n\t// ConfigID returns the identifier for this provider's config in the auth.providers site\n\t// configuration array.\n\t//\n\t// 🚨 SECURITY: This MUST NOT contain secret information because it is shown to unauthenticated\n\t// and anonymous clients.\n\tConfigID() ConfigID\n\n\t// Config is the entry in the site configuration \"auth.providers\" array that this provider\n\t// represents.\n\t//\n\t// 🚨 SECURITY: This value contains secret information that must not be shown to\n\t// non-site-admins.\n\tConfig() schema.AuthProviders\n\n\t// CachedInfo returns cached information about the provider.\n\tCachedInfo() *Info\n\n\t// Refresh refreshes the provider's information with an external service, if any.\n\tRefresh(ctx context.Context) error\n}\n```\n\nA Provider represents a user authentication provider (which provides functionality related to signing in and signing up, user identity, etc.) that is present in the site configuration \"auth.providers\" array. \n\nAn authentication provider implementation can have multiple Provider instances. For example, a site may support OpenID Connect authentication either via Google Workspace or Okta, each of which would be represented by its own Provider instance. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/auth/providers#GetProviderByConfigID",
+                    "documentation": {
+                      "identifier": "GetProviderByConfigID",
+                      "newPage": false,
+                      "searchKey": "providers.GetProviderByConfigID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetProviderByConfigID(id ConfigID) Provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetProviderByConfigID(id ConfigID) Provider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#ConfigID",
+              "documentation": {
+                "identifier": "ConfigID",
+                "newPage": false,
+                "searchKey": "providers.ConfigID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ConfigID struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ConfigID struct {\n\t// Type is the type of this auth provider (equal to its \"type\" property in its entry in the\n\t// auth.providers array in site configuration).\n\tType string\n\n\t// ID is an identifier that uniquely represents a provider's config among all other provider\n\t// configs of the same type.\n\t//\n\t// This value MUST NOT be persisted or used to associate accounts with this provider because it\n\t// can change when any property in this provider's config changes, even when those changes are\n\t// not material for identification (such as changing the display name).\n\t//\n\t// 🚨 SECURITY: This MUST NOT contain secret information because it is shown to unauthenticated\n\t// and anonymous clients.\n\tID string\n}\n```\n\nConfigID identifies a provider config object in the auth.providers site configuration array. \n\n🚨 SECURITY: This MUST NOT contain secret information because it is shown to unauthenticated and anonymous clients. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#Info",
+              "documentation": {
+                "identifier": "Info",
+                "newPage": false,
+                "searchKey": "providers.Info",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Info struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Info struct {\n\t// ServiceID identifies the external service that this authentication provider represents. It is\n\t// a stable identifier.\n\tServiceID string\n\n\t// ClientID identifies the external service client used when communicating with the external\n\t// service. It is a stable identifier.\n\tClientID string\n\n\t// DisplayName is the name to use when displaying the provider in the UI.\n\tDisplayName string\n\n\t// AuthenticationURL is the URL to visit in order to initiate authenticating via this provider.\n\tAuthenticationURL string\n}\n```\n\nInfo contains information about an authentication provider. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#sortProviders",
+              "documentation": {
+                "identifier": "sortProviders",
+                "newPage": false,
+                "searchKey": "providers.sortProviders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sortProviders []providers.Provider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sortProviders []Provider\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/auth/providers#sortProviders.Len",
+                    "documentation": {
+                      "identifier": "sortProviders.Len",
+                      "newPage": false,
+                      "searchKey": "providers.sortProviders.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p sortProviders) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p sortProviders) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/auth/providers#sortProviders.Less",
+                    "documentation": {
+                      "identifier": "sortProviders.Less",
+                      "newPage": false,
+                      "searchKey": "providers.sortProviders.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p sortProviders) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p sortProviders) Less(i, j int) bool\n```\n\nLess puts the builtin provider first and sorts the others alphabetically by type and then ID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/auth/providers#sortProviders.Swap",
+                    "documentation": {
+                      "identifier": "sortProviders.Swap",
+                      "newPage": false,
+                      "searchKey": "providers.sortProviders.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p sortProviders) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p sortProviders) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/auth/providers#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#Update",
+              "documentation": {
+                "identifier": "Update",
+                "newPage": false,
+                "searchKey": "providers.Update",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Update(pkgName string, providers []Provider)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Update(pkgName string, providers []Provider)\n```\n\nUpdate updates the set of active authentication provider instances. It replaces the current set of Providers under the specified pkgName with the new set. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#Providers",
+              "documentation": {
+                "identifier": "Providers",
+                "newPage": false,
+                "searchKey": "providers.Providers",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Providers() []Provider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Providers() []Provider\n```\n\nProviders returns the set of currently registered authentication providers. When no providers are registered, returns nil (and sign-in is effectively disabled). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth/providers#BuiltinAuthEnabled",
+              "documentation": {
+                "identifier": "BuiltinAuthEnabled",
+                "newPage": false,
+                "searchKey": "providers.BuiltinAuthEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BuiltinAuthEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BuiltinAuthEnabled() bool\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

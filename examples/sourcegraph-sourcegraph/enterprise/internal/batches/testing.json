@@ -1,0 +1,1376 @@
+{
+  "pathID": "/enterprise/internal/batches/testing",
+  "documentation": {
+    "identifier": "testing",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/testing",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package testing"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/testing#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TestRawBatchSpec",
+              "documentation": {
+                "identifier": "TestRawBatchSpec",
+                "newPage": false,
+                "searchKey": "testing.TestRawBatchSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TestRawBatchSpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TestRawBatchSpec = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TestRawBatchSpecYAML",
+              "documentation": {
+                "identifier": "TestRawBatchSpecYAML",
+                "newPage": false,
+                "searchKey": "testing.TestRawBatchSpecYAML",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TestRawBatchSpecYAML"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TestRawBatchSpecYAML = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#ChangesetSpecAuthorEmail",
+              "documentation": {
+                "identifier": "ChangesetSpecAuthorEmail",
+                "newPage": false,
+                "searchKey": "testing.ChangesetSpecAuthorEmail",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ChangesetSpecAuthorEmail"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ChangesetSpecAuthorEmail = \"mary@example.com\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#ChangesetSpecDiff",
+              "documentation": {
+                "identifier": "ChangesetSpecDiff",
+                "newPage": false,
+                "searchKey": "testing.ChangesetSpecDiff",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ChangesetSpecDiff"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ChangesetSpecDiff = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/testing#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#FailedChangesetFailureMessage",
+              "documentation": {
+                "identifier": "FailedChangesetFailureMessage",
+                "newPage": false,
+                "searchKey": "testing.FailedChangesetFailureMessage",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FailedChangesetFailureMessage"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FailedChangesetFailureMessage = \"Failed test\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TestChangsetSpecDiffStat",
+              "documentation": {
+                "identifier": "TestChangsetSpecDiffStat",
+                "newPage": false,
+                "searchKey": "testing.TestChangsetSpecDiffStat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var TestChangsetSpecDiffStat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar TestChangsetSpecDiffStat = &diff.Stat{Added: 10, Changed: 5, Deleted: 2}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#ChangesetSpecDiffStat",
+              "documentation": {
+                "identifier": "ChangesetSpecDiffStat",
+                "newPage": false,
+                "searchKey": "testing.ChangesetSpecDiffStat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ChangesetSpecDiffStat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ChangesetSpecDiffStat = &diff.Stat{Added: 1, Changed: 2, Deleted: 1}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#baseChangesetSpecGitBranch",
+              "documentation": {
+                "identifier": "baseChangesetSpecGitBranch",
+                "newPage": false,
+                "searchKey": "testing.baseChangesetSpecGitBranch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var baseChangesetSpecGitBranch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar baseChangesetSpecGitBranch = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateTestUser",
+              "documentation": {
+                "identifier": "CreateTestUser",
+                "newPage": false,
+                "searchKey": "testing.CreateTestUser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CreateTestUser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CreateTestUser = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/testing#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateBatchChanger",
+              "documentation": {
+                "identifier": "CreateBatchChanger",
+                "newPage": false,
+                "searchKey": "testing.CreateBatchChanger",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateBatchChanger interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateBatchChanger interface {\n\tCreateBatchChange(ctx context.Context, batchChange *btypes.BatchChange) error\n\tClock() func() time.Time\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateBatchSpecer",
+              "documentation": {
+                "identifier": "CreateBatchSpecer",
+                "newPage": false,
+                "searchKey": "testing.CreateBatchSpecer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateBatchSpecer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateBatchSpecer interface {\n\tCreateBatchSpec(ctx context.Context, batchSpec *btypes.BatchSpec) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TestChangesetOpts",
+              "documentation": {
+                "identifier": "TestChangesetOpts",
+                "newPage": false,
+                "searchKey": "testing.TestChangesetOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestChangesetOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestChangesetOpts struct {\n\tRepo         api.RepoID\n\tBatchChange  int64\n\tCurrentSpec  int64\n\tPreviousSpec int64\n\tBatchChanges []btypes.BatchChangeAssoc\n\n\tExternalServiceType string\n\tExternalID          string\n\tExternalBranch      string\n\tExternalState       btypes.ChangesetExternalState\n\tExternalReviewState btypes.ChangesetReviewState\n\tExternalCheckState  btypes.ChangesetCheckState\n\n\tDiffStatAdded   int32\n\tDiffStatChanged int32\n\tDiffStatDeleted int32\n\n\tPublicationState btypes.ChangesetPublicationState\n\n\tReconcilerState btypes.ReconcilerState\n\tFailureMessage  string\n\tNumFailures     int64\n\n\tOwnedByBatchChange int64\n\n\tClosing    bool\n\tIsArchived bool\n\tArchive    bool\n\n\tMetadata interface{}\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateChangeseter",
+              "documentation": {
+                "identifier": "CreateChangeseter",
+                "newPage": false,
+                "searchKey": "testing.CreateChangeseter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateChangeseter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateChangeseter interface {\n\tCreateChangeset(ctx context.Context, changeset *btypes.Changeset) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#ChangesetAssertions",
+              "documentation": {
+                "identifier": "ChangesetAssertions",
+                "newPage": false,
+                "searchKey": "testing.ChangesetAssertions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetAssertions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetAssertions struct {\n\tRepo               api.RepoID\n\tCurrentSpec        int64\n\tPreviousSpec       int64\n\tOwnedByBatchChange int64\n\tReconcilerState    btypes.ReconcilerState\n\tPublicationState   btypes.ChangesetPublicationState\n\tExternalState      btypes.ChangesetExternalState\n\tExternalID         string\n\tExternalBranch     string\n\tDiffStat           *diff.Stat\n\tClosing            bool\n\n\tTitle string\n\tBody  string\n\n\tFailureMessage   *string\n\tSyncErrorMessage *string\n\tNumFailures      int64\n\tNumResets        int64\n\n\tAttachedTo []int64\n\tDetachFrom []int64\n\n\tArchiveIn                  int64\n\tArchivedInOwnerBatchChange bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#GetChangesetByIDer",
+              "documentation": {
+                "identifier": "GetChangesetByIDer",
+                "newPage": false,
+                "searchKey": "testing.GetChangesetByIDer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GetChangesetByIDer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GetChangesetByIDer interface {\n\tGetChangesetByID(ctx context.Context, id int64) (*btypes.Changeset, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#UpdateChangeseter",
+              "documentation": {
+                "identifier": "UpdateChangeseter",
+                "newPage": false,
+                "searchKey": "testing.UpdateChangeseter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UpdateChangeseter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UpdateChangeseter interface {\n\tUpdateChangeset(ctx context.Context, changeset *btypes.Changeset) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TestSpecOpts",
+              "documentation": {
+                "identifier": "TestSpecOpts",
+                "newPage": false,
+                "searchKey": "testing.TestSpecOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestSpecOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestSpecOpts struct {\n\tID        int64\n\tUser      int32\n\tRepo      api.RepoID\n\tBatchSpec int64\n\n\t// If this is non-blank, the changesetSpec will be an import/track spec for\n\t// the changeset with the given ExternalID in the given repo.\n\tExternalID string\n\n\t// If this is set, the changesetSpec will be a \"create commit on this\n\t// branch\" changeset spec.\n\tHeadRef string\n\n\t// If this is set along with headRef, the changesetSpec will have Published\n\t// set.\n\tPublished interface{}\n\n\tTitle             string\n\tBody              string\n\tCommitMessage     string\n\tCommitDiff        string\n\tCommitAuthorEmail string\n\tCommitAuthorName  string\n\n\tBaseRev string\n\tBaseRef string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateChangesetSpecer",
+              "documentation": {
+                "identifier": "CreateChangesetSpecer",
+                "newPage": false,
+                "searchKey": "testing.CreateChangesetSpecer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateChangesetSpecer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateChangesetSpecer interface {\n\tCreateChangesetSpec(ctx context.Context, changesetSpec *btypes.ChangesetSpec) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#Clock",
+              "documentation": {
+                "identifier": "Clock",
+                "newPage": false,
+                "searchKey": "testing.Clock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Clock interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Clock interface {\n\tNow() time.Time\n\tAdd(time.Duration) time.Time\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TestClock",
+              "documentation": {
+                "identifier": "TestClock",
+                "newPage": false,
+                "searchKey": "testing.TestClock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestClock struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestClock struct {\n\tTime time.Time\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/testing#TestClock.Now",
+                    "documentation": {
+                      "identifier": "TestClock.Now",
+                      "newPage": false,
+                      "searchKey": "testing.TestClock.Now",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *TestClock) Now() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *TestClock) Now() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/testing#TestClock.Add",
+                    "documentation": {
+                      "identifier": "TestClock.Add",
+                      "newPage": false,
+                      "searchKey": "testing.TestClock.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *TestClock) Add(d time.Duration) time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *TestClock) Add(d time.Duration) time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#createSiteCredentialer",
+              "documentation": {
+                "identifier": "createSiteCredentialer",
+                "newPage": false,
+                "searchKey": "testing.createSiteCredentialer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type createSiteCredentialer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype createSiteCredentialer interface {\n\tCreateSiteCredential(context.Context, *btypes.SiteCredential, auth.Authenticator) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#FakeGitserverClient",
+              "documentation": {
+                "identifier": "FakeGitserverClient",
+                "newPage": false,
+                "searchKey": "testing.FakeGitserverClient",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FakeGitserverClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FakeGitserverClient struct {\n\tResponse    string\n\tResponseErr error\n\n\tCreateCommitFromPatchCalled bool\n\tCreateCommitFromPatchReq    *protocol.CreateCommitFromPatchRequest\n}\n```\n\nFakeGitserverClient is a test implementation of the GitserverClient interface required by ExecChangesetJob. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/testing#FakeGitserverClient.CreateCommitFromPatch",
+                    "documentation": {
+                      "identifier": "FakeGitserverClient.CreateCommitFromPatch",
+                      "newPage": false,
+                      "searchKey": "testing.FakeGitserverClient.CreateCommitFromPatch",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FakeGitserverClient) CreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FakeGitserverClient) CreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#MockedChangesetSyncState",
+              "documentation": {
+                "identifier": "MockedChangesetSyncState",
+                "newPage": false,
+                "searchKey": "testing.MockedChangesetSyncState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockedChangesetSyncState struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockedChangesetSyncState struct {\n\t// DiffStat is the diff.Stat of the mocked \"git diff\" call to gitserver.\n\tDiffStat *diff.Stat\n\n\texecReader      func([]string) (io.ReadCloser, error)\n\tmockRepoLookup  func(protocol.RepoLookupArgs) (*protocol.RepoLookupResult, error)\n\tresolveRevision func(string, git.ResolveRevisionOptions) (api.CommitID, error)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/testing#MockChangesetSyncState",
+                    "documentation": {
+                      "identifier": "MockChangesetSyncState",
+                      "newPage": false,
+                      "searchKey": "testing.MockChangesetSyncState",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MockChangesetSyncState(repo *protocol.RepoInfo) *MockedChangesetSyncState"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MockChangesetSyncState(repo *protocol.RepoInfo) *MockedChangesetSyncState\n```\n\nMockChangesetSyncState sets up mocks such that invoking SetDerivedState() with a Changeset will use the same diff (+1, ~1, -3) when setting the SyncState on a Changeset. \n\nstate.Unmock() must called to clean up, usually via defer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/testing#MockedChangesetSyncState.Unmock",
+                    "documentation": {
+                      "identifier": "MockedChangesetSyncState.Unmock",
+                      "newPage": false,
+                      "searchKey": "testing.MockedChangesetSyncState.Unmock",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (state *MockedChangesetSyncState) Unmock()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (state *MockedChangesetSyncState) Unmock()\n```\n\nUnmock resets the mocks set up by MockGitHubChangesetSync. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/testing#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#BuildBatchChange",
+              "documentation": {
+                "identifier": "BuildBatchChange",
+                "newPage": false,
+                "searchKey": "testing.BuildBatchChange",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BuildBatchChange(store CreateBatchChanger, name string, userID int32, spec int64) *btypes.BatchChange"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BuildBatchChange(store CreateBatchChanger, name string, userID int32, spec int64) *btypes.BatchChange\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateBatchChange",
+              "documentation": {
+                "identifier": "CreateBatchChange",
+                "newPage": false,
+                "searchKey": "testing.CreateBatchChange",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateBatchChange(t *testing.T, ctx context.Context, store CreateBatchChanger, name string, userID int32, spec int64) *btypes.BatchChange"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateBatchChange(t *testing.T, ctx context.Context, store CreateBatchChanger, name string, userID int32, spec int64) *btypes.BatchChange\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateBatchSpec",
+              "documentation": {
+                "identifier": "CreateBatchSpec",
+                "newPage": false,
+                "searchKey": "testing.CreateBatchSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateBatchSpec(t *testing.T, ctx context.Context, store CreateBatchSpecer, name string, userID int32) *btypes.BatchSpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateBatchSpec(t *testing.T, ctx context.Context, store CreateBatchSpecer, name string, userID int32) *btypes.BatchSpec\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateChangeset",
+              "documentation": {
+                "identifier": "CreateChangeset",
+                "newPage": false,
+                "searchKey": "testing.CreateChangeset",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateChangeset(t *testing.T,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateChangeset(\n\tt *testing.T,\n\tctx context.Context,\n\tstore CreateChangeseter,\n\topts TestChangesetOpts,\n) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#BuildChangeset",
+              "documentation": {
+                "identifier": "BuildChangeset",
+                "newPage": false,
+                "searchKey": "testing.BuildChangeset",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BuildChangeset(opts TestChangesetOpts) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BuildChangeset(opts TestChangesetOpts) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#AssertChangeset",
+              "documentation": {
+                "identifier": "AssertChangeset",
+                "newPage": false,
+                "searchKey": "testing.AssertChangeset",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AssertChangeset(t *testing.T, c *btypes.Changeset, a ChangesetAssertions)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AssertChangeset(t *testing.T, c *btypes.Changeset, a ChangesetAssertions)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#ReloadAndAssertChangeset",
+              "documentation": {
+                "identifier": "ReloadAndAssertChangeset",
+                "newPage": false,
+                "searchKey": "testing.ReloadAndAssertChangeset",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReloadAndAssertChangeset(t *testing.T, ctx context.Context, s GetChangesetByIDer, c *btypes.Changeset, a ChangesetAssertions) (reloaded *btypes.Changeset)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReloadAndAssertChangeset(t *testing.T, ctx context.Context, s GetChangesetByIDer, c *btypes.Changeset, a ChangesetAssertions) (reloaded *btypes.Changeset)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#SetChangesetPublished",
+              "documentation": {
+                "identifier": "SetChangesetPublished",
+                "newPage": false,
+                "searchKey": "testing.SetChangesetPublished",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetChangesetPublished(t *testing.T, ctx context.Context, s UpdateChangeseter, c *btypes.Changeset, externalID, externalBranch string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetChangesetPublished(t *testing.T, ctx context.Context, s UpdateChangeseter, c *btypes.Changeset, externalID, externalBranch string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#SetChangesetFailed",
+              "documentation": {
+                "identifier": "SetChangesetFailed",
+                "newPage": false,
+                "searchKey": "testing.SetChangesetFailed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetChangesetFailed(t *testing.T, ctx context.Context, s UpdateChangeseter, c *btypes.Changeset)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetChangesetFailed(t *testing.T, ctx context.Context, s UpdateChangeseter, c *btypes.Changeset)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#SetChangesetClosed",
+              "documentation": {
+                "identifier": "SetChangesetClosed",
+                "newPage": false,
+                "searchKey": "testing.SetChangesetClosed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetChangesetClosed(t *testing.T, ctx context.Context, s UpdateChangeseter, c *btypes.Changeset)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetChangesetClosed(t *testing.T, ctx context.Context, s UpdateChangeseter, c *btypes.Changeset)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#BuildChangesetSpec",
+              "documentation": {
+                "identifier": "BuildChangesetSpec",
+                "newPage": false,
+                "searchKey": "testing.BuildChangesetSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BuildChangesetSpec(t *testing.T, opts TestSpecOpts) *btypes.ChangesetSpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BuildChangesetSpec(t *testing.T, opts TestSpecOpts) *btypes.ChangesetSpec\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateChangesetSpec",
+              "documentation": {
+                "identifier": "CreateChangesetSpec",
+                "newPage": false,
+                "searchKey": "testing.CreateChangesetSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateChangesetSpec(t *testing.T,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateChangesetSpec(\n\tt *testing.T,\n\tctx context.Context,\n\tstore CreateChangesetSpecer,\n\topts TestSpecOpts,\n) *btypes.ChangesetSpec\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#MockConfig",
+              "documentation": {
+                "identifier": "MockConfig",
+                "newPage": false,
+                "searchKey": "testing.MockConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockConfig(t testing.TB, mockery *conf.Unified)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockConfig(t testing.TB, mockery *conf.Unified)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateTestSiteCredential",
+              "documentation": {
+                "identifier": "CreateTestSiteCredential",
+                "newPage": false,
+                "searchKey": "testing.CreateTestSiteCredential",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateTestSiteCredential(t *testing.T, bstore createSiteCredentialer, repo *types.Repo) *btypes.SiteCredential"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateTestSiteCredential(t *testing.T, bstore createSiteCredentialer, repo *types.Repo) *btypes.SiteCredential\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TruncateTables",
+              "documentation": {
+                "identifier": "TruncateTables",
+                "newPage": false,
+                "searchKey": "testing.TruncateTables",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TruncateTables(t *testing.T, db *sql.DB, tables ...string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TruncateTables(t *testing.T, db *sql.DB, tables ...string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#MockRepoPermissions",
+              "documentation": {
+                "identifier": "MockRepoPermissions",
+                "newPage": false,
+                "searchKey": "testing.MockRepoPermissions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockRepoPermissions(t *testing.T, db dbutil.DB, userID int32, repoIDs ...api.RepoID)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockRepoPermissions(t *testing.T, db dbutil.DB, userID int32, repoIDs ...api.RepoID)\n```\n\nMockRepoPermissions mocks repository permissions to include repositories by IDs for the given user. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#InsertTestOrg",
+              "documentation": {
+                "identifier": "InsertTestOrg",
+                "newPage": false,
+                "searchKey": "testing.InsertTestOrg",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InsertTestOrg(t *testing.T, db dbutil.DB, name string) (orgID int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InsertTestOrg(t *testing.T, db dbutil.DB, name string) (orgID int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TestRepo",
+              "documentation": {
+                "identifier": "TestRepo",
+                "newPage": false,
+                "searchKey": "testing.TestRepo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepo(t *testing.T, store *database.ExternalServiceStore, serviceKind string) *types.Repo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepo(t *testing.T, store *database.ExternalServiceStore, serviceKind string) *types.Repo\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#TestRepoWithService",
+              "documentation": {
+                "identifier": "TestRepoWithService",
+                "newPage": false,
+                "searchKey": "testing.TestRepoWithService",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoWithService(t *testing.T, store *database.ExternalServiceStore, name string, svc *types.ExternalService) *types.Repo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoWithService(t *testing.T, store *database.ExternalServiceStore, name string, svc *types.ExternalService) *types.Repo\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateTestRepos",
+              "documentation": {
+                "identifier": "CreateTestRepos",
+                "newPage": false,
+                "searchKey": "testing.CreateTestRepos",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, count int) ([]*types.Repo, *types.ExternalService)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, count int) ([]*types.Repo, *types.ExternalService)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateGitlabTestRepos",
+              "documentation": {
+                "identifier": "CreateGitlabTestRepos",
+                "newPage": false,
+                "searchKey": "testing.CreateGitlabTestRepos",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateGitlabTestRepos(t *testing.T, ctx context.Context, db *sql.DB, count int) ([]*types.Repo, *types.ExternalService)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateGitlabTestRepos(t *testing.T, ctx context.Context, db *sql.DB, count int) ([]*types.Repo, *types.ExternalService)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateBbsTestRepos",
+              "documentation": {
+                "identifier": "CreateBbsTestRepos",
+                "newPage": false,
+                "searchKey": "testing.CreateBbsTestRepos",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateBbsTestRepos(t *testing.T, ctx context.Context, db *sql.DB, count int) ([]*types.Repo, *types.ExternalService)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateBbsTestRepos(t *testing.T, ctx context.Context, db *sql.DB, count int) ([]*types.Repo, *types.ExternalService)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateGitHubSSHTestRepos",
+              "documentation": {
+                "identifier": "CreateGitHubSSHTestRepos",
+                "newPage": false,
+                "searchKey": "testing.CreateGitHubSSHTestRepos",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateGitHubSSHTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, count int) ([]*types.Repo, *types.ExternalService)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateGitHubSSHTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, count int) ([]*types.Repo, *types.ExternalService)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#CreateBbsSSHTestRepos",
+              "documentation": {
+                "identifier": "CreateBbsSSHTestRepos",
+                "newPage": false,
+                "searchKey": "testing.CreateBbsSSHTestRepos",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateBbsSSHTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, count int) ([]*types.Repo, *types.ExternalService)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateBbsSSHTestRepos(t *testing.T, ctx context.Context, db dbutil.DB, count int) ([]*types.Repo, *types.ExternalService)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#createBbsRepos",
+              "documentation": {
+                "identifier": "createBbsRepos",
+                "newPage": false,
+                "searchKey": "testing.createBbsRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createBbsRepos(t *testing.T, ctx context.Context, db dbutil.DB, ext *types.ExternalService, count int, cloneBaseURL string) ([]*types.Repo, *types.ExternalService)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createBbsRepos(t *testing.T, ctx context.Context, db dbutil.DB, ext *types.ExternalService, count int, cloneBaseURL string) ([]*types.Repo, *types.ExternalService)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#MockRSAKeygen",
+              "documentation": {
+                "identifier": "MockRSAKeygen",
+                "newPage": false,
+                "searchKey": "testing.MockRSAKeygen",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockRSAKeygen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockRSAKeygen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#NewRawChangesetSpecGitBranch",
+              "documentation": {
+                "identifier": "NewRawChangesetSpecGitBranch",
+                "newPage": false,
+                "searchKey": "testing.NewRawChangesetSpecGitBranch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewRawChangesetSpecGitBranch(repo graphql.ID, baseRev string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewRawChangesetSpecGitBranch(repo graphql.ID, baseRev string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#NewPublishedRawChangesetSpecGitBranch",
+              "documentation": {
+                "identifier": "NewPublishedRawChangesetSpecGitBranch",
+                "newPage": false,
+                "searchKey": "testing.NewPublishedRawChangesetSpecGitBranch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewPublishedRawChangesetSpecGitBranch(repo graphql.ID, baseRev string, published batches.PublishedValue) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewPublishedRawChangesetSpecGitBranch(repo graphql.ID, baseRev string, published batches.PublishedValue) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#NewRawChangesetSpecExisting",
+              "documentation": {
+                "identifier": "NewRawChangesetSpecExisting",
+                "newPage": false,
+                "searchKey": "testing.NewRawChangesetSpecExisting",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewRawChangesetSpecExisting(repo graphql.ID, externalID string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewRawChangesetSpecExisting(repo graphql.ID, externalID string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/testing#MarshalJSON",
+              "documentation": {
+                "identifier": "MarshalJSON",
+                "newPage": false,
+                "searchKey": "testing.MarshalJSON",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MarshalJSON(t testing.TB, v interface{}) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MarshalJSON(t testing.TB, v interface{}) string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,617 @@
+{
+  "pathID": "/internal/src-prometheus",
+  "documentation": {
+    "identifier": "src-prometheus",
+    "newPage": true,
+    "searchKey": "internal/src-prometheus",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package srcprometheus"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package srcprometheus defines an API to interact with Sourcegraph Prometheus, including prom-wrapper. See [https://docs.sourcegraph.com/dev/background-information/observability/prometheus](https://docs.sourcegraph.com/dev/background-information/observability/prometheus) \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/src-prometheus#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#EndpointAlertsStatus",
+              "documentation": {
+                "identifier": "EndpointAlertsStatus",
+                "newPage": false,
+                "searchKey": "srcprometheus.EndpointAlertsStatus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const EndpointAlertsStatus"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst EndpointAlertsStatus = \"/prom-wrapper/alerts-status\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#EndpointAlertsStatusHistory",
+              "documentation": {
+                "identifier": "EndpointAlertsStatusHistory",
+                "newPage": false,
+                "searchKey": "srcprometheus.EndpointAlertsStatusHistory",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const EndpointAlertsStatusHistory"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst EndpointAlertsStatusHistory = EndpointAlertsStatus + \"/history\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#EndpointConfigSubscriber",
+              "documentation": {
+                "identifier": "EndpointConfigSubscriber",
+                "newPage": false,
+                "searchKey": "srcprometheus.EndpointConfigSubscriber",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const EndpointConfigSubscriber"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst EndpointConfigSubscriber = \"/prom-wrapper/config-subscriber\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/src-prometheus#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#ErrPrometheusUnavailable",
+              "documentation": {
+                "identifier": "ErrPrometheusUnavailable",
+                "newPage": false,
+                "searchKey": "srcprometheus.ErrPrometheusUnavailable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrPrometheusUnavailable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrPrometheusUnavailable = errors.New(\"prometheus API is unavailable\")\n```\n\nErrPrometheusUnavailable is raised specifically when prometheusURL is unset or when prometheus API access times out, both of which indicate that the server API has likely been configured to explicitly disallow access to prometheus, or that prometheus is not deployed at all. The website checks for this error in `fetchMonitoringStats`, for example. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#PrometheusURL",
+              "documentation": {
+                "identifier": "PrometheusURL",
+                "newPage": false,
+                "searchKey": "srcprometheus.PrometheusURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PrometheusURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PrometheusURL = env.Get(\"PROMETHEUS_URL\", \"\", \"prometheus server URL\")\n```\n\nPrometheusURL is the configured Prometheus instance. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/src-prometheus#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "srcprometheus.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client interface {\n\tGetAlertsStatus(ctx context.Context) (*AlertsStatus, error)\n\tGetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)\n\tGetConfigStatus(ctx context.Context) (*ConfigStatus, error)\n}\n```\n\nClient provides the interface for interacting with Sourcegraph Prometheus, including prom-wrapper. See [https://docs.sourcegraph.com/dev/background-information/observability/prometheus](https://docs.sourcegraph.com/dev/background-information/observability/prometheus) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#NewClient",
+                    "documentation": {
+                      "identifier": "NewClient",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.NewClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewClient(prometheusURL string) (Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewClient(prometheusURL string) (Client, error)\n```\n\nNewClient provides a client for interacting with Sourcegraph Prometheus. It errors if the target Prometheus URL is invalid, or if no Prometheus URL is configured at all. Users should check for the latter case by asserting against `ErrPrometheusUnavailable` to avoid rendering an error. \n\nSee [https://docs.sourcegraph.com/dev/background-information/observability/prometheus](https://docs.sourcegraph.com/dev/background-information/observability/prometheus) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "srcprometheus.client",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype client struct {\n\thttp    http.Client\n\tpromURL url.URL\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#client.newRequest",
+                    "documentation": {
+                      "identifier": "client.newRequest",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.client.newRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) newRequest(endpoint string, query url.Values) (*http.Request, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#client.do",
+                    "documentation": {
+                      "identifier": "client.do",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.client.do",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) do(ctx context.Context, req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#client.GetAlertsStatus",
+                    "documentation": {
+                      "identifier": "client.GetAlertsStatus",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.client.GetAlertsStatus",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) GetAlertsStatus(ctx context.Context) (*AlertsStatus, error)\n```\n\nGetAlertsStatus retrieves an overview of current alerts \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#client.GetAlertsHistory",
+                    "documentation": {
+                      "identifier": "client.GetAlertsHistory",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.client.GetAlertsHistory",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) GetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) GetAlertsHistory(ctx context.Context, timespan time.Duration) (*AlertsHistory, error)\n```\n\nGetAlertsHistory retrieves a historical summary of all alerts \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#client.GetConfigStatus",
+                    "documentation": {
+                      "identifier": "client.GetConfigStatus",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.client.GetConfigStatus",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) GetConfigStatus(ctx context.Context) (*ConfigStatus, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#roundTripper",
+              "documentation": {
+                "identifier": "roundTripper",
+                "newPage": false,
+                "searchKey": "srcprometheus.roundTripper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type roundTripper struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype roundTripper struct{}\n```\n\nroundTripper treats certain connection errors as `ErrPrometheusUnavailable` which can be handled explicitly for environments without Prometheus available. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#roundTripper.RoundTrip",
+                    "documentation": {
+                      "identifier": "roundTripper.RoundTrip",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.roundTripper.RoundTrip",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *roundTripper) RoundTrip(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#AlertsStatus",
+              "documentation": {
+                "identifier": "AlertsStatus",
+                "newPage": false,
+                "searchKey": "srcprometheus.AlertsStatus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AlertsStatus struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AlertsStatus struct {\n\tWarning          int `json:\"warning\"`\n\tSilenced         int `json:\"silenced\"`\n\tCritical         int `json:\"critical\"`\n\tServicesCritical int `json:\"services_critical\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#MonitoringAlert",
+              "documentation": {
+                "identifier": "MonitoringAlert",
+                "newPage": false,
+                "searchKey": "srcprometheus.MonitoringAlert",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MonitoringAlert struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MonitoringAlert struct {\n\tTimestampValue   time.Time `json:\"timestamp\"`\n\tNameValue        string    `json:\"name\"`\n\tServiceNameValue string    `json:\"service_name\"`\n\tOwnerValue       string    `json:\"owner\"`\n\t// AverageValue indicates average over past 12 hours, see alertsHistoryQuery and GraphQL schema docs for MonitoringAlert\n\tAverageValue float64 `json:\"average\"`\n}\n```\n\nMonitoringAlert implements the GraphQL type MonitoringAlert. \n\nInternal fields named to accomodate GraphQL getters and setters, see grapqhlbackend.MonitoringAlert \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#MonitoringAlerts",
+              "documentation": {
+                "identifier": "MonitoringAlerts",
+                "newPage": false,
+                "searchKey": "srcprometheus.MonitoringAlerts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MonitoringAlerts []*srcprometheus.MonitoringAlert"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MonitoringAlerts []*MonitoringAlert\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Less",
+                    "documentation": {
+                      "identifier": "MonitoringAlerts.Less",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.MonitoringAlerts.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a MonitoringAlerts) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a MonitoringAlerts) Less(i, j int) bool\n```\n\nLess determined by timestamp -> serviceName -> alert name \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Swap",
+                    "documentation": {
+                      "identifier": "MonitoringAlerts.Swap",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.MonitoringAlerts.Swap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a MonitoringAlerts) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a MonitoringAlerts) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/src-prometheus#MonitoringAlerts.Len",
+                    "documentation": {
+                      "identifier": "MonitoringAlerts.Len",
+                      "newPage": false,
+                      "searchKey": "srcprometheus.MonitoringAlerts.Len",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a MonitoringAlerts) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a MonitoringAlerts) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#AlertsHistory",
+              "documentation": {
+                "identifier": "AlertsHistory",
+                "newPage": false,
+                "searchKey": "srcprometheus.AlertsHistory",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AlertsHistory struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AlertsHistory struct {\n\tAlerts MonitoringAlerts `json:\"alerts\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#ConfigStatus",
+              "documentation": {
+                "identifier": "ConfigStatus",
+                "newPage": false,
+                "searchKey": "srcprometheus.ConfigStatus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ConfigStatus struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ConfigStatus struct {\n\tProblems conf.Problems `json:\"problems\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/src-prometheus#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/src-prometheus#Test_roundTripper_PrometheusUnavailable",
+              "documentation": {
+                "identifier": "Test_roundTripper_PrometheusUnavailable",
+                "newPage": false,
+                "searchKey": "srcprometheus.Test_roundTripper_PrometheusUnavailable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_roundTripper_PrometheusUnavailable(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_roundTripper_PrometheusUnavailable(t *testing.T)\n```\n\ntest detection of \"prometheus unavailable\" \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

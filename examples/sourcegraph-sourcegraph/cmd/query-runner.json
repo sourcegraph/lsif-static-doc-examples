@@ -1,0 +1,1202 @@
+{
+  "pathID": "/cmd/query-runner",
+  "documentation": {
+    "identifier": "query-runner",
+    "newPage": true,
+    "searchKey": "cmd/query-runner",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Command query-runner runs saved queries and notifies subscribers when the queries have new results. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/query-runner#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#gqlSearchQuery",
+              "documentation": {
+                "identifier": "gqlSearchQuery",
+                "newPage": false,
+                "searchKey": "main.gqlSearchQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gqlSearchQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gqlSearchQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#port",
+              "documentation": {
+                "identifier": "port",
+                "newPage": false,
+                "searchKey": "main.port",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const port"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst port = \"3183\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#utmSourceEmail",
+              "documentation": {
+                "identifier": "utmSourceEmail",
+                "newPage": false,
+                "searchKey": "main.utmSourceEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const utmSourceEmail"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst utmSourceEmail = \"saved-search-email\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#utmSourceSlack",
+              "documentation": {
+                "identifier": "utmSourceSlack",
+                "newPage": false,
+                "searchKey": "main.utmSourceSlack",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const utmSourceSlack"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst utmSourceSlack = \"saved-search-slack\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/query-runner#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#testNotificationMu",
+              "documentation": {
+                "identifier": "testNotificationMu",
+                "newPage": false,
+                "searchKey": "main.testNotificationMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testNotificationMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testNotificationMu sync.Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#newSearchResultsEmailTemplates",
+              "documentation": {
+                "identifier": "newSearchResultsEmailTemplates",
+                "newPage": false,
+                "searchKey": "main.newSearchResultsEmailTemplates",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newSearchResultsEmailTemplates"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar newSearchResultsEmailTemplates = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notifySubscribedTemplate",
+              "documentation": {
+                "identifier": "notifySubscribedTemplate",
+                "newPage": false,
+                "searchKey": "main.notifySubscribedTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var notifySubscribedTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar notifySubscribedTemplate = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notifyUnsubscribedTemplate",
+              "documentation": {
+                "identifier": "notifyUnsubscribedTemplate",
+                "newPage": false,
+                "searchKey": "main.notifyUnsubscribedTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var notifyUnsubscribedTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar notifyUnsubscribedTemplate = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#forceRunInterval",
+              "documentation": {
+                "identifier": "forceRunInterval",
+                "newPage": false,
+                "searchKey": "main.forceRunInterval",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var forceRunInterval"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar forceRunInterval = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#debugPretendSavedQueryResultsExist",
+              "documentation": {
+                "identifier": "debugPretendSavedQueryResultsExist",
+                "newPage": false,
+                "searchKey": "main.debugPretendSavedQueryResultsExist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var debugPretendSavedQueryResultsExist"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar debugPretendSavedQueryResultsExist = false\n```\n\nUseful for debugging e.g. email and slack notifications. Set it to true and it will send one notification on server startup, effectively. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#executor",
+              "documentation": {
+                "identifier": "executor",
+                "newPage": false,
+                "searchKey": "main.executor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var executor"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar executor = &executorT{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#externalURL",
+              "documentation": {
+                "identifier": "externalURL",
+                "newPage": false,
+                "searchKey": "main.externalURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var externalURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar externalURL *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/query-runner#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#graphQLQuery",
+              "documentation": {
+                "identifier": "graphQLQuery",
+                "newPage": false,
+                "searchKey": "main.graphQLQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type graphQLQuery struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype graphQLQuery struct {\n\tQuery     string      `json:\"query\"`\n\tVariables interface{} `json:\"variables\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#gqlSearchVars",
+              "documentation": {
+                "identifier": "gqlSearchVars",
+                "newPage": false,
+                "searchKey": "main.gqlSearchVars",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gqlSearchVars struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gqlSearchVars struct {\n\tQuery string `json:\"query\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#gqlSearchResponse",
+              "documentation": {
+                "identifier": "gqlSearchResponse",
+                "newPage": false,
+                "searchKey": "main.gqlSearchResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gqlSearchResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gqlSearchResponse struct {\n\tData struct {\n\t\tSearch struct {\n\t\t\tResults struct {\n\t\t\t\tApproximateResultCount string\n\t\t\t\tCloning                []*api.Repo\n\t\t\t\tTimedout               []*api.Repo\n\t\t\t\tResults                []interface{}\n\t\t\t}\n\t\t}\n\t}\n\tErrors []interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#search",
+                    "documentation": {
+                      "identifier": "search",
+                      "newPage": false,
+                      "searchKey": "main.search",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func search(ctx context.Context, query string) (*gqlSearchResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc search(ctx context.Context, query string) (*gqlSearchResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#performSearch",
+                    "documentation": {
+                      "identifier": "performSearch",
+                      "newPage": false,
+                      "searchKey": "main.performSearch",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func performSearch(ctx context.Context, query string) (v *gqlSearchResponse, execDuration time.Duration, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc performSearch(ctx context.Context, query string) (v *gqlSearchResponse, execDuration time.Duration, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#executorT",
+              "documentation": {
+                "identifier": "executorT",
+                "newPage": false,
+                "searchKey": "main.executorT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type executorT struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype executorT struct {\n\tforceRunInterval *time.Duration\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#executorT.run",
+                    "documentation": {
+                      "identifier": "executorT.run",
+                      "newPage": false,
+                      "searchKey": "main.executorT.run",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executorT) run(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executorT) run(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#executorT.runQuery",
+                    "documentation": {
+                      "identifier": "executorT.runQuery",
+                      "newPage": false,
+                      "searchKey": "main.executorT.runQuery",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executorT) runQuery(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executorT) runQuery(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery) error\n```\n\nrunQuery runs the given query if an appropriate amount of time has elapsed since it last ran. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notifier",
+              "documentation": {
+                "identifier": "notifier",
+                "newPage": false,
+                "searchKey": "main.notifier",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type notifier struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype notifier struct {\n\tspec       api.SavedQueryIDSpec\n\tquery      api.ConfigSavedQuery\n\tnewQuery   string\n\tresults    *gqlSearchResponse\n\trecipients recipients\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#notifier.emailNotify",
+                    "documentation": {
+                      "identifier": "notifier.emailNotify",
+                      "newPage": false,
+                      "searchKey": "main.notifier.emailNotify",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *notifier) emailNotify(ctx context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *notifier) emailNotify(ctx context.Context)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#notifier.slackNotify",
+                    "documentation": {
+                      "identifier": "notifier.slackNotify",
+                      "newPage": false,
+                      "searchKey": "main.notifier.slackNotify",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *notifier) slackNotify(ctx context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *notifier) slackNotify(ctx context.Context)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#recipientSpec",
+              "documentation": {
+                "identifier": "recipientSpec",
+                "newPage": false,
+                "searchKey": "main.recipientSpec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type recipientSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype recipientSpec struct {\n\tuserID, orgID int32\n}\n```\n\nrecipientSpec identifies a recipient of a saved search notification. Exactly one of its fields is nonzero. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#recipientSpec.String",
+                    "documentation": {
+                      "identifier": "recipientSpec.String",
+                      "newPage": false,
+                      "searchKey": "main.recipientSpec.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r recipientSpec) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r recipientSpec) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#recipient",
+              "documentation": {
+                "identifier": "recipient",
+                "newPage": false,
+                "searchKey": "main.recipient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type recipient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype recipient struct {\n\tspec  recipientSpec // the recipient's identity\n\temail bool          // send an email to the recipient\n\tslack bool          // post a Slack message to the recipient\n}\n```\n\nrecipient describes a recipient of a saved search notification and the type of notifications they're configured to receive. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#recipient.String",
+                    "documentation": {
+                      "identifier": "recipient.String",
+                      "newPage": false,
+                      "searchKey": "main.recipient.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *recipient) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *recipient) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#recipients",
+              "documentation": {
+                "identifier": "recipients",
+                "newPage": false,
+                "searchKey": "main.recipients",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type recipients []*main.recipient"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype recipients []*recipient\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#diffNotificationRecipients",
+                    "documentation": {
+                      "identifier": "diffNotificationRecipients",
+                      "newPage": false,
+                      "searchKey": "main.diffNotificationRecipients",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func diffNotificationRecipients(old, new recipients) (removed, added recipients)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc diffNotificationRecipients(old, new recipients) (removed, added recipients)\n```\n\ndiffNotificationRecipients diffs old against new, returning the removed and added recipients. The same recipient identity may be returned in both the removed and added lists, if they changed the type of notifications they receive (e.g., unsubscribe from email, subscribe to Slack). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#recipients.add",
+                    "documentation": {
+                      "identifier": "recipients.add",
+                      "newPage": false,
+                      "searchKey": "main.recipients.add",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rs *recipients) add(r recipient)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rs *recipients) add(r recipient)\n```\n\nadd adds the new recipient, merging it into an existing slice element if one already exists for the userID or orgID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/query-runner#recipients.get",
+                    "documentation": {
+                      "identifier": "recipients.get",
+                      "newPage": false,
+                      "searchKey": "main.recipients.get",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rs recipients) get(s recipientSpec) *recipient"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rs recipients) get(s recipientSpec) *recipient\n```\n\nget returns the recipient with the given spec, if any, or else nil. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/query-runner#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#diffSavedQueryConfigs",
+              "documentation": {
+                "identifier": "diffSavedQueryConfigs",
+                "newPage": false,
+                "searchKey": "main.diffSavedQueryConfigs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func diffSavedQueryConfigs(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery) (deleted, updated, created map[api.SavedQuerySpecAndConfig]api.SavedQuerySpecAndConfig)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc diffSavedQueryConfigs(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery) (deleted, updated, created map[api.SavedQuerySpecAndConfig]api.SavedQuerySpecAndConfig)\n```\n\ndiffSavedQueryConfigs takes the old and new saved queries configurations. \n\nIt returns maps whose keys represent the old value and value represent the new value, i.e. a map of the saved query in the oldList and what its new value is in the newList for each respective category. For deleted, the new value will be an empty struct. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#sendNotificationsForCreatedOrUpdatedOrDeleted",
+              "documentation": {
+                "identifier": "sendNotificationsForCreatedOrUpdatedOrDeleted",
+                "newPage": false,
+                "searchKey": "main.sendNotificationsForCreatedOrUpdatedOrDeleted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sendNotificationsForCreatedOrUpdatedOrDeleted(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sendNotificationsForCreatedOrUpdatedOrDeleted(oldList, newList map[api.SavedQueryIDSpec]api.ConfigSavedQuery)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notifySavedQueryWasCreatedOrUpdated",
+              "documentation": {
+                "identifier": "notifySavedQueryWasCreatedOrUpdated",
+                "newPage": false,
+                "searchKey": "main.notifySavedQueryWasCreatedOrUpdated",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func notifySavedQueryWasCreatedOrUpdated(oldValue, newValue api.SavedQuerySpecAndConfig) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc notifySavedQueryWasCreatedOrUpdated(oldValue, newValue api.SavedQuerySpecAndConfig) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#serveTestNotification",
+              "documentation": {
+                "identifier": "serveTestNotification",
+                "newPage": false,
+                "searchKey": "main.serveTestNotification",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveTestNotification(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveTestNotification(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#canSendEmail",
+              "documentation": {
+                "identifier": "canSendEmail",
+                "newPage": false,
+                "searchKey": "main.canSendEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func canSendEmail(ctx context.Context) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc canSendEmail(ctx context.Context) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#emailNotifySubscribeUnsubscribe",
+              "documentation": {
+                "identifier": "emailNotifySubscribeUnsubscribe",
+                "newPage": false,
+                "searchKey": "main.emailNotifySubscribeUnsubscribe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func emailNotifySubscribeUnsubscribe(ctx context.Context, recipient *recipient, query api.SavedQuerySpecAndConfig, template txtypes.Templates) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc emailNotifySubscribeUnsubscribe(ctx context.Context, recipient *recipient, query api.SavedQuerySpecAndConfig, template txtypes.Templates) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#sendEmail",
+              "documentation": {
+                "identifier": "sendEmail",
+                "newPage": false,
+                "searchKey": "main.sendEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sendEmail(ctx context.Context, userID int32, eventType string, template txtypes.Templates, data interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sendEmail(ctx context.Context, userID int32, eventType string, template txtypes.Templates, data interface{}) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#gqlURL",
+              "documentation": {
+                "identifier": "gqlURL",
+                "newPage": false,
+                "searchKey": "main.gqlURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gqlURL(queryName string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gqlURL(queryName string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#extractTime",
+              "documentation": {
+                "identifier": "extractTime",
+                "newPage": false,
+                "searchKey": "main.extractTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func extractTime(result interface{}) (t *time.Time, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc extractTime(result interface{}) (t *time.Time, err error)\n```\n\nextractTime extracts the time from the given search result. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#writeError",
+              "documentation": {
+                "identifier": "writeError",
+                "newPage": false,
+                "searchKey": "main.writeError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writeError(w http.ResponseWriter, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writeError(w http.ResponseWriter, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#latestResultTime",
+              "documentation": {
+                "identifier": "latestResultTime",
+                "newPage": false,
+                "searchKey": "main.latestResultTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func latestResultTime(prevInfo *api.SavedQueryInfo, v *gqlSearchResponse, searchErr error) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc latestResultTime(prevInfo *api.SavedQueryInfo, v *gqlSearchResponse, searchErr error) time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#notify",
+              "documentation": {
+                "identifier": "notify",
+                "newPage": false,
+                "searchKey": "main.notify",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func notify(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery, newQuery string, results *gqlSearchResponse) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc notify(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery, newQuery string, results *gqlSearchResponse) error\n```\n\nnotify handles sending notifications for new search results. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#searchURL",
+              "documentation": {
+                "identifier": "searchURL",
+                "newPage": false,
+                "searchKey": "main.searchURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func searchURL(query, utmSource string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc searchURL(query, utmSource string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#savedSearchListPageURL",
+              "documentation": {
+                "identifier": "savedSearchListPageURL",
+                "newPage": false,
+                "searchKey": "main.savedSearchListPageURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func savedSearchListPageURL(utmSource string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc savedSearchListPageURL(utmSource string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#sourcegraphURL",
+              "documentation": {
+                "identifier": "sourcegraphURL",
+                "newPage": false,
+                "searchKey": "main.sourcegraphURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sourcegraphURL(path, query, utmSource string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sourcegraphURL(path, query, utmSource string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#logEvent",
+              "documentation": {
+                "identifier": "logEvent",
+                "newPage": false,
+                "searchKey": "main.logEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logEvent(userID int32, eventName, eventType string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logEvent(userID int32, eventName, eventType string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#getNotificationRecipients",
+              "documentation": {
+                "identifier": "getNotificationRecipients",
+                "newPage": false,
+                "searchKey": "main.getNotificationRecipients",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getNotificationRecipients(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery) ([]*recipient, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getNotificationRecipients(ctx context.Context, spec api.SavedQueryIDSpec, query api.ConfigSavedQuery) ([]*recipient, error)\n```\n\ngetNotificationRecipients retrieves the list of recipients who should receive notifications for events related to the saved search. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#slackNotifySubscribed",
+              "documentation": {
+                "identifier": "slackNotifySubscribed",
+                "newPage": false,
+                "searchKey": "main.slackNotifySubscribed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slackNotifySubscribed(ctx context.Context, recipient *recipient, query api.SavedQuerySpecAndConfig) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slackNotifySubscribed(ctx context.Context, recipient *recipient, query api.SavedQuerySpecAndConfig) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#slackNotifyUnsubscribed",
+              "documentation": {
+                "identifier": "slackNotifyUnsubscribed",
+                "newPage": false,
+                "searchKey": "main.slackNotifyUnsubscribed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slackNotifyUnsubscribed(ctx context.Context, recipient *recipient, query api.SavedQuerySpecAndConfig) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slackNotifyUnsubscribed(ctx context.Context, recipient *recipient, query api.SavedQuerySpecAndConfig) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#slackNotify",
+              "documentation": {
+                "identifier": "slackNotify",
+                "newPage": false,
+                "searchKey": "main.slackNotify",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slackNotify(ctx context.Context, recipient *recipient, text string, slackWebhookURL *string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slackNotify(ctx context.Context, recipient *recipient, text string, slackWebhookURL *string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#TestGetNotificationRecipients",
+              "documentation": {
+                "identifier": "TestGetNotificationRecipients",
+                "newPage": false,
+                "searchKey": "main.TestGetNotificationRecipients",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetNotificationRecipients(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetNotificationRecipients(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/query-runner#TestDiffNotificationRecipients",
+              "documentation": {
+                "identifier": "TestDiffNotificationRecipients",
+                "newPage": false,
+                "searchKey": "main.TestDiffNotificationRecipients",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDiffNotificationRecipients(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDiffNotificationRecipients(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/cmd/query-runner/queryrunnerapi"
+    }
+  ]
+}

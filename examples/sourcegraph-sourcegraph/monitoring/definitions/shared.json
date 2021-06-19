@@ -1,0 +1,618 @@
+{
+  "pathID": "/monitoring/definitions/shared",
+  "documentation": {
+    "identifier": "shared",
+    "newPage": true,
+    "searchKey": "monitoring/definitions/shared",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package shared"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package shared contains shared declarations between dashboards. In general, you should NOT be making changes to this package: we use a declarative style for monitoring intentionally, so you should err on the side of repeating yourself and NOT writing shared or programatically generated monitoring. \n\nWhen editing this package or introducing any shared declarations, you should abide strictly by the following rules: \n\n1. Do NOT declare a shared definition unless 5+ dashboards will use it. Sharing dashboard \n\n```\ndeclarations means the codebase becomes more complex and non-declarative which we want to avoid\nso repeat yourself instead if it applies to less than 5 dashboards.\n\n```\n2. ONLY declare shared Observables. Introducing shared Rows or Groups prevents individual dashboard \n\n```\nmaintainers from holistically considering both the layout of dashboards as well as the\nmetrics and alerts defined within them -- which we do not want.\n\n```\n3. Use the sharedObservable type and do NOT parameterize more than just the container name. It may \n\n```\nbe tempting to pass an alerting threshold as an argument, or parameterize whether a critical\nalert is defined -- but this makes reasoning about alerts at a high level much more difficult.\nIf you have a need for this, it is a strong signal you should NOT be using the shared definition\nanymore and should instead copy it and apply your modifications.\n\n```\nLearn more about monitoring in [https://about.sourcegraph.com/handbook/engineering/observability/monitoring_pillars](https://about.sourcegraph.com/handbook/engineering/observability/monitoring_pillars) \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/monitoring/definitions/shared#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#TitleContainerMonitoring",
+              "documentation": {
+                "identifier": "TitleContainerMonitoring",
+                "newPage": false,
+                "searchKey": "shared.TitleContainerMonitoring",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TitleContainerMonitoring"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TitleContainerMonitoring = \"Container monitoring (not available on server)\"\n```\n\nContainer monitoring overviews - these provide short-term overviews of container behaviour for a service. \n\nThese observables should only use cAdvisor metrics, and are thus only available on Kubernetes and docker-compose deployments. \n\ncAdvisor metrics reference: [https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md#prometheus-container-metrics](https://github.com/google/cadvisor/blob/master/docs/storage/prometheus.md#prometheus-container-metrics) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#TitleGolangMonitoring",
+              "documentation": {
+                "identifier": "TitleGolangMonitoring",
+                "newPage": false,
+                "searchKey": "shared.TitleGolangMonitoring",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TitleGolangMonitoring"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TitleGolangMonitoring = \"Golang runtime monitoring\"\n```\n\nGolang monitoring overviews. \n\nUses metrics exported by the Prometheus Golang library, so is available on all deployment types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#TitleKubernetesMonitoring",
+              "documentation": {
+                "identifier": "TitleKubernetesMonitoring",
+                "newPage": false,
+                "searchKey": "shared.TitleKubernetesMonitoring",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TitleKubernetesMonitoring"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TitleKubernetesMonitoring = \"Kubernetes monitoring (only available on Kubernetes)\"\n```\n\nKubernetes monitoring overviews. \n\nThese observables should only use metrics exported by Kubernetes, or use Prometheus metrics in a way that only applies in Kubernetes deployments. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#TitleProvisioningIndicators",
+              "documentation": {
+                "identifier": "TitleProvisioningIndicators",
+                "newPage": false,
+                "searchKey": "shared.TitleProvisioningIndicators",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TitleProvisioningIndicators"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TitleProvisioningIndicators = \"Provisioning indicators (not available on server)\"\n```\n\nProvisioning indicator overviews - these provide long-term overviews of container resource usage. The goal of these observables are to provide guidance on whether or not a service requires more or less resources. \n\nThese observables should only use cAdvisor metrics, and are thus only available on Kubernetes and docker-compose deployments. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/monitoring/definitions/shared#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ContainerMissing",
+              "documentation": {
+                "identifier": "ContainerMissing",
+                "newPage": false,
+                "searchKey": "shared.ContainerMissing",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainerMissing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainerMissing sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ContainerMemoryUsage",
+              "documentation": {
+                "identifier": "ContainerMemoryUsage",
+                "newPage": false,
+                "searchKey": "shared.ContainerMemoryUsage",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainerMemoryUsage"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainerMemoryUsage sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ContainerCPUUsage",
+              "documentation": {
+                "identifier": "ContainerCPUUsage",
+                "newPage": false,
+                "searchKey": "shared.ContainerCPUUsage",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainerCPUUsage"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainerCPUUsage sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ContainerIOUsage",
+              "documentation": {
+                "identifier": "ContainerIOUsage",
+                "newPage": false,
+                "searchKey": "shared.ContainerIOUsage",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainerIOUsage"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainerIOUsage sharedObservable = ...\n```\n\nContainerIOUsage monitors filesystem reads and writes, and is useful for services that use disk. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#FrontendInternalAPIErrorResponses",
+              "documentation": {
+                "identifier": "FrontendInternalAPIErrorResponses",
+                "newPage": false,
+                "searchKey": "shared.FrontendInternalAPIErrorResponses",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FrontendInternalAPIErrorResponses"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FrontendInternalAPIErrorResponses sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#GoGoroutines",
+              "documentation": {
+                "identifier": "GoGoroutines",
+                "newPage": false,
+                "searchKey": "shared.GoGoroutines",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GoGoroutines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GoGoroutines sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#GoGcDuration",
+              "documentation": {
+                "identifier": "GoGcDuration",
+                "newPage": false,
+                "searchKey": "shared.GoGcDuration",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GoGcDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GoGcDuration sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#KubernetesPodsAvailable",
+              "documentation": {
+                "identifier": "KubernetesPodsAvailable",
+                "newPage": false,
+                "searchKey": "shared.KubernetesPodsAvailable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var KubernetesPodsAvailable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar KubernetesPodsAvailable sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ProvisioningCPUUsageLongTerm",
+              "documentation": {
+                "identifier": "ProvisioningCPUUsageLongTerm",
+                "newPage": false,
+                "searchKey": "shared.ProvisioningCPUUsageLongTerm",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ProvisioningCPUUsageLongTerm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ProvisioningCPUUsageLongTerm sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ProvisioningMemoryUsageLongTerm",
+              "documentation": {
+                "identifier": "ProvisioningMemoryUsageLongTerm",
+                "newPage": false,
+                "searchKey": "shared.ProvisioningMemoryUsageLongTerm",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ProvisioningMemoryUsageLongTerm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ProvisioningMemoryUsageLongTerm sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ProvisioningCPUUsageShortTerm",
+              "documentation": {
+                "identifier": "ProvisioningCPUUsageShortTerm",
+                "newPage": false,
+                "searchKey": "shared.ProvisioningCPUUsageShortTerm",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ProvisioningCPUUsageShortTerm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ProvisioningCPUUsageShortTerm sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#ProvisioningMemoryUsageShortTerm",
+              "documentation": {
+                "identifier": "ProvisioningMemoryUsageShortTerm",
+                "newPage": false,
+                "searchKey": "shared.ProvisioningMemoryUsageShortTerm",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ProvisioningMemoryUsageShortTerm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ProvisioningMemoryUsageShortTerm sharedObservable = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/monitoring/definitions/shared#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#Observable",
+              "documentation": {
+                "identifier": "Observable",
+                "newPage": false,
+                "searchKey": "shared.Observable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Observable monitoring.Observable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Observable monitoring.Observable\n```\n\nObservable is a variant of normal Observables that offer convenience functions for customizing shared observables. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/definitions/shared#Observable.Observable",
+                    "documentation": {
+                      "identifier": "Observable.Observable",
+                      "newPage": false,
+                      "searchKey": "shared.Observable.Observable",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o Observable) Observable() monitoring.Observable"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o Observable) Observable() monitoring.Observable\n```\n\nObservable is a convenience adapter that casts this SharedObservable as an normal Observable. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/definitions/shared#Observable.WithWarning",
+                    "documentation": {
+                      "identifier": "Observable.WithWarning",
+                      "newPage": false,
+                      "searchKey": "shared.Observable.WithWarning",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o Observable) WithWarning(a *monitoring.ObservableAlertDefinition) Observable\n```\n\nWithWarning overrides this Observable's warning-level alert with the given alert. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/definitions/shared#Observable.WithCritical",
+                    "documentation": {
+                      "identifier": "Observable.WithCritical",
+                      "newPage": false,
+                      "searchKey": "shared.Observable.WithCritical",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o Observable) WithCritical(a *monitoring.ObservableAlertDefinition) Observable"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o Observable) WithCritical(a *monitoring.ObservableAlertDefinition) Observable\n```\n\nWithCritical overrides this Observable's critical-level alert with the given alert. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/definitions/shared#Observable.WithNoAlerts",
+                    "documentation": {
+                      "identifier": "Observable.WithNoAlerts",
+                      "newPage": false,
+                      "searchKey": "shared.Observable.WithNoAlerts",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o Observable) WithNoAlerts(interpretation string) Observable"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o Observable) WithNoAlerts(interpretation string) Observable\n```\n\nWithNoAlerts disables alerting on this Observable and sets the given interpretation instead. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#sharedObservable",
+              "documentation": {
+                "identifier": "sharedObservable",
+                "newPage": false,
+                "searchKey": "shared.sharedObservable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sharedObservable func(containerName string, owner github.com/sourcegraph/sourcegraph/monitoring/monitoring.ObservableOwner) github.com/sourcegraph/sourcegraph/monitoring/definitions/shared.Observable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sharedObservable func(containerName string, owner monitoring.ObservableOwner) Observable\n```\n\nsharedObservable defines the type all shared observable variables should have in this package. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/monitoring/definitions/shared#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/definitions/shared#CadvisorNameMatcher",
+              "documentation": {
+                "identifier": "CadvisorNameMatcher",
+                "newPage": false,
+                "searchKey": "shared.CadvisorNameMatcher",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CadvisorNameMatcher(containerName string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CadvisorNameMatcher(containerName string) string\n```\n\nCadvisorNameMatcher generates Prometheus matchers that capture metrics that match the given container name while excluding some irrelevant series. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

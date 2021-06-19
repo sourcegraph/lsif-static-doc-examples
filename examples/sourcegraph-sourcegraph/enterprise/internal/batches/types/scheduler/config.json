@@ -1,0 +1,391 @@
+{
+  "pathID": "/enterprise/internal/batches/types/scheduler/config",
+  "documentation": {
+    "identifier": "config",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/types/scheduler/config",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package config"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/types/scheduler/config#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#config",
+              "documentation": {
+                "identifier": "config",
+                "newPage": false,
+                "searchKey": "config.config",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var config"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar config *configuration\n```\n\nThis is a singleton because, well, the entire site configuration system essentially is. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#mu",
+              "documentation": {
+                "identifier": "mu",
+                "newPage": false,
+                "searchKey": "config.mu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mu sync.Mutex\n```\n\nThis is a singleton because, well, the entire site configuration system essentially is. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/types/scheduler/config#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#configuration",
+              "documentation": {
+                "identifier": "configuration",
+                "newPage": false,
+                "searchKey": "config.configuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type configuration struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype configuration struct {\n\tmu          sync.RWMutex\n\tactive      *window.Configuration\n\traw         *[]*schema.BatchChangeRolloutWindow\n\tsubscribers map[chan *window.Configuration]struct{}\n}\n```\n\nconfiguration wraps window.Configuration in a thread-safe manner, while allowing consuming code to subscribe to configuration updates. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/config#ensureConfig",
+                    "documentation": {
+                      "identifier": "ensureConfig",
+                      "newPage": false,
+                      "searchKey": "config.ensureConfig",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ensureConfig() *configuration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ensureConfig() *configuration\n```\n\nensureConfig grabs the current configuration, lazily constructing it if necessary. It momentarily locks the singleton mutex, but releases it when it returns the config. This protects us against race conditions when overwriting the config, since Go doesn't guarantee even pointer writes are atomic, but doesn't provide any safety to the user. As a result, this shouldn't be used for anything that involves writing to the config. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/config#newConfiguration",
+                    "documentation": {
+                      "identifier": "newConfiguration",
+                      "newPage": false,
+                      "searchKey": "config.newConfiguration",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newConfiguration() *configuration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newConfiguration() *configuration\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/config#configuration.Active",
+                    "documentation": {
+                      "identifier": "configuration.Active",
+                      "newPage": false,
+                      "searchKey": "config.configuration.Active",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *configuration) Active() *window.Configuration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *configuration) Active() *window.Configuration\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/config#configuration.Subscribe",
+                    "documentation": {
+                      "identifier": "configuration.Subscribe",
+                      "newPage": false,
+                      "searchKey": "config.configuration.Subscribe",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *configuration) Subscribe() chan *window.Configuration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *configuration) Subscribe() chan *window.Configuration\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/config#configuration.Unsubscribe",
+                    "documentation": {
+                      "identifier": "configuration.Unsubscribe",
+                      "newPage": false,
+                      "searchKey": "config.configuration.Unsubscribe",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *configuration) Unsubscribe(ch chan *window.Configuration)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *configuration) Unsubscribe(ch chan *window.Configuration)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/types/scheduler/config#configuration.notify",
+                    "documentation": {
+                      "identifier": "configuration.notify",
+                      "newPage": false,
+                      "searchKey": "config.configuration.notify",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *configuration) notify()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *configuration) notify()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/types/scheduler/config#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#ActiveWindow",
+              "documentation": {
+                "identifier": "ActiveWindow",
+                "newPage": false,
+                "searchKey": "config.ActiveWindow",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ActiveWindow() *window.Configuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ActiveWindow() *window.Configuration\n```\n\nActiveWindow returns the window configuration in effect at the present time. This is not a live object, and may become outdated if held for long periods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#Subscribe",
+              "documentation": {
+                "identifier": "Subscribe",
+                "newPage": false,
+                "searchKey": "config.Subscribe",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Subscribe() chan *window.Configuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Subscribe() chan *window.Configuration\n```\n\nSubscribe returns a channel that will receive a message with the new configuration each time it is updated. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#Unsubscribe",
+              "documentation": {
+                "identifier": "Unsubscribe",
+                "newPage": false,
+                "searchKey": "config.Unsubscribe",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Unsubscribe(ch chan *window.Configuration)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Unsubscribe(ch chan *window.Configuration)\n```\n\nUnsubscribe removes a channel returned from Subscribe() from the notification list. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#Reset",
+              "documentation": {
+                "identifier": "Reset",
+                "newPage": false,
+                "searchKey": "config.Reset",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Reset()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Reset()\n```\n\nReset destroys the existing singleton and forces it to be reinitialised the next time Active() is called. This should never be used in non-testing code. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#sameConfiguration",
+              "documentation": {
+                "identifier": "sameConfiguration",
+                "newPage": false,
+                "searchKey": "config.sameConfiguration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sameConfiguration(prev, next *[]*schema.BatchChangeRolloutWindow) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/types/scheduler/config#TestConfiguration",
+              "documentation": {
+                "identifier": "TestConfiguration",
+                "newPage": false,
+                "searchKey": "config.TestConfiguration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConfiguration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConfiguration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

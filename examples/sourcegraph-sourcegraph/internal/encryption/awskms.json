@@ -1,0 +1,454 @@
+{
+  "pathID": "/internal/encryption/awskms",
+  "documentation": {
+    "identifier": "awskms",
+    "newPage": true,
+    "searchKey": "internal/encryption/awskms",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package awskms"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/encryption/awskms#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#testKeyID",
+              "documentation": {
+                "identifier": "testKeyID",
+                "newPage": false,
+                "searchKey": "awskms.testKeyID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testKeyID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testKeyID = \"4b739277-5a93-4551-b71c-99608c9c805d\"\n```\n\ntestKeyID is the ID of a key defined here: [https://us-west-2.console.aws.amazon.com/kms/home?region=us-west-2#/kms/keys/4b739277-5a93-4551-b71c-99608c9c805d](https://us-west-2.console.aws.amazon.com/kms/home?region=us-west-2#/kms/keys/4b739277-5a93-4551-b71c-99608c9c805d) If you want to update this test, feel free to replace the key ID used here. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption/awskms#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#shouldUpdate",
+              "documentation": {
+                "identifier": "shouldUpdate",
+                "newPage": false,
+                "searchKey": "awskms.shouldUpdate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var shouldUpdate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar shouldUpdate = flag.Bool(\"update\", false, \"Update testdata\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption/awskms#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#Key",
+              "documentation": {
+                "identifier": "Key",
+                "newPage": false,
+                "searchKey": "awskms.Key",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Key struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Key struct {\n\tkeyID  string\n\tclient *kms.Client\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/awskms#Key.Version",
+                    "documentation": {
+                      "identifier": "Key.Version",
+                      "newPage": false,
+                      "searchKey": "awskms.Key.Version",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/awskms#Key.Decrypt",
+                    "documentation": {
+                      "identifier": "Key.Decrypt",
+                      "newPage": false,
+                      "searchKey": "awskms.Key.Decrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Decrypt(ctx context.Context, cipherText []byte) (*encryption.Secret, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Decrypt(ctx context.Context, cipherText []byte) (*encryption.Secret, error)\n```\n\nDecrypt a secret, it must have been encrypted with the same Key. Encrypted secrets are a base64 encoded string containing the original content. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/awskms#Key.Encrypt",
+                    "documentation": {
+                      "identifier": "Key.Encrypt",
+                      "newPage": false,
+                      "searchKey": "awskms.Key.Encrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)\n```\n\nEncrypt a secret, storing it as a base64 encoded string. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#encryptedValue",
+              "documentation": {
+                "identifier": "encryptedValue",
+                "newPage": false,
+                "searchKey": "awskms.encryptedValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encryptedValue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encryptedValue struct {\n\tKey        []byte\n\tNonce      []byte\n\tCiphertext []byte\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption/awskms#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#NewKey",
+              "documentation": {
+                "identifier": "NewKey",
+                "newPage": false,
+                "searchKey": "awskms.NewKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey) (encryption.Key, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey) (encryption.Key, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#newKey",
+              "documentation": {
+                "identifier": "newKey",
+                "newPage": false,
+                "searchKey": "awskms.newKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey, config aws.Config) (encryption.Key, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newKey(ctx context.Context, keyConfig schema.AWSKMSEncryptionKey, config aws.Config) (encryption.Key, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#awsConfigOptsForKeyConfig",
+              "documentation": {
+                "identifier": "awsConfigOptsForKeyConfig",
+                "newPage": false,
+                "searchKey": "awskms.awsConfigOptsForKeyConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func awsConfigOptsForKeyConfig(keyConfig schema.AWSKMSEncryptionKey) []func(*config.LoadOptions) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc awsConfigOptsForKeyConfig(keyConfig schema.AWSKMSEncryptionKey) []func(*config.LoadOptions) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#aesEncrypt",
+              "documentation": {
+                "identifier": "aesEncrypt",
+                "newPage": false,
+                "searchKey": "awskms.aesEncrypt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func aesEncrypt(plaintext, key []byte) ([]byte, []byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc aesEncrypt(plaintext, key []byte) ([]byte, []byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#aesDecrypt",
+              "documentation": {
+                "identifier": "aesDecrypt",
+                "newPage": false,
+                "searchKey": "awskms.aesDecrypt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func aesDecrypt(ciphertext, key, nonce []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc aesDecrypt(ciphertext, key, nonce []byte) ([]byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#TestRoundtrip",
+              "documentation": {
+                "identifier": "TestRoundtrip",
+                "newPage": false,
+                "searchKey": "awskms.TestRoundtrip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRoundtrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRoundtrip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#newClientFactory",
+              "documentation": {
+                "identifier": "newClientFactory",
+                "newPage": false,
+                "searchKey": "awskms.newClientFactory",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newClientFactory(t testing.TB, name string, mws ...httpcli.Middleware) (*httpcli.Factory, func(testing.TB))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newClientFactory(t testing.TB, name string, mws ...httpcli.Middleware) (*httpcli.Factory, func(testing.TB))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#newRecorder",
+              "documentation": {
+                "identifier": "newRecorder",
+                "newPage": false,
+                "searchKey": "awskms.newRecorder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newRecorder(t testing.TB, file string, record bool) *recorder.Recorder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newRecorder(t testing.TB, file string, record bool) *recorder.Recorder\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#save",
+              "documentation": {
+                "identifier": "save",
+                "newPage": false,
+                "searchKey": "awskms.save",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func save(t testing.TB, rec *recorder.Recorder)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc save(t testing.TB, rec *recorder.Recorder)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/awskms#readEnvFallback",
+              "documentation": {
+                "identifier": "readEnvFallback",
+                "newPage": false,
+                "searchKey": "awskms.readEnvFallback",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readEnvFallback(key, fallback string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readEnvFallback(key, fallback string) string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

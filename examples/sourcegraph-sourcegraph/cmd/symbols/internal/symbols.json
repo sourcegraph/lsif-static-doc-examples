@@ -1,0 +1,1014 @@
+{
+  "pathID": "/cmd/symbols/internal/symbols",
+  "documentation": {
+    "identifier": "symbols",
+    "newPage": true,
+    "searchKey": "cmd/symbols/internal/symbols",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package symbols"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package symbols implements the symbol search service. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/symbols/internal/symbols#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#debugLogs",
+              "documentation": {
+                "identifier": "debugLogs",
+                "newPage": false,
+                "searchKey": "symbols.debugLogs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const debugLogs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst debugLogs = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#maxFileSize",
+              "documentation": {
+                "identifier": "maxFileSize",
+                "newPage": false,
+                "searchKey": "symbols.maxFileSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxFileSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxFileSize = 1 << 19 // 512KB\n\n```\n\nmaxFileSize is the limit on file size in bytes. Only files smaller than this are processed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#symbolsDBVersion",
+              "documentation": {
+                "identifier": "symbolsDBVersion",
+                "newPage": false,
+                "searchKey": "symbols.symbolsDBVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const symbolsDBVersion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst symbolsDBVersion = 3\n```\n\nThe version of the symbols database schema. This is included in the database filenames to prevent a newer version of the symbols service from attempting to read from a database created by an older (and likely incompatible) symbols service. Increment this when you change the database schema. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/symbols/internal/symbols#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#logErrors",
+              "documentation": {
+                "identifier": "logErrors",
+                "newPage": false,
+                "searchKey": "symbols.logErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var logErrors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar logErrors = os.Getenv(\"DEPLOY_TYPE\") == \"dev\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#ctagsCommand",
+              "documentation": {
+                "identifier": "ctagsCommand",
+                "newPage": false,
+                "searchKey": "symbols.ctagsCommand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ctagsCommand"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ctagsCommand = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#rawPatternLengthLimit",
+              "documentation": {
+                "identifier": "rawPatternLengthLimit",
+                "newPage": false,
+                "searchKey": "symbols.rawPatternLengthLimit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rawPatternLengthLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rawPatternLengthLimit = ...\n```\n\nIncreasing this value may increase the size of the symbols cache, but will also stop long lines containing symbols from being highlighted improperly. See [https://github.com/sourcegraph/sourcegraph/issues/7668](https://github.com/sourcegraph/sourcegraph/issues/7668). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#fetching",
+              "documentation": {
+                "identifier": "fetching",
+                "newPage": false,
+                "searchKey": "symbols.fetching",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fetching"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fetching = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#fetchQueueSize",
+              "documentation": {
+                "identifier": "fetchQueueSize",
+                "newPage": false,
+                "searchKey": "symbols.fetchQueueSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fetchQueueSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fetchQueueSize = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#fetchFailed",
+              "documentation": {
+                "identifier": "fetchFailed",
+                "newPage": false,
+                "searchKey": "symbols.fetchFailed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fetchFailed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fetchFailed = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#parsing",
+              "documentation": {
+                "identifier": "parsing",
+                "newPage": false,
+                "searchKey": "symbols.parsing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parsing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parsing = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#parseQueueSize",
+              "documentation": {
+                "identifier": "parseQueueSize",
+                "newPage": false,
+                "searchKey": "symbols.parseQueueSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseQueueSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseQueueSize = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#parseQueueTimeouts",
+              "documentation": {
+                "identifier": "parseQueueTimeouts",
+                "newPage": false,
+                "searchKey": "symbols.parseQueueTimeouts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseQueueTimeouts"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseQueueTimeouts = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#parseFailed",
+              "documentation": {
+                "identifier": "parseFailed",
+                "newPage": false,
+                "searchKey": "symbols.parseFailed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseFailed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseFailed = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#cacheSizeBytes",
+              "documentation": {
+                "identifier": "cacheSizeBytes",
+                "newPage": false,
+                "searchKey": "symbols.cacheSizeBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cacheSizeBytes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cacheSizeBytes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#evictions",
+              "documentation": {
+                "identifier": "evictions",
+                "newPage": false,
+                "searchKey": "symbols.evictions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var evictions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar evictions = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/symbols/internal/symbols#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#parseRequest",
+              "documentation": {
+                "identifier": "parseRequest",
+                "newPage": false,
+                "searchKey": "symbols.parseRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type parseRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype parseRequest struct {\n\tpath string\n\tdata []byte\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#symbolInDB",
+              "documentation": {
+                "identifier": "symbolInDB",
+                "newPage": false,
+                "searchKey": "symbols.symbolInDB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type symbolInDB struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype symbolInDB struct {\n\tName          string\n\tNameLowercase string // derived from `Name`\n\tPath          string\n\tPathLowercase string // derived from `Path`\n\tLine          int\n\tKind          string\n\tLanguage      string\n\tParent        string\n\tParentKind    string\n\tSignature     string\n\tPattern       string\n\n\tFileLimited bool\n}\n```\n\nsymbolInDB is the same as `protocol.Symbol`, but with two additional columns: namelowercase and pathlowercase, which enable indexed case insensitive queries. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#symbolToSymbolInDB",
+                    "documentation": {
+                      "identifier": "symbolToSymbolInDB",
+                      "newPage": false,
+                      "searchKey": "symbols.symbolToSymbolInDB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func symbolToSymbolInDB(symbol result.Symbol) symbolInDB"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc symbolToSymbolInDB(symbol result.Symbol) symbolInDB\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#Service",
+              "documentation": {
+                "identifier": "Service",
+                "newPage": false,
+                "searchKey": "symbols.Service",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Service struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Service struct {\n\t// FetchTar returns an io.ReadCloser to a tar archive of a repository at the specified Git\n\t// remote URL and commit ID. If the error implements \"BadRequest() bool\", it will be used to\n\t// determine if the error is a bad request (eg invalid repo).\n\tFetchTar func(context.Context, api.RepoName, api.CommitID) (io.ReadCloser, error)\n\n\t// MaxConcurrentFetchTar is the maximum number of concurrent calls allowed\n\t// to FetchTar. It defaults to 15.\n\tMaxConcurrentFetchTar int\n\n\tNewParser func() (ctags.Parser, error)\n\n\t// NumParserProcesses is the maximum number of ctags parser child processes to run.\n\tNumParserProcesses int\n\n\t// Path is the directory in which to store the cache.\n\tPath string\n\n\t// MaxCacheSizeBytes is the maximum size of the cache in bytes. Note:\n\t// We can temporarily be larger than MaxCacheSizeBytes. When we go\n\t// over MaxCacheSizeBytes we trigger delete files until we get below\n\t// MaxCacheSizeBytes.\n\tMaxCacheSizeBytes int64\n\n\t// cache is the disk backed cache.\n\tcache *diskcache.Store\n\n\t// fetchSem is a semaphore to limit concurrent calls to FetchTar. The\n\t// semaphore size is controlled by MaxConcurrentFetchTar\n\tfetchSem chan int\n\n\t// pool of ctags parser child processes\n\tparsers chan ctags.Parser\n}\n```\n\nService is the symbols service. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.fetchRepositoryArchive",
+                    "documentation": {
+                      "identifier": "Service.fetchRepositoryArchive",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.fetchRepositoryArchive",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) fetchRepositoryArchive(ctx context.Context, repo api.RepoName, commitID api.CommitID) (<-chan parseRequest, <-chan error, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) fetchRepositoryArchive(ctx context.Context, repo api.RepoName, commitID api.CommitID) (<-chan parseRequest, <-chan error, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.startParsers",
+                    "documentation": {
+                      "identifier": "Service.startParsers",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.startParsers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) startParsers() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) startParsers() error\n```\n\nstartParsers starts the parser process pool. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.parseUncached",
+                    "documentation": {
+                      "identifier": "Service.parseUncached",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.parseUncached",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) parseUncached(ctx context.Context, repo api.RepoName, commitID api.CommitID, callback func(symbol result.Symbol) error) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) parseUncached(ctx context.Context, repo api.RepoName, commitID api.CommitID, callback func(symbol result.Symbol) error) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.parse",
+                    "documentation": {
+                      "identifier": "Service.parse",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.parse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) parse(ctx context.Context, req parseRequest) (entries []*ctags.Entry, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) parse(ctx context.Context, req parseRequest) (entries []*ctags.Entry, err error)\n```\n\nparse gets a parser from the pool and uses it to satisfy the parse request. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.handleSearch",
+                    "documentation": {
+                      "identifier": "Service.handleSearch",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.handleSearch",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) handleSearch(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) handleSearch(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.search",
+                    "documentation": {
+                      "identifier": "Service.search",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.search",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) search(ctx context.Context, args protocol.SearchArgs) (*result.Symbols, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) search(ctx context.Context, args protocol.SearchArgs) (*result.Symbols, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.getDBFile",
+                    "documentation": {
+                      "identifier": "Service.getDBFile",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.getDBFile",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) getDBFile(ctx context.Context, args protocol.SearchArgs) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) getDBFile(ctx context.Context, args protocol.SearchArgs) (string, error)\n```\n\ngetDBFile returns the path to the sqlite3 database for the repo@commit specified in `args`. If the database doesn't already exist in the disk cache, it will create a new one and write all the symbols into it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.writeAllSymbolsToNewDB",
+                    "documentation": {
+                      "identifier": "Service.writeAllSymbolsToNewDB",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.writeAllSymbolsToNewDB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) writeAllSymbolsToNewDB(ctx context.Context, dbFile string, repoName api.RepoName, commitID api.CommitID) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) writeAllSymbolsToNewDB(ctx context.Context, dbFile string, repoName api.RepoName, commitID api.CommitID) error\n```\n\nwriteAllSymbolsToNewDB fetches the repo@commit from gitserver, parses all the symbols, and writes them to the blank database file `dbFile`. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.Start",
+                    "documentation": {
+                      "identifier": "Service.Start",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) Start() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) Start() error\n```\n\nStart must be called before any requests are handled. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.Handler",
+                    "documentation": {
+                      "identifier": "Service.Handler",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.Handler",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) Handler() http.Handler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) Handler() http.Handler\n```\n\nHandler returns the http.Handler that should be used to serve requests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.handleHealthCheck",
+                    "documentation": {
+                      "identifier": "Service.handleHealthCheck",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.handleHealthCheck",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) handleHealthCheck(w http.ResponseWriter, r *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) handleHealthCheck(w http.ResponseWriter, r *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#Service.watchAndEvict",
+                    "documentation": {
+                      "identifier": "Service.watchAndEvict",
+                      "newPage": false,
+                      "searchKey": "symbols.Service.watchAndEvict",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) watchAndEvict()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) watchAndEvict()\n```\n\nwatchAndEvict is a loop which periodically checks the size of the cache and evicts/deletes items if the store gets too large. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#mockParser",
+              "documentation": {
+                "identifier": "mockParser",
+                "newPage": false,
+                "searchKey": "symbols.mockParser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockParser []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockParser []string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#mockParser.Parse",
+                    "documentation": {
+                      "identifier": "mockParser.Parse",
+                      "newPage": false,
+                      "searchKey": "symbols.mockParser.Parse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m mockParser) Parse(name string, content []byte) ([]*ctags.Entry, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m mockParser) Parse(name string, content []byte) ([]*ctags.Entry, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/symbols/internal/symbols#mockParser.Close",
+                    "documentation": {
+                      "identifier": "mockParser.Close",
+                      "newPage": false,
+                      "searchKey": "symbols.mockParser.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mockParser) Close()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mockParser) Close()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/symbols/internal/symbols#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#NewParser",
+              "documentation": {
+                "identifier": "NewParser",
+                "newPage": false,
+                "searchKey": "symbols.NewParser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewParser() (ctags.Parser, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewParser() (ctags.Parser, error)\n```\n\nNewParser runs the ctags command from the CTAGS_COMMAND environment variable, falling back to `universal-ctags`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#entryToSymbol",
+              "documentation": {
+                "identifier": "entryToSymbol",
+                "newPage": false,
+                "searchKey": "symbols.entryToSymbol",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func entryToSymbol(e *ctags.Entry) result.Symbol"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc entryToSymbol(e *ctags.Entry) result.Symbol\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#isLiteralEquality",
+              "documentation": {
+                "identifier": "isLiteralEquality",
+                "newPage": false,
+                "searchKey": "symbols.isLiteralEquality",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isLiteralEquality(expr string) (ok bool, lit string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isLiteralEquality(expr string) (ok bool, lit string, err error)\n```\n\nisLiteralEquality checks if the given regex matches literal strings exactly. Returns whether or not the regex is exact, along with the literal string if so. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#filterSymbols",
+              "documentation": {
+                "identifier": "filterSymbols",
+                "newPage": false,
+                "searchKey": "symbols.filterSymbols",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterSymbols(ctx context.Context, db *sqlx.DB, args protocol.SearchArgs) (res []result.Symbol, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterSymbols(ctx context.Context, db *sqlx.DB, args protocol.SearchArgs) (res []result.Symbol, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#symbolInDBToSymbol",
+              "documentation": {
+                "identifier": "symbolInDBToSymbol",
+                "newPage": false,
+                "searchKey": "symbols.symbolInDBToSymbol",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func symbolInDBToSymbol(symbolInDB symbolInDB) result.Symbol"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc symbolInDBToSymbol(symbolInDB symbolInDB) result.Symbol\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#TestParser",
+              "documentation": {
+                "identifier": "TestParser",
+                "newPage": false,
+                "searchKey": "symbols.TestParser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParser(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParser(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#BenchmarkSearch",
+              "documentation": {
+                "identifier": "BenchmarkSearch",
+                "newPage": false,
+                "searchKey": "symbols.BenchmarkSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearch(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearch(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "symbols.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#TestIsLiteralEquality",
+              "documentation": {
+                "identifier": "TestIsLiteralEquality",
+                "newPage": false,
+                "searchKey": "symbols.TestIsLiteralEquality",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsLiteralEquality(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsLiteralEquality(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#TestService",
+              "documentation": {
+                "identifier": "TestService",
+                "newPage": false,
+                "searchKey": "symbols.TestService",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestService(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestService(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/symbols#createTar",
+              "documentation": {
+                "identifier": "createTar",
+                "newPage": false,
+                "searchKey": "symbols.createTar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createTar(files map[string]string) (io.ReadCloser, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createTar(files map[string]string) (io.ReadCloser, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

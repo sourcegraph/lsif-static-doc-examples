@@ -1,0 +1,3343 @@
+{
+  "pathID": "/enterprise/cmd/executor/internal/worker",
+  "documentation": {
+    "identifier": "worker",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/executor/internal/worker",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package worker"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/executor/internal/worker#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#ErrJobAlreadyExists",
+              "documentation": {
+                "identifier": "ErrJobAlreadyExists",
+                "newPage": false,
+                "searchKey": "worker.ErrJobAlreadyExists",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrJobAlreadyExists"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrJobAlreadyExists = errors.New(\"job already exists\")\n```\n\nErrJobAlreadyExists occurs when a duplicate job identifier is dequeued. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#scriptPreamble",
+              "documentation": {
+                "identifier": "scriptPreamble",
+                "newPage": false,
+                "searchKey": "worker.scriptPreamble",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var scriptPreamble"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar scriptPreamble = `\nset -x\n`\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#makeTempDir",
+              "documentation": {
+                "identifier": "makeTempDir",
+                "newPage": false,
+                "searchKey": "worker.makeTempDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var makeTempDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar makeTempDir = makeTemporaryDirectory\n```\n\nmakeTempDir defaults to makeTemporaryDirectory and can be replaced for testing with determinstic workspace/scripts directories. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/executor/internal/worker#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#handler",
+              "documentation": {
+                "identifier": "handler",
+                "newPage": false,
+                "searchKey": "worker.handler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type handler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype handler struct {\n\tidSet         *IDSet\n\toptions       Options\n\toperations    *command.Operations\n\trunnerFactory func(dir string, logger *command.Logger, options command.Options, operations *command.Operations) command.Runner\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#handler.Handle",
+                    "documentation": {
+                      "identifier": "handler.Handle",
+                      "newPage": false,
+                      "searchKey": "worker.handler.Handle",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) Handle(ctx context.Context, s workerutil.Store, record workerutil.Record) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) Handle(ctx context.Context, s workerutil.Store, record workerutil.Record) (err error)\n```\n\nHandle clones the target code into a temporary directory, invokes the target indexer in a fresh docker container, and uploads the results to the external frontend API. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#handler.prepareWorkspace",
+                    "documentation": {
+                      "identifier": "handler.prepareWorkspace",
+                      "newPage": false,
+                      "searchKey": "worker.handler.prepareWorkspace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) prepareWorkspace(ctx context.Context, commandRunner command.Runner, repositoryName, commit string) (_ string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) prepareWorkspace(ctx context.Context, commandRunner command.Runner, repositoryName, commit string) (_ string, err error)\n```\n\nprepareWorkspace creates and returns a temporary director in which acts the workspace while processing a single job. It is up to the caller to ensure that this directory is removed after the job has finished processing. If a repository name is supplied, then that repository will be cloned (through the frontend API) into the workspace. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#IDSet",
+              "documentation": {
+                "identifier": "IDSet",
+                "newPage": false,
+                "searchKey": "worker.IDSet",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IDSet struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IDSet struct {\n\tsync.RWMutex\n\tids map[int]context.CancelFunc\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#newIDSet",
+                    "documentation": {
+                      "identifier": "newIDSet",
+                      "newPage": false,
+                      "searchKey": "worker.newIDSet",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newIDSet() *IDSet"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newIDSet() *IDSet\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#IDSet.Add",
+                    "documentation": {
+                      "identifier": "IDSet.Add",
+                      "newPage": false,
+                      "searchKey": "worker.IDSet.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *IDSet) Add(id int, cancel context.CancelFunc) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *IDSet) Add(id int, cancel context.CancelFunc) bool\n```\n\nAdd associates the given identifier with the given cancel function in the set. If the identifier was already present then the set is unchanged. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#IDSet.Remove",
+                    "documentation": {
+                      "identifier": "IDSet.Remove",
+                      "newPage": false,
+                      "searchKey": "worker.IDSet.Remove",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *IDSet) Remove(id int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *IDSet) Remove(id int)\n```\n\nRemove invokes the cancel function associated with the given identifier in the setand removes the identifier from the set. If the identifier is not a member of the set, then no action is performed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#IDSet.Slice",
+                    "documentation": {
+                      "identifier": "IDSet.Slice",
+                      "newPage": false,
+                      "searchKey": "worker.IDSet.Slice",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *IDSet) Slice() []int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *IDSet) Slice() []int\n```\n\nSlice returns an ordered copy of the identifiers composing the set. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#storeShim",
+              "documentation": {
+                "identifier": "storeShim",
+                "newPage": false,
+                "searchKey": "worker.storeShim",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type storeShim struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype storeShim struct {\n\tqueueName  string\n\tqueueStore QueueStore\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#storeShim.QueuedCount",
+                    "documentation": {
+                      "identifier": "storeShim.QueuedCount",
+                      "newPage": false,
+                      "searchKey": "worker.storeShim.QueuedCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *storeShim) QueuedCount(ctx context.Context, extraArguments interface{}) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#storeShim.Dequeue",
+                    "documentation": {
+                      "identifier": "storeShim.Dequeue",
+                      "newPage": false,
+                      "searchKey": "worker.storeShim.Dequeue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *storeShim) Dequeue(ctx context.Context, extraArguments interface{}) (workerutil.Record, workerutil.Store, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *storeShim) Dequeue(ctx context.Context, extraArguments interface{}) (workerutil.Record, workerutil.Store, bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#storeShim.AddExecutionLogEntry",
+                    "documentation": {
+                      "identifier": "storeShim.AddExecutionLogEntry",
+                      "newPage": false,
+                      "searchKey": "worker.storeShim.AddExecutionLogEntry",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *storeShim) AddExecutionLogEntry(ctx context.Context, id int, entry workerutil.ExecutionLogEntry) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *storeShim) AddExecutionLogEntry(ctx context.Context, id int, entry workerutil.ExecutionLogEntry) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#storeShim.MarkComplete",
+                    "documentation": {
+                      "identifier": "storeShim.MarkComplete",
+                      "newPage": false,
+                      "searchKey": "worker.storeShim.MarkComplete",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *storeShim) MarkComplete(ctx context.Context, id int) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *storeShim) MarkComplete(ctx context.Context, id int) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#storeShim.MarkErrored",
+                    "documentation": {
+                      "identifier": "storeShim.MarkErrored",
+                      "newPage": false,
+                      "searchKey": "worker.storeShim.MarkErrored",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *storeShim) MarkErrored(ctx context.Context, id int, errorMessage string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *storeShim) MarkErrored(ctx context.Context, id int, errorMessage string) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#storeShim.MarkFailed",
+                    "documentation": {
+                      "identifier": "storeShim.MarkFailed",
+                      "newPage": false,
+                      "searchKey": "worker.storeShim.MarkFailed",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *storeShim) MarkFailed(ctx context.Context, id int, errorMessage string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *storeShim) MarkFailed(ctx context.Context, id int, errorMessage string) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#storeShim.Done",
+                    "documentation": {
+                      "identifier": "storeShim.Done",
+                      "newPage": false,
+                      "searchKey": "worker.storeShim.Done",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *storeShim) Done(err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *storeShim) Done(err error) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#QueueStore",
+              "documentation": {
+                "identifier": "QueueStore",
+                "newPage": false,
+                "searchKey": "worker.QueueStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type QueueStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype QueueStore interface {\n\tDequeue(ctx context.Context, queueName string, payload *executor.Job) (bool, error)\n\n\tAddExecutionLogEntry(ctx context.Context, queueName string, jobID int, entry workerutil.ExecutionLogEntry) error\n\tMarkComplete(ctx context.Context, queueName string, jobID int) error\n\tMarkErrored(ctx context.Context, queueName string, jobID int, errorMessage string) error\n\tMarkFailed(ctx context.Context, queueName string, jobID int, errorMessage string) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "worker.Options",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\t// QueueName is the name of the queue to process work from. Having this configurable\n\t// allows us to have multiple worker pools with different resource requirements and\n\t// horizontal scaling factors while still uniformly processing events.\n\tQueueName string\n\n\t// HeartbeatInterval denotes the time between heartbeat requests to the queue API.\n\tHeartbeatInterval time.Duration\n\n\t// GitServicePath is the path to the internal git service API proxy in the frontend.\n\t// This path should contain the endpoints info/refs and git-upload-pack.\n\tGitServicePath string\n\n\t// RedactedValues is a map from strings to replace to their replacement in the command\n\t// output before sending it to the underlying job store. This should contain all worker\n\t// environment variables, as well as secret values passed along with the dequeued job\n\t// payload, which may be sensitive (e.g. shared API tokens, URLs with credentials).\n\tRedactedValues map[string]string\n\n\t// WorkerOptions configures the worker behavior.\n\tWorkerOptions workerutil.WorkerOptions\n\n\t// ClientOptions configures the client that interacts with the queue API.\n\tClientOptions apiclient.Options\n\n\t// FirecrackerOptions configures the behavior of Firecracker virtual machine creation.\n\tFirecrackerOptions command.FirecrackerOptions\n\n\t// ResourceOptions configures the resource limits of docker container and Firecracker\n\t// virtual machines running on the executor.\n\tResourceOptions command.ResourceOptions\n\n\t// MaximumRuntimePerJob is the maximum wall time that can be spent on a single job.\n\tMaximumRuntimePerJob time.Duration\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#MockRunner",
+              "documentation": {
+                "identifier": "MockRunner",
+                "newPage": false,
+                "searchKey": "worker.MockRunner",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockRunner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockRunner struct {\n\t// RunFunc is an instance of a mock function object controlling the\n\t// behavior of the method Run.\n\tRunFunc *RunnerRunFunc\n\t// SetupFunc is an instance of a mock function object controlling the\n\t// behavior of the method Setup.\n\tSetupFunc *RunnerSetupFunc\n\t// TeardownFunc is an instance of a mock function object controlling the\n\t// behavior of the method Teardown.\n\tTeardownFunc *RunnerTeardownFunc\n}\n```\n\nMockRunner is a mock implementation of the Runner interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/executor/internal/command) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#NewMockRunner",
+                    "documentation": {
+                      "identifier": "NewMockRunner",
+                      "newPage": false,
+                      "searchKey": "worker.NewMockRunner",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockRunner() *MockRunner"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockRunner() *MockRunner\n```\n\nNewMockRunner creates a new mock of the Runner interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#NewMockRunnerFrom",
+                    "documentation": {
+                      "identifier": "NewMockRunnerFrom",
+                      "newPage": false,
+                      "searchKey": "worker.NewMockRunnerFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockRunnerFrom(i command.Runner) *MockRunner"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockRunnerFrom(i command.Runner) *MockRunner\n```\n\nNewMockRunnerFrom creates a new mock of the MockRunner interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockRunner.Run",
+                    "documentation": {
+                      "identifier": "MockRunner.Run",
+                      "newPage": false,
+                      "searchKey": "worker.MockRunner.Run",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockRunner) Run(v0 context.Context, v1 command.CommandSpec) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockRunner) Run(v0 context.Context, v1 command.CommandSpec) error\n```\n\nRun delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockRunner.Setup",
+                    "documentation": {
+                      "identifier": "MockRunner.Setup",
+                      "newPage": false,
+                      "searchKey": "worker.MockRunner.Setup",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockRunner) Setup(v0 context.Context, v1 []string, v2 []string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockRunner) Setup(v0 context.Context, v1 []string, v2 []string) error\n```\n\nSetup delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockRunner.Teardown",
+                    "documentation": {
+                      "identifier": "MockRunner.Teardown",
+                      "newPage": false,
+                      "searchKey": "worker.MockRunner.Teardown",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockRunner) Teardown(v0 context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockRunner) Teardown(v0 context.Context) error\n```\n\nTeardown delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFunc",
+              "documentation": {
+                "identifier": "RunnerRunFunc",
+                "newPage": false,
+                "searchKey": "worker.RunnerRunFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RunnerRunFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RunnerRunFunc struct {\n\tdefaultHook func(context.Context, command.CommandSpec) error\n\thooks       []func(context.Context, command.CommandSpec) error\n\thistory     []RunnerRunFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nRunnerRunFunc describes the behavior when the Run method of the parent MockRunner instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "RunnerRunFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerRunFunc) SetDefaultHook(hook func(context.Context, command.CommandSpec) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerRunFunc) SetDefaultHook(hook func(context.Context, command.CommandSpec) error)\n```\n\nSetDefaultHook sets function that is called when the Run method of the parent MockRunner instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFunc.PushHook",
+                    "documentation": {
+                      "identifier": "RunnerRunFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerRunFunc) PushHook(hook func(context.Context, command.CommandSpec) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerRunFunc) PushHook(hook func(context.Context, command.CommandSpec) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Run method of the parent MockRunner instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "RunnerRunFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerRunFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerRunFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "RunnerRunFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerRunFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerRunFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFunc.nextHook",
+                    "documentation": {
+                      "identifier": "RunnerRunFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerRunFunc) nextHook() func(context.Context, command.CommandSpec) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerRunFunc) nextHook() func(context.Context, command.CommandSpec) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFunc.appendCall",
+                    "documentation": {
+                      "identifier": "RunnerRunFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerRunFunc) appendCall(r0 RunnerRunFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerRunFunc) appendCall(r0 RunnerRunFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFunc.History",
+                    "documentation": {
+                      "identifier": "RunnerRunFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerRunFunc) History() []RunnerRunFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerRunFunc) History() []RunnerRunFuncCall\n```\n\nHistory returns a sequence of RunnerRunFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFuncCall",
+              "documentation": {
+                "identifier": "RunnerRunFuncCall",
+                "newPage": false,
+                "searchKey": "worker.RunnerRunFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RunnerRunFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RunnerRunFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 command.CommandSpec\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nRunnerRunFuncCall is an object that describes an invocation of method Run on an instance of MockRunner. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFuncCall.Args",
+                    "documentation": {
+                      "identifier": "RunnerRunFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RunnerRunFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RunnerRunFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerRunFuncCall.Results",
+                    "documentation": {
+                      "identifier": "RunnerRunFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerRunFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RunnerRunFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RunnerRunFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFunc",
+              "documentation": {
+                "identifier": "RunnerSetupFunc",
+                "newPage": false,
+                "searchKey": "worker.RunnerSetupFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RunnerSetupFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RunnerSetupFunc struct {\n\tdefaultHook func(context.Context, []string, []string) error\n\thooks       []func(context.Context, []string, []string) error\n\thistory     []RunnerSetupFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nRunnerSetupFunc describes the behavior when the Setup method of the parent MockRunner instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "RunnerSetupFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerSetupFunc) SetDefaultHook(hook func(context.Context, []string, []string) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerSetupFunc) SetDefaultHook(hook func(context.Context, []string, []string) error)\n```\n\nSetDefaultHook sets function that is called when the Setup method of the parent MockRunner instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFunc.PushHook",
+                    "documentation": {
+                      "identifier": "RunnerSetupFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerSetupFunc) PushHook(hook func(context.Context, []string, []string) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerSetupFunc) PushHook(hook func(context.Context, []string, []string) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Setup method of the parent MockRunner instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "RunnerSetupFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerSetupFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerSetupFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "RunnerSetupFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerSetupFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerSetupFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFunc.nextHook",
+                    "documentation": {
+                      "identifier": "RunnerSetupFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerSetupFunc) nextHook() func(context.Context, []string, []string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerSetupFunc) nextHook() func(context.Context, []string, []string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFunc.appendCall",
+                    "documentation": {
+                      "identifier": "RunnerSetupFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerSetupFunc) appendCall(r0 RunnerSetupFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerSetupFunc) appendCall(r0 RunnerSetupFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFunc.History",
+                    "documentation": {
+                      "identifier": "RunnerSetupFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerSetupFunc) History() []RunnerSetupFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerSetupFunc) History() []RunnerSetupFuncCall\n```\n\nHistory returns a sequence of RunnerSetupFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFuncCall",
+              "documentation": {
+                "identifier": "RunnerSetupFuncCall",
+                "newPage": false,
+                "searchKey": "worker.RunnerSetupFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RunnerSetupFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RunnerSetupFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 []string\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 []string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nRunnerSetupFuncCall is an object that describes an invocation of method Setup on an instance of MockRunner. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFuncCall.Args",
+                    "documentation": {
+                      "identifier": "RunnerSetupFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RunnerSetupFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RunnerSetupFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerSetupFuncCall.Results",
+                    "documentation": {
+                      "identifier": "RunnerSetupFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerSetupFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RunnerSetupFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RunnerSetupFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFunc",
+              "documentation": {
+                "identifier": "RunnerTeardownFunc",
+                "newPage": false,
+                "searchKey": "worker.RunnerTeardownFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RunnerTeardownFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RunnerTeardownFunc struct {\n\tdefaultHook func(context.Context) error\n\thooks       []func(context.Context) error\n\thistory     []RunnerTeardownFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nRunnerTeardownFunc describes the behavior when the Teardown method of the parent MockRunner instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerTeardownFunc) SetDefaultHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerTeardownFunc) SetDefaultHook(hook func(context.Context) error)\n```\n\nSetDefaultHook sets function that is called when the Teardown method of the parent MockRunner instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFunc.PushHook",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerTeardownFunc) PushHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerTeardownFunc) PushHook(hook func(context.Context) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Teardown method of the parent MockRunner instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerTeardownFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerTeardownFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerTeardownFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerTeardownFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFunc.nextHook",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerTeardownFunc) nextHook() func(context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerTeardownFunc) nextHook() func(context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFunc.appendCall",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerTeardownFunc) appendCall(r0 RunnerTeardownFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerTeardownFunc) appendCall(r0 RunnerTeardownFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFunc.History",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RunnerTeardownFunc) History() []RunnerTeardownFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RunnerTeardownFunc) History() []RunnerTeardownFuncCall\n```\n\nHistory returns a sequence of RunnerTeardownFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFuncCall",
+              "documentation": {
+                "identifier": "RunnerTeardownFuncCall",
+                "newPage": false,
+                "searchKey": "worker.RunnerTeardownFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RunnerTeardownFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RunnerTeardownFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nRunnerTeardownFuncCall is an object that describes an invocation of method Teardown on an instance of MockRunner. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFuncCall.Args",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RunnerTeardownFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RunnerTeardownFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#RunnerTeardownFuncCall.Results",
+                    "documentation": {
+                      "identifier": "RunnerTeardownFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.RunnerTeardownFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RunnerTeardownFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RunnerTeardownFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#MockStore",
+              "documentation": {
+                "identifier": "MockStore",
+                "newPage": false,
+                "searchKey": "worker.MockStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockStore struct {\n\t// AddExecutionLogEntryFunc is an instance of a mock function object\n\t// controlling the behavior of the method AddExecutionLogEntry.\n\tAddExecutionLogEntryFunc *StoreAddExecutionLogEntryFunc\n\t// DequeueFunc is an instance of a mock function object controlling the\n\t// behavior of the method Dequeue.\n\tDequeueFunc *StoreDequeueFunc\n\t// DoneFunc is an instance of a mock function object controlling the\n\t// behavior of the method Done.\n\tDoneFunc *StoreDoneFunc\n\t// MarkCompleteFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkComplete.\n\tMarkCompleteFunc *StoreMarkCompleteFunc\n\t// MarkErroredFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkErrored.\n\tMarkErroredFunc *StoreMarkErroredFunc\n\t// MarkFailedFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkFailed.\n\tMarkFailedFunc *StoreMarkFailedFunc\n\t// QueuedCountFunc is an instance of a mock function object controlling\n\t// the behavior of the method QueuedCount.\n\tQueuedCountFunc *StoreQueuedCountFunc\n}\n```\n\nMockStore is a mock implementation of the Store interface (from the package github.com/sourcegraph/sourcegraph/internal/workerutil) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#NewMockStore",
+                    "documentation": {
+                      "identifier": "NewMockStore",
+                      "newPage": false,
+                      "searchKey": "worker.NewMockStore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockStore() *MockStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockStore() *MockStore\n```\n\nNewMockStore creates a new mock of the Store interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#NewMockStoreFrom",
+                    "documentation": {
+                      "identifier": "NewMockStoreFrom",
+                      "newPage": false,
+                      "searchKey": "worker.NewMockStoreFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockStoreFrom(i workerutil.Store) *MockStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockStoreFrom(i workerutil.Store) *MockStore\n```\n\nNewMockStoreFrom creates a new mock of the MockStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockStore.AddExecutionLogEntry",
+                    "documentation": {
+                      "identifier": "MockStore.AddExecutionLogEntry",
+                      "newPage": false,
+                      "searchKey": "worker.MockStore.AddExecutionLogEntry",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) AddExecutionLogEntry(v0 context.Context, v1 int, v2 workerutil.ExecutionLogEntry) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) AddExecutionLogEntry(v0 context.Context, v1 int, v2 workerutil.ExecutionLogEntry) error\n```\n\nAddExecutionLogEntry delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockStore.Dequeue",
+                    "documentation": {
+                      "identifier": "MockStore.Dequeue",
+                      "newPage": false,
+                      "searchKey": "worker.MockStore.Dequeue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Dequeue(v0 context.Context, v1 interface{}) (workerutil.Record, workerutil.Store, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Dequeue(v0 context.Context, v1 interface{}) (workerutil.Record, workerutil.Store, bool, error)\n```\n\nDequeue delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockStore.Done",
+                    "documentation": {
+                      "identifier": "MockStore.Done",
+                      "newPage": false,
+                      "searchKey": "worker.MockStore.Done",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Done(v0 error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Done(v0 error) error\n```\n\nDone delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockStore.MarkComplete",
+                    "documentation": {
+                      "identifier": "MockStore.MarkComplete",
+                      "newPage": false,
+                      "searchKey": "worker.MockStore.MarkComplete",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) MarkComplete(v0 context.Context, v1 int) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) MarkComplete(v0 context.Context, v1 int) (bool, error)\n```\n\nMarkComplete delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockStore.MarkErrored",
+                    "documentation": {
+                      "identifier": "MockStore.MarkErrored",
+                      "newPage": false,
+                      "searchKey": "worker.MockStore.MarkErrored",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) MarkErrored(v0 context.Context, v1 int, v2 string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) MarkErrored(v0 context.Context, v1 int, v2 string) (bool, error)\n```\n\nMarkErrored delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockStore.MarkFailed",
+                    "documentation": {
+                      "identifier": "MockStore.MarkFailed",
+                      "newPage": false,
+                      "searchKey": "worker.MockStore.MarkFailed",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) MarkFailed(v0 context.Context, v1 int, v2 string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) MarkFailed(v0 context.Context, v1 int, v2 string) (bool, error)\n```\n\nMarkFailed delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#MockStore.QueuedCount",
+                    "documentation": {
+                      "identifier": "MockStore.QueuedCount",
+                      "newPage": false,
+                      "searchKey": "worker.MockStore.QueuedCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) QueuedCount(v0 context.Context, v1 interface{}) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) QueuedCount(v0 context.Context, v1 interface{}) (int, error)\n```\n\nQueuedCount delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFunc",
+              "documentation": {
+                "identifier": "StoreAddExecutionLogEntryFunc",
+                "newPage": false,
+                "searchKey": "worker.StoreAddExecutionLogEntryFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreAddExecutionLogEntryFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreAddExecutionLogEntryFunc struct {\n\tdefaultHook func(context.Context, int, workerutil.ExecutionLogEntry) error\n\thooks       []func(context.Context, int, workerutil.ExecutionLogEntry) error\n\thistory     []StoreAddExecutionLogEntryFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreAddExecutionLogEntryFunc describes the behavior when the AddExecutionLogEntry method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)\n```\n\nSetDefaultHook sets function that is called when the AddExecutionLogEntry method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) PushHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) PushHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the AddExecutionLogEntry method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, workerutil.ExecutionLogEntry) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, workerutil.ExecutionLogEntry) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFunc.History",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall\n```\n\nHistory returns a sequence of StoreAddExecutionLogEntryFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFuncCall",
+              "documentation": {
+                "identifier": "StoreAddExecutionLogEntryFuncCall",
+                "newPage": false,
+                "searchKey": "worker.StoreAddExecutionLogEntryFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreAddExecutionLogEntryFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreAddExecutionLogEntryFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 workerutil.ExecutionLogEntry\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreAddExecutionLogEntryFuncCall is an object that describes an invocation of method AddExecutionLogEntry on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreAddExecutionLogEntryFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreAddExecutionLogEntryFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreAddExecutionLogEntryFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.StoreAddExecutionLogEntryFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreAddExecutionLogEntryFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreAddExecutionLogEntryFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFunc",
+              "documentation": {
+                "identifier": "StoreDequeueFunc",
+                "newPage": false,
+                "searchKey": "worker.StoreDequeueFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDequeueFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDequeueFunc struct {\n\tdefaultHook func(context.Context, interface{}) (workerutil.Record, workerutil.Store, bool, error)\n\thooks       []func(context.Context, interface{}) (workerutil.Record, workerutil.Store, bool, error)\n\thistory     []StoreDequeueFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreDequeueFunc describes the behavior when the Dequeue method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, interface{}) (workerutil.Record, workerutil.Store, bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, interface{}) (workerutil.Record, workerutil.Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the Dequeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) PushHook(hook func(context.Context, interface{}) (workerutil.Record, workerutil.Store, bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) PushHook(hook func(context.Context, interface{}) (workerutil.Record, workerutil.Store, bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Dequeue method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) SetDefaultReturn(r0 workerutil.Record, r1 workerutil.Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultReturn(r0 workerutil.Record, r1 workerutil.Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) PushReturn(r0 workerutil.Record, r1 workerutil.Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) PushReturn(r0 workerutil.Record, r1 workerutil.Store, r2 bool, r3 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) nextHook() func(context.Context, interface{}) (workerutil.Record, workerutil.Store, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) nextHook() func(context.Context, interface{}) (workerutil.Record, workerutil.Store, bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFunc.History",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) History() []StoreDequeueFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) History() []StoreDequeueFuncCall\n```\n\nHistory returns a sequence of StoreDequeueFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFuncCall",
+              "documentation": {
+                "identifier": "StoreDequeueFuncCall",
+                "newPage": false,
+                "searchKey": "worker.StoreDequeueFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDequeueFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDequeueFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 interface{}\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 workerutil.Record\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 workerutil.Store\n\t// Result2 is the value of the 3rd result returned from this method\n\t// invocation.\n\tResult2 bool\n\t// Result3 is the value of the 4th result returned from this method\n\t// invocation.\n\tResult3 error\n}\n```\n\nStoreDequeueFuncCall is an object that describes an invocation of method Dequeue on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreDequeueFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDequeueFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDequeueFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDequeueFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreDequeueFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDequeueFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDequeueFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDequeueFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFunc",
+              "documentation": {
+                "identifier": "StoreDoneFunc",
+                "newPage": false,
+                "searchKey": "worker.StoreDoneFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDoneFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDoneFunc struct {\n\tdefaultHook func(error) error\n\thooks       []func(error) error\n\thistory     []StoreDoneFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreDoneFunc describes the behavior when the Done method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)\n```\n\nSetDefaultHook sets function that is called when the Done method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) PushHook(hook func(error) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) PushHook(hook func(error) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Done method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) nextHook() func(error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) nextHook() func(error) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFunc.History",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) History() []StoreDoneFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) History() []StoreDoneFuncCall\n```\n\nHistory returns a sequence of StoreDoneFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFuncCall",
+              "documentation": {
+                "identifier": "StoreDoneFuncCall",
+                "newPage": false,
+                "searchKey": "worker.StoreDoneFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDoneFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDoneFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 error\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreDoneFuncCall is an object that describes an invocation of method Done on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreDoneFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDoneFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDoneFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreDoneFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreDoneFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.StoreDoneFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDoneFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDoneFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFunc",
+              "documentation": {
+                "identifier": "StoreMarkCompleteFunc",
+                "newPage": false,
+                "searchKey": "worker.StoreMarkCompleteFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkCompleteFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkCompleteFunc struct {\n\tdefaultHook func(context.Context, int) (bool, error)\n\thooks       []func(context.Context, int) (bool, error)\n\thistory     []StoreMarkCompleteFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreMarkCompleteFunc describes the behavior when the MarkComplete method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkComplete method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) PushHook(hook func(context.Context, int) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) PushHook(hook func(context.Context, int) (bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the MarkComplete method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) PushReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) PushReturn(r0 bool, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFunc.History",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall\n```\n\nHistory returns a sequence of StoreMarkCompleteFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFuncCall",
+              "documentation": {
+                "identifier": "StoreMarkCompleteFuncCall",
+                "newPage": false,
+                "searchKey": "worker.StoreMarkCompleteFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkCompleteFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkCompleteFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 bool\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreMarkCompleteFuncCall is an object that describes an invocation of method MarkComplete on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkCompleteFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkCompleteFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkCompleteFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkCompleteFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkCompleteFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkCompleteFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFunc",
+              "documentation": {
+                "identifier": "StoreMarkErroredFunc",
+                "newPage": false,
+                "searchKey": "worker.StoreMarkErroredFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkErroredFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkErroredFunc struct {\n\tdefaultHook func(context.Context, int, string) (bool, error)\n\thooks       []func(context.Context, int, string) (bool, error)\n\thistory     []StoreMarkErroredFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreMarkErroredFunc describes the behavior when the MarkErrored method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkErrored method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) PushHook(hook func(context.Context, int, string) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) PushHook(hook func(context.Context, int, string) (bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the MarkErrored method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) PushReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) PushReturn(r0 bool, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFunc.History",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall\n```\n\nHistory returns a sequence of StoreMarkErroredFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFuncCall",
+              "documentation": {
+                "identifier": "StoreMarkErroredFuncCall",
+                "newPage": false,
+                "searchKey": "worker.StoreMarkErroredFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkErroredFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkErroredFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 bool\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreMarkErroredFuncCall is an object that describes an invocation of method MarkErrored on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkErroredFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkErroredFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkErroredFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkErroredFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkErroredFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkErroredFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFunc",
+              "documentation": {
+                "identifier": "StoreMarkFailedFunc",
+                "newPage": false,
+                "searchKey": "worker.StoreMarkFailedFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkFailedFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkFailedFunc struct {\n\tdefaultHook func(context.Context, int, string) (bool, error)\n\thooks       []func(context.Context, int, string) (bool, error)\n\thistory     []StoreMarkFailedFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreMarkFailedFunc describes the behavior when the MarkFailed method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkFailed method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) PushHook(hook func(context.Context, int, string) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) PushHook(hook func(context.Context, int, string) (bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the MarkFailed method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) PushReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) PushReturn(r0 bool, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFunc.History",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall\n```\n\nHistory returns a sequence of StoreMarkFailedFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFuncCall",
+              "documentation": {
+                "identifier": "StoreMarkFailedFuncCall",
+                "newPage": false,
+                "searchKey": "worker.StoreMarkFailedFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkFailedFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkFailedFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 bool\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreMarkFailedFuncCall is an object that describes an invocation of method MarkFailed on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkFailedFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkFailedFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreMarkFailedFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.StoreMarkFailedFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkFailedFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkFailedFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFunc",
+              "documentation": {
+                "identifier": "StoreQueuedCountFunc",
+                "newPage": false,
+                "searchKey": "worker.StoreQueuedCountFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreQueuedCountFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreQueuedCountFunc struct {\n\tdefaultHook func(context.Context, interface{}) (int, error)\n\thooks       []func(context.Context, interface{}) (int, error)\n\thistory     []StoreQueuedCountFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreQueuedCountFunc describes the behavior when the QueuedCount method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, interface{}) (int, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, interface{}) (int, error))\n```\n\nSetDefaultHook sets function that is called when the QueuedCount method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) PushHook(hook func(context.Context, interface{}) (int, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) PushHook(hook func(context.Context, interface{}) (int, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the QueuedCount method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) PushReturn(r0 int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) PushReturn(r0 int, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) nextHook() func(context.Context, interface{}) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) nextHook() func(context.Context, interface{}) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFunc.History",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.History",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall\n```\n\nHistory returns a sequence of StoreQueuedCountFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFuncCall",
+              "documentation": {
+                "identifier": "StoreQueuedCountFuncCall",
+                "newPage": false,
+                "searchKey": "worker.StoreQueuedCountFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreQueuedCountFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreQueuedCountFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 interface{}\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 int\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreQueuedCountFuncCall is an object that describes an invocation of method QueuedCount on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreQueuedCountFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreQueuedCountFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor/internal/worker#StoreQueuedCountFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "worker.StoreQueuedCountFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreQueuedCountFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreQueuedCountFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/executor/internal/worker#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#buildScript",
+              "documentation": {
+                "identifier": "buildScript",
+                "newPage": false,
+                "searchKey": "worker.buildScript",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildScript(dockerStep executor.DockerStep) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildScript(dockerStep executor.DockerStep) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#union",
+              "documentation": {
+                "identifier": "union",
+                "newPage": false,
+                "searchKey": "worker.union",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func union(a, b map[string]string) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc union(a, b map[string]string) map[string]string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#scriptNameFromJobStep",
+              "documentation": {
+                "identifier": "scriptNameFromJobStep",
+                "newPage": false,
+                "searchKey": "worker.scriptNameFromJobStep",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scriptNameFromJobStep(job executor.Job, i int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scriptNameFromJobStep(job executor.Job, i int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#createHoneyEvent",
+              "documentation": {
+                "identifier": "createHoneyEvent",
+                "newPage": false,
+                "searchKey": "worker.createHoneyEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createHoneyEvent(ctx context.Context, job executor.Job, err error, duration time.Duration) *libhoney.Event"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createHoneyEvent(ctx context.Context, job executor.Job, err error, duration time.Duration) *libhoney.Event\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#NewWorker",
+              "documentation": {
+                "identifier": "NewWorker",
+                "newPage": false,
+                "searchKey": "worker.NewWorker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewWorker(options Options, observationContext *observation.Context) goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewWorker(options Options, observationContext *observation.Context) goroutine.BackgroundRoutine\n```\n\nNewWorker creates a worker that polls a remote job queue API for work. The returned routine contains both a worker that periodically polls for new work to perform, as well as a heartbeat routine that will periodically hit the remote API with the work that is currently being performed, which is necessary so the job queue API doesn't hand out jobs it thinks may have been dropped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#connectToFrontend",
+              "documentation": {
+                "identifier": "connectToFrontend",
+                "newPage": false,
+                "searchKey": "worker.connectToFrontend",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func connectToFrontend(queueStore *apiclient.Client, options Options) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc connectToFrontend(queueStore *apiclient.Client, options Options) bool\n```\n\nconnectToFrontend will ping the configured Sourcegraph instance until it receives a 200 response. For the first minute, \"connection refused\" errors will not be emitted. This is to stop log spam in dev environments where the executor may start up before the frontend. This method returns true after a ping is successful and returns false if a user signal is received. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#makeURL",
+              "documentation": {
+                "identifier": "makeURL",
+                "newPage": false,
+                "searchKey": "worker.makeURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeURL(base, username, password string, path ...string) (*url.URL, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeURL(base, username, password string, path ...string) (*url.URL, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#makeRelativeURL",
+              "documentation": {
+                "identifier": "makeRelativeURL",
+                "newPage": false,
+                "searchKey": "worker.makeRelativeURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeRelativeURL(base string, path ...string) (*url.URL, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeRelativeURL(base string, path ...string) (*url.URL, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#makeTemporaryDirectory",
+              "documentation": {
+                "identifier": "makeTemporaryDirectory",
+                "newPage": false,
+                "searchKey": "worker.makeTemporaryDirectory",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeTemporaryDirectory() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeTemporaryDirectory() (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#TestHandle",
+              "documentation": {
+                "identifier": "TestHandle",
+                "newPage": false,
+                "searchKey": "worker.TestHandle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandle(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandle(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#TestIDAddRemove",
+              "documentation": {
+                "identifier": "TestIDAddRemove",
+                "newPage": false,
+                "searchKey": "worker.TestIDAddRemove",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIDAddRemove(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIDAddRemove(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#TestIDSetSlice",
+              "documentation": {
+                "identifier": "TestIDSetSlice",
+                "newPage": false,
+                "searchKey": "worker.TestIDSetSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIDSetSlice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIDSetSlice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#TestPrepareWorkspace",
+              "documentation": {
+                "identifier": "TestPrepareWorkspace",
+                "newPage": false,
+                "searchKey": "worker.TestPrepareWorkspace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrepareWorkspace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrepareWorkspace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor/internal/worker#TestPrepareWorkspaceNoRepository",
+              "documentation": {
+                "identifier": "TestPrepareWorkspaceNoRepository",
+                "newPage": false,
+                "searchKey": "worker.TestPrepareWorkspaceNoRepository",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrepareWorkspaceNoRepository(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrepareWorkspaceNoRepository(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

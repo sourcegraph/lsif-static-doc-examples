@@ -1,0 +1,123 @@
+{
+  "pathID": "/cmd/frontend/internal/suspiciousnames",
+  "documentation": {
+    "identifier": "suspiciousnames",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/suspiciousnames",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package suspiciousnames"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package suspiciousnames contains a blocklist of suspicious names for users and organizations. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/suspiciousnames#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/suspiciousnames#suspiciousNames",
+              "documentation": {
+                "identifier": "suspiciousNames",
+                "newPage": false,
+                "searchKey": "suspiciousnames.suspiciousNames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var suspiciousNames"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar suspiciousNames = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/suspiciousnames#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/suspiciousnames#CheckNameAllowedForUserOrOrganization",
+              "documentation": {
+                "identifier": "CheckNameAllowedForUserOrOrganization",
+                "newPage": false,
+                "searchKey": "suspiciousnames.CheckNameAllowedForUserOrOrganization",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CheckNameAllowedForUserOrOrganization(desiredName string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CheckNameAllowedForUserOrOrganization(desiredName string) error\n```\n\nCheckNameAllowedForUserOrOrganization returns a non-nil error if the desired username or organization name is suspicious and the currently running site is Sourcegraph.com. \n\nIt is intended to prevent users/organizations on Sourcegraph.com from changing their name to a name that is likely to be confused with an admin or official account (such as \"admin\", \"root\", etc.). \n\n🚨 SECURITY: This is not foolproof; users may choose a name like `secur1ty` that might be confused with a name like \"security\", or they might find another synonym that we didn't think of. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/suspiciousnames#isSuspicious",
+              "documentation": {
+                "identifier": "isSuspicious",
+                "newPage": false,
+                "searchKey": "suspiciousnames.isSuspicious",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSuspicious(desiredName string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSuspicious(desiredName string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

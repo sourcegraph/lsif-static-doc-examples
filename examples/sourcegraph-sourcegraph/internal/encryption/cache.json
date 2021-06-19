@@ -1,0 +1,209 @@
+{
+  "pathID": "/internal/encryption/cache",
+  "documentation": {
+    "identifier": "cache",
+    "newPage": true,
+    "searchKey": "internal/encryption/cache",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package cache"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/encryption/cache#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/cache#Key",
+              "documentation": {
+                "identifier": "Key",
+                "newPage": false,
+                "searchKey": "cache.Key",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Key struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Key struct {\n\tencryption.Key\n\n\tcache *lru.Cache\n}\n```\n\nKey provides an LRU cache wrapper for any encryption.Key implementation, caching the decrypted value based on the ciphertext passed. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/cache#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "cache.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(k encryption.Key, size int) (*Key, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(k encryption.Key, size int) (*Key, error)\n```\n\nNew returns a cache.Key with an LRU cache of `size` values, wrapping the passed key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/cache#Key.Decrypt",
+                    "documentation": {
+                      "identifier": "Key.Decrypt",
+                      "newPage": false,
+                      "searchKey": "cache.Key.Decrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)\n```\n\nDecrypt attempts to find the decrypted ciphertext in the cache, if it is not found, the underlying key implementation is used, and the result is added to the cache. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/cache#testKey",
+              "documentation": {
+                "identifier": "testKey",
+                "newPage": false,
+                "searchKey": "cache.testKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testKey struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testKey struct {\n\tencryption.Key\n\tfn func([]byte)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/cache#testKey.Decrypt",
+                    "documentation": {
+                      "identifier": "testKey.Decrypt",
+                      "newPage": false,
+                      "searchKey": "cache.testKey.Decrypt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *testKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *testKey) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption/cache#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/cache#hash",
+              "documentation": {
+                "identifier": "hash",
+                "newPage": false,
+                "searchKey": "cache.hash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hash(v []byte) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hash(v []byte) uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/cache#TestCacheKey",
+              "documentation": {
+                "identifier": "TestCacheKey",
+                "newPage": false,
+                "searchKey": "cache.TestCacheKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCacheKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCacheKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

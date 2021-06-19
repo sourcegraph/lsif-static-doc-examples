@@ -1,0 +1,82 @@
+{
+  "pathID": "/enterprise/internal/batches/global",
+  "documentation": {
+    "identifier": "global",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/global",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package global"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/global#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/global#DefaultReconcilerEnqueueState",
+              "documentation": {
+                "identifier": "DefaultReconcilerEnqueueState",
+                "newPage": false,
+                "searchKey": "global.DefaultReconcilerEnqueueState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DefaultReconcilerEnqueueState() btypes.ReconcilerState"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DefaultReconcilerEnqueueState() btypes.ReconcilerState\n```\n\nDefaultReconcilerEnqueueState returns the reconciler state that should be used when enqueuing a changeset: this may be ReconcilerStateQueued or ReconcilerStateScheduled depending on the site configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/global#TestDefaultReconcilerEnqueueState",
+              "documentation": {
+                "identifier": "TestDefaultReconcilerEnqueueState",
+                "newPage": false,
+                "searchKey": "global.TestDefaultReconcilerEnqueueState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDefaultReconcilerEnqueueState(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDefaultReconcilerEnqueueState(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

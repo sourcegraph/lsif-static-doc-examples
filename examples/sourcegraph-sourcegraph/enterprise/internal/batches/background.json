@@ -1,0 +1,1279 @@
+{
+  "pathID": "/enterprise/internal/batches/background",
+  "documentation": {
+    "identifier": "background",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/background",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package background"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/background#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#bulkProcessorMaxNumRetries",
+              "documentation": {
+                "identifier": "bulkProcessorMaxNumRetries",
+                "newPage": false,
+                "searchKey": "background.bulkProcessorMaxNumRetries",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bulkProcessorMaxNumRetries"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bulkProcessorMaxNumRetries = 10\n```\n\nbulkProcessorMaxNumRetries is the maximum number of attempts the bulkProcessor makes to process a changeset job when it fails. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#bulkProcessorMaxNumResets",
+              "documentation": {
+                "identifier": "bulkProcessorMaxNumResets",
+                "newPage": false,
+                "searchKey": "background.bulkProcessorMaxNumResets",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bulkProcessorMaxNumResets"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bulkProcessorMaxNumResets = 60\n```\n\nbulkProcessorMaxNumResets is the maximum number of attempts the bulkProcessor makes to process a changeset job when it stalls (process crashes, etc.). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#BatchChangesSSHMigrationID",
+              "documentation": {
+                "identifier": "BatchChangesSSHMigrationID",
+                "newPage": false,
+                "searchKey": "background.BatchChangesSSHMigrationID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BatchChangesSSHMigrationID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BatchChangesSSHMigrationID = 2\n```\n\nBatchChangesSSHMigrationID is the ID of row holding the ssh migration. It is defined in `1528395788_campaigns_ssh_key_migration.up`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#BatchChangesUserCredentialMigrationID",
+              "documentation": {
+                "identifier": "BatchChangesUserCredentialMigrationID",
+                "newPage": false,
+                "searchKey": "background.BatchChangesUserCredentialMigrationID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BatchChangesUserCredentialMigrationID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BatchChangesUserCredentialMigrationID = 9\n```\n\nBatchChangesUserCredentialMigrationID is the ID of the row holding the user credential migration. It is defined in `1528395819_oob_credential_encryption_up.sql`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#BatchChangesSiteCredentialMigrationID",
+              "documentation": {
+                "identifier": "BatchChangesSiteCredentialMigrationID",
+                "newPage": false,
+                "searchKey": "background.BatchChangesSiteCredentialMigrationID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BatchChangesSiteCredentialMigrationID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BatchChangesSiteCredentialMigrationID = 10\n```\n\nBatchChangesSiteCredentialMigrationID is the ID of the row holding the site credential migration. It is defined in `1528395821_oob_site_credential_encryption_up.sql`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#reconcilerMaxNumRetries",
+              "documentation": {
+                "identifier": "reconcilerMaxNumRetries",
+                "newPage": false,
+                "searchKey": "background.reconcilerMaxNumRetries",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const reconcilerMaxNumRetries"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst reconcilerMaxNumRetries = 60\n```\n\nreconcilerMaxNumRetries is the maximum number of attempts the reconciler makes to process a changeset when it fails. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#reconcilerMaxNumResets",
+              "documentation": {
+                "identifier": "reconcilerMaxNumResets",
+                "newPage": false,
+                "searchKey": "background.reconcilerMaxNumResets",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const reconcilerMaxNumResets"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst reconcilerMaxNumResets = 60\n```\n\nreconcilerMaxNumResets is the maximum number of attempts the reconciler makes to process a changeset when it stalls (process crashes, etc.). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#siteCredentialMigrationCountPerRun",
+              "documentation": {
+                "identifier": "siteCredentialMigrationCountPerRun",
+                "newPage": false,
+                "searchKey": "background.siteCredentialMigrationCountPerRun",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const siteCredentialMigrationCountPerRun"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst siteCredentialMigrationCountPerRun = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#siteCredentialMigratorProgressQuery",
+              "documentation": {
+                "identifier": "siteCredentialMigratorProgressQuery",
+                "newPage": false,
+                "searchKey": "background.siteCredentialMigratorProgressQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const siteCredentialMigratorProgressQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst siteCredentialMigratorProgressQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#sshMigrationCountPerRun",
+              "documentation": {
+                "identifier": "sshMigrationCountPerRun",
+                "newPage": false,
+                "searchKey": "background.sshMigrationCountPerRun",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sshMigrationCountPerRun"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sshMigrationCountPerRun = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#sshMigratorProgressQuery",
+              "documentation": {
+                "identifier": "sshMigratorProgressQuery",
+                "newPage": false,
+                "searchKey": "background.sshMigratorProgressQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sshMigratorProgressQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sshMigratorProgressQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#userCredentialMigrationCountPerRun",
+              "documentation": {
+                "identifier": "userCredentialMigrationCountPerRun",
+                "newPage": false,
+                "searchKey": "background.userCredentialMigrationCountPerRun",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const userCredentialMigrationCountPerRun"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst userCredentialMigrationCountPerRun = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#userCredentialMigratorProgressQuery",
+              "documentation": {
+                "identifier": "userCredentialMigratorProgressQuery",
+                "newPage": false,
+                "searchKey": "background.userCredentialMigratorProgressQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const userCredentialMigratorProgressQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst userCredentialMigratorProgressQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/background#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#unknownJobTypeErr",
+              "documentation": {
+                "identifier": "unknownJobTypeErr",
+                "newPage": false,
+                "searchKey": "background.unknownJobTypeErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type unknownJobTypeErr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype unknownJobTypeErr struct {\n\tjobType string\n}\n```\n\nunknownJobTypeErr is returned when a ChangesetJob record is of an unknown type and hence cannot be executed. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#unknownJobTypeErr.Error",
+                    "documentation": {
+                      "identifier": "unknownJobTypeErr.Error",
+                      "newPage": false,
+                      "searchKey": "background.unknownJobTypeErr.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e unknownJobTypeErr) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e unknownJobTypeErr) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#unknownJobTypeErr.NonRetryable",
+                    "documentation": {
+                      "identifier": "unknownJobTypeErr.NonRetryable",
+                      "newPage": false,
+                      "searchKey": "background.unknownJobTypeErr.NonRetryable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e unknownJobTypeErr) NonRetryable() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e unknownJobTypeErr) NonRetryable() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#bulkProcessor",
+              "documentation": {
+                "identifier": "bulkProcessor",
+                "newPage": false,
+                "searchKey": "background.bulkProcessor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bulkProcessor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bulkProcessor struct {\n\ttx      *store.Store\n\tsourcer sources.Sourcer\n\n\tcss  sources.ChangesetSource\n\trepo *types.Repo\n\tch   *btypes.Changeset\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#bulkProcessor.process",
+                    "documentation": {
+                      "identifier": "bulkProcessor.process",
+                      "newPage": false,
+                      "searchKey": "background.bulkProcessor.process",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *bulkProcessor) process(ctx context.Context, job *btypes.ChangesetJob) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *bulkProcessor) process(ctx context.Context, job *btypes.ChangesetJob) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#bulkProcessor.comment",
+                    "documentation": {
+                      "identifier": "bulkProcessor.comment",
+                      "newPage": false,
+                      "searchKey": "background.bulkProcessor.comment",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *bulkProcessor) comment(ctx context.Context, job *btypes.ChangesetJob) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *bulkProcessor) comment(ctx context.Context, job *btypes.ChangesetJob) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#bulkProcessor.detach",
+                    "documentation": {
+                      "identifier": "bulkProcessor.detach",
+                      "newPage": false,
+                      "searchKey": "background.bulkProcessor.detach",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *bulkProcessor) detach(ctx context.Context, job *btypes.ChangesetJob) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *bulkProcessor) detach(ctx context.Context, job *btypes.ChangesetJob) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#bulkProcessor.reenqueueChangeset",
+                    "documentation": {
+                      "identifier": "bulkProcessor.reenqueueChangeset",
+                      "newPage": false,
+                      "searchKey": "background.bulkProcessor.reenqueueChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *bulkProcessor) reenqueueChangeset(ctx context.Context, job *btypes.ChangesetJob) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *bulkProcessor) reenqueueChangeset(ctx context.Context, job *btypes.ChangesetJob) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#bulkProcessor.mergeChangeset",
+                    "documentation": {
+                      "identifier": "bulkProcessor.mergeChangeset",
+                      "newPage": false,
+                      "searchKey": "background.bulkProcessor.mergeChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *bulkProcessor) mergeChangeset(ctx context.Context, job *btypes.ChangesetJob) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *bulkProcessor) mergeChangeset(ctx context.Context, job *btypes.ChangesetJob) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#bulkProcessorWorker",
+              "documentation": {
+                "identifier": "bulkProcessorWorker",
+                "newPage": false,
+                "searchKey": "background.bulkProcessorWorker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bulkProcessorWorker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bulkProcessorWorker struct {\n\tstore   *store.Store\n\tsourcer sources.Sourcer\n}\n```\n\nbulkProcessorWorker is a wrapper for the workerutil handlerfunc to create a bulkProcessor with a source and store. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#bulkProcessorWorker.HandlerFunc",
+                    "documentation": {
+                      "identifier": "bulkProcessorWorker.HandlerFunc",
+                      "newPage": false,
+                      "searchKey": "background.bulkProcessorWorker.HandlerFunc",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *bulkProcessorWorker) HandlerFunc() dbworker.HandlerFunc"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *bulkProcessorWorker) HandlerFunc() dbworker.HandlerFunc\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#batchChangesMetrics",
+              "documentation": {
+                "identifier": "batchChangesMetrics",
+                "newPage": false,
+                "searchKey": "background.batchChangesMetrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type batchChangesMetrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype batchChangesMetrics struct {\n\treconcilerWorkerMetrics            workerutil.WorkerMetrics\n\tbulkProcessorWorkerMetrics         workerutil.WorkerMetrics\n\treconcilerWorkerResetterMetrics    dbworker.ResetterMetrics\n\tbulkProcessorWorkerResetterMetrics dbworker.ResetterMetrics\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#newMetrics",
+                    "documentation": {
+                      "identifier": "newMetrics",
+                      "newPage": false,
+                      "searchKey": "background.newMetrics",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newMetrics() batchChangesMetrics"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newMetrics() batchChangesMetrics\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#siteCredentialMigrator",
+              "documentation": {
+                "identifier": "siteCredentialMigrator",
+                "newPage": false,
+                "searchKey": "background.siteCredentialMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type siteCredentialMigrator struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype siteCredentialMigrator struct {\n\tstore        *store.Store\n\tallowDecrypt bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#siteCredentialMigrator.Progress",
+                    "documentation": {
+                      "identifier": "siteCredentialMigrator.Progress",
+                      "newPage": false,
+                      "searchKey": "background.siteCredentialMigrator.Progress",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *siteCredentialMigrator) Progress(ctx context.Context) (float64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *siteCredentialMigrator) Progress(ctx context.Context) (float64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#siteCredentialMigrator.Up",
+                    "documentation": {
+                      "identifier": "siteCredentialMigrator.Up",
+                      "newPage": false,
+                      "searchKey": "background.siteCredentialMigrator.Up",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *siteCredentialMigrator) Up(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *siteCredentialMigrator) Up(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#siteCredentialMigrator.Down",
+                    "documentation": {
+                      "identifier": "siteCredentialMigrator.Down",
+                      "newPage": false,
+                      "searchKey": "background.siteCredentialMigrator.Down",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *siteCredentialMigrator) Down(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *siteCredentialMigrator) Down(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#sshMigrator",
+              "documentation": {
+                "identifier": "sshMigrator",
+                "newPage": false,
+                "searchKey": "background.sshMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sshMigrator struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sshMigrator struct {\n\tstore *store.Store\n}\n```\n\nsshMigrator migrates existing batch changes credentials that have no SSH key stored to a variant that includes it. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#sshMigrator.Progress",
+                    "documentation": {
+                      "identifier": "sshMigrator.Progress",
+                      "newPage": false,
+                      "searchKey": "background.sshMigrator.Progress",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *sshMigrator) Progress(ctx context.Context) (float64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *sshMigrator) Progress(ctx context.Context) (float64, error)\n```\n\nProgress returns the ratio of migrated records to total records. Any record with a credential type that ends on WithSSH is considered migrated. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#sshMigrator.Up",
+                    "documentation": {
+                      "identifier": "sshMigrator.Up",
+                      "newPage": false,
+                      "searchKey": "background.sshMigrator.Up",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *sshMigrator) Up(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *sshMigrator) Up(ctx context.Context) error\n```\n\nUp loops over all credentials and finds authenticators that are missing SSH credentials, generates a keypair for them and upgrades them. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#sshMigrator.Down",
+                    "documentation": {
+                      "identifier": "sshMigrator.Down",
+                      "newPage": false,
+                      "searchKey": "background.sshMigrator.Down",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *sshMigrator) Down(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *sshMigrator) Down(ctx context.Context) error\n```\n\nDown converts all credentials that have an SSH key back to a version without, so an older version of Sourcegraph would be able to match those credentials again. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#userCredentialMigrator",
+              "documentation": {
+                "identifier": "userCredentialMigrator",
+                "newPage": false,
+                "searchKey": "background.userCredentialMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type userCredentialMigrator struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype userCredentialMigrator struct {\n\tstore        *store.Store\n\tallowDecrypt bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#userCredentialMigrator.Progress",
+                    "documentation": {
+                      "identifier": "userCredentialMigrator.Progress",
+                      "newPage": false,
+                      "searchKey": "background.userCredentialMigrator.Progress",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *userCredentialMigrator) Progress(ctx context.Context) (float64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *userCredentialMigrator) Progress(ctx context.Context) (float64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#userCredentialMigrator.Up",
+                    "documentation": {
+                      "identifier": "userCredentialMigrator.Up",
+                      "newPage": false,
+                      "searchKey": "background.userCredentialMigrator.Up",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *userCredentialMigrator) Up(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *userCredentialMigrator) Up(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/background#userCredentialMigrator.Down",
+                    "documentation": {
+                      "identifier": "userCredentialMigrator.Down",
+                      "newPage": false,
+                      "searchKey": "background.userCredentialMigrator.Down",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *userCredentialMigrator) Down(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *userCredentialMigrator) Down(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/background#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#Routines",
+              "documentation": {
+                "identifier": "Routines",
+                "newPage": false,
+                "searchKey": "background.Routines",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Routines(ctx context.Context, batchesStore *store.Store, cf *httpcli.Factory) []goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Routines(ctx context.Context, batchesStore *store.Store, cf *httpcli.Factory) []goroutine.BackgroundRoutine\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#newBulkOperationWorker",
+              "documentation": {
+                "identifier": "newBulkOperationWorker",
+                "newPage": false,
+                "searchKey": "background.newBulkOperationWorker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newBulkOperationWorker(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newBulkOperationWorker(\n\tctx context.Context,\n\ts *store.Store,\n\tsourcer sources.Sourcer,\n\tmetrics batchChangesMetrics,\n) *workerutil.Worker\n```\n\nnewBulkOperationWorker creates a dbworker.Worker that fetches enqueued changeset_jobs from the database and passes them to the bulk executor for processing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#newBulkOperationWorkerResetter",
+              "documentation": {
+                "identifier": "newBulkOperationWorkerResetter",
+                "newPage": false,
+                "searchKey": "background.newBulkOperationWorkerResetter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newBulkOperationWorkerResetter(s *store.Store, metrics batchChangesMetrics) *dbworker.Resetter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newBulkOperationWorkerResetter(s *store.Store, metrics batchChangesMetrics) *dbworker.Resetter\n```\n\nnewBulkOperationWorkerResetter creates a dbworker.Resetter that reenqueues lost jobs for processing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#createBulkOperationDBWorkerStore",
+              "documentation": {
+                "identifier": "createBulkOperationDBWorkerStore",
+                "newPage": false,
+                "searchKey": "background.createBulkOperationDBWorkerStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createBulkOperationDBWorkerStore(s *store.Store) dbworkerstore.Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createBulkOperationDBWorkerStore(s *store.Store) dbworkerstore.Store\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#scanFirstChangesetJobRecord",
+              "documentation": {
+                "identifier": "scanFirstChangesetJobRecord",
+                "newPage": false,
+                "searchKey": "background.scanFirstChangesetJobRecord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scanFirstChangesetJobRecord(rows *sql.Rows, err error) (workerutil.Record, bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scanFirstChangesetJobRecord(rows *sql.Rows, err error) (workerutil.Record, bool, error)\n```\n\nscanFirstChangesetJobRecord wraps store.ScanFirstChangesetJob to return a generic workerutil.Record. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#makeResetterMetrics",
+              "documentation": {
+                "identifier": "makeResetterMetrics",
+                "newPage": false,
+                "searchKey": "background.makeResetterMetrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeResetterMetrics(observationContext *observation.Context, workerName string) dbworker.ResetterMetrics"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeResetterMetrics(observationContext *observation.Context, workerName string) dbworker.ResetterMetrics\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#RegisterMigrations",
+              "documentation": {
+                "identifier": "RegisterMigrations",
+                "newPage": false,
+                "searchKey": "background.RegisterMigrations",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RegisterMigrations(cstore *store.Store, outOfBandMigrationRunner *oobmigration.Runner) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RegisterMigrations(cstore *store.Store, outOfBandMigrationRunner *oobmigration.Runner) error\n```\n\nRegisterMigrations registers all currently implemented out of band migrations by batch changes with the migration runner. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#newReconcilerWorker",
+              "documentation": {
+                "identifier": "newReconcilerWorker",
+                "newPage": false,
+                "searchKey": "background.newReconcilerWorker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newReconcilerWorker(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newReconcilerWorker(\n\tctx context.Context,\n\ts *store.Store,\n\tgitClient reconciler.GitserverClient,\n\tsourcer sources.Sourcer,\n\tmetrics batchChangesMetrics,\n) *workerutil.Worker\n```\n\nnewReconcilerWorker creates a dbworker.newWorker that fetches enqueued changesets from the database and passes them to the changeset reconciler for processing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#newReconcilerWorkerResetter",
+              "documentation": {
+                "identifier": "newReconcilerWorkerResetter",
+                "newPage": false,
+                "searchKey": "background.newReconcilerWorkerResetter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newReconcilerWorkerResetter(s *store.Store, metrics batchChangesMetrics) *dbworker.Resetter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newReconcilerWorkerResetter(s *store.Store, metrics batchChangesMetrics) *dbworker.Resetter\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#scanFirstChangesetRecord",
+              "documentation": {
+                "identifier": "scanFirstChangesetRecord",
+                "newPage": false,
+                "searchKey": "background.scanFirstChangesetRecord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scanFirstChangesetRecord(rows *sql.Rows, err error) (workerutil.Record, bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scanFirstChangesetRecord(rows *sql.Rows, err error) (workerutil.Record, bool, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#createReconcilerDBWorkerStore",
+              "documentation": {
+                "identifier": "createReconcilerDBWorkerStore",
+                "newPage": false,
+                "searchKey": "background.createReconcilerDBWorkerStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createReconcilerDBWorkerStore(s *store.Store) dbworkerstore.Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createReconcilerDBWorkerStore(s *store.Store) dbworkerstore.Store\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#newSpecExpireWorker",
+              "documentation": {
+                "identifier": "newSpecExpireWorker",
+                "newPage": false,
+                "searchKey": "background.newSpecExpireWorker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newSpecExpireWorker(ctx context.Context, cstore *store.Store) goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newSpecExpireWorker(ctx context.Context, cstore *store.Store) goroutine.BackgroundRoutine\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#TestBulkProcessor",
+              "documentation": {
+                "identifier": "TestBulkProcessor",
+                "newPage": false,
+                "searchKey": "background.TestBulkProcessor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBulkProcessor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBulkProcessor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#TestReconcilerWorkerView",
+              "documentation": {
+                "identifier": "TestReconcilerWorkerView",
+                "newPage": false,
+                "searchKey": "background.TestReconcilerWorkerView",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReconcilerWorkerView(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReconcilerWorkerView(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#assertReturnedChangesetIDs",
+              "documentation": {
+                "identifier": "assertReturnedChangesetIDs",
+                "newPage": false,
+                "searchKey": "background.assertReturnedChangesetIDs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertReturnedChangesetIDs(t *testing.T, ctx context.Context, db dbutil.DB, want []int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertReturnedChangesetIDs(t *testing.T, ctx context.Context, db dbutil.DB, want []int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#TestSiteCredentialMigrator",
+              "documentation": {
+                "identifier": "TestSiteCredentialMigrator",
+                "newPage": false,
+                "searchKey": "background.TestSiteCredentialMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSiteCredentialMigrator(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSiteCredentialMigrator(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#TestSSHMigrator",
+              "documentation": {
+                "identifier": "TestSSHMigrator",
+                "newPage": false,
+                "searchKey": "background.TestSSHMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSSHMigrator(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSSHMigrator(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#TestUserCredentialMigrator",
+              "documentation": {
+                "identifier": "TestUserCredentialMigrator",
+                "newPage": false,
+                "searchKey": "background.TestUserCredentialMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserCredentialMigrator(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserCredentialMigrator(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#assertProgress",
+              "documentation": {
+                "identifier": "assertProgress",
+                "newPage": false,
+                "searchKey": "background.assertProgress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertProgress(t *testing.T, ctx context.Context, want float64, migrator interface {..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertProgress(t *testing.T, ctx context.Context, want float64, migrator interface {\n\tProgress(context.Context) (float64, error)\n})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#createUnencryptedUserCredential",
+              "documentation": {
+                "identifier": "createUnencryptedUserCredential",
+                "newPage": false,
+                "searchKey": "background.createUnencryptedUserCredential",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createUnencryptedUserCredential(t *testing.T,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createUnencryptedUserCredential(\n\tt *testing.T,\n\tctx context.Context,\n\tstore *store.Store,\n\tscope database.UserCredentialScope,\n\ta auth.Authenticator,\n) *database.UserCredential\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/background#createPreviouslyEncryptedUserCredential",
+              "documentation": {
+                "identifier": "createPreviouslyEncryptedUserCredential",
+                "newPage": false,
+                "searchKey": "background.createPreviouslyEncryptedUserCredential",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createPreviouslyEncryptedUserCredential(t *testing.T,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createPreviouslyEncryptedUserCredential(\n\tt *testing.T,\n\tctx context.Context,\n\tstore *store.Store,\n\tscope database.UserCredentialScope,\n\ta auth.Authenticator,\n) *database.UserCredential\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

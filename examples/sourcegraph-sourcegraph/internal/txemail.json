@@ -1,0 +1,379 @@
+{
+  "pathID": "/internal/txemail",
+  "documentation": {
+    "identifier": "txemail",
+    "newPage": true,
+    "searchKey": "internal/txemail",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package txemail"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package txemail sends transactional emails. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/txemail#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/txemail#textFuncMap",
+              "documentation": {
+                "identifier": "textFuncMap",
+                "newPage": false,
+                "searchKey": "txemail.textFuncMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var textFuncMap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar textFuncMap = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#htmlFuncMap",
+              "documentation": {
+                "identifier": "htmlFuncMap",
+                "newPage": false,
+                "searchKey": "txemail.htmlFuncMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var htmlFuncMap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar htmlFuncMap = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#MockSend",
+              "documentation": {
+                "identifier": "MockSend",
+                "newPage": false,
+                "searchKey": "txemail.MockSend",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockSend"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockSend func(ctx context.Context, message Message) error\n```\n\nMockSend is used in tests to mock the Send func. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#disableSilently",
+              "documentation": {
+                "identifier": "disableSilently",
+                "newPage": false,
+                "searchKey": "txemail.disableSilently",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var disableSilently"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar disableSilently bool\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/txemail#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/txemail#Message",
+              "documentation": {
+                "identifier": "Message",
+                "newPage": false,
+                "searchKey": "txemail.Message",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Message struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Message struct {\n\tFromName   string   // email \"From\" address proper name\n\tTo         []string // email \"To\" recipients\n\tReplyTo    *string  // optional \"ReplyTo\" address\n\tMessageID  *string  // optional \"Message-ID\" header\n\tReferences []string // optional \"References\" header list\n\n\tTemplate txtypes.Templates // unparsed subject/body templates\n\tData     interface{}       // template data\n}\n```\n\nMessage describes an email message to be sent. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/txemail#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/txemail#MustParseTemplate",
+              "documentation": {
+                "identifier": "MustParseTemplate",
+                "newPage": false,
+                "searchKey": "txemail.MustParseTemplate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustParseTemplate(input txtypes.Templates) txtypes.ParsedTemplates"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustParseTemplate(input txtypes.Templates) txtypes.ParsedTemplates\n```\n\nMustParseTemplate calls ParseTemplate and panics if an error is returned. It is intended to be called in a package init func. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#MustValidate",
+              "documentation": {
+                "identifier": "MustValidate",
+                "newPage": false,
+                "searchKey": "txemail.MustValidate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustValidate(input txtypes.Templates) txtypes.Templates"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustValidate(input txtypes.Templates) txtypes.Templates\n```\n\nMustValidate panics if the templates are unparsable, otherwise it returns them unmodified. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#ParseTemplate",
+              "documentation": {
+                "identifier": "ParseTemplate",
+                "newPage": false,
+                "searchKey": "txemail.ParseTemplate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseTemplate(input txtypes.Templates) (*txtypes.ParsedTemplates, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseTemplate(input txtypes.Templates) (*txtypes.ParsedTemplates, error)\n```\n\nParseTemplate is a helper func for parsing the text/template and html/template templates together. In the future it will also provide common template funcs and a common footer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#renderTemplate",
+              "documentation": {
+                "identifier": "renderTemplate",
+                "newPage": false,
+                "searchKey": "txemail.renderTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func renderTemplate(t *txtypes.ParsedTemplates, data interface{}, m *email.Email) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc renderTemplate(t *txtypes.ParsedTemplates, data interface{}, m *email.Email) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#render",
+              "documentation": {
+                "identifier": "render",
+                "newPage": false,
+                "searchKey": "txemail.render",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func render(message Message) (*email.Email, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc render(message Message) (*email.Email, error)\n```\n\nrender returns the rendered message contents without sending email. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#Send",
+              "documentation": {
+                "identifier": "Send",
+                "newPage": false,
+                "searchKey": "txemail.Send",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Send(ctx context.Context, message Message) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Send(ctx context.Context, message Message) error\n```\n\nSend sends a transactional email. \n\nCallers that do not live in the frontend should call api.InternalClient.SendEmail instead. TODO(slimsag): needs cleanup as part of upcoming configuration refactor. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#DisableSilently",
+              "documentation": {
+                "identifier": "DisableSilently",
+                "newPage": false,
+                "searchKey": "txemail.DisableSilently",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DisableSilently()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DisableSilently()\n```\n\nDisableSilently prevents sending of emails, even if email sending is configured. Use it in tests to ensure that they do not send real emails. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#TestParseTemplate",
+              "documentation": {
+                "identifier": "TestParseTemplate",
+                "newPage": false,
+                "searchKey": "txemail.TestParseTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseTemplate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseTemplate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail#TestRender",
+              "documentation": {
+                "identifier": "TestRender",
+                "newPage": false,
+                "searchKey": "txemail.TestRender",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRender(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRender(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/txemail/txtypes"
+    }
+  ]
+}

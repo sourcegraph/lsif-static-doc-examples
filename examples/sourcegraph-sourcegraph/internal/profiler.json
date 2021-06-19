@@ -1,0 +1,62 @@
+{
+  "pathID": "/internal/profiler",
+  "documentation": {
+    "identifier": "profiler",
+    "newPage": true,
+    "searchKey": "internal/profiler",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package profiler"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/profiler#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/profiler#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "profiler.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init() error\n```\n\nInit starts the Google Cloud Profiler when in sourcegraph.com mode. [https://cloud.google.com/profiler/docs/profiling-go](https://cloud.google.com/profiler/docs/profiling-go) \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

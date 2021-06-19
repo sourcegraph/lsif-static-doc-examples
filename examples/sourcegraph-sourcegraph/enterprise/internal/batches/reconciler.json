@@ -1,0 +1,1670 @@
+{
+  "pathID": "/enterprise/internal/batches/reconciler",
+  "documentation": {
+    "identifier": "reconciler",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/reconciler",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package reconciler"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/reconciler#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#internalClient",
+              "documentation": {
+                "identifier": "internalClient",
+                "newPage": false,
+                "searchKey": "reconciler.internalClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var internalClient"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar internalClient interface {\n\tExternalURL(context.Context) (string, error)\n} = api.InternalClient\n```\n\ninternalClient is here for mocking reasons. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#operationPrecedence",
+              "documentation": {
+                "identifier": "operationPrecedence",
+                "newPage": false,
+                "searchKey": "reconciler.operationPrecedence",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var operationPrecedence"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar operationPrecedence = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/reconciler#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#executor",
+              "documentation": {
+                "identifier": "executor",
+                "newPage": false,
+                "searchKey": "reconciler.executor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type executor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype executor struct {\n\tgitserverClient   GitserverClient\n\tsourcer           sources.Sourcer\n\tnoSleepBeforeSync bool\n\ttx                *store.Store\n\tch                *btypes.Changeset\n\tspec              *btypes.ChangesetSpec\n\tdelta             *ChangesetSpecDelta\n\n\tcss  sources.ChangesetSource\n\trepo *types.Repo\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.Run",
+                    "documentation": {
+                      "identifier": "executor.Run",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.Run",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) Run(ctx context.Context, plan *Plan) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) Run(ctx context.Context, plan *Plan) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.pushChangesetPatch",
+                    "documentation": {
+                      "identifier": "executor.pushChangesetPatch",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.pushChangesetPatch",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) pushChangesetPatch(ctx context.Context) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) pushChangesetPatch(ctx context.Context) (err error)\n```\n\npushChangesetPatch creates the commits for the changeset on its codehost. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.publishChangeset",
+                    "documentation": {
+                      "identifier": "executor.publishChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.publishChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) publishChangeset(ctx context.Context, asDraft bool) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) publishChangeset(ctx context.Context, asDraft bool) (err error)\n```\n\npublishChangeset creates the given changeset on its code host. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.syncChangeset",
+                    "documentation": {
+                      "identifier": "executor.syncChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.syncChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) syncChangeset(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) syncChangeset(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.importChangeset",
+                    "documentation": {
+                      "identifier": "executor.importChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.importChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) importChangeset(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) importChangeset(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.loadChangeset",
+                    "documentation": {
+                      "identifier": "executor.loadChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.loadChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) loadChangeset(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) loadChangeset(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.updateChangeset",
+                    "documentation": {
+                      "identifier": "executor.updateChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.updateChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) updateChangeset(ctx context.Context) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) updateChangeset(ctx context.Context) (err error)\n```\n\nupdateChangeset updates the given changeset's attribute on the code host according to its ChangesetSpec and the delta previously computed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.reopenChangeset",
+                    "documentation": {
+                      "identifier": "executor.reopenChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.reopenChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) reopenChangeset(ctx context.Context) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) reopenChangeset(ctx context.Context) (err error)\n```\n\nreopenChangeset reopens the given changeset attribute on the code host. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.detachChangeset",
+                    "documentation": {
+                      "identifier": "executor.detachChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.detachChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) detachChangeset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) detachChangeset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.archiveChangeset",
+                    "documentation": {
+                      "identifier": "executor.archiveChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.archiveChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) archiveChangeset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) archiveChangeset()\n```\n\narchiveChangeset sets all associations to archived that are marked as \"to-be-archived\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.closeChangeset",
+                    "documentation": {
+                      "identifier": "executor.closeChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.closeChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) closeChangeset(ctx context.Context) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) closeChangeset(ctx context.Context) (err error)\n```\n\ncloseChangeset closes the given changeset on its code host if its ExternalState is OPEN or DRAFT. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.undraftChangeset",
+                    "documentation": {
+                      "identifier": "executor.undraftChangeset",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.undraftChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) undraftChangeset(ctx context.Context) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) undraftChangeset(ctx context.Context) (err error)\n```\n\nundraftChangeset marks the given changeset on its code host as ready for review. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.sleep",
+                    "documentation": {
+                      "identifier": "executor.sleep",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.sleep",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) sleep()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) sleep()\n```\n\nsleep sleeps for 3 seconds. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#executor.pushCommit",
+                    "documentation": {
+                      "identifier": "executor.pushCommit",
+                      "newPage": false,
+                      "searchKey": "reconciler.executor.pushCommit",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *executor) pushCommit(ctx context.Context, opts protocol.CreateCommitFromPatchRequest) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *executor) pushCommit(ctx context.Context, opts protocol.CreateCommitFromPatchRequest) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#getBatchChanger",
+              "documentation": {
+                "identifier": "getBatchChanger",
+                "newPage": false,
+                "searchKey": "reconciler.getBatchChanger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type getBatchChanger interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype getBatchChanger interface {\n\tGetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#getNamespacer",
+              "documentation": {
+                "identifier": "getNamespacer",
+                "newPage": false,
+                "searchKey": "reconciler.getNamespacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type getNamespacer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype getNamespacer interface {\n\tGetByID(ctx context.Context, orgID, userID int32) (*database.Namespace, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#errPublishSameBranch",
+              "documentation": {
+                "identifier": "errPublishSameBranch",
+                "newPage": false,
+                "searchKey": "reconciler.errPublishSameBranch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errPublishSameBranch struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errPublishSameBranch struct{}\n```\n\nerrPublishSameBranch is returned by publish changeset if a changeset with the same external branch already exists in the database and is owned by another batch change. It is a terminal error that won't be fixed by retrying to publish the changeset with the same spec. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errPublishSameBranch.Error",
+                    "documentation": {
+                      "identifier": "errPublishSameBranch.Error",
+                      "newPage": false,
+                      "searchKey": "reconciler.errPublishSameBranch.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errPublishSameBranch) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errPublishSameBranch) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errPublishSameBranch.NonRetryable",
+                    "documentation": {
+                      "identifier": "errPublishSameBranch.NonRetryable",
+                      "newPage": false,
+                      "searchKey": "reconciler.errPublishSameBranch.NonRetryable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errPublishSameBranch) NonRetryable() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errPublishSameBranch) NonRetryable() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#errNoSSHCredential",
+              "documentation": {
+                "identifier": "errNoSSHCredential",
+                "newPage": false,
+                "searchKey": "reconciler.errNoSSHCredential",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errNoSSHCredential struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errNoSSHCredential struct{}\n```\n\nerrNoSSHCredential is returned, if the  clone URL of the repository uses the ssh:// scheme, but the authenticator doesn't support SSH pushes. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errNoSSHCredential.Error",
+                    "documentation": {
+                      "identifier": "errNoSSHCredential.Error",
+                      "newPage": false,
+                      "searchKey": "reconciler.errNoSSHCredential.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errNoSSHCredential) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errNoSSHCredential) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errNoSSHCredential.NonRetryable",
+                    "documentation": {
+                      "identifier": "errNoSSHCredential.NonRetryable",
+                      "newPage": false,
+                      "searchKey": "reconciler.errNoSSHCredential.NonRetryable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errNoSSHCredential) NonRetryable() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errNoSSHCredential) NonRetryable() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#errMissingCredentials",
+              "documentation": {
+                "identifier": "errMissingCredentials",
+                "newPage": false,
+                "searchKey": "reconciler.errMissingCredentials",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errMissingCredentials struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errMissingCredentials struct{ repo string }\n```\n\nerrMissingCredentials is returned if the user that applied the last batch change /changeset spec doesn't have a user credential for the given repository and is not a site-admin (so no fallback to the global credentials is possible). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errMissingCredentials.Error",
+                    "documentation": {
+                      "identifier": "errMissingCredentials.Error",
+                      "newPage": false,
+                      "searchKey": "reconciler.errMissingCredentials.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errMissingCredentials) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errMissingCredentials) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errMissingCredentials.NonRetryable",
+                    "documentation": {
+                      "identifier": "errMissingCredentials.NonRetryable",
+                      "newPage": false,
+                      "searchKey": "reconciler.errMissingCredentials.NonRetryable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errMissingCredentials) NonRetryable() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errMissingCredentials) NonRetryable() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errMissingCredentials.Is",
+                    "documentation": {
+                      "identifier": "errMissingCredentials.Is",
+                      "newPage": false,
+                      "searchKey": "reconciler.errMissingCredentials.Is",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errMissingCredentials) Is(target error) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errMissingCredentials) Is(target error) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#errNoPushCredentials",
+              "documentation": {
+                "identifier": "errNoPushCredentials",
+                "newPage": false,
+                "searchKey": "reconciler.errNoPushCredentials",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errNoPushCredentials struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errNoPushCredentials struct{ credentialsType string }\n```\n\nerrNoPushCredentials is returned if the authenticator cannot be used by git to authenticate a `git push`. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errNoPushCredentials.Error",
+                    "documentation": {
+                      "identifier": "errNoPushCredentials.Error",
+                      "newPage": false,
+                      "searchKey": "reconciler.errNoPushCredentials.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errNoPushCredentials) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errNoPushCredentials) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#errNoPushCredentials.NonRetryable",
+                    "documentation": {
+                      "identifier": "errNoPushCredentials.NonRetryable",
+                      "newPage": false,
+                      "searchKey": "reconciler.errNoPushCredentials.NonRetryable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errNoPushCredentials) NonRetryable() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errNoPushCredentials) NonRetryable() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#Operations",
+              "documentation": {
+                "identifier": "Operations",
+                "newPage": false,
+                "searchKey": "reconciler.Operations",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Operations []types.ReconcilerOperation"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Operations []btypes.ReconcilerOperation\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#Operations.IsNone",
+                    "documentation": {
+                      "identifier": "Operations.IsNone",
+                      "newPage": false,
+                      "searchKey": "reconciler.Operations.IsNone",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ops Operations) IsNone() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ops Operations) IsNone() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#Operations.Equal",
+                    "documentation": {
+                      "identifier": "Operations.Equal",
+                      "newPage": false,
+                      "searchKey": "reconciler.Operations.Equal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ops Operations) Equal(b Operations) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ops Operations) Equal(b Operations) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#Operations.String",
+                    "documentation": {
+                      "identifier": "Operations.String",
+                      "newPage": false,
+                      "searchKey": "reconciler.Operations.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ops Operations) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ops Operations) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#Operations.ExecutionOrder",
+                    "documentation": {
+                      "identifier": "Operations.ExecutionOrder",
+                      "newPage": false,
+                      "searchKey": "reconciler.Operations.ExecutionOrder",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ops Operations) ExecutionOrder() []btypes.ReconcilerOperation"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ops Operations) ExecutionOrder() []btypes.ReconcilerOperation\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#Plan",
+              "documentation": {
+                "identifier": "Plan",
+                "newPage": false,
+                "searchKey": "reconciler.Plan",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Plan struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Plan struct {\n\t// The changeset that is targeted in this plan.\n\tChangeset *btypes.Changeset\n\n\t// The changeset spec that is used in this plan.\n\tChangesetSpec *btypes.ChangesetSpec\n\n\t// The operations that need to be done to reconcile the changeset.\n\tOps Operations\n\n\t// The Delta between a possible previous ChangesetSpec and the current\n\t// ChangesetSpec.\n\tDelta *ChangesetSpecDelta\n}\n```\n\nPlan represents the possible operations the reconciler needs to do to reconcile the current and the desired state of a changeset. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#DeterminePlan",
+                    "documentation": {
+                      "identifier": "DeterminePlan",
+                      "newPage": false,
+                      "searchKey": "reconciler.DeterminePlan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func DeterminePlan(previousSpec, currentSpec *btypes.ChangesetSpec, ch *btypes.Changeset) (*Plan, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc DeterminePlan(previousSpec, currentSpec *btypes.ChangesetSpec, ch *btypes.Changeset) (*Plan, error)\n```\n\nDeterminePlan looks at the given changeset to determine what action the reconciler should take. It consumes the current and the previous changeset spec, if they exist. If the current ChangesetSpec is not applied to a batch change, it returns an error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#Plan.AddOp",
+                    "documentation": {
+                      "identifier": "Plan.AddOp",
+                      "newPage": false,
+                      "searchKey": "reconciler.Plan.AddOp",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Plan) AddOp(op btypes.ReconcilerOperation)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Plan) AddOp(op btypes.ReconcilerOperation)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#Plan.SetOp",
+                    "documentation": {
+                      "identifier": "Plan.SetOp",
+                      "newPage": false,
+                      "searchKey": "reconciler.Plan.SetOp",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Plan) SetOp(op btypes.ReconcilerOperation)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Plan) SetOp(op btypes.ReconcilerOperation)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#ChangesetSpecDelta",
+              "documentation": {
+                "identifier": "ChangesetSpecDelta",
+                "newPage": false,
+                "searchKey": "reconciler.ChangesetSpecDelta",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetSpecDelta struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetSpecDelta struct {\n\tTitleChanged         bool\n\tBodyChanged          bool\n\tUndraft              bool\n\tBaseRefChanged       bool\n\tDiffChanged          bool\n\tCommitMessageChanged bool\n\tAuthorNameChanged    bool\n\tAuthorEmailChanged   bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#compareChangesetSpecs",
+                    "documentation": {
+                      "identifier": "compareChangesetSpecs",
+                      "newPage": false,
+                      "searchKey": "reconciler.compareChangesetSpecs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetSpecDelta, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc compareChangesetSpecs(previous, current *btypes.ChangesetSpec) (*ChangesetSpecDelta, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#ChangesetSpecDelta.String",
+                    "documentation": {
+                      "identifier": "ChangesetSpecDelta.String",
+                      "newPage": false,
+                      "searchKey": "reconciler.ChangesetSpecDelta.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *ChangesetSpecDelta) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *ChangesetSpecDelta) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#ChangesetSpecDelta.NeedCommitUpdate",
+                    "documentation": {
+                      "identifier": "ChangesetSpecDelta.NeedCommitUpdate",
+                      "newPage": false,
+                      "searchKey": "reconciler.ChangesetSpecDelta.NeedCommitUpdate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *ChangesetSpecDelta) NeedCommitUpdate() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *ChangesetSpecDelta) NeedCommitUpdate() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#ChangesetSpecDelta.NeedCodeHostUpdate",
+                    "documentation": {
+                      "identifier": "ChangesetSpecDelta.NeedCodeHostUpdate",
+                      "newPage": false,
+                      "searchKey": "reconciler.ChangesetSpecDelta.NeedCodeHostUpdate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *ChangesetSpecDelta) NeedCodeHostUpdate() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#ChangesetSpecDelta.AttributesChanged",
+                    "documentation": {
+                      "identifier": "ChangesetSpecDelta.AttributesChanged",
+                      "newPage": false,
+                      "searchKey": "reconciler.ChangesetSpecDelta.AttributesChanged",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *ChangesetSpecDelta) AttributesChanged() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *ChangesetSpecDelta) AttributesChanged() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#GitserverClient",
+              "documentation": {
+                "identifier": "GitserverClient",
+                "newPage": false,
+                "searchKey": "reconciler.GitserverClient",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClient interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClient interface {\n\tCreateCommitFromPatch(ctx context.Context, req protocol.CreateCommitFromPatchRequest) (string, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#Reconciler",
+              "documentation": {
+                "identifier": "Reconciler",
+                "newPage": false,
+                "searchKey": "reconciler.Reconciler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reconciler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reconciler struct {\n\tgitserverClient GitserverClient\n\tsourcer         sources.Sourcer\n\tstore           *store.Store\n\n\t// This is used to disable a time.Sleep for operationSleep so that the\n\t// tests don't run slower.\n\tnoSleepBeforeSync bool\n}\n```\n\nReconciler processes changesets and reconciles their current state — in Sourcegraph or on the code host — with that described in the current ChangesetSpec associated with the changeset. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "reconciler.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(gitClient GitserverClient, sourcer sources.Sourcer, store *store.Store) *Reconciler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(gitClient GitserverClient, sourcer sources.Sourcer, store *store.Store) *Reconciler\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#Reconciler.HandlerFunc",
+                    "documentation": {
+                      "identifier": "Reconciler.HandlerFunc",
+                      "newPage": false,
+                      "searchKey": "reconciler.Reconciler.HandlerFunc",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reconciler) HandlerFunc() dbworker.HandlerFunc"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reconciler) HandlerFunc() dbworker.HandlerFunc\n```\n\nHandlerFunc returns a dbworker.HandlerFunc that can be passed to a workerutil.Worker to process queued changesets. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#Reconciler.process",
+                    "documentation": {
+                      "identifier": "Reconciler.process",
+                      "newPage": false,
+                      "searchKey": "reconciler.Reconciler.process",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reconciler) process(ctx context.Context, tx *store.Store, ch *btypes.Changeset) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reconciler) process(ctx context.Context, tx *store.Store, ch *btypes.Changeset) error\n```\n\nprocess is the main entry point of the reconciler and processes changesets that were marked as queued in the database. \n\nFor each changeset, the reconciler computes an execution plan to run to reconcile a possible divergence between the changeset's current state and the desired state (for example expressed in a changeset spec). \n\nTo do that, the reconciler looks at the changeset's current state (publication state, external state, sync state, ...), its (if set) current ChangesetSpec, and (if it exists) its previous ChangesetSpec. \n\nIf an error is returned, the workerutil.Worker that called this function (through the HandlerFunc) will set the changeset's ReconcilerState to errored and set its FailureMessage to the error. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#mockInternalClient",
+              "documentation": {
+                "identifier": "mockInternalClient",
+                "newPage": false,
+                "searchKey": "reconciler.mockInternalClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockInternalClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockInternalClient struct {\n\texternalURL string\n\terr         error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#mockInternalClient.ExternalURL",
+                    "documentation": {
+                      "identifier": "mockInternalClient.ExternalURL",
+                      "newPage": false,
+                      "searchKey": "reconciler.mockInternalClient.ExternalURL",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *mockInternalClient) ExternalURL(ctx context.Context) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *mockInternalClient) ExternalURL(ctx context.Context) (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#mockMissingErr",
+              "documentation": {
+                "identifier": "mockMissingErr",
+                "newPage": false,
+                "searchKey": "reconciler.mockMissingErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockMissingErr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockMissingErr struct {\n\tmockName string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#mockMissingErr.Error",
+                    "documentation": {
+                      "identifier": "mockMissingErr.Error",
+                      "newPage": false,
+                      "searchKey": "reconciler.mockMissingErr.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e mockMissingErr) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e mockMissingErr) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#FakeStore",
+              "documentation": {
+                "identifier": "FakeStore",
+                "newPage": false,
+                "searchKey": "reconciler.FakeStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FakeStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FakeStore struct {\n\tGetBatchChangeMock func(context.Context, store.GetBatchChangeOpts) (*btypes.BatchChange, error)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/reconciler#FakeStore.GetBatchChange",
+                    "documentation": {
+                      "identifier": "FakeStore.GetBatchChange",
+                      "newPage": false,
+                      "searchKey": "reconciler.FakeStore.GetBatchChange",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs *FakeStore) GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs *FakeStore) GetBatchChange(ctx context.Context, opts store.GetBatchChangeOpts) (*btypes.BatchChange, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/reconciler#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#executePlan",
+              "documentation": {
+                "identifier": "executePlan",
+                "newPage": false,
+                "searchKey": "reconciler.executePlan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc executePlan(ctx context.Context, gitserverClient GitserverClient, sourcer sources.Sourcer, noSleepBeforeSync bool, tx *store.Store, plan *Plan) (err error)\n```\n\nexecutePlan executes the given reconciler plan. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#loadChangesetSource",
+              "documentation": {
+                "identifier": "loadChangesetSource",
+                "newPage": false,
+                "searchKey": "reconciler.loadChangesetSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.Sourcer, ch *btypes.Changeset, repo *types.Repo) (sources.ChangesetSource, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadChangesetSource(ctx context.Context, s *store.Store, sourcer sources.Sourcer, ch *btypes.Changeset, repo *types.Repo) (sources.ChangesetSource, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#buildCommitOpts",
+              "documentation": {
+                "identifier": "buildCommitOpts",
+                "newPage": false,
+                "searchKey": "reconciler.buildCommitOpts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildCommitOpts(repo *types.Repo, spec *btypes.ChangesetSpec, pushOpts *protocol.PushConfig) (opts protocol.CreateCommitFromPatchRequest, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#loadBatchChange",
+              "documentation": {
+                "identifier": "loadBatchChange",
+                "newPage": false,
+                "searchKey": "reconciler.loadBatchChange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadBatchChange(ctx context.Context, tx getBatchChanger, id int64) (*btypes.BatchChange, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#decorateChangesetBody",
+              "documentation": {
+                "identifier": "decorateChangesetBody",
+                "newPage": false,
+                "searchKey": "reconciler.decorateChangesetBody",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decorateChangesetBody(ctx context.Context, tx getBatchChanger, nsStore getNamespacer, cs *sources.Changeset) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#batchChangeURL",
+              "documentation": {
+                "identifier": "batchChangeURL",
+                "newPage": false,
+                "searchKey": "reconciler.batchChangeURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc batchChangeURL(ctx context.Context, ns *database.Namespace, c *btypes.BatchChange) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#namespaceURL",
+              "documentation": {
+                "identifier": "namespaceURL",
+                "newPage": false,
+                "searchKey": "reconciler.namespaceURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func namespaceURL(ns *database.Namespace) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc namespaceURL(ns *database.Namespace) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#reopenAfterDetach",
+              "documentation": {
+                "identifier": "reopenAfterDetach",
+                "newPage": false,
+                "searchKey": "reconciler.reopenAfterDetach",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reopenAfterDetach(ch *btypes.Changeset) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reopenAfterDetach(ch *btypes.Changeset) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#loadChangesetSpecs",
+              "documentation": {
+                "identifier": "loadChangesetSpecs",
+                "newPage": false,
+                "searchKey": "reconciler.loadChangesetSpecs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changeset) (prev, curr *btypes.ChangesetSpec, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadChangesetSpecs(ctx context.Context, tx *store.Store, ch *btypes.Changeset) (prev, curr *btypes.ChangesetSpec, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestExecutor_ExecutePlan",
+              "documentation": {
+                "identifier": "TestExecutor_ExecutePlan",
+                "newPage": false,
+                "searchKey": "reconciler.TestExecutor_ExecutePlan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExecutor_ExecutePlan(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExecutor_ExecutePlan(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch",
+              "documentation": {
+                "identifier": "TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch",
+                "newPage": false,
+                "searchKey": "reconciler.TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExecutor_ExecutePlan_PublishedChangesetDuplicateBranch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestLoadChangesetSource",
+              "documentation": {
+                "identifier": "TestLoadChangesetSource",
+                "newPage": false,
+                "searchKey": "reconciler.TestLoadChangesetSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoadChangesetSource(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoadChangesetSource(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestExecutor_UserCredentialsForGitserver",
+              "documentation": {
+                "identifier": "TestExecutor_UserCredentialsForGitserver",
+                "newPage": false,
+                "searchKey": "reconciler.TestExecutor_UserCredentialsForGitserver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExecutor_UserCredentialsForGitserver(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExecutor_UserCredentialsForGitserver(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestDecorateChangesetBody",
+              "documentation": {
+                "identifier": "TestDecorateChangesetBody",
+                "newPage": false,
+                "searchKey": "reconciler.TestDecorateChangesetBody",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecorateChangesetBody(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecorateChangesetBody(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestBatchChangeURL",
+              "documentation": {
+                "identifier": "TestBatchChangeURL",
+                "newPage": false,
+                "searchKey": "reconciler.TestBatchChangeURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBatchChangeURL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBatchChangeURL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestNamespaceURL",
+              "documentation": {
+                "identifier": "TestNamespaceURL",
+                "newPage": false,
+                "searchKey": "reconciler.TestNamespaceURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNamespaceURL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNamespaceURL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#buildGithubPR",
+              "documentation": {
+                "identifier": "buildGithubPR",
+                "newPage": false,
+                "searchKey": "reconciler.buildGithubPR",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildGithubPR(now time.Time, externalState btypes.ChangesetExternalState) *github.PullRequest\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestDetermineReconcilerPlan",
+              "documentation": {
+                "identifier": "TestDetermineReconcilerPlan",
+                "newPage": false,
+                "searchKey": "reconciler.TestDetermineReconcilerPlan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDetermineReconcilerPlan(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDetermineReconcilerPlan(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/reconciler#TestReconcilerProcess_IntegrationTest",
+              "documentation": {
+                "identifier": "TestReconcilerProcess_IntegrationTest",
+                "newPage": false,
+                "searchKey": "reconciler.TestReconcilerProcess_IntegrationTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReconcilerProcess_IntegrationTest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReconcilerProcess_IntegrationTest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

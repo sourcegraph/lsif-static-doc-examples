@@ -1,0 +1,2770 @@
+{
+  "pathID": "/enterprise/internal/codemonitors/resolvers",
+  "documentation": {
+    "identifier": "resolvers",
+    "newPage": true,
+    "searchKey": "enterprise/internal/codemonitors/resolvers",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package resolvers"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/resolvers#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#MonitorKind",
+              "documentation": {
+                "identifier": "MonitorKind",
+                "newPage": false,
+                "searchKey": "resolvers.MonitorKind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MonitorKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MonitorKind = \"CodeMonitor\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerQueryKind",
+              "documentation": {
+                "identifier": "monitorTriggerQueryKind",
+                "newPage": false,
+                "searchKey": "resolvers.monitorTriggerQueryKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const monitorTriggerQueryKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst monitorTriggerQueryKind = \"CodeMonitorTriggerQuery\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEventKind",
+              "documentation": {
+                "identifier": "monitorTriggerEventKind",
+                "newPage": false,
+                "searchKey": "resolvers.monitorTriggerEventKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const monitorTriggerEventKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst monitorTriggerEventKind = \"CodeMonitorTriggerEvent\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEmailKind",
+              "documentation": {
+                "identifier": "monitorActionEmailKind",
+                "newPage": false,
+                "searchKey": "resolvers.monitorActionEmailKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const monitorActionEmailKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst monitorActionEmailKind = \"CodeMonitorActionEmail\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEventKind",
+              "documentation": {
+                "identifier": "monitorActionEventKind",
+                "newPage": false,
+                "searchKey": "resolvers.monitorActionEventKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const monitorActionEventKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst monitorActionEventKind = \"CodeMonitorActionEmailEvent\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEmailRecipientKind",
+              "documentation": {
+                "identifier": "monitorActionEmailRecipientKind",
+                "newPage": false,
+                "searchKey": "resolvers.monitorActionEmailRecipientKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const monitorActionEmailRecipientKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst monitorActionEmailRecipientKind = \"CodeMonitorActionEmailRecipient\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#queryByUserFmtStr",
+              "documentation": {
+                "identifier": "queryByUserFmtStr",
+                "newPage": false,
+                "searchKey": "resolvers.queryByUserFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const queryByUserFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst queryByUserFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#editMonitor",
+              "documentation": {
+                "identifier": "editMonitor",
+                "newPage": false,
+                "searchKey": "resolvers.editMonitor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const editMonitor"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst editMonitor = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#recipientsPagingFmtStr",
+              "documentation": {
+                "identifier": "recipientsPagingFmtStr",
+                "newPage": false,
+                "searchKey": "resolvers.recipientsPagingFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const recipientsPagingFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst recipientsPagingFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#queryMonitorByIDFmtStr",
+              "documentation": {
+                "identifier": "queryMonitorByIDFmtStr",
+                "newPage": false,
+                "searchKey": "resolvers.queryMonitorByIDFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const queryMonitorByIDFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst queryMonitorByIDFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorPagingFmtStr",
+              "documentation": {
+                "identifier": "monitorPagingFmtStr",
+                "newPage": false,
+                "searchKey": "resolvers.monitorPagingFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const monitorPagingFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst monitorPagingFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#actionPagingFmtStr",
+              "documentation": {
+                "identifier": "actionPagingFmtStr",
+                "newPage": false,
+                "searchKey": "resolvers.actionPagingFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const actionPagingFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst actionPagingFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#triggerEventPagingFmtStr",
+              "documentation": {
+                "identifier": "triggerEventPagingFmtStr",
+                "newPage": false,
+                "searchKey": "resolvers.triggerEventPagingFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const triggerEventPagingFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst triggerEventPagingFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#actionEventPagingFmtStr",
+              "documentation": {
+                "identifier": "actionEventPagingFmtStr",
+                "newPage": false,
+                "searchKey": "resolvers.actionEventPagingFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const actionEventPagingFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst actionEventPagingFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/resolvers#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#stateToStatus",
+              "documentation": {
+                "identifier": "stateToStatus",
+                "newPage": false,
+                "searchKey": "resolvers.stateToStatus",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stateToStatus"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stateToStatus = ...\n```\n\nstateToStatus maps the state of the dbworker job to the public GraphQL status of events. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/resolvers#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver",
+              "documentation": {
+                "identifier": "Resolver",
+                "newPage": false,
+                "searchKey": "resolvers.Resolver",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Resolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Resolver struct {\n\tstore *cm.Store\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#newTestResolver",
+                    "documentation": {
+                      "identifier": "newTestResolver",
+                      "newPage": false,
+                      "searchKey": "resolvers.newTestResolver",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newTestResolver(t *testing.T, db dbutil.DB) *Resolver"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newTestResolver(t *testing.T, db dbutil.DB) *Resolver\n```\n\nnewTestResolver returns a Resolver with stopped clock, which is useful to compare input and outputs in tests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.Now",
+                    "documentation": {
+                      "identifier": "Resolver.Now",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.Now",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) Now() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) Now() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.NodeResolvers",
+                    "documentation": {
+                      "identifier": "Resolver.NodeResolvers",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.NodeResolvers",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) NodeResolvers() map[string]graphqlbackend.NodeByIDFunc"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) NodeResolvers() map[string]graphqlbackend.NodeByIDFunc\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.Monitors",
+                    "documentation": {
+                      "identifier": "Resolver.Monitors",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.Monitors",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) Monitors(ctx context.Context, userID int32, args *graphqlbackend.ListMonitorsArgs) (graphqlbackend.MonitorConnectionResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) Monitors(ctx context.Context, userID int32, args *graphqlbackend.ListMonitorsArgs) (graphqlbackend.MonitorConnectionResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.MonitorByID",
+                    "documentation": {
+                      "identifier": "Resolver.MonitorByID",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.MonitorByID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) MonitorByID(ctx context.Context, id graphql.ID) (m graphqlbackend.MonitorResolver, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) MonitorByID(ctx context.Context, id graphql.ID) (m graphqlbackend.MonitorResolver, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.CreateCodeMonitor",
+                    "documentation": {
+                      "identifier": "Resolver.CreateCodeMonitor",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.CreateCodeMonitor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) CreateCodeMonitor(ctx context.Context, args *graphqlbackend.CreateCodeMonitorArgs) (m graphqlbackend.MonitorResolver, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) CreateCodeMonitor(ctx context.Context, args *graphqlbackend.CreateCodeMonitorArgs) (m graphqlbackend.MonitorResolver, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.ToggleCodeMonitor",
+                    "documentation": {
+                      "identifier": "Resolver.ToggleCodeMonitor",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.ToggleCodeMonitor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) ToggleCodeMonitor(ctx context.Context, args *graphqlbackend.ToggleCodeMonitorArgs) (mr graphqlbackend.MonitorResolver, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) ToggleCodeMonitor(ctx context.Context, args *graphqlbackend.ToggleCodeMonitorArgs) (mr graphqlbackend.MonitorResolver, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.DeleteCodeMonitor",
+                    "documentation": {
+                      "identifier": "Resolver.DeleteCodeMonitor",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.DeleteCodeMonitor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) DeleteCodeMonitor(ctx context.Context, args *graphqlbackend.DeleteCodeMonitorArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) DeleteCodeMonitor(ctx context.Context, args *graphqlbackend.DeleteCodeMonitorArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.UpdateCodeMonitor",
+                    "documentation": {
+                      "identifier": "Resolver.UpdateCodeMonitor",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.UpdateCodeMonitor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) UpdateCodeMonitor(ctx context.Context, args *graphqlbackend.UpdateCodeMonitorArgs) (m graphqlbackend.MonitorResolver, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) UpdateCodeMonitor(ctx context.Context, args *graphqlbackend.UpdateCodeMonitorArgs) (m graphqlbackend.MonitorResolver, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.ResetTriggerQueryTimestamps",
+                    "documentation": {
+                      "identifier": "Resolver.ResetTriggerQueryTimestamps",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.ResetTriggerQueryTimestamps",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) ResetTriggerQueryTimestamps(ctx context.Context, args *graphqlbackend.ResetTriggerQueryTimestampsArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) ResetTriggerQueryTimestamps(ctx context.Context, args *graphqlbackend.ResetTriggerQueryTimestampsArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\nResetTriggerQueryTimestamps is a convenience function which resets the timestamps `next_run` and `last_result` with the purpose to trigger associated actions (emails, webhooks) immediately. This is useful during development and troubleshooting. Only site admins can call this functions. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.TriggerTestEmailAction",
+                    "documentation": {
+                      "identifier": "Resolver.TriggerTestEmailAction",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.TriggerTestEmailAction",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) TriggerTestEmailAction(ctx context.Context, args *graphqlbackend.TriggerTestEmailActionArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) TriggerTestEmailAction(ctx context.Context, args *graphqlbackend.TriggerTestEmailActionArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.actionIDsForMonitorIDInt64",
+                    "documentation": {
+                      "identifier": "Resolver.actionIDsForMonitorIDInt64",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.actionIDsForMonitorIDInt64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) actionIDsForMonitorIDInt64(ctx context.Context, monitorID int64) (actionIDs []graphql.ID, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) actionIDsForMonitorIDInt64(ctx context.Context, monitorID int64) (actionIDs []graphql.ID, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.actionIDsForMonitorIDINT64SinglePage",
+                    "documentation": {
+                      "identifier": "Resolver.actionIDsForMonitorIDINT64SinglePage",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.actionIDsForMonitorIDINT64SinglePage",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) actionIDsForMonitorIDINT64SinglePage(ctx context.Context, q *sqlf.Query, limit int) (ids []graphql.ID, cursor *string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) actionIDsForMonitorIDINT64SinglePage(ctx context.Context, q *sqlf.Query, limit int) (ids []graphql.ID, cursor *string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.updateCodeMonitor",
+                    "documentation": {
+                      "identifier": "Resolver.updateCodeMonitor",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.updateCodeMonitor",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) updateCodeMonitor(ctx context.Context, args *graphqlbackend.UpdateCodeMonitorArgs) (m graphqlbackend.MonitorResolver, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) updateCodeMonitor(ctx context.Context, args *graphqlbackend.UpdateCodeMonitorArgs) (m graphqlbackend.MonitorResolver, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.transact",
+                    "documentation": {
+                      "identifier": "Resolver.transact",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.transact",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) transact(ctx context.Context) (*Resolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) transact(ctx context.Context) (*Resolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.isAllowedToEdit",
+                    "documentation": {
+                      "identifier": "Resolver.isAllowedToEdit",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.isAllowedToEdit",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) isAllowedToEdit(ctx context.Context, monitorID graphql.ID) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) isAllowedToEdit(ctx context.Context, monitorID graphql.ID) error\n```\n\nisAllowedToEdit checks whether an actor is allowed to edit a given monitor. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.isAllowedToCreate",
+                    "documentation": {
+                      "identifier": "Resolver.isAllowedToCreate",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.isAllowedToCreate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) isAllowedToCreate(ctx context.Context, owner graphql.ID) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) isAllowedToCreate(ctx context.Context, owner graphql.ID) error\n```\n\nisAllowedToCreate compares the owner of a monitor (user or org) to the actor of the request. A user can create a monitor if either of the following statements is true: - she is the owner - she is a member of the organization which is the owner of the monitor - she is a site-admin \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.ownerForID64",
+                    "documentation": {
+                      "identifier": "Resolver.ownerForID64",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.ownerForID64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) ownerForID64(ctx context.Context, monitorID int64) (owner graphql.ID, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) ownerForID64(ctx context.Context, monitorID int64) (owner graphql.ID, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.actionConnectionResolverWithTriggerID",
+                    "documentation": {
+                      "identifier": "Resolver.actionConnectionResolverWithTriggerID",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.actionConnectionResolverWithTriggerID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) actionConnectionResolverWithTriggerID(ctx context.Context, triggerEventID *int, monitorID int64, args *graphqlbackend.ListActionArgs) (graphqlbackend.MonitorActionConnectionResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) actionConnectionResolverWithTriggerID(ctx context.Context, triggerEventID *int, monitorID int64, args *graphqlbackend.ListActionArgs) (graphqlbackend.MonitorActionConnectionResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#Resolver.insertTestMonitorWithOpts",
+                    "documentation": {
+                      "identifier": "Resolver.insertTestMonitorWithOpts",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.insertTestMonitorWithOpts",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) insertTestMonitorWithOpts(ctx context.Context, t *testing.T, opts ...Option) (graphqlbackend.MonitorResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) insertTestMonitorWithOpts(ctx context.Context, t *testing.T, opts ...Option) (graphqlbackend.MonitorResolver, error)\n```\n\ninsertTestMonitorWithOpts is a test helper that creates monitors for test purposes with sensible defaults. You can override the defaults by providing (optional) opts. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorConnection",
+              "documentation": {
+                "identifier": "monitorConnection",
+                "newPage": false,
+                "searchKey": "resolvers.monitorConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorConnection struct {\n\t*Resolver\n\tmonitors    []graphqlbackend.MonitorResolver\n\ttotalCount  int32\n\thasNextPage bool\n}\n```\n\nMonitorConnection \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorConnection.Nodes",
+                    "documentation": {
+                      "identifier": "monitorConnection.Nodes",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorConnection.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorConnection) Nodes(ctx context.Context) ([]graphqlbackend.MonitorResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorConnection) Nodes(ctx context.Context) ([]graphqlbackend.MonitorResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorConnection.TotalCount",
+                    "documentation": {
+                      "identifier": "monitorConnection.TotalCount",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorConnection.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorConnection) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorConnection) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorConnection.PageInfo",
+                    "documentation": {
+                      "identifier": "monitorConnection.PageInfo",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorConnection.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitor",
+              "documentation": {
+                "identifier": "monitor",
+                "newPage": false,
+                "searchKey": "resolvers.monitor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitor struct {\n\t*Resolver\n\t*cm.Monitor\n}\n```\n\nMonitor \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitor.ID",
+                    "documentation": {
+                      "identifier": "monitor.ID",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitor.ID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitor) ID() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitor) ID() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitor.CreatedBy",
+                    "documentation": {
+                      "identifier": "monitor.CreatedBy",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitor.CreatedBy",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitor) CreatedBy(ctx context.Context) (*graphqlbackend.UserResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitor) CreatedBy(ctx context.Context) (*graphqlbackend.UserResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitor.CreatedAt",
+                    "documentation": {
+                      "identifier": "monitor.CreatedAt",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitor.CreatedAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitor) CreatedAt() graphqlbackend.DateTime"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitor) CreatedAt() graphqlbackend.DateTime\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitor.Description",
+                    "documentation": {
+                      "identifier": "monitor.Description",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitor.Description",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitor) Description() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitor) Description() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitor.Enabled",
+                    "documentation": {
+                      "identifier": "monitor.Enabled",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitor.Enabled",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitor) Enabled() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitor) Enabled() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitor.Owner",
+                    "documentation": {
+                      "identifier": "monitor.Owner",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitor.Owner",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitor) Owner(ctx context.Context) (n graphqlbackend.NamespaceResolver, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitor) Owner(ctx context.Context) (n graphqlbackend.NamespaceResolver, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitor.Trigger",
+                    "documentation": {
+                      "identifier": "monitor.Trigger",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitor.Trigger",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitor) Trigger(ctx context.Context) (graphqlbackend.MonitorTrigger, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitor) Trigger(ctx context.Context) (graphqlbackend.MonitorTrigger, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitor.Actions",
+                    "documentation": {
+                      "identifier": "monitor.Actions",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitor.Actions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitor) Actions(ctx context.Context, args *graphqlbackend.ListActionArgs) (graphqlbackend.MonitorActionConnectionResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitor) Actions(ctx context.Context, args *graphqlbackend.ListActionArgs) (graphqlbackend.MonitorActionConnectionResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTrigger",
+              "documentation": {
+                "identifier": "monitorTrigger",
+                "newPage": false,
+                "searchKey": "resolvers.monitorTrigger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorTrigger struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorTrigger struct {\n\tquery graphqlbackend.MonitorQueryResolver\n}\n```\n\nMonitorTrigger <<UNION>> \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTrigger.ToMonitorQuery",
+                    "documentation": {
+                      "identifier": "monitorTrigger.ToMonitorQuery",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTrigger.ToMonitorQuery",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *monitorTrigger) ToMonitorQuery() (graphqlbackend.MonitorQueryResolver, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *monitorTrigger) ToMonitorQuery() (graphqlbackend.MonitorQueryResolver, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorQuery",
+              "documentation": {
+                "identifier": "monitorQuery",
+                "newPage": false,
+                "searchKey": "resolvers.monitorQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorQuery struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorQuery struct {\n\t*Resolver\n\t*cm.MonitorQuery\n}\n```\n\nQuery \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorQuery.ID",
+                    "documentation": {
+                      "identifier": "monitorQuery.ID",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorQuery.ID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (q *monitorQuery) ID() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (q *monitorQuery) ID() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorQuery.Query",
+                    "documentation": {
+                      "identifier": "monitorQuery.Query",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorQuery.Query",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (q *monitorQuery) Query() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (q *monitorQuery) Query() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorQuery.Events",
+                    "documentation": {
+                      "identifier": "monitorQuery.Events",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorQuery.Events",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (q *monitorQuery) Events(ctx context.Context, args *graphqlbackend.ListEventsArgs) (graphqlbackend.MonitorTriggerEventConnectionResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (q *monitorQuery) Events(ctx context.Context, args *graphqlbackend.ListEventsArgs) (graphqlbackend.MonitorTriggerEventConnectionResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEventConnection",
+              "documentation": {
+                "identifier": "monitorTriggerEventConnection",
+                "newPage": false,
+                "searchKey": "resolvers.monitorTriggerEventConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorTriggerEventConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorTriggerEventConnection struct {\n\t*Resolver\n\tevents     []graphqlbackend.MonitorTriggerEventResolver\n\ttotalCount int32\n}\n```\n\nMonitorTriggerEventConnection \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEventConnection.Nodes",
+                    "documentation": {
+                      "identifier": "monitorTriggerEventConnection.Nodes",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTriggerEventConnection.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorTriggerEventConnection) Nodes(ctx context.Context) ([]graphqlbackend.MonitorTriggerEventResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorTriggerEventConnection) Nodes(ctx context.Context) ([]graphqlbackend.MonitorTriggerEventResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEventConnection.TotalCount",
+                    "documentation": {
+                      "identifier": "monitorTriggerEventConnection.TotalCount",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTriggerEventConnection.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorTriggerEventConnection) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorTriggerEventConnection) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEventConnection.PageInfo",
+                    "documentation": {
+                      "identifier": "monitorTriggerEventConnection.PageInfo",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTriggerEventConnection.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorTriggerEventConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorTriggerEventConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEvent",
+              "documentation": {
+                "identifier": "monitorTriggerEvent",
+                "newPage": false,
+                "searchKey": "resolvers.monitorTriggerEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorTriggerEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorTriggerEvent struct {\n\t*Resolver\n\t*cm.TriggerJobs\n\tmonitorID int64\n}\n```\n\nMonitorTriggerEvent \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEvent.ID",
+                    "documentation": {
+                      "identifier": "monitorTriggerEvent.ID",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTriggerEvent.ID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorTriggerEvent) ID() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorTriggerEvent) ID() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEvent.Status",
+                    "documentation": {
+                      "identifier": "monitorTriggerEvent.Status",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTriggerEvent.Status",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorTriggerEvent) Status() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorTriggerEvent) Status() (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEvent.Message",
+                    "documentation": {
+                      "identifier": "monitorTriggerEvent.Message",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTriggerEvent.Message",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorTriggerEvent) Message() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorTriggerEvent) Message() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEvent.Timestamp",
+                    "documentation": {
+                      "identifier": "monitorTriggerEvent.Timestamp",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTriggerEvent.Timestamp",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorTriggerEvent) Timestamp() (graphqlbackend.DateTime, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorTriggerEvent) Timestamp() (graphqlbackend.DateTime, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorTriggerEvent.Actions",
+                    "documentation": {
+                      "identifier": "monitorTriggerEvent.Actions",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorTriggerEvent.Actions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorTriggerEvent) Actions(ctx context.Context, args *graphqlbackend.ListActionArgs) (graphqlbackend.MonitorActionConnectionResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorTriggerEvent) Actions(ctx context.Context, args *graphqlbackend.ListActionArgs) (graphqlbackend.MonitorActionConnectionResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionConnection",
+              "documentation": {
+                "identifier": "monitorActionConnection",
+                "newPage": false,
+                "searchKey": "resolvers.monitorActionConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorActionConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorActionConnection struct {\n\tactions    []graphqlbackend.MonitorAction\n\ttotalCount int32\n}\n```\n\nActionConnection \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionConnection.Nodes",
+                    "documentation": {
+                      "identifier": "monitorActionConnection.Nodes",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionConnection.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionConnection) Nodes(ctx context.Context) ([]graphqlbackend.MonitorAction, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionConnection) Nodes(ctx context.Context) ([]graphqlbackend.MonitorAction, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionConnection.TotalCount",
+                    "documentation": {
+                      "identifier": "monitorActionConnection.TotalCount",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionConnection.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionConnection) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionConnection) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionConnection.PageInfo",
+                    "documentation": {
+                      "identifier": "monitorActionConnection.PageInfo",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionConnection.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#action",
+              "documentation": {
+                "identifier": "action",
+                "newPage": false,
+                "searchKey": "resolvers.action",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type action struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype action struct {\n\temail graphqlbackend.MonitorEmailResolver\n}\n```\n\nAction <<UNION>> \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#action.ToMonitorEmail",
+                    "documentation": {
+                      "identifier": "action.ToMonitorEmail",
+                      "newPage": false,
+                      "searchKey": "resolvers.action.ToMonitorEmail",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *action) ToMonitorEmail() (graphqlbackend.MonitorEmailResolver, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *action) ToMonitorEmail() (graphqlbackend.MonitorEmailResolver, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorEmail",
+              "documentation": {
+                "identifier": "monitorEmail",
+                "newPage": false,
+                "searchKey": "resolvers.monitorEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorEmail struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorEmail struct {\n\t*Resolver\n\t*cm.MonitorEmail\n\n\t// If triggerEventID == nil, all events of this action will be returned.\n\t// Otherwise, only those events of this action which are related to the specified\n\t// trigger event will be returned.\n\ttriggerEventID *int\n}\n```\n\nEmail \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorEmail.Recipients",
+                    "documentation": {
+                      "identifier": "monitorEmail.Recipients",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorEmail.Recipients",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorEmail) Recipients(ctx context.Context, args *graphqlbackend.ListRecipientsArgs) (c graphqlbackend.MonitorActionEmailRecipientsConnectionResolver, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorEmail) Recipients(ctx context.Context, args *graphqlbackend.ListRecipientsArgs) (c graphqlbackend.MonitorActionEmailRecipientsConnectionResolver, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorEmail.Enabled",
+                    "documentation": {
+                      "identifier": "monitorEmail.Enabled",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorEmail.Enabled",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorEmail) Enabled() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorEmail) Enabled() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorEmail.Priority",
+                    "documentation": {
+                      "identifier": "monitorEmail.Priority",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorEmail.Priority",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorEmail) Priority() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorEmail) Priority() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorEmail.Header",
+                    "documentation": {
+                      "identifier": "monitorEmail.Header",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorEmail.Header",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorEmail) Header() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorEmail) Header() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorEmail.ID",
+                    "documentation": {
+                      "identifier": "monitorEmail.ID",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorEmail.ID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorEmail) ID() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorEmail) ID() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorEmail.Events",
+                    "documentation": {
+                      "identifier": "monitorEmail.Events",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorEmail.Events",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorEmail) Events(ctx context.Context, args *graphqlbackend.ListEventsArgs) (graphqlbackend.MonitorActionEventConnectionResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorEmail) Events(ctx context.Context, args *graphqlbackend.ListEventsArgs) (graphqlbackend.MonitorActionEventConnectionResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEmailRecipientsConnection",
+              "documentation": {
+                "identifier": "monitorActionEmailRecipientsConnection",
+                "newPage": false,
+                "searchKey": "resolvers.monitorActionEmailRecipientsConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorActionEmailRecipientsConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorActionEmailRecipientsConnection struct {\n\trecipients     []graphqlbackend.NamespaceResolver\n\tnextPageCursor string\n\ttotalCount     int32\n}\n```\n\nMonitorActionEmailRecipientConnection \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEmailRecipientsConnection.Nodes",
+                    "documentation": {
+                      "identifier": "monitorActionEmailRecipientsConnection.Nodes",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEmailRecipientsConnection.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionEmailRecipientsConnection) Nodes(ctx context.Context) ([]graphqlbackend.NamespaceResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionEmailRecipientsConnection) Nodes(ctx context.Context) ([]graphqlbackend.NamespaceResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEmailRecipientsConnection.TotalCount",
+                    "documentation": {
+                      "identifier": "monitorActionEmailRecipientsConnection.TotalCount",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEmailRecipientsConnection.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionEmailRecipientsConnection) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionEmailRecipientsConnection) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEmailRecipientsConnection.PageInfo",
+                    "documentation": {
+                      "identifier": "monitorActionEmailRecipientsConnection.PageInfo",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEmailRecipientsConnection.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionEmailRecipientsConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionEmailRecipientsConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEventConnection",
+              "documentation": {
+                "identifier": "monitorActionEventConnection",
+                "newPage": false,
+                "searchKey": "resolvers.monitorActionEventConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorActionEventConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorActionEventConnection struct {\n\tevents     []graphqlbackend.MonitorActionEventResolver\n\ttotalCount int32\n}\n```\n\nMonitorActionEventConnection \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEventConnection.Nodes",
+                    "documentation": {
+                      "identifier": "monitorActionEventConnection.Nodes",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEventConnection.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionEventConnection) Nodes(ctx context.Context) ([]graphqlbackend.MonitorActionEventResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionEventConnection) Nodes(ctx context.Context) ([]graphqlbackend.MonitorActionEventResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEventConnection.TotalCount",
+                    "documentation": {
+                      "identifier": "monitorActionEventConnection.TotalCount",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEventConnection.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionEventConnection) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionEventConnection) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEventConnection.PageInfo",
+                    "documentation": {
+                      "identifier": "monitorActionEventConnection.PageInfo",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEventConnection.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *monitorActionEventConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *monitorActionEventConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEvent",
+              "documentation": {
+                "identifier": "monitorActionEvent",
+                "newPage": false,
+                "searchKey": "resolvers.monitorActionEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type monitorActionEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype monitorActionEvent struct {\n\t*Resolver\n\t*cm.ActionJob\n}\n```\n\nMonitorEvent \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEvent.ID",
+                    "documentation": {
+                      "identifier": "monitorActionEvent.ID",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEvent.ID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorActionEvent) ID() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorActionEvent) ID() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEvent.Status",
+                    "documentation": {
+                      "identifier": "monitorActionEvent.Status",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEvent.Status",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorActionEvent) Status() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorActionEvent) Status() (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEvent.Message",
+                    "documentation": {
+                      "identifier": "monitorActionEvent.Message",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEvent.Message",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorActionEvent) Message() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorActionEvent) Message() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#monitorActionEvent.Timestamp",
+                    "documentation": {
+                      "identifier": "monitorActionEvent.Timestamp",
+                      "newPage": false,
+                      "searchKey": "resolvers.monitorActionEvent.Timestamp",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *monitorActionEvent) Timestamp() graphqlbackend.DateTime"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *monitorActionEvent) Timestamp() graphqlbackend.DateTime\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#Option",
+              "documentation": {
+                "identifier": "Option",
+                "newPage": false,
+                "searchKey": "resolvers.Option",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Option interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Option interface {\n\tapply(*options)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#WithActions",
+                    "documentation": {
+                      "identifier": "WithActions",
+                      "newPage": false,
+                      "searchKey": "resolvers.WithActions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithActions(actions []*graphqlbackend.CreateActionArgs) Option"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithActions(actions []*graphqlbackend.CreateActionArgs) Option\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#WithOwner",
+                    "documentation": {
+                      "identifier": "WithOwner",
+                      "newPage": false,
+                      "searchKey": "resolvers.WithOwner",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithOwner(owner graphql.ID) Option"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithOwner(owner graphql.ID) Option\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#WithPostHooks",
+                    "documentation": {
+                      "identifier": "WithPostHooks",
+                      "newPage": false,
+                      "searchKey": "resolvers.WithPostHooks",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithPostHooks(hooks []hook) Option"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithPostHooks(hooks []hook) Option\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#hook",
+              "documentation": {
+                "identifier": "hook",
+                "newPage": false,
+                "searchKey": "resolvers.hook",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type hook func() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype hook func() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#options",
+              "documentation": {
+                "identifier": "options",
+                "newPage": false,
+                "searchKey": "resolvers.options",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype options struct {\n\tactions   []*graphqlbackend.CreateActionArgs\n\towner     graphql.ID\n\tpostHooks []hook\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#actionOption",
+              "documentation": {
+                "identifier": "actionOption",
+                "newPage": false,
+                "searchKey": "resolvers.actionOption",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type actionOption struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype actionOption struct {\n\tactions []*graphqlbackend.CreateActionArgs\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#actionOption.apply",
+                    "documentation": {
+                      "identifier": "actionOption.apply",
+                      "newPage": false,
+                      "searchKey": "resolvers.actionOption.apply",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a actionOption) apply(opts *options)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a actionOption) apply(opts *options)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#ownerOption",
+              "documentation": {
+                "identifier": "ownerOption",
+                "newPage": false,
+                "searchKey": "resolvers.ownerOption",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ownerOption struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ownerOption struct {\n\towner graphql.ID\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#ownerOption.apply",
+                    "documentation": {
+                      "identifier": "ownerOption.apply",
+                      "newPage": false,
+                      "searchKey": "resolvers.ownerOption.apply",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o ownerOption) apply(opts *options)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o ownerOption) apply(opts *options)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#postHookOption",
+              "documentation": {
+                "identifier": "postHookOption",
+                "newPage": false,
+                "searchKey": "resolvers.postHookOption",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type postHookOption struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype postHookOption struct {\n\thooks []hook\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#postHookOption.apply",
+                    "documentation": {
+                      "identifier": "postHookOption.apply",
+                      "newPage": false,
+                      "searchKey": "resolvers.postHookOption.apply",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h postHookOption) apply(opts *options)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h postHookOption) apply(opts *options)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#testUser",
+              "documentation": {
+                "identifier": "testUser",
+                "newPage": false,
+                "searchKey": "resolvers.testUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testUser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testUser struct {\n\tname    string\n\tidInt32 int32\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/resolvers#testUser.id",
+                    "documentation": {
+                      "identifier": "testUser.id",
+                      "newPage": false,
+                      "searchKey": "resolvers.testUser.id",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *testUser) id() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *testUser) id() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/resolvers#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#NewResolver",
+              "documentation": {
+                "identifier": "NewResolver",
+                "newPage": false,
+                "searchKey": "resolvers.NewResolver",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewResolver(db dbutil.DB) graphqlbackend.CodeMonitorsResolver"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewResolver(db dbutil.DB) graphqlbackend.CodeMonitorsResolver\n```\n\nNewResolver returns a new Resolver that uses the given database \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#newResolverWithClock",
+              "documentation": {
+                "identifier": "newResolverWithClock",
+                "newPage": false,
+                "searchKey": "resolvers.newResolverWithClock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newResolverWithClock(db dbutil.DB, clock func() time.Time) graphqlbackend.CodeMonitorsResolver"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newResolverWithClock(db dbutil.DB, clock func() time.Time) graphqlbackend.CodeMonitorsResolver\n```\n\nnewResolverWithClock is used in tests to set the clock manually. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#sendTestEmail",
+              "documentation": {
+                "identifier": "sendTestEmail",
+                "newPage": false,
+                "searchKey": "resolvers.sendTestEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sendTestEmail(ctx context.Context, recipient graphql.ID, description string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sendTestEmail(ctx context.Context, recipient graphql.ID, description string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#splitActionIDs",
+              "documentation": {
+                "identifier": "splitActionIDs",
+                "newPage": false,
+                "searchKey": "resolvers.splitActionIDs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func splitActionIDs(ctx context.Context, args *graphqlbackend.UpdateCodeMonitorArgs, actionIDs []graphql.ID) (toCreate []*graphqlbackend.CreateActionArgs, toDelete []int64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc splitActionIDs(ctx context.Context, args *graphqlbackend.UpdateCodeMonitorArgs, actionIDs []graphql.ID) (toCreate []*graphqlbackend.CreateActionArgs, toDelete []int64, err error)\n```\n\nsplitActionIDs splits actions into three buckets: create, delete and update. Note: args is mutated. After splitActionIDs, args only contains actions to be updated. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#ownerForID64Query",
+              "documentation": {
+                "identifier": "ownerForID64Query",
+                "newPage": false,
+                "searchKey": "resolvers.ownerForID64Query",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ownerForID64Query(ctx context.Context, monitorID int64) (*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ownerForID64Query(ctx context.Context, monitorID int64) (*sqlf.Query, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#insertTestUser",
+              "documentation": {
+                "identifier": "insertTestUser",
+                "newPage": false,
+                "searchKey": "resolvers.insertTestUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#addUserToOrg",
+              "documentation": {
+                "identifier": "addUserToOrg",
+                "newPage": false,
+                "searchKey": "resolvers.addUserToOrg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addUserToOrg(t *testing.T, db *sql.DB, userID int32, orgID int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addUserToOrg(t *testing.T, db *sql.DB, userID int32, orgID int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#marshalDateTime",
+              "documentation": {
+                "identifier": "marshalDateTime",
+                "newPage": false,
+                "searchKey": "resolvers.marshalDateTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func marshalDateTime(t testing.TB, ts time.Time) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc marshalDateTime(t testing.TB, ts time.Time) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "resolvers.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#TestCreateCodeMonitor",
+              "documentation": {
+                "identifier": "TestCreateCodeMonitor",
+                "newPage": false,
+                "searchKey": "resolvers.TestCreateCodeMonitor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCreateCodeMonitor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCreateCodeMonitor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#TestListCodeMonitors",
+              "documentation": {
+                "identifier": "TestListCodeMonitors",
+                "newPage": false,
+                "searchKey": "resolvers.TestListCodeMonitors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestListCodeMonitors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestListCodeMonitors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#requireNodeCount",
+              "documentation": {
+                "identifier": "requireNodeCount",
+                "newPage": false,
+                "searchKey": "resolvers.requireNodeCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func requireNodeCount(t *testing.T, r graphqlbackend.MonitorConnectionResolver, c int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc requireNodeCount(t *testing.T, r graphqlbackend.MonitorConnectionResolver, c int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#requireHasNextPage",
+              "documentation": {
+                "identifier": "requireHasNextPage",
+                "newPage": false,
+                "searchKey": "resolvers.requireHasNextPage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func requireHasNextPage(t *testing.T, r graphqlbackend.MonitorConnectionResolver, hasNextPage bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc requireHasNextPage(t *testing.T, r graphqlbackend.MonitorConnectionResolver, hasNextPage bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#TestIsAllowedToEdit",
+              "documentation": {
+                "identifier": "TestIsAllowedToEdit",
+                "newPage": false,
+                "searchKey": "resolvers.TestIsAllowedToEdit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsAllowedToEdit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsAllowedToEdit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#TestIsAllowedToCreate",
+              "documentation": {
+                "identifier": "TestIsAllowedToCreate",
+                "newPage": false,
+                "searchKey": "resolvers.TestIsAllowedToCreate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsAllowedToCreate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsAllowedToCreate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#TestQueryMonitor",
+              "documentation": {
+                "identifier": "TestQueryMonitor",
+                "newPage": false,
+                "searchKey": "resolvers.TestQueryMonitor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestQueryMonitor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestQueryMonitor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#queryByUser",
+              "documentation": {
+                "identifier": "queryByUser",
+                "newPage": false,
+                "searchKey": "resolvers.queryByUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func queryByUser(ctx context.Context, t *testing.T, schema *graphql.Schema, r *Resolver, user1 *testUser, user2 *testUser)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc queryByUser(ctx context.Context, t *testing.T, schema *graphql.Schema, r *Resolver, user1 *testUser, user2 *testUser)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#TestEditCodeMonitor",
+              "documentation": {
+                "identifier": "TestEditCodeMonitor",
+                "newPage": false,
+                "searchKey": "resolvers.TestEditCodeMonitor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEditCodeMonitor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEditCodeMonitor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#recipientPaging",
+              "documentation": {
+                "identifier": "recipientPaging",
+                "newPage": false,
+                "searchKey": "resolvers.recipientPaging",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func recipientPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser, user2 *testUser)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc recipientPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser, user2 *testUser)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#queryByID",
+              "documentation": {
+                "identifier": "queryByID",
+                "newPage": false,
+                "searchKey": "resolvers.queryByID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func queryByID(ctx context.Context, t *testing.T, schema *graphql.Schema, r *Resolver, m *monitor, user1 *testUser, user2 *testUser)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc queryByID(ctx context.Context, t *testing.T, schema *graphql.Schema, r *Resolver, m *monitor, user1 *testUser, user2 *testUser)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#monitorPaging",
+              "documentation": {
+                "identifier": "monitorPaging",
+                "newPage": false,
+                "searchKey": "resolvers.monitorPaging",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func monitorPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc monitorPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#actionPaging",
+              "documentation": {
+                "identifier": "actionPaging",
+                "newPage": false,
+                "searchKey": "resolvers.actionPaging",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func actionPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc actionPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#triggerEventPaging",
+              "documentation": {
+                "identifier": "triggerEventPaging",
+                "newPage": false,
+                "searchKey": "resolvers.triggerEventPaging",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func triggerEventPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc triggerEventPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#actionEventPaging",
+              "documentation": {
+                "identifier": "actionEventPaging",
+                "newPage": false,
+                "searchKey": "resolvers.actionEventPaging",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func actionEventPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc actionEventPaging(ctx context.Context, t *testing.T, schema *graphql.Schema, user1 *testUser)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#TestTriggerTestEmailAction",
+              "documentation": {
+                "identifier": "TestTriggerTestEmailAction",
+                "newPage": false,
+                "searchKey": "resolvers.TestTriggerTestEmailAction",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTriggerTestEmailAction(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTriggerTestEmailAction(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers#TestMonitorKindEqualsResolvers",
+              "documentation": {
+                "identifier": "TestMonitorKindEqualsResolvers",
+                "newPage": false,
+                "searchKey": "resolvers.TestMonitorKindEqualsResolvers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMonitorKindEqualsResolvers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMonitorKindEqualsResolvers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/internal/codemonitors/resolvers/apitest"
+    }
+  ]
+}

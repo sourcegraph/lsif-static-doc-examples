@@ -1,0 +1,132 @@
+{
+  "pathID": "/cmd/server/shared/assets",
+  "documentation": {
+    "identifier": "assets",
+    "newPage": true,
+    "searchKey": "cmd/server/shared/assets",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package assets"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/server/shared/assets#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/server/shared/assets#NginxConf",
+              "documentation": {
+                "identifier": "NginxConf",
+                "newPage": false,
+                "searchKey": "assets.NginxConf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NginxConf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NginxConf string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared/assets#NginxDir",
+              "documentation": {
+                "identifier": "NginxDir",
+                "newPage": false,
+                "searchKey": "assets.NginxDir",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NginxDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NginxDir embed.FS\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared/assets#RedisCacheConf",
+              "documentation": {
+                "identifier": "RedisCacheConf",
+                "newPage": false,
+                "searchKey": "assets.RedisCacheConf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RedisCacheConf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RedisCacheConf string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared/assets#RedisStoreConf",
+              "documentation": {
+                "identifier": "RedisStoreConf",
+                "newPage": false,
+                "searchKey": "assets.RedisStoreConf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RedisStoreConf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RedisStoreConf string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "pathID": "/internal/database/query",
+  "documentation": {
+    "identifier": "query",
+    "newPage": true,
+    "searchKey": "internal/database/query",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package query"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package query provides an expression tree structure which can be converted into WHERE queries. It is used by DB APIs to expose a more powerful query interface. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/database/query#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/query#Q",
+              "documentation": {
+                "identifier": "Q",
+                "newPage": false,
+                "searchKey": "query.Q",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Q interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Q interface{}\n```\n\nQ is a query item. It is converted into a *sqlf.Query by Eval. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/query#And",
+                    "documentation": {
+                      "identifier": "And",
+                      "newPage": false,
+                      "searchKey": "query.And",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func And(children ...Q) Q"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc And(children ...Q) Q\n```\n\nAnd returns a Q which when evaluated will join the children by \"AND\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/query#Or",
+                    "documentation": {
+                      "identifier": "Or",
+                      "newPage": false,
+                      "searchKey": "query.Or",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Or(children ...Q) Q"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Or(children ...Q) Q\n```\n\nOr returns a Q which when evaluated will join the children by \"OR\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/query#Not",
+                    "documentation": {
+                      "identifier": "Not",
+                      "newPage": false,
+                      "searchKey": "query.Not",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Not(child Q) Q"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Not(child Q) Q\n```\n\nNot returns a Q which when evaluated will wrap child with \"NOT\". \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/query#and",
+              "documentation": {
+                "identifier": "and",
+                "newPage": false,
+                "searchKey": "query.and",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type and struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype and struct {\n\tChildren []Q\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/query#or",
+              "documentation": {
+                "identifier": "or",
+                "newPage": false,
+                "searchKey": "query.or",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type or struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype or struct {\n\tChildren []Q\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/query#not",
+              "documentation": {
+                "identifier": "not",
+                "newPage": false,
+                "searchKey": "query.not",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type not struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype not struct {\n\tChild Q\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/query#printfBindVar",
+              "documentation": {
+                "identifier": "printfBindVar",
+                "newPage": false,
+                "searchKey": "query.printfBindVar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type printfBindVar struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype printfBindVar struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/query#printfBindVar.BindVar",
+                    "documentation": {
+                      "identifier": "printfBindVar.BindVar",
+                      "newPage": false,
+                      "searchKey": "query.printfBindVar.BindVar",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (printfBindVar) BindVar(i int) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (printfBindVar) BindVar(i int) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/query#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/query#Eval",
+              "documentation": {
+                "identifier": "Eval",
+                "newPage": false,
+                "searchKey": "query.Eval",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Eval(q Q, atomToQueryFn func(q Q) (*sqlf.Query, error)) (*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Eval(q Q, atomToQueryFn func(q Q) (*sqlf.Query, error)) (*sqlf.Query, error)\n```\n\nEval runs all atoms of q through atomToQueryFn, returning the final query to run. If any call of atomToQueryFn returns an error, that error is returned by Eval. \n\nEval handles And, Or, Not and booleans. Otherwise every other Q will be passed to atomToQueryFn. \n\nFor example in the expression \n\n```\nAnd(\"atom1\", Or(true, \"atom2\", &atom3{})\n\n```\natomToQueryFn is responsible for converting \"atom1\", \"atom2\" and &atom3{} into sqlf.Query patterns. Eval will return the expression: \n\n```\n(query1 AND (query2 OR query3))\n\n```\nWhere queryN is the respective output of atomToQueryFn. \n\nTypically we expect atomToQueryFn to return a SQL condition like \"name LIKE $q\". It should also handle unexpected values/types being passed in via returning an error. See ExampleEval for a real example of a atomToQueryFn. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/query#Print",
+              "documentation": {
+                "identifier": "Print",
+                "newPage": false,
+                "searchKey": "query.Print",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Print(q Q) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Print(q Q) string\n```\n\nPrint returns a string representing Q. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

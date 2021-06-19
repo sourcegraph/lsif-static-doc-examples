@@ -1,0 +1,407 @@
+{
+  "pathID": "/enterprise/internal/authz",
+  "documentation": {
+    "identifier": "authz",
+    "newPage": true,
+    "searchKey": "enterprise/internal/authz",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package authz"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/authz#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/authz#ExternalServicesStore",
+              "documentation": {
+                "identifier": "ExternalServicesStore",
+                "newPage": false,
+                "searchKey": "authz.ExternalServicesStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalServicesStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalServicesStore interface {\n\tList(context.Context, database.ExternalServicesListOptions) ([]*types.ExternalService, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams",
+              "documentation": {
+                "identifier": "gitlabAuthzProviderParams",
+                "newPage": false,
+                "searchKey": "authz.gitlabAuthzProviderParams",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gitlabAuthzProviderParams struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gitlabAuthzProviderParams struct {\n\tOAuthOp gitlab.OAuthProviderOp\n\tSudoOp  gitlab.SudoProviderOp\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams.Repos",
+                    "documentation": {
+                      "identifier": "gitlabAuthzProviderParams.Repos",
+                      "newPage": false,
+                      "searchKey": "authz.gitlabAuthzProviderParams.Repos",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m gitlabAuthzProviderParams) Repos(ctx context.Context, repos []*types.Repo) (mine []*types.Repo, others []*types.Repo)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m gitlabAuthzProviderParams) Repos(ctx context.Context, repos []*types.Repo) (mine []*types.Repo, others []*types.Repo)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams.FetchAccount",
+                    "documentation": {
+                      "identifier": "gitlabAuthzProviderParams.FetchAccount",
+                      "newPage": false,
+                      "searchKey": "authz.gitlabAuthzProviderParams.FetchAccount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m gitlabAuthzProviderParams) FetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, verifiedEmails []string) (mine *extsvc.Account, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m gitlabAuthzProviderParams) FetchAccount(ctx context.Context, user *types.User, current []*extsvc.Account, verifiedEmails []string) (mine *extsvc.Account, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams.ServiceID",
+                    "documentation": {
+                      "identifier": "gitlabAuthzProviderParams.ServiceID",
+                      "newPage": false,
+                      "searchKey": "authz.gitlabAuthzProviderParams.ServiceID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m gitlabAuthzProviderParams) ServiceID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m gitlabAuthzProviderParams) ServiceID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams.ServiceType",
+                    "documentation": {
+                      "identifier": "gitlabAuthzProviderParams.ServiceType",
+                      "newPage": false,
+                      "searchKey": "authz.gitlabAuthzProviderParams.ServiceType",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m gitlabAuthzProviderParams) ServiceType() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m gitlabAuthzProviderParams) ServiceType() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams.URN",
+                    "documentation": {
+                      "identifier": "gitlabAuthzProviderParams.URN",
+                      "newPage": false,
+                      "searchKey": "authz.gitlabAuthzProviderParams.URN",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m gitlabAuthzProviderParams) URN() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m gitlabAuthzProviderParams) URN() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams.Validate",
+                    "documentation": {
+                      "identifier": "gitlabAuthzProviderParams.Validate",
+                      "newPage": false,
+                      "searchKey": "authz.gitlabAuthzProviderParams.Validate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m gitlabAuthzProviderParams) Validate() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m gitlabAuthzProviderParams) Validate() []string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams.FetchUserPerms",
+                    "documentation": {
+                      "identifier": "gitlabAuthzProviderParams.FetchUserPerms",
+                      "newPage": false,
+                      "searchKey": "authz.gitlabAuthzProviderParams.FetchUserPerms",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m gitlabAuthzProviderParams) FetchUserPerms(context.Context, *extsvc.Account) (*authz.ExternalUserPermissions, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m gitlabAuthzProviderParams) FetchUserPerms(context.Context, *extsvc.Account) (*authz.ExternalUserPermissions, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#gitlabAuthzProviderParams.FetchRepoPerms",
+                    "documentation": {
+                      "identifier": "gitlabAuthzProviderParams.FetchRepoPerms",
+                      "newPage": false,
+                      "searchKey": "authz.gitlabAuthzProviderParams.FetchRepoPerms",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m gitlabAuthzProviderParams) FetchRepoPerms(context.Context, *extsvc.Repository) ([]extsvc.AccountID, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m gitlabAuthzProviderParams) FetchRepoPerms(context.Context, *extsvc.Repository) ([]extsvc.AccountID, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/authz#fakeStore",
+              "documentation": {
+                "identifier": "fakeStore",
+                "newPage": false,
+                "searchKey": "authz.fakeStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fakeStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fakeStore struct {\n\tgitlabs          []*schema.GitLabConnection\n\tgithubs          []*schema.GitHubConnection\n\tbitbucketServers []*schema.BitbucketServerConnection\n\tperforces        []*schema.PerforceConnection\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/authz#fakeStore.List",
+                    "documentation": {
+                      "identifier": "fakeStore.List",
+                      "newPage": false,
+                      "searchKey": "authz.fakeStore.List",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s fakeStore) List(ctx context.Context, opt database.ExternalServicesListOptions) ([]*types.ExternalService, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s fakeStore) List(ctx context.Context, opt database.ExternalServicesListOptions) ([]*types.ExternalService, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/authz#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/authz#ProvidersFromConfig",
+              "documentation": {
+                "identifier": "ProvidersFromConfig",
+                "newPage": false,
+                "searchKey": "authz.ProvidersFromConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ProvidersFromConfig(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ProvidersFromConfig(\n\tctx context.Context,\n\tcfg *conf.Unified,\n\tstore ExternalServicesStore,\n) (\n\tallowAccessByDefault bool,\n\tproviders []authz.Provider,\n\tseriousProblems []string,\n\twarnings []string,\n)\n```\n\nProvidersFromConfig returns the set of permission-related providers derived from the site config. It also returns any validation problems with the config, separating these into \"serious problems\" and \"warnings\". \"Serious problems\" are those that should make Sourcegraph set authz.allowAccessByDefault to false. \"Warnings\" are all other validation problems. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/authz#TestAuthzProvidersFromConfig",
+              "documentation": {
+                "identifier": "TestAuthzProvidersFromConfig",
+                "newPage": false,
+                "searchKey": "authz.TestAuthzProvidersFromConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAuthzProvidersFromConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAuthzProvidersFromConfig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/authz#mustURLParse",
+              "documentation": {
+                "identifier": "mustURLParse",
+                "newPage": false,
+                "searchKey": "authz.mustURLParse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustURLParse(t *testing.T, u string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustURLParse(t *testing.T, u string) *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/authz#asJSON",
+              "documentation": {
+                "identifier": "asJSON",
+                "newPage": false,
+                "searchKey": "authz.asJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func asJSON(t *testing.T, v interface{}) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc asJSON(t *testing.T, v interface{}) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/authz#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "authz.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

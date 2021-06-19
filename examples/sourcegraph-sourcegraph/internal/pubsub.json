@@ -1,0 +1,189 @@
+{
+  "pathID": "/internal/pubsub",
+  "documentation": {
+    "identifier": "pubsub",
+    "newPage": true,
+    "searchKey": "internal/pubsub",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package pubsub"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package pubsub is a lightweight wrapper around pubsub which initializes pubsub based on environment variables. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/pubsub#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/pubsub#PubSubProjectID",
+              "documentation": {
+                "identifier": "PubSubProjectID",
+                "newPage": false,
+                "searchKey": "pubsub.PubSubProjectID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PubSubProjectID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PubSubProjectID = ...\n```\n\nPubSubProjectID is used to create a new pubsub client. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pubsub#PubSubCredentialsFile",
+              "documentation": {
+                "identifier": "PubSubCredentialsFile",
+                "newPage": false,
+                "searchKey": "pubsub.PubSubCredentialsFile",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PubSubCredentialsFile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PubSubCredentialsFile = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pubsub#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "pubsub.client",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar client *pubsub.Client\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/pubsub#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/pubsub#Enabled",
+              "documentation": {
+                "identifier": "Enabled",
+                "newPage": false,
+                "searchKey": "pubsub.Enabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Enabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Enabled() bool\n```\n\nEnabled returns true if pubsub has been configured to run. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pubsub#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "pubsub.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/pubsub#Publish",
+              "documentation": {
+                "identifier": "Publish",
+                "newPage": false,
+                "searchKey": "pubsub.Publish",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Publish(topic string, msg string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Publish(topic string, msg string) error\n```\n\nPublish publishes msg to the topic asynchronously. Messages are batched and sent according to the topic's PublishSettings. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

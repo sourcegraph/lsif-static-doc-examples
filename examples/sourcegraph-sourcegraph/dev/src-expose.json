@@ -1,0 +1,933 @@
+{
+  "pathID": "/dev/src-expose",
+  "documentation": {
+    "identifier": "src-expose",
+    "newPage": true,
+    "searchKey": "dev/src-expose",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Command \"src-expose\" serves directories as git repositories over HTTP. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/dev/src-expose#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/src-expose#testAddress",
+              "documentation": {
+                "identifier": "testAddress",
+                "newPage": false,
+                "searchKey": "main.testAddress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testAddress"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testAddress = \"test.local:3939\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/dev/src-expose#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/src-expose#errSilent",
+              "documentation": {
+                "identifier": "errSilent",
+                "newPage": false,
+                "searchKey": "main.errSilent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errSilent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errSilent = errors.New(\"silent error\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#indexHTML",
+              "documentation": {
+                "identifier": "indexHTML",
+                "newPage": false,
+                "searchKey": "main.indexHTML",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexHTML"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexHTML = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#postUpdateHook",
+              "documentation": {
+                "identifier": "postUpdateHook",
+                "newPage": false,
+                "searchKey": "main.postUpdateHook",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var postUpdateHook"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar postUpdateHook = []byte(\"#!/bin/sh\\nexec git update-server-info\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#discardLogger",
+              "documentation": {
+                "identifier": "discardLogger",
+                "newPage": false,
+                "searchKey": "main.discardLogger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var discardLogger"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar discardLogger = log.New(io.Discard, \"\", log.LstdFlags)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/dev/src-expose#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/src-expose#usageError",
+              "documentation": {
+                "identifier": "usageError",
+                "newPage": false,
+                "searchKey": "main.usageError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type usageError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype usageError struct {\n\tMsg string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#usageError.Error",
+                    "documentation": {
+                      "identifier": "usageError.Error",
+                      "newPage": false,
+                      "searchKey": "main.usageError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *usageError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *usageError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#Serve",
+              "documentation": {
+                "identifier": "Serve",
+                "newPage": false,
+                "searchKey": "main.Serve",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Serve struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Serve struct {\n\tAddr  string\n\tRoot  string\n\tInfo  *log.Logger\n\tDebug *log.Logger\n\n\t// updatingServerInfo is used to ensure we only have 1 goroutine running\n\t// git update-server-info.\n\tupdatingServerInfo uint64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#Serve.Start",
+                    "documentation": {
+                      "identifier": "Serve.Start",
+                      "newPage": false,
+                      "searchKey": "main.Serve.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Serve) Start() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Serve) Start() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#Serve.handler",
+                    "documentation": {
+                      "identifier": "Serve.handler",
+                      "newPage": false,
+                      "searchKey": "main.Serve.handler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Serve) handler() (http.Handler, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Serve) handler() (http.Handler, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#Serve.configureRepos",
+                    "documentation": {
+                      "identifier": "Serve.configureRepos",
+                      "newPage": false,
+                      "searchKey": "main.Serve.configureRepos",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Serve) configureRepos() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Serve) configureRepos() []string\n```\n\nconfigureRepos finds all .git directories and configures them to be served. It returns a slice of all the git directories it finds. The paths are relative to root. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#Serve.allUpdateServerInfo",
+                    "documentation": {
+                      "identifier": "Serve.allUpdateServerInfo",
+                      "newPage": false,
+                      "searchKey": "main.Serve.allUpdateServerInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Serve) allUpdateServerInfo(gitDirs []string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Serve) allUpdateServerInfo(gitDirs []string)\n```\n\nallUpdateServerInfo will run updateServerInfo on each gitDirs. To prevent too many of these processes running, it will only run one at a time. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#Repo",
+              "documentation": {
+                "identifier": "Repo",
+                "newPage": false,
+                "searchKey": "main.Repo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repo struct {\n\tName string\n\tURI  string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#httpDir",
+              "documentation": {
+                "identifier": "httpDir",
+                "newPage": false,
+                "searchKey": "main.httpDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type httpDir struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype httpDir struct {\n\thttp.Dir\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#httpDir.Open",
+                    "documentation": {
+                      "identifier": "httpDir.Open",
+                      "newPage": false,
+                      "searchKey": "main.httpDir.Open",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d httpDir) Open(name string) (http.File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d httpDir) Open(name string) (http.File, error)\n```\n\nWraps the http.Dir to inject subdir \"/.git\" to the path. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#lineCountWriter",
+              "documentation": {
+                "identifier": "lineCountWriter",
+                "newPage": false,
+                "searchKey": "main.lineCountWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type lineCountWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype lineCountWriter struct {\n\tw      io.Writer\n\tprefix []byte\n\n\tinline bool\n\tlines  int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#lineCountWriter.Write",
+                    "documentation": {
+                      "identifier": "lineCountWriter.Write",
+                      "newPage": false,
+                      "searchKey": "main.lineCountWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *lineCountWriter) Write(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *lineCountWriter) Write(b []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#lineCountWriter.Close",
+                    "documentation": {
+                      "identifier": "lineCountWriter.Close",
+                      "newPage": false,
+                      "searchKey": "main.lineCountWriter.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *lineCountWriter) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *lineCountWriter) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#SyncDir",
+              "documentation": {
+                "identifier": "SyncDir",
+                "newPage": false,
+                "searchKey": "main.SyncDir",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SyncDir struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SyncDir struct {\n\t// Before if non-empty is a command run before syncing.\n\tBefore string `yaml:\",omitempty\"`\n\n\t// Dir is the directory to treat as the git working directory.\n\tDir string `yaml:\",omitempty\"`\n\n\t// Destination is the directory containing the bare git repo.\n\tDestination string `yaml:\",omitempty\"`\n\n\t// MinDuration defines the minimum wait between syncs for Dir.\n\tMinDuration time.Duration `yaml:\",omitempty\"`\n\n\t// last stores the time of the last sync. Compared against MinDuration to\n\t// determine if we should run.\n\tlast time.Time\n}\n```\n\nSyncDir creates a commit of Dir into the bare git repo Destination. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#Snapshotter",
+              "documentation": {
+                "identifier": "Snapshotter",
+                "newPage": false,
+                "searchKey": "main.Snapshotter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Snapshotter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Snapshotter struct {\n\t// Root is the directory Before is run from. If a SyncDir's Dir is\n\t// relative, it will be resolved relative to this directory. Defaults to\n\t// PWD.\n\tRoot string\n\n\t// If a SyncDir's Destination is relative, it will be resolved relative to\n\t// Destination. Defaults to ~/.sourcegraph/src-expose-repos\n\tDestination string\n\n\t// Before is a command run before sync. Before is run from Dir.\n\tBefore string\n\n\t// Dirs is a list of directories to sync.\n\tDirs []*SyncDir\n\n\t// DirMode defines what behaviour to use if Dir is missing.\n\t//\n\t//  - fail (default)\n\t//  - ignore\n\t//  - remove_dest\n\tDirMode string\n\n\t// Duration defines how often sync should run.\n\tDuration time.Duration\n}\n```\n\nSnapshotter manages the running over several syncs. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#Snapshotter.SetDefaults",
+                    "documentation": {
+                      "identifier": "Snapshotter.SetDefaults",
+                      "newPage": false,
+                      "searchKey": "main.Snapshotter.SetDefaults",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o *Snapshotter) SetDefaults() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o *Snapshotter) SetDefaults() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#Snapshotter.Run",
+                    "documentation": {
+                      "identifier": "Snapshotter.Run",
+                      "newPage": false,
+                      "searchKey": "main.Snapshotter.Run",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o *Snapshotter) Run(logger *log.Logger) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o *Snapshotter) Run(logger *log.Logger) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#testWriter",
+              "documentation": {
+                "identifier": "testWriter",
+                "newPage": false,
+                "searchKey": "main.testWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testWriter struct {\n\t*testing.T\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/dev/src-expose#testWriter.Write",
+                    "documentation": {
+                      "identifier": "testWriter.Write",
+                      "newPage": false,
+                      "searchKey": "main.testWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (tw testWriter) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (tw testWriter) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/dev/src-expose#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/src-expose#explainAddr",
+              "documentation": {
+                "identifier": "explainAddr",
+                "newPage": false,
+                "searchKey": "main.explainAddr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func explainAddr(addr string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc explainAddr(addr string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#explainSnapshotter",
+              "documentation": {
+                "identifier": "explainSnapshotter",
+                "newPage": false,
+                "searchKey": "main.explainSnapshotter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func explainSnapshotter(s *Snapshotter) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc explainSnapshotter(s *Snapshotter) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#usageErrorOutput",
+              "documentation": {
+                "identifier": "usageErrorOutput",
+                "newPage": false,
+                "searchKey": "main.usageErrorOutput",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func usageErrorOutput(cmd *ffcli.Command, cmdPath string, err error) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc usageErrorOutput(cmd *ffcli.Command, cmdPath string, err error) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#shortenErrHelp",
+              "documentation": {
+                "identifier": "shortenErrHelp",
+                "newPage": false,
+                "searchKey": "main.shortenErrHelp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shortenErrHelp(cmd *ffcli.Command, cmdPath string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shortenErrHelp(cmd *ffcli.Command, cmdPath string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#configurePostUpdateHook",
+              "documentation": {
+                "identifier": "configurePostUpdateHook",
+                "newPage": false,
+                "searchKey": "main.configurePostUpdateHook",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func configurePostUpdateHook(logger *log.Logger, gitDir string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc configurePostUpdateHook(logger *log.Logger, gitDir string) error\n```\n\nconfigureOneRepos tweaks a .git repo such that it can be git cloned. See [https://theartofmachinery.com/2016/07/02/git_over_http.html](https://theartofmachinery.com/2016/07/02/git_over_http.html) for background. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#updateServerInfo",
+              "documentation": {
+                "identifier": "updateServerInfo",
+                "newPage": false,
+                "searchKey": "main.updateServerInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateServerInfo(gitDir string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateServerInfo(gitDir string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#snapshot",
+              "documentation": {
+                "identifier": "snapshot",
+                "newPage": false,
+                "searchKey": "main.snapshot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func snapshot(logger *log.Logger, src, dst string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc snapshot(logger *log.Logger, src, dst string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#run",
+              "documentation": {
+                "identifier": "run",
+                "newPage": false,
+                "searchKey": "main.run",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func run(logger *log.Logger, name string, cmd *exec.Cmd) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc run(logger *log.Logger, name string, cmd *exec.Cmd) (int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#abs",
+              "documentation": {
+                "identifier": "abs",
+                "newPage": false,
+                "searchKey": "main.abs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func abs(root, dir string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc abs(root, dir string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#TestExplain",
+              "documentation": {
+                "identifier": "TestExplain",
+                "newPage": false,
+                "searchKey": "main.TestExplain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExplain(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExplain(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#TestReposHandler",
+              "documentation": {
+                "identifier": "TestReposHandler",
+                "newPage": false,
+                "searchKey": "main.TestReposHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReposHandler(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReposHandler(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#testReposHandler",
+              "documentation": {
+                "identifier": "testReposHandler",
+                "newPage": false,
+                "searchKey": "main.testReposHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReposHandler(t *testing.T, h http.Handler, repos []Repo)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReposHandler(t *testing.T, h http.Handler, repos []Repo)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#gitInitRepos",
+              "documentation": {
+                "identifier": "gitInitRepos",
+                "newPage": false,
+                "searchKey": "main.gitInitRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gitInitRepos(t *testing.T, names ...string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gitInitRepos(t *testing.T, names ...string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#TestIgnoreGitSubmodules",
+              "documentation": {
+                "identifier": "TestIgnoreGitSubmodules",
+                "newPage": false,
+                "searchKey": "main.TestIgnoreGitSubmodules",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIgnoreGitSubmodules(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIgnoreGitSubmodules(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/src-expose#testLogger",
+              "documentation": {
+                "identifier": "testLogger",
+                "newPage": false,
+                "searchKey": "main.testLogger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testLogger(t *testing.T) *log.Logger"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testLogger(t *testing.T) *log.Logger\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "pathID": "/internal/src-cli",
+  "documentation": {
+    "identifier": "src-cli",
+    "newPage": true,
+    "searchKey": "internal/src-cli",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package srccli"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/src-cli#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/src-cli#MinimumVersion",
+              "documentation": {
+                "identifier": "MinimumVersion",
+                "newPage": false,
+                "searchKey": "srccli.MinimumVersion",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MinimumVersion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MinimumVersion = \"3.29.0\"\n```\n\nMinimumVersion is the minimum src-cli release version that works with this instance. This must be updated manually between releases. The public HTTP API will return this (or an updated patch version) as the suggested download with this instance. \n\nAt the time of a Sourcegraph release, this is always the latest src-cli version. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-cli#githubAPIReleasesEndpoint",
+              "documentation": {
+                "identifier": "githubAPIReleasesEndpoint",
+                "newPage": false,
+                "searchKey": "srccli.githubAPIReleasesEndpoint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const githubAPIReleasesEndpoint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst githubAPIReleasesEndpoint = \"https://api.github.com/repos/sourcegraph/src-cli/releases\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/src-cli#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/src-cli#releaseMeta",
+              "documentation": {
+                "identifier": "releaseMeta",
+                "newPage": false,
+                "searchKey": "srccli.releaseMeta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type releaseMeta struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype releaseMeta struct {\n\tTagName    string `json:\"tag_name\"`\n\tDraft      bool   `json:\"draft\"`\n\tPrerelease bool   `json:\"prerelease\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/src-cli#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/src-cli#Version",
+              "documentation": {
+                "identifier": "Version",
+                "newPage": false,
+                "searchKey": "srccli.Version",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Version() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Version() (string, error)\n```\n\nVersion returns the highest public version currently available via the GitHub release page that has the same major and minor versions as the configured minimum version. This allows us to recommend patch updates without having to release a sourcegraph instance with a bumped constant. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-cli#highestMatchingVersion",
+              "documentation": {
+                "identifier": "highestMatchingVersion",
+                "newPage": false,
+                "searchKey": "srccli.highestMatchingVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func highestMatchingVersion(minimumVersion *semver.Version, versions []*semver.Version) (*semver.Version, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc highestMatchingVersion(minimumVersion *semver.Version, versions []*semver.Version) (*semver.Version, error)\n```\n\nhighestMatchingVersion returns the highest version with the same major and minor value as the given minimum version. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-cli#releaseVersions",
+              "documentation": {
+                "identifier": "releaseVersions",
+                "newPage": false,
+                "searchKey": "srccli.releaseVersions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func releaseVersions(url string) ([]*semver.Version, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc releaseVersions(url string) ([]*semver.Version, error)\n```\n\nreleaseVersions requests the given URL and all subsequent pages of releases. Returns the non-draft, non-prerelease items with a valid semver tag. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-cli#releaseVersionsPage",
+              "documentation": {
+                "identifier": "releaseVersionsPage",
+                "newPage": false,
+                "searchKey": "srccli.releaseVersionsPage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func releaseVersionsPage(url string) ([]*semver.Version, string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc releaseVersionsPage(url string) ([]*semver.Version, string, error)\n```\n\nreleaseVersionsPage requests the given URL and returns the non-draft, non-prerelease items with a valid semver tag and the url for the next page of results (if one exists). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-cli#TestHighestMatchingVersion",
+              "documentation": {
+                "identifier": "TestHighestMatchingVersion",
+                "newPage": false,
+                "searchKey": "srccli.TestHighestMatchingVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHighestMatchingVersion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHighestMatchingVersion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/src-cli#TestReleaseVersions",
+              "documentation": {
+                "identifier": "TestReleaseVersions",
+                "newPage": false,
+                "searchKey": "srccli.TestReleaseVersions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReleaseVersions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReleaseVersions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

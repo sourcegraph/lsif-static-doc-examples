@@ -1,0 +1,80 @@
+{
+  "pathID": "/internal/goremancmd",
+  "documentation": {
+    "identifier": "goremancmd",
+    "newPage": true,
+    "searchKey": "internal/goremancmd",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Command goremancmd exists for testing the internally vendored goreman that ./cmd/server uses. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/goremancmd#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/goremancmd#do",
+              "documentation": {
+                "identifier": "do",
+                "newPage": false,
+                "searchKey": "main.do",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func do() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc do() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goremancmd#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

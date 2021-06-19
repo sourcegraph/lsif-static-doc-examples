@@ -1,0 +1,405 @@
+{
+  "pathID": "/internal/vcs/util",
+  "documentation": {
+    "identifier": "util",
+    "newPage": true,
+    "searchKey": "internal/vcs/util",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package util"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/vcs/util#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/vcs/util#FileInfo",
+              "documentation": {
+                "identifier": "FileInfo",
+                "newPage": false,
+                "searchKey": "util.FileInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileInfo struct {\n\tName_    string\n\tMode_    os.FileMode\n\tSize_    int64\n\tModTime_ time.Time\n\tSys_     interface{}\n}\n```\n\nFileInfo implements fs.FileInfo. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.Name",
+                    "documentation": {
+                      "identifier": "FileInfo.Name",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.Name",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.Size",
+                    "documentation": {
+                      "identifier": "FileInfo.Size",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.Size",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) Size() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) Size() int64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.Mode",
+                    "documentation": {
+                      "identifier": "FileInfo.Mode",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.Mode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) Mode() os.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) Mode() os.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.ModTime",
+                    "documentation": {
+                      "identifier": "FileInfo.ModTime",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.ModTime",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) ModTime() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) ModTime() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.IsDir",
+                    "documentation": {
+                      "identifier": "FileInfo.IsDir",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.IsDir",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#FileInfo.Sys",
+                    "documentation": {
+                      "identifier": "FileInfo.Sys",
+                      "newPage": false,
+                      "searchKey": "util.FileInfo.Sys",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fi *FileInfo) Sys() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fi *FileInfo) Sys() interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs/util#fileInfosByName",
+              "documentation": {
+                "identifier": "fileInfosByName",
+                "newPage": false,
+                "searchKey": "util.fileInfosByName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileInfosByName []fs.FileInfo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileInfosByName []fs.FileInfo\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#fileInfosByName.Len",
+                    "documentation": {
+                      "identifier": "fileInfosByName.Len",
+                      "newPage": false,
+                      "searchKey": "util.fileInfosByName.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v fileInfosByName) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v fileInfosByName) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#fileInfosByName.Less",
+                    "documentation": {
+                      "identifier": "fileInfosByName.Less",
+                      "newPage": false,
+                      "searchKey": "util.fileInfosByName.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v fileInfosByName) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v fileInfosByName) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs/util#fileInfosByName.Swap",
+                    "documentation": {
+                      "identifier": "fileInfosByName.Swap",
+                      "newPage": false,
+                      "searchKey": "util.fileInfosByName.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v fileInfosByName) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v fileInfosByName) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/vcs/util#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/vcs/util#SortFileInfosByName",
+              "documentation": {
+                "identifier": "SortFileInfosByName",
+                "newPage": false,
+                "searchKey": "util.SortFileInfosByName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SortFileInfosByName(fis []fs.FileInfo)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SortFileInfosByName(fis []fs.FileInfo)\n```\n\nSortFileInfosByName sorts fis by name, alphabetically. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs/util#Rel",
+              "documentation": {
+                "identifier": "Rel",
+                "newPage": false,
+                "searchKey": "util.Rel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Rel(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Rel(path string) string\n```\n\nRel strips the leading \"/\" prefix from the path string, effectively turning an absolute path into one relative to the root directory. A path that is just \"/\" is treated specially, returning just \".\". \n\nThe elements in a file path are separated by slash ('/', U+002F) characters, regardless of host operating system convention. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs/util#ScriptFile",
+              "documentation": {
+                "identifier": "ScriptFile",
+                "newPage": false,
+                "searchKey": "util.ScriptFile",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScriptFile(prefix string) (filePath string, rootPath string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScriptFile(prefix string) (filePath string, rootPath string, err error)\n```\n\nConstructs platform-specific temporary script file with a given prefix On Windows such a file must have .bat extension Returns triplet where - filePath is a location of file - rootPath refers to temporary root directory the filePath is in (everything under the rootPath (including rootPath) should be removed when no longer needed) - error indicates possible error \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs/util#WriteFileWithPermissions",
+              "documentation": {
+                "identifier": "WriteFileWithPermissions",
+                "newPage": false,
+                "searchKey": "util.WriteFileWithPermissions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WriteFileWithPermissions(file string, content []byte, perm os.FileMode) error\n```\n\nWrapper around os.WriteFile that updates permissions regardless if file existed before \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs/util#TestScriptFile",
+              "documentation": {
+                "identifier": "TestScriptFile",
+                "newPage": false,
+                "searchKey": "util.TestScriptFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScriptFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScriptFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

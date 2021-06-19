@@ -1,0 +1,321 @@
+{
+  "pathID": "/internal/search/filter",
+  "documentation": {
+    "identifier": "filter",
+    "newPage": true,
+    "searchKey": "internal/search/filter",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package filter"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/search/filter#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/filter#Commit",
+              "documentation": {
+                "identifier": "Commit",
+                "newPage": false,
+                "searchKey": "filter.Commit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Commit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Commit = \"commit\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/filter#Content",
+              "documentation": {
+                "identifier": "Content",
+                "newPage": false,
+                "searchKey": "filter.Content",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Content"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Content = \"content\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/filter#File",
+              "documentation": {
+                "identifier": "File",
+                "newPage": false,
+                "searchKey": "filter.File",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const File"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst File = \"file\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/filter#Repository",
+              "documentation": {
+                "identifier": "Repository",
+                "newPage": false,
+                "searchKey": "filter.Repository",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Repository"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Repository = \"repo\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/filter#Symbol",
+              "documentation": {
+                "identifier": "Symbol",
+                "newPage": false,
+                "searchKey": "filter.Symbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Symbol"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Symbol = \"symbol\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/filter#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/filter#validSelectors",
+              "documentation": {
+                "identifier": "validSelectors",
+                "newPage": false,
+                "searchKey": "filter.validSelectors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var validSelectors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar validSelectors = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/filter#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/filter#SelectPath",
+              "documentation": {
+                "identifier": "SelectPath",
+                "newPage": false,
+                "searchKey": "filter.SelectPath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SelectPath []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SelectPath []string\n```\n\nSelectPath represents a parsed and validated select value \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/filter#SelectPathFromString",
+                    "documentation": {
+                      "identifier": "SelectPathFromString",
+                      "newPage": false,
+                      "searchKey": "filter.SelectPathFromString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func SelectPathFromString(s string) (SelectPath, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc SelectPathFromString(s string) (SelectPath, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/filter#SelectPath.String",
+                    "documentation": {
+                      "identifier": "SelectPath.String",
+                      "newPage": false,
+                      "searchKey": "filter.SelectPath.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sp SelectPath) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sp SelectPath) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/filter#SelectPath.Root",
+                    "documentation": {
+                      "identifier": "SelectPath.Root",
+                      "newPage": false,
+                      "searchKey": "filter.SelectPath.Root",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sp SelectPath) Root() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sp SelectPath) Root() string\n```\n\nRoot is the top-level result type that is being selected. Returns an empty string if SelectPath is empty \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/filter#object",
+              "documentation": {
+                "identifier": "object",
+                "newPage": false,
+                "searchKey": "filter.object",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type object map[string]filter.object"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype object map[string]object\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

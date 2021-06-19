@@ -1,0 +1,283 @@
+{
+  "pathID": "/enterprise/internal/batches/search",
+  "documentation": {
+    "identifier": "search",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/search",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package search"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/search#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search#ErrExpr",
+              "documentation": {
+                "identifier": "ErrExpr",
+                "newPage": false,
+                "searchKey": "search.ErrExpr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrExpr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrExpr struct {\n\tPos   int\n\tInput string\n}\n```\n\nErrExpr is a base type for errors that occur in a specific expression within a parse tree, and is intended to be embedded within other error types. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search#createErrExpr",
+                    "documentation": {
+                      "identifier": "createErrExpr",
+                      "newPage": false,
+                      "searchKey": "search.createErrExpr",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func createErrExpr(input string, expr *syntax.Expr) ErrExpr"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc createErrExpr(input string, expr *syntax.Expr) ErrExpr\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search#ErrExpr.Error",
+                    "documentation": {
+                      "identifier": "ErrExpr.Error",
+                      "newPage": false,
+                      "searchKey": "search.ErrExpr.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ErrExpr) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ErrExpr) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search#ErrUnsupportedField",
+              "documentation": {
+                "identifier": "ErrUnsupportedField",
+                "newPage": false,
+                "searchKey": "search.ErrUnsupportedField",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrUnsupportedField struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrUnsupportedField struct {\n\tErrExpr\n\tField string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search#ErrUnsupportedField.Error",
+                    "documentation": {
+                      "identifier": "ErrUnsupportedField.Error",
+                      "newPage": false,
+                      "searchKey": "search.ErrUnsupportedField.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ErrUnsupportedField) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ErrUnsupportedField) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search#ErrUnsupportedValueType",
+              "documentation": {
+                "identifier": "ErrUnsupportedValueType",
+                "newPage": false,
+                "searchKey": "search.ErrUnsupportedValueType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrUnsupportedValueType struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrUnsupportedValueType struct {\n\tErrExpr\n\tValueType syntax.TokenType\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/search#ErrUnsupportedValueType.Error",
+                    "documentation": {
+                      "identifier": "ErrUnsupportedValueType.Error",
+                      "newPage": false,
+                      "searchKey": "search.ErrUnsupportedValueType.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ErrUnsupportedValueType) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ErrUnsupportedValueType) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search#TextSearchTerm",
+              "documentation": {
+                "identifier": "TextSearchTerm",
+                "newPage": false,
+                "searchKey": "search.TextSearchTerm",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TextSearchTerm struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TextSearchTerm struct {\n\tTerm string\n\tNot  bool\n}\n```\n\nTextSearchTerm represents a single term within a search string. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/search#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search#ParseTextSearch",
+              "documentation": {
+                "identifier": "ParseTextSearch",
+                "newPage": false,
+                "searchKey": "search.ParseTextSearch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseTextSearch(search string) ([]TextSearchTerm, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseTextSearch(search string) ([]TextSearchTerm, error)\n```\n\nParseTextSearch parses a free-form text search string into a slice of expressions, respecting quoted strings and negation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/search#TestChangesetSearch",
+              "documentation": {
+                "identifier": "TestChangesetSearch",
+                "newPage": false,
+                "searchKey": "search.TestChangesetSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChangesetSearch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChangesetSearch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/internal/batches/search/syntax"
+    }
+  ]
+}

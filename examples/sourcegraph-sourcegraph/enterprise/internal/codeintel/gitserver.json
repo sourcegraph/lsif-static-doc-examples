@@ -1,0 +1,812 @@
+{
+  "pathID": "/enterprise/internal/codeintel/gitserver",
+  "documentation": {
+    "identifier": "gitserver",
+    "newPage": true,
+    "searchKey": "enterprise/internal/codeintel/gitserver",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package gitserver"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codeintel/gitserver#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#RefTypeUnknown",
+              "documentation": {
+                "identifier": "RefTypeUnknown",
+                "newPage": false,
+                "searchKey": "gitserver.RefTypeUnknown",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RefTypeUnknown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RefTypeUnknown RefType = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#RefTypeBranch",
+              "documentation": {
+                "identifier": "RefTypeBranch",
+                "newPage": false,
+                "searchKey": "gitserver.RefTypeBranch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RefTypeBranch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RefTypeBranch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#RefTypeTag",
+              "documentation": {
+                "identifier": "RefTypeTag",
+                "newPage": false,
+                "searchKey": "gitserver.RefTypeTag",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RefTypeTag"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RefTypeTag\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codeintel/gitserver#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#refPrefixes",
+              "documentation": {
+                "identifier": "refPrefixes",
+                "newPage": false,
+                "searchKey": "gitserver.refPrefixes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var refPrefixes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar refPrefixes = map[string]RefType{\n\t\"refs/heads/\": RefTypeBranch,\n\t\"refs/tags/\":  RefTypeTag,\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codeintel/gitserver#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "gitserver.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\tdbStore    DBStore\n\toperations *operations\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "gitserver.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(dbStore DBStore, observationContext *observation.Context) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(dbStore DBStore, observationContext *observation.Context) *Client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.CommitExists",
+                    "documentation": {
+                      "identifier": "Client.CommitExists",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.CommitExists",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CommitExists(ctx context.Context, repositoryID int, commit string) (_ bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CommitExists(ctx context.Context, repositoryID int, commit string) (_ bool, err error)\n```\n\nHead determines the tip commit of the default branch for the given repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.Head",
+                    "documentation": {
+                      "identifier": "Client.Head",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.Head",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Head(ctx context.Context, repositoryID int) (_ string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Head(ctx context.Context, repositoryID int) (_ string, err error)\n```\n\nHead determines the tip commit of the default branch for the given repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.CommitDate",
+                    "documentation": {
+                      "identifier": "Client.CommitDate",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.CommitDate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CommitDate(ctx context.Context, repositoryID int, commit string) (_ time.Time, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CommitDate(ctx context.Context, repositoryID int, commit string) (_ time.Time, err error)\n```\n\nCommitDate returns the time that the given commit was committed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.CommitGraph",
+                    "documentation": {
+                      "identifier": "Client.CommitGraph",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.CommitGraph",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CommitGraph(ctx context.Context, repositoryID int, opts CommitGraphOptions) (_ *CommitGraph, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CommitGraph(ctx context.Context, repositoryID int, opts CommitGraphOptions) (_ *CommitGraph, err error)\n```\n\nCommitGraph returns the commit graph for the given repository as a mapping from a commit to its parents. If a commit is supplied, the returned graph will be rooted at the given commit. If a non-zero limit is supplied, at most that many commits will be returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.RefDescriptions",
+                    "documentation": {
+                      "identifier": "Client.RefDescriptions",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.RefDescriptions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RefDescriptions(ctx context.Context, repositoryID int) (_ map[string]RefDescription, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RefDescriptions(ctx context.Context, repositoryID int) (_ map[string]RefDescription, err error)\n```\n\nRefDescriptions returns a map from commits to descriptions of the tip of each branch and tag of the given repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.RawContents",
+                    "documentation": {
+                      "identifier": "Client.RawContents",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.RawContents",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RawContents(ctx context.Context, repositoryID int, commit, file string) (_ []byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RawContents(ctx context.Context, repositoryID int, commit, file string) (_ []byte, err error)\n```\n\nRawContents returns the contents of a file in a particular commit of a repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.DirectoryChildren",
+                    "documentation": {
+                      "identifier": "Client.DirectoryChildren",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.DirectoryChildren",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DirectoryChildren(ctx context.Context, repositoryID int, commit string, dirnames []string) (_ map[string][]string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DirectoryChildren(ctx context.Context, repositoryID int, commit string, dirnames []string) (_ map[string][]string, err error)\n```\n\nDirectoryChildren determines all children known to git for the given directory names via an invocation of git ls-tree. The keys of the resulting map are the input (unsanitized) dirnames, and the value of that key are the files nested under that directory. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.FileExists",
+                    "documentation": {
+                      "identifier": "Client.FileExists",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.FileExists",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) FileExists(ctx context.Context, repositoryID int, commit, file string) (_ bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) FileExists(ctx context.Context, repositoryID int, commit, file string) (_ bool, err error)\n```\n\nFileExists determines whether a file exists in a particular commit of a repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.ListFiles",
+                    "documentation": {
+                      "identifier": "Client.ListFiles",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.ListFiles",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListFiles(ctx context.Context, repositoryID int, commit string, pattern *regexp.Regexp) (_ []string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListFiles(ctx context.Context, repositoryID int, commit string, pattern *regexp.Regexp) (_ []string, err error)\n```\n\nListFiles returns a list of root-relative file paths matching the given pattern in a particular commit of a repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.ResolveRevision",
+                    "documentation": {
+                      "identifier": "Client.ResolveRevision",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.ResolveRevision",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ResolveRevision(ctx context.Context, repositoryID int, versionString string) (commitID api.CommitID, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ResolveRevision(ctx context.Context, repositoryID int, versionString string) (commitID api.CommitID, err error)\n```\n\nResolveRevision returns the absolute commit for a commit-ish spec. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.execGitCommand",
+                    "documentation": {
+                      "identifier": "Client.execGitCommand",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.execGitCommand",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) execGitCommand(ctx context.Context, repositoryID int, args ...string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) execGitCommand(ctx context.Context, repositoryID int, args ...string) (string, error)\n```\n\nexecGitCommand executes a git command for the given repository by identifier. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.execResolveRevGitCommand",
+                    "documentation": {
+                      "identifier": "Client.execResolveRevGitCommand",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.execResolveRevGitCommand",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) execResolveRevGitCommand(ctx context.Context, repositoryID int, revision string, args ...string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) execResolveRevGitCommand(ctx context.Context, repositoryID int, revision string, args ...string) (string, error)\n```\n\nexecResolveRevGitCommand executes a git command for the given repository by identifier if the given revision is resolvable prior to running the command. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#Client.repositoryIDToRepo",
+                    "documentation": {
+                      "identifier": "Client.repositoryIDToRepo",
+                      "newPage": false,
+                      "searchKey": "gitserver.Client.repositoryIDToRepo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) repositoryIDToRepo(ctx context.Context, repositoryID int) (api.RepoName, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) repositoryIDToRepo(ctx context.Context, repositoryID int) (api.RepoName, error)\n```\n\nrepositoryIDToRepo creates a api.RepoName from a repository identifier. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#CommitGraph",
+              "documentation": {
+                "identifier": "CommitGraph",
+                "newPage": false,
+                "searchKey": "gitserver.CommitGraph",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitGraph struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitGraph struct {\n\tgraph map[string][]string\n\torder []string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#ParseCommitGraph",
+                    "documentation": {
+                      "identifier": "ParseCommitGraph",
+                      "newPage": false,
+                      "searchKey": "gitserver.ParseCommitGraph",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ParseCommitGraph(lines []string) *CommitGraph"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ParseCommitGraph(lines []string) *CommitGraph\n```\n\nParseCommitGraph converts the output of git log into a map from commits to parent commits, and a topological ordering of commits such that parents come before children. If a commit is listed but has no ancestors then its parent slice is empty, but is still present in the map and the ordering. If the ordering is to be correct, the git log output must be formatted with --topo-order. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#CommitGraph.Graph",
+                    "documentation": {
+                      "identifier": "CommitGraph.Graph",
+                      "newPage": false,
+                      "searchKey": "gitserver.CommitGraph.Graph",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *CommitGraph) Graph() map[string][]string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *CommitGraph) Graph() map[string][]string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#CommitGraph.Order",
+                    "documentation": {
+                      "identifier": "CommitGraph.Order",
+                      "newPage": false,
+                      "searchKey": "gitserver.CommitGraph.Order",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *CommitGraph) Order() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *CommitGraph) Order() []string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#CommitGraphOptions",
+              "documentation": {
+                "identifier": "CommitGraphOptions",
+                "newPage": false,
+                "searchKey": "gitserver.CommitGraphOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitGraphOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitGraphOptions struct {\n\tCommit  string\n\tAllRefs bool\n\tLimit   int\n\tSince   *time.Time\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#RefDescription",
+              "documentation": {
+                "identifier": "RefDescription",
+                "newPage": false,
+                "searchKey": "gitserver.RefDescription",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RefDescription struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RefDescription struct {\n\tName            string\n\tType            RefType\n\tIsDefaultBranch bool\n\tCreatedDate     time.Time\n}\n```\n\nRefDescription describes a commit at the head of a branch or tag. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#RefType",
+              "documentation": {
+                "identifier": "RefType",
+                "newPage": false,
+                "searchKey": "gitserver.RefType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RefType int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RefType int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#DBStore",
+              "documentation": {
+                "identifier": "DBStore",
+                "newPage": false,
+                "searchKey": "gitserver.DBStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStore interface {\n\tRepoName(ctx context.Context, repositoryID int) (string, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#operations",
+              "documentation": {
+                "identifier": "operations",
+                "newPage": false,
+                "searchKey": "gitserver.operations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type operations struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype operations struct {\n\tcommitDate        *observation.Operation\n\tcommitExists      *observation.Operation\n\tcommitGraph       *observation.Operation\n\tdirectoryChildren *observation.Operation\n\tfileExists        *observation.Operation\n\thead              *observation.Operation\n\tlistFiles         *observation.Operation\n\trawContents       *observation.Operation\n\trefDescriptions   *observation.Operation\n\tresolveRevision   *observation.Operation\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/gitserver#newOperations",
+                    "documentation": {
+                      "identifier": "newOperations",
+                      "newPage": false,
+                      "searchKey": "gitserver.newOperations",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newOperations(observationContext *observation.Context) *operations"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newOperations(observationContext *observation.Context) *operations\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codeintel/gitserver#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#parseRefDescriptions",
+              "documentation": {
+                "identifier": "parseRefDescriptions",
+                "newPage": false,
+                "searchKey": "gitserver.parseRefDescriptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseRefDescriptions(lines []string) (map[string]RefDescription, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseRefDescriptions(lines []string) (map[string]RefDescription, error)\n```\n\nparseRefDescriptions converts the output of the for-each-ref command in the RefDescriptions method to a map from commits to RefDescription objects. Each line should conform to the format string `%(objectname):%(refname):%(HEAD):%(creatordate)`, where \n\n- %(objectname) is the 40-character revhash - %(refname) is the name of the tag or branch (prefixed with refs/heads/ or ref/tags/) - %(HEAD) is `*` if the branch is the default branch (and whitesace otherwise) - %(creatordate) is the ISO-formatted date the object was created \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#TestParseCommitGraph",
+              "documentation": {
+                "identifier": "TestParseCommitGraph",
+                "newPage": false,
+                "searchKey": "gitserver.TestParseCommitGraph",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseCommitGraph(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseCommitGraph(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#TestParseCommitGraphPartial",
+              "documentation": {
+                "identifier": "TestParseCommitGraphPartial",
+                "newPage": false,
+                "searchKey": "gitserver.TestParseCommitGraphPartial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseCommitGraphPartial(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseCommitGraphPartial(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/gitserver#TestParseRefDescriptions",
+              "documentation": {
+                "identifier": "TestParseRefDescriptions",
+                "newPage": false,
+                "searchKey": "gitserver.TestParseRefDescriptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseRefDescriptions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseRefDescriptions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

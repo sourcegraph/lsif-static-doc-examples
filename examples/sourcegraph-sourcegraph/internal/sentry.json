@@ -1,0 +1,189 @@
+{
+  "pathID": "/internal/sentry",
+  "documentation": {
+    "identifier": "sentry",
+    "newPage": true,
+    "searchKey": "internal/sentry",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package sentry"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/sentry#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/sentry#sentryDebug",
+              "documentation": {
+                "identifier": "sentryDebug",
+                "newPage": false,
+                "searchKey": "sentry.sentryDebug",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sentryDebug"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sentryDebug, _ = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/sentry#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/sentry#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "sentry.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init()\n```\n\nInit initializes the default Sentry client that uses SENTRY_DSN_BACKEND environment variable as the DSN. It then watches site configuration for any subsequent changes. SENTRY_DEBUG can be set as a boolean to print debug messages. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sentry#captureError",
+              "documentation": {
+                "identifier": "captureError",
+                "newPage": false,
+                "searchKey": "sentry.captureError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func captureError(err error, level sentry.Level, tags map[string]string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc captureError(err error, level sentry.Level, tags map[string]string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sentry#CaptureError",
+              "documentation": {
+                "identifier": "CaptureError",
+                "newPage": false,
+                "searchKey": "sentry.CaptureError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CaptureError(err error, tags map[string]string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CaptureError(err error, tags map[string]string)\n```\n\nCaptureError adds the given error to the default Sentry client delivery queue for reporting. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sentry#CapturePanic",
+              "documentation": {
+                "identifier": "CapturePanic",
+                "newPage": false,
+                "searchKey": "sentry.CapturePanic",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CapturePanic(err error, tags map[string]string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CapturePanic(err error, tags map[string]string)\n```\n\nCapturePanic does same thing as CaptureError, and adds additional tags to mark the report as \"fatal\" level. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sentry#Recoverer",
+              "documentation": {
+                "identifier": "Recoverer",
+                "newPage": false,
+                "searchKey": "sentry.Recoverer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Recoverer(handler http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Recoverer(handler http.Handler) http.Handler\n```\n\nRecovery handler to wrap the stdlib net/http Mux. Example: \n\n```\n mux := http.NewServeMux\n ...\n\thttp.Handle(\"/\", sentry.Recoverer(mux))\n\n```\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

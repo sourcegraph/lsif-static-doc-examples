@@ -1,0 +1,367 @@
+{
+  "pathID": "/cmd/loadtest",
+  "documentation": {
+    "identifier": "loadtest",
+    "newPage": true,
+    "searchKey": "cmd/loadtest",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/loadtest#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#gqlSearch",
+              "documentation": {
+                "identifier": "gqlSearch",
+                "newPage": false,
+                "searchKey": "main.gqlSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gqlSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gqlSearch = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/loadtest#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#FrontendHost",
+              "documentation": {
+                "identifier": "FrontendHost",
+                "newPage": false,
+                "searchKey": "main.FrontendHost",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FrontendHost"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FrontendHost = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#FrontendPort",
+              "documentation": {
+                "identifier": "FrontendPort",
+                "newPage": false,
+                "searchKey": "main.FrontendPort",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FrontendPort"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FrontendPort = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#SearchQueriesEnv",
+              "documentation": {
+                "identifier": "SearchQueriesEnv",
+                "newPage": false,
+                "searchKey": "main.SearchQueriesEnv",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SearchQueriesEnv"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SearchQueriesEnv = env.Get(\"loadTestSearches\", \"[]\", \"Search queries to use in load testing\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#QueryPeriodMSEnv",
+              "documentation": {
+                "identifier": "QueryPeriodMSEnv",
+                "newPage": false,
+                "searchKey": "main.QueryPeriodMSEnv",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var QueryPeriodMSEnv"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar QueryPeriodMSEnv = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/loadtest#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#GQLSearchVars",
+              "documentation": {
+                "identifier": "GQLSearchVars",
+                "newPage": false,
+                "searchKey": "main.GQLSearchVars",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GQLSearchVars struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GQLSearchVars struct {\n\tQuery string `json:\"query\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#GraphQLResponseSearch",
+              "documentation": {
+                "identifier": "GraphQLResponseSearch",
+                "newPage": false,
+                "searchKey": "main.GraphQLResponseSearch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GraphQLResponseSearch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GraphQLResponseSearch struct {\n\tData struct {\n\t\tSearch struct {\n\t\t\tResults struct {\n\t\t\t\tResults []interface{} `json:\"results\"`\n\t\t\t} `json:\"results\"`\n\t\t} `json:\"search\"`\n\t} `json:\"data\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#GraphQLQuery",
+              "documentation": {
+                "identifier": "GraphQLQuery",
+                "newPage": false,
+                "searchKey": "main.GraphQLQuery",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GraphQLQuery struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GraphQLQuery struct {\n\tQuery     string      `json:\"query\"`\n\tVariables interface{} `json:\"variables\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/loadtest#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#frontendURL",
+              "documentation": {
+                "identifier": "frontendURL",
+                "newPage": false,
+                "searchKey": "main.frontendURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func frontendURL(thePath string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc frontendURL(thePath string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#run",
+              "documentation": {
+                "identifier": "run",
+                "newPage": false,
+                "searchKey": "main.run",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func run() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc run() error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/loadtest#search",
+              "documentation": {
+                "identifier": "search",
+                "newPage": false,
+                "searchKey": "main.search",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func search(v GQLSearchVars) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc search(v GQLSearchVars) (int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "pathID": "/cmd/frontend/internal/app/ui/router",
+  "documentation": {
+    "identifier": "router",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/app/ui/router",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package router"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package router contains the route names for our app UI. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/ui/router#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RouteSignIn",
+              "documentation": {
+                "identifier": "RouteSignIn",
+                "newPage": false,
+                "searchKey": "router.RouteSignIn",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RouteSignIn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RouteSignIn = \"sign-in\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RouteSignUp",
+              "documentation": {
+                "identifier": "RouteSignUp",
+                "newPage": false,
+                "searchKey": "router.RouteSignUp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RouteSignUp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RouteSignUp = \"sign-up\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RoutePasswordReset",
+              "documentation": {
+                "identifier": "RoutePasswordReset",
+                "newPage": false,
+                "searchKey": "router.RoutePasswordReset",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RoutePasswordReset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RoutePasswordReset = \"password-reset\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RouteRaw",
+              "documentation": {
+                "identifier": "RouteRaw",
+                "newPage": false,
+                "searchKey": "router.RouteRaw",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RouteRaw"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RouteRaw = \"raw\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RoutePingFromSelfHosted",
+              "documentation": {
+                "identifier": "RoutePingFromSelfHosted",
+                "newPage": false,
+                "searchKey": "router.RoutePingFromSelfHosted",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RoutePingFromSelfHosted"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RoutePingFromSelfHosted = \"ping-from-self-hosted\"\n```\n\nThese route names are used by other packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/ui/router#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#Router",
+              "documentation": {
+                "identifier": "Router",
+                "newPage": false,
+                "searchKey": "router.Router",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Router"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Router *mux.Router\n```\n\nRouter is the UI router. \n\nIt is used by packages that can't import the ../ui package without creating an import cycle. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/ui/router#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#Extension",
+              "documentation": {
+                "identifier": "Extension",
+                "newPage": false,
+                "searchKey": "router.Extension",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Extension(extensionID string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Extension(extensionID string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui/router#RegistryPublisherExtensions",
+              "documentation": {
+                "identifier": "RegistryPublisherExtensions",
+                "newPage": false,
+                "searchKey": "router.RegistryPublisherExtensions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RegistryPublisherExtensions(isUser, isOrg bool, name string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RegistryPublisherExtensions(isUser, isOrg bool, name string) string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

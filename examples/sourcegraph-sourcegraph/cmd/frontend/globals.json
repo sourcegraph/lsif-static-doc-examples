@@ -1,0 +1,467 @@
+{
+  "pathID": "/cmd/frontend/globals",
+  "documentation": {
+    "identifier": "globals",
+    "newPage": true,
+    "searchKey": "cmd/frontend/globals",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package globals"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package globals contains global variables that should be set by the frontend's main function on initialization. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/globals#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#externalURLWatchers",
+              "documentation": {
+                "identifier": "externalURLWatchers",
+                "newPage": false,
+                "searchKey": "globals.externalURLWatchers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var externalURLWatchers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar externalURLWatchers uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#defaultexternalURL",
+              "documentation": {
+                "identifier": "defaultexternalURL",
+                "newPage": false,
+                "searchKey": "globals.defaultexternalURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultexternalURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultexternalURL = &url.URL{\n\tScheme: \"http\",\n\tHost:   \"example.com\",\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#externalURL",
+              "documentation": {
+                "identifier": "externalURL",
+                "newPage": false,
+                "searchKey": "globals.externalURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var externalURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar externalURL = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#defaultPermissionsUserMapping",
+              "documentation": {
+                "identifier": "defaultPermissionsUserMapping",
+                "newPage": false,
+                "searchKey": "globals.defaultPermissionsUserMapping",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultPermissionsUserMapping"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultPermissionsUserMapping = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#permissionsUserMapping",
+              "documentation": {
+                "identifier": "permissionsUserMapping",
+                "newPage": false,
+                "searchKey": "globals.permissionsUserMapping",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var permissionsUserMapping"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar permissionsUserMapping = ...\n```\n\npermissionsUserMapping mirrors the value of `permissions.userMapping` in the site configuration. This variable is used to monitor configuration change via conf.Watch and must be operated atomically. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#permissionsUserMappingWatchers",
+              "documentation": {
+                "identifier": "permissionsUserMappingWatchers",
+                "newPage": false,
+                "searchKey": "globals.permissionsUserMappingWatchers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var permissionsUserMappingWatchers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar permissionsUserMappingWatchers uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#defaultBranding",
+              "documentation": {
+                "identifier": "defaultBranding",
+                "newPage": false,
+                "searchKey": "globals.defaultBranding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultBranding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultBranding = &schema.Branding{\n\tBrandName: \"Sourcegraph\",\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#branding",
+              "documentation": {
+                "identifier": "branding",
+                "newPage": false,
+                "searchKey": "globals.branding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var branding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar branding = func() atomic.Value {\n\tvar v atomic.Value\n\tv.Store(defaultBranding)\n\treturn v\n}()\n```\n\nbranding mirrors the value of `branding` in the site configuration. This variable is used to monitor configuration change via conf.Watch and must be operated atomically. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#brandingWatchers",
+              "documentation": {
+                "identifier": "brandingWatchers",
+                "newPage": false,
+                "searchKey": "globals.brandingWatchers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var brandingWatchers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar brandingWatchers uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#ConfigurationServerFrontendOnly",
+              "documentation": {
+                "identifier": "ConfigurationServerFrontendOnly",
+                "newPage": false,
+                "searchKey": "globals.ConfigurationServerFrontendOnly",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ConfigurationServerFrontendOnly"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ConfigurationServerFrontendOnly *conf.Server\n```\n\nConfigurationServerFrontendOnly provides the contents of the site configuration to other services and manages modifications to it. \n\nAny another service that attempts to use this variable will panic. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/globals#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#WatchExternalURL",
+              "documentation": {
+                "identifier": "WatchExternalURL",
+                "newPage": false,
+                "searchKey": "globals.WatchExternalURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WatchExternalURL(defaultURL *url.URL)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WatchExternalURL(defaultURL *url.URL)\n```\n\nWatchExternalURL watches for changes in the `externalURL` site configuration so that changes are reflected in what is returned by the ExternalURL function. In case the setting is not set, defaultURL is used. This should only be called once and will panic otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#ExternalURL",
+              "documentation": {
+                "identifier": "ExternalURL",
+                "newPage": false,
+                "searchKey": "globals.ExternalURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExternalURL() *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExternalURL() *url.URL\n```\n\nExternalURL returns the fully-resolved, externally accessible frontend URL. Callers must not mutate the returned pointer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#SetExternalURL",
+              "documentation": {
+                "identifier": "SetExternalURL",
+                "newPage": false,
+                "searchKey": "globals.SetExternalURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetExternalURL(u *url.URL)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetExternalURL(u *url.URL)\n```\n\nSetExternalURL sets the fully-resolved, externally accessible frontend URL. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#WatchPermissionsUserMapping",
+              "documentation": {
+                "identifier": "WatchPermissionsUserMapping",
+                "newPage": false,
+                "searchKey": "globals.WatchPermissionsUserMapping",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WatchPermissionsUserMapping()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WatchPermissionsUserMapping()\n```\n\nWatchPermissionsUserMapping watches for changes in the `permissions.userMapping` site configuration so that changes are reflected in what is returned by the PermissionsUserMapping function. This should only be called once and will panic otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#PermissionsUserMapping",
+              "documentation": {
+                "identifier": "PermissionsUserMapping",
+                "newPage": false,
+                "searchKey": "globals.PermissionsUserMapping",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PermissionsUserMapping() *schema.PermissionsUserMapping"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PermissionsUserMapping() *schema.PermissionsUserMapping\n```\n\nPermissionsUserMapping returns the last valid value of permissions user mapping in the site configuration. Callers must not mutate the returned pointer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#SetPermissionsUserMapping",
+              "documentation": {
+                "identifier": "SetPermissionsUserMapping",
+                "newPage": false,
+                "searchKey": "globals.SetPermissionsUserMapping",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetPermissionsUserMapping(u *schema.PermissionsUserMapping)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetPermissionsUserMapping(u *schema.PermissionsUserMapping)\n```\n\nSetPermissionsUserMapping sets a valid value for the permissions user mapping. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#WatchBranding",
+              "documentation": {
+                "identifier": "WatchBranding",
+                "newPage": false,
+                "searchKey": "globals.WatchBranding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WatchBranding(licenseChecker func() error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WatchBranding(licenseChecker func() error)\n```\n\nWatchBranding watches for changes in the `branding` site configuration so that changes are reflected in what is returned by the Branding function. This should only be called once and will panic otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#Branding",
+              "documentation": {
+                "identifier": "Branding",
+                "newPage": false,
+                "searchKey": "globals.Branding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Branding() *schema.Branding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Branding() *schema.Branding\n```\n\nBranding returns the last valid value of branding in the site configuration. Callers must not mutate the returned pointer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/globals#SetBranding",
+              "documentation": {
+                "identifier": "SetBranding",
+                "newPage": false,
+                "searchKey": "globals.SetBranding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetBranding(u *schema.Branding)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetBranding(u *schema.Branding)\n```\n\nSetBranding sets a valid value for the branding. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

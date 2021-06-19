@@ -1,0 +1,152 @@
+{
+  "pathID": "/dev/watchmanwrapper",
+  "documentation": {
+    "identifier": "watchmanwrapper",
+    "newPage": true,
+    "searchKey": "dev/watchmanwrapper",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Command watchmanwrapper runs watchman subscribe and parses its output to trigger another command with the files that have changed. See dev/changewatch for how it is invocated. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/dev/watchmanwrapper#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/watchmanwrapper#neverRead",
+              "documentation": {
+                "identifier": "neverRead",
+                "newPage": false,
+                "searchKey": "main.neverRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var neverRead"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar neverRead = (chan<- []string)(make(chan []string))\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/dev/watchmanwrapper#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/watchmanwrapper#Response",
+              "documentation": {
+                "identifier": "Response",
+                "newPage": false,
+                "searchKey": "main.Response",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Response struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Response struct {\n\tIsFreshInstance bool     `json:\"is_fresh_instance\"`\n\tFiles           []string `json:\"files\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/dev/watchmanwrapper#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/watchmanwrapper#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

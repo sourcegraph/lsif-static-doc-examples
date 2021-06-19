@@ -1,0 +1,372 @@
+{
+  "pathID": "/enterprise/internal/batches/scheduler",
+  "documentation": {
+    "identifier": "scheduler",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/scheduler",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package scheduler"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/scheduler#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/scheduler#Scheduler",
+              "documentation": {
+                "identifier": "Scheduler",
+                "newPage": false,
+                "searchKey": "scheduler.Scheduler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Scheduler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Scheduler struct {\n\tctx   context.Context\n\tdone  chan struct{}\n\tstore *store.Store\n}\n```\n\nScheduler provides a scheduling service that moves changesets from the scheduled state to the queued state based on the current rate limit, if anything. Changesets are processed in a FIFO manner. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#NewScheduler",
+                    "documentation": {
+                      "identifier": "NewScheduler",
+                      "newPage": false,
+                      "searchKey": "scheduler.NewScheduler",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewScheduler(ctx context.Context, bstore *store.Store) *Scheduler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewScheduler(ctx context.Context, bstore *store.Store) *Scheduler\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#Scheduler.Start",
+                    "documentation": {
+                      "identifier": "Scheduler.Start",
+                      "newPage": false,
+                      "searchKey": "scheduler.Scheduler.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scheduler) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scheduler) Start()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#Scheduler.Stop",
+                    "documentation": {
+                      "identifier": "Scheduler.Stop",
+                      "newPage": false,
+                      "searchKey": "scheduler.Scheduler.Stop",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scheduler) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scheduler) Stop()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#Scheduler.enqueueChangeset",
+                    "documentation": {
+                      "identifier": "Scheduler.enqueueChangeset",
+                      "newPage": false,
+                      "searchKey": "scheduler.Scheduler.enqueueChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scheduler) enqueueChangeset() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scheduler) enqueueChangeset() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/scheduler#backoff",
+              "documentation": {
+                "identifier": "backoff",
+                "newPage": false,
+                "searchKey": "scheduler.backoff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type backoff struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype backoff struct {\n\tinit       time.Duration\n\tmultiplier int\n\tlimit      time.Duration\n\n\tcurrent time.Duration\n}\n```\n\nbackoff implements a very simple bounded exponential backoff strategy. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#newBackoff",
+                    "documentation": {
+                      "identifier": "newBackoff",
+                      "newPage": false,
+                      "searchKey": "scheduler.newBackoff",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newBackoff(init time.Duration, multiplier int, limit time.Duration) *backoff"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newBackoff(init time.Duration, multiplier int, limit time.Duration) *backoff\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#backoff.next",
+                    "documentation": {
+                      "identifier": "backoff.next",
+                      "newPage": false,
+                      "searchKey": "scheduler.backoff.next",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *backoff) next() time.Duration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *backoff) next() time.Duration\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#backoff.reset",
+                    "documentation": {
+                      "identifier": "backoff.reset",
+                      "newPage": false,
+                      "searchKey": "scheduler.backoff.reset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *backoff) reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *backoff) reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/scheduler#ticker",
+              "documentation": {
+                "identifier": "ticker",
+                "newPage": false,
+                "searchKey": "scheduler.ticker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ticker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ticker struct {\n\t// C is the channel that will receive messages when a changeset can be\n\t// scheduled. The receiver must respond on the channel embedded in the\n\t// message to indicate if the next tick should be delayed: if so, the\n\t// duration must be that value, otherwise a zero duration must be sent.\n\t//\n\t// If nil is sent over this channel, an error occurred, and this ticker must\n\t// be stopped and discarded immediately.\n\tC chan chan time.Duration\n\n\tdone     chan struct{}\n\tschedule *window.Schedule\n}\n```\n\nticker wraps the Take() method provided by schedules to return a stream of messages indicating when a changeset should be scheduled, in essentially the same way a time.Ticker periodically sends messages over a channel. The scheduler can optionally ask the ticker to delay the next Take() call if no changesets were ready when consuming the last message: this is important to avoid a busy-wait loop. \n\nNote that ticker does not check the validity period of the schedule it is given; the caller should do this and stop the ticker if the schedule expires or the configuration updates. \n\nIt is important that the caller calls stop() when the ticker is no longer in use, otherwise a goroutine, channel, and probably a rate limiter will be leaked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#newTicker",
+                    "documentation": {
+                      "identifier": "newTicker",
+                      "newPage": false,
+                      "searchKey": "scheduler.newTicker",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newTicker(schedule *window.Schedule) *ticker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newTicker(schedule *window.Schedule) *ticker\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/scheduler#ticker.stop",
+                    "documentation": {
+                      "identifier": "ticker.stop",
+                      "newPage": false,
+                      "searchKey": "scheduler.ticker.stop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *ticker) stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *ticker) stop()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/scheduler#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/scheduler#TestTickerGoBrrr",
+              "documentation": {
+                "identifier": "TestTickerGoBrrr",
+                "newPage": false,
+                "searchKey": "scheduler.TestTickerGoBrrr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTickerGoBrrr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTickerGoBrrr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/scheduler#TestTickerRateLimited",
+              "documentation": {
+                "identifier": "TestTickerRateLimited",
+                "newPage": false,
+                "searchKey": "scheduler.TestTickerRateLimited",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTickerRateLimited(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTickerRateLimited(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/scheduler#TestTickerZero",
+              "documentation": {
+                "identifier": "TestTickerZero",
+                "newPage": false,
+                "searchKey": "scheduler.TestTickerZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTickerZero(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTickerZero(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

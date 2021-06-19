@@ -1,0 +1,589 @@
+{
+  "pathID": "/internal/observation",
+  "documentation": {
+    "identifier": "observation",
+    "newPage": true,
+    "searchKey": "internal/observation",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package observation"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package observation provides a unified way to wrap an operation with logging, tracing, and metrics. \n\nHigh-level ideas: \n\n```\n- Each service creates an observation Context that carries a root logger, tracer,\n  and a metrics registerer as its context.\n\n- An observation Context can create an observation Operation which represents a\n  section of code that can be invoked many times. An observation Operation is\n  configured with state that applies to all invocation of the code.\n\n- An observation Operation can wrap a an invocation of a section of code by calling its\n  With method. This prepares a trace and some state to be reconciled after the invocation\n  has completed. The With method returns a function that, when deferred, will emit metrics,\n  additional logs, and finalize the trace span.\n\n```\nSample usage: \n\n```\nobservationContext := observation.NewContex(\n    log15.Root(),\n    &trace.Tracer{Tracer: opentracing.GlobalTracer()},\n    prometheus.DefaultRegisterer,\n)\n\nmetrics := metrics.NewOperationMetrics(\n    observationContext.Registerer,\n    \"thing\",\n    metrics.WithLabels(\"op\"),\n)\n\noperation := observationContext.Operation(observation.Op{\n    Name:         \"Thing.SomeOperation\",\n    MetricLabels: []string{\"some_operation\"},\n    Metrics:      metrics,\n})\n\nfunction SomeOperation(ctx context.Context) (err error) {\n    // logs and metrics may be available before or after the operation, so they\n    // can be supplied either at the start of the operation, or after in the\n    // defer of endObservation.\n\n    ctx, endObservation := operation.With(ctx, &err, observation.Args{ /* logs and metrics */ })\n    defer func() { endObservation(1, observation.Args{ /* additional logs and metrics */ }) }()\n\n    // ...\n}\n\n```\nLog fields and metric labels can be supplied at construction of an Operation, at invocation of an operation (the With function), or after the invocation completes but before the observation has terminated (the endObservation function). Log fields and metric labels are concatenated together in the order they are attached to an operation. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/observation#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/observation#TestContext",
+              "documentation": {
+                "identifier": "TestContext",
+                "newPage": false,
+                "searchKey": "observation.TestContext",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var TestContext"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar TestContext = Context{Registerer: metrics.TestRegisterer}\n```\n\nTestContext is a behaviorless Context usable for unit tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#commonAcronyms",
+              "documentation": {
+                "identifier": "commonAcronyms",
+                "newPage": false,
+                "searchKey": "observation.commonAcronyms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commonAcronyms"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commonAcronyms = []string{\n\t\"API\",\n\t\"ID\",\n\t\"LSIF\",\n}\n```\n\ncommonAcronyms includes acronyms that malform the expected output of kebabCase due to unexpected adjacent upper-case letters. Add items to this list to stop kebabCase from transforming `FromLSIF` into `from-l-s-i-f`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#acronymsReplacer",
+              "documentation": {
+                "identifier": "acronymsReplacer",
+                "newPage": false,
+                "searchKey": "observation.acronymsReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var acronymsReplacer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar acronymsReplacer *strings.Replacer\n```\n\nacronymsReplacer is a string replacer that normalizes the acronyms above. For example, `API` will be transformed into `Api` so that it appears as one word. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/observation#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/observation#Context",
+              "documentation": {
+                "identifier": "Context",
+                "newPage": false,
+                "searchKey": "observation.Context",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Context struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Context struct {\n\tLogger     logging.ErrorLogger\n\tTracer     *trace.Tracer\n\tRegisterer prometheus.Registerer\n}\n```\n\nContext carries context about where to send logs, trace spans, and register metrics. It should be created once on service startup, and passed around to any location that wants to use it for observing operations. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Context.Operation",
+                    "documentation": {
+                      "identifier": "Context.Operation",
+                      "newPage": false,
+                      "searchKey": "observation.Context.Operation",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Context) Operation(args Op) *Operation"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Context) Operation(args Op) *Operation\n```\n\nOperation combines the state of the parent context to create a new operation. This value should be owned and used by the code that performs the operation it represents. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#Op",
+              "documentation": {
+                "identifier": "Op",
+                "newPage": false,
+                "searchKey": "observation.Op",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Op struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Op struct {\n\tMetrics *metrics.OperationMetrics\n\t// Name configures the trace and error log names. This string should be of the\n\t// format {GroupName}.{OperationName}, where both sections are title cased\n\t// (e.g. Store.GetRepoByID).\n\tName string\n\t// MetricLabels that apply for every invocation of this operation.\n\tMetricLabels []string\n\t// LogFields that apply for for every invocation of this operation.\n\tLogFields []log.Field\n\t// ErrorFilter returns false for any error that should be converted to nil\n\t// for the purposes of metrics and tracing. If this field is not set then\n\t// error values are unaltered.\n\t//\n\t// This is useful when, for example, a revision not found error is expected by\n\t// a process interfacing with gitserver. Such an error should not be treated as\n\t// an unexpected value in metrics and traces but should be handled higher up in\n\t// the stack.\n\tErrorFilter func(err error) bool\n}\n```\n\nOp configures an Operation instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#Operation",
+              "documentation": {
+                "identifier": "Operation",
+                "newPage": false,
+                "searchKey": "observation.Operation",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Operation struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Operation struct {\n\tcontext      *Context\n\tmetrics      *metrics.OperationMetrics\n\tname         string\n\tkebabName    string\n\tmetricLabels []string\n\tlogFields    []log.Field\n\terrorFilter  func(err error) bool\n}\n```\n\nOperation represents an interesting section of code that can be invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Operation.With",
+                    "documentation": {
+                      "identifier": "Operation.With",
+                      "newPage": false,
+                      "searchKey": "observation.Operation.With",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op *Operation) With(ctx context.Context, err *error, args Args) (context.Context, FinishFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op *Operation) With(ctx context.Context, err *error, args Args) (context.Context, FinishFunc)\n```\n\nWith prepares the necessary timers, loggers, and metrics to observe the invocation  of an operation. This method returns a modified context and a function to be deferred until the end of the operation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Operation.WithAndLogger",
+                    "documentation": {
+                      "identifier": "Operation.WithAndLogger",
+                      "newPage": false,
+                      "searchKey": "observation.Operation.WithAndLogger",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op *Operation) WithAndLogger(ctx context.Context, err *error, args Args) (context.Context, TraceLogger, FinishFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op *Operation) WithAndLogger(ctx context.Context, err *error, args Args) (context.Context, TraceLogger, FinishFunc)\n```\n\nWithAndLogger prepares the necessary timers, loggers, and metrics to observe the invocation of an operation. This method returns a modified context, a function that will add a log field to the active trace, and a function to be deferred until the end of the operation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Operation.trace",
+                    "documentation": {
+                      "identifier": "Operation.trace",
+                      "newPage": false,
+                      "searchKey": "observation.Operation.trace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op *Operation) trace(ctx context.Context, args Args) (*trace.Trace, context.Context)\n```\n\ntrace creates a new Trace object and returns the wrapped context. If any log fields are attached to the operation or to the args to With, they are emitted immediately. This returns an unmodified context and a nil trace if no tracer was supplied on the observation context. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Operation.emitErrorLogs",
+                    "documentation": {
+                      "identifier": "Operation.emitErrorLogs",
+                      "newPage": false,
+                      "searchKey": "observation.Operation.emitErrorLogs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op *Operation) emitErrorLogs(err *error, logFields []log.Field)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op *Operation) emitErrorLogs(err *error, logFields []log.Field)\n```\n\nemitErrorLogs will log as message if the operation has failed. This log contains the error as well as all of the log fields attached ot the operation, the args to With, and the args to the finish function. This does nothing if the no logger was supplied on the observation context. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Operation.emitMetrics",
+                    "documentation": {
+                      "identifier": "Operation.emitMetrics",
+                      "newPage": false,
+                      "searchKey": "observation.Operation.emitMetrics",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op *Operation) emitMetrics(err *error, count, elapsed float64, labels []string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op *Operation) emitMetrics(err *error, count, elapsed float64, labels []string)\n```\n\nemitMetrics will emit observe the duration, operation/result, and error counter metrics for this operation. This does nothing if no metric was supplied to the observation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Operation.finishTrace",
+                    "documentation": {
+                      "identifier": "Operation.finishTrace",
+                      "newPage": false,
+                      "searchKey": "observation.Operation.finishTrace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op *Operation) finishTrace(err *error, tr *trace.Trace, logFields []log.Field)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op *Operation) finishTrace(err *error, tr *trace.Trace, logFields []log.Field)\n```\n\nfinishTrace will set the error value, log additional fields supplied after the operation's execution, and finalize the trace span. This does nothing if no trace was constructed at the start of the operation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Operation.applyErrorFilter",
+                    "documentation": {
+                      "identifier": "Operation.applyErrorFilter",
+                      "newPage": false,
+                      "searchKey": "observation.Operation.applyErrorFilter",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op *Operation) applyErrorFilter(err *error) *error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op *Operation) applyErrorFilter(err *error) *error\n```\n\napplyErrorFilter returns nil if the given error does not pass the registered error filter. The original value is returned otherwise. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#TraceLogger",
+              "documentation": {
+                "identifier": "TraceLogger",
+                "newPage": false,
+                "searchKey": "observation.TraceLogger",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TraceLogger func(fields ...github.com/opentracing/opentracing-go/log.Field)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TraceLogger func(fields ...log.Field)\n```\n\nTraceLogger is returned from WithAndLogger and can be used to add timestamped key and value pairs into a related opentracing span. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#FinishFunc",
+              "documentation": {
+                "identifier": "FinishFunc",
+                "newPage": false,
+                "searchKey": "observation.FinishFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FinishFunc func(count float64, args github.com/sourcegraph/sourcegraph/internal/observation.Args)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FinishFunc func(count float64, args Args)\n```\n\nFinishFunc is the shape of the function returned by With and should be invoked within a defer directly before the observed function returns. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#Args",
+              "documentation": {
+                "identifier": "Args",
+                "newPage": false,
+                "searchKey": "observation.Args",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Args struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Args struct {\n\t// MetricLabels that apply only to this invocation of the operation.\n\tMetricLabels []string\n\t// LogFields that apply only to this invocation of the operation.\n\tLogFields []log.Field\n}\n```\n\nArgs configures the observation behavior of an invocation of an operation. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Args.LogFieldMap",
+                    "documentation": {
+                      "identifier": "Args.LogFieldMap",
+                      "newPage": false,
+                      "searchKey": "observation.Args.LogFieldMap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (args Args) LogFieldMap() map[string]interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (args Args) LogFieldMap() map[string]interface{}\n```\n\nLogFieldMap returns a string-to-interface map containing the contents of this Arg value's log fields. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/observation#Args.LogFieldPairs",
+                    "documentation": {
+                      "identifier": "Args.LogFieldPairs",
+                      "newPage": false,
+                      "searchKey": "observation.Args.LogFieldPairs",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (args Args) LogFieldPairs() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (args Args) LogFieldPairs() []interface{}\n```\n\nLogFieldPairs returns a slice of key, value, key, value, ... pairs containing the contents of this Arg value's log fields. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/observation#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/observation#mergeLabels",
+              "documentation": {
+                "identifier": "mergeLabels",
+                "newPage": false,
+                "searchKey": "observation.mergeLabels",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mergeLabels(groups ...[]string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mergeLabels(groups ...[]string) []string\n```\n\nmergeLabels flattens slices of slices of strings. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#mergeLogFields",
+              "documentation": {
+                "identifier": "mergeLogFields",
+                "newPage": false,
+                "searchKey": "observation.mergeLogFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mergeLogFields(groups ...[]log.Field) []log.Field"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mergeLogFields(groups ...[]log.Field) []log.Field\n```\n\nmergeLogFields flattens slices of slices of log fields. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "observation.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#kebabCase",
+              "documentation": {
+                "identifier": "kebabCase",
+                "newPage": false,
+                "searchKey": "observation.kebabCase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func kebabCase(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc kebabCase(s string) string\n```\n\nkebab transforms a string into lower-kebab-case. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/observation#TestKebabCase",
+              "documentation": {
+                "identifier": "TestKebabCase",
+                "newPage": false,
+                "searchKey": "observation.TestKebabCase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestKebabCase(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestKebabCase(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

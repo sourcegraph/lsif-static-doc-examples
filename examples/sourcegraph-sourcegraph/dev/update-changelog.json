@@ -1,0 +1,332 @@
+{
+  "pathID": "/dev/update-changelog",
+  "documentation": {
+    "identifier": "update-changelog",
+    "newPage": true,
+    "searchKey": "dev/update-changelog",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/dev/update-changelog#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/update-changelog#newVersion",
+              "documentation": {
+                "identifier": "newVersion",
+                "newPage": false,
+                "searchKey": "main.newVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newVersion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar newVersion string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/dev/update-changelog#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/update-changelog#changeSubset",
+              "documentation": {
+                "identifier": "changeSubset",
+                "newPage": false,
+                "searchKey": "main.changeSubset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type changeSubset struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype changeSubset struct {\n\theading string\n\tchanges [][]byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/dev/update-changelog#parseSubset",
+                    "documentation": {
+                      "identifier": "parseSubset",
+                      "newPage": false,
+                      "searchKey": "main.parseSubset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseSubset(sec [][]byte, lineCount int) (*changeSubset, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseSubset(sec [][]byte, lineCount int) (*changeSubset, error)\n```\n\nparseSubset tries to read a change subset, which is a ### header followed by a list of changes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/update-changelog#changeSubset.String",
+                    "documentation": {
+                      "identifier": "changeSubset.String",
+                      "newPage": false,
+                      "searchKey": "main.changeSubset.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (css *changeSubset) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (css *changeSubset) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/update-changelog#changeSubset.any",
+                    "documentation": {
+                      "identifier": "changeSubset.any",
+                      "newPage": false,
+                      "searchKey": "main.changeSubset.any",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (css *changeSubset) any() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (css *changeSubset) any() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/update-changelog#changeSet",
+              "documentation": {
+                "identifier": "changeSet",
+                "newPage": false,
+                "searchKey": "main.changeSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type changeSet struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype changeSet struct {\n\tversion string\n\tsubSets []*changeSubset\n\tverbose bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/dev/update-changelog#parseSet",
+                    "documentation": {
+                      "identifier": "parseSet",
+                      "newPage": false,
+                      "searchKey": "main.parseSet",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseSet(sec [][]byte, lineCount int) (*changeSet, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseSet(sec [][]byte, lineCount int) (*changeSet, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/update-changelog#changeSet.String",
+                    "documentation": {
+                      "identifier": "changeSet.String",
+                      "newPage": false,
+                      "searchKey": "main.changeSet.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cs *changeSet) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cs *changeSet) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/dev/update-changelog#changeSet.any",
+                    "documentation": {
+                      "identifier": "changeSet.any",
+                      "newPage": false,
+                      "searchKey": "main.changeSet.any",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cs *changeSet) any() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cs *changeSet) any() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/update-changelog#changeLog",
+              "documentation": {
+                "identifier": "changeLog",
+                "newPage": false,
+                "searchKey": "main.changeLog",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type changeLog struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype changeLog struct {\n\theader     [][]byte\n\tchangeSets []*changeSet\n}\n```\n\na representation of a changeLog in the format we use, which is ## headers per release, roughly. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/dev/update-changelog#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/update-changelog#readLines",
+              "documentation": {
+                "identifier": "readLines",
+                "newPage": false,
+                "searchKey": "main.readLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readLines(path string) ([][]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readLines(path string) ([][]byte, error)\n```\n\nreadLines() yields the lines of the file as a slice of byte-slices \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/update-changelog#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

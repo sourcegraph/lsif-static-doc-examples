@@ -1,0 +1,106 @@
+{
+  "pathID": "/internal/txemail/txtypes",
+  "documentation": {
+    "identifier": "txtypes",
+    "newPage": true,
+    "searchKey": "internal/txemail/txtypes",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package txtypes"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/txemail/txtypes#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/txemail/txtypes#Message",
+              "documentation": {
+                "identifier": "Message",
+                "newPage": false,
+                "searchKey": "txtypes.Message",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Message struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Message struct {\n\tFromName   string   // email \"From\" address proper name\n\tTo         []string // email \"To\" recipients\n\tReplyTo    *string  // optional \"ReplyTo\" address\n\tMessageID  *string  // optional \"Message-ID\" header\n\tReferences []string // optional \"References\" header list\n\n\tTemplate Templates   // unparsed subject/body templates\n\tData     interface{} // template data\n}\n```\n\nMessage describes an email message to be sent. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail/txtypes#Templates",
+              "documentation": {
+                "identifier": "Templates",
+                "newPage": false,
+                "searchKey": "txtypes.Templates",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Templates struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Templates struct {\n\tSubject string // text/template subject template\n\tText    string // text/template text body template\n\tHTML    string //  html/template HTML body template\n}\n```\n\nTemplates contains the text and HTML templates for an email. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/txemail/txtypes#ParsedTemplates",
+              "documentation": {
+                "identifier": "ParsedTemplates",
+                "newPage": false,
+                "searchKey": "txtypes.ParsedTemplates",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ParsedTemplates struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ParsedTemplates struct {\n\tSubj *texttemplate.Template\n\tText *texttemplate.Template\n\tHtml *htmltemplate.Template\n}\n```\n\nParsedTemplates contains parsed text and HTML email templates. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

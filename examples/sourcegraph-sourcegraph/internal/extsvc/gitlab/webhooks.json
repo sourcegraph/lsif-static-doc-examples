@@ -1,0 +1,910 @@
+{
+  "pathID": "/internal/extsvc/gitlab/webhooks",
+  "documentation": {
+    "identifier": "webhooks",
+    "newPage": true,
+    "searchKey": "internal/extsvc/gitlab/webhooks",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package webhooks"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/extsvc/gitlab/webhooks#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#TokenHeaderName",
+              "documentation": {
+                "identifier": "TokenHeaderName",
+                "newPage": false,
+                "searchKey": "webhooks.TokenHeaderName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TokenHeaderName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TokenHeaderName = \"X-Gitlab-Token\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/gitlab/webhooks#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#ErrObjectKindUnknown",
+              "documentation": {
+                "identifier": "ErrObjectKindUnknown",
+                "newPage": false,
+                "searchKey": "webhooks.ErrObjectKindUnknown",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrObjectKindUnknown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrObjectKindUnknown = errors.New(\"unknown object kind\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/gitlab/webhooks#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#EventCommon",
+              "documentation": {
+                "identifier": "EventCommon",
+                "newPage": false,
+                "searchKey": "webhooks.EventCommon",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EventCommon struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EventCommon struct {\n\tObjectKind string               `json:\"object_kind\"`\n\tEventType  string               `json:\"event_type\"`\n\tProject    gitlab.ProjectCommon `json:\"project\"`\n}\n```\n\nEventCommon contains fields that are common to all webhook event types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#PipelineEvent",
+              "documentation": {
+                "identifier": "PipelineEvent",
+                "newPage": false,
+                "searchKey": "webhooks.PipelineEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PipelineEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PipelineEvent struct {\n\tEventCommon\n\n\tUser         gitlab.User          `json:\"user\"`\n\tPipeline     gitlab.Pipeline      `json:\"object_attributes\"`\n\tMergeRequest *gitlab.MergeRequest `json:\"merge_request\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#downcaster",
+              "documentation": {
+                "identifier": "downcaster",
+                "newPage": false,
+                "searchKey": "webhooks.downcaster",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type downcaster interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype downcaster interface {\n\tdowncast() (interface{}, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestEventCommon",
+              "documentation": {
+                "identifier": "MergeRequestEventCommon",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestEventCommon",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestEventCommon struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestEventCommon struct {\n\tEventCommon\n\n\tMergeRequest *gitlab.MergeRequest     `json:\"merge_request\"`\n\tUser         *gitlab.User             `json:\"user\"`\n\tLabels       *[]gitlab.Label          `json:\"labels\"`\n\tChanges      mergeRequestEventChanges `json:\"changes\"`\n}\n```\n\nMergeRequestEventCommon is the common type that underpins the types defined for specific merge request actions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#mergeRequestEventChanges",
+              "documentation": {
+                "identifier": "mergeRequestEventChanges",
+                "newPage": false,
+                "searchKey": "webhooks.mergeRequestEventChanges",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mergeRequestEventChanges struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mergeRequestEventChanges struct {\n\tTitle struct {\n\t\tPrevious string `json:\"previous\"`\n\t\tCurrent  string `json:\"current\"`\n\t} `json:\"title\"`\n\tUpdatedAt struct {\n\t\tCurrent gitlab.Time `json:\"current\"`\n\t} `json:\"updated_at\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestEventCommonContainer",
+              "documentation": {
+                "identifier": "MergeRequestEventCommonContainer",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestEventCommonContainer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestEventCommonContainer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestEventCommonContainer interface {\n\tToEventCommon() *MergeRequestEventCommon\n}\n```\n\nMergeRequestEventCommonContainer is a common interface for types that embed MergeRequestEvent to provide a method that can return the embedded MergeRequestEvent. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#keyer",
+              "documentation": {
+                "identifier": "keyer",
+                "newPage": false,
+                "searchKey": "webhooks.keyer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type keyer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype keyer interface {\n\tKey() string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#UpsertableWebhookEvent",
+              "documentation": {
+                "identifier": "UpsertableWebhookEvent",
+                "newPage": false,
+                "searchKey": "webhooks.UpsertableWebhookEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UpsertableWebhookEvent interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UpsertableWebhookEvent interface {\n\tMergeRequestEventCommonContainer\n\tToEvent() keyer\n}\n```\n\nUpsertableWebhookEvent is a common interface for types that embed ToEvent to provide a method that can return a changeset event derived from the webhook payload. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestApprovedEvent",
+              "documentation": {
+                "identifier": "MergeRequestApprovedEvent",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestApprovedEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestApprovedEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestApprovedEvent struct{ MergeRequestEventCommon }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestApprovedEvent.ToEventCommon",
+                    "documentation": {
+                      "identifier": "MergeRequestApprovedEvent.ToEventCommon",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestApprovedEvent.ToEventCommon",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestApprovedEvent) ToEventCommon() *MergeRequestEventCommon"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestApprovedEvent) ToEventCommon() *MergeRequestEventCommon\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestUnapprovedEvent",
+              "documentation": {
+                "identifier": "MergeRequestUnapprovedEvent",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestUnapprovedEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestUnapprovedEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestUnapprovedEvent struct{ MergeRequestEventCommon }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestUnapprovedEvent.ToEventCommon",
+                    "documentation": {
+                      "identifier": "MergeRequestUnapprovedEvent.ToEventCommon",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestUnapprovedEvent.ToEventCommon",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestUnapprovedEvent) ToEventCommon() *MergeRequestEventCommon"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestUnapprovedEvent) ToEventCommon() *MergeRequestEventCommon\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestUpdateEvent",
+              "documentation": {
+                "identifier": "MergeRequestUpdateEvent",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestUpdateEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestUpdateEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestUpdateEvent struct{ MergeRequestEventCommon }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestUpdateEvent.ToEventCommon",
+                    "documentation": {
+                      "identifier": "MergeRequestUpdateEvent.ToEventCommon",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestUpdateEvent.ToEventCommon",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestUpdateEvent) ToEventCommon() *MergeRequestEventCommon"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestUpdateEvent) ToEventCommon() *MergeRequestEventCommon\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestCloseEvent",
+              "documentation": {
+                "identifier": "MergeRequestCloseEvent",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestCloseEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestCloseEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestCloseEvent struct{ MergeRequestEventCommon }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestCloseEvent.ToEventCommon",
+                    "documentation": {
+                      "identifier": "MergeRequestCloseEvent.ToEventCommon",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestCloseEvent.ToEventCommon",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestCloseEvent) ToEventCommon() *MergeRequestEventCommon"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestCloseEvent) ToEventCommon() *MergeRequestEventCommon\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestCloseEvent.ToEvent",
+                    "documentation": {
+                      "identifier": "MergeRequestCloseEvent.ToEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestCloseEvent.ToEvent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestCloseEvent) ToEvent() keyer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestCloseEvent) ToEvent() keyer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestMergeEvent",
+              "documentation": {
+                "identifier": "MergeRequestMergeEvent",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestMergeEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestMergeEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestMergeEvent struct{ MergeRequestEventCommon }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestMergeEvent.ToEventCommon",
+                    "documentation": {
+                      "identifier": "MergeRequestMergeEvent.ToEventCommon",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestMergeEvent.ToEventCommon",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestMergeEvent) ToEventCommon() *MergeRequestEventCommon"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestMergeEvent) ToEventCommon() *MergeRequestEventCommon\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestMergeEvent.ToEvent",
+                    "documentation": {
+                      "identifier": "MergeRequestMergeEvent.ToEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestMergeEvent.ToEvent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestMergeEvent) ToEvent() keyer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestMergeEvent) ToEvent() keyer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestReopenEvent",
+              "documentation": {
+                "identifier": "MergeRequestReopenEvent",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestReopenEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestReopenEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestReopenEvent struct{ MergeRequestEventCommon }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestReopenEvent.ToEventCommon",
+                    "documentation": {
+                      "identifier": "MergeRequestReopenEvent.ToEventCommon",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestReopenEvent.ToEventCommon",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestReopenEvent) ToEventCommon() *MergeRequestEventCommon"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestReopenEvent) ToEventCommon() *MergeRequestEventCommon\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestReopenEvent.ToEvent",
+                    "documentation": {
+                      "identifier": "MergeRequestReopenEvent.ToEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestReopenEvent.ToEvent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestReopenEvent) ToEvent() keyer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestReopenEvent) ToEvent() keyer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestUndraftEvent",
+              "documentation": {
+                "identifier": "MergeRequestUndraftEvent",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestUndraftEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestUndraftEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestUndraftEvent struct{ MergeRequestEventCommon }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestUndraftEvent.ToEventCommon",
+                    "documentation": {
+                      "identifier": "MergeRequestUndraftEvent.ToEventCommon",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestUndraftEvent.ToEventCommon",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestUndraftEvent) ToEventCommon() *MergeRequestEventCommon"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestUndraftEvent) ToEventCommon() *MergeRequestEventCommon\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestUndraftEvent.ToEvent",
+                    "documentation": {
+                      "identifier": "MergeRequestUndraftEvent.ToEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestUndraftEvent.ToEvent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestUndraftEvent) ToEvent() keyer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestUndraftEvent) ToEvent() keyer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestDraftEvent",
+              "documentation": {
+                "identifier": "MergeRequestDraftEvent",
+                "newPage": false,
+                "searchKey": "webhooks.MergeRequestDraftEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestDraftEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestDraftEvent struct{ MergeRequestEventCommon }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestDraftEvent.ToEventCommon",
+                    "documentation": {
+                      "identifier": "MergeRequestDraftEvent.ToEventCommon",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestDraftEvent.ToEventCommon",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestDraftEvent) ToEventCommon() *MergeRequestEventCommon"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestDraftEvent) ToEventCommon() *MergeRequestEventCommon\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#MergeRequestDraftEvent.ToEvent",
+                    "documentation": {
+                      "identifier": "MergeRequestDraftEvent.ToEvent",
+                      "newPage": false,
+                      "searchKey": "webhooks.MergeRequestDraftEvent.ToEvent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestDraftEvent) ToEvent() keyer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestDraftEvent) ToEvent() keyer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#mergeRequestEvent",
+              "documentation": {
+                "identifier": "mergeRequestEvent",
+                "newPage": false,
+                "searchKey": "webhooks.mergeRequestEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mergeRequestEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mergeRequestEvent struct {\n\tEventCommon\n\n\tUser    *gitlab.User             `json:\"user\"`\n\tLabels  *[]gitlab.Label          `json:\"labels\"`\n\tChanges mergeRequestEventChanges `json:\"changes\"`\n\n\tObjectAttributes mergeRequestEventObjectAttributes `json:\"object_attributes\"`\n}\n```\n\nmergeRequestEvent is an internal type used for initially unmarshalling the typed event before it is downcast into a more specific type later based on the \"action\" field in the JSON. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab/webhooks#mergeRequestEvent.downcast",
+                    "documentation": {
+                      "identifier": "mergeRequestEvent.downcast",
+                      "newPage": false,
+                      "searchKey": "webhooks.mergeRequestEvent.downcast",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mre *mergeRequestEvent) downcast() (interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mre *mergeRequestEvent) downcast() (interface{}, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#mergeRequestEventObjectAttributes",
+              "documentation": {
+                "identifier": "mergeRequestEventObjectAttributes",
+                "newPage": false,
+                "searchKey": "webhooks.mergeRequestEventObjectAttributes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mergeRequestEventObjectAttributes struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mergeRequestEventObjectAttributes struct {\n\t*gitlab.MergeRequest\n\tAction string `json:\"action\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/gitlab/webhooks#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#UnmarshalEvent",
+              "documentation": {
+                "identifier": "UnmarshalEvent",
+                "newPage": false,
+                "searchKey": "webhooks.UnmarshalEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UnmarshalEvent(data []byte) (interface{}, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UnmarshalEvent(data []byte) (interface{}, error)\n```\n\nUnmarshalEvent unmarshals the given JSON into an event type. Possible return types are *MergeRequestEvent. \n\nErrors caused by a valid payload being of an unknown type may be distinguished from other errors by checking for ErrObjectKindUnknown in the error chain; note that the top level error value will not be equal to ErrObjectKindUnknown in this case. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#TestUnmarshalEvent",
+              "documentation": {
+                "identifier": "TestUnmarshalEvent",
+                "newPage": false,
+                "searchKey": "webhooks.TestUnmarshalEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnmarshalEvent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnmarshalEvent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab/webhooks#TestMergeRequestDowncast",
+              "documentation": {
+                "identifier": "TestMergeRequestDowncast",
+                "newPage": false,
+                "searchKey": "webhooks.TestMergeRequestDowncast",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMergeRequestDowncast(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMergeRequestDowncast(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,3907 @@
+{
+  "pathID": "/internal/conf",
+  "documentation": {
+    "identifier": "conf",
+    "newPage": true,
+    "searchKey": "internal/conf",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package conf"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package conf provides functions for accessing the Site Configuration. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/conf#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/conf#AccessTokensNone",
+              "documentation": {
+                "identifier": "AccessTokensNone",
+                "newPage": false,
+                "searchKey": "conf.AccessTokensNone",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AccessTokensNone"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AccessTokensNone AccessTokAllow = \"none\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AccessTokensAll",
+              "documentation": {
+                "identifier": "AccessTokensAll",
+                "newPage": false,
+                "searchKey": "conf.AccessTokensAll",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AccessTokensAll"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AccessTokensAll AccessTokAllow = \"all-users-create\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AccessTokensAdmin",
+              "documentation": {
+                "identifier": "AccessTokensAdmin",
+                "newPage": false,
+                "searchKey": "conf.AccessTokensAdmin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AccessTokensAdmin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AccessTokensAdmin AccessTokAllow = \"site-admin-create\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#DeployKubernetes",
+              "documentation": {
+                "identifier": "DeployKubernetes",
+                "newPage": false,
+                "searchKey": "conf.DeployKubernetes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DeployKubernetes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DeployKubernetes = \"kubernetes\"\n```\n\nDeploy type constants. Any changes here should be reflected in the DeployType type declared in web/src/globals.d.ts: [https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22](https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#DeploySingleDocker",
+              "documentation": {
+                "identifier": "DeploySingleDocker",
+                "newPage": false,
+                "searchKey": "conf.DeploySingleDocker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DeploySingleDocker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DeploySingleDocker = \"docker-container\"\n```\n\nDeploy type constants. Any changes here should be reflected in the DeployType type declared in web/src/globals.d.ts: [https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22](https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#DeployDockerCompose",
+              "documentation": {
+                "identifier": "DeployDockerCompose",
+                "newPage": false,
+                "searchKey": "conf.DeployDockerCompose",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DeployDockerCompose"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DeployDockerCompose = \"docker-compose\"\n```\n\nDeploy type constants. Any changes here should be reflected in the DeployType type declared in web/src/globals.d.ts: [https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22](https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#DeployPureDocker",
+              "documentation": {
+                "identifier": "DeployPureDocker",
+                "newPage": false,
+                "searchKey": "conf.DeployPureDocker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DeployPureDocker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DeployPureDocker = \"pure-docker\"\n```\n\nDeploy type constants. Any changes here should be reflected in the DeployType type declared in web/src/globals.d.ts: [https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22](https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#DeployDev",
+              "documentation": {
+                "identifier": "DeployDev",
+                "newPage": false,
+                "searchKey": "conf.DeployDev",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DeployDev"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DeployDev = \"dev\"\n```\n\nDeploy type constants. Any changes here should be reflected in the DeployType type declared in web/src/globals.d.ts: [https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22](https://sourcegraph.com/search?q=r:github.com/sourcegraph/sourcegraph%24+%22type+DeployType%22) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#defaultPasswordLinkExpiry",
+              "documentation": {
+                "identifier": "defaultPasswordLinkExpiry",
+                "newPage": false,
+                "searchKey": "conf.defaultPasswordLinkExpiry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultPasswordLinkExpiry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultPasswordLinkExpiry = 14400\n```\n\nBy default, password reset links are valid for 4 hours. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ExternalServiceModeDisabled",
+              "documentation": {
+                "identifier": "ExternalServiceModeDisabled",
+                "newPage": false,
+                "searchKey": "conf.ExternalServiceModeDisabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ExternalServiceModeDisabled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ExternalServiceModeDisabled ExternalServiceMode = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ExternalServiceModePublic",
+              "documentation": {
+                "identifier": "ExternalServiceModePublic",
+                "newPage": false,
+                "searchKey": "conf.ExternalServiceModePublic",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ExternalServiceModePublic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ExternalServiceModePublic ExternalServiceMode = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ExternalServiceModeAll",
+              "documentation": {
+                "identifier": "ExternalServiceModeAll",
+                "newPage": false,
+                "searchKey": "conf.ExternalServiceModeAll",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ExternalServiceModeAll"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ExternalServiceModeAll ExternalServiceMode = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#modeServer",
+              "documentation": {
+                "identifier": "modeServer",
+                "newPage": false,
+                "searchKey": "conf.modeServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const modeServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst modeServer configurationMode = iota\n```\n\nThe user of pkg/conf reads and writes to the configuration file. This should only ever be used by frontend. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#modeClient",
+              "documentation": {
+                "identifier": "modeClient",
+                "newPage": false,
+                "searchKey": "conf.modeClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const modeClient"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst modeClient\n```\n\nThe user of pkg/conf only reads the configuration file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#modeEmpty",
+              "documentation": {
+                "identifier": "modeEmpty",
+                "newPage": false,
+                "searchKey": "conf.modeEmpty",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const modeEmpty"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst modeEmpty\n```\n\nThe user of pkg/conf is a test case or explicitly opted to have no configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#problemSite",
+              "documentation": {
+                "identifier": "problemSite",
+                "newPage": false,
+                "searchKey": "conf.problemSite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const problemSite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst problemSite problemKind = \"SiteConfig\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#problemExternalService",
+              "documentation": {
+                "identifier": "problemExternalService",
+                "newPage": false,
+                "searchKey": "conf.problemExternalService",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const problemExternalService"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst problemExternalService problemKind = \"ExternalService\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/conf#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/conf#defaultClientOnce",
+              "documentation": {
+                "identifier": "defaultClientOnce",
+                "newPage": false,
+                "searchKey": "conf.defaultClientOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultClientOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultClientOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#defaultClientVal",
+              "documentation": {
+                "identifier": "defaultClientVal",
+                "newPage": false,
+                "searchKey": "conf.defaultClientVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultClientVal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultClientVal *client\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#configurationServerFrontendOnlyInitialized",
+              "documentation": {
+                "identifier": "configurationServerFrontendOnlyInitialized",
+                "newPage": false,
+                "searchKey": "conf.configurationServerFrontendOnlyInitialized",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var configurationServerFrontendOnlyInitialized"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar configurationServerFrontendOnlyInitialized = make(chan struct{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#FormatOptions",
+              "documentation": {
+                "identifier": "FormatOptions",
+                "newPage": false,
+                "searchKey": "conf.FormatOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FormatOptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FormatOptions = jsonx.FormatOptions{InsertSpaces: true, TabSize: 2, EOL: \"\\n\"}\n```\n\nFormatOptions is the default format options that should be used for jsonx edit computation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#siteConfigEscapeHatchPath",
+              "documentation": {
+                "identifier": "siteConfigEscapeHatchPath",
+                "newPage": false,
+                "searchKey": "conf.siteConfigEscapeHatchPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var siteConfigEscapeHatchPath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar siteConfigEscapeHatchPath = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#requireRestart",
+              "documentation": {
+                "identifier": "requireRestart",
+                "newPage": false,
+                "searchKey": "conf.requireRestart",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requireRestart"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requireRestart = ...\n```\n\nrequireRestart describes the list of config properties that require restarting the Sourcegraph Server in order for the change to take effect. \n\nExperimental features are special in that they are denoted individually via e.g. \"experimentalFeatures::myFeatureFlag\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#DefaultRemoteRegistry",
+              "documentation": {
+                "identifier": "DefaultRemoteRegistry",
+                "newPage": false,
+                "searchKey": "conf.DefaultRemoteRegistry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DefaultRemoteRegistry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DefaultRemoteRegistry string\n```\n\nDefaultRemoteRegistry is the default value for the site configuration property \"extensions\".\"remoteRegistry\". \n\nIt is intentionally not set in the OSS build. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ignoreLegacyKubernetesFields",
+              "documentation": {
+                "identifier": "ignoreLegacyKubernetesFields",
+                "newPage": false,
+                "searchKey": "conf.ignoreLegacyKubernetesFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ignoreLegacyKubernetesFields"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ignoreLegacyKubernetesFields = ...\n```\n\nignoreLegacyKubernetesFields is the set of field names for which validation errors should be ignored. The validation errors occur only because deploy-sourcegraph config merged site config and Kubernetes cluster-specific config. This is deprecated. Until we have transitioned fully, we suppress validation errors on these fields. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#contributedValidators",
+              "documentation": {
+                "identifier": "contributedValidators",
+                "newPage": false,
+                "searchKey": "conf.contributedValidators",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var contributedValidators"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar contributedValidators []Validator\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#contributedWarnings",
+              "documentation": {
+                "identifier": "contributedWarnings",
+                "newPage": false,
+                "searchKey": "conf.contributedWarnings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var contributedWarnings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar contributedWarnings []Validator\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/conf#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/conf#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "conf.client",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype client struct {\n\tstore       *store\n\tpassthrough ConfigurationSource\n\twatchersMu  sync.Mutex\n\twatchers    []chan struct{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#defaultClient",
+                    "documentation": {
+                      "identifier": "defaultClient",
+                      "newPage": false,
+                      "searchKey": "conf.defaultClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func defaultClient() *client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc defaultClient() *client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#initDefaultClient",
+                    "documentation": {
+                      "identifier": "initDefaultClient",
+                      "newPage": false,
+                      "searchKey": "conf.initDefaultClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func initDefaultClient() *client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc initDefaultClient() *client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#client.Raw",
+                    "documentation": {
+                      "identifier": "client.Raw",
+                      "newPage": false,
+                      "searchKey": "conf.client.Raw",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) Raw() conftypes.RawUnified"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) Raw() conftypes.RawUnified\n```\n\nRaw returns a copy of the raw configuration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#client.Get",
+                    "documentation": {
+                      "identifier": "client.Get",
+                      "newPage": false,
+                      "searchKey": "conf.client.Get",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) Get() *Unified"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) Get() *Unified\n```\n\nGet returns a copy of the configuration. The returned value should NEVER be modified. \n\nImportant: The configuration can change while the process is running! Code should only call this in response to conf.Watch OR it should invoke it periodically or in direct response to a user action (e.g. inside an HTTP handler) to ensure it responds to configuration changes while the process is running. \n\nThere are a select few configuration options that do restart the server but these are the exception rather than the rule. In general, ANY use of configuration should be done in such a way that it responds to config changes while the process is running. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#client.Mock",
+                    "documentation": {
+                      "identifier": "client.Mock",
+                      "newPage": false,
+                      "searchKey": "conf.client.Mock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) Mock(mockery *Unified)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) Mock(mockery *Unified)\n```\n\nMock sets up mock data for the site configuration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#client.Watch",
+                    "documentation": {
+                      "identifier": "client.Watch",
+                      "newPage": false,
+                      "searchKey": "conf.client.Watch",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) Watch(f func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) Watch(f func())\n```\n\nWatch calls the given function in a separate goroutine whenever the configuration has changed. The new configuration can be received by calling conf.Get. \n\nBefore Watch returns, it will invoke f to use the current configuration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#client.Cached",
+                    "documentation": {
+                      "identifier": "client.Cached",
+                      "newPage": false,
+                      "searchKey": "conf.client.Cached",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) Cached(f func() interface{}) (wrapped func() interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) Cached(f func() interface{}) (wrapped func() interface{})\n```\n\nCached will return a wrapper around f which caches the response. The value will be recomputed every time the config is updated. \n\nThe first call to wrapped will block on config initialization. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#client.notifyWatchers",
+                    "documentation": {
+                      "identifier": "client.notifyWatchers",
+                      "newPage": false,
+                      "searchKey": "conf.client.notifyWatchers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) notifyWatchers()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) notifyWatchers()\n```\n\nnotifyWatchers runs all the callbacks registered via client.Watch() whenever the configuration has changed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#client.continuouslyUpdate",
+                    "documentation": {
+                      "identifier": "client.continuouslyUpdate",
+                      "newPage": false,
+                      "searchKey": "conf.client.continuouslyUpdate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) continuouslyUpdate(optOnlySetByTests *continuousUpdateOptions)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) continuouslyUpdate(optOnlySetByTests *continuousUpdateOptions)\n```\n\ncontinuouslyUpdate runs (*client).fetchAndUpdate in an infinite loop, with error logging and random sleep intervals. \n\nThe optOnlySetByTests parameter is ONLY customized by tests. All callers in main code should pass nil (so that the same defaults are used). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#client.fetchAndUpdate",
+                    "documentation": {
+                      "identifier": "client.fetchAndUpdate",
+                      "newPage": false,
+                      "searchKey": "conf.client.fetchAndUpdate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *client) fetchAndUpdate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *client) fetchAndUpdate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#continuousUpdateOptions",
+              "documentation": {
+                "identifier": "continuousUpdateOptions",
+                "newPage": false,
+                "searchKey": "conf.continuousUpdateOptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type continuousUpdateOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype continuousUpdateOptions struct {\n\t// delayBeforeUnreachableLog is how long to wait before logging an error upon initial startup\n\t// due to the frontend being unreachable. It is used to avoid log spam when other services (that\n\t// contact the frontend for configuration) start up before the frontend.\n\tdelayBeforeUnreachableLog time.Duration\n\n\tlog   func(format string, v ...interface{}) // log.Printf equivalent\n\tsleep func()                                // sleep between updates\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AccessTokAllow",
+              "documentation": {
+                "identifier": "AccessTokAllow",
+                "newPage": false,
+                "searchKey": "conf.AccessTokAllow",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AccessTokAllow string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AccessTokAllow string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#AccessTokensAllow",
+                    "documentation": {
+                      "identifier": "AccessTokensAllow",
+                      "newPage": false,
+                      "searchKey": "conf.AccessTokensAllow",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func AccessTokensAllow() AccessTokAllow"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc AccessTokensAllow() AccessTokAllow\n```\n\nAccessTokensAllow returns whether access tokens are enabled, disabled, or restricted to creation by admin users. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ExternalServiceMode",
+              "documentation": {
+                "identifier": "ExternalServiceMode",
+                "newPage": false,
+                "searchKey": "conf.ExternalServiceMode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalServiceMode int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalServiceMode int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#ExternalServiceUserMode",
+                    "documentation": {
+                      "identifier": "ExternalServiceUserMode",
+                      "newPage": false,
+                      "searchKey": "conf.ExternalServiceUserMode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ExternalServiceUserMode() ExternalServiceMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ExternalServiceUserMode() ExternalServiceMode\n```\n\nExternalServiceUserMode returns the site level mode describing if users are allowed to add external services for public and private repositories. It does NOT take into account permissions granted to the current user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#ExternalServiceMode.String",
+                    "documentation": {
+                      "identifier": "ExternalServiceMode.String",
+                      "newPage": false,
+                      "searchKey": "conf.ExternalServiceMode.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ExternalServiceMode) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ExternalServiceMode) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Unified",
+              "documentation": {
+                "identifier": "Unified",
+                "newPage": false,
+                "searchKey": "conf.Unified",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Unified struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Unified struct {\n\tschema.SiteConfiguration\n\tServiceConnections conftypes.ServiceConnections\n}\n```\n\nUnified represents the overall global Sourcegraph configuration from various sources: \n\n- The site configuration, from the database (from the site-admin panel). - Service connections, from the frontend (e.g. which gitservers to talk to). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Get",
+                    "documentation": {
+                      "identifier": "Get",
+                      "newPage": false,
+                      "searchKey": "conf.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Get() *Unified"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Get() *Unified\n```\n\nGet returns a copy of the configuration. The returned value should NEVER be modified. \n\nImportant: The configuration can change while the process is running! Code should only call this in response to conf.Watch OR it should invoke it periodically or in direct response to a user action (e.g. inside an HTTP handler) to ensure it responds to configuration changes while the process is running. \n\nThere are a select few configuration options that do restart the server, but these are the exception rather than the rule. In general, ANY use of configuration should be done in such a way that it responds to config changes while the process is running. \n\nGet is a wrapper around client.Get. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#ParseConfig",
+                    "documentation": {
+                      "identifier": "ParseConfig",
+                      "newPage": false,
+                      "searchKey": "conf.ParseConfig",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ParseConfig(data conftypes.RawUnified) (*Unified, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ParseConfig(data conftypes.RawUnified) (*Unified, error)\n```\n\nParseConfig parses the raw configuration. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#configurationMode",
+              "documentation": {
+                "identifier": "configurationMode",
+                "newPage": false,
+                "searchKey": "conf.configurationMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type configurationMode int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype configurationMode int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#getMode",
+                    "documentation": {
+                      "identifier": "getMode",
+                      "newPage": false,
+                      "searchKey": "conf.getMode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getMode() configurationMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getMode() configurationMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#cachedConfigurationSource",
+              "documentation": {
+                "identifier": "cachedConfigurationSource",
+                "newPage": false,
+                "searchKey": "conf.cachedConfigurationSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cachedConfigurationSource struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cachedConfigurationSource struct {\n\tsource ConfigurationSource\n\n\tttl       time.Duration\n\tentryMu   sync.Mutex\n\tentry     *conftypes.RawUnified\n\tentryTime time.Time\n}\n```\n\ncachedConfigurationSource caches reads for a specified duration to reduce the number of reads against the underlying configuration source (e.g. a Postgres DB). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#cachedConfigurationSource.Read",
+                    "documentation": {
+                      "identifier": "cachedConfigurationSource.Read",
+                      "newPage": false,
+                      "searchKey": "conf.cachedConfigurationSource.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cachedConfigurationSource) Read(ctx context.Context) (conftypes.RawUnified, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cachedConfigurationSource) Read(ctx context.Context) (conftypes.RawUnified, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#cachedConfigurationSource.Write",
+                    "documentation": {
+                      "identifier": "cachedConfigurationSource.Write",
+                      "newPage": false,
+                      "searchKey": "conf.cachedConfigurationSource.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cachedConfigurationSource) Write(ctx context.Context, input conftypes.RawUnified) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cachedConfigurationSource) Write(ctx context.Context, input conftypes.RawUnified) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#PlatformConfiguration",
+              "documentation": {
+                "identifier": "PlatformConfiguration",
+                "newPage": false,
+                "searchKey": "conf.PlatformConfiguration",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PlatformConfiguration struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PlatformConfiguration struct {\n\tRemoteRegistryURL string\n}\n```\n\nPlatformConfiguration contains site configuration for the Sourcegraph platform. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Extensions",
+                    "documentation": {
+                      "identifier": "Extensions",
+                      "newPage": false,
+                      "searchKey": "conf.Extensions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Extensions() *PlatformConfiguration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Extensions() *PlatformConfiguration\n```\n\nExtensions returns the configuration for the Sourcegraph platform, or nil if it is disabled. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ConfigurationSource",
+              "documentation": {
+                "identifier": "ConfigurationSource",
+                "newPage": false,
+                "searchKey": "conf.ConfigurationSource",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ConfigurationSource interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ConfigurationSource interface {\n\t// Write updates the configuration. The Deployment field is ignored.\n\tWrite(ctx context.Context, data conftypes.RawUnified) error\n\tRead(ctx context.Context) (conftypes.RawUnified, error)\n}\n```\n\nConfigurationSource provides direct access to read and write to the \"raw\" configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Server",
+              "documentation": {
+                "identifier": "Server",
+                "newPage": false,
+                "searchKey": "conf.Server",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Server struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Server struct {\n\tSource ConfigurationSource\n\n\tstore *store\n\n\tneedRestartMu sync.RWMutex\n\tneedRestart   bool\n\n\t// fileWrite signals when our app writes to the configuration file. The\n\t// secondary channel is closed when server.Raw() would return the new\n\t// configuration that has been written to disk.\n\tfileWrite chan chan struct{}\n\n\tonce sync.Once\n}\n```\n\nServer provides access and manages modifications to the site configuration. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#InitConfigurationServerFrontendOnly",
+                    "documentation": {
+                      "identifier": "InitConfigurationServerFrontendOnly",
+                      "newPage": false,
+                      "searchKey": "conf.InitConfigurationServerFrontendOnly",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func InitConfigurationServerFrontendOnly(source ConfigurationSource) *Server"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc InitConfigurationServerFrontendOnly(source ConfigurationSource) *Server\n```\n\nInitConfigurationServerFrontendOnly creates and returns a configuration server. This should only be invoked by the frontend, or else a panic will occur. This function should only ever be called once. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#NewServer",
+                    "documentation": {
+                      "identifier": "NewServer",
+                      "newPage": false,
+                      "searchKey": "conf.NewServer",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewServer(source ConfigurationSource) *Server"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewServer(source ConfigurationSource) *Server\n```\n\nNewServer returns a new Server instance that mangages the site config file that is stored at configSource. \n\nThe server must be started with Start() before it can handle requests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Server.Raw",
+                    "documentation": {
+                      "identifier": "Server.Raw",
+                      "newPage": false,
+                      "searchKey": "conf.Server.Raw",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) Raw() conftypes.RawUnified"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) Raw() conftypes.RawUnified\n```\n\nRaw returns the raw text of the configuration file. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Server.Write",
+                    "documentation": {
+                      "identifier": "Server.Write",
+                      "newPage": false,
+                      "searchKey": "conf.Server.Write",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) Write(ctx context.Context, input conftypes.RawUnified) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) Write(ctx context.Context, input conftypes.RawUnified) error\n```\n\nWrite writes the JSON config file to the config file's path. If the JSON configuration is invalid, an error is returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Server.Edit",
+                    "documentation": {
+                      "identifier": "Server.Edit",
+                      "newPage": false,
+                      "searchKey": "conf.Server.Edit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) Edit(ctx context.Context, computeEdits func(current *Unified, raw conftypes.RawUnified) (Edits, error)) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) Edit(ctx context.Context, computeEdits func(current *Unified, raw conftypes.RawUnified) (Edits, error)) error\n```\n\nEdit invokes the provided function to compute edits to the site configuration. It then applies and writes them. \n\nThe computation function is provided the current configuration, which should NEVER be modified in any way. Always copy values. \n\nTODO(slimsag): Currently, edits may only be applied via the frontend. It may make sense to allow non-frontend services to apply edits as well. To do this we would need to pipe writes through the frontend's internal httpapi. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Server.Start",
+                    "documentation": {
+                      "identifier": "Server.Start",
+                      "newPage": false,
+                      "searchKey": "conf.Server.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) Start()\n```\n\nStart initializes the server instance. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Server.watchSource",
+                    "documentation": {
+                      "identifier": "Server.watchSource",
+                      "newPage": false,
+                      "searchKey": "conf.Server.watchSource",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) watchSource()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) watchSource()\n```\n\nwatchSource reloads the configuration from the source at least every five seconds or whenever server.Write() is called. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Server.updateFromSource",
+                    "documentation": {
+                      "identifier": "Server.updateFromSource",
+                      "newPage": false,
+                      "searchKey": "conf.Server.updateFromSource",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) updateFromSource(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) updateFromSource(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Server.NeedServerRestart",
+                    "documentation": {
+                      "identifier": "Server.NeedServerRestart",
+                      "newPage": false,
+                      "searchKey": "conf.Server.NeedServerRestart",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) NeedServerRestart() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) NeedServerRestart() bool\n```\n\nNeedServerRestart tells if the server needs to restart for pending configuration changes to take effect. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Server.markNeedServerRestart",
+                    "documentation": {
+                      "identifier": "Server.markNeedServerRestart",
+                      "newPage": false,
+                      "searchKey": "conf.Server.markNeedServerRestart",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) markNeedServerRestart()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) markNeedServerRestart()\n```\n\nmarkNeedServerRestart marks the server as needing a restart so that pending configuration changes can take effect. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Edits",
+              "documentation": {
+                "identifier": "Edits",
+                "newPage": false,
+                "searchKey": "conf.Edits",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Edits struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Edits struct {\n\tSite []jsonx.Edit\n}\n```\n\nEdits describes some JSON edits to apply to site configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#store",
+              "documentation": {
+                "identifier": "store",
+                "newPage": false,
+                "searchKey": "conf.store",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type store struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype store struct {\n\tconfigMu  sync.RWMutex\n\tlastValid *Unified\n\tmock      *Unified\n\n\trawMu sync.RWMutex\n\traw   conftypes.RawUnified\n\n\tready chan struct{}\n\tonce  sync.Once\n}\n```\n\nstore manages the in-memory storage, access, and updating of the site configuration in a threadsafe manner. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#newStore",
+                    "documentation": {
+                      "identifier": "newStore",
+                      "newPage": false,
+                      "searchKey": "conf.newStore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newStore() *store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newStore() *store\n```\n\nnewStore returns a new configuration store. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#store.LastValid",
+                    "documentation": {
+                      "identifier": "store.LastValid",
+                      "newPage": false,
+                      "searchKey": "conf.store.LastValid",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) LastValid() *Unified"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) LastValid() *Unified\n```\n\nLastValid returns the last valid site configuration that this store was updated with. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#store.Raw",
+                    "documentation": {
+                      "identifier": "store.Raw",
+                      "newPage": false,
+                      "searchKey": "conf.store.Raw",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) Raw() conftypes.RawUnified"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) Raw() conftypes.RawUnified\n```\n\nRaw returns the last raw configuration that this store was updated with. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#store.Mock",
+                    "documentation": {
+                      "identifier": "store.Mock",
+                      "newPage": false,
+                      "searchKey": "conf.store.Mock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) Mock(mockery *Unified)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) Mock(mockery *Unified)\n```\n\nMock sets up mock data for the site configuration. It uses the configuration mutex, to avoid possible races between test code and possible config watchers. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#store.MaybeUpdate",
+                    "documentation": {
+                      "identifier": "store.MaybeUpdate",
+                      "newPage": false,
+                      "searchKey": "conf.store.MaybeUpdate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) MaybeUpdate(rawConfig conftypes.RawUnified) (updateResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) MaybeUpdate(rawConfig conftypes.RawUnified) (updateResult, error)\n```\n\nMaybeUpdate attempts to update the store with the supplied rawConfig. \n\nIf the rawConfig isn't syntactically valid JSON, the store's LastValid field. won't be updating and a parsing error will be returned from the previous time that this function was called. \n\nconfigChange is defined iff the cache was actually updated. TODO@ggilmore: write a less-vague description \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#store.WaitUntilInitialized",
+                    "documentation": {
+                      "identifier": "store.WaitUntilInitialized",
+                      "newPage": false,
+                      "searchKey": "conf.store.WaitUntilInitialized",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) WaitUntilInitialized()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) WaitUntilInitialized()\n```\n\nWaitUntilInitialized blocks and only returns to the caller once the store has initialized with a syntactically valid configuration file (via MaybeUpdate() or Mock()). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#store.checkDeadlock",
+                    "documentation": {
+                      "identifier": "store.checkDeadlock",
+                      "newPage": false,
+                      "searchKey": "conf.store.checkDeadlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) checkDeadlock()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) checkDeadlock()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#store.initialize",
+                    "documentation": {
+                      "identifier": "store.initialize",
+                      "newPage": false,
+                      "searchKey": "conf.store.initialize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *store) initialize()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *store) initialize()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#updateResult",
+              "documentation": {
+                "identifier": "updateResult",
+                "newPage": false,
+                "searchKey": "conf.updateResult",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type updateResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype updateResult struct {\n\tChanged bool\n\tOld     *Unified\n\tNew     *Unified\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#problemKind",
+              "documentation": {
+                "identifier": "problemKind",
+                "newPage": false,
+                "searchKey": "conf.problemKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type problemKind string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype problemKind string\n```\n\nproblemKind represents the kind of a configuration problem. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Problem",
+              "documentation": {
+                "identifier": "Problem",
+                "newPage": false,
+                "searchKey": "conf.Problem",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Problem struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Problem struct {\n\tkind        problemKind\n\tdescription string\n}\n```\n\nProblem contains kind and description of a specific configuration problem. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#NewSiteProblem",
+                    "documentation": {
+                      "identifier": "NewSiteProblem",
+                      "newPage": false,
+                      "searchKey": "conf.NewSiteProblem",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewSiteProblem(msg string) *Problem"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewSiteProblem(msg string) *Problem\n```\n\nNewSiteProblem creates a new site config problem with given message. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#NewExternalServiceProblem",
+                    "documentation": {
+                      "identifier": "NewExternalServiceProblem",
+                      "newPage": false,
+                      "searchKey": "conf.NewExternalServiceProblem",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewExternalServiceProblem(msg string) *Problem"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewExternalServiceProblem(msg string) *Problem\n```\n\nNewExternalServiceProblem creates a new external service config problem with given message. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Problem.IsSite",
+                    "documentation": {
+                      "identifier": "Problem.IsSite",
+                      "newPage": false,
+                      "searchKey": "conf.Problem.IsSite",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Problem) IsSite() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Problem) IsSite() bool\n```\n\nIsSite returns true if the problem is about site config. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Problem.IsExternalService",
+                    "documentation": {
+                      "identifier": "Problem.IsExternalService",
+                      "newPage": false,
+                      "searchKey": "conf.Problem.IsExternalService",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Problem) IsExternalService() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Problem) IsExternalService() bool\n```\n\nIsExternalService returns true if the problem is about external service config. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Problem.String",
+                    "documentation": {
+                      "identifier": "Problem.String",
+                      "newPage": false,
+                      "searchKey": "conf.Problem.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Problem) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Problem) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Problem.MarshalJSON",
+                    "documentation": {
+                      "identifier": "Problem.MarshalJSON",
+                      "newPage": false,
+                      "searchKey": "conf.Problem.MarshalJSON",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Problem) MarshalJSON() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Problem) MarshalJSON() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Problem.UnmarshalJSON",
+                    "documentation": {
+                      "identifier": "Problem.UnmarshalJSON",
+                      "newPage": false,
+                      "searchKey": "conf.Problem.UnmarshalJSON",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Problem) UnmarshalJSON(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Problem) UnmarshalJSON(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Problems",
+              "documentation": {
+                "identifier": "Problems",
+                "newPage": false,
+                "searchKey": "conf.Problems",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Problems []*conf.Problem"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Problems []*Problem\n```\n\nProblems is a list of problems. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#newProblems",
+                    "documentation": {
+                      "identifier": "newProblems",
+                      "newPage": false,
+                      "searchKey": "conf.newProblems",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newProblems(kind problemKind, messages ...string) Problems"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newProblems(kind problemKind, messages ...string) Problems\n```\n\nnewProblems converts a list of messages with their kind into problems. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#NewSiteProblems",
+                    "documentation": {
+                      "identifier": "NewSiteProblems",
+                      "newPage": false,
+                      "searchKey": "conf.NewSiteProblems",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewSiteProblems(messages ...string) Problems"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewSiteProblems(messages ...string) Problems\n```\n\nNewSiteProblems converts a list of messages into site config problems. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#NewExternalServiceProblems",
+                    "documentation": {
+                      "identifier": "NewExternalServiceProblems",
+                      "newPage": false,
+                      "searchKey": "conf.NewExternalServiceProblems",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewExternalServiceProblems(messages ...string) Problems"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewExternalServiceProblems(messages ...string) Problems\n```\n\nNewExternalServiceProblems converts a list of messages into external service config problems. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Validate",
+                    "documentation": {
+                      "identifier": "Validate",
+                      "newPage": false,
+                      "searchKey": "conf.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Validate(input conftypes.RawUnified) (problems Problems, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Validate(input conftypes.RawUnified) (problems Problems, err error)\n```\n\nValidate validates the configuration against the JSON Schema and other custom validation checks. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#validateCustomRaw",
+                    "documentation": {
+                      "identifier": "validateCustomRaw",
+                      "newPage": false,
+                      "searchKey": "conf.validateCustomRaw",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func validateCustomRaw(normalizedInput conftypes.RawUnified) (problems Problems, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc validateCustomRaw(normalizedInput conftypes.RawUnified) (problems Problems, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#validateCustom",
+                    "documentation": {
+                      "identifier": "validateCustom",
+                      "newPage": false,
+                      "searchKey": "conf.validateCustom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func validateCustom(cfg Unified) (problems Problems)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc validateCustom(cfg Unified) (problems Problems)\n```\n\nvalidateCustom validates the site config using custom validation steps that are not able to be expressed in the JSON Schema. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#GetWarnings",
+                    "documentation": {
+                      "identifier": "GetWarnings",
+                      "newPage": false,
+                      "searchKey": "conf.GetWarnings",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetWarnings() (problems Problems, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetWarnings() (problems Problems, err error)\n```\n\nGetWarnings identifies problems with the configuration that a site admin should address, but do not prevent Sourcegraph from running. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Problems.Messages",
+                    "documentation": {
+                      "identifier": "Problems.Messages",
+                      "newPage": false,
+                      "searchKey": "conf.Problems.Messages",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ps Problems) Messages() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ps Problems) Messages() []string\n```\n\nMessages returns the list of problems in strings. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Problems.Site",
+                    "documentation": {
+                      "identifier": "Problems.Site",
+                      "newPage": false,
+                      "searchKey": "conf.Problems.Site",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ps Problems) Site() (problems Problems)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ps Problems) Site() (problems Problems)\n```\n\nSite returns all site config problems in the list. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf#Problems.ExternalService",
+                    "documentation": {
+                      "identifier": "Problems.ExternalService",
+                      "newPage": false,
+                      "searchKey": "conf.Problems.ExternalService",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ps Problems) ExternalService() (problems Problems)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ps Problems) ExternalService() (problems Problems)\n```\n\nExternalService returns all external service config problems in the list. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#jsonLoader",
+              "documentation": {
+                "identifier": "jsonLoader",
+                "newPage": false,
+                "searchKey": "conf.jsonLoader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type jsonLoader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype jsonLoader struct {\n\tgojsonschema.JSONLoader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#jsonLoader.LoaderFactory",
+                    "documentation": {
+                      "identifier": "jsonLoader.LoaderFactory",
+                      "newPage": false,
+                      "searchKey": "conf.jsonLoader.LoaderFactory",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l jsonLoader) LoaderFactory() gojsonschema.JSONLoaderFactory"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l jsonLoader) LoaderFactory() gojsonschema.JSONLoaderFactory\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#jsonLoaderFactory",
+              "documentation": {
+                "identifier": "jsonLoaderFactory",
+                "newPage": false,
+                "searchKey": "conf.jsonLoaderFactory",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type jsonLoaderFactory struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype jsonLoaderFactory struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf#jsonLoaderFactory.New",
+                    "documentation": {
+                      "identifier": "jsonLoaderFactory.New",
+                      "newPage": false,
+                      "searchKey": "conf.jsonLoaderFactory.New",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f jsonLoaderFactory) New(source string) gojsonschema.JSONLoader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f jsonLoaderFactory) New(source string) gojsonschema.JSONLoader\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Validator",
+              "documentation": {
+                "identifier": "Validator",
+                "newPage": false,
+                "searchKey": "conf.Validator",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Validator func(github.com/sourcegraph/sourcegraph/internal/conf.Unified) github.com/sourcegraph/sourcegraph/internal/conf.Problems"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Validator func(Unified) Problems\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/conf#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/conf#AuthProviderType",
+              "documentation": {
+                "identifier": "AuthProviderType",
+                "newPage": false,
+                "searchKey": "conf.AuthProviderType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AuthProviderType(p schema.AuthProviders) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AuthProviderType(p schema.AuthProviders) string\n```\n\nAuthProviderType returns the type string for the auth provider. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AuthPublic",
+              "documentation": {
+                "identifier": "AuthPublic",
+                "newPage": false,
+                "searchKey": "conf.AuthPublic",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AuthPublic() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AuthPublic() bool\n```\n\nAuthPublic reports whether the site is public. Because many core features rely on persisted user settings, this leads to a degraded experience for most users. As a result, for self-hosted private usage it is preferable for all users to have accounts. But on sourcegraph.com, allowing users to opt-in to accounts remains worthwhile, despite the degraded UX. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AuthAllowSignup",
+              "documentation": {
+                "identifier": "AuthAllowSignup",
+                "newPage": false,
+                "searchKey": "conf.AuthAllowSignup",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AuthAllowSignup() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AuthAllowSignup() bool\n```\n\nAuthAllowSignup reports whether the site allows signup. Currently only the builtin auth provider allows signup. AuthAllowSignup returns true if auth.providers' builtin provider has allowSignup true (in site config). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#authAllowSignup",
+              "documentation": {
+                "identifier": "authAllowSignup",
+                "newPage": false,
+                "searchKey": "conf.authAllowSignup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func authAllowSignup(c *Unified) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc authAllowSignup(c *Unified) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Raw",
+              "documentation": {
+                "identifier": "Raw",
+                "newPage": false,
+                "searchKey": "conf.Raw",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Raw() conftypes.RawUnified"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Raw() conftypes.RawUnified\n```\n\nRaw returns a copy of the raw configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Mock",
+              "documentation": {
+                "identifier": "Mock",
+                "newPage": false,
+                "searchKey": "conf.Mock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Mock(mockery *Unified)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Mock(mockery *Unified)\n```\n\nMock sets up mock data for the site configuration. \n\nMock is a wrapper around client.Mock. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Watch",
+              "documentation": {
+                "identifier": "Watch",
+                "newPage": false,
+                "searchKey": "conf.Watch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Watch(f func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Watch(f func())\n```\n\nWatch calls the given function whenever the configuration has changed. The new configuration is accessed by calling conf.Get. \n\nBefore Watch returns, it will invoke f to use the current configuration. \n\nWatch is a wrapper around client.Watch. \n\nIMPORTANT: Watch will block on config initialization. It therefore should *never* be called synchronously in `init` functions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#Cached",
+              "documentation": {
+                "identifier": "Cached",
+                "newPage": false,
+                "searchKey": "conf.Cached",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Cached(f func() interface{}) (wrapped func() interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Cached(f func() interface{}) (wrapped func() interface{})\n```\n\nCached will return a wrapper around f which caches the response. The value will be recomputed every time the config is updated. \n\nIMPORTANT: The first call to wrapped will block on config initialization. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "conf.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#defaultConfigForDeployment",
+              "documentation": {
+                "identifier": "defaultConfigForDeployment",
+                "newPage": false,
+                "searchKey": "conf.defaultConfigForDeployment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func defaultConfigForDeployment() conftypes.RawUnified"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc defaultConfigForDeployment() conftypes.RawUnified\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AWSCodeCommitConfigs",
+              "documentation": {
+                "identifier": "AWSCodeCommitConfigs",
+                "newPage": false,
+                "searchKey": "conf.AWSCodeCommitConfigs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AWSCodeCommitConfigs(ctx context.Context) ([]*schema.AWSCodeCommitConnection, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AWSCodeCommitConfigs(ctx context.Context) ([]*schema.AWSCodeCommitConnection, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#BitbucketServerConfigs",
+              "documentation": {
+                "identifier": "BitbucketServerConfigs",
+                "newPage": false,
+                "searchKey": "conf.BitbucketServerConfigs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BitbucketServerConfigs(ctx context.Context) ([]*schema.BitbucketServerConnection, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BitbucketServerConfigs(ctx context.Context) ([]*schema.BitbucketServerConnection, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#GitHubConfigs",
+              "documentation": {
+                "identifier": "GitHubConfigs",
+                "newPage": false,
+                "searchKey": "conf.GitHubConfigs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitHubConfigs(ctx context.Context) ([]*schema.GitHubConnection, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitHubConfigs(ctx context.Context) ([]*schema.GitHubConnection, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#GitLabConfigs",
+              "documentation": {
+                "identifier": "GitLabConfigs",
+                "newPage": false,
+                "searchKey": "conf.GitLabConfigs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitLabConfigs(ctx context.Context) ([]*schema.GitLabConnection, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitLabConfigs(ctx context.Context) ([]*schema.GitLabConnection, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#GitoliteConfigs",
+              "documentation": {
+                "identifier": "GitoliteConfigs",
+                "newPage": false,
+                "searchKey": "conf.GitoliteConfigs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitoliteConfigs(ctx context.Context) ([]*schema.GitoliteConnection, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitoliteConfigs(ctx context.Context) ([]*schema.GitoliteConnection, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#PhabricatorConfigs",
+              "documentation": {
+                "identifier": "PhabricatorConfigs",
+                "newPage": false,
+                "searchKey": "conf.PhabricatorConfigs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PhabricatorConfigs(ctx context.Context) ([]*schema.PhabricatorConnection, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PhabricatorConfigs(ctx context.Context) ([]*schema.PhabricatorConnection, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#EmailVerificationRequired",
+              "documentation": {
+                "identifier": "EmailVerificationRequired",
+                "newPage": false,
+                "searchKey": "conf.EmailVerificationRequired",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EmailVerificationRequired() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EmailVerificationRequired() bool\n```\n\nEmailVerificationRequired returns whether users must verify an email address before they can perform most actions on this site. \n\nIt's false for sites that do not have an email sending API key set up. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#CanSendEmail",
+              "documentation": {
+                "identifier": "CanSendEmail",
+                "newPage": false,
+                "searchKey": "conf.CanSendEmail",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CanSendEmail() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CanSendEmail() bool\n```\n\nCanSendEmail returns whether the site can send emails (e.g., to reset a password or invite a user to an org). \n\nIt's false for sites that do not have an email sending API key set up. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#DeployType",
+              "documentation": {
+                "identifier": "DeployType",
+                "newPage": false,
+                "searchKey": "conf.DeployType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DeployType() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DeployType() string\n```\n\nDeployType tells the deployment type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#IsDeployTypeKubernetes",
+              "documentation": {
+                "identifier": "IsDeployTypeKubernetes",
+                "newPage": false,
+                "searchKey": "conf.IsDeployTypeKubernetes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsDeployTypeKubernetes(deployType string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsDeployTypeKubernetes(deployType string) bool\n```\n\nIsDeployTypeKubernetes tells if the given deployment type is a Kubernetes cluster (and non-dev, not docker-compose, not pure-docker, and non-single Docker image). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#IsDeployTypeDockerCompose",
+              "documentation": {
+                "identifier": "IsDeployTypeDockerCompose",
+                "newPage": false,
+                "searchKey": "conf.IsDeployTypeDockerCompose",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsDeployTypeDockerCompose(deployType string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsDeployTypeDockerCompose(deployType string) bool\n```\n\nIsDeployTypeDockerCompose tells if the given deployment type is the Docker Compose deployment (and non-dev, not pure-docker, non-cluster, and non-single Docker image). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#IsDeployTypePureDocker",
+              "documentation": {
+                "identifier": "IsDeployTypePureDocker",
+                "newPage": false,
+                "searchKey": "conf.IsDeployTypePureDocker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsDeployTypePureDocker(deployType string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsDeployTypePureDocker(deployType string) bool\n```\n\nIsDeployTypePureDocker tells if the given deployment type is the pure Docker deployment (and non-dev, not docker-compose, non-cluster, and non-single Docker image). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#IsDeployTypeSingleDockerContainer",
+              "documentation": {
+                "identifier": "IsDeployTypeSingleDockerContainer",
+                "newPage": false,
+                "searchKey": "conf.IsDeployTypeSingleDockerContainer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsDeployTypeSingleDockerContainer(deployType string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsDeployTypeSingleDockerContainer(deployType string) bool\n```\n\nIsDeployTypeSingleDockerContainer tells if the given deployment type is Docker sourcegraph/server single-container (non-Kubernetes, not docker-compose, not pure-docker, non-cluster, non-dev). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#IsDev",
+              "documentation": {
+                "identifier": "IsDev",
+                "newPage": false,
+                "searchKey": "conf.IsDev",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsDev(deployType string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsDev(deployType string) bool\n```\n\nIsDev tells if the given deployment type is \"dev\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#IsValidDeployType",
+              "documentation": {
+                "identifier": "IsValidDeployType",
+                "newPage": false,
+                "searchKey": "conf.IsValidDeployType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsValidDeployType(deployType string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsValidDeployType(deployType string) bool\n```\n\nIsValidDeployType returns true iff the given deployType is a Kubernetes deployment, a Docker Compose deployment, a pure Docker deployment, a Docker deployment, or a local development environment. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#UpdateChannel",
+              "documentation": {
+                "identifier": "UpdateChannel",
+                "newPage": false,
+                "searchKey": "conf.UpdateChannel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UpdateChannel() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UpdateChannel() string\n```\n\nUpdateChannel tells the update channel. Default is \"release\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#SearchIndexEnabled",
+              "documentation": {
+                "identifier": "SearchIndexEnabled",
+                "newPage": false,
+                "searchKey": "conf.SearchIndexEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SearchIndexEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SearchIndexEnabled() bool\n```\n\nSearchIndexEnabled returns true if sourcegraph should index all repositories for text search. If the configuration is unset, it returns false for the docker server image (due to resource usage) but true elsewhere. Additionally it also checks for the outdated environment variable INDEXED_SEARCH. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#BatchChangesEnabled",
+              "documentation": {
+                "identifier": "BatchChangesEnabled",
+                "newPage": false,
+                "searchKey": "conf.BatchChangesEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BatchChangesEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BatchChangesEnabled() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#BatchChangesRestrictedToAdmins",
+              "documentation": {
+                "identifier": "BatchChangesRestrictedToAdmins",
+                "newPage": false,
+                "searchKey": "conf.BatchChangesRestrictedToAdmins",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BatchChangesRestrictedToAdmins() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BatchChangesRestrictedToAdmins() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#CodeIntelAutoIndexingEnabled",
+              "documentation": {
+                "identifier": "CodeIntelAutoIndexingEnabled",
+                "newPage": false,
+                "searchKey": "conf.CodeIntelAutoIndexingEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CodeIntelAutoIndexingEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CodeIntelAutoIndexingEnabled() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ProductResearchPageEnabled",
+              "documentation": {
+                "identifier": "ProductResearchPageEnabled",
+                "newPage": false,
+                "searchKey": "conf.ProductResearchPageEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ProductResearchPageEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ProductResearchPageEnabled() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ExternalURL",
+              "documentation": {
+                "identifier": "ExternalURL",
+                "newPage": false,
+                "searchKey": "conf.ExternalURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExternalURL() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExternalURL() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#UsingExternalURL",
+              "documentation": {
+                "identifier": "UsingExternalURL",
+                "newPage": false,
+                "searchKey": "conf.UsingExternalURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UsingExternalURL() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UsingExternalURL() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#IsExternalURLSecure",
+              "documentation": {
+                "identifier": "IsExternalURLSecure",
+                "newPage": false,
+                "searchKey": "conf.IsExternalURLSecure",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsExternalURLSecure() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsExternalURLSecure() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#IsBuiltinSignupAllowed",
+              "documentation": {
+                "identifier": "IsBuiltinSignupAllowed",
+                "newPage": false,
+                "searchKey": "conf.IsBuiltinSignupAllowed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsBuiltinSignupAllowed() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsBuiltinSignupAllowed() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#SearchSymbolsParallelism",
+              "documentation": {
+                "identifier": "SearchSymbolsParallelism",
+                "newPage": false,
+                "searchKey": "conf.SearchSymbolsParallelism",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SearchSymbolsParallelism() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SearchSymbolsParallelism() int\n```\n\nSearchSymbolsParallelism returns 20, or the site config \"debug.search.symbolsParallelism\" value if configured. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#BitbucketServerPluginPerm",
+              "documentation": {
+                "identifier": "BitbucketServerPluginPerm",
+                "newPage": false,
+                "searchKey": "conf.BitbucketServerPluginPerm",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BitbucketServerPluginPerm() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BitbucketServerPluginPerm() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#EventLoggingEnabled",
+              "documentation": {
+                "identifier": "EventLoggingEnabled",
+                "newPage": false,
+                "searchKey": "conf.EventLoggingEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EventLoggingEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EventLoggingEnabled() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#StructuralSearchEnabled",
+              "documentation": {
+                "identifier": "StructuralSearchEnabled",
+                "newPage": false,
+                "searchKey": "conf.StructuralSearchEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StructuralSearchEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StructuralSearchEnabled() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AndOrQueryEnabled",
+              "documentation": {
+                "identifier": "AndOrQueryEnabled",
+                "newPage": false,
+                "searchKey": "conf.AndOrQueryEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AndOrQueryEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AndOrQueryEnabled() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ExperimentalFeatures",
+              "documentation": {
+                "identifier": "ExperimentalFeatures",
+                "newPage": false,
+                "searchKey": "conf.ExperimentalFeatures",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExperimentalFeatures() schema.ExperimentalFeatures"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExperimentalFeatures() schema.ExperimentalFeatures\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AuthMinPasswordLength",
+              "documentation": {
+                "identifier": "AuthMinPasswordLength",
+                "newPage": false,
+                "searchKey": "conf.AuthMinPasswordLength",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AuthMinPasswordLength() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AuthMinPasswordLength() int\n```\n\nAuthMinPasswordLength returns the value of minimum password length requirement. If not set, it returns the default value 12. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#AuthPasswordResetLinkExpiry",
+              "documentation": {
+                "identifier": "AuthPasswordResetLinkExpiry",
+                "newPage": false,
+                "searchKey": "conf.AuthPasswordResetLinkExpiry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AuthPasswordResetLinkExpiry() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AuthPasswordResetLinkExpiry() int\n```\n\nAuthPasswordResetLinkExpiry returns the time (in seconds) indicating how long password reset links are considered valid. If not set, it returns the default value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#GitMaxCodehostRequestsPerSecond",
+              "documentation": {
+                "identifier": "GitMaxCodehostRequestsPerSecond",
+                "newPage": false,
+                "searchKey": "conf.GitMaxCodehostRequestsPerSecond",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitMaxCodehostRequestsPerSecond() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitMaxCodehostRequestsPerSecond() int\n```\n\nGitMaxCodehostRequestsPerSecond returns maximum number of remote code host git operations to be run per second per gitserver. If not set, it returns the default value -1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#UserReposMaxPerUser",
+              "documentation": {
+                "identifier": "UserReposMaxPerUser",
+                "newPage": false,
+                "searchKey": "conf.UserReposMaxPerUser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UserReposMaxPerUser() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UserReposMaxPerUser() int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#UserReposMaxPerSite",
+              "documentation": {
+                "identifier": "UserReposMaxPerSite",
+                "newPage": false,
+                "searchKey": "conf.UserReposMaxPerSite",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UserReposMaxPerSite() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UserReposMaxPerSite() int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#startSiteConfigEscapeHatchWorker",
+              "documentation": {
+                "identifier": "startSiteConfigEscapeHatchWorker",
+                "newPage": false,
+                "searchKey": "conf.startSiteConfigEscapeHatchWorker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startSiteConfigEscapeHatchWorker(c ConfigurationSource)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startSiteConfigEscapeHatchWorker(c ConfigurationSource)\n```\n\nstartSiteConfigEscapeHatchWorker handles ensuring that edits to the ephemeral on-disk site-config.json file are propagated to the persistent DB and vice-versa. This acts as an escape hatch such that if a site admin configures their instance in a way that they cannot access the UI (for example by configuring auth in a way that locks them out) they can simply edit this file in any of the frontend containers to undo the change. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#diff",
+              "documentation": {
+                "identifier": "diff",
+                "newPage": false,
+                "searchKey": "conf.diff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func diff(before, after *Unified) (fields map[string]struct{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc diff(before, after *Unified) (fields map[string]struct{})\n```\n\ndiff returns names of the Go fields that have different values between the two configurations. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#diffStruct",
+              "documentation": {
+                "identifier": "diffStruct",
+                "newPage": false,
+                "searchKey": "conf.diffStruct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func diffStruct(before, after interface{}, prefix string) (fields map[string]struct{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc diffStruct(before, after interface{}, prefix string) (fields map[string]struct{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#getJSONFields",
+              "documentation": {
+                "identifier": "getJSONFields",
+                "newPage": false,
+                "searchKey": "conf.getJSONFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getJSONFields(vv interface{}, prefix string) (fields map[string]interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getJSONFields(vv interface{}, prefix string) (fields map[string]interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#parseJSONTag",
+              "documentation": {
+                "identifier": "parseJSONTag",
+                "newPage": false,
+                "searchKey": "conf.parseJSONTag",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseJSONTag(tag string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseJSONTag(tag string) string\n```\n\nparseJSONTag parses a JSON struct field tag to return the JSON field name. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#HasExternalAuthProvider",
+              "documentation": {
+                "identifier": "HasExternalAuthProvider",
+                "newPage": false,
+                "searchKey": "conf.HasExternalAuthProvider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasExternalAuthProvider(c Unified) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasExternalAuthProvider(c Unified) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#parseConfigData",
+              "documentation": {
+                "identifier": "parseConfigData",
+                "newPage": false,
+                "searchKey": "conf.parseConfigData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseConfigData(data string, cfg interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseConfigData(data string, cfg interface{}) error\n```\n\nparseConfigData parses the provided config string into the given cfg struct pointer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#NeedRestartToApply",
+              "documentation": {
+                "identifier": "NeedRestartToApply",
+                "newPage": false,
+                "searchKey": "conf.NeedRestartToApply",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NeedRestartToApply(before, after *Unified) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NeedRestartToApply(before, after *Unified) bool\n```\n\nNeedRestartToApply determines if a restart is needed to apply the changes between the two configurations. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ValidateSite",
+              "documentation": {
+                "identifier": "ValidateSite",
+                "newPage": false,
+                "searchKey": "conf.ValidateSite",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateSite(input string) (messages []string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateSite(input string) (messages []string, err error)\n```\n\nValidateSite is like Validate, except it only validates the site configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ValidateSetting",
+              "documentation": {
+                "identifier": "ValidateSetting",
+                "newPage": false,
+                "searchKey": "conf.ValidateSetting",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateSetting(input string) (problems []string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateSetting(input string) (problems []string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#doValidate",
+              "documentation": {
+                "identifier": "doValidate",
+                "newPage": false,
+                "searchKey": "conf.doValidate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func doValidate(inputStr, schema string) (messages []string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc doValidate(inputStr, schema string) (messages []string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#validate",
+              "documentation": {
+                "identifier": "validate",
+                "newPage": false,
+                "searchKey": "conf.validate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validate(schema, input []byte) (*gojsonschema.Result, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validate(schema, input []byte) (*gojsonschema.Result, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#MustValidateDefaults",
+              "documentation": {
+                "identifier": "MustValidateDefaults",
+                "newPage": false,
+                "searchKey": "conf.MustValidateDefaults",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustValidateDefaults()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustValidateDefaults()\n```\n\nMustValidateDefaults should be called after all custom validators have been registered. It will panic if any of the default deployment configurations are invalid. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#mustValidate",
+              "documentation": {
+                "identifier": "mustValidate",
+                "newPage": false,
+                "searchKey": "conf.mustValidate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustValidate(name string, cfg conftypes.RawUnified) conftypes.RawUnified"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustValidate(name string, cfg conftypes.RawUnified) conftypes.RawUnified\n```\n\nmustValidate panics if the configuration does not pass validation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ContributeValidator",
+              "documentation": {
+                "identifier": "ContributeValidator",
+                "newPage": false,
+                "searchKey": "conf.ContributeValidator",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ContributeValidator(f Validator)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ContributeValidator(f Validator)\n```\n\nContributeValidator adds the site configuration validator function to the validation process. It is called to validate site configuration. Any strings it returns are shown as validation problems. \n\nIt may only be called at init time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestValidator",
+              "documentation": {
+                "identifier": "TestValidator",
+                "newPage": false,
+                "searchKey": "conf.TestValidator",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValidator(t interface {..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValidator(t interface {\n\tErrorf(format string, args ...interface{})\n\tHelper()\n}, c Unified, f Validator, wantProblems Problems)\n```\n\nTestValidator is an exported helper function for other packages to test their contributed validators (registered with ContributeValidator). It should only be called by tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#ContributeWarning",
+              "documentation": {
+                "identifier": "ContributeWarning",
+                "newPage": false,
+                "searchKey": "conf.ContributeWarning",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ContributeWarning(f Validator)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ContributeWarning(f Validator)\n```\n\nContributeWarning adds the configuration validator function to the validation process. It is called to validate site configuration. Any problems it returns are shown as configuration warnings in the form of site alerts. \n\nIt may only be called at init time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestAuthPublic",
+              "documentation": {
+                "identifier": "TestAuthPublic",
+                "newPage": false,
+                "searchKey": "conf.TestAuthPublic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAuthPublic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAuthPublic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestClient_continuouslyUpdate",
+              "documentation": {
+                "identifier": "TestClient_continuouslyUpdate",
+                "newPage": false,
+                "searchKey": "conf.TestClient_continuouslyUpdate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_continuouslyUpdate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_continuouslyUpdate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestSearchIndexEnabled",
+              "documentation": {
+                "identifier": "TestSearchIndexEnabled",
+                "newPage": false,
+                "searchKey": "conf.TestSearchIndexEnabled",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchIndexEnabled(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchIndexEnabled(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestAuthPasswordResetLinkDuration",
+              "documentation": {
+                "identifier": "TestAuthPasswordResetLinkDuration",
+                "newPage": false,
+                "searchKey": "conf.TestAuthPasswordResetLinkDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAuthPasswordResetLinkDuration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAuthPasswordResetLinkDuration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestGitMaxCodehostRequestsPerSecond",
+              "documentation": {
+                "identifier": "TestGitMaxCodehostRequestsPerSecond",
+                "newPage": false,
+                "searchKey": "conf.TestGitMaxCodehostRequestsPerSecond",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGitMaxCodehostRequestsPerSecond(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGitMaxCodehostRequestsPerSecond(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#setenv",
+              "documentation": {
+                "identifier": "setenv",
+                "newPage": false,
+                "searchKey": "conf.setenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setenv(t *testing.T, keyval string) func()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setenv(t *testing.T, keyval string) func()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#boolPtr",
+              "documentation": {
+                "identifier": "boolPtr",
+                "newPage": false,
+                "searchKey": "conf.boolPtr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func boolPtr(b bool) *bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc boolPtr(b bool) *bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#intPtr",
+              "documentation": {
+                "identifier": "intPtr",
+                "newPage": false,
+                "searchKey": "conf.intPtr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func intPtr(i int) *int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc intPtr(i int) *int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestDiff",
+              "documentation": {
+                "identifier": "TestDiff",
+                "newPage": false,
+                "searchKey": "conf.TestDiff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDiff(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDiff(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#toSlice",
+              "documentation": {
+                "identifier": "toSlice",
+                "newPage": false,
+                "searchKey": "conf.toSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toSlice(m map[string]struct{}) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toSlice(m map[string]struct{}) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestExtensions",
+              "documentation": {
+                "identifier": "TestExtensions",
+                "newPage": false,
+                "searchKey": "conf.TestExtensions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExtensions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExtensions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestValidate",
+              "documentation": {
+                "identifier": "TestValidate",
+                "newPage": false,
+                "searchKey": "conf.TestValidate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValidate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValidate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestValidateCustom",
+              "documentation": {
+                "identifier": "TestValidateCustom",
+                "newPage": false,
+                "searchKey": "conf.TestValidateCustom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValidateCustom(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf#TestProblems",
+              "documentation": {
+                "identifier": "TestProblems",
+                "newPage": false,
+                "searchKey": "conf.TestProblems",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProblems(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProblems(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/conf/confdefaults"
+    },
+    {
+      "pathID": "/internal/conf/conftypes"
+    },
+    {
+      "pathID": "/internal/conf/reposource"
+    }
+  ]
+}

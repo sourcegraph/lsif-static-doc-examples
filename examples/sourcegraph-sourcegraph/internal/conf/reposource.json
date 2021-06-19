@@ -1,0 +1,1344 @@
+{
+  "pathID": "/internal/conf/reposource",
+  "documentation": {
+    "identifier": "reposource",
+    "newPage": true,
+    "searchKey": "internal/conf/reposource",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package reposource"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/conf/reposource#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#NameTransformationRegex",
+              "documentation": {
+                "identifier": "NameTransformationRegex",
+                "newPage": false,
+                "searchKey": "reposource.NameTransformationRegex",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const NameTransformationRegex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst NameTransformationRegex NameTransformationKind = \"regex\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#DefaultRepositoryPathPattern",
+              "documentation": {
+                "identifier": "DefaultRepositoryPathPattern",
+                "newPage": false,
+                "searchKey": "reposource.DefaultRepositoryPathPattern",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultRepositoryPathPattern"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultRepositoryPathPattern = \"{base}/{repo}\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/conf/reposource#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#nonSCPURLRegex",
+              "documentation": {
+                "identifier": "nonSCPURLRegex",
+                "newPage": false,
+                "searchKey": "reposource.nonSCPURLRegex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nonSCPURLRegex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar nonSCPURLRegex = lazyregexp.New(`^(git\\+)?(https?|ssh|rsync|file|git)://`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#cloneURLResolvers",
+              "documentation": {
+                "identifier": "cloneURLResolvers",
+                "newPage": false,
+                "searchKey": "reposource.cloneURLResolvers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cloneURLResolvers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cloneURLResolvers = ...\n```\n\ncloneURLResolvers is the list of clone-URL-to-repo-URI mappings, derived from the site config \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#otherRepoNameReplacer",
+              "documentation": {
+                "identifier": "otherRepoNameReplacer",
+                "newPage": false,
+                "searchKey": "reposource.otherRepoNameReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var otherRepoNameReplacer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar otherRepoNameReplacer = strings.NewReplacer(\":\", \"-\", \"@\", \"-\", \"//\", \"\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/conf/reposource#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#AWS",
+              "documentation": {
+                "identifier": "AWS",
+                "newPage": false,
+                "searchKey": "reposource.AWS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AWS struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AWS struct {\n\t*schema.AWSCodeCommitConnection\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#AWS.CloneURLToRepoName",
+                    "documentation": {
+                      "identifier": "AWS.CloneURLToRepoName",
+                      "newPage": false,
+                      "searchKey": "reposource.AWS.CloneURLToRepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c AWS) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c AWS) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#BitbucketCloud",
+              "documentation": {
+                "identifier": "BitbucketCloud",
+                "newPage": false,
+                "searchKey": "reposource.BitbucketCloud",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BitbucketCloud struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BitbucketCloud struct {\n\t*schema.BitbucketCloudConnection\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#BitbucketCloud.CloneURLToRepoName",
+                    "documentation": {
+                      "identifier": "BitbucketCloud.CloneURLToRepoName",
+                      "newPage": false,
+                      "searchKey": "reposource.BitbucketCloud.CloneURLToRepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c BitbucketCloud) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c BitbucketCloud) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#BitbucketServer",
+              "documentation": {
+                "identifier": "BitbucketServer",
+                "newPage": false,
+                "searchKey": "reposource.BitbucketServer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BitbucketServer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BitbucketServer struct {\n\t*schema.BitbucketServerConnection\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#BitbucketServer.CloneURLToRepoName",
+                    "documentation": {
+                      "identifier": "BitbucketServer.CloneURLToRepoName",
+                      "newPage": false,
+                      "searchKey": "reposource.BitbucketServer.CloneURLToRepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c BitbucketServer) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c BitbucketServer) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#RepoSource",
+              "documentation": {
+                "identifier": "RepoSource",
+                "newPage": false,
+                "searchKey": "reposource.RepoSource",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoSource interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoSource interface {\n\t// cloneURLToRepoName maps a Git clone URL (format documented here:\n\t// https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a) to the expected repo name for the\n\t// repository on the code host.  It does not actually check if the repository exists in the code\n\t// host. It merely does the mapping based on the rules set in the code host config.\n\t//\n\t// If the clone URL does not correspond to a repository that could exist on the code host, the\n\t// empty string is returned and err is nil. If there is an unrelated error, an error is\n\t// returned.\n\tCloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)\n}\n```\n\nRepoSource is a wrapper around a repository source (typically a code host config) that provides a method to map clone URLs to repo names using only the configuration (i.e., no network requests). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#NameTransformationKind",
+              "documentation": {
+                "identifier": "NameTransformationKind",
+                "newPage": false,
+                "searchKey": "reposource.NameTransformationKind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NameTransformationKind string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NameTransformationKind string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#NameTransformation",
+              "documentation": {
+                "identifier": "NameTransformation",
+                "newPage": false,
+                "searchKey": "reposource.NameTransformation",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NameTransformation struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NameTransformation struct {\n\tkind NameTransformationKind\n\n\t// Fields for regex replacement transformation.\n\tregexp      *regexp.Regexp\n\treplacement string\n}\n```\n\nNameTransformation describes the rule to transform a repository name. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#NewNameTransformation",
+                    "documentation": {
+                      "identifier": "NewNameTransformation",
+                      "newPage": false,
+                      "searchKey": "reposource.NewNameTransformation",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewNameTransformation(opts NameTransformationOptions) (NameTransformation, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewNameTransformation(opts NameTransformationOptions) (NameTransformation, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#NameTransformation.Kind",
+                    "documentation": {
+                      "identifier": "NameTransformation.Kind",
+                      "newPage": false,
+                      "searchKey": "reposource.NameTransformation.Kind",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nt NameTransformation) Kind() NameTransformationKind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nt NameTransformation) Kind() NameTransformationKind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#NameTransformation.Transform",
+                    "documentation": {
+                      "identifier": "NameTransformation.Transform",
+                      "newPage": false,
+                      "searchKey": "reposource.NameTransformation.Transform",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nt NameTransformation) Transform(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nt NameTransformation) Transform(s string) string\n```\n\nTransform performs the transformation to given string. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#NameTransformationOptions",
+              "documentation": {
+                "identifier": "NameTransformationOptions",
+                "newPage": false,
+                "searchKey": "reposource.NameTransformationOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NameTransformationOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NameTransformationOptions struct {\n\t// Options for regex replacement transformation.\n\tRegex       string\n\tReplacement string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#NameTransformations",
+              "documentation": {
+                "identifier": "NameTransformations",
+                "newPage": false,
+                "searchKey": "reposource.NameTransformations",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NameTransformations []reposource.NameTransformation"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NameTransformations []NameTransformation\n```\n\nNameTransformations is a list of transformation rules. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#CompileGitLabNameTransformations",
+                    "documentation": {
+                      "identifier": "CompileGitLabNameTransformations",
+                      "newPage": false,
+                      "searchKey": "reposource.CompileGitLabNameTransformations",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func CompileGitLabNameTransformations(ts []*schema.GitLabNameTransformation) (NameTransformations, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc CompileGitLabNameTransformations(ts []*schema.GitLabNameTransformation) (NameTransformations, error)\n```\n\nCompileGitLabNameTransformations compiles a list of GitLabNameTransformation into common NameTransformation, it halts and returns when any compile error occurred. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#NameTransformations.Transform",
+                    "documentation": {
+                      "identifier": "NameTransformations.Transform",
+                      "newPage": false,
+                      "searchKey": "reposource.NameTransformations.Transform",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nts NameTransformations) Transform(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nts NameTransformations) Transform(s string) string\n```\n\nTransform iterates and performs the list of transformations. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#cloneURLResolver",
+              "documentation": {
+                "identifier": "cloneURLResolver",
+                "newPage": false,
+                "searchKey": "reposource.cloneURLResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cloneURLResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cloneURLResolver struct {\n\tfrom *regexp.Regexp\n\tto   string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#GitHub",
+              "documentation": {
+                "identifier": "GitHub",
+                "newPage": false,
+                "searchKey": "reposource.GitHub",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitHub struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitHub struct {\n\t*schema.GitHubConnection\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#GitHub.CloneURLToRepoName",
+                    "documentation": {
+                      "identifier": "GitHub.CloneURLToRepoName",
+                      "newPage": false,
+                      "searchKey": "reposource.GitHub.CloneURLToRepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c GitHub) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c GitHub) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#GitLab",
+              "documentation": {
+                "identifier": "GitLab",
+                "newPage": false,
+                "searchKey": "reposource.GitLab",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitLab struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitLab struct {\n\t*schema.GitLabConnection\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#GitLab.CloneURLToRepoName",
+                    "documentation": {
+                      "identifier": "GitLab.CloneURLToRepoName",
+                      "newPage": false,
+                      "searchKey": "reposource.GitLab.CloneURLToRepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c GitLab) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c GitLab) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#Gitolite",
+              "documentation": {
+                "identifier": "Gitolite",
+                "newPage": false,
+                "searchKey": "reposource.Gitolite",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Gitolite struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Gitolite struct {\n\t*schema.GitoliteConnection\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#Gitolite.CloneURLToRepoName",
+                    "documentation": {
+                      "identifier": "Gitolite.CloneURLToRepoName",
+                      "newPage": false,
+                      "searchKey": "reposource.Gitolite.CloneURLToRepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Gitolite) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Gitolite) CloneURLToRepoName(cloneURL string) (repoName api.RepoName, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#Other",
+              "documentation": {
+                "identifier": "Other",
+                "newPage": false,
+                "searchKey": "reposource.Other",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Other struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Other struct {\n\t*schema.OtherExternalServiceConnection\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#Other.CloneURLToRepoURI",
+                    "documentation": {
+                      "identifier": "Other.CloneURLToRepoURI",
+                      "newPage": false,
+                      "searchKey": "reposource.Other.CloneURLToRepoURI",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Other) CloneURLToRepoURI(cloneURL string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Other) CloneURLToRepoURI(cloneURL string) (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/conf/reposource#Other.CloneURLToRepoName",
+                    "documentation": {
+                      "identifier": "Other.CloneURLToRepoName",
+                      "newPage": false,
+                      "searchKey": "reposource.Other.CloneURLToRepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Other) CloneURLToRepoName(cloneURL string) (api.RepoName, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Other) CloneURLToRepoName(cloneURL string) (api.RepoName, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#urlToRepoName",
+              "documentation": {
+                "identifier": "urlToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.urlToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type urlToRepoName struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype urlToRepoName struct {\n\tcloneURL string\n\trepoName string\n}\n```\n\nurlToRepoName represents a cloneURL and expected corresponding repo name \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#urlToRepoNameErr",
+              "documentation": {
+                "identifier": "urlToRepoNameErr",
+                "newPage": false,
+                "searchKey": "reposource.urlToRepoNameErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type urlToRepoNameErr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype urlToRepoNameErr struct {\n\tcloneURL string\n\trepoName string\n\terr      error\n}\n```\n\nurlToRepoNameErr is similar to urlToRepoName, but with an expected error value \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/conf/reposource#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#AWSRepoName",
+              "documentation": {
+                "identifier": "AWSRepoName",
+                "newPage": false,
+                "searchKey": "reposource.AWSRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AWSRepoName(repositoryPathPattern, name string) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AWSRepoName(repositoryPathPattern, name string) api.RepoName\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#BitbucketCloudRepoName",
+              "documentation": {
+                "identifier": "BitbucketCloudRepoName",
+                "newPage": false,
+                "searchKey": "reposource.BitbucketCloudRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BitbucketCloudRepoName(repositoryPathPattern, host, nameWithOwner string) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BitbucketCloudRepoName(repositoryPathPattern, host, nameWithOwner string) api.RepoName\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#BitbucketServerRepoName",
+              "documentation": {
+                "identifier": "BitbucketServerRepoName",
+                "newPage": false,
+                "searchKey": "reposource.BitbucketServerRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BitbucketServerRepoName(repositoryPathPattern, host, projectKey, repoSlug string) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BitbucketServerRepoName(repositoryPathPattern, host, projectKey, repoSlug string) api.RepoName\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#parseCloneURL",
+              "documentation": {
+                "identifier": "parseCloneURL",
+                "newPage": false,
+                "searchKey": "reposource.parseCloneURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseCloneURL(cloneURL string) (*url.URL, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseCloneURL(cloneURL string) (*url.URL, error)\n```\n\nparseCloneURL parses a git clone URL into a URL struct. It supports the SCP-style git@host:path syntax that is common among code hosts. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#hostname",
+              "documentation": {
+                "identifier": "hostname",
+                "newPage": false,
+                "searchKey": "reposource.hostname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hostname(url *url.URL) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hostname(url *url.URL) string\n```\n\nhostname returns the hostname of a URL without www. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#parseURLs",
+              "documentation": {
+                "identifier": "parseURLs",
+                "newPage": false,
+                "searchKey": "reposource.parseURLs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseURLs(cloneURL, baseURL string) (parsedCloneURL, parsedBaseURL *url.URL, equalHosts bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseURLs(cloneURL, baseURL string) (parsedCloneURL, parsedBaseURL *url.URL, equalHosts bool, err error)\n```\n\nparseURLs parses the clone URL and repository host base URL into structs. It also returns a boolean indicating whether the hostnames of the URLs match. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "reposource.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#CustomCloneURLToRepoName",
+              "documentation": {
+                "identifier": "CustomCloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.CustomCloneURLToRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CustomCloneURLToRepoName(cloneURL string) (repoName api.RepoName)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CustomCloneURLToRepoName(cloneURL string) (repoName api.RepoName)\n```\n\nCustomCloneURLToRepoName maps from clone URL to repo name using custom mappings specified by the user in site config. An empty string return value indicates no match. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#mapString",
+              "documentation": {
+                "identifier": "mapString",
+                "newPage": false,
+                "searchKey": "reposource.mapString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mapString(r *regexp.Regexp, in string, outTmpl string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mapString(r *regexp.Regexp, in string, outTmpl string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#GitHubRepoName",
+              "documentation": {
+                "identifier": "GitHubRepoName",
+                "newPage": false,
+                "searchKey": "reposource.GitHubRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitHubRepoName(repositoryPathPattern, host, nameWithOwner string) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitHubRepoName(repositoryPathPattern, host, nameWithOwner string) api.RepoName\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#GitLabRepoName",
+              "documentation": {
+                "identifier": "GitLabRepoName",
+                "newPage": false,
+                "searchKey": "reposource.GitLabRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitLabRepoName(repositoryPathPattern, host, pathWithNamespace string, nts NameTransformations) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitLabRepoName(repositoryPathPattern, host, pathWithNamespace string, nts NameTransformations) api.RepoName\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#GitoliteRepoName",
+              "documentation": {
+                "identifier": "GitoliteRepoName",
+                "newPage": false,
+                "searchKey": "reposource.GitoliteRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitoliteRepoName(prefix, gitoliteName string) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitoliteRepoName(prefix, gitoliteName string) api.RepoName\n```\n\nGitoliteRepoName returns the Sourcegraph name for a repository given the Gitolite prefix (defined in the Gitolite external service config) and the Gitolite repository name. This is normally just the prefix concatenated with the Gitolite name. Gitolite permits the \"@\" character, but Sourcegraph does not, so \"@\" characters are rewritten to be \"-\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#cloneURLToRepoName",
+              "documentation": {
+                "identifier": "cloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.cloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cloneURLToRepoName(cloneURL, baseURL, repositoryPathPattern string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cloneURLToRepoName(cloneURL, baseURL, repositoryPathPattern string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#OtherRepoName",
+              "documentation": {
+                "identifier": "OtherRepoName",
+                "newPage": false,
+                "searchKey": "reposource.OtherRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OtherRepoName(repositoryPathPattern, base, relativeRepoPath string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OtherRepoName(repositoryPathPattern, base, relativeRepoPath string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#PerforceRepoName",
+              "documentation": {
+                "identifier": "PerforceRepoName",
+                "newPage": false,
+                "searchKey": "reposource.PerforceRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PerforceRepoName(repositoryPathPattern, depot string) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PerforceRepoName(repositoryPathPattern, depot string) api.RepoName\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestAWS_cloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestAWS_cloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.TestAWS_cloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAWS_cloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAWS_cloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestBitbucketCloud_cloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestBitbucketCloud_cloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.TestBitbucketCloud_cloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBitbucketCloud_cloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBitbucketCloud_cloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestBitbucketServer_cloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestBitbucketServer_cloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.TestBitbucketServer_cloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBitbucketServer_cloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBitbucketServer_cloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestParseCloneURL",
+              "documentation": {
+                "identifier": "TestParseCloneURL",
+                "newPage": false,
+                "searchKey": "reposource.TestParseCloneURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseCloneURL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseCloneURL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestNameTransformations",
+              "documentation": {
+                "identifier": "TestNameTransformations",
+                "newPage": false,
+                "searchKey": "reposource.TestNameTransformations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNameTransformations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNameTransformations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestCustomCloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestCustomCloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.TestCustomCloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCustomCloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCustomCloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestGitHub_cloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestGitHub_cloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.TestGitHub_cloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGitHub_cloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGitHub_cloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestGitLab_cloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestGitLab_cloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.TestGitLab_cloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGitLab_cloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGitLab_cloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestGitolite_cloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestGitolite_cloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.TestGitolite_cloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGitolite_cloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGitolite_cloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/conf/reposource#TestOtherCloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestOtherCloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "reposource.TestOtherCloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOtherCloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOtherCloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

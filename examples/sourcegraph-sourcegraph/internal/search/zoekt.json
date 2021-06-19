@@ -1,0 +1,1087 @@
+{
+  "pathID": "/internal/search/zoekt",
+  "documentation": {
+    "identifier": "zoekt",
+    "newPage": true,
+    "searchKey": "internal/search/zoekt",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package zoekt"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/search/zoekt#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TextRequest",
+              "documentation": {
+                "identifier": "TextRequest",
+                "newPage": false,
+                "searchKey": "zoekt.TextRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TextRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TextRequest IndexedRequestType = \"text\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#SymbolRequest",
+              "documentation": {
+                "identifier": "SymbolRequest",
+                "newPage": false,
+                "searchKey": "zoekt.SymbolRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SymbolRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SymbolRequest IndexedRequestType = \"symbol\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#maxUnindexedRepoRevSearchesPerQuery",
+              "documentation": {
+                "identifier": "maxUnindexedRepoRevSearchesPerQuery",
+                "newPage": false,
+                "searchKey": "zoekt.maxUnindexedRepoRevSearchesPerQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxUnindexedRepoRevSearchesPerQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxUnindexedRepoRevSearchesPerQuery = 200\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#defaultMaxSearchResults",
+              "documentation": {
+                "identifier": "defaultMaxSearchResults",
+                "newPage": false,
+                "searchKey": "zoekt.defaultMaxSearchResults",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultMaxSearchResults"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultMaxSearchResults = 30\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/zoekt#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#headBranch",
+              "documentation": {
+                "identifier": "headBranch",
+                "newPage": false,
+                "searchKey": "zoekt.headBranch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var headBranch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar headBranch = []string{\"HEAD\"}\n```\n\nheadBranch is used as a singleton of the indexedRepoRevs.repoBranches to save common-case allocations within indexedRepoRevs.Add. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#defaultTimeout",
+              "documentation": {
+                "identifier": "defaultTimeout",
+                "newPage": false,
+                "searchKey": "zoekt.defaultTimeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultTimeout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultTimeout = 20 * time.Second\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/zoekt#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#IndexedRequestType",
+              "documentation": {
+                "identifier": "IndexedRequestType",
+                "newPage": false,
+                "searchKey": "zoekt.IndexedRequestType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IndexedRequestType string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IndexedRequestType string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#IndexedRepoRevs",
+              "documentation": {
+                "identifier": "IndexedRepoRevs",
+                "newPage": false,
+                "searchKey": "zoekt.IndexedRepoRevs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IndexedRepoRevs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IndexedRepoRevs struct {\n\t// repoRevs is the Sourcegraph representation of a the list of repoRevs\n\t// repository and revisions to search.\n\trepoRevs map[string]*search.RepositoryRevisions\n\n\t// repoBranches will be used when we query zoekt. The order of branches\n\t// must match that in a reporev such that we can map back results. IE this\n\t// invariant is maintained:\n\t//\n\t//  repoBranches[reporev.Repo.Name][i] <-> reporev.Revs[i]\n\trepoBranches map[string][]string\n}\n```\n\nindexedRepoRevs creates both the Sourcegraph and Zoekt representation of a list of repository and refs to search. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/zoekt#zoektIndexedRepos",
+                    "documentation": {
+                      "identifier": "zoektIndexedRepos",
+                      "newPage": false,
+                      "searchKey": "zoekt.zoektIndexedRepos",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func zoektIndexedRepos(indexedSet map[string]*zoekt.Repository, revs []*search.RepositoryRevisions, filter func(*zoekt.Repository) bool) (indexed *IndexedRepoRevs, unindexed []*search.RepositoryRevisions)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc zoektIndexedRepos(indexedSet map[string]*zoekt.Repository, revs []*search.RepositoryRevisions, filter func(*zoekt.Repository) bool) (indexed *IndexedRepoRevs, unindexed []*search.RepositoryRevisions)\n```\n\nzoektIndexedRepos splits the revs into two parts: (1) the repository revisions in indexedSet (indexed) and (2) the repositories that are unindexed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/zoekt#IndexedRepoRevs.add",
+                    "documentation": {
+                      "identifier": "IndexedRepoRevs.add",
+                      "newPage": false,
+                      "searchKey": "zoekt.IndexedRepoRevs.add",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rb *IndexedRepoRevs) add(reporev *search.RepositoryRevisions, repo *zoekt.Repository) []search.RevisionSpecifier"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rb *IndexedRepoRevs) add(reporev *search.RepositoryRevisions, repo *zoekt.Repository) []search.RevisionSpecifier\n```\n\nadd will add reporev and repo to the list of repository and branches to search if reporev's refs are a subset of repo's branches. It will return the revision specifiers it can't add. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/zoekt#IndexedRepoRevs.getRepoInputRev",
+                    "documentation": {
+                      "identifier": "IndexedRepoRevs.getRepoInputRev",
+                      "newPage": false,
+                      "searchKey": "zoekt.IndexedRepoRevs.getRepoInputRev",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rb *IndexedRepoRevs) getRepoInputRev(file *zoekt.FileMatch) (repo types.RepoName, inputRevs []string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rb *IndexedRepoRevs) getRepoInputRev(file *zoekt.FileMatch) (repo types.RepoName, inputRevs []string)\n```\n\ngetRepoInputRev returns the repo and inputRev associated with file. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#IndexedSearchRequest",
+              "documentation": {
+                "identifier": "IndexedSearchRequest",
+                "newPage": false,
+                "searchKey": "zoekt.IndexedSearchRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IndexedSearchRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IndexedSearchRequest struct {\n\t// Unindexed is a slice of repository revisions that can't be searched by\n\t// Zoekt. The repository revisions should be searched by the searcher\n\t// service.\n\t//\n\t// If IndexUnavailable is true or the query specifies index:no then all\n\t// repository revisions will be listed. Otherwise it will just be\n\t// repository revisions not indexed.\n\tUnindexed []*search.RepositoryRevisions\n\n\t// IndexUnavailable is true if zoekt is offline or disabled.\n\tIndexUnavailable bool\n\n\t// DisableUnindexedSearch is true if the query specified that only index\n\t// search should be used.\n\tDisableUnindexedSearch bool\n\n\t// inputs\n\tArgs *search.TextParameters\n\tTyp  IndexedRequestType\n\n\t// RepoRevs is the repository revisions that are indexed and will be\n\t// searched.\n\tRepoRevs *IndexedRepoRevs\n\n\t// since if non-nil will be used instead of time.Since. For tests\n\tsince func(time.Time) time.Duration\n}\n```\n\nIndexedSearchRequest is responsible for translating a Sourcegraph search query into a Zoekt query and mapping the results from zoekt back to Sourcegraph result types. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/zoekt#NewIndexedSearchRequest",
+                    "documentation": {
+                      "identifier": "NewIndexedSearchRequest",
+                      "newPage": false,
+                      "searchKey": "zoekt.NewIndexedSearchRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewIndexedSearchRequest(ctx context.Context, args *search.TextParameters, typ IndexedRequestType, stream streaming.Sender) (_ *IndexedSearchRequest, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewIndexedSearchRequest(ctx context.Context, args *search.TextParameters, typ IndexedRequestType, stream streaming.Sender) (_ *IndexedSearchRequest, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/zoekt#IndexedSearchRequest.Repos",
+                    "documentation": {
+                      "identifier": "IndexedSearchRequest.Repos",
+                      "newPage": false,
+                      "searchKey": "zoekt.IndexedSearchRequest.Repos",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *IndexedSearchRequest) Repos() map[string]*search.RepositoryRevisions"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *IndexedSearchRequest) Repos() map[string]*search.RepositoryRevisions\n```\n\nRepos is a map of repository revisions that are indexed and will be searched by Zoekt. Do not mutate. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/zoekt#IndexedSearchRequest.Search",
+                    "documentation": {
+                      "identifier": "IndexedSearchRequest.Search",
+                      "newPage": false,
+                      "searchKey": "zoekt.IndexedSearchRequest.Search",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *IndexedSearchRequest) Search(ctx context.Context, c streaming.Sender) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *IndexedSearchRequest) Search(ctx context.Context, c streaming.Sender) error\n```\n\nSearch streams 0 or more events to c. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#repoRevFunc",
+              "documentation": {
+                "identifier": "repoRevFunc",
+                "newPage": false,
+                "searchKey": "zoekt.repoRevFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type repoRevFunc func(file *github.com/google/zoekt.FileMatch) (repo github.com/sourcegraph/sourcegraph/internal/types.RepoName, revs []string, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype repoRevFunc func(file *zoekt.FileMatch) (repo types.RepoName, revs []string, ok bool)\n```\n\nrepoRevFunc is a function which maps repository names returned from Zoekt into the Sourcegraph's resolved repository revisions for the search. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/zoekt#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#zoektSearch",
+              "documentation": {
+                "identifier": "zoektSearch",
+                "newPage": false,
+                "searchKey": "zoekt.zoektSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc zoektSearch(ctx context.Context, args *search.TextParameters, repos *IndexedRepoRevs, typ IndexedRequestType, since func(t time.Time) time.Duration, c streaming.Sender) error\n```\n\nzoektSearch searches repositories using zoekt. \n\nTimeouts are reported through the context, and as a special case errNoResultsInTimeout is returned if no results are found in the given timeout (instead of the more common case of finding partial or full results in the given timeout). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#getRepos",
+              "documentation": {
+                "identifier": "getRepos",
+                "newPage": false,
+                "searchKey": "zoekt.getRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRepos(ctx context.Context, p *search.Promise) ([]*search.RepositoryRevisions, error)\n```\n\ngetRepos is a wrapper around p.Get. It returns an error if the promise contains an underlying type other than []*search.RepositoryRevisions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#bufferedSender",
+              "documentation": {
+                "identifier": "bufferedSender",
+                "newPage": false,
+                "searchKey": "zoekt.bufferedSender",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bufferedSender(cap int, sender zoekt.Sender) (zoekt.Sender, func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bufferedSender(cap int, sender zoekt.Sender) (zoekt.Sender, func())\n```\n\nbufferedSender returns a buffered Sender with capacity cap, and a cleanup function which blocks until the buffer is drained. The cleanup function may only be called once. For cap=0, bufferedSender returns the input sender. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#zoektSearchReposOnly",
+              "documentation": {
+                "identifier": "zoektSearchReposOnly",
+                "newPage": false,
+                "searchKey": "zoekt.zoektSearchReposOnly",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func zoektSearchReposOnly(ctx context.Context, client zoekt.Streamer, query zoektquery.Q, c streaming.Sender, getRepoRevMap func() map[string]*search.RepositoryRevisions) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc zoektSearchReposOnly(ctx context.Context, client zoekt.Streamer, query zoektquery.Q, c streaming.Sender, getRepoRevMap func() map[string]*search.RepositoryRevisions) error\n```\n\nzoektSearchReposOnly is used when select:repo is set, in which case we can ask zoekt only for the repos that contain matches for the query. This is a performance optimization, and not required for proper function of select:repo. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#zoektFileMatchToLineMatches",
+              "documentation": {
+                "identifier": "zoektFileMatchToLineMatches",
+                "newPage": false,
+                "searchKey": "zoekt.zoektFileMatchToLineMatches",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc zoektFileMatchToLineMatches(file *zoekt.FileMatch) []*result.LineMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#escape",
+              "documentation": {
+                "identifier": "escape",
+                "newPage": false,
+                "searchKey": "zoekt.escape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func escape(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc escape(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#zoektFileMatchToSymbolResults",
+              "documentation": {
+                "identifier": "zoektFileMatchToSymbolResults",
+                "newPage": false,
+                "searchKey": "zoekt.zoektFileMatchToSymbolResults",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, file *zoekt.FileMatch) []*result.SymbolMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc zoektFileMatchToSymbolResults(repoName types.RepoName, inputRev string, file *zoekt.FileMatch) []*result.SymbolMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#contextWithoutDeadline",
+              "documentation": {
+                "identifier": "contextWithoutDeadline",
+                "newPage": false,
+                "searchKey": "zoekt.contextWithoutDeadline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contextWithoutDeadline(cOld context.Context) (context.Context, context.CancelFunc)\n```\n\ncontextWithoutDeadline returns a context which will cancel if the cOld is canceled. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#queryToZoektQuery",
+              "documentation": {
+                "identifier": "queryToZoektQuery",
+                "newPage": false,
+                "searchKey": "zoekt.queryToZoektQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (zoektquery.Q, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc queryToZoektQuery(query *search.TextPatternInfo, typ IndexedRequestType) (zoektquery.Q, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#limitUnindexedRepos",
+              "documentation": {
+                "identifier": "limitUnindexedRepos",
+                "newPage": false,
+                "searchKey": "zoekt.limitUnindexedRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func limitUnindexedRepos(unindexed []*search.RepositoryRevisions, limit int, stream streaming.Sender) []*search.RepositoryRevisions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc limitUnindexedRepos(unindexed []*search.RepositoryRevisions, limit int, stream streaming.Sender) []*search.RepositoryRevisions\n```\n\nlimitUnindexedRepos limits the number of repo@revs searched by the unindexed searcher codepath.  Sending many requests to searcher would otherwise cause a flood of system and network requests that result in timeouts or long delays. \n\nIt returns the new repositories destined for the unindexed searcher code path, and sends an event to stream for any repositories that are limited / excluded. \n\nA slice to the input list is returned, it is not copied. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#FileRe",
+              "documentation": {
+                "identifier": "FileRe",
+                "newPage": false,
+                "searchKey": "zoekt.FileRe",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FileRe(pattern string, queryIsCaseSensitive bool) (zoektquery.Q, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#noOpAnyChar",
+              "documentation": {
+                "identifier": "noOpAnyChar",
+                "newPage": false,
+                "searchKey": "zoekt.noOpAnyChar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func noOpAnyChar(re *syntax.Regexp)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc noOpAnyChar(re *syntax.Regexp)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#parseRe",
+              "documentation": {
+                "identifier": "parseRe",
+                "newPage": false,
+                "searchKey": "zoekt.parseRe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseRe(pattern string, filenameOnly bool, contentOnly bool, queryIsCaseSensitive bool) (zoektquery.Q, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseRe(pattern string, filenameOnly bool, contentOnly bool, queryIsCaseSensitive bool) (zoektquery.Q, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#getSpanContext",
+              "documentation": {
+                "identifier": "getSpanContext",
+                "newPage": false,
+                "searchKey": "zoekt.getSpanContext",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[string]string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getSpanContext(ctx context.Context) (shouldTrace bool, spanContext map[string]string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#SearchOpts",
+              "documentation": {
+                "identifier": "SearchOpts",
+                "newPage": false,
+                "searchKey": "zoekt.SearchOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt.SearchOptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SearchOpts(ctx context.Context, k int, query *search.TextPatternInfo) zoekt.SearchOptions\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#ResultCountFactor",
+              "documentation": {
+                "identifier": "ResultCountFactor",
+                "newPage": false,
+                "searchKey": "zoekt.ResultCountFactor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ResultCountFactor(numRepos int, fileMatchLimit int32, globalSearch bool) (k int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestIndexedSearch",
+              "documentation": {
+                "identifier": "TestIndexedSearch",
+                "newPage": false,
+                "searchKey": "zoekt.TestIndexedSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndexedSearch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndexedSearch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#mkStatusMap",
+              "documentation": {
+                "identifier": "mkStatusMap",
+                "newPage": false,
+                "searchKey": "zoekt.mkStatusMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mkStatusMap(m map[string]search.RepoStatus) search.RepoStatusMap\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestZoektIndexedRepos",
+              "documentation": {
+                "identifier": "TestZoektIndexedRepos",
+                "newPage": false,
+                "searchKey": "zoekt.TestZoektIndexedRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZoektIndexedRepos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZoektIndexedRepos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestZoektResultCountFactor",
+              "documentation": {
+                "identifier": "TestZoektResultCountFactor",
+                "newPage": false,
+                "searchKey": "zoekt.TestZoektResultCountFactor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZoektResultCountFactor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZoektResultCountFactor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestQueryToZoektQuery",
+              "documentation": {
+                "identifier": "TestQueryToZoektQuery",
+                "newPage": false,
+                "searchKey": "zoekt.TestQueryToZoektQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestQueryToZoektQuery(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestQueryToZoektQuery(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#queryEqual",
+              "documentation": {
+                "identifier": "queryEqual",
+                "newPage": false,
+                "searchKey": "zoekt.queryEqual",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func queryEqual(a, b zoektquery.Q) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc queryEqual(a, b zoektquery.Q) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#generateZoektMatches",
+              "documentation": {
+                "identifier": "generateZoektMatches",
+                "newPage": false,
+                "searchKey": "zoekt.generateZoektMatches",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func generateZoektMatches(count int) []zoekt.FileMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc generateZoektMatches(count int) []zoekt.FileMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestZoektIndexedRepos_single",
+              "documentation": {
+                "identifier": "TestZoektIndexedRepos_single",
+                "newPage": false,
+                "searchKey": "zoekt.TestZoektIndexedRepos_single",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZoektIndexedRepos_single(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZoektIndexedRepos_single(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestZoektFileMatchToSymbolResults",
+              "documentation": {
+                "identifier": "TestZoektFileMatchToSymbolResults",
+                "newPage": false,
+                "searchKey": "zoekt.TestZoektFileMatchToSymbolResults",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZoektFileMatchToSymbolResults(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZoektFileMatchToSymbolResults(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#repoRevsSliceToMap",
+              "documentation": {
+                "identifier": "repoRevsSliceToMap",
+                "newPage": false,
+                "searchKey": "zoekt.repoRevsSliceToMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repoRevsSliceToMap(rs []*search.RepositoryRevisions) map[string]*search.RepositoryRevisions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repoRevsSliceToMap(rs []*search.RepositoryRevisions) map[string]*search.RepositoryRevisions\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestContextWithoutDeadline",
+              "documentation": {
+                "identifier": "TestContextWithoutDeadline",
+                "newPage": false,
+                "searchKey": "zoekt.TestContextWithoutDeadline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestContextWithoutDeadline(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestContextWithoutDeadline(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestContextWithoutDeadline_cancel",
+              "documentation": {
+                "identifier": "TestContextWithoutDeadline_cancel",
+                "newPage": false,
+                "searchKey": "zoekt.TestContextWithoutDeadline_cancel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestContextWithoutDeadline_cancel(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestContextWithoutDeadline_cancel(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#TestBufferedSender",
+              "documentation": {
+                "identifier": "TestBufferedSender",
+                "newPage": false,
+                "searchKey": "zoekt.TestBufferedSender",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBufferedSender(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBufferedSender(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#makeRepositoryRevisions",
+              "documentation": {
+                "identifier": "makeRepositoryRevisions",
+                "newPage": false,
+                "searchKey": "zoekt.makeRepositoryRevisions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeRepositoryRevisions(repos ...string) []*search.RepositoryRevisions\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#mkRepos",
+              "documentation": {
+                "identifier": "mkRepos",
+                "newPage": false,
+                "searchKey": "zoekt.mkRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mkRepos(names ...string) []types.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mkRepos(names ...string) []types.RepoName\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/zoekt#matchesToFileMatches",
+              "documentation": {
+                "identifier": "matchesToFileMatches",
+                "newPage": false,
+                "searchKey": "zoekt.matchesToFileMatches",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc matchesToFileMatches(matches []result.Match) ([]*result.FileMatch, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

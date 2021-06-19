@@ -1,0 +1,252 @@
+{
+  "pathID": "/internal/mutablelimiter",
+  "documentation": {
+    "identifier": "mutablelimiter",
+    "newPage": true,
+    "searchKey": "internal/mutablelimiter",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package mutablelimiter"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "package mutablelimiter provides a Limiter (Semaphore) which supports havings its limit (capacity) adjusted and is integrated with context.Context. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/mutablelimiter#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/mutablelimiter#Limiter",
+              "documentation": {
+                "identifier": "Limiter",
+                "newPage": false,
+                "searchKey": "mutablelimiter.Limiter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Limiter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Limiter struct {\n\tadjustLimit chan int\n\tacquire     chan acquireRequest\n\tgetLimit    chan struct{ cap, len int }\n}\n```\n\nLimiter is a semaphore which supports having it's limit (capacity) adjusted. It integrates with context.Context to handle adjusting the limit down. \n\nNote: Each Limiter has an associated goroutine managing the semaphore state. We do not expose a way to stop this goroutine, so ensure the number of Limiters created is bounded. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/mutablelimiter#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "mutablelimiter.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(limit int) *Limiter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(limit int) *Limiter\n```\n\nNew returns a new Limiter (Semaphore). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/mutablelimiter#Limiter.SetLimit",
+                    "documentation": {
+                      "identifier": "Limiter.SetLimit",
+                      "newPage": false,
+                      "searchKey": "mutablelimiter.Limiter.SetLimit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Limiter) SetLimit(limit int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Limiter) SetLimit(limit int)\n```\n\nSetLimit adjusts the limit. If we currently have more than limit context acquired, then contexts are canceled until we are within limit. Contexts are canceled such that the older contexts are canceled. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/mutablelimiter#Limiter.GetLimit",
+                    "documentation": {
+                      "identifier": "Limiter.GetLimit",
+                      "newPage": false,
+                      "searchKey": "mutablelimiter.Limiter.GetLimit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l Limiter) GetLimit() (cap, len int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l Limiter) GetLimit() (cap, len int)\n```\n\nGetLimit reports the current state of the limiter, returning the capacity and length (maximum and currently-in-use). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/mutablelimiter#Limiter.Acquire",
+                    "documentation": {
+                      "identifier": "Limiter.Acquire",
+                      "newPage": false,
+                      "searchKey": "mutablelimiter.Limiter.Acquire",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Limiter) Acquire(ctx context.Context) (context.Context, context.CancelFunc, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Limiter) Acquire(ctx context.Context) (context.Context, context.CancelFunc, error)\n```\n\nAcquire tries to acquire a context. On success a child context of ctx is returned. The cancel function must be called to release the acquired context. Cancel will also cancel the child context and is safe to call more than once (idempotent). \n\nIf ctx is Done before we can acquire, then the context error is returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/mutablelimiter#Limiter.do",
+                    "documentation": {
+                      "identifier": "Limiter.do",
+                      "newPage": false,
+                      "searchKey": "mutablelimiter.Limiter.do",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *Limiter) do(limit int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *Limiter) do(limit int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/mutablelimiter#acquireResponse",
+              "documentation": {
+                "identifier": "acquireResponse",
+                "newPage": false,
+                "searchKey": "mutablelimiter.acquireResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type acquireResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype acquireResponse struct {\n\tctx    context.Context\n\tcancel context.CancelFunc\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/mutablelimiter#acquireRequest",
+              "documentation": {
+                "identifier": "acquireRequest",
+                "newPage": false,
+                "searchKey": "mutablelimiter.acquireRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type acquireRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype acquireRequest struct {\n\tctx  context.Context\n\tresp chan<- acquireResponse\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/mutablelimiter#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/mutablelimiter#TestLimiter",
+              "documentation": {
+                "identifier": "TestLimiter",
+                "newPage": false,
+                "searchKey": "mutablelimiter.TestLimiter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLimiter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLimiter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

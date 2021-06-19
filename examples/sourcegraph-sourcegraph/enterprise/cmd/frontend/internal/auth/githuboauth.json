@@ -1,0 +1,809 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth",
+  "documentation": {
+    "identifier": "githuboauth",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/auth/githuboauth",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package githuboauth"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#authPrefix",
+              "documentation": {
+                "identifier": "authPrefix",
+                "newPage": false,
+                "searchKey": "githuboauth.authPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const authPrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst authPrefix = auth.AuthURLPrefix + \"/github\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#sessionKey",
+              "documentation": {
+                "identifier": "sessionKey",
+                "newPage": false,
+                "searchKey": "githuboauth.sessionKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sessionKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sessionKey = \"githuboauth@0\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#clientIDSecretValidator",
+              "documentation": {
+                "identifier": "clientIDSecretValidator",
+                "newPage": false,
+                "searchKey": "githuboauth.clientIDSecretValidator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var clientIDSecretValidator"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar clientIDSecretValidator = lazyregexp.New(\"^[a-z0-9]*$\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#Provider",
+              "documentation": {
+                "identifier": "Provider",
+                "newPage": false,
+                "searchKey": "githuboauth.Provider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Provider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Provider struct {\n\t*schema.GitHubAuthProvider\n\tproviders.Provider\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#sessionIssuerHelper",
+              "documentation": {
+                "identifier": "sessionIssuerHelper",
+                "newPage": false,
+                "searchKey": "githuboauth.sessionIssuerHelper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sessionIssuerHelper struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sessionIssuerHelper struct {\n\t*extsvc.CodeHost\n\tclientID    string\n\tallowSignup bool\n\tallowOrgs   []string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#sessionIssuerHelper.GetOrCreateUser",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.GetOrCreateUser",
+                      "newPage": false,
+                      "searchKey": "githuboauth.sessionIssuerHelper.GetOrCreateUser",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) GetOrCreateUser(ctx context.Context, token *oauth2.Token, anonymousUserID, firstSourceURL string) (actr *actor.Actor, safeErrMsg string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) GetOrCreateUser(ctx context.Context, token *oauth2.Token, anonymousUserID, firstSourceURL string) (actr *actor.Actor, safeErrMsg string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#sessionIssuerHelper.CreateCodeHostConnection",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.CreateCodeHostConnection",
+                      "newPage": false,
+                      "searchKey": "githuboauth.sessionIssuerHelper.CreateCodeHostConnection",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) CreateCodeHostConnection(ctx context.Context, token *oauth2.Token, providerID string) (safeErrMsg string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) CreateCodeHostConnection(ctx context.Context, token *oauth2.Token, providerID string) (safeErrMsg string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#sessionIssuerHelper.DeleteStateCookie",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.DeleteStateCookie",
+                      "newPage": false,
+                      "searchKey": "githuboauth.sessionIssuerHelper.DeleteStateCookie",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) DeleteStateCookie(w http.ResponseWriter)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) DeleteStateCookie(w http.ResponseWriter)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#sessionIssuerHelper.SessionData",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.SessionData",
+                      "newPage": false,
+                      "searchKey": "githuboauth.sessionIssuerHelper.SessionData",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) SessionData(token *oauth2.Token) oauth.SessionData"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) SessionData(token *oauth2.Token) oauth.SessionData\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#sessionIssuerHelper.newClient",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.newClient",
+                      "newPage": false,
+                      "searchKey": "githuboauth.sessionIssuerHelper.newClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) newClient(token string) *githubsvc.V3Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) newClient(token string) *githubsvc.V3Client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#sessionIssuerHelper.verifyUserOrgs",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.verifyUserOrgs",
+                      "newPage": false,
+                      "searchKey": "githuboauth.sessionIssuerHelper.verifyUserOrgs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) verifyUserOrgs(ctx context.Context, ghClient *githubsvc.V3Client) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) verifyUserOrgs(ctx context.Context, ghClient *githubsvc.V3Client) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#MockProvider",
+              "documentation": {
+                "identifier": "MockProvider",
+                "newPage": false,
+                "searchKey": "githuboauth.MockProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockProvider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockProvider struct {\n\t*oauth.Provider\n\tlastCallbackRequestURL *url.URL\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#newMockProvider",
+                    "documentation": {
+                      "identifier": "newMockProvider",
+                      "newPage": false,
+                      "searchKey": "githuboauth.newMockProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newMockProvider(t *testing.T, clientID, clientSecret, baseURL string) *MockProvider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newMockProvider(t *testing.T, clientID, clientSecret, baseURL string) *MockProvider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "githuboauth.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#parseConfig",
+              "documentation": {
+                "identifier": "parseConfig",
+                "newPage": false,
+                "searchKey": "githuboauth.parseConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseConfig(cfg *conf.Unified) (ps []Provider, problems conf.Problems)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseConfig(cfg *conf.Unified) (ps []Provider, problems conf.Problems)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#getStateConfig",
+              "documentation": {
+                "identifier": "getStateConfig",
+                "newPage": false,
+                "searchKey": "githuboauth.getStateConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getStateConfig() gologin.CookieConfig"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getStateConfig() gologin.CookieConfig\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "githuboauth.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#Middleware",
+              "documentation": {
+                "identifier": "Middleware",
+                "newPage": false,
+                "searchKey": "githuboauth.Middleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Middleware(db dbutil.DB) *auth.Middleware"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Middleware(db dbutil.DB) *auth.Middleware\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#parseProvider",
+              "documentation": {
+                "identifier": "parseProvider",
+                "newPage": false,
+                "searchKey": "githuboauth.parseProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseProvider(p *schema.GitHubAuthProvider, sourceCfg schema.AuthProviders) (provider *oauth.Provider, messages []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseProvider(p *schema.GitHubAuthProvider, sourceCfg schema.AuthProviders) (provider *oauth.Provider, messages []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#validateClientIDAndSecret",
+              "documentation": {
+                "identifier": "validateClientIDAndSecret",
+                "newPage": false,
+                "searchKey": "githuboauth.validateClientIDAndSecret",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateClientIDAndSecret(clientIDOrSecret string) (valid bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateClientIDAndSecret(clientIDOrSecret string) (valid bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#requestedScopes",
+              "documentation": {
+                "identifier": "requestedScopes",
+                "newPage": false,
+                "searchKey": "githuboauth.requestedScopes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func requestedScopes(p *schema.GitHubAuthProvider, extraScopes []string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc requestedScopes(p *schema.GitHubAuthProvider, extraScopes []string) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#deref",
+              "documentation": {
+                "identifier": "deref",
+                "newPage": false,
+                "searchKey": "githuboauth.deref",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func deref(s *string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc deref(s *string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#derefInt64",
+              "documentation": {
+                "identifier": "derefInt64",
+                "newPage": false,
+                "searchKey": "githuboauth.derefInt64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func derefInt64(i *int64) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc derefInt64(i *int64) int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#getVerifiedEmails",
+              "documentation": {
+                "identifier": "getVerifiedEmails",
+                "newPage": false,
+                "searchKey": "githuboauth.getVerifiedEmails",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getVerifiedEmails(ctx context.Context, ghClient *githubsvc.V3Client) (verifiedEmails []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getVerifiedEmails(ctx context.Context, ghClient *githubsvc.V3Client) (verifiedEmails []string)\n```\n\ngetVerifiedEmails returns the list of user emails that are verified. If the primary email is verified, it will be the first email in the returned list. It only checks the first 100 user emails. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#TestParseConfig",
+              "documentation": {
+                "identifier": "TestParseConfig",
+                "newPage": false,
+                "searchKey": "githuboauth.TestParseConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseConfig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#provider",
+              "documentation": {
+                "identifier": "provider",
+                "newPage": false,
+                "searchKey": "githuboauth.provider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func provider(serviceID string, oauth2Config oauth2.Config) *oauth.Provider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc provider(serviceID string, oauth2Config oauth2.Config) *oauth.Provider\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#TestMiddleware",
+              "documentation": {
+                "identifier": "TestMiddleware",
+                "newPage": false,
+                "searchKey": "githuboauth.TestMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMiddleware(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMiddleware(t *testing.T)\n```\n\nTestMiddleware exercises the Middleware with requests that simulate the OAuth 2 login flow on GitHub. This tests the logic between the client-issued HTTP requests and the responses from the various endpoints, but does NOT cover the logic that is contained within `golang.org/x/oauth2` and `github.com/dghubble/gologin` which ensures the correctness of the `/callback` handler. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#TestRequestedScopes",
+              "documentation": {
+                "identifier": "TestRequestedScopes",
+                "newPage": false,
+                "searchKey": "githuboauth.TestRequestedScopes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRequestedScopes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRequestedScopes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "githuboauth.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#TestSessionIssuerHelper_GetOrCreateUser",
+              "documentation": {
+                "identifier": "TestSessionIssuerHelper_GetOrCreateUser",
+                "newPage": false,
+                "searchKey": "githuboauth.TestSessionIssuerHelper_GetOrCreateUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSessionIssuerHelper_GetOrCreateUser(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSessionIssuerHelper_GetOrCreateUser(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#TestSessionIssuerHelper_CreateCodeHostConnection",
+              "documentation": {
+                "identifier": "TestSessionIssuerHelper_CreateCodeHostConnection",
+                "newPage": false,
+                "searchKey": "githuboauth.TestSessionIssuerHelper_CreateCodeHostConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSessionIssuerHelper_CreateCodeHostConnection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSessionIssuerHelper_CreateCodeHostConnection(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService",
+              "documentation": {
+                "identifier": "TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService",
+                "newPage": false,
+                "searchKey": "githuboauth.TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSessionIssuerHelper_CreateCodeHostConnectionHandlesExistingService(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#createCodeHostConnectionHelper",
+              "documentation": {
+                "identifier": "createCodeHostConnectionHelper",
+                "newPage": false,
+                "searchKey": "githuboauth.createCodeHostConnectionHelper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createCodeHostConnectionHelper(t *testing.T, serviceExists bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createCodeHostConnectionHelper(t *testing.T, serviceExists bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#u",
+              "documentation": {
+                "identifier": "u",
+                "newPage": false,
+                "searchKey": "githuboauth.u",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func u(username, email string, emailIsVerified bool) database.NewUser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc u(username, email string, emailIsVerified bool) database.NewUser\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/githuboauth#acct",
+              "documentation": {
+                "identifier": "acct",
+                "newPage": false,
+                "searchKey": "githuboauth.acct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func acct(serviceType, serviceID, clientID, accountID string) extsvc.AccountSpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc acct(serviceType, serviceID, clientID, accountID string) extsvc.AccountSpec\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

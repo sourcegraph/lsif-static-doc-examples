@@ -1,0 +1,162 @@
+{
+  "pathID": "/internal/errcode_test",
+  "documentation": {
+    "identifier": "errcode_test",
+    "newPage": true,
+    "searchKey": "internal/errcode_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package errcode_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/errcode_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/errcode_test#notFoundErr",
+              "documentation": {
+                "identifier": "notFoundErr",
+                "newPage": false,
+                "searchKey": "errcode_test.notFoundErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type notFoundErr struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype notFoundErr struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/errcode_test#notFoundErr.Error",
+                    "documentation": {
+                      "identifier": "notFoundErr.Error",
+                      "newPage": false,
+                      "searchKey": "errcode_test.notFoundErr.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *notFoundErr) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *notFoundErr) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/errcode_test#notFoundErr.NotFound",
+                    "documentation": {
+                      "identifier": "notFoundErr.NotFound",
+                      "newPage": false,
+                      "searchKey": "errcode_test.notFoundErr.NotFound",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *notFoundErr) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *notFoundErr) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/errcode_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/errcode_test#TestHTTP",
+              "documentation": {
+                "identifier": "TestHTTP",
+                "newPage": false,
+                "searchKey": "errcode_test.TestHTTP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHTTP(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHTTP(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode_test#TestMakeNonRetryable",
+              "documentation": {
+                "identifier": "TestMakeNonRetryable",
+                "newPage": false,
+                "searchKey": "errcode_test.TestMakeNonRetryable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMakeNonRetryable(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMakeNonRetryable(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

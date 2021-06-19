@@ -1,0 +1,691 @@
+{
+  "pathID": "/enterprise/cmd/worker/internal/codeintel",
+  "documentation": {
+    "identifier": "codeintel",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/worker/internal/codeintel",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package codeintel"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/worker/internal/codeintel#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#initCodeIntelDatabaseMemo",
+              "documentation": {
+                "identifier": "initCodeIntelDatabaseMemo",
+                "newPage": false,
+                "searchKey": "codeintel.initCodeIntelDatabaseMemo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var initCodeIntelDatabaseMemo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar initCodeIntelDatabaseMemo = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#commitGraphConfigInst",
+              "documentation": {
+                "identifier": "commitGraphConfigInst",
+                "newPage": false,
+                "searchKey": "codeintel.commitGraphConfigInst",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commitGraphConfigInst"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commitGraphConfigInst = &commitGraphConfig{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#initDBStore",
+              "documentation": {
+                "identifier": "initDBStore",
+                "newPage": false,
+                "searchKey": "codeintel.initDBStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var initDBStore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar initDBStore = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#initGitserverClient",
+              "documentation": {
+                "identifier": "initGitserverClient",
+                "newPage": false,
+                "searchKey": "codeintel.initGitserverClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var initGitserverClient"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar initGitserverClient = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#indexingConfigInst",
+              "documentation": {
+                "identifier": "indexingConfigInst",
+                "newPage": false,
+                "searchKey": "codeintel.indexingConfigInst",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexingConfigInst"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexingConfigInst = &indexingConfig{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#janitorConfigInst",
+              "documentation": {
+                "identifier": "janitorConfigInst",
+                "newPage": false,
+                "searchKey": "codeintel.janitorConfigInst",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var janitorConfigInst"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar janitorConfigInst = &janitorConfig{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#initLSFIStore",
+              "documentation": {
+                "identifier": "initLSFIStore",
+                "newPage": false,
+                "searchKey": "codeintel.initLSFIStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var initLSFIStore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar initLSFIStore = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/worker/internal/codeintel#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#commitGraphConfig",
+              "documentation": {
+                "identifier": "commitGraphConfig",
+                "newPage": false,
+                "searchKey": "codeintel.commitGraphConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type commitGraphConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype commitGraphConfig struct {\n\tenv.BaseConfig\n\n\tCommitGraphUpdateTaskInterval time.Duration\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#commitGraphConfig.Load",
+                    "documentation": {
+                      "identifier": "commitGraphConfig.Load",
+                      "newPage": false,
+                      "searchKey": "codeintel.commitGraphConfig.Load",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *commitGraphConfig) Load()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *commitGraphConfig) Load()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#commitGraphJob",
+              "documentation": {
+                "identifier": "commitGraphJob",
+                "newPage": false,
+                "searchKey": "codeintel.commitGraphJob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type commitGraphJob struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype commitGraphJob struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#commitGraphJob.Config",
+                    "documentation": {
+                      "identifier": "commitGraphJob.Config",
+                      "newPage": false,
+                      "searchKey": "codeintel.commitGraphJob.Config",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (j *commitGraphJob) Config() []env.Config"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (j *commitGraphJob) Config() []env.Config\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#commitGraphJob.Routines",
+                    "documentation": {
+                      "identifier": "commitGraphJob.Routines",
+                      "newPage": false,
+                      "searchKey": "codeintel.commitGraphJob.Routines",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (j *commitGraphJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutine, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (j *commitGraphJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutine, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#indexingConfig",
+              "documentation": {
+                "identifier": "indexingConfig",
+                "newPage": false,
+                "searchKey": "codeintel.indexingConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type indexingConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype indexingConfig struct {\n\tenv.BaseConfig\n\n\tAutoIndexingTaskInterval               time.Duration\n\tDependencyIndexerSchedulerPollInterval time.Duration\n\tDependencyIndexerSchedulerConcurrency  int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#indexingConfig.Load",
+                    "documentation": {
+                      "identifier": "indexingConfig.Load",
+                      "newPage": false,
+                      "searchKey": "codeintel.indexingConfig.Load",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *indexingConfig) Load()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *indexingConfig) Load()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#indexingJob",
+              "documentation": {
+                "identifier": "indexingJob",
+                "newPage": false,
+                "searchKey": "codeintel.indexingJob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type indexingJob struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype indexingJob struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#indexingJob.Config",
+                    "documentation": {
+                      "identifier": "indexingJob.Config",
+                      "newPage": false,
+                      "searchKey": "codeintel.indexingJob.Config",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (j *indexingJob) Config() []env.Config"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (j *indexingJob) Config() []env.Config\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#indexingJob.Routines",
+                    "documentation": {
+                      "identifier": "indexingJob.Routines",
+                      "newPage": false,
+                      "searchKey": "codeintel.indexingJob.Routines",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (j *indexingJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutine, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (j *indexingJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutine, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#janitorConfig",
+              "documentation": {
+                "identifier": "janitorConfig",
+                "newPage": false,
+                "searchKey": "codeintel.janitorConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type janitorConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype janitorConfig struct {\n\tenv.BaseConfig\n\n\tDataTTL                                 time.Duration\n\tUploadTimeout                           time.Duration\n\tCleanupTaskInterval                     time.Duration\n\tCommitResolverTaskInterval              time.Duration\n\tCommitResolverMinimumTimeSinceLastCheck time.Duration\n\tCommitResolverBatchSize                 int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#janitorConfig.Load",
+                    "documentation": {
+                      "identifier": "janitorConfig.Load",
+                      "newPage": false,
+                      "searchKey": "codeintel.janitorConfig.Load",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *janitorConfig) Load()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *janitorConfig) Load()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#janitorJob",
+              "documentation": {
+                "identifier": "janitorJob",
+                "newPage": false,
+                "searchKey": "codeintel.janitorJob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type janitorJob struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype janitorJob struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#janitorJob.Config",
+                    "documentation": {
+                      "identifier": "janitorJob.Config",
+                      "newPage": false,
+                      "searchKey": "codeintel.janitorJob.Config",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (j *janitorJob) Config() []env.Config"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (j *janitorJob) Config() []env.Config\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel#janitorJob.Routines",
+                    "documentation": {
+                      "identifier": "janitorJob.Routines",
+                      "newPage": false,
+                      "searchKey": "codeintel.janitorJob.Routines",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (j *janitorJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutine, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (j *janitorJob) Routines(ctx context.Context) ([]goroutine.BackgroundRoutine, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/worker/internal/codeintel#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#InitCodeIntelDatabase",
+              "documentation": {
+                "identifier": "InitCodeIntelDatabase",
+                "newPage": false,
+                "searchKey": "codeintel.InitCodeIntelDatabase",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitCodeIntelDatabase() (*sql.DB, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitCodeIntelDatabase() (*sql.DB, error)\n```\n\nInitCodeIntelDatabase initializes and returns a connection to the codeintel db. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#NewCommitGraphJob",
+              "documentation": {
+                "identifier": "NewCommitGraphJob",
+                "newPage": false,
+                "searchKey": "codeintel.NewCommitGraphJob",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewCommitGraphJob() shared.Job"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewCommitGraphJob() shared.Job\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#InitDBStore",
+              "documentation": {
+                "identifier": "InitDBStore",
+                "newPage": false,
+                "searchKey": "codeintel.InitDBStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitDBStore() (*dbstore.Store, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitDBStore() (*dbstore.Store, error)\n```\n\nInitDBStore initializes and returns a db store instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#InitGitserverClient",
+              "documentation": {
+                "identifier": "InitGitserverClient",
+                "newPage": false,
+                "searchKey": "codeintel.InitGitserverClient",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitGitserverClient() (*gitserver.Client, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitGitserverClient() (*gitserver.Client, error)\n```\n\nInitGitserverClient initializes and returns a gitserver client. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#NewIndexingJob",
+              "documentation": {
+                "identifier": "NewIndexingJob",
+                "newPage": false,
+                "searchKey": "codeintel.NewIndexingJob",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewIndexingJob() shared.Job"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewIndexingJob() shared.Job\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#NewJanitorJob",
+              "documentation": {
+                "identifier": "NewJanitorJob",
+                "newPage": false,
+                "searchKey": "codeintel.NewJanitorJob",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewJanitorJob() shared.Job"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewJanitorJob() shared.Job\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel#InitLSIFStore",
+              "documentation": {
+                "identifier": "InitLSIFStore",
+                "newPage": false,
+                "searchKey": "codeintel.InitLSIFStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitLSIFStore() (*lsifstore.Store, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitLSIFStore() (*lsifstore.Store, error)\n```\n\nInitLSIFStore initializes and returns an LSIF store instance. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph"
+    },
+    {
+      "pathID": "/enterprise/cmd/worker/internal/codeintel/indexing"
+    },
+    {
+      "pathID": "/enterprise/cmd/worker/internal/codeintel/janitor"
+    }
+  ]
+}

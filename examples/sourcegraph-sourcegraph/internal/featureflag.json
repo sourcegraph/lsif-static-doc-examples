@@ -1,0 +1,429 @@
+{
+  "pathID": "/internal/featureflag",
+  "documentation": {
+    "identifier": "featureflag",
+    "newPage": true,
+    "searchKey": "internal/featureflag",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package featureflag"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/featureflag#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/featureflag#FeatureFlag",
+              "documentation": {
+                "identifier": "FeatureFlag",
+                "newPage": false,
+                "searchKey": "featureflag.FeatureFlag",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FeatureFlag struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FeatureFlag struct {\n\tName string\n\n\t// A feature flag is one of the following types.\n\t// Exactly one of the following will be set.\n\tBool    *FeatureFlagBool\n\tRollout *FeatureFlagRollout\n\n\tCreatedAt time.Time\n\tUpdatedAt time.Time\n\tDeletedAt *time.Time\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/featureflag#FeatureFlag.EvaluateForUser",
+                    "documentation": {
+                      "identifier": "FeatureFlag.EvaluateForUser",
+                      "newPage": false,
+                      "searchKey": "featureflag.FeatureFlag.EvaluateForUser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FeatureFlag) EvaluateForUser(userID int32) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FeatureFlag) EvaluateForUser(userID int32) bool\n```\n\nEvaluateForUser evaluates the feature flag for a userID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/featureflag#FeatureFlag.EvaluateForAnonymousUser",
+                    "documentation": {
+                      "identifier": "FeatureFlag.EvaluateForAnonymousUser",
+                      "newPage": false,
+                      "searchKey": "featureflag.FeatureFlag.EvaluateForAnonymousUser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FeatureFlag) EvaluateForAnonymousUser(anonymousUID string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FeatureFlag) EvaluateForAnonymousUser(anonymousUID string) bool\n```\n\nEvaluateForAnonymousUser evaluates the feature flag for an anonymous user ID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/featureflag#FeatureFlag.EvaluateGlobal",
+                    "documentation": {
+                      "identifier": "FeatureFlag.EvaluateGlobal",
+                      "newPage": false,
+                      "searchKey": "featureflag.FeatureFlag.EvaluateGlobal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FeatureFlag) EvaluateGlobal() (res bool, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FeatureFlag) EvaluateGlobal() (res bool, ok bool)\n```\n\nEvaluateGlobal returns the evaluated feature flag for a global context (no user is associated with the request). If the flag is not evaluatable in the global context (i.e. the flag type is a rollout), then the second parameter will return false. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#FeatureFlagBool",
+              "documentation": {
+                "identifier": "FeatureFlagBool",
+                "newPage": false,
+                "searchKey": "featureflag.FeatureFlagBool",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FeatureFlagBool struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FeatureFlagBool struct {\n\tValue bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#FeatureFlagRollout",
+              "documentation": {
+                "identifier": "FeatureFlagRollout",
+                "newPage": false,
+                "searchKey": "featureflag.FeatureFlagRollout",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FeatureFlagRollout struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FeatureFlagRollout struct {\n\t// Rollout is an integer between 0 and 10000, representing the percent of\n\t// users for which this feature flag will evaluate to 'true' in increments\n\t// of 0.01%\n\tRollout int32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#Override",
+              "documentation": {
+                "identifier": "Override",
+                "newPage": false,
+                "searchKey": "featureflag.Override",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Override struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Override struct {\n\tUserID   *int32\n\tOrgID    *int32\n\tFlagName string\n\tValue    bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#FlagSet",
+              "documentation": {
+                "identifier": "FlagSet",
+                "newPage": false,
+                "searchKey": "featureflag.FlagSet",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FlagSet map[string]bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FlagSet map[string]bool\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/featureflag#FromContext",
+                    "documentation": {
+                      "identifier": "FromContext",
+                      "newPage": false,
+                      "searchKey": "featureflag.FromContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func FromContext(ctx context.Context) FlagSet"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc FromContext(ctx context.Context) FlagSet\n```\n\nFromContext retrieves the current set of flags from the current request's context. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/featureflag#FlagSet.GetBool",
+                    "documentation": {
+                      "identifier": "FlagSet.GetBool",
+                      "newPage": false,
+                      "searchKey": "featureflag.FlagSet.GetBool",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FlagSet) GetBool(flag string) (bool, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FlagSet) GetBool(flag string) (bool, bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/featureflag#FlagSet.GetBoolOr",
+                    "documentation": {
+                      "identifier": "FlagSet.GetBoolOr",
+                      "newPage": false,
+                      "searchKey": "featureflag.FlagSet.GetBoolOr",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FlagSet) GetBoolOr(flag string, defaultVal bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FlagSet) GetBoolOr(flag string, defaultVal bool) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#flagContextKey",
+              "documentation": {
+                "identifier": "flagContextKey",
+                "newPage": false,
+                "searchKey": "featureflag.flagContextKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type flagContextKey struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype flagContextKey struct{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#FeatureFlagStore",
+              "documentation": {
+                "identifier": "FeatureFlagStore",
+                "newPage": false,
+                "searchKey": "featureflag.FeatureFlagStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FeatureFlagStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FeatureFlagStore interface {\n\tGetUserFlags(context.Context, int32) (map[string]bool, error)\n\tGetAnonymousUserFlags(context.Context, string) (map[string]bool, error)\n\tGetGlobalFeatureFlags(context.Context) (map[string]bool, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/featureflag#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/featureflag#hashUserAndFlag",
+              "documentation": {
+                "identifier": "hashUserAndFlag",
+                "newPage": false,
+                "searchKey": "featureflag.hashUserAndFlag",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hashUserAndFlag(userID int32, flagName string) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hashUserAndFlag(userID int32, flagName string) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#hashAnonymousUserAndFlag",
+              "documentation": {
+                "identifier": "hashAnonymousUserAndFlag",
+                "newPage": false,
+                "searchKey": "featureflag.hashAnonymousUserAndFlag",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hashAnonymousUserAndFlag(anonymousUID, flagName string) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#Middleware",
+              "documentation": {
+                "identifier": "Middleware",
+                "newPage": false,
+                "searchKey": "featureflag.Middleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Middleware(ffs FeatureFlagStore, next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Middleware(ffs FeatureFlagStore, next http.Handler) http.Handler\n```\n\nMiddleware evaluates the feature flags for the current user and adds the feature flags to the current context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/featureflag#contextWithFeatureFlags",
+              "documentation": {
+                "identifier": "contextWithFeatureFlags",
+                "newPage": false,
+                "searchKey": "featureflag.contextWithFeatureFlags",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contextWithFeatureFlags(ffs FeatureFlagStore, r *http.Request) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contextWithFeatureFlags(ffs FeatureFlagStore, r *http.Request) context.Context\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,214 @@
+{
+  "pathID": "/internal/timeutil",
+  "documentation": {
+    "identifier": "timeutil",
+    "newPage": true,
+    "searchKey": "internal/timeutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package timeutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/timeutil#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/timeutil#FakeClock",
+              "documentation": {
+                "identifier": "FakeClock",
+                "newPage": false,
+                "searchKey": "timeutil.FakeClock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FakeClock struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FakeClock struct {\n\tepoch time.Time\n\tstep  time.Duration\n\tsteps int\n}\n```\n\nFakeClock provides a controllable clock for use in tests. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/timeutil#NewFakeClock",
+                    "documentation": {
+                      "identifier": "NewFakeClock",
+                      "newPage": false,
+                      "searchKey": "timeutil.NewFakeClock",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewFakeClock(epoch time.Time, step time.Duration) FakeClock"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewFakeClock(epoch time.Time, step time.Duration) FakeClock\n```\n\nNewFakeClock returns a FakeClock instance that starts telling time at the given epoch. Every invocation of Now adds step amount of time to the clock. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/timeutil#FakeClock.Now",
+                    "documentation": {
+                      "identifier": "FakeClock.Now",
+                      "newPage": false,
+                      "searchKey": "timeutil.FakeClock.Now",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *FakeClock) Now() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *FakeClock) Now() time.Time\n```\n\nNow returns the current fake time and advances the clock \"step\" amount of time. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/timeutil#FakeClock.Time",
+                    "documentation": {
+                      "identifier": "FakeClock.Time",
+                      "newPage": false,
+                      "searchKey": "timeutil.FakeClock.Time",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c FakeClock) Time(step int) time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c FakeClock) Time(step int) time.Time\n```\n\nTime tells the time at the given step from the provided epoch. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/timeutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/timeutil#Now",
+              "documentation": {
+                "identifier": "Now",
+                "newPage": false,
+                "searchKey": "timeutil.Now",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Now() time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Now() time.Time\n```\n\nNow returns the current UTC time with time.Microsecond truncated because Postgres 9.6 does not support saving microsecond. This is particularly useful when trying to compare time values between Go and what we get back from the Postgres. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/timeutil#StartOfWeek",
+              "documentation": {
+                "identifier": "StartOfWeek",
+                "newPage": false,
+                "searchKey": "timeutil.StartOfWeek",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StartOfWeek(now time.Time, weeksAgo int) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StartOfWeek(now time.Time, weeksAgo int) time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/timeutil#TestWeek_StartOfWeek",
+              "documentation": {
+                "identifier": "TestWeek_StartOfWeek",
+                "newPage": false,
+                "searchKey": "timeutil.TestWeek_StartOfWeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWeek_StartOfWeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWeek_StartOfWeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

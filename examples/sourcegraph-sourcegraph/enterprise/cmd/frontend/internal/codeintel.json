@@ -1,0 +1,334 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/codeintel",
+  "documentation": {
+    "identifier": "codeintel",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/codeintel",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package codeintel"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/codeintel#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#config",
+              "documentation": {
+                "identifier": "config",
+                "newPage": false,
+                "searchKey": "codeintel.config",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var config"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar config = &Config{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#services",
+              "documentation": {
+                "identifier": "services",
+                "newPage": false,
+                "searchKey": "codeintel.services",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var services"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar services struct {\n\tdbStore         *store.Store\n\tlocker          *locker.Locker\n\tlsifStore       *lsifstore.Store\n\tuploadStore     uploadstore.Store\n\tgitserverClient *gitserver.Client\n\tindexEnqueuer   *enqueuer.IndexEnqueuer\n\terr             error\n} = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#once",
+              "documentation": {
+                "identifier": "once",
+                "newPage": false,
+                "searchKey": "codeintel.once",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var once"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar once sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/codeintel#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#Config",
+              "documentation": {
+                "identifier": "Config",
+                "newPage": false,
+                "searchKey": "codeintel.Config",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Config struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Config struct {\n\tenv.BaseConfig\n\n\tUploadStoreConfig                         *uploadstore.Config\n\tHunkCacheSize                             int\n\tDiagnosticsCountMigrationBatchSize        int\n\tDiagnosticsCountMigrationBatchInterval    time.Duration\n\tDefinitionsCountMigrationBatchSize        int\n\tDefinitionsCountMigrationBatchInterval    time.Duration\n\tReferencesCountMigrationBatchSize         int\n\tReferencesCountMigrationBatchInterval     time.Duration\n\tDocumentColumnSplitMigrationBatchSize     int\n\tDocumentColumnSplitMigrationBatchInterval time.Duration\n\tCommittedAtMigrationBatchSize             int\n\tCommittedAtMigrationBatchInterval         time.Duration\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/codeintel#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "codeintel.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "codeintel.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#newResolver",
+              "documentation": {
+                "identifier": "newResolver",
+                "newPage": false,
+                "searchKey": "codeintel.newResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newResolver(ctx context.Context, db dbutil.DB, observationContext *observation.Context) (gql.CodeIntelResolver, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newResolver(ctx context.Context, db dbutil.DB, observationContext *observation.Context) (gql.CodeIntelResolver, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#newUploadHandler",
+              "documentation": {
+                "identifier": "newUploadHandler",
+                "newPage": false,
+                "searchKey": "codeintel.newUploadHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newUploadHandler(ctx context.Context, db dbutil.DB) (func(internal bool) http.Handler, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newUploadHandler(ctx context.Context, db dbutil.DB) (func(internal bool) http.Handler, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#registerMigrations",
+              "documentation": {
+                "identifier": "registerMigrations",
+                "newPage": false,
+                "searchKey": "codeintel.registerMigrations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func registerMigrations(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc registerMigrations(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) error\n```\n\nregisterMigrations registers all out-of-band migration instances that should run for the current version of Sourcegraph. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#initServices",
+              "documentation": {
+                "identifier": "initServices",
+                "newPage": false,
+                "searchKey": "codeintel.initServices",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initServices(ctx context.Context, db dbutil.DB) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initServices(ctx context.Context, db dbutil.DB) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#mustInitializeCodeIntelDB",
+              "documentation": {
+                "identifier": "mustInitializeCodeIntelDB",
+                "newPage": false,
+                "searchKey": "codeintel.mustInitializeCodeIntelDB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustInitializeCodeIntelDB() *sql.DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustInitializeCodeIntelDB() *sql.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/codeintel#NewCodeIntelUploadHandler",
+              "documentation": {
+                "identifier": "NewCodeIntelUploadHandler",
+                "newPage": false,
+                "searchKey": "codeintel.NewCodeIntelUploadHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewCodeIntelUploadHandler(ctx context.Context, db dbutil.DB, internal bool) (http.Handler, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewCodeIntelUploadHandler(ctx context.Context, db dbutil.DB, internal bool) (http.Handler, error)\n```\n\nNewCodeIntelUploadHandler creates a new code intel LSIF upload HTTP handler. This is used by both the enterprise frontend codeintel init code to install handlers in the frontend API as well as the the enterprise frontend executor init code to install handlers in the proxy. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/cmd/frontend/internal/codeintel/httpapi"
+    },
+    {
+      "pathID": "/enterprise/cmd/frontend/internal/codeintel/resolvers"
+    }
+  ]
+}

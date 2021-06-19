@@ -1,0 +1,3009 @@
+{
+  "pathID": "/internal/goroutine",
+  "documentation": {
+    "identifier": "goroutine",
+    "newPage": true,
+    "searchKey": "internal/goroutine",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package goroutine"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/goroutine#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/goroutine#exiter",
+              "documentation": {
+                "identifier": "exiter",
+                "newPage": false,
+                "searchKey": "goroutine.exiter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var exiter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar exiter = func() { os.Exit(0) }\n```\n\nexiter exits the process with a status code of zero. This is declared here so it can be replaced by tests without risk of aborting the tests without a good indication to the calling program that the tests didn't in fact pass. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/goroutine#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/goroutine#StartableRoutine",
+              "documentation": {
+                "identifier": "StartableRoutine",
+                "newPage": false,
+                "searchKey": "goroutine.StartableRoutine",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StartableRoutine interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StartableRoutine interface {\n\t// Start begins the long-running process. This routine may also implement\n\t// a Stop method that should signal this process the application is going\n\t// to shut down.\n\tStart()\n}\n```\n\nStartableRoutine represents a component of a binary that consists of a long running process. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#BackgroundRoutine",
+              "documentation": {
+                "identifier": "BackgroundRoutine",
+                "newPage": false,
+                "searchKey": "goroutine.BackgroundRoutine",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BackgroundRoutine interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BackgroundRoutine interface {\n\tStartableRoutine\n\n\t// Stop signals the Start method to stop accepting new work and complete its\n\t// current work. This method can but is not required to block until Start has\n\t// returned.\n\tStop()\n}\n```\n\nBackgroundRoutine represents a component of a binary that consists of a long running process with a graceful shutdown mechanism. \n\nSee [https://docs.sourcegraph.com/dev/background-information/backgroundroutine](https://docs.sourcegraph.com/dev/background-information/backgroundroutine) for more information and a step-by-step guide on how to implement a BackgroundRoutine. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NoopRoutine",
+                    "documentation": {
+                      "identifier": "NoopRoutine",
+                      "newPage": false,
+                      "searchKey": "goroutine.NoopRoutine",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NoopRoutine() BackgroundRoutine"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NoopRoutine() BackgroundRoutine\n```\n\nNoopRoutine does nothing for start or stop. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#CombinedRoutine",
+              "documentation": {
+                "identifier": "CombinedRoutine",
+                "newPage": false,
+                "searchKey": "goroutine.CombinedRoutine",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CombinedRoutine []goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CombinedRoutine []BackgroundRoutine\n```\n\nCombinedRoutine is a list of routines which are started and stopped in unison. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#CombinedRoutine.Start",
+                    "documentation": {
+                      "identifier": "CombinedRoutine.Start",
+                      "newPage": false,
+                      "searchKey": "goroutine.CombinedRoutine.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r CombinedRoutine) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r CombinedRoutine) Start()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#CombinedRoutine.Stop",
+                    "documentation": {
+                      "identifier": "CombinedRoutine.Stop",
+                      "newPage": false,
+                      "searchKey": "goroutine.CombinedRoutine.Stop",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r CombinedRoutine) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r CombinedRoutine) Stop()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#noopRoutine",
+              "documentation": {
+                "identifier": "noopRoutine",
+                "newPage": false,
+                "searchKey": "goroutine.noopRoutine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type noopRoutine struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype noopRoutine struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#noopRoutine.Start",
+                    "documentation": {
+                      "identifier": "noopRoutine.Start",
+                      "newPage": false,
+                      "searchKey": "goroutine.noopRoutine.Start",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r noopRoutine) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r noopRoutine) Start()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#noopRoutine.Stop",
+                    "documentation": {
+                      "identifier": "noopRoutine.Stop",
+                      "newPage": false,
+                      "searchKey": "goroutine.noopRoutine.Stop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r noopRoutine) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r noopRoutine) Stop()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#Bounded",
+              "documentation": {
+                "identifier": "Bounded",
+                "newPage": false,
+                "searchKey": "goroutine.Bounded",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Bounded struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Bounded struct {\n\tsema chan struct{}\n\tmu   sync.Mutex\n\terr  error\n}\n```\n\nBounded runs a bounded number of goroutines. It supports waiting for them all to run, as well as reporting any error that may occur. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewBounded",
+                    "documentation": {
+                      "identifier": "NewBounded",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewBounded",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewBounded(capacity int) *Bounded"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewBounded(capacity int) *Bounded\n```\n\nNewBounded initializes Bounded with a capacity. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#Bounded.Go",
+                    "documentation": {
+                      "identifier": "Bounded.Go",
+                      "newPage": false,
+                      "searchKey": "goroutine.Bounded.Go",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Bounded) Go(f func() error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Bounded) Go(f func() error)\n```\n\nGo runs f in a new goroutine. It will only run upto Bounded.N goroutines at a time. Go will block until it can start the goroutine. \n\nThe first f to return a non-nil error will have that error returned by Wait. If an f fails, this does not stop future runs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#Bounded.Wait",
+                    "documentation": {
+                      "identifier": "Bounded.Wait",
+                      "newPage": false,
+                      "searchKey": "goroutine.Bounded.Wait",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Bounded) Wait() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Bounded) Wait() error\n```\n\nWait until all goroutines have finished running. If a goroutine returns a non-nil error, the first non-nil error recorded will be returned. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#PeriodicGoroutine",
+              "documentation": {
+                "identifier": "PeriodicGoroutine",
+                "newPage": false,
+                "searchKey": "goroutine.PeriodicGoroutine",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PeriodicGoroutine struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PeriodicGoroutine struct {\n\tinterval  time.Duration\n\thandler   Handler\n\toperation *observation.Operation\n\tclock     glock.Clock\n\tctx       context.Context    // root context passed to the handler\n\tcancel    context.CancelFunc // cancels the root context\n\tfinished  chan struct{}      // signals that Start has finished\n}\n```\n\nPeriodicGoroutine represents a goroutine whose main behavior is reinvoked periodically. \n\nSee [https://docs.sourcegraph.com/dev/background-information/backgroundroutine](https://docs.sourcegraph.com/dev/background-information/backgroundroutine) for more information and a step-by-step guide on how to implement a PeriodicBackgroundRoutine. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewPeriodicGoroutine",
+                    "documentation": {
+                      "identifier": "NewPeriodicGoroutine",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewPeriodicGoroutine",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewPeriodicGoroutine(ctx context.Context, interval time.Duration, handler Handler) *PeriodicGoroutine"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewPeriodicGoroutine(ctx context.Context, interval time.Duration, handler Handler) *PeriodicGoroutine\n```\n\nNewPeriodicGoroutine creates a new PeriodicGoroutine with the given handler. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewPeriodicGoroutineWithMetrics",
+                    "documentation": {
+                      "identifier": "NewPeriodicGoroutineWithMetrics",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewPeriodicGoroutineWithMetrics",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewPeriodicGoroutineWithMetrics(ctx context.Context, interval time.Duration, handler Handler, operation *observation.Operation) *PeriodicGoroutine"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewPeriodicGoroutineWithMetrics(ctx context.Context, interval time.Duration, handler Handler, operation *observation.Operation) *PeriodicGoroutine\n```\n\nNewPeriodicGoroutine creates a new PeriodicGoroutine with the given handler. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#newPeriodicGoroutine",
+                    "documentation": {
+                      "identifier": "newPeriodicGoroutine",
+                      "newPage": false,
+                      "searchKey": "goroutine.newPeriodicGoroutine",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newPeriodicGoroutine(ctx context.Context, interval time.Duration, handler Handler, operation *observation.Operation, clock glock.Clock) *PeriodicGoroutine"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newPeriodicGoroutine(ctx context.Context, interval time.Duration, handler Handler, operation *observation.Operation, clock glock.Clock) *PeriodicGoroutine\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#PeriodicGoroutine.Start",
+                    "documentation": {
+                      "identifier": "PeriodicGoroutine.Start",
+                      "newPage": false,
+                      "searchKey": "goroutine.PeriodicGoroutine.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *PeriodicGoroutine) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *PeriodicGoroutine) Start()\n```\n\nStart begins the process of calling the registered handler in a loop. This process will wait the interval supplied at construction between invocations. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#PeriodicGoroutine.Stop",
+                    "documentation": {
+                      "identifier": "PeriodicGoroutine.Stop",
+                      "newPage": false,
+                      "searchKey": "goroutine.PeriodicGoroutine.Stop",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *PeriodicGoroutine) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *PeriodicGoroutine) Stop()\n```\n\nStop will cancel the context passed to the handler function to stop the current iteration of work, then break the loop in the Start method so that no new work is accepted. This method blocks until Start has returned. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#Handler",
+              "documentation": {
+                "identifier": "Handler",
+                "newPage": false,
+                "searchKey": "goroutine.Handler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Handler interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Handler interface {\n\t// Handle performs an action with the given context.\n\tHandle(ctx context.Context) error\n}\n```\n\nHandler represents the main behavior of a PeriodicGoroutine. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewHandlerWithErrorMessage",
+                    "documentation": {
+                      "identifier": "NewHandlerWithErrorMessage",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewHandlerWithErrorMessage",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewHandlerWithErrorMessage(name string, handler func(ctx context.Context) error) Handler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewHandlerWithErrorMessage(name string, handler func(ctx context.Context) error) Handler\n```\n\nNewHandlerWithErrorMessage wraps the given function to be used as a handler, and prints a canned failure message containing the given name. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#ErrorHandler",
+              "documentation": {
+                "identifier": "ErrorHandler",
+                "newPage": false,
+                "searchKey": "goroutine.ErrorHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrorHandler interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrorHandler interface {\n\t// HandleError is called with error values returned from Handle. This will not\n\t// be called with error values due to a context cancellation during a graceful\n\t// shutdown.\n\tHandleError(err error)\n}\n```\n\nErrorHandler is an optional extension of the Handler interface. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#Finalizer",
+              "documentation": {
+                "identifier": "Finalizer",
+                "newPage": false,
+                "searchKey": "goroutine.Finalizer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Finalizer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Finalizer interface {\n\t// OnShutdown is called after the last call to Handle during a graceful shutdown.\n\tOnShutdown()\n}\n```\n\nFinalizer is an optional extension of the Handler interface. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#HandlerFunc",
+              "documentation": {
+                "identifier": "HandlerFunc",
+                "newPage": false,
+                "searchKey": "goroutine.HandlerFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type HandlerFunc func(ctx context.Context) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype HandlerFunc func(ctx context.Context) error\n```\n\nHandlerFunc wraps a function so it can be used as a Handler. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerFunc.Handle",
+                    "documentation": {
+                      "identifier": "HandlerFunc.Handle",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerFunc.Handle",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f HandlerFunc) Handle(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f HandlerFunc) Handle(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#simpleHandler",
+              "documentation": {
+                "identifier": "simpleHandler",
+                "newPage": false,
+                "searchKey": "goroutine.simpleHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type simpleHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype simpleHandler struct {\n\tname    string\n\thandler HandlerFunc\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#simpleHandler.Handle",
+                    "documentation": {
+                      "identifier": "simpleHandler.Handle",
+                      "newPage": false,
+                      "searchKey": "goroutine.simpleHandler.Handle",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *simpleHandler) Handle(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *simpleHandler) Handle(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#simpleHandler.HandleError",
+                    "documentation": {
+                      "identifier": "simpleHandler.HandleError",
+                      "newPage": false,
+                      "searchKey": "goroutine.simpleHandler.HandleError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *simpleHandler) HandleError(err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *simpleHandler) HandleError(err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#PoolWorker",
+              "documentation": {
+                "identifier": "PoolWorker",
+                "newPage": false,
+                "searchKey": "goroutine.PoolWorker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PoolWorker func(errs chan<- error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PoolWorker func(errs chan<- error)\n```\n\nPool worker is a function invoked by RunWorkers that sends any errors that occur during execution down a shared channel. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#SimplePoolWorker",
+                    "documentation": {
+                      "identifier": "SimplePoolWorker",
+                      "newPage": false,
+                      "searchKey": "goroutine.SimplePoolWorker",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func SimplePoolWorker(fn func() error) PoolWorker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc SimplePoolWorker(fn func() error) PoolWorker\n```\n\nSimplePoolWorker converts a function returning a single error value into a PoolWorker. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#indexedStringWorker",
+                    "documentation": {
+                      "identifier": "indexedStringWorker",
+                      "newPage": false,
+                      "searchKey": "goroutine.indexedStringWorker",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func indexedStringWorker(ch <-chan indexedString, worker func(index int, value string) error) PoolWorker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc indexedStringWorker(ch <-chan indexedString, worker func(index int, value string) error) PoolWorker\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#indexedString",
+              "documentation": {
+                "identifier": "indexedString",
+                "newPage": false,
+                "searchKey": "goroutine.indexedString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type indexedString struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype indexedString struct {\n\tIndex int\n\tValue string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#exampleRoutine",
+              "documentation": {
+                "identifier": "exampleRoutine",
+                "newPage": false,
+                "searchKey": "goroutine.exampleRoutine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type exampleRoutine struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype exampleRoutine struct {\n\tdone chan struct{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#exampleRoutine.Start",
+                    "documentation": {
+                      "identifier": "exampleRoutine.Start",
+                      "newPage": false,
+                      "searchKey": "goroutine.exampleRoutine.Start",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *exampleRoutine) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *exampleRoutine) Start()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#exampleRoutine.Stop",
+                    "documentation": {
+                      "identifier": "exampleRoutine.Stop",
+                      "newPage": false,
+                      "searchKey": "goroutine.exampleRoutine.Stop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *exampleRoutine) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *exampleRoutine) Stop()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#closeOnError",
+              "documentation": {
+                "identifier": "closeOnError",
+                "newPage": false,
+                "searchKey": "goroutine.closeOnError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type closeOnError chan bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype closeOnError chan bool\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#closeOnError.Error",
+                    "documentation": {
+                      "identifier": "closeOnError.Error",
+                      "newPage": false,
+                      "searchKey": "goroutine.closeOnError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e closeOnError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e closeOnError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#MockBackgroundRoutine",
+              "documentation": {
+                "identifier": "MockBackgroundRoutine",
+                "newPage": false,
+                "searchKey": "goroutine.MockBackgroundRoutine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockBackgroundRoutine struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockBackgroundRoutine struct {\n\t// StartFunc is an instance of a mock function object controlling the\n\t// behavior of the method Start.\n\tStartFunc *BackgroundRoutineStartFunc\n\t// StopFunc is an instance of a mock function object controlling the\n\t// behavior of the method Stop.\n\tStopFunc *BackgroundRoutineStopFunc\n}\n```\n\nMockBackgroundRoutine is a mock implementation of the BackgroundRoutine interface (from the package github.com/sourcegraph/sourcegraph/internal/goroutine) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockBackgroundRoutine",
+                    "documentation": {
+                      "identifier": "NewMockBackgroundRoutine",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockBackgroundRoutine",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockBackgroundRoutine() *MockBackgroundRoutine"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockBackgroundRoutine() *MockBackgroundRoutine\n```\n\nNewMockBackgroundRoutine creates a new mock of the BackgroundRoutine interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockBackgroundRoutineFrom",
+                    "documentation": {
+                      "identifier": "NewMockBackgroundRoutineFrom",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockBackgroundRoutineFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockBackgroundRoutineFrom(i BackgroundRoutine) *MockBackgroundRoutine"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockBackgroundRoutineFrom(i BackgroundRoutine) *MockBackgroundRoutine\n```\n\nNewMockBackgroundRoutineFrom creates a new mock of the MockBackgroundRoutine interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#MockBackgroundRoutine.Start",
+                    "documentation": {
+                      "identifier": "MockBackgroundRoutine.Start",
+                      "newPage": false,
+                      "searchKey": "goroutine.MockBackgroundRoutine.Start",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockBackgroundRoutine) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockBackgroundRoutine) Start()\n```\n\nStart delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#MockBackgroundRoutine.Stop",
+                    "documentation": {
+                      "identifier": "MockBackgroundRoutine.Stop",
+                      "newPage": false,
+                      "searchKey": "goroutine.MockBackgroundRoutine.Stop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockBackgroundRoutine) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockBackgroundRoutine) Stop()\n```\n\nStop delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#BackgroundRoutineStartFunc",
+              "documentation": {
+                "identifier": "BackgroundRoutineStartFunc",
+                "newPage": false,
+                "searchKey": "goroutine.BackgroundRoutineStartFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BackgroundRoutineStartFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BackgroundRoutineStartFunc struct {\n\tdefaultHook func()\n\thooks       []func()\n\thistory     []BackgroundRoutineStartFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nBackgroundRoutineStartFunc describes the behavior when the Start method of the parent MockBackgroundRoutine instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStartFunc) SetDefaultHook(hook func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStartFunc) SetDefaultHook(hook func())\n```\n\nSetDefaultHook sets function that is called when the Start method of the parent MockBackgroundRoutine instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFunc.PushHook",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStartFunc) PushHook(hook func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStartFunc) PushHook(hook func())\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Start method of the parent MockBackgroundRoutine instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStartFunc) SetDefaultReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStartFunc) SetDefaultReturn()\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStartFunc) PushReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStartFunc) PushReturn()\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFunc.nextHook",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStartFunc) nextHook() func()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStartFunc) nextHook() func()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFunc.appendCall",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStartFunc) appendCall(r0 BackgroundRoutineStartFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStartFunc) appendCall(r0 BackgroundRoutineStartFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFunc.History",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFunc.History",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStartFunc) History() []BackgroundRoutineStartFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStartFunc) History() []BackgroundRoutineStartFuncCall\n```\n\nHistory returns a sequence of BackgroundRoutineStartFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#BackgroundRoutineStartFuncCall",
+              "documentation": {
+                "identifier": "BackgroundRoutineStartFuncCall",
+                "newPage": false,
+                "searchKey": "goroutine.BackgroundRoutineStartFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BackgroundRoutineStartFuncCall struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BackgroundRoutineStartFuncCall struct{}\n```\n\nBackgroundRoutineStartFuncCall is an object that describes an invocation of method Start on an instance of MockBackgroundRoutine. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFuncCall.Args",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c BackgroundRoutineStartFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c BackgroundRoutineStartFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStartFuncCall.Results",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStartFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStartFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c BackgroundRoutineStartFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c BackgroundRoutineStartFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#BackgroundRoutineStopFunc",
+              "documentation": {
+                "identifier": "BackgroundRoutineStopFunc",
+                "newPage": false,
+                "searchKey": "goroutine.BackgroundRoutineStopFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BackgroundRoutineStopFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BackgroundRoutineStopFunc struct {\n\tdefaultHook func()\n\thooks       []func()\n\thistory     []BackgroundRoutineStopFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nBackgroundRoutineStopFunc describes the behavior when the Stop method of the parent MockBackgroundRoutine instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStopFunc) SetDefaultHook(hook func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStopFunc) SetDefaultHook(hook func())\n```\n\nSetDefaultHook sets function that is called when the Stop method of the parent MockBackgroundRoutine instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFunc.PushHook",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStopFunc) PushHook(hook func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStopFunc) PushHook(hook func())\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Stop method of the parent MockBackgroundRoutine instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStopFunc) SetDefaultReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStopFunc) SetDefaultReturn()\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStopFunc) PushReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStopFunc) PushReturn()\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFunc.nextHook",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStopFunc) nextHook() func()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStopFunc) nextHook() func()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFunc.appendCall",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStopFunc) appendCall(r0 BackgroundRoutineStopFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStopFunc) appendCall(r0 BackgroundRoutineStopFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFunc.History",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFunc.History",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *BackgroundRoutineStopFunc) History() []BackgroundRoutineStopFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *BackgroundRoutineStopFunc) History() []BackgroundRoutineStopFuncCall\n```\n\nHistory returns a sequence of BackgroundRoutineStopFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#BackgroundRoutineStopFuncCall",
+              "documentation": {
+                "identifier": "BackgroundRoutineStopFuncCall",
+                "newPage": false,
+                "searchKey": "goroutine.BackgroundRoutineStopFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BackgroundRoutineStopFuncCall struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BackgroundRoutineStopFuncCall struct{}\n```\n\nBackgroundRoutineStopFuncCall is an object that describes an invocation of method Stop on an instance of MockBackgroundRoutine. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFuncCall.Args",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c BackgroundRoutineStopFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c BackgroundRoutineStopFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#BackgroundRoutineStopFuncCall.Results",
+                    "documentation": {
+                      "identifier": "BackgroundRoutineStopFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "goroutine.BackgroundRoutineStopFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c BackgroundRoutineStopFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c BackgroundRoutineStopFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#MockErrorHandler",
+              "documentation": {
+                "identifier": "MockErrorHandler",
+                "newPage": false,
+                "searchKey": "goroutine.MockErrorHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockErrorHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockErrorHandler struct {\n\t// HandleErrorFunc is an instance of a mock function object controlling\n\t// the behavior of the method HandleError.\n\tHandleErrorFunc *ErrorHandlerHandleErrorFunc\n}\n```\n\nMockErrorHandler is a mock implementation of the ErrorHandler interface (from the package github.com/sourcegraph/sourcegraph/internal/goroutine) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockErrorHandler",
+                    "documentation": {
+                      "identifier": "NewMockErrorHandler",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockErrorHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockErrorHandler() *MockErrorHandler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockErrorHandler() *MockErrorHandler\n```\n\nNewMockErrorHandler creates a new mock of the ErrorHandler interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockErrorHandlerFrom",
+                    "documentation": {
+                      "identifier": "NewMockErrorHandlerFrom",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockErrorHandlerFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockErrorHandlerFrom(i ErrorHandler) *MockErrorHandler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockErrorHandlerFrom(i ErrorHandler) *MockErrorHandler\n```\n\nNewMockErrorHandlerFrom creates a new mock of the MockErrorHandler interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#MockErrorHandler.HandleError",
+                    "documentation": {
+                      "identifier": "MockErrorHandler.HandleError",
+                      "newPage": false,
+                      "searchKey": "goroutine.MockErrorHandler.HandleError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockErrorHandler) HandleError(v0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockErrorHandler) HandleError(v0 error)\n```\n\nHandleError delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFunc",
+              "documentation": {
+                "identifier": "ErrorHandlerHandleErrorFunc",
+                "newPage": false,
+                "searchKey": "goroutine.ErrorHandlerHandleErrorFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrorHandlerHandleErrorFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrorHandlerHandleErrorFunc struct {\n\tdefaultHook func(error)\n\thooks       []func(error)\n\thistory     []ErrorHandlerHandleErrorFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nErrorHandlerHandleErrorFunc describes the behavior when the HandleError method of the parent MockErrorHandler instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ErrorHandlerHandleErrorFunc) SetDefaultHook(hook func(error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ErrorHandlerHandleErrorFunc) SetDefaultHook(hook func(error))\n```\n\nSetDefaultHook sets function that is called when the HandleError method of the parent MockErrorHandler instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFunc.PushHook",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ErrorHandlerHandleErrorFunc) PushHook(hook func(error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ErrorHandlerHandleErrorFunc) PushHook(hook func(error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the HandleError method of the parent MockErrorHandler instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ErrorHandlerHandleErrorFunc) SetDefaultReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ErrorHandlerHandleErrorFunc) SetDefaultReturn()\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ErrorHandlerHandleErrorFunc) PushReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ErrorHandlerHandleErrorFunc) PushReturn()\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFunc.nextHook",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ErrorHandlerHandleErrorFunc) nextHook() func(error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ErrorHandlerHandleErrorFunc) nextHook() func(error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFunc.appendCall",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ErrorHandlerHandleErrorFunc) appendCall(r0 ErrorHandlerHandleErrorFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ErrorHandlerHandleErrorFunc) appendCall(r0 ErrorHandlerHandleErrorFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFunc.History",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFunc.History",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ErrorHandlerHandleErrorFunc) History() []ErrorHandlerHandleErrorFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ErrorHandlerHandleErrorFunc) History() []ErrorHandlerHandleErrorFuncCall\n```\n\nHistory returns a sequence of ErrorHandlerHandleErrorFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFuncCall",
+              "documentation": {
+                "identifier": "ErrorHandlerHandleErrorFuncCall",
+                "newPage": false,
+                "searchKey": "goroutine.ErrorHandlerHandleErrorFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrorHandlerHandleErrorFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrorHandlerHandleErrorFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 error\n}\n```\n\nErrorHandlerHandleErrorFuncCall is an object that describes an invocation of method HandleError on an instance of MockErrorHandler. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFuncCall.Args",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c ErrorHandlerHandleErrorFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c ErrorHandlerHandleErrorFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#ErrorHandlerHandleErrorFuncCall.Results",
+                    "documentation": {
+                      "identifier": "ErrorHandlerHandleErrorFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "goroutine.ErrorHandlerHandleErrorFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c ErrorHandlerHandleErrorFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c ErrorHandlerHandleErrorFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#MockFinalizer",
+              "documentation": {
+                "identifier": "MockFinalizer",
+                "newPage": false,
+                "searchKey": "goroutine.MockFinalizer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockFinalizer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockFinalizer struct {\n\t// OnShutdownFunc is an instance of a mock function object controlling\n\t// the behavior of the method OnShutdown.\n\tOnShutdownFunc *FinalizerOnShutdownFunc\n}\n```\n\nMockFinalizer is a mock implementation of the Finalizer interface (from the package github.com/sourcegraph/sourcegraph/internal/goroutine) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockFinalizer",
+                    "documentation": {
+                      "identifier": "NewMockFinalizer",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockFinalizer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockFinalizer() *MockFinalizer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockFinalizer() *MockFinalizer\n```\n\nNewMockFinalizer creates a new mock of the Finalizer interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockFinalizerFrom",
+                    "documentation": {
+                      "identifier": "NewMockFinalizerFrom",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockFinalizerFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockFinalizerFrom(i Finalizer) *MockFinalizer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockFinalizerFrom(i Finalizer) *MockFinalizer\n```\n\nNewMockFinalizerFrom creates a new mock of the MockFinalizer interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#MockFinalizer.OnShutdown",
+                    "documentation": {
+                      "identifier": "MockFinalizer.OnShutdown",
+                      "newPage": false,
+                      "searchKey": "goroutine.MockFinalizer.OnShutdown",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockFinalizer) OnShutdown()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockFinalizer) OnShutdown()\n```\n\nOnShutdown delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#FinalizerOnShutdownFunc",
+              "documentation": {
+                "identifier": "FinalizerOnShutdownFunc",
+                "newPage": false,
+                "searchKey": "goroutine.FinalizerOnShutdownFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FinalizerOnShutdownFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FinalizerOnShutdownFunc struct {\n\tdefaultHook func()\n\thooks       []func()\n\thistory     []FinalizerOnShutdownFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nFinalizerOnShutdownFunc describes the behavior when the OnShutdown method of the parent MockFinalizer instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FinalizerOnShutdownFunc) SetDefaultHook(hook func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FinalizerOnShutdownFunc) SetDefaultHook(hook func())\n```\n\nSetDefaultHook sets function that is called when the OnShutdown method of the parent MockFinalizer instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFunc.PushHook",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FinalizerOnShutdownFunc) PushHook(hook func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FinalizerOnShutdownFunc) PushHook(hook func())\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the OnShutdown method of the parent MockFinalizer instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FinalizerOnShutdownFunc) SetDefaultReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FinalizerOnShutdownFunc) SetDefaultReturn()\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FinalizerOnShutdownFunc) PushReturn()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FinalizerOnShutdownFunc) PushReturn()\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFunc.nextHook",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FinalizerOnShutdownFunc) nextHook() func()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FinalizerOnShutdownFunc) nextHook() func()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFunc.appendCall",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FinalizerOnShutdownFunc) appendCall(r0 FinalizerOnShutdownFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FinalizerOnShutdownFunc) appendCall(r0 FinalizerOnShutdownFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFunc.History",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFunc.History",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *FinalizerOnShutdownFunc) History() []FinalizerOnShutdownFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *FinalizerOnShutdownFunc) History() []FinalizerOnShutdownFuncCall\n```\n\nHistory returns a sequence of FinalizerOnShutdownFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#FinalizerOnShutdownFuncCall",
+              "documentation": {
+                "identifier": "FinalizerOnShutdownFuncCall",
+                "newPage": false,
+                "searchKey": "goroutine.FinalizerOnShutdownFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FinalizerOnShutdownFuncCall struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FinalizerOnShutdownFuncCall struct{}\n```\n\nFinalizerOnShutdownFuncCall is an object that describes an invocation of method OnShutdown on an instance of MockFinalizer. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFuncCall.Args",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c FinalizerOnShutdownFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c FinalizerOnShutdownFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#FinalizerOnShutdownFuncCall.Results",
+                    "documentation": {
+                      "identifier": "FinalizerOnShutdownFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "goroutine.FinalizerOnShutdownFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c FinalizerOnShutdownFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c FinalizerOnShutdownFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#MockHandler",
+              "documentation": {
+                "identifier": "MockHandler",
+                "newPage": false,
+                "searchKey": "goroutine.MockHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockHandler struct {\n\t// HandleFunc is an instance of a mock function object controlling the\n\t// behavior of the method Handle.\n\tHandleFunc *HandlerHandleFunc\n}\n```\n\nMockHandler is a mock implementation of the Handler interface (from the package github.com/sourcegraph/sourcegraph/internal/goroutine) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockHandler",
+                    "documentation": {
+                      "identifier": "NewMockHandler",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockHandler() *MockHandler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockHandler() *MockHandler\n```\n\nNewMockHandler creates a new mock of the Handler interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockHandlerFrom",
+                    "documentation": {
+                      "identifier": "NewMockHandlerFrom",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockHandlerFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockHandlerFrom(i Handler) *MockHandler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockHandlerFrom(i Handler) *MockHandler\n```\n\nNewMockHandlerFrom creates a new mock of the MockHandler interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#MockHandler.Handle",
+                    "documentation": {
+                      "identifier": "MockHandler.Handle",
+                      "newPage": false,
+                      "searchKey": "goroutine.MockHandler.Handle",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockHandler) Handle(v0 context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockHandler) Handle(v0 context.Context) error\n```\n\nHandle delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#HandlerHandleFunc",
+              "documentation": {
+                "identifier": "HandlerHandleFunc",
+                "newPage": false,
+                "searchKey": "goroutine.HandlerHandleFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type HandlerHandleFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype HandlerHandleFunc struct {\n\tdefaultHook func(context.Context) error\n\thooks       []func(context.Context) error\n\thistory     []HandlerHandleFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nHandlerHandleFunc describes the behavior when the Handle method of the parent MockHandler instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "HandlerHandleFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *HandlerHandleFunc) SetDefaultHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) SetDefaultHook(hook func(context.Context) error)\n```\n\nSetDefaultHook sets function that is called when the Handle method of the parent MockHandler instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFunc.PushHook",
+                    "documentation": {
+                      "identifier": "HandlerHandleFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *HandlerHandleFunc) PushHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) PushHook(hook func(context.Context) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Handle method of the parent MockHandler instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "HandlerHandleFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *HandlerHandleFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "HandlerHandleFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *HandlerHandleFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFunc.nextHook",
+                    "documentation": {
+                      "identifier": "HandlerHandleFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *HandlerHandleFunc) nextHook() func(context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) nextHook() func(context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFunc.appendCall",
+                    "documentation": {
+                      "identifier": "HandlerHandleFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *HandlerHandleFunc) appendCall(r0 HandlerHandleFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) appendCall(r0 HandlerHandleFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFunc.History",
+                    "documentation": {
+                      "identifier": "HandlerHandleFunc.History",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *HandlerHandleFunc) History() []HandlerHandleFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *HandlerHandleFunc) History() []HandlerHandleFuncCall\n```\n\nHistory returns a sequence of HandlerHandleFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#HandlerHandleFuncCall",
+              "documentation": {
+                "identifier": "HandlerHandleFuncCall",
+                "newPage": false,
+                "searchKey": "goroutine.HandlerHandleFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type HandlerHandleFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype HandlerHandleFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nHandlerHandleFuncCall is an object that describes an invocation of method Handle on an instance of MockHandler. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFuncCall.Args",
+                    "documentation": {
+                      "identifier": "HandlerHandleFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c HandlerHandleFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c HandlerHandleFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#HandlerHandleFuncCall.Results",
+                    "documentation": {
+                      "identifier": "HandlerHandleFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "goroutine.HandlerHandleFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c HandlerHandleFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c HandlerHandleFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#MockHandlerWithErrorHandler",
+              "documentation": {
+                "identifier": "MockHandlerWithErrorHandler",
+                "newPage": false,
+                "searchKey": "goroutine.MockHandlerWithErrorHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockHandlerWithErrorHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockHandlerWithErrorHandler struct {\n\t*MockHandler\n\t*MockErrorHandler\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockHandlerWithErrorHandler",
+                    "documentation": {
+                      "identifier": "NewMockHandlerWithErrorHandler",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockHandlerWithErrorHandler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockHandlerWithErrorHandler() *MockHandlerWithErrorHandler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockHandlerWithErrorHandler() *MockHandlerWithErrorHandler\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#MockHandlerWithFinalizer",
+              "documentation": {
+                "identifier": "MockHandlerWithFinalizer",
+                "newPage": false,
+                "searchKey": "goroutine.MockHandlerWithFinalizer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockHandlerWithFinalizer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockHandlerWithFinalizer struct {\n\t*MockHandler\n\t*MockFinalizer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/goroutine#NewMockHandlerWithFinalizer",
+                    "documentation": {
+                      "identifier": "NewMockHandlerWithFinalizer",
+                      "newPage": false,
+                      "searchKey": "goroutine.NewMockHandlerWithFinalizer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockHandlerWithFinalizer() *MockHandlerWithFinalizer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockHandlerWithFinalizer() *MockHandlerWithFinalizer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/goroutine#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/goroutine#MonitorBackgroundRoutines",
+              "documentation": {
+                "identifier": "MonitorBackgroundRoutines",
+                "newPage": false,
+                "searchKey": "goroutine.MonitorBackgroundRoutines",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MonitorBackgroundRoutines(ctx context.Context, routines ...BackgroundRoutine)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MonitorBackgroundRoutines(ctx context.Context, routines ...BackgroundRoutine)\n```\n\nMonitorBackgroundRoutines will start the given background routines in their own goroutine. If the given context is canceled or a signal is received, the Stop method of each routine will be called. This method blocks until the Stop methods of each routine have returned. Two signals will cause the app to shutdown immediately. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#monitorBackgroundRoutines",
+              "documentation": {
+                "identifier": "monitorBackgroundRoutines",
+                "newPage": false,
+                "searchKey": "goroutine.monitorBackgroundRoutines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func monitorBackgroundRoutines(ctx context.Context, signals <-chan os.Signal, routines ...BackgroundRoutine)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc monitorBackgroundRoutines(ctx context.Context, signals <-chan os.Signal, routines ...BackgroundRoutine)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#startAll",
+              "documentation": {
+                "identifier": "startAll",
+                "newPage": false,
+                "searchKey": "goroutine.startAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startAll(wg *sync.WaitGroup, routines ...BackgroundRoutine)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startAll(wg *sync.WaitGroup, routines ...BackgroundRoutine)\n```\n\nstartAll calls each routine's Start method in its own goroutine and registers each running goroutine with the given waitgroup. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#stopAll",
+              "documentation": {
+                "identifier": "stopAll",
+                "newPage": false,
+                "searchKey": "goroutine.stopAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stopAll(wg *sync.WaitGroup, routines ...BackgroundRoutine)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stopAll(wg *sync.WaitGroup, routines ...BackgroundRoutine)\n```\n\nstopAll calls each routine's Stop method in its own goroutine and and registers each running goroutine with the given waitgroup. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#waitForSignal",
+              "documentation": {
+                "identifier": "waitForSignal",
+                "newPage": false,
+                "searchKey": "goroutine.waitForSignal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func waitForSignal(ctx context.Context, signals <-chan os.Signal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc waitForSignal(ctx context.Context, signals <-chan os.Signal)\n```\n\nwaitForSignal blocks until the given context is canceled or signal has been received on the given channel. If two signals are received, os.Exit(0) will be called immediately. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#exitAfterSignals",
+              "documentation": {
+                "identifier": "exitAfterSignals",
+                "newPage": false,
+                "searchKey": "goroutine.exitAfterSignals",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func exitAfterSignals(signals <-chan os.Signal, numSignals int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc exitAfterSignals(signals <-chan os.Signal, numSignals int)\n```\n\nexitAfterSignals waits for a number of signals on the given channel, then calls os.Exit(0) to exit the program. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#Go",
+              "documentation": {
+                "identifier": "Go",
+                "newPage": false,
+                "searchKey": "goroutine.Go",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Go(f func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Go(f func())\n```\n\nGo runs the given function in a goroutine and catches and logs panics. \n\nThis prevents a single panicking goroutine from crashing the entire binary, which is undesirable for services with many different components, like our frontend service, where one location of code panicking could be catastrophic. \n\nMore advanced use cases should copy this implementation and modify it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#Parallel",
+              "documentation": {
+                "identifier": "Parallel",
+                "newPage": false,
+                "searchKey": "goroutine.Parallel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Parallel(fns ...func() error) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Parallel(fns ...func() error) (err error)\n```\n\nParallel calls each of the given functions in a goroutine. This method blocks until all goroutines have unblocked. The errors from each of the function invocations will be combined into a single error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#runPeriodicHandler",
+              "documentation": {
+                "identifier": "runPeriodicHandler",
+                "newPage": false,
+                "searchKey": "goroutine.runPeriodicHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runPeriodicHandler(ctx context.Context, handler Handler, operation *observation.Operation) (_ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runPeriodicHandler(ctx context.Context, handler Handler, operation *observation.Operation) (_ bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#RunWorkers",
+              "documentation": {
+                "identifier": "RunWorkers",
+                "newPage": false,
+                "searchKey": "goroutine.RunWorkers",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RunWorkers(worker PoolWorker) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RunWorkers(worker PoolWorker) error\n```\n\nRunWorkers invokes the given worker a number of times proportional to the maximum number of CPUs that can be executing simultaneously. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#RunWorkersN",
+              "documentation": {
+                "identifier": "RunWorkersN",
+                "newPage": false,
+                "searchKey": "goroutine.RunWorkersN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RunWorkersN(n int, worker PoolWorker) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RunWorkersN(n int, worker PoolWorker) (err error)\n```\n\nRunWorkersN invokes the given worker n times and collects the errors from each invocation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#RunWorkersOverStrings",
+              "documentation": {
+                "identifier": "RunWorkersOverStrings",
+                "newPage": false,
+                "searchKey": "goroutine.RunWorkersOverStrings",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RunWorkersOverStrings(values []string, worker func(index int, value string) error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RunWorkersOverStrings(values []string, worker func(index int, value string) error) error\n```\n\nRunWorkersOverStrings invokes the given worker once for each of the given string values. The worker function will receive the index as well as the string value as parameters. Workers will be invoked in a number of concurrent routines proportional to the maximum number of CPUs that can be executing simultaneously. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#RunWorkersOverStringsN",
+              "documentation": {
+                "identifier": "RunWorkersOverStringsN",
+                "newPage": false,
+                "searchKey": "goroutine.RunWorkersOverStringsN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RunWorkersOverStringsN(n int, values []string, worker func(index int, value string) error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RunWorkersOverStringsN(n int, values []string, worker func(index int, value string) error) error\n```\n\nRunWorkersOverStrings invokes the given worker once for each of the given string values. The worker function will receive the index as well as the string value as parameters. Workers will be invoked in n concurrent routines. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#loadIndexedStringChannel",
+              "documentation": {
+                "identifier": "loadIndexedStringChannel",
+                "newPage": false,
+                "searchKey": "goroutine.loadIndexedStringChannel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadIndexedStringChannel(values []string) <-chan indexedString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadIndexedStringChannel(values []string) <-chan indexedString\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "goroutine.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\nMake the exiter a no-op in tests \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestMonitorBackgroundRoutinesSignal",
+              "documentation": {
+                "identifier": "TestMonitorBackgroundRoutinesSignal",
+                "newPage": false,
+                "searchKey": "goroutine.TestMonitorBackgroundRoutinesSignal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMonitorBackgroundRoutinesSignal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMonitorBackgroundRoutinesSignal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestMonitorBackgroundRoutinesContextCancel",
+              "documentation": {
+                "identifier": "TestMonitorBackgroundRoutinesContextCancel",
+                "newPage": false,
+                "searchKey": "goroutine.TestMonitorBackgroundRoutinesContextCancel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMonitorBackgroundRoutinesContextCancel(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMonitorBackgroundRoutinesContextCancel(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestBounded",
+              "documentation": {
+                "identifier": "TestBounded",
+                "newPage": false,
+                "searchKey": "goroutine.TestBounded",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBounded(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBounded(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestBounded_error",
+              "documentation": {
+                "identifier": "TestBounded_error",
+                "newPage": false,
+                "searchKey": "goroutine.TestBounded_error",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBounded_error(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBounded_error(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#ExampleBackgroundRoutine",
+              "documentation": {
+                "identifier": "ExampleBackgroundRoutine",
+                "newPage": false,
+                "searchKey": "goroutine.ExampleBackgroundRoutine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleBackgroundRoutine()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleBackgroundRoutine()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#ExamplePeriodicGoroutine",
+              "documentation": {
+                "identifier": "ExamplePeriodicGoroutine",
+                "newPage": false,
+                "searchKey": "goroutine.ExamplePeriodicGoroutine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExamplePeriodicGoroutine()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExamplePeriodicGoroutine()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestGo",
+              "documentation": {
+                "identifier": "TestGo",
+                "newPage": false,
+                "searchKey": "goroutine.TestGo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestParallel",
+              "documentation": {
+                "identifier": "TestParallel",
+                "newPage": false,
+                "searchKey": "goroutine.TestParallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParallel(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParallel(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestPeriodicGoroutine",
+              "documentation": {
+                "identifier": "TestPeriodicGoroutine",
+                "newPage": false,
+                "searchKey": "goroutine.TestPeriodicGoroutine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPeriodicGoroutine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPeriodicGoroutine(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestPeriodicGoroutineError",
+              "documentation": {
+                "identifier": "TestPeriodicGoroutineError",
+                "newPage": false,
+                "searchKey": "goroutine.TestPeriodicGoroutineError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPeriodicGoroutineError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPeriodicGoroutineError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestPeriodicGoroutineContextError",
+              "documentation": {
+                "identifier": "TestPeriodicGoroutineContextError",
+                "newPage": false,
+                "searchKey": "goroutine.TestPeriodicGoroutineContextError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPeriodicGoroutineContextError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPeriodicGoroutineContextError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestPeriodicGoroutineFinalizer",
+              "documentation": {
+                "identifier": "TestPeriodicGoroutineFinalizer",
+                "newPage": false,
+                "searchKey": "goroutine.TestPeriodicGoroutineFinalizer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPeriodicGoroutineFinalizer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPeriodicGoroutineFinalizer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goroutine#TestRunWorkersN",
+              "documentation": {
+                "identifier": "TestRunWorkersN",
+                "newPage": false,
+                "searchKey": "goroutine.TestRunWorkersN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunWorkersN(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunWorkersN(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

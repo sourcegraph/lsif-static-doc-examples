@@ -1,0 +1,150 @@
+{
+  "pathID": "/enterprise/cmd/frontend",
+  "documentation": {
+    "identifier": "frontend",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Command frontend contains the enterprise frontend implementation. \n\nIt wraps the open source frontend command and merely injects a few proprietary things into it via e.g. blank/underscore imports in this file which register side effects with the frontend package. \n\n"
+  },
+  "children": [
+    {
+      "pathID": "/enterprise/cmd/frontend/internal"
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend#initFunctions",
+              "documentation": {
+                "identifier": "initFunctions",
+                "newPage": false,
+                "searchKey": "main.initFunctions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var initFunctions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar initFunctions = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "main.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend#enterpriseSetupHook",
+              "documentation": {
+                "identifier": "enterpriseSetupHook",
+                "newPage": false,
+                "searchKey": "main.enterpriseSetupHook",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func enterpriseSetupHook(db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) enterprise.Services"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc enterpriseSetupHook(db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) enterprise.Services\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

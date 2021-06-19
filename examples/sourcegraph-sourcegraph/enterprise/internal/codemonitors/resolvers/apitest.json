@@ -1,0 +1,414 @@
+{
+  "pathID": "/enterprise/internal/codemonitors/resolvers/apitest",
+  "documentation": {
+    "identifier": "apitest",
+    "newPage": true,
+    "searchKey": "enterprise/internal/codemonitors/resolvers/apitest",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package apitest"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package apitest provided types used in testing. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#Response",
+              "documentation": {
+                "identifier": "Response",
+                "newPage": false,
+                "searchKey": "apitest.Response",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Response struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Response struct {\n\tUser User\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#UpdateCodeMonitorResponse",
+              "documentation": {
+                "identifier": "UpdateCodeMonitorResponse",
+                "newPage": false,
+                "searchKey": "apitest.UpdateCodeMonitorResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UpdateCodeMonitorResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UpdateCodeMonitorResponse struct {\n\tUpdateCodeMonitor Monitor\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#User",
+              "documentation": {
+                "identifier": "User",
+                "newPage": false,
+                "searchKey": "apitest.User",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type User struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype User struct {\n\tMonitors MonitorConnection\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#Node",
+              "documentation": {
+                "identifier": "Node",
+                "newPage": false,
+                "searchKey": "apitest.Node",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Node struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Node struct {\n\tNode Monitor\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#MonitorConnection",
+              "documentation": {
+                "identifier": "MonitorConnection",
+                "newPage": false,
+                "searchKey": "apitest.MonitorConnection",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MonitorConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MonitorConnection struct {\n\tNodes      []Monitor\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#Monitor",
+              "documentation": {
+                "identifier": "Monitor",
+                "newPage": false,
+                "searchKey": "apitest.Monitor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Monitor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Monitor struct {\n\tId          string\n\tDescription string\n\tEnabled     bool\n\tOwner       UserOrg\n\tCreatedBy   UserOrg\n\tCreatedAt   string\n\tTrigger     Trigger\n\tActions     ActionConnection\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#UserOrg",
+              "documentation": {
+                "identifier": "UserOrg",
+                "newPage": false,
+                "searchKey": "apitest.UserOrg",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UserOrg struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UserOrg struct {\n\tName string `json:\"username\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#PageInfo",
+              "documentation": {
+                "identifier": "PageInfo",
+                "newPage": false,
+                "searchKey": "apitest.PageInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PageInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PageInfo struct {\n\tHasNextPage bool\n\tEndCursor   *string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#ActionConnection",
+              "documentation": {
+                "identifier": "ActionConnection",
+                "newPage": false,
+                "searchKey": "apitest.ActionConnection",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ActionConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ActionConnection struct {\n\tNodes      []Action\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#Action",
+              "documentation": {
+                "identifier": "Action",
+                "newPage": false,
+                "searchKey": "apitest.Action",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Action struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Action struct {\n\tActionEmail\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#ActionEmail",
+              "documentation": {
+                "identifier": "ActionEmail",
+                "newPage": false,
+                "searchKey": "apitest.ActionEmail",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ActionEmail struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ActionEmail struct {\n\tId         string\n\tEnabled    bool\n\tPriority   string\n\tRecipients RecipientsConnection\n\tHeader     string\n\tEvents     ActionEventConnection\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#RecipientsConnection",
+              "documentation": {
+                "identifier": "RecipientsConnection",
+                "newPage": false,
+                "searchKey": "apitest.RecipientsConnection",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RecipientsConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RecipientsConnection struct {\n\tNodes      []UserOrg\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#Trigger",
+              "documentation": {
+                "identifier": "Trigger",
+                "newPage": false,
+                "searchKey": "apitest.Trigger",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Trigger struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Trigger struct {\n\tId     string\n\tQuery  string\n\tEvents TriggerEventConnection\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#TriggerEventConnection",
+              "documentation": {
+                "identifier": "TriggerEventConnection",
+                "newPage": false,
+                "searchKey": "apitest.TriggerEventConnection",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TriggerEventConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TriggerEventConnection struct {\n\tNodes      []TriggerEvent\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#TriggerEvent",
+              "documentation": {
+                "identifier": "TriggerEvent",
+                "newPage": false,
+                "searchKey": "apitest.TriggerEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TriggerEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TriggerEvent struct {\n\tId        string\n\tStatus    string\n\tTimestamp string\n\tMessage   *string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#ActionEventConnection",
+              "documentation": {
+                "identifier": "ActionEventConnection",
+                "newPage": false,
+                "searchKey": "apitest.ActionEventConnection",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ActionEventConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ActionEventConnection struct {\n\tNodes      []ActionEvent\n\tTotalCount int\n\tPageInfo   PageInfo\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/resolvers/apitest#ActionEvent",
+              "documentation": {
+                "identifier": "ActionEvent",
+                "newPage": false,
+                "searchKey": "apitest.ActionEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ActionEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ActionEvent struct {\n\tId        string\n\tStatus    string\n\tTimestamp string\n\tMessage   *string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

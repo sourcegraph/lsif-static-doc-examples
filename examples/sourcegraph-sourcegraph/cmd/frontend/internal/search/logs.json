@@ -1,0 +1,84 @@
+{
+  "pathID": "/cmd/frontend/internal/search/logs",
+  "documentation": {
+    "identifier": "logs",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/search/logs",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package logs"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/search/logs#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search/logs#LogSlowSearchesThreshold",
+              "documentation": {
+                "identifier": "LogSlowSearchesThreshold",
+                "newPage": false,
+                "searchKey": "logs.LogSlowSearchesThreshold",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LogSlowSearchesThreshold() time.Duration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LogSlowSearchesThreshold() time.Duration\n```\n\nLogSlowSearchesThreshold returns the minimum duration configured in site settings for logging slow searches. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/search/logs#MapToLog15Ctx",
+              "documentation": {
+                "identifier": "MapToLog15Ctx",
+                "newPage": false,
+                "searchKey": "logs.MapToLog15Ctx",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MapToLog15Ctx(m map[string]interface{}) []interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MapToLog15Ctx(m map[string]interface{}) []interface{}\n```\n\nMapToLog15Ctx translates a map to log15 context fields. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

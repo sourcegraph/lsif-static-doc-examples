@@ -1,0 +1,2235 @@
+{
+  "pathID": "/monitoring/monitoring",
+  "documentation": {
+    "identifier": "monitoring",
+    "newPage": true,
+    "searchKey": "monitoring/monitoring",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package monitoring"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package monitoring declares types for Sourcegraph's monitoring generator as well as the generator implementation itself. \n\nTo learn more about developing monitoring, see the guide: [https://about.sourcegraph.com/handbook/engineering/observability/monitoring](https://about.sourcegraph.com/handbook/engineering/observability/monitoring) \n\nTo learn more about the generator, see the top-level program: [https://github.com/sourcegraph/sourcegraph/tree/main/monitoring](https://github.com/sourcegraph/sourcegraph/tree/main/monitoring) \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/monitoring/monitoring#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Number",
+              "documentation": {
+                "identifier": "Number",
+                "newPage": false,
+                "searchKey": "monitoring.Number",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Number"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Number UnitType = \"short\"\n```\n\nFrom [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 \n\nNumber is the default unit type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Milliseconds",
+              "documentation": {
+                "identifier": "Milliseconds",
+                "newPage": false,
+                "searchKey": "monitoring.Milliseconds",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Milliseconds"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Milliseconds UnitType = \"ms\"\n```\n\nFrom [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 \n\nMilliseconds for representing time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Seconds",
+              "documentation": {
+                "identifier": "Seconds",
+                "newPage": false,
+                "searchKey": "monitoring.Seconds",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Seconds"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Seconds UnitType = \"s\"\n```\n\nFrom [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 \n\nSeconds for representing time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Percentage",
+              "documentation": {
+                "identifier": "Percentage",
+                "newPage": false,
+                "searchKey": "monitoring.Percentage",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Percentage"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Percentage UnitType = \"percent\"\n```\n\nFrom [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 \n\nPercentage in the range of 0-100. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Bytes",
+              "documentation": {
+                "identifier": "Bytes",
+                "newPage": false,
+                "searchKey": "monitoring.Bytes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Bytes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Bytes UnitType = \"bytes\"\n```\n\nFrom [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 \n\nBytes in IEC (1024) format, e.g. for representing storage sizes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#BitsPerSecond",
+              "documentation": {
+                "identifier": "BitsPerSecond",
+                "newPage": false,
+                "searchKey": "monitoring.BitsPerSecond",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BitsPerSecond"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BitsPerSecond UnitType = \"bps\"\n```\n\nFrom [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 \n\nBitsPerSecond, e.g. for representing network and disk IO. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ReadsPerSecond",
+              "documentation": {
+                "identifier": "ReadsPerSecond",
+                "newPage": false,
+                "searchKey": "monitoring.ReadsPerSecond",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReadsPerSecond"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReadsPerSecond = \"rps\"\n```\n\nFrom [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 \n\nReadsPerSecond, e.g for representing disk IO. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#WritesPerSecond",
+              "documentation": {
+                "identifier": "WritesPerSecond",
+                "newPage": false,
+                "searchKey": "monitoring.WritesPerSecond",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const WritesPerSecond"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst WritesPerSecond = \"wps\"\n```\n\nFrom [https://sourcegraph.com/github.com/grafana/grafana](https://sourcegraph.com/github.com/grafana/grafana)@b63b82976b3708b082326c0b7d42f38d4bc261fa/-/blob/packages/grafana-data/src/valueFormats/categories.ts#L23 \n\nWritesPerSecond, e.g for representing disk IO. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#canonicalAlertSolutionsURL",
+              "documentation": {
+                "identifier": "canonicalAlertSolutionsURL",
+                "newPage": false,
+                "searchKey": "monitoring.canonicalAlertSolutionsURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const canonicalAlertSolutionsURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst canonicalAlertSolutionsURL = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#canonicalDashboardsDocsURL",
+              "documentation": {
+                "identifier": "canonicalDashboardsDocsURL",
+                "newPage": false,
+                "searchKey": "monitoring.canonicalDashboardsDocsURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const canonicalDashboardsDocsURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst canonicalDashboardsDocsURL = \"https://docs.sourcegraph.com/admin/observability/dashboards\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#alertSolutionsFile",
+              "documentation": {
+                "identifier": "alertSolutionsFile",
+                "newPage": false,
+                "searchKey": "monitoring.alertSolutionsFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const alertSolutionsFile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst alertSolutionsFile = \"alert_solutions.md\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#dashboardsDocsFile",
+              "documentation": {
+                "identifier": "dashboardsDocsFile",
+                "newPage": false,
+                "searchKey": "monitoring.dashboardsDocsFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dashboardsDocsFile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dashboardsDocsFile = \"dashboards.md\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#alertSolutionsHeader",
+              "documentation": {
+                "identifier": "alertSolutionsHeader",
+                "newPage": false,
+                "searchKey": "monitoring.alertSolutionsHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const alertSolutionsHeader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst alertSolutionsHeader = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#dashboardsHeader",
+              "documentation": {
+                "identifier": "dashboardsHeader",
+                "newPage": false,
+                "searchKey": "monitoring.dashboardsHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dashboardsHeader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dashboardsHeader = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#localGrafanaURL",
+              "documentation": {
+                "identifier": "localGrafanaURL",
+                "newPage": false,
+                "searchKey": "monitoring.localGrafanaURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const localGrafanaURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst localGrafanaURL = \"http://127.0.0.1:3370\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#localGrafanaCredentials",
+              "documentation": {
+                "identifier": "localGrafanaCredentials",
+                "newPage": false,
+                "searchKey": "monitoring.localGrafanaCredentials",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const localGrafanaCredentials"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst localGrafanaCredentials = \"admin:admin\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#localPrometheusURL",
+              "documentation": {
+                "identifier": "localPrometheusURL",
+                "newPage": false,
+                "searchKey": "monitoring.localPrometheusURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const localPrometheusURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst localPrometheusURL = \"http://127.0.0.1:9090\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableOwnerSearch",
+              "documentation": {
+                "identifier": "ObservableOwnerSearch",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableOwnerSearch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ObservableOwnerSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ObservableOwnerSearch ObservableOwner = \"search\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableOwnerBatches",
+              "documentation": {
+                "identifier": "ObservableOwnerBatches",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableOwnerBatches",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ObservableOwnerBatches"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ObservableOwnerBatches ObservableOwner = \"batches\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableOwnerCodeIntel",
+              "documentation": {
+                "identifier": "ObservableOwnerCodeIntel",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableOwnerCodeIntel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ObservableOwnerCodeIntel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ObservableOwnerCodeIntel ObservableOwner = \"code-intel\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableOwnerDistribution",
+              "documentation": {
+                "identifier": "ObservableOwnerDistribution",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableOwnerDistribution",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ObservableOwnerDistribution"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ObservableOwnerDistribution ObservableOwner = \"distribution\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableOwnerSecurity",
+              "documentation": {
+                "identifier": "ObservableOwnerSecurity",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableOwnerSecurity",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ObservableOwnerSecurity"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ObservableOwnerSecurity ObservableOwner = \"security\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableOwnerWeb",
+              "documentation": {
+                "identifier": "ObservableOwnerWeb",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableOwnerWeb",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ObservableOwnerWeb"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ObservableOwnerWeb ObservableOwner = \"web\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableOwnerCoreApplication",
+              "documentation": {
+                "identifier": "ObservableOwnerCoreApplication",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableOwnerCoreApplication",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ObservableOwnerCoreApplication"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ObservableOwnerCoreApplication ObservableOwner = \"core application\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#alertRulesFileSuffix",
+              "documentation": {
+                "identifier": "alertRulesFileSuffix",
+                "newPage": false,
+                "searchKey": "monitoring.alertRulesFileSuffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const alertRulesFileSuffix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst alertRulesFileSuffix = \"_alert_rules.yml\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/monitoring/monitoring#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#PanelOptions",
+              "documentation": {
+                "identifier": "PanelOptions",
+                "newPage": false,
+                "searchKey": "monitoring.PanelOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PanelOptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PanelOptions panelOptionsLibrary\n```\n\nPanelOptions exports available shared `ObservablePanelOption` implementations. \n\nSee `ObservablePanelOption` for more details. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/monitoring/monitoring#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#UnitType",
+              "documentation": {
+                "identifier": "UnitType",
+                "newPage": false,
+                "searchKey": "monitoring.UnitType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnitType string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnitType string\n```\n\nUnitType for controlling the unit type display on graphs. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#UnitType.short",
+                    "documentation": {
+                      "identifier": "UnitType.short",
+                      "newPage": false,
+                      "searchKey": "monitoring.UnitType.short",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u UnitType) short() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u UnitType) short() string\n```\n\nshort returns the short string description of the unit, for qualifying a number of this unit type as human-readable. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#documentation",
+              "documentation": {
+                "identifier": "documentation",
+                "newPage": false,
+                "searchKey": "monitoring.documentation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type documentation struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype documentation struct {\n\talertSolutions bytes.Buffer\n\tdashboards     bytes.Buffer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#renderDocumentation",
+                    "documentation": {
+                      "identifier": "renderDocumentation",
+                      "newPage": false,
+                      "searchKey": "monitoring.renderDocumentation",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func renderDocumentation(containers []*Container) (*documentation, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc renderDocumentation(containers []*Container) (*documentation, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#documentation.renderAlertSolutionEntry",
+                    "documentation": {
+                      "identifier": "documentation.renderAlertSolutionEntry",
+                      "newPage": false,
+                      "searchKey": "monitoring.documentation.renderAlertSolutionEntry",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *documentation) renderAlertSolutionEntry(c *Container, o Observable) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *documentation) renderAlertSolutionEntry(c *Container, o Observable) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#documentation.renderDashboardPanelEntry",
+                    "documentation": {
+                      "identifier": "documentation.renderDashboardPanelEntry",
+                      "newPage": false,
+                      "searchKey": "monitoring.documentation.renderDashboardPanelEntry",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *documentation) renderDashboardPanelEntry(c *Container, o Observable) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *documentation) renderDashboardPanelEntry(c *Container, o Observable) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#GenerateOptions",
+              "documentation": {
+                "identifier": "GenerateOptions",
+                "newPage": false,
+                "searchKey": "monitoring.GenerateOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GenerateOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GenerateOptions struct {\n\t// Toggles pruning of dangling generated assets through simple heuristic, should be disabled during builds\n\tDisablePrune bool\n\t// Trigger reload of active Prometheus or Grafana instance (requires respective output directories)\n\tReload bool\n\n\t// Output directory for generated Grafana assets\n\tGrafanaDir string\n\t// Output directory for generated Prometheus assets\n\tPrometheusDir string\n\t// Output directory for generated documentation\n\tDocsDir string\n}\n```\n\nGenerateOptions declares options for the monitoring generator. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Container",
+              "documentation": {
+                "identifier": "Container",
+                "newPage": false,
+                "searchKey": "monitoring.Container",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Container struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Container struct {\n\t// Name of the Docker container, e.g. \"syntect-server\".\n\tName string\n\n\t// Title of the Docker container, e.g. \"Syntect Server\".\n\tTitle string\n\n\t// Description of the Docker container. It should describe what the container\n\t// is responsible for, so that the impact of issues in it is clear.\n\tDescription string\n\n\t// List of Annotations to apply to the dashboard.\n\tAnnotations []sdk.Annotation\n\n\t// List of Template Variables to apply to the dashboard\n\tTemplates []sdk.TemplateVar\n\n\t// Groups of observable information about the container.\n\tGroups []Group\n\n\t// NoSourcegraphDebugServer indicates if this container does not export the standard\n\t// Sourcegraph debug server (package `internal/debugserver`).\n\t//\n\t// This is used to configure monitoring features that depend on information exported\n\t// by the standard Sourcegraph debug server.\n\tNoSourcegraphDebugServer bool\n}\n```\n\nContainer describes a Docker container to be observed. \n\nThese correspond to dashboards in Grafana. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Container.validate",
+                    "documentation": {
+                      "identifier": "Container.validate",
+                      "newPage": false,
+                      "searchKey": "monitoring.Container.validate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Container) validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Container) validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Container.renderDashboard",
+                    "documentation": {
+                      "identifier": "Container.renderDashboard",
+                      "newPage": false,
+                      "searchKey": "monitoring.Container.renderDashboard",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Container) renderDashboard() *sdk.Board"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Container) renderDashboard() *sdk.Board\n```\n\nrenderDashboard generates the Grafana renderDashboard for this container. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Container.alertDescription",
+                    "documentation": {
+                      "identifier": "Container.alertDescription",
+                      "newPage": false,
+                      "searchKey": "monitoring.Container.alertDescription",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Container) alertDescription(o Observable, alert *ObservableAlertDefinition) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Container) alertDescription(o Observable, alert *ObservableAlertDefinition) (string, error)\n```\n\nalertDescription generates an alert description for the specified coontainer's alert. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Container.renderRules",
+                    "documentation": {
+                      "identifier": "Container.renderRules",
+                      "newPage": false,
+                      "searchKey": "monitoring.Container.renderRules",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Container) renderRules() (*promRulesFile, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Container) renderRules() (*promRulesFile, error)\n```\n\nrenderRules generates the Prometheus rules file which defines our high-level alerting metrics for the container. For more information about how these work, see: \n\n[https://docs.sourcegraph.com/admin/observability/metrics#high-level-alerting-metrics](https://docs.sourcegraph.com/admin/observability/metrics#high-level-alerting-metrics) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Group",
+              "documentation": {
+                "identifier": "Group",
+                "newPage": false,
+                "searchKey": "monitoring.Group",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Group struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Group struct {\n\t// Title of the group, briefly summarizing what this group is about, or\n\t// \"General\" if the group is just about the container in general.\n\tTitle string\n\n\t// Hidden indicates whether or not the group should be hidden by default.\n\t//\n\t// This should only be used when the dashboard is already full of information\n\t// and the information presented in this group is unlikely to be the cause of\n\t// issues and should generally only be inspected in the event that an alert\n\t// for that information is firing.\n\tHidden bool\n\n\t// Rows of observable metrics.\n\tRows []Row\n}\n```\n\nGroup describes a group of observable information about a container. \n\nThese correspond to collapsible sections in a Grafana dashboard. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Group.validate",
+                    "documentation": {
+                      "identifier": "Group.validate",
+                      "newPage": false,
+                      "searchKey": "monitoring.Group.validate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g Group) validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g Group) validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Row",
+              "documentation": {
+                "identifier": "Row",
+                "newPage": false,
+                "searchKey": "monitoring.Row",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Row []monitoring.Observable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Row []Observable\n```\n\nRow of observable metrics. \n\nThese correspond to a row of Grafana graphs. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Row.validate",
+                    "documentation": {
+                      "identifier": "Row.validate",
+                      "newPage": false,
+                      "searchKey": "monitoring.Row.validate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r Row) validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r Row) validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableOwner",
+              "documentation": {
+                "identifier": "ObservableOwner",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableOwner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ObservableOwner string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ObservableOwner string\n```\n\nObservableOwner denotes a team that owns an Observable. The current teams are described in the handbook: [https://about.sourcegraph.com/company/team/org_chart#engineering](https://about.sourcegraph.com/company/team/org_chart#engineering) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservableOwner.toMarkdown",
+                    "documentation": {
+                      "identifier": "ObservableOwner.toMarkdown",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservableOwner.toMarkdown",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o ObservableOwner) toMarkdown() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o ObservableOwner) toMarkdown() string\n```\n\ntoMarkdown returns a Markdown string that also links to the owner's team page \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Observable",
+              "documentation": {
+                "identifier": "Observable",
+                "newPage": false,
+                "searchKey": "monitoring.Observable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Observable struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Observable struct {\n\t// Name is a short and human-readable lower_snake_case name describing what is being observed.\n\t//\n\t// It must be unique relative to the service name.\n\t//\n\t// Good examples:\n\t//\n\t//  github_rate_limit_remaining\n\t// \tsearch_error_rate\n\t//\n\t// Bad examples:\n\t//\n\t//  repo_updater_github_rate_limit\n\t// \tsearch_error_rate_over_5m\n\t//\n\tName string\n\n\t// Description is a human-readable description of exactly what is being observed.\n\t// If a query groups by a label (such as with a `sum by(...)`), ensure that this is\n\t// reflected in the description by noting that this observable is grouped \"by ...\".\n\t//\n\t// Good examples:\n\t//\n\t// \t\"remaining GitHub API rate limit quota\"\n\t// \t\"number of search errors every 5m\"\n\t//  \"90th percentile search request duration over 5m\"\n\t//  \"internal API error responses every 5m by route\"\n\t//\n\t// Bad examples:\n\t//\n\t// \t\"GitHub rate limit\"\n\t// \t\"search errors[5m]\"\n\t// \t\"P90 search latency\"\n\t//\n\tDescription string\n\n\t// Owner indicates the team that owns this Observable (including its alerts and maintainence).\n\tOwner ObservableOwner\n\n\t// Query is the actual Prometheus query that should be observed.\n\tQuery string\n\n\t// DataMustExist indicates if the query must return data.\n\t//\n\t// For example, repo_updater_memory_usage should always have data present and an alert should\n\t// fire if for some reason that query is not returning any data, so this would be set to true.\n\t// In contrast, search_error_rate would depend on users actually performing searches and we\n\t// would not want an alert to fire if no data was present, so this will not need to be set.\n\tDataMustExist bool\n\n\t// Warning and Critical alert definitions.\n\t// Consider adding at least a Warning or Critical alert to each Observable to make it\n\t// easy to identify when the target of this metric is misbehaving. If no alerts are\n\t// provided, NoAlert must be set and Interpretation must be provided.\n\tWarning, Critical *ObservableAlertDefinition\n\n\t// NoAlerts must be set by Observables that do not have any alerts.\n\t// This ensures the omission of alerts is intentional. If set to true, an Interpretation\n\t// must be provided in place of PossibleSolutions.\n\tNoAlert bool\n\n\t// PossibleSolutions is Markdown describing possible solutions in the event that the\n\t// alert is firing. This field not required if no alerts are attached to this Observable.\n\t// If there is no clear potential resolution or there is no alert configured, \"none\"\n\t// must be explicitly stated.\n\t//\n\t// Use the Interpretation field for additional guidance on understanding this Observable\n\t// that isn't directly related to solving it.\n\t//\n\t// Contacting support should not be mentioned as part of a possible solution, as it is\n\t// communicated elsewhere.\n\t//\n\t// To make writing the Markdown more friendly in Go, string literals like this:\n\t//\n\t// \tObservable{\n\t// \t\tPossibleSolutions: `\n\t// \t\t\t- Foobar 'some code'\n\t// \t\t`\n\t// \t}\n\t//\n\t// Becomes:\n\t//\n\t// \t- Foobar `some code`\n\t//\n\t// In other words:\n\t//\n\t// 1. The preceding newline is removed.\n\t// 2. The indentation in the string literal is removed (based on the last line).\n\t// 3. Single quotes become backticks.\n\t// 4. The last line (which is all indention) is removed.\n\t// 5. Non-list items are converted to a list.\n\t//\n\tPossibleSolutions string\n\n\t// Interpretation is Markdown that can serve as a reference for interpreting this\n\t// observable. For example, Interpretation could provide guidance on what sort of\n\t// patterns to look for in the observable's graph and document why this observable is\n\t// useful.\n\t//\n\t// If no alerts are configured for an observable, this field is required. If the\n\t// Description is sufficient to capture what this Observable describes, \"none\" must be\n\t// explicitly stated.\n\t//\n\t// To make writing the Markdown more friendly in Go, string literal processing as\n\t// PossibleSolutions is provided, though the output is not converted to a list.\n\tInterpretation string\n\n\t// Panel provides options for how to render the metric in the Grafana panel.\n\t// A recommended set of options and customizations are available from the `Panel()`\n\t// constructor.\n\t//\n\t// Additional customizations can be made via `ObservablePanel.With()` for cases where\n\t// the provided `ObservablePanel` is insufficient - see `ObservablePanelOption` for\n\t// more details.\n\tPanel ObservablePanel\n}\n```\n\nObservable describes a metric about a container that can be observed. For example, memory usage. \n\nThese correspond to Grafana graphs. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Observable.validate",
+                    "documentation": {
+                      "identifier": "Observable.validate",
+                      "newPage": false,
+                      "searchKey": "monitoring.Observable.validate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o Observable) validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o Observable) validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservableAlertDefinition",
+              "documentation": {
+                "identifier": "ObservableAlertDefinition",
+                "newPage": false,
+                "searchKey": "monitoring.ObservableAlertDefinition",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ObservableAlertDefinition struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ObservableAlertDefinition struct {\n\tgreaterThan bool\n\tlessThan    bool\n\tduration    time.Duration\n\t// Wrap the query in `max()` or `min()` so that if there are multiple series (e.g. per-container)\n\t// they get \"flattened\" into a single metric. The `aggregator` variable sets the required operator.\n\t//\n\t// We only support per-service alerts, not per-container/replica, and not doing so can cause issues.\n\t// See https://github.com/sourcegraph/sourcegraph/issues/11571#issuecomment-654571953,\n\t// https://github.com/sourcegraph/sourcegraph/issues/17599, and related pull requests.\n\taggregator string\n\t// Comparator sets how a metric should be compared against a threshold\n\tcomparator string\n\t// Threshold sets the value to be compared against\n\tthreshold float64\n}\n```\n\nObservableAlertDefinition defines when an alert would be considered firing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Alert",
+                    "documentation": {
+                      "identifier": "Alert",
+                      "newPage": false,
+                      "searchKey": "monitoring.Alert",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Alert() *ObservableAlertDefinition"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Alert() *ObservableAlertDefinition\n```\n\nAlert provides a builder for defining alerting on an Observable. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservableAlertDefinition.GreaterOrEqual",
+                    "documentation": {
+                      "identifier": "ObservableAlertDefinition.GreaterOrEqual",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservableAlertDefinition.GreaterOrEqual",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ObservableAlertDefinition) GreaterOrEqual(f float64, aggregator *string) *ObservableAlertDefinition"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ObservableAlertDefinition) GreaterOrEqual(f float64, aggregator *string) *ObservableAlertDefinition\n```\n\nGreaterOrEqual indicates the alert should fire when greater or equal the given value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservableAlertDefinition.LessOrEqual",
+                    "documentation": {
+                      "identifier": "ObservableAlertDefinition.LessOrEqual",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservableAlertDefinition.LessOrEqual",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ObservableAlertDefinition) LessOrEqual(f float64, aggregator *string) *ObservableAlertDefinition"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ObservableAlertDefinition) LessOrEqual(f float64, aggregator *string) *ObservableAlertDefinition\n```\n\nLessOrEqual indicates the alert should fire when less than or equal to the given value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservableAlertDefinition.Greater",
+                    "documentation": {
+                      "identifier": "ObservableAlertDefinition.Greater",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservableAlertDefinition.Greater",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ObservableAlertDefinition) Greater(f float64, aggregator *string) *ObservableAlertDefinition"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ObservableAlertDefinition) Greater(f float64, aggregator *string) *ObservableAlertDefinition\n```\n\nGreater indicates the alert should fire when strictly greater to this value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservableAlertDefinition.Less",
+                    "documentation": {
+                      "identifier": "ObservableAlertDefinition.Less",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservableAlertDefinition.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ObservableAlertDefinition) Less(f float64, aggregator *string) *ObservableAlertDefinition"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ObservableAlertDefinition) Less(f float64, aggregator *string) *ObservableAlertDefinition\n```\n\nLess indicates the alert should fire when strictly less than this value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservableAlertDefinition.For",
+                    "documentation": {
+                      "identifier": "ObservableAlertDefinition.For",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservableAlertDefinition.For",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ObservableAlertDefinition) For(d time.Duration) *ObservableAlertDefinition"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ObservableAlertDefinition) For(d time.Duration) *ObservableAlertDefinition\n```\n\nFor indicates how long the given thresholds must be exceeded for this alert to be considered firing. Defaults to 0s (immediately alerts when threshold is exceeded). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservableAlertDefinition.isEmpty",
+                    "documentation": {
+                      "identifier": "ObservableAlertDefinition.isEmpty",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservableAlertDefinition.isEmpty",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ObservableAlertDefinition) isEmpty() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ObservableAlertDefinition) isEmpty() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservableAlertDefinition.validate",
+                    "documentation": {
+                      "identifier": "ObservableAlertDefinition.validate",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservableAlertDefinition.validate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ObservableAlertDefinition) validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ObservableAlertDefinition) validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservablePanel",
+              "documentation": {
+                "identifier": "ObservablePanel",
+                "newPage": false,
+                "searchKey": "monitoring.ObservablePanel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ObservablePanel struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ObservablePanel struct {\n\toptions []ObservablePanelOption\n\n\t// panelType is \"graph\" or \"heatmap\"\n\tpanelType string\n\n\t// unitType is used by other parts of the generator\n\tunitType UnitType\n}\n```\n\nObservablePanel declares options for visualizing an Observable, as well as some default customization options. A default panel can be instantiated with the `Panel()` constructor, and further customized using `ObservablePanel.With(ObservablePanelOption)`. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#Panel",
+                    "documentation": {
+                      "identifier": "Panel",
+                      "newPage": false,
+                      "searchKey": "monitoring.Panel",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Panel() ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Panel() ObservablePanel\n```\n\nPanel provides a builder for customizing an Observable visualization, starting with recommended defaults. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#PanelMinimal",
+                    "documentation": {
+                      "identifier": "PanelMinimal",
+                      "newPage": false,
+                      "searchKey": "monitoring.PanelMinimal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func PanelMinimal() ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc PanelMinimal() ObservablePanel\n```\n\nPanelMinimal provides a builder for customizing an Observable visualization starting with an extremely minimal graph panel. \n\nIn general, we advise using Panel() instead to start with recommended defaults. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#PanelHeatmap",
+                    "documentation": {
+                      "identifier": "PanelHeatmap",
+                      "newPage": false,
+                      "searchKey": "monitoring.PanelHeatmap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func PanelHeatmap() ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc PanelHeatmap() ObservablePanel\n```\n\nPanelHeatmap provides a builder for customizing an Observable visualization starting with an extremely minimal heatmap panel. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservablePanel.Min",
+                    "documentation": {
+                      "identifier": "ObservablePanel.Min",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservablePanel.Min",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ObservablePanel) Min(min float64) ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ObservablePanel) Min(min float64) ObservablePanel\n```\n\nMin sets the minimum value of the Y axis on the panel. The default is zero. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservablePanel.MinAuto",
+                    "documentation": {
+                      "identifier": "ObservablePanel.MinAuto",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservablePanel.MinAuto",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ObservablePanel) MinAuto() ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ObservablePanel) MinAuto() ObservablePanel\n```\n\nMin sets the minimum value of the Y axis on the panel to auto, instead of the default zero. \n\nThis is generally only useful if trying to show negative numbers. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservablePanel.Max",
+                    "documentation": {
+                      "identifier": "ObservablePanel.Max",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservablePanel.Max",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ObservablePanel) Max(max float64) ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ObservablePanel) Max(max float64) ObservablePanel\n```\n\nMax sets the maximum value of the Y axis on the panel. The default is auto. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservablePanel.LegendFormat",
+                    "documentation": {
+                      "identifier": "ObservablePanel.LegendFormat",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservablePanel.LegendFormat",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ObservablePanel) LegendFormat(format string) ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ObservablePanel) LegendFormat(format string) ObservablePanel\n```\n\nLegendFormat sets the panel's legend format, which may use Go template strings to select labels from the Prometheus query. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservablePanel.Unit",
+                    "documentation": {
+                      "identifier": "ObservablePanel.Unit",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservablePanel.Unit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ObservablePanel) Unit(t UnitType) ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ObservablePanel) Unit(t UnitType) ObservablePanel\n```\n\nUnit sets the panel's Y axis unit type. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservablePanel.Interval",
+                    "documentation": {
+                      "identifier": "ObservablePanel.Interval",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservablePanel.Interval",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ObservablePanel) Interval(ms int) ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ObservablePanel) Interval(ms int) ObservablePanel\n```\n\nInterval declares the panel's interval in milliseconds. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservablePanel.With",
+                    "documentation": {
+                      "identifier": "ObservablePanel.With",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservablePanel.With",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ObservablePanel) With(ops ...ObservablePanelOption) ObservablePanel"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ObservablePanel) With(ops ...ObservablePanelOption) ObservablePanel\n```\n\nWith adds the provided options to be applied when building this panel. \n\nBefore using this, check if the customization you want is already included in the default `Panel()` or available as a function on `ObservablePanel`, such as `ObservablePanel.Unit(UnitType)` for setting the units on a panel. \n\nShared customizations are exported by `PanelOptions`, or you can write your option - see `ObservablePanelOption` documentation for more details. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#ObservablePanel.build",
+                    "documentation": {
+                      "identifier": "ObservablePanel.build",
+                      "newPage": false,
+                      "searchKey": "monitoring.ObservablePanel.build",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ObservablePanel) build(o Observable, panel *sdk.Panel)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ObservablePanel) build(o Observable, panel *sdk.Panel)\n```\n\nbuild applies the configured options on this panel for the given `Observable`. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#ObservablePanelOption",
+              "documentation": {
+                "identifier": "ObservablePanelOption",
+                "newPage": false,
+                "searchKey": "monitoring.ObservablePanelOption",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ObservablePanelOption func(github.com/sourcegraph/sourcegraph/monitoring/monitoring.Observable, *github.com/grafana-tools/sdk.Panel)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ObservablePanelOption func(Observable, *sdk.Panel)\n```\n\nObservablePanelOption declares an option for customizing a graph panel. `ObservablePanel` is responsible for collecting and applying options. \n\nYou can make any customization you want to a graph panel by using `ObservablePanel.With`: \n\n```\nPanel: monitoring.Panel().With(func(o monitoring.Observable, p *sdk.Panel) {\n  // modify 'p.GraphPanel' with desired changes\n}),\n\n```\nWhen writing a custom `ObservablePanelOption`, keep in mind that: \n\n- There are only ever two `YAxes`: left at `YAxes[0]` and right at `YAxes[1]`. Target customizations at the Y-axis you want to modify, e.g. `YAxes[0].Property = Value`. \n\n- The observable being graphed is configured in `Targets[0]`. Customize it by editing it directly, e.g. `Targets[0].Property = Value`. \n\nIf an option could be leveraged by multiple observables, a shared panel option can be defined in the `monitoring` package. \n\nWhen creating a shared `ObservablePanelOption`, it should defined as a function on the `panelOptionsLibrary` that returns a `ObservablePanelOption`. The function should be It can then be used with the `ObservablePanel.With`: \n\n```\nPanel: monitoring.Panel().With(monitoring.PanelOptions.MyCustomization),\n\n```\nUsing a shared prefix helps with discoverability of available options. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#panelOptionsLibrary",
+              "documentation": {
+                "identifier": "panelOptionsLibrary",
+                "newPage": false,
+                "searchKey": "monitoring.panelOptionsLibrary",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type panelOptionsLibrary struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype panelOptionsLibrary struct{}\n```\n\npanelOptionsLibrary provides `ObservablePanelOption` implementations. \n\nShared panel options should be declared as functions on this struct - see the `ObservablePanelOption` documentation for more details. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.basicPanel",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.basicPanel",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.basicPanel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) basicPanel() ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) basicPanel() ObservablePanelOption\n```\n\nbasicPanel instantiates all properties of a graph that can be adjusted in an ObservablePanelOption, and some reasonable defaults aimed at maintaining a uniform look and feel. \n\nAll ObservablePanelOptions start with this option. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.OpinionatedDefaults",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.OpinionatedDefaults",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.OpinionatedDefaults",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) OpinionatedDefaults() ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) OpinionatedDefaults() ObservablePanelOption\n```\n\nOptionOpinionatedDefaults sets some opinionated default properties aimed at encouraging good dashboard practices. \n\nIt is applied in the default PanelOptions(). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.AlertThresholds",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.AlertThresholds",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.AlertThresholds",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) AlertThresholds() ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) AlertThresholds() ObservablePanelOption\n```\n\nAlertThresholds draws threshold lines based on the Observable's configured alerts. \n\nIt is applied in the default PanelOptions(). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.ColorOverride",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.ColorOverride",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.ColorOverride",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) ColorOverride(seriesName string, color string) ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) ColorOverride(seriesName string, color string) ObservablePanelOption\n```\n\nColorOverride takes a seriesName (which can be a regex pattern) and a color in hex format (#ABABAB). Series that match the seriesName will be colored accordingly. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.LegendOnRight",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.LegendOnRight",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.LegendOnRight",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) LegendOnRight() ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) LegendOnRight() ObservablePanelOption\n```\n\nLegendOnRight moves the legend to the right side of the panel \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.HoverShowAll",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.HoverShowAll",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.HoverShowAll",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) HoverShowAll() ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) HoverShowAll() ObservablePanelOption\n```\n\nHoverShowAll makes hover tooltips show all series rather than just the one being hovered over \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.HoverSort",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.HoverSort",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.HoverSort",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) HoverSort(order string) ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) HoverSort(order string) ObservablePanelOption\n```\n\nHoverSort sorts the series either \"ascending\", \"descending\", or \"none\". Default is \"none\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.Fill",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.Fill",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.Fill",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) Fill(fill int) ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) Fill(fill int) ObservablePanelOption\n```\n\nFill sets the fill opacity for all series on the panel. Set to 0 to disable fill. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#panelOptionsLibrary.NoLegend",
+                    "documentation": {
+                      "identifier": "panelOptionsLibrary.NoLegend",
+                      "newPage": false,
+                      "searchKey": "monitoring.panelOptionsLibrary.NoLegend",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panelOptionsLibrary) NoLegend() ObservablePanelOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panelOptionsLibrary) NoLegend() ObservablePanelOption\n```\n\nNoLegend disables the legend on the panel \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#promRule",
+              "documentation": {
+                "identifier": "promRule",
+                "newPage": false,
+                "searchKey": "monitoring.promRule",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type promRule struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype promRule struct {\n\t// either Record or Alert\n\tRecord string `yaml:\",omitempty\"` // https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/\n\tAlert  string `yaml:\",omitempty\"` // https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/\n\n\tLabels map[string]string\n\tExpr   string\n\n\t// for Alert only\n\tFor *model.Duration `yaml:\",omitempty\"`\n}\n```\n\npromRule is a subset of a Prometheus recording or alert rule definition. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#promRule.validate",
+                    "documentation": {
+                      "identifier": "promRule.validate",
+                      "newPage": false,
+                      "searchKey": "monitoring.promRule.validate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *promRule) validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *promRule) validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#promRulesFile",
+              "documentation": {
+                "identifier": "promRulesFile",
+                "newPage": false,
+                "searchKey": "monitoring.promRulesFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type promRulesFile struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype promRulesFile struct {\n\tGroups []promGroup\n}\n```\n\npromRulesFile represents a Prometheus recording rules file (which we use for defining our alerts) see: \n\n[https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/](https://prometheus.io/docs/prometheus/latest/configuration/recording_rules/) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#promGroup",
+              "documentation": {
+                "identifier": "promGroup",
+                "newPage": false,
+                "searchKey": "monitoring.promGroup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type promGroup struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype promGroup struct {\n\tName  string\n\tRules []promRule\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#promGroup.validate",
+                    "documentation": {
+                      "identifier": "promGroup.validate",
+                      "newPage": false,
+                      "searchKey": "monitoring.promGroup.validate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *promGroup) validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *promGroup) validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/monitoring/monitoring#promGroup.appendRow",
+                    "documentation": {
+                      "identifier": "promGroup.appendRow",
+                      "newPage": false,
+                      "searchKey": "monitoring.promGroup.appendRow",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g *promGroup) appendRow(alertQuery string, labels map[string]string, duration time.Duration)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g *promGroup) appendRow(alertQuery string, labels map[string]string, duration time.Duration)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/monitoring/monitoring#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#setPanelSize",
+              "documentation": {
+                "identifier": "setPanelSize",
+                "newPage": false,
+                "searchKey": "monitoring.setPanelSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setPanelSize(p *sdk.Panel, width, height int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setPanelSize(p *sdk.Panel, width, height int)\n```\n\nsetPanelSize is a helper to set a panel's size. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#setPanelPos",
+              "documentation": {
+                "identifier": "setPanelPos",
+                "newPage": false,
+                "searchKey": "monitoring.setPanelPos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setPanelPos(p *sdk.Panel, x, y int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setPanelPos(p *sdk.Panel, x, y int)\n```\n\nsetPanelSize is a helper to set a panel's position. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#observablePanelID",
+              "documentation": {
+                "identifier": "observablePanelID",
+                "newPage": false,
+                "searchKey": "monitoring.observablePanelID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func observablePanelID(groupIndex, rowIndex, observableIndex int) uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc observablePanelID(groupIndex, rowIndex, observableIndex int) uint\n```\n\nobservablePanelID generates a panel ID unique per dashboard for an observable at a given group and row. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#isValidGrafanaUID",
+              "documentation": {
+                "identifier": "isValidGrafanaUID",
+                "newPage": false,
+                "searchKey": "monitoring.isValidGrafanaUID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isValidGrafanaUID(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isValidGrafanaUID(s string) bool\n```\n\nisValidGrafanaUID checks if the given string is a valid UID for entry into a Grafana dashboard. This is primarily used in the URL, e.g. /-/debug/grafana/d/syntect-server/<UID> and allows us to have static URLs we can document like: \n\n```\nGo to [https://sourcegraph.example.com/-/debug/grafana/d/syntect-server/syntect-server](https://sourcegraph.example.com/-/debug/grafana/d/syntect-server/syntect-server)\n\n```\nInstead of having to describe all the steps to navigate there because the UID is random. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#fprintSubtitle",
+              "documentation": {
+                "identifier": "fprintSubtitle",
+                "newPage": false,
+                "searchKey": "monitoring.fprintSubtitle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fprintSubtitle(w io.Writer, text string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fprintSubtitle(w io.Writer, text string)\n```\n\nfprintSubtitle prints subtitle-class text \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#fprintObservableHeader",
+              "documentation": {
+                "identifier": "fprintObservableHeader",
+                "newPage": false,
+                "searchKey": "monitoring.fprintObservableHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fprintObservableHeader(w io.Writer, c *Container, o *Observable, headerLevel int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fprintObservableHeader(w io.Writer, c *Container, o *Observable, headerLevel int)\n```\n\nWrite a standardized Observable header that one can reliably generate an anchor link for. \n\nSee `observableAnchor`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#fprintOwnedBy",
+              "documentation": {
+                "identifier": "fprintOwnedBy",
+                "newPage": false,
+                "searchKey": "monitoring.fprintOwnedBy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fprintOwnedBy(w io.Writer, owner ObservableOwner)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fprintOwnedBy(w io.Writer, owner ObservableOwner)\n```\n\nfprintOwnedBy prints information about who owns a particular monitoring definition. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#observableDocAnchor",
+              "documentation": {
+                "identifier": "observableDocAnchor",
+                "newPage": false,
+                "searchKey": "monitoring.observableDocAnchor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func observableDocAnchor(c *Container, o Observable) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc observableDocAnchor(c *Container, o Observable) string\n```\n\nCreate an anchor link that matches `fprintObservableHeader` \n\nMust match Prometheus template in `docker-images/prometheus/cmd/prom-wrapper/receivers.go` \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Generate",
+              "documentation": {
+                "identifier": "Generate",
+                "newPage": false,
+                "searchKey": "monitoring.Generate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Generate(logger log15.Logger, opts GenerateOptions, containers ...*Container) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Generate(logger log15.Logger, opts GenerateOptions, containers ...*Container) error\n```\n\nGenerate is the main Sourcegraph monitoring generator entrypoint. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#prometheusAlertName",
+              "documentation": {
+                "identifier": "prometheusAlertName",
+                "newPage": false,
+                "searchKey": "monitoring.prometheusAlertName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func prometheusAlertName(level, service, name string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc prometheusAlertName(level, service, name string) string\n```\n\nprometheusAlertName creates an alertname that is unique given the combination of parameters \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#pruneAssets",
+              "documentation": {
+                "identifier": "pruneAssets",
+                "newPage": false,
+                "searchKey": "monitoring.pruneAssets",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pruneAssets(logger log15.Logger, filelist []string, grafanaDir, promDir string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pruneAssets(logger log15.Logger, filelist []string, grafanaDir, promDir string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#upperFirst",
+              "documentation": {
+                "identifier": "upperFirst",
+                "newPage": false,
+                "searchKey": "monitoring.upperFirst",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func upperFirst(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc upperFirst(s string) string\n```\n\nupperFirst returns s with an uppercase first rune. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#withPeriod",
+              "documentation": {
+                "identifier": "withPeriod",
+                "newPage": false,
+                "searchKey": "monitoring.withPeriod",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func withPeriod(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc withPeriod(s string) string\n```\n\nwithPeriod returns s ending with a period. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#StringPtr",
+              "documentation": {
+                "identifier": "StringPtr",
+                "newPage": false,
+                "searchKey": "monitoring.StringPtr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StringPtr(s string) *string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StringPtr(s string) *string\n```\n\nStringPtr converts a string value to a pointer, useful for setting fields in some APIs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#boolPtr",
+              "documentation": {
+                "identifier": "boolPtr",
+                "newPage": false,
+                "searchKey": "monitoring.boolPtr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func boolPtr(b bool) *bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc boolPtr(b bool) *bool\n```\n\nboolPtr converts a boolean value to a pointer, useful for setting fields in some APIs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#Int64Ptr",
+              "documentation": {
+                "identifier": "Int64Ptr",
+                "newPage": false,
+                "searchKey": "monitoring.Int64Ptr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Int64Ptr(i int64) *int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Int64Ptr(i int64) *int64\n```\n\nIntPtr converts an int64 value to a pointer, useful for setting fields in some APIs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/monitoring#toMarkdown",
+              "documentation": {
+                "identifier": "toMarkdown",
+                "newPage": false,
+                "searchKey": "monitoring.toMarkdown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toMarkdown(m string, forceList bool) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toMarkdown(m string, forceList bool) (string, error)\n```\n\ntoMarkdown converts a Go string to Markdown, and optionally converts it to a list item if requested by forceList. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

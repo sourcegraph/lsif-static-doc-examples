@@ -1,0 +1,2032 @@
+{
+  "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph",
+  "documentation": {
+    "identifier": "commitgraph",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/worker/internal/codeintel/commitgraph",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package commitgraph"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStore",
+              "documentation": {
+                "identifier": "DBStore",
+                "newPage": false,
+                "searchKey": "commitgraph.DBStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStore interface {\n\tDirtyRepositories(ctx context.Context) (map[int]int, error)\n\tCalculateVisibleUploads(ctx context.Context, repositoryID int, graph *gitserver.CommitGraph, tipCommit string, dirtyToken int, now time.Time) error\n\tGetOldestCommitDate(ctx context.Context, repositoryID int) (time.Time, bool, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#Locker",
+              "documentation": {
+                "identifier": "Locker",
+                "newPage": false,
+                "searchKey": "commitgraph.Locker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Locker interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Locker interface {\n\tLock(ctx context.Context, key int, blocking bool) (bool, locker.UnlockFunc, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClient",
+              "documentation": {
+                "identifier": "GitserverClient",
+                "newPage": false,
+                "searchKey": "commitgraph.GitserverClient",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClient interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClient interface {\n\tHead(ctx context.Context, repositoryID int) (string, error)\n\tCommitGraph(ctx context.Context, repositoryID int, options gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#operations",
+              "documentation": {
+                "identifier": "operations",
+                "newPage": false,
+                "searchKey": "commitgraph.operations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type operations struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype operations struct {\n\tcommitUpdate *observation.Operation\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#newOperations",
+                    "documentation": {
+                      "identifier": "newOperations",
+                      "newPage": false,
+                      "searchKey": "commitgraph.newOperations",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newOperations(dbStore DBStore, observationContext *observation.Context) *operations"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newOperations(dbStore DBStore, observationContext *observation.Context) *operations\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#Updater",
+              "documentation": {
+                "identifier": "Updater",
+                "newPage": false,
+                "searchKey": "commitgraph.Updater",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Updater struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Updater struct {\n\tdbStore         DBStore\n\tlocker          Locker\n\tgitserverClient GitserverClient\n\toperations      *operations\n}\n```\n\nUpdater periodically re-calculates the commit and upload visibility graph for repositories that are marked as dirty by the worker process. This is done out-of-band from the rest of the upload processing as it is likely that we are processing multiple uploads concurrently for the same repository and should not repeat the work since the last calculation performed will always be the one we want. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#Updater.Handle",
+                    "documentation": {
+                      "identifier": "Updater.Handle",
+                      "newPage": false,
+                      "searchKey": "commitgraph.Updater.Handle",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *Updater) Handle(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *Updater) Handle(ctx context.Context) error\n```\n\nHandle checks for dirty repositories and invokes the underlying updater on each one. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#Updater.HandleError",
+                    "documentation": {
+                      "identifier": "Updater.HandleError",
+                      "newPage": false,
+                      "searchKey": "commitgraph.Updater.HandleError",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *Updater) HandleError(err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *Updater) HandleError(err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#Updater.tryUpdate",
+                    "documentation": {
+                      "identifier": "Updater.tryUpdate",
+                      "newPage": false,
+                      "searchKey": "commitgraph.Updater.tryUpdate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *Updater) tryUpdate(ctx context.Context, repositoryID, dirtyToken int) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *Updater) tryUpdate(ctx context.Context, repositoryID, dirtyToken int) (err error)\n```\n\ntryUpdate will call update while holding an advisory lock to give exclusive access to the update procedure for this repository. If the lock is already held, this method will simply do nothing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#Updater.update",
+                    "documentation": {
+                      "identifier": "Updater.update",
+                      "newPage": false,
+                      "searchKey": "commitgraph.Updater.update",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *Updater) update(ctx context.Context, repositoryID, dirtyToken int) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *Updater) update(ctx context.Context, repositoryID, dirtyToken int) (err error)\n```\n\nupdate pulls the commit graph for the given repository from gitserver, pulls the set of LSIF upload objects for the given repository from Postgres, and correlates them into a visibility graph. This graph is then upserted back into Postgres for use by find closest dumps queries. \n\nThe user should supply a dirty token that is associated with the given repository so that the repository can be unmarked as long as the repository is not marked as dirty again before the update completes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#Updater.getCommitGraph",
+                    "documentation": {
+                      "identifier": "Updater.getCommitGraph",
+                      "newPage": false,
+                      "searchKey": "commitgraph.Updater.getCommitGraph",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *Updater) getCommitGraph(ctx context.Context, repositoryID int) (*gitserver.CommitGraph, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *Updater) getCommitGraph(ctx context.Context, repositoryID int) (*gitserver.CommitGraph, error)\n```\n\ngetCommitGraph builds a partial commit graph that includes the most recent commits on each branch extending back as as the date of the oldest commit for which we have a processed upload for this repository. \n\nThis optimization is necessary as decorating the commit graph is an operation that scales with the size of both the git graph and the number of uploads (multiplicatively). For repositories with a very large number of commits or distinct roots (most monorepos) this is a necessary optimization. \n\nThe number of commits pulled back here should not grow over time unless the repo is growing at an accelerating rate, as we routinely expire old information for active repositories in a janitor process. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockDBStore",
+              "documentation": {
+                "identifier": "MockDBStore",
+                "newPage": false,
+                "searchKey": "commitgraph.MockDBStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockDBStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockDBStore struct {\n\t// CalculateVisibleUploadsFunc is an instance of a mock function object\n\t// controlling the behavior of the method CalculateVisibleUploads.\n\tCalculateVisibleUploadsFunc *DBStoreCalculateVisibleUploadsFunc\n\t// DirtyRepositoriesFunc is an instance of a mock function object\n\t// controlling the behavior of the method DirtyRepositories.\n\tDirtyRepositoriesFunc *DBStoreDirtyRepositoriesFunc\n\t// GetOldestCommitDateFunc is an instance of a mock function object\n\t// controlling the behavior of the method GetOldestCommitDate.\n\tGetOldestCommitDateFunc *DBStoreGetOldestCommitDateFunc\n}\n```\n\nMockDBStore is a mock implementation of the DBStore interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/worker/internal/codeintel/commitgraph) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#NewMockDBStore",
+                    "documentation": {
+                      "identifier": "NewMockDBStore",
+                      "newPage": false,
+                      "searchKey": "commitgraph.NewMockDBStore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockDBStore() *MockDBStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockDBStore() *MockDBStore\n```\n\nNewMockDBStore creates a new mock of the DBStore interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#NewMockDBStoreFrom",
+                    "documentation": {
+                      "identifier": "NewMockDBStoreFrom",
+                      "newPage": false,
+                      "searchKey": "commitgraph.NewMockDBStoreFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockDBStoreFrom(i DBStore) *MockDBStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockDBStoreFrom(i DBStore) *MockDBStore\n```\n\nNewMockDBStoreFrom creates a new mock of the MockDBStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockDBStore.CalculateVisibleUploads",
+                    "documentation": {
+                      "identifier": "MockDBStore.CalculateVisibleUploads",
+                      "newPage": false,
+                      "searchKey": "commitgraph.MockDBStore.CalculateVisibleUploads",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) CalculateVisibleUploads(v0 context.Context, v1 int, v2 *gitserver.CommitGraph, v3 string, v4 int, v5 time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) CalculateVisibleUploads(v0 context.Context, v1 int, v2 *gitserver.CommitGraph, v3 string, v4 int, v5 time.Time) error\n```\n\nCalculateVisibleUploads delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockDBStore.DirtyRepositories",
+                    "documentation": {
+                      "identifier": "MockDBStore.DirtyRepositories",
+                      "newPage": false,
+                      "searchKey": "commitgraph.MockDBStore.DirtyRepositories",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) DirtyRepositories(v0 context.Context) (map[int]int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) DirtyRepositories(v0 context.Context) (map[int]int, error)\n```\n\nDirtyRepositories delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockDBStore.GetOldestCommitDate",
+                    "documentation": {
+                      "identifier": "MockDBStore.GetOldestCommitDate",
+                      "newPage": false,
+                      "searchKey": "commitgraph.MockDBStore.GetOldestCommitDate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockDBStore) GetOldestCommitDate(v0 context.Context, v1 int) (time.Time, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockDBStore) GetOldestCommitDate(v0 context.Context, v1 int) (time.Time, bool, error)\n```\n\nGetOldestCommitDate delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFunc",
+              "documentation": {
+                "identifier": "DBStoreCalculateVisibleUploadsFunc",
+                "newPage": false,
+                "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStoreCalculateVisibleUploadsFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStoreCalculateVisibleUploadsFunc struct {\n\tdefaultHook func(context.Context, int, *gitserver.CommitGraph, string, int, time.Time) error\n\thooks       []func(context.Context, int, *gitserver.CommitGraph, string, int, time.Time) error\n\thistory     []DBStoreCalculateVisibleUploadsFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nDBStoreCalculateVisibleUploadsFunc describes the behavior when the CalculateVisibleUploads method of the parent MockDBStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreCalculateVisibleUploadsFunc) SetDefaultHook(hook func(context.Context, int, *gitserver.CommitGraph, string, int, time.Time) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreCalculateVisibleUploadsFunc) SetDefaultHook(hook func(context.Context, int, *gitserver.CommitGraph, string, int, time.Time) error)\n```\n\nSetDefaultHook sets function that is called when the CalculateVisibleUploads method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFunc.PushHook",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreCalculateVisibleUploadsFunc) PushHook(hook func(context.Context, int, *gitserver.CommitGraph, string, int, time.Time) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreCalculateVisibleUploadsFunc) PushHook(hook func(context.Context, int, *gitserver.CommitGraph, string, int, time.Time) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the CalculateVisibleUploads method of the parent MockDBStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreCalculateVisibleUploadsFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreCalculateVisibleUploadsFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreCalculateVisibleUploadsFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreCalculateVisibleUploadsFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFunc.nextHook",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreCalculateVisibleUploadsFunc) nextHook() func(context.Context, int, *gitserver.CommitGraph, string, int, time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreCalculateVisibleUploadsFunc) nextHook() func(context.Context, int, *gitserver.CommitGraph, string, int, time.Time) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFunc.appendCall",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreCalculateVisibleUploadsFunc) appendCall(r0 DBStoreCalculateVisibleUploadsFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreCalculateVisibleUploadsFunc) appendCall(r0 DBStoreCalculateVisibleUploadsFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFunc.History",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFunc.History",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreCalculateVisibleUploadsFunc) History() []DBStoreCalculateVisibleUploadsFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreCalculateVisibleUploadsFunc) History() []DBStoreCalculateVisibleUploadsFuncCall\n```\n\nHistory returns a sequence of DBStoreCalculateVisibleUploadsFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFuncCall",
+              "documentation": {
+                "identifier": "DBStoreCalculateVisibleUploadsFuncCall",
+                "newPage": false,
+                "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStoreCalculateVisibleUploadsFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStoreCalculateVisibleUploadsFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 *gitserver.CommitGraph\n\t// Arg3 is the value of the 4th argument passed to this method\n\t// invocation.\n\tArg3 string\n\t// Arg4 is the value of the 5th argument passed to this method\n\t// invocation.\n\tArg4 int\n\t// Arg5 is the value of the 6th argument passed to this method\n\t// invocation.\n\tArg5 time.Time\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nDBStoreCalculateVisibleUploadsFuncCall is an object that describes an invocation of method CalculateVisibleUploads on an instance of MockDBStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFuncCall.Args",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c DBStoreCalculateVisibleUploadsFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c DBStoreCalculateVisibleUploadsFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreCalculateVisibleUploadsFuncCall.Results",
+                    "documentation": {
+                      "identifier": "DBStoreCalculateVisibleUploadsFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreCalculateVisibleUploadsFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c DBStoreCalculateVisibleUploadsFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c DBStoreCalculateVisibleUploadsFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFunc",
+              "documentation": {
+                "identifier": "DBStoreDirtyRepositoriesFunc",
+                "newPage": false,
+                "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStoreDirtyRepositoriesFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStoreDirtyRepositoriesFunc struct {\n\tdefaultHook func(context.Context) (map[int]int, error)\n\thooks       []func(context.Context) (map[int]int, error)\n\thistory     []DBStoreDirtyRepositoriesFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nDBStoreDirtyRepositoriesFunc describes the behavior when the DirtyRepositories method of the parent MockDBStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreDirtyRepositoriesFunc) SetDefaultHook(hook func(context.Context) (map[int]int, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreDirtyRepositoriesFunc) SetDefaultHook(hook func(context.Context) (map[int]int, error))\n```\n\nSetDefaultHook sets function that is called when the DirtyRepositories method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFunc.PushHook",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreDirtyRepositoriesFunc) PushHook(hook func(context.Context) (map[int]int, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreDirtyRepositoriesFunc) PushHook(hook func(context.Context) (map[int]int, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the DirtyRepositories method of the parent MockDBStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreDirtyRepositoriesFunc) SetDefaultReturn(r0 map[int]int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreDirtyRepositoriesFunc) SetDefaultReturn(r0 map[int]int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreDirtyRepositoriesFunc) PushReturn(r0 map[int]int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreDirtyRepositoriesFunc) PushReturn(r0 map[int]int, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFunc.nextHook",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreDirtyRepositoriesFunc) nextHook() func(context.Context) (map[int]int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreDirtyRepositoriesFunc) nextHook() func(context.Context) (map[int]int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFunc.appendCall",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreDirtyRepositoriesFunc) appendCall(r0 DBStoreDirtyRepositoriesFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreDirtyRepositoriesFunc) appendCall(r0 DBStoreDirtyRepositoriesFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFunc.History",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFunc.History",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreDirtyRepositoriesFunc) History() []DBStoreDirtyRepositoriesFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreDirtyRepositoriesFunc) History() []DBStoreDirtyRepositoriesFuncCall\n```\n\nHistory returns a sequence of DBStoreDirtyRepositoriesFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFuncCall",
+              "documentation": {
+                "identifier": "DBStoreDirtyRepositoriesFuncCall",
+                "newPage": false,
+                "searchKey": "commitgraph.DBStoreDirtyRepositoriesFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStoreDirtyRepositoriesFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStoreDirtyRepositoriesFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 map[int]int\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nDBStoreDirtyRepositoriesFuncCall is an object that describes an invocation of method DirtyRepositories on an instance of MockDBStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFuncCall.Args",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c DBStoreDirtyRepositoriesFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c DBStoreDirtyRepositoriesFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreDirtyRepositoriesFuncCall.Results",
+                    "documentation": {
+                      "identifier": "DBStoreDirtyRepositoriesFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreDirtyRepositoriesFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c DBStoreDirtyRepositoriesFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c DBStoreDirtyRepositoriesFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFunc",
+              "documentation": {
+                "identifier": "DBStoreGetOldestCommitDateFunc",
+                "newPage": false,
+                "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStoreGetOldestCommitDateFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStoreGetOldestCommitDateFunc struct {\n\tdefaultHook func(context.Context, int) (time.Time, bool, error)\n\thooks       []func(context.Context, int) (time.Time, bool, error)\n\thistory     []DBStoreGetOldestCommitDateFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nDBStoreGetOldestCommitDateFunc describes the behavior when the GetOldestCommitDate method of the parent MockDBStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreGetOldestCommitDateFunc) SetDefaultHook(hook func(context.Context, int) (time.Time, bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreGetOldestCommitDateFunc) SetDefaultHook(hook func(context.Context, int) (time.Time, bool, error))\n```\n\nSetDefaultHook sets function that is called when the GetOldestCommitDate method of the parent MockDBStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFunc.PushHook",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreGetOldestCommitDateFunc) PushHook(hook func(context.Context, int) (time.Time, bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreGetOldestCommitDateFunc) PushHook(hook func(context.Context, int) (time.Time, bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the GetOldestCommitDate method of the parent MockDBStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreGetOldestCommitDateFunc) SetDefaultReturn(r0 time.Time, r1 bool, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreGetOldestCommitDateFunc) SetDefaultReturn(r0 time.Time, r1 bool, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreGetOldestCommitDateFunc) PushReturn(r0 time.Time, r1 bool, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreGetOldestCommitDateFunc) PushReturn(r0 time.Time, r1 bool, r2 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFunc.nextHook",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreGetOldestCommitDateFunc) nextHook() func(context.Context, int) (time.Time, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreGetOldestCommitDateFunc) nextHook() func(context.Context, int) (time.Time, bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFunc.appendCall",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreGetOldestCommitDateFunc) appendCall(r0 DBStoreGetOldestCommitDateFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreGetOldestCommitDateFunc) appendCall(r0 DBStoreGetOldestCommitDateFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFunc.History",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFunc.History",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *DBStoreGetOldestCommitDateFunc) History() []DBStoreGetOldestCommitDateFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *DBStoreGetOldestCommitDateFunc) History() []DBStoreGetOldestCommitDateFuncCall\n```\n\nHistory returns a sequence of DBStoreGetOldestCommitDateFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFuncCall",
+              "documentation": {
+                "identifier": "DBStoreGetOldestCommitDateFuncCall",
+                "newPage": false,
+                "searchKey": "commitgraph.DBStoreGetOldestCommitDateFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DBStoreGetOldestCommitDateFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DBStoreGetOldestCommitDateFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 time.Time\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 bool\n\t// Result2 is the value of the 3rd result returned from this method\n\t// invocation.\n\tResult2 error\n}\n```\n\nDBStoreGetOldestCommitDateFuncCall is an object that describes an invocation of method GetOldestCommitDate on an instance of MockDBStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFuncCall.Args",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c DBStoreGetOldestCommitDateFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c DBStoreGetOldestCommitDateFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#DBStoreGetOldestCommitDateFuncCall.Results",
+                    "documentation": {
+                      "identifier": "DBStoreGetOldestCommitDateFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "commitgraph.DBStoreGetOldestCommitDateFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c DBStoreGetOldestCommitDateFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c DBStoreGetOldestCommitDateFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockGitserverClient",
+              "documentation": {
+                "identifier": "MockGitserverClient",
+                "newPage": false,
+                "searchKey": "commitgraph.MockGitserverClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockGitserverClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockGitserverClient struct {\n\t// CommitGraphFunc is an instance of a mock function object controlling\n\t// the behavior of the method CommitGraph.\n\tCommitGraphFunc *GitserverClientCommitGraphFunc\n\t// HeadFunc is an instance of a mock function object controlling the\n\t// behavior of the method Head.\n\tHeadFunc *GitserverClientHeadFunc\n}\n```\n\nMockGitserverClient is a mock implementation of the GitserverClient interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/worker/internal/codeintel/commitgraph) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#NewMockGitserverClient",
+                    "documentation": {
+                      "identifier": "NewMockGitserverClient",
+                      "newPage": false,
+                      "searchKey": "commitgraph.NewMockGitserverClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockGitserverClient() *MockGitserverClient"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockGitserverClient() *MockGitserverClient\n```\n\nNewMockGitserverClient creates a new mock of the GitserverClient interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#NewMockGitserverClientFrom",
+                    "documentation": {
+                      "identifier": "NewMockGitserverClientFrom",
+                      "newPage": false,
+                      "searchKey": "commitgraph.NewMockGitserverClientFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockGitserverClientFrom(i GitserverClient) *MockGitserverClient"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockGitserverClientFrom(i GitserverClient) *MockGitserverClient\n```\n\nNewMockGitserverClientFrom creates a new mock of the MockGitserverClient interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockGitserverClient.CommitGraph",
+                    "documentation": {
+                      "identifier": "MockGitserverClient.CommitGraph",
+                      "newPage": false,
+                      "searchKey": "commitgraph.MockGitserverClient.CommitGraph",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockGitserverClient) CommitGraph(v0 context.Context, v1 int, v2 gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockGitserverClient) CommitGraph(v0 context.Context, v1 int, v2 gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error)\n```\n\nCommitGraph delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockGitserverClient.Head",
+                    "documentation": {
+                      "identifier": "MockGitserverClient.Head",
+                      "newPage": false,
+                      "searchKey": "commitgraph.MockGitserverClient.Head",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockGitserverClient) Head(v0 context.Context, v1 int) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockGitserverClient) Head(v0 context.Context, v1 int) (string, error)\n```\n\nHead delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFunc",
+              "documentation": {
+                "identifier": "GitserverClientCommitGraphFunc",
+                "newPage": false,
+                "searchKey": "commitgraph.GitserverClientCommitGraphFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClientCommitGraphFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClientCommitGraphFunc struct {\n\tdefaultHook func(context.Context, int, gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error)\n\thooks       []func(context.Context, int, gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error)\n\thistory     []GitserverClientCommitGraphFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nGitserverClientCommitGraphFunc describes the behavior when the CommitGraph method of the parent MockGitserverClient instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitGraphFunc) SetDefaultHook(hook func(context.Context, int, gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitGraphFunc) SetDefaultHook(hook func(context.Context, int, gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error))\n```\n\nSetDefaultHook sets function that is called when the CommitGraph method of the parent MockGitserverClient instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFunc.PushHook",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitGraphFunc) PushHook(hook func(context.Context, int, gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitGraphFunc) PushHook(hook func(context.Context, int, gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the CommitGraph method of the parent MockGitserverClient instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitGraphFunc) SetDefaultReturn(r0 *gitserver.CommitGraph, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitGraphFunc) SetDefaultReturn(r0 *gitserver.CommitGraph, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitGraphFunc) PushReturn(r0 *gitserver.CommitGraph, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitGraphFunc) PushReturn(r0 *gitserver.CommitGraph, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFunc.nextHook",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitGraphFunc) nextHook() func(context.Context, int, gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitGraphFunc) nextHook() func(context.Context, int, gitserver.CommitGraphOptions) (*gitserver.CommitGraph, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFunc.appendCall",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitGraphFunc) appendCall(r0 GitserverClientCommitGraphFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitGraphFunc) appendCall(r0 GitserverClientCommitGraphFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFunc.History",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFunc.History",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientCommitGraphFunc) History() []GitserverClientCommitGraphFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientCommitGraphFunc) History() []GitserverClientCommitGraphFuncCall\n```\n\nHistory returns a sequence of GitserverClientCommitGraphFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFuncCall",
+              "documentation": {
+                "identifier": "GitserverClientCommitGraphFuncCall",
+                "newPage": false,
+                "searchKey": "commitgraph.GitserverClientCommitGraphFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClientCommitGraphFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClientCommitGraphFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 gitserver.CommitGraphOptions\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 *gitserver.CommitGraph\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nGitserverClientCommitGraphFuncCall is an object that describes an invocation of method CommitGraph on an instance of MockGitserverClient. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFuncCall.Args",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c GitserverClientCommitGraphFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c GitserverClientCommitGraphFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientCommitGraphFuncCall.Results",
+                    "documentation": {
+                      "identifier": "GitserverClientCommitGraphFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientCommitGraphFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c GitserverClientCommitGraphFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c GitserverClientCommitGraphFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFunc",
+              "documentation": {
+                "identifier": "GitserverClientHeadFunc",
+                "newPage": false,
+                "searchKey": "commitgraph.GitserverClientHeadFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClientHeadFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClientHeadFunc struct {\n\tdefaultHook func(context.Context, int) (string, error)\n\thooks       []func(context.Context, int) (string, error)\n\thistory     []GitserverClientHeadFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nGitserverClientHeadFunc describes the behavior when the Head method of the parent MockGitserverClient instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientHeadFunc) SetDefaultHook(hook func(context.Context, int) (string, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientHeadFunc) SetDefaultHook(hook func(context.Context, int) (string, error))\n```\n\nSetDefaultHook sets function that is called when the Head method of the parent MockGitserverClient instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFunc.PushHook",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientHeadFunc) PushHook(hook func(context.Context, int) (string, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientHeadFunc) PushHook(hook func(context.Context, int) (string, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Head method of the parent MockGitserverClient instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientHeadFunc) SetDefaultReturn(r0 string, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientHeadFunc) SetDefaultReturn(r0 string, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientHeadFunc) PushReturn(r0 string, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientHeadFunc) PushReturn(r0 string, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFunc.nextHook",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientHeadFunc) nextHook() func(context.Context, int) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientHeadFunc) nextHook() func(context.Context, int) (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFunc.appendCall",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientHeadFunc) appendCall(r0 GitserverClientHeadFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientHeadFunc) appendCall(r0 GitserverClientHeadFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFunc.History",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFunc.History",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *GitserverClientHeadFunc) History() []GitserverClientHeadFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *GitserverClientHeadFunc) History() []GitserverClientHeadFuncCall\n```\n\nHistory returns a sequence of GitserverClientHeadFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFuncCall",
+              "documentation": {
+                "identifier": "GitserverClientHeadFuncCall",
+                "newPage": false,
+                "searchKey": "commitgraph.GitserverClientHeadFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitserverClientHeadFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitserverClientHeadFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 string\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nGitserverClientHeadFuncCall is an object that describes an invocation of method Head on an instance of MockGitserverClient. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFuncCall.Args",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c GitserverClientHeadFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c GitserverClientHeadFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#GitserverClientHeadFuncCall.Results",
+                    "documentation": {
+                      "identifier": "GitserverClientHeadFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "commitgraph.GitserverClientHeadFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c GitserverClientHeadFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c GitserverClientHeadFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockLocker",
+              "documentation": {
+                "identifier": "MockLocker",
+                "newPage": false,
+                "searchKey": "commitgraph.MockLocker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockLocker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockLocker struct {\n\t// LockFunc is an instance of a mock function object controlling the\n\t// behavior of the method Lock.\n\tLockFunc *LockerLockFunc\n}\n```\n\nMockLocker is a mock implementation of the Locker interface (from the package github.com/sourcegraph/sourcegraph/enterprise/cmd/worker/internal/codeintel/commitgraph) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#NewMockLocker",
+                    "documentation": {
+                      "identifier": "NewMockLocker",
+                      "newPage": false,
+                      "searchKey": "commitgraph.NewMockLocker",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockLocker() *MockLocker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockLocker() *MockLocker\n```\n\nNewMockLocker creates a new mock of the Locker interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#NewMockLockerFrom",
+                    "documentation": {
+                      "identifier": "NewMockLockerFrom",
+                      "newPage": false,
+                      "searchKey": "commitgraph.NewMockLockerFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockLockerFrom(i Locker) *MockLocker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockLockerFrom(i Locker) *MockLocker\n```\n\nNewMockLockerFrom creates a new mock of the MockLocker interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#MockLocker.Lock",
+                    "documentation": {
+                      "identifier": "MockLocker.Lock",
+                      "newPage": false,
+                      "searchKey": "commitgraph.MockLocker.Lock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockLocker) Lock(v0 context.Context, v1 int, v2 bool) (bool, locker.UnlockFunc, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockLocker) Lock(v0 context.Context, v1 int, v2 bool) (bool, locker.UnlockFunc, error)\n```\n\nLock delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFunc",
+              "documentation": {
+                "identifier": "LockerLockFunc",
+                "newPage": false,
+                "searchKey": "commitgraph.LockerLockFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LockerLockFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LockerLockFunc struct {\n\tdefaultHook func(context.Context, int, bool) (bool, locker.UnlockFunc, error)\n\thooks       []func(context.Context, int, bool) (bool, locker.UnlockFunc, error)\n\thistory     []LockerLockFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nLockerLockFunc describes the behavior when the Lock method of the parent MockLocker instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "LockerLockFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *LockerLockFunc) SetDefaultHook(hook func(context.Context, int, bool) (bool, locker.UnlockFunc, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *LockerLockFunc) SetDefaultHook(hook func(context.Context, int, bool) (bool, locker.UnlockFunc, error))\n```\n\nSetDefaultHook sets function that is called when the Lock method of the parent MockLocker instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFunc.PushHook",
+                    "documentation": {
+                      "identifier": "LockerLockFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *LockerLockFunc) PushHook(hook func(context.Context, int, bool) (bool, locker.UnlockFunc, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *LockerLockFunc) PushHook(hook func(context.Context, int, bool) (bool, locker.UnlockFunc, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Lock method of the parent MockLocker instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "LockerLockFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *LockerLockFunc) SetDefaultReturn(r0 bool, r1 locker.UnlockFunc, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *LockerLockFunc) SetDefaultReturn(r0 bool, r1 locker.UnlockFunc, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "LockerLockFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *LockerLockFunc) PushReturn(r0 bool, r1 locker.UnlockFunc, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *LockerLockFunc) PushReturn(r0 bool, r1 locker.UnlockFunc, r2 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFunc.nextHook",
+                    "documentation": {
+                      "identifier": "LockerLockFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *LockerLockFunc) nextHook() func(context.Context, int, bool) (bool, locker.UnlockFunc, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *LockerLockFunc) nextHook() func(context.Context, int, bool) (bool, locker.UnlockFunc, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFunc.appendCall",
+                    "documentation": {
+                      "identifier": "LockerLockFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *LockerLockFunc) appendCall(r0 LockerLockFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *LockerLockFunc) appendCall(r0 LockerLockFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFunc.History",
+                    "documentation": {
+                      "identifier": "LockerLockFunc.History",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *LockerLockFunc) History() []LockerLockFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *LockerLockFunc) History() []LockerLockFuncCall\n```\n\nHistory returns a sequence of LockerLockFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFuncCall",
+              "documentation": {
+                "identifier": "LockerLockFuncCall",
+                "newPage": false,
+                "searchKey": "commitgraph.LockerLockFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LockerLockFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LockerLockFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 bool\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 bool\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 locker.UnlockFunc\n\t// Result2 is the value of the 3rd result returned from this method\n\t// invocation.\n\tResult2 error\n}\n```\n\nLockerLockFuncCall is an object that describes an invocation of method Lock on an instance of MockLocker. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFuncCall.Args",
+                    "documentation": {
+                      "identifier": "LockerLockFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c LockerLockFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c LockerLockFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#LockerLockFuncCall.Results",
+                    "documentation": {
+                      "identifier": "LockerLockFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "commitgraph.LockerLockFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c LockerLockFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c LockerLockFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#NewUpdater",
+              "documentation": {
+                "identifier": "NewUpdater",
+                "newPage": false,
+                "searchKey": "commitgraph.NewUpdater",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewUpdater(dbStore DBStore,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewUpdater(\n\tdbStore DBStore,\n\tlocker Locker,\n\tgitserverClient GitserverClient,\n\tinterval time.Duration,\n\tobservationContext *observation.Context,\n) goroutine.BackgroundRoutine\n```\n\nNewUpdater returns a background routine that periodically updates the commit graph and visible uploads for each repository marked as dirty. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "commitgraph.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#TestUpdater",
+              "documentation": {
+                "identifier": "TestUpdater",
+                "newPage": false,
+                "searchKey": "commitgraph.TestUpdater",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdater(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdater(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#TestUpdaterNoUploads",
+              "documentation": {
+                "identifier": "TestUpdaterNoUploads",
+                "newPage": false,
+                "searchKey": "commitgraph.TestUpdaterNoUploads",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdaterNoUploads(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdaterNoUploads(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/worker/internal/codeintel/commitgraph#TestUpdaterLocked",
+              "documentation": {
+                "identifier": "TestUpdaterLocked",
+                "newPage": false,
+                "searchKey": "commitgraph.TestUpdaterLocked",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdaterLocked(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdaterLocked(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "pathID": "/migrations_test",
+  "documentation": {
+    "identifier": "migrations_test",
+    "newPage": true,
+    "searchKey": "migrations_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package migrations_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/migrations_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/migrations_test#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "migrations_test.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations_test#TestIDConstraints",
+              "documentation": {
+                "identifier": "TestIDConstraints",
+                "newPage": false,
+                "searchKey": "migrations_test.TestIDConstraints",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIDConstraints(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIDConstraints(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations_test#TestFrontendMigrations",
+              "documentation": {
+                "identifier": "TestFrontendMigrations",
+                "newPage": false,
+                "searchKey": "migrations_test.TestFrontendMigrations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFrontendMigrations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFrontendMigrations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations_test#TestCodeIntelMigrations",
+              "documentation": {
+                "identifier": "TestCodeIntelMigrations",
+                "newPage": false,
+                "searchKey": "migrations_test.TestCodeIntelMigrations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCodeIntelMigrations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCodeIntelMigrations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations_test#testMigrations",
+              "documentation": {
+                "identifier": "testMigrations",
+                "newPage": false,
+                "searchKey": "migrations_test.testMigrations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testMigrations(t *testing.T, db *sql.DB, database *dbconn.Database)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testMigrations(t *testing.T, db *sql.DB, database *dbconn.Database)\n```\n\ntestMigrations runs all migrations up, then the migrations for the given database all the way back down, then back up to check for syntax errors and reversibility. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "pathID": "/dev/repogen",
+  "documentation": {
+    "identifier": "repogen",
+    "newPage": true,
+    "searchKey": "dev/repogen",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/dev/repogen#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/repogen#numFiles",
+              "documentation": {
+                "identifier": "numFiles",
+                "newPage": false,
+                "searchKey": "main.numFiles",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var numFiles"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar numFiles = flag.Int(\"nf\", 100, \"number of files to write\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/repogen#fileSize",
+              "documentation": {
+                "identifier": "fileSize",
+                "newPage": false,
+                "searchKey": "main.fileSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fileSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fileSize = flag.Int(\"size\", 1024*1024, \"size of each file\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/dev/repogen#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/dev/repogen#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/repogen#repogen",
+              "documentation": {
+                "identifier": "repogen",
+                "newPage": false,
+                "searchKey": "main.repogen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repogen(nf, size int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repogen(nf, size int) error\n```\n\nrepogen creates a repo with nf files, each of the given size. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/repogen#inDir",
+              "documentation": {
+                "identifier": "inDir",
+                "newPage": false,
+                "searchKey": "main.inDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func inDir(d string, f func() error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc inDir(d string, f func() error) error\n```\n\ninDir runs function f in directory d. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/repogen#run",
+              "documentation": {
+                "identifier": "run",
+                "newPage": false,
+                "searchKey": "main.run",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func run(args ...string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc run(args ...string) error\n```\n\nrun executes an external command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/repogen#writeIthFile",
+              "documentation": {
+                "identifier": "writeIthFile",
+                "newPage": false,
+                "searchKey": "main.writeIthFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writeIthFile(i, size int, dir string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writeIthFile(i, size int, dir string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/dev/repogen#write",
+              "documentation": {
+                "identifier": "write",
+                "newPage": false,
+                "searchKey": "main.write",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func write(w io.Writer, size int, b byte) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc write(w io.Writer, size int, b byte) error\n```\n\nwrite writes a file with lots of the given byte b, up to the given size in bytes. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

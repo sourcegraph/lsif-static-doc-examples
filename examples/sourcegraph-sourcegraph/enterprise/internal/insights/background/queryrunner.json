@@ -1,0 +1,927 @@
+{
+  "pathID": "/enterprise/internal/insights/background/queryrunner",
+  "documentation": {
+    "identifier": "queryrunner",
+    "newPage": true,
+    "searchKey": "enterprise/internal/insights/background/queryrunner",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package queryrunner"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/background/queryrunner#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#cleanJobsFmtStr",
+              "documentation": {
+                "identifier": "cleanJobsFmtStr",
+                "newPage": false,
+                "searchKey": "queryrunner.cleanJobsFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cleanJobsFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cleanJobsFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#gqlSearchQuery",
+              "documentation": {
+                "identifier": "gqlSearchQuery",
+                "newPage": false,
+                "searchKey": "queryrunner.gqlSearchQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gqlSearchQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gqlSearchQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#enqueueJobFmtStr",
+              "documentation": {
+                "identifier": "enqueueJobFmtStr",
+                "newPage": false,
+                "searchKey": "queryrunner.enqueueJobFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const enqueueJobFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst enqueueJobFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#dequeueJobFmtStr",
+              "documentation": {
+                "identifier": "dequeueJobFmtStr",
+                "newPage": false,
+                "searchKey": "queryrunner.dequeueJobFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dequeueJobFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dequeueJobFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#queryJobsStatusFmtStr",
+              "documentation": {
+                "identifier": "queryJobsStatusFmtStr",
+                "newPage": false,
+                "searchKey": "queryrunner.queryJobsStatusFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const queryJobsStatusFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst queryJobsStatusFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/background/queryrunner#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#jobsColumns",
+              "documentation": {
+                "identifier": "jobsColumns",
+                "newPage": false,
+                "searchKey": "queryrunner.jobsColumns",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var jobsColumns"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar jobsColumns = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/background/queryrunner#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#graphQLQuery",
+              "documentation": {
+                "identifier": "graphQLQuery",
+                "newPage": false,
+                "searchKey": "queryrunner.graphQLQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type graphQLQuery struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype graphQLQuery struct {\n\tQuery     string      `json:\"query\"`\n\tVariables interface{} `json:\"variables\"`\n}\n```\n\ngraphQLQuery describes a general GraphQL query and its variables. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#gqlSearchVars",
+              "documentation": {
+                "identifier": "gqlSearchVars",
+                "newPage": false,
+                "searchKey": "queryrunner.gqlSearchVars",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gqlSearchVars struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gqlSearchVars struct {\n\tQuery string `json:\"query\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#gqlSearchResponse",
+              "documentation": {
+                "identifier": "gqlSearchResponse",
+                "newPage": false,
+                "searchKey": "queryrunner.gqlSearchResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gqlSearchResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gqlSearchResponse struct {\n\tData struct {\n\t\tSearch struct {\n\t\t\tResults struct {\n\t\t\t\tLimitHit   bool\n\t\t\t\tCloning    []*api.Repo\n\t\t\t\tMissing    []*api.Repo\n\t\t\t\tTimedout   []*api.Repo\n\t\t\t\tMatchCount int\n\t\t\t\tResults    []json.RawMessage\n\t\t\t\tAlert      *struct {\n\t\t\t\t\tTitle       string\n\t\t\t\t\tDescription string\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n\tErrors []interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#search",
+                    "documentation": {
+                      "identifier": "search",
+                      "newPage": false,
+                      "searchKey": "queryrunner.search",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func search(ctx context.Context, query string) (*gqlSearchResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc search(ctx context.Context, query string) (*gqlSearchResponse, error)\n```\n\nsearch executes the given search query. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#result",
+              "documentation": {
+                "identifier": "result",
+                "newPage": false,
+                "searchKey": "queryrunner.result",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type result interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype result interface {\n\trepoID() string\n\tmatchCount() int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#decodeResult",
+                    "documentation": {
+                      "identifier": "decodeResult",
+                      "newPage": false,
+                      "searchKey": "queryrunner.decodeResult",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func decodeResult(result json.RawMessage) (result, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc decodeResult(result json.RawMessage) (result, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#fileMatch",
+              "documentation": {
+                "identifier": "fileMatch",
+                "newPage": false,
+                "searchKey": "queryrunner.fileMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileMatch struct {\n\tRepository struct {\n\t\tID string\n\t}\n\tLineMatches []struct {\n\t\tOffsetAndLengths [][]int\n\t}\n\tSymbols []struct {\n\t\tName string\n\t}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#fileMatch.matchCount",
+                    "documentation": {
+                      "identifier": "fileMatch.matchCount",
+                      "newPage": false,
+                      "searchKey": "queryrunner.fileMatch.matchCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *fileMatch) matchCount() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *fileMatch) matchCount() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#fileMatch.repoID",
+                    "documentation": {
+                      "identifier": "fileMatch.repoID",
+                      "newPage": false,
+                      "searchKey": "queryrunner.fileMatch.repoID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *fileMatch) repoID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *fileMatch) repoID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#commitSearchResult",
+              "documentation": {
+                "identifier": "commitSearchResult",
+                "newPage": false,
+                "searchKey": "queryrunner.commitSearchResult",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type commitSearchResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype commitSearchResult struct {\n\tMatches struct {\n\t\tHighlights []struct {\n\t\t\tLine int\n\t\t}\n\t}\n\tCommit struct {\n\t\tRepository struct {\n\t\t\tID string\n\t\t}\n\t}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#commitSearchResult.repoID",
+                    "documentation": {
+                      "identifier": "commitSearchResult.repoID",
+                      "newPage": false,
+                      "searchKey": "queryrunner.commitSearchResult.repoID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *commitSearchResult) repoID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *commitSearchResult) repoID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#commitSearchResult.matchCount",
+                    "documentation": {
+                      "identifier": "commitSearchResult.matchCount",
+                      "newPage": false,
+                      "searchKey": "queryrunner.commitSearchResult.matchCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *commitSearchResult) matchCount() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *commitSearchResult) matchCount() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#repository",
+              "documentation": {
+                "identifier": "repository",
+                "newPage": false,
+                "searchKey": "queryrunner.repository",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type repository struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype repository struct {\n\tID string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#repository.repoID",
+                    "documentation": {
+                      "identifier": "repository.repoID",
+                      "newPage": false,
+                      "searchKey": "queryrunner.repository.repoID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *repository) repoID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *repository) repoID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#repository.matchCount",
+                    "documentation": {
+                      "identifier": "repository.matchCount",
+                      "newPage": false,
+                      "searchKey": "queryrunner.repository.matchCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *repository) matchCount() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *repository) matchCount() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#workHandler",
+              "documentation": {
+                "identifier": "workHandler",
+                "newPage": false,
+                "searchKey": "queryrunner.workHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type workHandler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype workHandler struct {\n\tworkerBaseStore *basestore.Store\n\tinsightsStore   *store.Store\n\tlimiter         *rate.Limiter\n}\n```\n\nworkHandler implements the dbworker.Handler interface by executing search queries and inserting insights about them to the insights Timescale database. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#workHandler.Handle",
+                    "documentation": {
+                      "identifier": "workHandler.Handle",
+                      "newPage": false,
+                      "searchKey": "queryrunner.workHandler.Handle",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *workHandler) Handle(ctx context.Context, workerStore dbworkerstore.Store, record workerutil.Record) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *workHandler) Handle(ctx context.Context, workerStore dbworkerstore.Store, record workerutil.Record) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#JobsStatus",
+              "documentation": {
+                "identifier": "JobsStatus",
+                "newPage": false,
+                "searchKey": "queryrunner.JobsStatus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type JobsStatus struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype JobsStatus struct {\n\tQueued, Processing uint64\n\tCompleted          uint64\n\tErrored, Failed    uint64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#QueryJobsStatus",
+                    "documentation": {
+                      "identifier": "QueryJobsStatus",
+                      "newPage": false,
+                      "searchKey": "queryrunner.QueryJobsStatus",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func QueryJobsStatus(ctx context.Context, workerBaseStore *basestore.Store, seriesID string) (*JobsStatus, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc QueryJobsStatus(ctx context.Context, workerBaseStore *basestore.Store, seriesID string) (*JobsStatus, error)\n```\n\nQueryJobsStatus queries the current status of jobs for the specified series. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#Job",
+              "documentation": {
+                "identifier": "Job",
+                "newPage": false,
+                "searchKey": "queryrunner.Job",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Job struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Job struct {\n\t// Query runner fields.\n\tSeriesID    string\n\tSearchQuery string\n\tRecordTime  *time.Time // If non-nil, record results at this time instead of the time at which search results were found.\n\n\t// Standard/required dbworker fields. If enqueuing a job, these may all be zero values except State.\n\t//\n\t// See https://sourcegraph.com/github.com/sourcegraph/sourcegraph@cd0b3904c674ee3568eb2ef5d7953395b6432d20/-/blob/internal/workerutil/dbworker/store/store.go#L114-134\n\tID             int\n\tState          string // If enqueing a job, set to \"queued\"\n\tFailureMessage *string\n\tStartedAt      *time.Time\n\tFinishedAt     *time.Time\n\tProcessAfter   *time.Time\n\tNumResets      int32\n\tNumFailures    int32\n\tExecutionLogs  []workerutil.ExecutionLogEntry\n}\n```\n\nJob represents a single job for the query runner worker to perform. When enqueued, it is stored in the insights_query_runner_jobs table - then the worker dequeues it by reading it from that table. \n\nSee internal/workerutil/dbworker for more information about dbworkers. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#dequeueJob",
+                    "documentation": {
+                      "identifier": "dequeueJob",
+                      "newPage": false,
+                      "searchKey": "queryrunner.dequeueJob",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func dequeueJob(ctx context.Context, workerBaseStore *basestore.Store, recordID int) (*Job, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc dequeueJob(ctx context.Context, workerBaseStore *basestore.Store, recordID int) (*Job, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background/queryrunner#Job.RecordID",
+                    "documentation": {
+                      "identifier": "Job.RecordID",
+                      "newPage": false,
+                      "searchKey": "queryrunner.Job.RecordID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (j *Job) RecordID() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (j *Job) RecordID() int\n```\n\nImplements the internal/workerutil.Record interface, used by the work handler to locate the job once executing (see work_handler.go:Handle). \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/background/queryrunner#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#NewCleaner",
+              "documentation": {
+                "identifier": "NewCleaner",
+                "newPage": false,
+                "searchKey": "queryrunner.NewCleaner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewCleaner(ctx context.Context, workerBaseStore *basestore.Store, observationContext *observation.Context) goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewCleaner(ctx context.Context, workerBaseStore *basestore.Store, observationContext *observation.Context) goroutine.BackgroundRoutine\n```\n\nNewCleaner returns a background goroutine which will periodically find jobs left in the \"completed\" or \"failed\" state that are over 12 hours old and removes them. \n\nThis is particularly important because the historical enqueuer can produce e.g. num_series*num_repos*num_timeframes jobs (example: 20*40,000*6 in an average case) which can quickly add up to be millions of jobs left in a \"completed\" state in the DB. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#cleanJobs",
+              "documentation": {
+                "identifier": "cleanJobs",
+                "newPage": false,
+                "searchKey": "queryrunner.cleanJobs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cleanJobs(ctx context.Context, workerBaseStore *basestore.Store) (numCleaned int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cleanJobs(ctx context.Context, workerBaseStore *basestore.Store) (numCleaned int, err error)\n```\n\ncleanJobs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#gqlURL",
+              "documentation": {
+                "identifier": "gqlURL",
+                "newPage": false,
+                "searchKey": "queryrunner.gqlURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gqlURL(queryName string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gqlURL(queryName string) (string, error)\n```\n\ngqlURL returns the frontend's internal GraphQL API URL, with the given ?queryName parameter which is used to keep track of the source and type of GraphQL queries. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#NewWorker",
+              "documentation": {
+                "identifier": "NewWorker",
+                "newPage": false,
+                "searchKey": "queryrunner.NewWorker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewWorker(ctx context.Context, workerBaseStore *basestore.Store, insightsStore *store.Store, metrics workerutil.WorkerMetrics) *workerutil.Worker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewWorker(ctx context.Context, workerBaseStore *basestore.Store, insightsStore *store.Store, metrics workerutil.WorkerMetrics) *workerutil.Worker\n```\n\nNewWorker returns a worker that will execute search queries and insert information about the results into the code insights database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#getRateLimit",
+              "documentation": {
+                "identifier": "getRateLimit",
+                "newPage": false,
+                "searchKey": "queryrunner.getRateLimit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRateLimit(defaultValue rate.Limit) func() rate.Limit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRateLimit(defaultValue rate.Limit) func() rate.Limit\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#NewResetter",
+              "documentation": {
+                "identifier": "NewResetter",
+                "newPage": false,
+                "searchKey": "queryrunner.NewResetter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewResetter(ctx context.Context, workerBaseStore *basestore.Store, metrics dbworker.ResetterMetrics) *dbworker.Resetter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewResetter(ctx context.Context, workerBaseStore *basestore.Store, metrics dbworker.ResetterMetrics) *dbworker.Resetter\n```\n\nNewResetter returns a resetter that will reset pending query runner jobs if they take too long to complete. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#createDBWorkerStore",
+              "documentation": {
+                "identifier": "createDBWorkerStore",
+                "newPage": false,
+                "searchKey": "queryrunner.createDBWorkerStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createDBWorkerStore(s *basestore.Store) dbworkerstore.Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createDBWorkerStore(s *basestore.Store) dbworkerstore.Store\n```\n\ncreateDBWorkerStore creates the dbworker store for the query runner worker. \n\nSee internal/workerutil/dbworker for more information about dbworkers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#EnqueueJob",
+              "documentation": {
+                "identifier": "EnqueueJob",
+                "newPage": false,
+                "searchKey": "queryrunner.EnqueueJob",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EnqueueJob(ctx context.Context, workerBaseStore *basestore.Store, job *Job) (id int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EnqueueJob(ctx context.Context, workerBaseStore *basestore.Store, job *Job) (id int, err error)\n```\n\nEnqueueJob enqueues a job for the query runner worker to execute later. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#scanJobs",
+              "documentation": {
+                "identifier": "scanJobs",
+                "newPage": false,
+                "searchKey": "queryrunner.scanJobs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scanJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scanJobs(rows *sql.Rows, err error) (workerutil.Record, bool, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#doScanJobs",
+              "documentation": {
+                "identifier": "doScanJobs",
+                "newPage": false,
+                "searchKey": "queryrunner.doScanJobs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func doScanJobs(rows *sql.Rows, err error) ([]*Job, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc doScanJobs(rows *sql.Rows, err error) ([]*Job, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "queryrunner.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background/queryrunner#TestJobQueue",
+              "documentation": {
+                "identifier": "TestJobQueue",
+                "newPage": false,
+                "searchKey": "queryrunner.TestJobQueue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestJobQueue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestJobQueue(t *testing.T)\n```\n\nTestJobQueue tests that EnqueueJob and dequeueJob work mutually to transfer jobs to/from the database. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

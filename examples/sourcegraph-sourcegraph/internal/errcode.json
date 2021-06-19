@@ -1,0 +1,667 @@
+{
+  "pathID": "/internal/errcode",
+  "documentation": {
+    "identifier": "errcode",
+    "newPage": true,
+    "searchKey": "internal/errcode",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package errcode"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package errcode maps Go errors to HTTP status codes as well as other useful functions for inspecting errors. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/errcode#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/errcode#HTTPErr",
+              "documentation": {
+                "identifier": "HTTPErr",
+                "newPage": false,
+                "searchKey": "errcode.HTTPErr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type HTTPErr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype HTTPErr struct {\n\tStatus int   // HTTP status code.\n\tErr    error // Optional reason for the HTTP error.\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/errcode#HTTPErr.Error",
+                    "documentation": {
+                      "identifier": "HTTPErr.Error",
+                      "newPage": false,
+                      "searchKey": "errcode.HTTPErr.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (err *HTTPErr) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (err *HTTPErr) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/errcode#HTTPErr.HTTPStatusCode",
+                    "documentation": {
+                      "identifier": "HTTPErr.HTTPStatusCode",
+                      "newPage": false,
+                      "searchKey": "errcode.HTTPErr.HTTPStatusCode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (err *HTTPErr) HTTPStatusCode() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (err *HTTPErr) HTTPStatusCode() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#Mock",
+              "documentation": {
+                "identifier": "Mock",
+                "newPage": false,
+                "searchKey": "errcode.Mock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Mock struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Mock struct {\n\t// Message is the return value for Error() string\n\tMessage string\n\n\t// IsNotFound is the return value for NotFound\n\tIsNotFound bool\n}\n```\n\nMock is a convenience error which makes it easy to satisfy the optional interfaces errors implement. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/errcode#Mock.Error",
+                    "documentation": {
+                      "identifier": "Mock.Error",
+                      "newPage": false,
+                      "searchKey": "errcode.Mock.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *Mock) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *Mock) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/errcode#Mock.NotFound",
+                    "documentation": {
+                      "identifier": "Mock.NotFound",
+                      "newPage": false,
+                      "searchKey": "errcode.Mock.NotFound",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *Mock) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *Mock) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#nonRetryableError",
+              "documentation": {
+                "identifier": "nonRetryableError",
+                "newPage": false,
+                "searchKey": "errcode.nonRetryableError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type nonRetryableError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype nonRetryableError struct{ error }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/errcode#nonRetryableError.NonRetryable",
+                    "documentation": {
+                      "identifier": "nonRetryableError.NonRetryable",
+                      "newPage": false,
+                      "searchKey": "errcode.nonRetryableError.NonRetryable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nonRetryableError) NonRetryable() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nonRetryableError) NonRetryable() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#PresentationError",
+              "documentation": {
+                "identifier": "PresentationError",
+                "newPage": false,
+                "searchKey": "errcode.PresentationError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PresentationError interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PresentationError interface {\n\terror\n\n\t// PresentationError returns the message suitable for presentation to the user. The message\n\t// should be written in full sentences and must not contain any information that the user is not\n\t// authorized to see.\n\tPresentationError() string\n}\n```\n\nA PresentationError is an error with a message (returned by the PresentationError method) that is suitable for presentation to the user. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#presentationError",
+              "documentation": {
+                "identifier": "presentationError",
+                "newPage": false,
+                "searchKey": "errcode.presentationError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type presentationError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype presentationError struct {\n\tcause error\n\tmsg   string\n}\n```\n\npresentationError implements PresentationError. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/errcode#presentationError.Error",
+                    "documentation": {
+                      "identifier": "presentationError.Error",
+                      "newPage": false,
+                      "searchKey": "errcode.presentationError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *presentationError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *presentationError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/errcode#presentationError.PresentationError",
+                    "documentation": {
+                      "identifier": "presentationError.PresentationError",
+                      "newPage": false,
+                      "searchKey": "errcode.presentationError.PresentationError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *presentationError) PresentationError() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *presentationError) PresentationError() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/errcode#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/errcode#HTTP",
+              "documentation": {
+                "identifier": "HTTP",
+                "newPage": false,
+                "searchKey": "errcode.HTTP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HTTP(err error) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HTTP(err error) int\n```\n\nHTTP returns the most appropriate HTTP status code that describes err. It contains a hard-coded list of error types and error values (such as mapping store.RepoNotFoundError to NotFound) and heuristics (such as mapping os.IsNotExist-satisfying errors to NotFound). All other errors are mapped to HTTP 500 Internal Server Error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsHTTPErrorCode",
+              "documentation": {
+                "identifier": "IsHTTPErrorCode",
+                "newPage": false,
+                "searchKey": "errcode.IsHTTPErrorCode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsHTTPErrorCode(err error, statusCode int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsHTTPErrorCode(err error, statusCode int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsNotFound",
+              "documentation": {
+                "identifier": "IsNotFound",
+                "newPage": false,
+                "searchKey": "errcode.IsNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsNotFound(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsNotFound(err error) bool\n```\n\nIsNotFound will check if err or one of its causes is a not found error. Note: This will not check os.IsNotExist, but rather is returned by methods like Repo.Get when the repo is not found. It will also *not* map HTTPStatusCode into not found. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsUnauthorized",
+              "documentation": {
+                "identifier": "IsUnauthorized",
+                "newPage": false,
+                "searchKey": "errcode.IsUnauthorized",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsUnauthorized(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsUnauthorized(err error) bool\n```\n\nIsUnauthorized will check if err or one of its causes is an unauthorized error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsForbidden",
+              "documentation": {
+                "identifier": "IsForbidden",
+                "newPage": false,
+                "searchKey": "errcode.IsForbidden",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsForbidden(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsForbidden(err error) bool\n```\n\nIsForbidden will check if err or one of its causes is a forbidden error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsAccountSuspended",
+              "documentation": {
+                "identifier": "IsAccountSuspended",
+                "newPage": false,
+                "searchKey": "errcode.IsAccountSuspended",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsAccountSuspended(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsAccountSuspended(err error) bool\n```\n\nIsAccountSuspended will check if err or one of its causes was due to the account being suspended \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsBadRequest",
+              "documentation": {
+                "identifier": "IsBadRequest",
+                "newPage": false,
+                "searchKey": "errcode.IsBadRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsBadRequest(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsBadRequest(err error) bool\n```\n\nIsBadRequest will check if err or one of its causes is a bad request. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsTemporary",
+              "documentation": {
+                "identifier": "IsTemporary",
+                "newPage": false,
+                "searchKey": "errcode.IsTemporary",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsTemporary(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsTemporary(err error) bool\n```\n\nIsTemporary will check if err or one of its causes is temporary. A temporary error can be retried. Many errors in the go stdlib implement the temporary interface. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsTimeout",
+              "documentation": {
+                "identifier": "IsTimeout",
+                "newPage": false,
+                "searchKey": "errcode.IsTimeout",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsTimeout(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsTimeout(err error) bool\n```\n\nIsTimeout will check if err or one of its causes is a timeout. Many errors in the go stdlib implement the timeout interface. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#IsNonRetryable",
+              "documentation": {
+                "identifier": "IsNonRetryable",
+                "newPage": false,
+                "searchKey": "errcode.IsNonRetryable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsNonRetryable(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsNonRetryable(err error) bool\n```\n\nIsNonRetryable will check if err or one of its causes is a error that cannot be retried. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#MakeNonRetryable",
+              "documentation": {
+                "identifier": "MakeNonRetryable",
+                "newPage": false,
+                "searchKey": "errcode.MakeNonRetryable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MakeNonRetryable(err error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MakeNonRetryable(err error) error\n```\n\nMakeNonRetryable makes any error non-retryable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#isErrorPredicate",
+              "documentation": {
+                "identifier": "isErrorPredicate",
+                "newPage": false,
+                "searchKey": "errcode.isErrorPredicate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isErrorPredicate(err error, p func(err error) bool) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isErrorPredicate(err error, p func(err error) bool) bool\n```\n\nisErrorPredicate returns true if err or one of its causes returns true when passed to p. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#WithPresentationMessage",
+              "documentation": {
+                "identifier": "WithPresentationMessage",
+                "newPage": false,
+                "searchKey": "errcode.WithPresentationMessage",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithPresentationMessage(err error, message string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithPresentationMessage(err error, message string) error\n```\n\nWithPresentationMessage annotates err with a new message suitable for presentation to the user. If err is nil, WithPresentationMessage returns nil. Otherwise, the return value implements PresentationError. \n\nThe message should be written in full sentences and must not contain any information that the user is not authorized to see. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#NewPresentationError",
+              "documentation": {
+                "identifier": "NewPresentationError",
+                "newPage": false,
+                "searchKey": "errcode.NewPresentationError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewPresentationError(message string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewPresentationError(message string) error\n```\n\nNewPresentationError returns a new error with a message suitable for presentation to the user. The message should be written in full sentences and must not contain any information that the user is not authorized to see. \n\nIf there is an underlying error associated with this message, use WithPresentationMessage instead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#PresentationMessage",
+              "documentation": {
+                "identifier": "PresentationMessage",
+                "newPage": false,
+                "searchKey": "errcode.PresentationMessage",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PresentationMessage(err error) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PresentationMessage(err error) string\n```\n\nPresentationMessage returns the message, if any, suitable for presentation to the user for err or one of its causes. An error provides a presentation message by implementing the PresentationError interface (e.g., by using WithPresentationMessage). If no presentation message exists for err, the empty string is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/errcode#TestPresentationError",
+              "documentation": {
+                "identifier": "TestPresentationError",
+                "newPage": false,
+                "searchKey": "errcode.TestPresentationError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPresentationError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPresentationError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

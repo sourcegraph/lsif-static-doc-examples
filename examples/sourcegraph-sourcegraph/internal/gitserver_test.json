@@ -1,0 +1,160 @@
+{
+  "pathID": "/internal/gitserver_test",
+  "documentation": {
+    "identifier": "gitserver_test",
+    "newPage": true,
+    "searchKey": "internal/gitserver_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package gitserver_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/gitserver_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/gitserver_test#TestClient_ListCloned",
+              "documentation": {
+                "identifier": "TestClient_ListCloned",
+                "newPage": false,
+                "searchKey": "gitserver_test.TestClient_ListCloned",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_ListCloned(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_ListCloned(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver_test#TestClient_Archive",
+              "documentation": {
+                "identifier": "TestClient_Archive",
+                "newPage": false,
+                "searchKey": "gitserver_test.TestClient_Archive",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_Archive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_Archive(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver_test#createRepoWithDotGitDir",
+              "documentation": {
+                "identifier": "createRepoWithDotGitDir",
+                "newPage": false,
+                "searchKey": "gitserver_test.createRepoWithDotGitDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createRepoWithDotGitDir(t *testing.T, root string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createRepoWithDotGitDir(t *testing.T, root string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver_test#createSimpleGitRepo",
+              "documentation": {
+                "identifier": "createSimpleGitRepo",
+                "newPage": false,
+                "searchKey": "gitserver_test.createSimpleGitRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createSimpleGitRepo(t *testing.T, root string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createSimpleGitRepo(t *testing.T, root string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver_test#TestAddrForRepo",
+              "documentation": {
+                "identifier": "TestAddrForRepo",
+                "newPage": false,
+                "searchKey": "gitserver_test.TestAddrForRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddrForRepo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddrForRepo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver_test#TestClient_P4Exec",
+              "documentation": {
+                "identifier": "TestClient_P4Exec",
+                "newPage": false,
+                "searchKey": "gitserver_test.TestClient_P4Exec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_P4Exec(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_P4Exec(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

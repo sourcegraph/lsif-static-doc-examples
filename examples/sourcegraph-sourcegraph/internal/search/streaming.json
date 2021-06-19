@@ -1,0 +1,845 @@
+{
+  "pathID": "/internal/search/streaming",
+  "documentation": {
+    "identifier": "streaming",
+    "newPage": true,
+    "searchKey": "internal/search/streaming",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package streaming"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/search/streaming#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#commonFileFilters",
+              "documentation": {
+                "identifier": "commonFileFilters",
+                "newPage": false,
+                "searchKey": "streaming.commonFileFilters",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commonFileFilters"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commonFileFilters = ...\n```\n\ncommonFileFilters are common filters used. It is used by SearchFilters to propose them if they match shown results. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/streaming#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#Filter",
+              "documentation": {
+                "identifier": "Filter",
+                "newPage": false,
+                "searchKey": "streaming.Filter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Filter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Filter struct {\n\tValue string\n\n\t// Label is the string to be displayed in the UI.\n\tLabel string\n\n\t// Count is the number of matches in a particular repository. Only used\n\t// for `repo:` filters.\n\tCount int\n\n\t// IsLimitHit is true if the results returned for a repository are\n\t// incomplete.\n\tIsLimitHit bool\n\n\t// Kind of filter. Should be \"repo\", \"file\", or \"lang\".\n\tKind string\n\n\t// Important is used to prioritize the order that filters appear in.\n\tImportant bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Filter.Less",
+                    "documentation": {
+                      "identifier": "Filter.Less",
+                      "newPage": false,
+                      "searchKey": "streaming.Filter.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *Filter) Less(o *Filter) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *Filter) Less(o *Filter) bool\n```\n\nLess returns true if f is more important the o. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#Filters",
+              "documentation": {
+                "identifier": "Filters",
+                "newPage": false,
+                "searchKey": "streaming.Filters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Filters map[string]*streaming.Filter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Filters map[string]*Filter\n```\n\nFilters is a map of filter values to the Filter. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Filters.Add",
+                    "documentation": {
+                      "identifier": "Filters.Add",
+                      "newPage": false,
+                      "searchKey": "streaming.Filters.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m Filters) Add(value string, label string, count int32, limitHit bool, kind string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m Filters) Add(value string, label string, count int32, limitHit bool, kind string)\n```\n\nAdd the count to the filter with value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Filters.MarkImportant",
+                    "documentation": {
+                      "identifier": "Filters.MarkImportant",
+                      "newPage": false,
+                      "searchKey": "streaming.Filters.MarkImportant",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m Filters) MarkImportant(value string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m Filters) MarkImportant(value string)\n```\n\nMarkImportant sets the filter with value as important. Can only be called after Add. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Filters.Compute",
+                    "documentation": {
+                      "identifier": "Filters.Compute",
+                      "newPage": false,
+                      "searchKey": "streaming.Filters.Compute",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m Filters) Compute() []*Filter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m Filters) Compute() []*Filter\n```\n\nCompute returns an ordered slice of Filter to present to the user. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#filterSlice",
+              "documentation": {
+                "identifier": "filterSlice",
+                "newPage": false,
+                "searchKey": "streaming.filterSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type filterSlice []*streaming.Filter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype filterSlice []*Filter\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#filterSlice.Len",
+                    "documentation": {
+                      "identifier": "filterSlice.Len",
+                      "newPage": false,
+                      "searchKey": "streaming.filterSlice.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs filterSlice) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs filterSlice) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#filterSlice.Less",
+                    "documentation": {
+                      "identifier": "filterSlice.Less",
+                      "newPage": false,
+                      "searchKey": "streaming.filterSlice.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs filterSlice) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs filterSlice) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#filterSlice.Swap",
+                    "documentation": {
+                      "identifier": "filterSlice.Swap",
+                      "newPage": false,
+                      "searchKey": "streaming.filterSlice.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs filterSlice) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs filterSlice) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#filterHeap",
+              "documentation": {
+                "identifier": "filterHeap",
+                "newPage": false,
+                "searchKey": "streaming.filterHeap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type filterHeap struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype filterHeap struct {\n\tfilterSlice\n\tmax int\n}\n```\n\nfilterHeap allows us to avoid creating an O(N) slice, sorting it O(NlogN) and then keeping the max elements. Instead we use a heap to use O(max) space and O(Nlogmax) runtime. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#filterHeap.Add",
+                    "documentation": {
+                      "identifier": "filterHeap.Add",
+                      "newPage": false,
+                      "searchKey": "streaming.filterHeap.Add",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *filterHeap) Add(f *Filter)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *filterHeap) Add(f *Filter)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#filterHeap.Less",
+                    "documentation": {
+                      "identifier": "filterHeap.Less",
+                      "newPage": false,
+                      "searchKey": "streaming.filterHeap.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *filterHeap) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *filterHeap) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#filterHeap.Push",
+                    "documentation": {
+                      "identifier": "filterHeap.Push",
+                      "newPage": false,
+                      "searchKey": "streaming.filterHeap.Push",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *filterHeap) Push(x interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *filterHeap) Push(x interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#filterHeap.Pop",
+                    "documentation": {
+                      "identifier": "filterHeap.Pop",
+                      "newPage": false,
+                      "searchKey": "streaming.filterHeap.Pop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *filterHeap) Pop() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *filterHeap) Pop() interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#Stats",
+              "documentation": {
+                "identifier": "Stats",
+                "newPage": false,
+                "searchKey": "streaming.Stats",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Stats struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Stats struct {\n\t// IsLimitHit is true if we do not have all results that match the query.\n\tIsLimitHit bool\n\n\t// Repos that were matched by the repo-related filters. This should only\n\t// be set once by search, when we have resolved Repos.\n\tRepos map[api.RepoID]types.RepoName\n\n\t// Status is a RepoStatusMap of repository search statuses.\n\tStatus search.RepoStatusMap\n\n\t// ExcludedForks is the count of excluded forked repos because the search\n\t// query doesn't apply to them, but that we want to know about.\n\tExcludedForks int\n\n\t// ExcludedArchived is the count of excluded archived repos because the\n\t// search query doesn't apply to them, but that we want to know about.\n\tExcludedArchived int\n\n\t// IsIndexUnavailable is true if indexed search was unavailable.\n\tIsIndexUnavailable bool\n}\n```\n\nStats contains fields that should be returned by all funcs that contribute to the overall search result set. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#CollectStream",
+                    "documentation": {
+                      "identifier": "CollectStream",
+                      "newPage": false,
+                      "searchKey": "streaming.CollectStream",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func CollectStream(search func(Sender) error) ([]result.Match, Stats, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc CollectStream(search func(Sender) error) ([]result.Match, Stats, error)\n```\n\nCollectStream will call search and aggregates all events it sends. It then returns the aggregate event and any error it returns. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Stats.Update",
+                    "documentation": {
+                      "identifier": "Stats.Update",
+                      "newPage": false,
+                      "searchKey": "streaming.Stats.Update",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Stats) Update(other *Stats)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Stats) Update(other *Stats)\n```\n\nupdate updates c with the other data, deduping as necessary. It modifies c but does not modify other. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Stats.Zero",
+                    "documentation": {
+                      "identifier": "Stats.Zero",
+                      "newPage": false,
+                      "searchKey": "streaming.Stats.Zero",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Stats) Zero() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Stats) Zero() bool\n```\n\nZero returns true if stats is empty. IE calling Update will result in no change. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Stats.String",
+                    "documentation": {
+                      "identifier": "Stats.String",
+                      "newPage": false,
+                      "searchKey": "streaming.Stats.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Stats) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Stats) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Stats.Equal",
+                    "documentation": {
+                      "identifier": "Stats.Equal",
+                      "newPage": false,
+                      "searchKey": "streaming.Stats.Equal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Stats) Equal(other *Stats) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Stats) Equal(other *Stats) bool\n```\n\nEqual provides custom comparison which is used by go-cmp \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#Stats.AllReposTimedOut",
+                    "documentation": {
+                      "identifier": "Stats.AllReposTimedOut",
+                      "newPage": false,
+                      "searchKey": "streaming.Stats.AllReposTimedOut",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Stats) AllReposTimedOut() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Stats) AllReposTimedOut() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#SearchFilters",
+              "documentation": {
+                "identifier": "SearchFilters",
+                "newPage": false,
+                "searchKey": "streaming.SearchFilters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchFilters struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchFilters struct {\n\t// Globbing is true if the user has enabled globbing support.\n\tGlobbing bool\n\n\tfilters Filters\n}\n```\n\nSearchFilters computes the filters to show a user based on results. \n\nNote: it currently live in graphqlbackend. However, once we have a non resolver based SearchResult type it can be extracted. It lives in its own file to make that more obvious. We already have the filter type extracted (Filter). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#SearchFilters.Update",
+                    "documentation": {
+                      "identifier": "SearchFilters.Update",
+                      "newPage": false,
+                      "searchKey": "streaming.SearchFilters.Update",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SearchFilters) Update(event SearchEvent)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SearchFilters) Update(event SearchEvent)\n```\n\nUpdate internal state for the results in event. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#SearchFilters.Compute",
+                    "documentation": {
+                      "identifier": "SearchFilters.Compute",
+                      "newPage": false,
+                      "searchKey": "streaming.SearchFilters.Compute",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SearchFilters) Compute() []*Filter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SearchFilters) Compute() []*Filter\n```\n\nCompute returns an ordered slice of Filters to present to the user based on events passed to Next. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#SearchEvent",
+              "documentation": {
+                "identifier": "SearchEvent",
+                "newPage": false,
+                "searchKey": "streaming.SearchEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchEvent struct {\n\tResults []result.Match\n\tStats   Stats\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#Sender",
+              "documentation": {
+                "identifier": "Sender",
+                "newPage": false,
+                "searchKey": "streaming.Sender",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Sender interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Sender interface {\n\tSend(SearchEvent)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#WithLimit",
+                    "documentation": {
+                      "identifier": "WithLimit",
+                      "newPage": false,
+                      "searchKey": "streaming.WithLimit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithLimit(ctx context.Context, parent Sender, limit int) (context.Context, Sender, context.CancelFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithLimit(ctx context.Context, parent Sender, limit int) (context.Context, Sender, context.CancelFunc)\n```\n\nWithLimit returns a child Stream of parent as well as a child Context of ctx. The child stream passes on all events to parent. Once more than limit ResultCount are sent on the child stream the context is canceled and an IsLimitHit event is sent. \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context and Stream are complete. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#WithSelect",
+                    "documentation": {
+                      "identifier": "WithSelect",
+                      "newPage": false,
+                      "searchKey": "streaming.WithSelect",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithSelect(parent Sender, s filter.SelectPath) Sender"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithSelect(parent Sender, s filter.SelectPath) Sender\n```\n\nWithSelect returns a child Stream of parent that runs the select operation on each event, deduplicating where possible. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#LimitStream",
+              "documentation": {
+                "identifier": "LimitStream",
+                "newPage": false,
+                "searchKey": "streaming.LimitStream",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LimitStream struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LimitStream struct {\n\ts         Sender\n\tcancel    context.CancelFunc\n\tremaining atomic.Int64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#LimitStream.Send",
+                    "documentation": {
+                      "identifier": "LimitStream.Send",
+                      "newPage": false,
+                      "searchKey": "streaming.LimitStream.Send",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *LimitStream) Send(event SearchEvent)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *LimitStream) Send(event SearchEvent)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#StreamFunc",
+              "documentation": {
+                "identifier": "StreamFunc",
+                "newPage": false,
+                "searchKey": "streaming.StreamFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StreamFunc func(github.com/sourcegraph/sourcegraph/internal/search/streaming.SearchEvent)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StreamFunc func(SearchEvent)\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/streaming#StreamFunc.Send",
+                    "documentation": {
+                      "identifier": "StreamFunc.Send",
+                      "newPage": false,
+                      "searchKey": "streaming.StreamFunc.Send",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f StreamFunc) Send(se SearchEvent)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f StreamFunc) Send(se SearchEvent)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/streaming#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/streaming#TestFilters",
+              "documentation": {
+                "identifier": "TestFilters",
+                "newPage": false,
+                "searchKey": "streaming.TestFilters",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFilters(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFilters(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/search/streaming/api"
+    },
+    {
+      "pathID": "/internal/search/streaming/http"
+    }
+  ]
+}

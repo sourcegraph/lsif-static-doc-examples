@@ -1,0 +1,1223 @@
+{
+  "pathID": "/enterprise/internal/batches/syncer",
+  "documentation": {
+    "identifier": "syncer",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/syncer",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package syncer"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/syncer#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#priorityNormal",
+              "documentation": {
+                "identifier": "priorityNormal",
+                "newPage": false,
+                "searchKey": "syncer.priorityNormal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const priorityNormal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst priorityNormal priority = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#priorityHigh",
+              "documentation": {
+                "identifier": "priorityHigh",
+                "newPage": false,
+                "searchKey": "syncer.priorityHigh",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const priorityHigh"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst priorityHigh\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/syncer#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#minSyncDelay",
+              "documentation": {
+                "identifier": "minSyncDelay",
+                "newPage": false,
+                "searchKey": "syncer.minSyncDelay",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var minSyncDelay"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar minSyncDelay = 2 * time.Minute\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#maxSyncDelay",
+              "documentation": {
+                "identifier": "maxSyncDelay",
+                "newPage": false,
+                "searchKey": "syncer.maxSyncDelay",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var maxSyncDelay"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar maxSyncDelay = 8 * time.Hour\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#syncerMetrics",
+              "documentation": {
+                "identifier": "syncerMetrics",
+                "newPage": false,
+                "searchKey": "syncer.syncerMetrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var syncerMetrics"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar syncerMetrics = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/syncer#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#scheduledSync",
+              "documentation": {
+                "identifier": "scheduledSync",
+                "newPage": false,
+                "searchKey": "syncer.scheduledSync",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type scheduledSync struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype scheduledSync struct {\n\tchangesetID int64\n\tnextSync    time.Time\n\tpriority    priority\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue",
+              "documentation": {
+                "identifier": "changesetPriorityQueue",
+                "newPage": false,
+                "searchKey": "syncer.changesetPriorityQueue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type changesetPriorityQueue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype changesetPriorityQueue struct {\n\titems []scheduledSync\n\tindex map[int64]int // changesetID -> index\n}\n```\n\nchangesetPriorityQueue is a min heap that sorts syncs by priority and time of next sync. It is not safe for concurrent use. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#newChangesetPriorityQueue",
+                    "documentation": {
+                      "identifier": "newChangesetPriorityQueue",
+                      "newPage": false,
+                      "searchKey": "syncer.newChangesetPriorityQueue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newChangesetPriorityQueue() *changesetPriorityQueue"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newChangesetPriorityQueue() *changesetPriorityQueue\n```\n\nnewChangesetPriorityQueue creates a new queue for holding changeset sync instructions in chronological order. items with a high priority will always appear at the front of the queue. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Len",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Len",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Less",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Less",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Swap",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Swap",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Push",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Push",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Push",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Push(x interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Push(x interface{})\n```\n\nPush is here to implement the Heap interface, please use Upsert \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Pop",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Pop",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Pop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Pop() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Pop() interface{}\n```\n\nPop is not to be used directly, use heap.Pop(pq) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Peek",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Peek",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Peek",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Peek() (scheduledSync, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Peek() (scheduledSync, bool)\n```\n\nPeek fetches the highest priority item without removing it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Upsert",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Upsert",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Upsert",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Upsert(ss ...scheduledSync)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Upsert(ss ...scheduledSync)\n```\n\nUpsert modifies at item if it exists or adds a new item if not. NOTE: If an existing item is high priority, it will not be changed back to normal. This allows high priority items to stay that way through reschedules. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Get",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Get",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Get",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Get(id int64) (scheduledSync, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Get(id int64) (scheduledSync, bool)\n```\n\nGet fetches the item with the supplied id without removing it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetPriorityQueue.Remove",
+                    "documentation": {
+                      "identifier": "changesetPriorityQueue.Remove",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetPriorityQueue.Remove",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pq *changesetPriorityQueue) Remove(id int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pq *changesetPriorityQueue) Remove(id int64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#priority",
+              "documentation": {
+                "identifier": "priority",
+                "newPage": false,
+                "searchKey": "syncer.priority",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type priority int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype priority int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#SyncRegistry",
+              "documentation": {
+                "identifier": "SyncRegistry",
+                "newPage": false,
+                "searchKey": "syncer.SyncRegistry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SyncRegistry struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SyncRegistry struct {\n\tctx         context.Context\n\tsyncStore   SyncStore\n\thttpFactory *httpcli.Factory\n\n\t// Used to receive high priority sync requests\n\tpriorityNotify chan []int64\n\n\tmu sync.Mutex\n\t// key is normalized code host url, also called external_service_id on the repo table\n\tsyncers map[string]*changesetSyncer\n}\n```\n\nSyncRegistry manages a changesetSyncer per code host \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#NewSyncRegistry",
+                    "documentation": {
+                      "identifier": "NewSyncRegistry",
+                      "newPage": false,
+                      "searchKey": "syncer.NewSyncRegistry",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewSyncRegistry(ctx context.Context, cstore SyncStore, cf *httpcli.Factory) *SyncRegistry"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewSyncRegistry(ctx context.Context, cstore SyncStore, cf *httpcli.Factory) *SyncRegistry\n```\n\nNewSyncRegistry creates a new sync registry which starts a syncer for each code host and will update them when external services are changed, added or removed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#SyncRegistry.Add",
+                    "documentation": {
+                      "identifier": "SyncRegistry.Add",
+                      "newPage": false,
+                      "searchKey": "syncer.SyncRegistry.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SyncRegistry) Add(codeHost *btypes.CodeHost)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SyncRegistry) Add(codeHost *btypes.CodeHost)\n```\n\nAdd adds a syncer for the code host associated with the supplied code host if the syncer hasn't already been added and starts it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#SyncRegistry.EnqueueChangesetSyncs",
+                    "documentation": {
+                      "identifier": "SyncRegistry.EnqueueChangesetSyncs",
+                      "newPage": false,
+                      "searchKey": "syncer.SyncRegistry.EnqueueChangesetSyncs",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SyncRegistry) EnqueueChangesetSyncs(ctx context.Context, ids []int64) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SyncRegistry) EnqueueChangesetSyncs(ctx context.Context, ids []int64) error\n```\n\nEnqueueChangesetSyncs will enqueue the changesets with the supplied ids for high priority syncing. An error indicates that no changesets have been enqueued. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#SyncRegistry.HandleExternalServiceSync",
+                    "documentation": {
+                      "identifier": "SyncRegistry.HandleExternalServiceSync",
+                      "newPage": false,
+                      "searchKey": "syncer.SyncRegistry.HandleExternalServiceSync",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SyncRegistry) HandleExternalServiceSync(es api.ExternalService)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SyncRegistry) HandleExternalServiceSync(es api.ExternalService)\n```\n\nHandleExternalServiceSync handles changes to external services. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#SyncRegistry.handlePriorityItems",
+                    "documentation": {
+                      "identifier": "SyncRegistry.handlePriorityItems",
+                      "newPage": false,
+                      "searchKey": "syncer.SyncRegistry.handlePriorityItems",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SyncRegistry) handlePriorityItems()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SyncRegistry) handlePriorityItems()\n```\n\nhandlePriorityItems fetches changesets in the priority queue from the database and passes them to the appropriate syncer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#SyncRegistry.syncCodeHosts",
+                    "documentation": {
+                      "identifier": "SyncRegistry.syncCodeHosts",
+                      "newPage": false,
+                      "searchKey": "syncer.SyncRegistry.syncCodeHosts",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SyncRegistry) syncCodeHosts(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SyncRegistry) syncCodeHosts(ctx context.Context) error\n```\n\nsyncCodeHosts fetches the list of currently active code hosts on the Sourcegraph instance. The running syncers will then be matched against those and missing ones are spawned and excess ones are stopped. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#SyncStore",
+              "documentation": {
+                "identifier": "SyncStore",
+                "newPage": false,
+                "searchKey": "syncer.SyncStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SyncStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SyncStore interface {\n\tListCodeHosts(ctx context.Context, opts store.ListCodeHostsOpts) ([]*btypes.CodeHost, error)\n\tListChangesetSyncData(context.Context, store.ListChangesetSyncDataOpts) ([]*btypes.ChangesetSyncData, error)\n\tGetChangeset(context.Context, store.GetChangesetOpts) (*btypes.Changeset, error)\n\tUpdateChangeset(ctx context.Context, cs *btypes.Changeset) error\n\tUpsertChangesetEvents(ctx context.Context, cs ...*btypes.ChangesetEvent) error\n\tGetSiteCredential(ctx context.Context, opts store.GetSiteCredentialOpts) (*btypes.SiteCredential, error)\n\tTransact(context.Context) (*store.Store, error)\n\tRepos() *database.RepoStore\n\tExternalServices() *database.ExternalServiceStore\n\tClock() func() time.Time\n\tDB() dbutil.DB\n\tGetExternalServiceIDs(ctx context.Context, opts store.GetExternalServiceIDsOpts) ([]int64, error)\n\tUserCredentials() *database.UserCredentialsStore\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#changesetSyncer",
+              "documentation": {
+                "identifier": "changesetSyncer",
+                "newPage": false,
+                "searchKey": "syncer.changesetSyncer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type changesetSyncer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype changesetSyncer struct {\n\tsyncStore   SyncStore\n\thttpFactory *httpcli.Factory\n\n\tcodeHostURL string\n\n\t// scheduleInterval determines how often a new schedule will be computed.\n\t// NOTE: It involves a DB query but no communication with code hosts.\n\tscheduleInterval time.Duration\n\n\tqueue          *changesetPriorityQueue\n\tpriorityNotify chan []int64\n\n\t// Replaceable for testing\n\tsyncFunc func(ctx context.Context, id int64) error\n\n\t// cancel should be called to stop this syncer\n\tcancel context.CancelFunc\n}\n```\n\nA changesetSyncer periodically syncs metadata of changesets saved in the database. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetSyncer.Run",
+                    "documentation": {
+                      "identifier": "changesetSyncer.Run",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetSyncer.Run",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *changesetSyncer) Run(ctx context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *changesetSyncer) Run(ctx context.Context)\n```\n\nRun will start the process of changeset syncing. It is long running and is expected to be launched once at startup. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetSyncer.computeSchedule",
+                    "documentation": {
+                      "identifier": "changesetSyncer.computeSchedule",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetSyncer.computeSchedule",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *changesetSyncer) computeSchedule(ctx context.Context) ([]scheduledSync, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *changesetSyncer) computeSchedule(ctx context.Context) ([]scheduledSync, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#changesetSyncer.SyncChangeset",
+                    "documentation": {
+                      "identifier": "changesetSyncer.SyncChangeset",
+                      "newPage": false,
+                      "searchKey": "syncer.changesetSyncer.SyncChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *changesetSyncer) SyncChangeset(ctx context.Context, id int64) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *changesetSyncer) SyncChangeset(ctx context.Context, id int64) error\n```\n\nSyncChangeset will sync a single changeset given its id. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#MockSyncStore",
+              "documentation": {
+                "identifier": "MockSyncStore",
+                "newPage": false,
+                "searchKey": "syncer.MockSyncStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockSyncStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockSyncStore struct {\n\tlistCodeHosts         func(context.Context, store.ListCodeHostsOpts) ([]*btypes.CodeHost, error)\n\tlistChangesetSyncData func(context.Context, store.ListChangesetSyncDataOpts) ([]*btypes.ChangesetSyncData, error)\n\tgetChangeset          func(context.Context, store.GetChangesetOpts) (*btypes.Changeset, error)\n\tupdateChangeset       func(context.Context, *btypes.Changeset) error\n\tupsertChangesetEvents func(context.Context, ...*btypes.ChangesetEvent) error\n\tgetSiteCredential     func(ctx context.Context, opts store.GetSiteCredentialOpts) (*btypes.SiteCredential, error)\n\tgetExternalServiceIDs func(ctx context.Context, opts store.GetExternalServiceIDsOpts) ([]int64, error)\n\ttransact              func(context.Context) (*store.Store, error)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.ListChangesetSyncData",
+                    "documentation": {
+                      "identifier": "MockSyncStore.ListChangesetSyncData",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.ListChangesetSyncData",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) ListChangesetSyncData(ctx context.Context, opts store.ListChangesetSyncDataOpts) ([]*btypes.ChangesetSyncData, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) ListChangesetSyncData(ctx context.Context, opts store.ListChangesetSyncDataOpts) ([]*btypes.ChangesetSyncData, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.GetChangeset",
+                    "documentation": {
+                      "identifier": "MockSyncStore.GetChangeset",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.GetChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) GetChangeset(ctx context.Context, opts store.GetChangesetOpts) (*btypes.Changeset, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) GetChangeset(ctx context.Context, opts store.GetChangesetOpts) (*btypes.Changeset, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.UpdateChangeset",
+                    "documentation": {
+                      "identifier": "MockSyncStore.UpdateChangeset",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.UpdateChangeset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) UpdateChangeset(ctx context.Context, c *btypes.Changeset) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) UpdateChangeset(ctx context.Context, c *btypes.Changeset) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.UpsertChangesetEvents",
+                    "documentation": {
+                      "identifier": "MockSyncStore.UpsertChangesetEvents",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.UpsertChangesetEvents",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) UpsertChangesetEvents(ctx context.Context, cs ...*btypes.ChangesetEvent) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) UpsertChangesetEvents(ctx context.Context, cs ...*btypes.ChangesetEvent) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.GetSiteCredential",
+                    "documentation": {
+                      "identifier": "MockSyncStore.GetSiteCredential",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.GetSiteCredential",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) GetSiteCredential(ctx context.Context, opts store.GetSiteCredentialOpts) (*btypes.SiteCredential, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) GetSiteCredential(ctx context.Context, opts store.GetSiteCredentialOpts) (*btypes.SiteCredential, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.GetExternalServiceIDs",
+                    "documentation": {
+                      "identifier": "MockSyncStore.GetExternalServiceIDs",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.GetExternalServiceIDs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) GetExternalServiceIDs(ctx context.Context, opts store.GetExternalServiceIDsOpts) ([]int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) GetExternalServiceIDs(ctx context.Context, opts store.GetExternalServiceIDsOpts) ([]int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.Transact",
+                    "documentation": {
+                      "identifier": "MockSyncStore.Transact",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.Transact",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) Transact(ctx context.Context) (*store.Store, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) Transact(ctx context.Context) (*store.Store, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.Repos",
+                    "documentation": {
+                      "identifier": "MockSyncStore.Repos",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.Repos",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) Repos() *database.RepoStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) Repos() *database.RepoStore\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.ExternalServices",
+                    "documentation": {
+                      "identifier": "MockSyncStore.ExternalServices",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.ExternalServices",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) ExternalServices() *database.ExternalServiceStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) ExternalServices() *database.ExternalServiceStore\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.UserCredentials",
+                    "documentation": {
+                      "identifier": "MockSyncStore.UserCredentials",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.UserCredentials",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) UserCredentials() *database.UserCredentialsStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) UserCredentials() *database.UserCredentialsStore\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.DB",
+                    "documentation": {
+                      "identifier": "MockSyncStore.DB",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.DB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) DB() dbutil.DB"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) DB() dbutil.DB\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.Clock",
+                    "documentation": {
+                      "identifier": "MockSyncStore.Clock",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.Clock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) Clock() func() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) Clock() func() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/syncer#MockSyncStore.ListCodeHosts",
+                    "documentation": {
+                      "identifier": "MockSyncStore.ListCodeHosts",
+                      "newPage": false,
+                      "searchKey": "syncer.MockSyncStore.ListCodeHosts",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m MockSyncStore) ListCodeHosts(ctx context.Context, opts store.ListCodeHostsOpts) ([]*btypes.CodeHost, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m MockSyncStore) ListCodeHosts(ctx context.Context, opts store.ListCodeHostsOpts) ([]*btypes.CodeHost, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/syncer#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#NextSync",
+              "documentation": {
+                "identifier": "NextSync",
+                "newPage": false,
+                "searchKey": "syncer.NextSync",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NextSync(clock func() time.Time, h *btypes.ChangesetSyncData) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NextSync(clock func() time.Time, h *btypes.ChangesetSyncData) time.Time\n```\n\nNextSync computes the time we want the next sync to happen. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#maxTime",
+              "documentation": {
+                "identifier": "maxTime",
+                "newPage": false,
+                "searchKey": "syncer.maxTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maxTime(a, b time.Time) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maxTime(a, b time.Time) time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#absDuration",
+              "documentation": {
+                "identifier": "absDuration",
+                "newPage": false,
+                "searchKey": "syncer.absDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func absDuration(d time.Duration) time.Duration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc absDuration(d time.Duration) time.Duration\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "syncer.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#SyncChangeset",
+              "documentation": {
+                "identifier": "SyncChangeset",
+                "newPage": false,
+                "searchKey": "syncer.SyncChangeset",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SyncChangeset(ctx context.Context, syncStore SyncStore, source sources.ChangesetSource, repo *types.Repo, c *btypes.Changeset) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SyncChangeset(ctx context.Context, syncStore SyncStore, source sources.ChangesetSource, repo *types.Repo, c *btypes.Changeset) (err error)\n```\n\nSyncChangeset refreshes the metadata of the given changeset and updates them in the database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#loadChangesetSource",
+              "documentation": {
+                "identifier": "loadChangesetSource",
+                "newPage": false,
+                "searchKey": "syncer.loadChangesetSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadChangesetSource(ctx context.Context, cf *httpcli.Factory, syncStore SyncStore, repo *types.Repo) (sources.ChangesetSource, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadChangesetSource(ctx context.Context, cf *httpcli.Factory, syncStore SyncStore, repo *types.Repo) (sources.ChangesetSource, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#TestChangesetPriorityQueue",
+              "documentation": {
+                "identifier": "TestChangesetPriorityQueue",
+                "newPage": false,
+                "searchKey": "syncer.TestChangesetPriorityQueue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChangesetPriorityQueue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChangesetPriorityQueue(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#TestNextSync",
+              "documentation": {
+                "identifier": "TestNextSync",
+                "newPage": false,
+                "searchKey": "syncer.TestNextSync",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNextSync(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNextSync(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#TestSyncerRun",
+              "documentation": {
+                "identifier": "TestSyncerRun",
+                "newPage": false,
+                "searchKey": "syncer.TestSyncerRun",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSyncerRun(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSyncerRun(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#TestSyncRegistry",
+              "documentation": {
+                "identifier": "TestSyncRegistry",
+                "newPage": false,
+                "searchKey": "syncer.TestSyncRegistry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSyncRegistry(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSyncRegistry(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/syncer#TestLoadChangesetSource",
+              "documentation": {
+                "identifier": "TestLoadChangesetSource",
+                "newPage": false,
+                "searchKey": "syncer.TestLoadChangesetSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoadChangesetSource(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoadChangesetSource(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

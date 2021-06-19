@@ -1,0 +1,767 @@
+{
+  "pathID": "/internal/authz/bitbucketserver",
+  "documentation": {
+    "identifier": "bitbucketserver",
+    "newPage": true,
+    "searchKey": "internal/authz/bitbucketserver",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package bitbucketserver"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package bitbucketserver contains an authorization provider for Bitbucket Server. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/authz/bitbucketserver#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#errNoResults",
+              "documentation": {
+                "identifier": "errNoResults",
+                "newPage": false,
+                "searchKey": "bitbucketserver.errNoResults",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errNoResults"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errNoResults = errors.New(\"no results returned by the Bitbucket Server API\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#update",
+              "documentation": {
+                "identifier": "update",
+                "newPage": false,
+                "searchKey": "bitbucketserver.update",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var update"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar update = flag.Bool(\"update\", false, \"update testdata\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/authz/bitbucketserver#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#Provider",
+              "documentation": {
+                "identifier": "Provider",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Provider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Provider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Provider struct {\n\turn      string\n\tclient   *bitbucketserver.Client\n\tcodeHost *extsvc.CodeHost\n\tpageSize int // Page size to use in paginated requests.\n\n\t// pluginPerm enables fetching permissions from the alternative roaring\n\t// bitmap endpoint provided by the Bitbucket Server Sourcegraph plugin:\n\t// https://github.com/sourcegraph/bitbucket-server-plugin\n\tpluginPerm bool\n}\n```\n\nProvider is an implementation of AuthzProvider that provides repository permissions as determined from a Bitbucket Server instance API. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#NewProvider",
+                    "documentation": {
+                      "identifier": "NewProvider",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.NewProvider",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewProvider(cli *bitbucketserver.Client, urn string, pluginPerm bool) *Provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewProvider(cli *bitbucketserver.Client, urn string, pluginPerm bool) *Provider\n```\n\nNewProvider returns a new Bitbucket Server authorization provider that uses the given bitbucketserver.Client to talk to a Bitbucket Server API that is the source of truth for permissions. It assumes usernames of Sourcegraph accounts match 1-1 with usernames of Bitbucket Server API users. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#newProvider",
+                    "documentation": {
+                      "identifier": "newProvider",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.newProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newProvider(cli *bitbucketserver.Client) *Provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newProvider(cli *bitbucketserver.Client) *Provider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.Validate",
+                    "documentation": {
+                      "identifier": "Provider.Validate",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) Validate() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) Validate() []string\n```\n\nValidate validates that the Provider has access to the Bitbucket Server API with the OAuth credentials it was configured with. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.URN",
+                    "documentation": {
+                      "identifier": "Provider.URN",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.URN",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) URN() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) URN() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.ServiceID",
+                    "documentation": {
+                      "identifier": "Provider.ServiceID",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.ServiceID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) ServiceID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) ServiceID() string\n```\n\nServiceID returns the absolute URL that identifies the Bitbucket Server instance this provider is configured with. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.ServiceType",
+                    "documentation": {
+                      "identifier": "Provider.ServiceType",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.ServiceType",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) ServiceType() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) ServiceType() string\n```\n\nServiceType returns the type of this Provider, namely, \"bitbucketServer\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.FetchAccount",
+                    "documentation": {
+                      "identifier": "Provider.FetchAccount",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.FetchAccount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchAccount(ctx context.Context, user *types.User, _ []*extsvc.Account, _ []string) (acct *extsvc.Account, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchAccount(ctx context.Context, user *types.User, _ []*extsvc.Account, _ []string) (acct *extsvc.Account, err error)\n```\n\nFetchAccount satisfies the authz.Provider interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.FetchUserPerms",
+                    "documentation": {
+                      "identifier": "Provider.FetchUserPerms",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.FetchUserPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)\n```\n\nFetchUserPerms returns a list of repository IDs (on code host) that the given account has read access on the code host. The repository ID has the same value as it would be used as api.ExternalRepoSpec.ID. The returned list only includes private repository IDs. \n\nThis method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\nAPI docs: [https://docs.atlassian.com/bitbucket-server/rest/5.16.0/bitbucket-rest.html#idm8296923984](https://docs.atlassian.com/bitbucket-server/rest/5.16.0/bitbucket-rest.html#idm8296923984) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.FetchRepoPerms",
+                    "documentation": {
+                      "identifier": "Provider.FetchRepoPerms",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.FetchRepoPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)\n```\n\nFetchRepoPerms returns a list of user IDs (on code host) who have read access to the given repo on the code host. The user ID has the same value as it would be used as extsvc.Account.AccountID. The returned list includes both direct access and inherited from the group membership. \n\nThis method may return partial but valid results in case of error, and it is up to callers to decide whether to discard. \n\nAPI docs: [https://docs.atlassian.com/bitbucket-server/rest/5.16.0/bitbucket-rest.html#idm8283203728](https://docs.atlassian.com/bitbucket-server/rest/5.16.0/bitbucket-rest.html#idm8283203728) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.repoIDs",
+                    "documentation": {
+                      "identifier": "Provider.repoIDs",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.repoIDs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) repoIDs(ctx context.Context, username string, public bool) ([]uint32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) repoIDs(ctx context.Context, username string, public bool) ([]uint32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.repoIDsFromAPI",
+                    "documentation": {
+                      "identifier": "Provider.repoIDsFromAPI",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.repoIDsFromAPI",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) repoIDsFromAPI(ctx context.Context, username string, public bool) (ids []uint32, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) repoIDsFromAPI(ctx context.Context, username string, public bool) (ids []uint32, err error)\n```\n\nrepoIDsFromAPI returns all repositories for which the given user has the permission to read from the Bitbucket Server API. when no username is given, only public repos are returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.repoIDsFromPlugin",
+                    "documentation": {
+                      "identifier": "Provider.repoIDsFromPlugin",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.repoIDsFromPlugin",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) repoIDsFromPlugin(ctx context.Context, username string) (ids []uint32, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) repoIDsFromPlugin(ctx context.Context, username string) (ids []uint32, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.user",
+                    "documentation": {
+                      "identifier": "Provider.user",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.user",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) user(ctx context.Context, username string, fs ...bitbucketserver.UserFilter) (*bitbucketserver.User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) user(ctx context.Context, username string, fs ...bitbucketserver.UserFilter) (*bitbucketserver.User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#Provider.userIDs",
+                    "documentation": {
+                      "identifier": "Provider.userIDs",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Provider.userIDs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) userIDs(ctx context.Context, repoID string) (ids []int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) userIDs(ctx context.Context, repoID string) (ids []int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#fixtures",
+              "documentation": {
+                "identifier": "fixtures",
+                "newPage": false,
+                "searchKey": "bitbucketserver.fixtures",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fixtures struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fixtures struct {\n\tusers             map[string]*bitbucketserver.User\n\tgroups            map[string]*bitbucketserver.Group\n\tprojects          map[string]*bitbucketserver.Project\n\trepos             map[string]*bitbucketserver.Repo\n\tgroupProjectPerms []*bitbucketserver.GroupProjectPermission\n\tuserRepoPerms     []*bitbucketserver.UserRepoPermission\n}\n```\n\nfixtures contains the data we need loaded in Bitbucket Server API to run the Provider tests. Because we use VCR recordings, we don't need a Bitbucket Server API up and running to run those tests. But if you want to work on these tests / code, you need to start a new instance of Bitbucket Server with docker, create an Application Link as per [https://docs.sourcegraph.com/admin/external_service/bitbucket_server](https://docs.sourcegraph.com/admin/external_service/bitbucket_server), and then run the tests with -update=true. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#newFixtures",
+                    "documentation": {
+                      "identifier": "newFixtures",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.newFixtures",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newFixtures() *fixtures"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newFixtures() *fixtures\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#fixtures.load",
+                    "documentation": {
+                      "identifier": "fixtures.load",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.fixtures.load",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f fixtures) load(t *testing.T, cli *bitbucketserver.Client)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f fixtures) load(t *testing.T, cli *bitbucketserver.Client)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#codeHost",
+              "documentation": {
+                "identifier": "codeHost",
+                "newPage": false,
+                "searchKey": "bitbucketserver.codeHost",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type codeHost struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype codeHost struct {\n\t*extsvc.CodeHost\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/bitbucketserver#codeHost.externalAccount",
+                    "documentation": {
+                      "identifier": "codeHost.externalAccount",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.codeHost.externalAccount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h codeHost) externalAccount(userID int32, u *bitbucketserver.User) *extsvc.Account"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h codeHost) externalAccount(userID int32, u *bitbucketserver.User) *extsvc.Account\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/authz/bitbucketserver#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#NewAuthzProviders",
+              "documentation": {
+                "identifier": "NewAuthzProviders",
+                "newPage": false,
+                "searchKey": "bitbucketserver.NewAuthzProviders",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewAuthzProviders(conns []*types.BitbucketServerConnection) (ps []authz.Provider, problems []string, warnings []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewAuthzProviders(\n\tconns []*types.BitbucketServerConnection,\n) (ps []authz.Provider, problems []string, warnings []string)\n```\n\nNewAuthzProviders returns the set of Bitbucket Server authz providers derived from the connections. It also returns any validation problems with the config, separating these into \"serious problems\" and \"warnings\". \"Serious problems\" are those that should make Sourcegraph set authz.allowAccessByDefault to false. \"Warnings\" are all other validation problems. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#newAuthzProvider",
+              "documentation": {
+                "identifier": "newAuthzProvider",
+                "newPage": false,
+                "searchKey": "bitbucketserver.newAuthzProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newAuthzProvider(c *types.BitbucketServerConnection,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newAuthzProvider(\n\tc *types.BitbucketServerConnection,\n\tpluginPerm bool,\n) (authz.Provider, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#ValidateAuthz",
+              "documentation": {
+                "identifier": "ValidateAuthz",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ValidateAuthz",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateAuthz(c *schema.BitbucketServerConnection) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateAuthz(c *schema.BitbucketServerConnection) error\n```\n\nValidateAuthz validates the authorization fields of the given BitbucketServer external service config. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#TestIntegration",
+              "documentation": {
+                "identifier": "TestIntegration",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestIntegration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#TestProvider_Validate",
+              "documentation": {
+                "identifier": "TestProvider_Validate",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestProvider_Validate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProvider_Validate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProvider_Validate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#testProviderFetchAccount",
+              "documentation": {
+                "identifier": "testProviderFetchAccount",
+                "newPage": false,
+                "searchKey": "bitbucketserver.testProviderFetchAccount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testProviderFetchAccount(f *fixtures, cli *bitbucketserver.Client) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testProviderFetchAccount(f *fixtures, cli *bitbucketserver.Client) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#testProviderFetchUserPerms",
+              "documentation": {
+                "identifier": "testProviderFetchUserPerms",
+                "newPage": false,
+                "searchKey": "bitbucketserver.testProviderFetchUserPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testProviderFetchUserPerms(f *fixtures, cli *bitbucketserver.Client) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testProviderFetchUserPerms(f *fixtures, cli *bitbucketserver.Client) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#testProviderFetchRepoPerms",
+              "documentation": {
+                "identifier": "testProviderFetchRepoPerms",
+                "newPage": false,
+                "searchKey": "bitbucketserver.testProviderFetchRepoPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testProviderFetchRepoPerms(f *fixtures, cli *bitbucketserver.Client) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testProviderFetchRepoPerms(f *fixtures, cli *bitbucketserver.Client) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#marshalJSON",
+              "documentation": {
+                "identifier": "marshalJSON",
+                "newPage": false,
+                "searchKey": "bitbucketserver.marshalJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func marshalJSON(v interface{}) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc marshalJSON(v interface{}) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/bitbucketserver#newClient",
+              "documentation": {
+                "identifier": "newClient",
+                "newPage": false,
+                "searchKey": "bitbucketserver.newClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newClient(t *testing.T, name string) (*bitbucketserver.Client, func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newClient(t *testing.T, name string) (*bitbucketserver.Client, func())\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

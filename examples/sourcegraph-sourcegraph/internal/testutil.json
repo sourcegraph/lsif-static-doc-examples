@@ -1,0 +1,378 @@
+{
+  "pathID": "/internal/testutil",
+  "documentation": {
+    "identifier": "testutil",
+    "newPage": true,
+    "searchKey": "internal/testutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package testutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/testutil#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/testutil#gzipReadCloser",
+              "documentation": {
+                "identifier": "gzipReadCloser",
+                "newPage": false,
+                "searchKey": "testutil.gzipReadCloser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gzipReadCloser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gzipReadCloser struct {\n\tf *os.File\n\tr *gzip.Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/testutil#gzipReadCloser.Read",
+                    "documentation": {
+                      "identifier": "gzipReadCloser.Read",
+                      "newPage": false,
+                      "searchKey": "testutil.gzipReadCloser.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *gzipReadCloser) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *gzipReadCloser) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/testutil#gzipReadCloser.Close",
+                    "documentation": {
+                      "identifier": "gzipReadCloser.Close",
+                      "newPage": false,
+                      "searchKey": "testutil.gzipReadCloser.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (z *gzipReadCloser) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (z *gzipReadCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/testutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/testutil#Diff",
+              "documentation": {
+                "identifier": "Diff",
+                "newPage": false,
+                "searchKey": "testutil.Diff",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Diff(b1, b2 string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Diff(b1, b2 string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#FetchTarFromGithub",
+              "documentation": {
+                "identifier": "FetchTarFromGithub",
+                "newPage": false,
+                "searchKey": "testutil.FetchTarFromGithub",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FetchTarFromGithub(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FetchTarFromGithub(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#openGzipReader",
+              "documentation": {
+                "identifier": "openGzipReader",
+                "newPage": false,
+                "searchKey": "testutil.openGzipReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func openGzipReader(name string) (io.ReadCloser, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc openGzipReader(name string) (io.ReadCloser, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#fsync",
+              "documentation": {
+                "identifier": "fsync",
+                "newPage": false,
+                "searchKey": "testutil.fsync",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fsync(path string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fsync(path string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#AssertGolden",
+              "documentation": {
+                "identifier": "AssertGolden",
+                "newPage": false,
+                "searchKey": "testutil.AssertGolden",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AssertGolden(t testing.TB, path string, update bool, want interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AssertGolden(t testing.TB, path string, update bool, want interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#marshal",
+              "documentation": {
+                "identifier": "marshal",
+                "newPage": false,
+                "searchKey": "testutil.marshal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func marshal(t testing.TB, v interface{}) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc marshal(t testing.TB, v interface{}) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#NewStore",
+              "documentation": {
+                "identifier": "NewStore",
+                "newPage": false,
+                "searchKey": "testutil.NewStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewStore(files map[string]string) (*store.Store, func(), error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewStore(files map[string]string) (*store.Store, func(), error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#addpaxheader",
+              "documentation": {
+                "identifier": "addpaxheader",
+                "newPage": false,
+                "searchKey": "testutil.addpaxheader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addpaxheader(w *tar.Writer, body string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addpaxheader(w *tar.Writer, body string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#CreateZip",
+              "documentation": {
+                "identifier": "CreateZip",
+                "newPage": false,
+                "searchKey": "testutil.CreateZip",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CreateZip(files map[string]string) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CreateZip(files map[string]string) ([]byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#MockZipFile",
+              "documentation": {
+                "identifier": "MockZipFile",
+                "newPage": false,
+                "searchKey": "testutil.MockZipFile",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockZipFile(data []byte) (*store.ZipFile, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockZipFile(data []byte) (*store.ZipFile, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#TempZipFromFiles",
+              "documentation": {
+                "identifier": "TempZipFromFiles",
+                "newPage": false,
+                "searchKey": "testutil.TempZipFromFiles",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TempZipFromFiles(files map[string]string) (path string, cleanup func(), err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TempZipFromFiles(files map[string]string) (path string, cleanup func(), err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/testutil#TempZipFileOnDisk",
+              "documentation": {
+                "identifier": "TempZipFileOnDisk",
+                "newPage": false,
+                "searchKey": "testutil.TempZipFileOnDisk",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TempZipFileOnDisk(data []byte) (string, func(), error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TempZipFileOnDisk(data []byte) (string, func(), error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

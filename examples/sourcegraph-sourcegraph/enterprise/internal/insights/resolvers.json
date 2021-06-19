@@ -1,0 +1,757 @@
+{
+  "pathID": "/enterprise/internal/insights/resolvers",
+  "documentation": {
+    "identifier": "resolvers",
+    "newPage": true,
+    "searchKey": "enterprise/internal/insights/resolvers",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package resolvers"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/resolvers#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#testRealGlobalSettings",
+              "documentation": {
+                "identifier": "testRealGlobalSettings",
+                "newPage": false,
+                "searchKey": "resolvers.testRealGlobalSettings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testRealGlobalSettings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testRealGlobalSettings = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/resolvers#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#insightConnectionResolver",
+              "documentation": {
+                "identifier": "insightConnectionResolver",
+                "newPage": false,
+                "searchKey": "resolvers.insightConnectionResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type insightConnectionResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype insightConnectionResolver struct {\n\tinsightsStore   store.Interface\n\tworkerBaseStore *basestore.Store\n\tsettingStore    discovery.SettingStore\n\n\t// cache results because they are used by multiple fields\n\tonce     sync.Once\n\tinsights []*schema.Insight\n\tnext     int64\n\terr      error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightConnectionResolver.Nodes",
+                    "documentation": {
+                      "identifier": "insightConnectionResolver.Nodes",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightConnectionResolver.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightConnectionResolver) Nodes(ctx context.Context) ([]graphqlbackend.InsightResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightConnectionResolver) Nodes(ctx context.Context) ([]graphqlbackend.InsightResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightConnectionResolver.TotalCount",
+                    "documentation": {
+                      "identifier": "insightConnectionResolver.TotalCount",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightConnectionResolver.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightConnectionResolver) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightConnectionResolver) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightConnectionResolver.PageInfo",
+                    "documentation": {
+                      "identifier": "insightConnectionResolver.PageInfo",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightConnectionResolver.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightConnectionResolver.compute",
+                    "documentation": {
+                      "identifier": "insightConnectionResolver.compute",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightConnectionResolver.compute",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightConnectionResolver) compute(ctx context.Context) ([]*schema.Insight, int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightConnectionResolver) compute(ctx context.Context) ([]*schema.Insight, int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#insightResolver",
+              "documentation": {
+                "identifier": "insightResolver",
+                "newPage": false,
+                "searchKey": "resolvers.insightResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type insightResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype insightResolver struct {\n\tinsightsStore   store.Interface\n\tworkerBaseStore *basestore.Store\n\tinsight         *schema.Insight\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightResolver.Title",
+                    "documentation": {
+                      "identifier": "insightResolver.Title",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightResolver.Title",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightResolver) Title() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightResolver) Title() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightResolver.Description",
+                    "documentation": {
+                      "identifier": "insightResolver.Description",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightResolver.Description",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightResolver) Description() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightResolver) Description() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightResolver.Series",
+                    "documentation": {
+                      "identifier": "insightResolver.Series",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightResolver.Series",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightResolver) Series() []graphqlbackend.InsightSeriesResolver"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightResolver) Series() []graphqlbackend.InsightSeriesResolver\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#insightSeriesResolver",
+              "documentation": {
+                "identifier": "insightSeriesResolver",
+                "newPage": false,
+                "searchKey": "resolvers.insightSeriesResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type insightSeriesResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype insightSeriesResolver struct {\n\tinsightsStore   store.Interface\n\tworkerBaseStore *basestore.Store\n\tseries          *schema.InsightSeries\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightSeriesResolver.Label",
+                    "documentation": {
+                      "identifier": "insightSeriesResolver.Label",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightSeriesResolver.Label",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightSeriesResolver) Label() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightSeriesResolver) Label() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightSeriesResolver.Points",
+                    "documentation": {
+                      "identifier": "insightSeriesResolver.Points",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightSeriesResolver.Points",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightSeriesResolver) Points(ctx context.Context, args *graphqlbackend.InsightsPointsArgs) ([]graphqlbackend.InsightsDataPointResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightSeriesResolver) Points(ctx context.Context, args *graphqlbackend.InsightsPointsArgs) ([]graphqlbackend.InsightsDataPointResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightSeriesResolver.Status",
+                    "documentation": {
+                      "identifier": "insightSeriesResolver.Status",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightSeriesResolver.Status",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *insightSeriesResolver) Status(ctx context.Context) (graphqlbackend.InsightStatusResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *insightSeriesResolver) Status(ctx context.Context) (graphqlbackend.InsightStatusResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#insightsDataPointResolver",
+              "documentation": {
+                "identifier": "insightsDataPointResolver",
+                "newPage": false,
+                "searchKey": "resolvers.insightsDataPointResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type insightsDataPointResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype insightsDataPointResolver struct{ p store.SeriesPoint }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightsDataPointResolver.DateTime",
+                    "documentation": {
+                      "identifier": "insightsDataPointResolver.DateTime",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightsDataPointResolver.DateTime",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i insightsDataPointResolver) DateTime() graphqlbackend.DateTime"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i insightsDataPointResolver) DateTime() graphqlbackend.DateTime\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightsDataPointResolver.Value",
+                    "documentation": {
+                      "identifier": "insightsDataPointResolver.Value",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightsDataPointResolver.Value",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i insightsDataPointResolver) Value() float64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i insightsDataPointResolver) Value() float64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#insightStatusResolver",
+              "documentation": {
+                "identifier": "insightStatusResolver",
+                "newPage": false,
+                "searchKey": "resolvers.insightStatusResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type insightStatusResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype insightStatusResolver struct {\n\ttotalPoints, pendingJobs, completedJobs, failedJobs int32\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightStatusResolver.TotalPoints",
+                    "documentation": {
+                      "identifier": "insightStatusResolver.TotalPoints",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightStatusResolver.TotalPoints",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i insightStatusResolver) TotalPoints() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i insightStatusResolver) TotalPoints() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightStatusResolver.PendingJobs",
+                    "documentation": {
+                      "identifier": "insightStatusResolver.PendingJobs",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightStatusResolver.PendingJobs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i insightStatusResolver) PendingJobs() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i insightStatusResolver) PendingJobs() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightStatusResolver.CompletedJobs",
+                    "documentation": {
+                      "identifier": "insightStatusResolver.CompletedJobs",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightStatusResolver.CompletedJobs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i insightStatusResolver) CompletedJobs() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i insightStatusResolver) CompletedJobs() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#insightStatusResolver.FailedJobs",
+                    "documentation": {
+                      "identifier": "insightStatusResolver.FailedJobs",
+                      "newPage": false,
+                      "searchKey": "resolvers.insightStatusResolver.FailedJobs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i insightStatusResolver) FailedJobs() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i insightStatusResolver) FailedJobs() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#Resolver",
+              "documentation": {
+                "identifier": "Resolver",
+                "newPage": false,
+                "searchKey": "resolvers.Resolver",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Resolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Resolver struct {\n\tinsightsStore   store.Interface\n\tworkerBaseStore *basestore.Store\n\tsettingStore    *database.SettingStore\n}\n```\n\nResolver is the GraphQL resolver of all things related to Insights. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#newWithClock",
+                    "documentation": {
+                      "identifier": "newWithClock",
+                      "newPage": false,
+                      "searchKey": "resolvers.newWithClock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newWithClock(timescale, postgres dbutil.DB, clock func() time.Time) *Resolver"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newWithClock(timescale, postgres dbutil.DB, clock func() time.Time) *Resolver\n```\n\nnewWithClock returns a new Resolver whose store uses the given Timescale and Postgres DBs, and the given clock for timestamps. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#Resolver.Insights",
+                    "documentation": {
+                      "identifier": "Resolver.Insights",
+                      "newPage": false,
+                      "searchKey": "resolvers.Resolver.Insights",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) Insights(ctx context.Context) (graphqlbackend.InsightConnectionResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) Insights(ctx context.Context) (graphqlbackend.InsightConnectionResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#disabledResolver",
+              "documentation": {
+                "identifier": "disabledResolver",
+                "newPage": false,
+                "searchKey": "resolvers.disabledResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type disabledResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype disabledResolver struct {\n\treason string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/resolvers#disabledResolver.Insights",
+                    "documentation": {
+                      "identifier": "disabledResolver.Insights",
+                      "newPage": false,
+                      "searchKey": "resolvers.disabledResolver.Insights",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *disabledResolver) Insights(ctx context.Context) (graphqlbackend.InsightConnectionResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *disabledResolver) Insights(ctx context.Context) (graphqlbackend.InsightConnectionResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/resolvers#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#New",
+              "documentation": {
+                "identifier": "New",
+                "newPage": false,
+                "searchKey": "resolvers.New",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New(timescale, postgres dbutil.DB) graphqlbackend.InsightsResolver"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New(timescale, postgres dbutil.DB) graphqlbackend.InsightsResolver\n```\n\nNew returns a new Resolver whose store uses the given Timescale and Postgres DBs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#NewDisabledResolver",
+              "documentation": {
+                "identifier": "NewDisabledResolver",
+                "newPage": false,
+                "searchKey": "resolvers.NewDisabledResolver",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewDisabledResolver(reason string) graphqlbackend.InsightsResolver"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewDisabledResolver(reason string) graphqlbackend.InsightsResolver\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#TestResolver_InsightConnection",
+              "documentation": {
+                "identifier": "TestResolver_InsightConnection",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_InsightConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_InsightConnection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_InsightConnection(t *testing.T)\n```\n\nTestResolver_InsightConnection tests that the InsightConnection GraphQL resolver works. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#TestResolver_InsightSeries",
+              "documentation": {
+                "identifier": "TestResolver_InsightSeries",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_InsightSeries",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_InsightSeries(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_InsightSeries(t *testing.T)\n```\n\nTestResolver_InsightSeries tests that the InsightSeries GraphQL resolver works. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "resolvers.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/resolvers#TestResolver_Insights",
+              "documentation": {
+                "identifier": "TestResolver_Insights",
+                "newPage": false,
+                "searchKey": "resolvers.TestResolver_Insights",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResolver_Insights(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResolver_Insights(t *testing.T)\n```\n\nTestResolver_Insights just checks that root resolver setup and getting an insights connection does not result in any errors. It is a pretty minimal test. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

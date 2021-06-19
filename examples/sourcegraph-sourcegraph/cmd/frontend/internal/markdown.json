@@ -1,0 +1,123 @@
+{
+  "pathID": "/cmd/frontend/internal/markdown",
+  "documentation": {
+    "identifier": "markdown",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/markdown",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package markdown"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/markdown#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/markdown#once",
+              "documentation": {
+                "identifier": "once",
+                "newPage": false,
+                "searchKey": "markdown.once",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var once"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar once sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/markdown#policy",
+              "documentation": {
+                "identifier": "policy",
+                "newPage": false,
+                "searchKey": "markdown.policy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var policy"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar policy *bluemonday.Policy\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/markdown#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/markdown#Render",
+              "documentation": {
+                "identifier": "Render",
+                "newPage": false,
+                "searchKey": "markdown.Render",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Render(content string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Render(content string) string\n```\n\nRender renders Markdown content into sanitized HTML that is safe to render anywhere. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

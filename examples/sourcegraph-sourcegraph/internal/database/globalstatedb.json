@@ -1,0 +1,313 @@
+{
+  "pathID": "/internal/database/globalstatedb",
+  "documentation": {
+    "identifier": "globalstatedb",
+    "newPage": true,
+    "searchKey": "internal/database/globalstatedb",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package globalstatedb"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/database/globalstatedb#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#Mock",
+              "documentation": {
+                "identifier": "Mock",
+                "newPage": false,
+                "searchKey": "globalstatedb.Mock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Mock"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Mock = struct {\n\tGet func(ctx context.Context) (*State, error)\n}{}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/globalstatedb#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#State",
+              "documentation": {
+                "identifier": "State",
+                "newPage": false,
+                "searchKey": "globalstatedb.State",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type State struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype State struct {\n\tSiteID      string\n\tInitialized bool // whether the initial site admin account has been created\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/globalstatedb#Get",
+                    "documentation": {
+                      "identifier": "Get",
+                      "newPage": false,
+                      "searchKey": "globalstatedb.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Get(ctx context.Context) (*State, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Get(ctx context.Context) (*State, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/globalstatedb#getConfiguration",
+                    "documentation": {
+                      "identifier": "getConfiguration",
+                      "newPage": false,
+                      "searchKey": "globalstatedb.getConfiguration",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getConfiguration(ctx context.Context) (*State, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getConfiguration(ctx context.Context) (*State, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#queryExecDatabaseHandler",
+              "documentation": {
+                "identifier": "queryExecDatabaseHandler",
+                "newPage": false,
+                "searchKey": "globalstatedb.queryExecDatabaseHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type queryExecDatabaseHandler interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype queryExecDatabaseHandler interface {\n\tQueryRow(ctx context.Context, query *sqlf.Query) *sql.Row\n\tExec(ctx context.Context, query *sqlf.Query) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#execDatabaseHandler",
+              "documentation": {
+                "identifier": "execDatabaseHandler",
+                "newPage": false,
+                "searchKey": "globalstatedb.execDatabaseHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type execDatabaseHandler interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype execDatabaseHandler interface {\n\tExec(ctx context.Context, query *sqlf.Query) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/globalstatedb#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#SiteInitialized",
+              "documentation": {
+                "identifier": "SiteInitialized",
+                "newPage": false,
+                "searchKey": "globalstatedb.SiteInitialized",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SiteInitialized(ctx context.Context) (alreadyInitialized bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#EnsureInitialized",
+              "documentation": {
+                "identifier": "EnsureInitialized",
+                "newPage": false,
+                "searchKey": "globalstatedb.EnsureInitialized",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EnsureInitialized(ctx context.Context, dbh queryExecDatabaseHandler) (alreadyInitialized bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EnsureInitialized(ctx context.Context, dbh queryExecDatabaseHandler) (alreadyInitialized bool, err error)\n```\n\nEnsureInitialized ensures the site is marked as having been initialized. If the site was already initialized, it does nothing. It returns whether the site was already initialized prior to the call. \n\n🚨 SECURITY: Initialization is an important security measure. If a new account is created on a site that is not initialized, and no other accounts exist, it is granted site admin privileges. If the site *has* been initialized, then a new account is not granted site admin privileges (even if all other users are deleted). This reduces the risk of (1) a site admin accidentally deleting all user accounts and opening up their site to any attacker becoming a site admin and (2) a bug in user account creation code letting attackers create site admin accounts. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#tryInsertNew",
+              "documentation": {
+                "identifier": "tryInsertNew",
+                "newPage": false,
+                "searchKey": "globalstatedb.tryInsertNew",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tryInsertNew(ctx context.Context, dbh execDatabaseHandler) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "globalstatedb.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/globalstatedb#TestGet",
+              "documentation": {
+                "identifier": "TestGet",
+                "newPage": false,
+                "searchKey": "globalstatedb.TestGet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGet(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGet(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

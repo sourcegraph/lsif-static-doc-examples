@@ -1,0 +1,429 @@
+{
+  "pathID": "/cmd/frontend/graphqlbackend/externallink",
+  "documentation": {
+    "identifier": "externallink",
+    "newPage": true,
+    "searchKey": "cmd/frontend/graphqlbackend/externallink",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package externallink"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package externallink constructs external links (GraphQL ExternalLink type) for resources. \n\nFor example, a GitHub.com repository that also has Phabricator configured has external links to both its origin repository on GitHub.com and the repository on Phabricator. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/graphqlbackend/externallink#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#linksForRepositoryFailed",
+              "documentation": {
+                "identifier": "linksForRepositoryFailed",
+                "newPage": false,
+                "searchKey": "externallink.linksForRepositoryFailed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var linksForRepositoryFailed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar linksForRepositoryFailed = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/graphqlbackend/externallink#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#Resolver",
+              "documentation": {
+                "identifier": "Resolver",
+                "newPage": false,
+                "searchKey": "externallink.Resolver",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Resolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Resolver struct {\n\turl         string // the URL to the resource\n\tserviceType string // the type of service that the URL points to, used for showing a nice icon\n\tserviceKind string // the kind of service that the URL points to, used for showing a nice icon\n}\n```\n\nA Resolver resolves the GraphQL ExternalLink type (which describes a resource on some external service). \n\nFor example, a repository might have 2 external links, one to its origin repository on GitHub.com and one to the repository on Phabricator. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/externallink#NewResolver",
+                    "documentation": {
+                      "identifier": "NewResolver",
+                      "newPage": false,
+                      "searchKey": "externallink.NewResolver",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewResolver(url, serviceType string) *Resolver"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewResolver(url, serviceType string) *Resolver\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/externallink#Resolver.URL",
+                    "documentation": {
+                      "identifier": "Resolver.URL",
+                      "newPage": false,
+                      "searchKey": "externallink.Resolver.URL",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) URL() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) URL() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/externallink#Resolver.ServiceKind",
+                    "documentation": {
+                      "identifier": "Resolver.ServiceKind",
+                      "newPage": false,
+                      "searchKey": "externallink.Resolver.ServiceKind",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) ServiceKind() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) ServiceKind() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/externallink#Resolver.ServiceType",
+                    "documentation": {
+                      "identifier": "Resolver.ServiceType",
+                      "newPage": false,
+                      "searchKey": "externallink.Resolver.ServiceType",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) ServiceType() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) ServiceType() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/externallink#Resolver.String",
+                    "documentation": {
+                      "identifier": "Resolver.String",
+                      "newPage": false,
+                      "searchKey": "externallink.Resolver.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Resolver) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Resolver) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/graphqlbackend/externallink#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#Repository",
+              "documentation": {
+                "identifier": "Repository",
+                "newPage": false,
+                "searchKey": "externallink.Repository",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Repository(ctx context.Context, db dbutil.DB, repo *types.Repo) (links []*Resolver, err error)\n```\n\nRepository returns the external links for a repository. \n\nFor example, a repository might have 2 external links, one to its origin repository on GitHub.com and one to the repository on Phabricator. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#FileOrDir",
+              "documentation": {
+                "identifier": "FileOrDir",
+                "newPage": false,
+                "searchKey": "externallink.FileOrDir",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FileOrDir(ctx context.Context, db dbutil.DB, repo *types.Repo, rev, path string, isDir bool) (links []*Resolver, err error)\n```\n\nFileOrDir returns the external links for a file or directory in a repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#Commit",
+              "documentation": {
+                "identifier": "Commit",
+                "newPage": false,
+                "searchKey": "externallink.Commit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Commit(ctx context.Context, db dbutil.DB, repo *types.Repo, commitID api.CommitID) (links []*Resolver, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Commit(ctx context.Context, db dbutil.DB, repo *types.Repo, commitID api.CommitID) (links []*Resolver, err error)\n```\n\nCommit returns the external links for a commit in a repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#linksForRepository",
+              "documentation": {
+                "identifier": "linksForRepository",
+                "newPage": false,
+                "searchKey": "externallink.linksForRepository",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func linksForRepository(ctx context.Context, db dbutil.DB, repo *types.Repo) (phabRepo *types.PhabricatorRepo, link *protocol.RepoLinks, serviceType string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc linksForRepository(ctx context.Context, db dbutil.DB, repo *types.Repo) (phabRepo *types.PhabricatorRepo, link *protocol.RepoLinks, serviceType string)\n```\n\nlinksForRepository gets the information necessary to construct links to resources within this repository. \n\nIt logs errors to the trace but does not return errors, because external links are not worth failing any request for. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#typeToMaybeEmptyKind",
+              "documentation": {
+                "identifier": "typeToMaybeEmptyKind",
+                "newPage": false,
+                "searchKey": "externallink.typeToMaybeEmptyKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func typeToMaybeEmptyKind(st string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc typeToMaybeEmptyKind(st string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestRepository",
+              "documentation": {
+                "identifier": "TestRepository",
+                "newPage": false,
+                "searchKey": "externallink.TestRepository",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepository(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepository(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestFileOrDir",
+              "documentation": {
+                "identifier": "TestFileOrDir",
+                "newPage": false,
+                "searchKey": "externallink.TestFileOrDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFileOrDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFileOrDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#TestCommit",
+              "documentation": {
+                "identifier": "TestCommit",
+                "newPage": false,
+                "searchKey": "externallink.TestCommit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/externallink#resetMocks",
+              "documentation": {
+                "identifier": "resetMocks",
+                "newPage": false,
+                "searchKey": "externallink.resetMocks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func resetMocks()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc resetMocks()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

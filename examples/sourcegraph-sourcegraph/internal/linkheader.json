@@ -1,0 +1,84 @@
+{
+  "pathID": "/internal/linkheader",
+  "documentation": {
+    "identifier": "linkheader",
+    "newPage": true,
+    "searchKey": "internal/linkheader",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package linkheader"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/linkheader#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/linkheader#ExtractNextURL",
+              "documentation": {
+                "identifier": "ExtractNextURL",
+                "newPage": false,
+                "searchKey": "linkheader.ExtractNextURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExtractNextURL(resp *http.Response) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExtractNextURL(resp *http.Response) (string, bool)\n```\n\nExtractNextURL retrieves the URL with rel=\"next\" from the Link header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/linkheader#ExtractURL",
+              "documentation": {
+                "identifier": "ExtractURL",
+                "newPage": false,
+                "searchKey": "linkheader.ExtractURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExtractURL(resp *http.Response, rel string) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExtractURL(resp *http.Response, rel string) (string, bool)\n```\n\nExtractURL retrieves the URL with given rel froim the Link header. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

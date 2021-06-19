@@ -1,0 +1,2076 @@
+{
+  "pathID": "/cmd/frontend/registry/api",
+  "documentation": {
+    "identifier": "api",
+    "newPage": true,
+    "searchKey": "cmd/frontend/registry/api",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package api"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package api contains a partial implementation of the extension registry. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/registry/api#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#WorkInProgressExtensionTitlePostgreSQLPattern",
+              "documentation": {
+                "identifier": "WorkInProgressExtensionTitlePostgreSQLPattern",
+                "newPage": false,
+                "searchKey": "api.WorkInProgressExtensionTitlePostgreSQLPattern",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const WorkInProgressExtensionTitlePostgreSQLPattern"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst WorkInProgressExtensionTitlePostgreSQLPattern = `(\\[WIP]|WIP:)%`\n```\n\nWorkInProgressExtensionTitlePostgreSQLPattern is the PostgreSQL \"SIMILAR TO\" pattern that matches the extension manifest's \"title\" property. See [https://www.postgresql.org/docs/9.3/functions-matching.html](https://www.postgresql.org/docs/9.3/functions-matching.html). \n\nNOTE: Keep this pattern in sync with IsWorkInProgressExtension. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/registry/api#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#HandleRegistryExtensionBundle",
+              "documentation": {
+                "identifier": "HandleRegistryExtensionBundle",
+                "newPage": false,
+                "searchKey": "api.HandleRegistryExtensionBundle",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var HandleRegistryExtensionBundle"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar HandleRegistryExtensionBundle = ...\n```\n\nHandleRegistryExtensionBundle is called to handle HTTP requests for an extension's JavaScript bundle and other assets. If there is no local extension registry, it returns an HTTP error response. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#ListLocalRegistryExtensions",
+              "documentation": {
+                "identifier": "ListLocalRegistryExtensions",
+                "newPage": false,
+                "searchKey": "api.ListLocalRegistryExtensions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ListLocalRegistryExtensions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ListLocalRegistryExtensions func(context.Context, dbutil.DB, graphqlbackend.RegistryExtensionConnectionArgs) ([]graphqlbackend.RegistryExtension, error) = ...\n```\n\nListLocalRegistryExtensions lists and returns local registry extensions according to the args. If there is no local extension registry, it is not implemented. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#CountLocalRegistryExtensions",
+              "documentation": {
+                "identifier": "CountLocalRegistryExtensions",
+                "newPage": false,
+                "searchKey": "api.CountLocalRegistryExtensions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CountLocalRegistryExtensions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CountLocalRegistryExtensions func(context.Context, dbutil.DB, graphqlbackend.RegistryExtensionConnectionArgs) (int, error) = ...\n```\n\nCountLocalRegistryExtensions returns the count of local registry extensions according to the args. Pagination-related args are ignored. If there is no local extension registry, it is not implemented. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#RegistryExtensionByIDInt32",
+              "documentation": {
+                "identifier": "RegistryExtensionByIDInt32",
+                "newPage": false,
+                "searchKey": "api.RegistryExtensionByIDInt32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RegistryExtensionByIDInt32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RegistryExtensionByIDInt32 func(context.Context, dbutil.DB, int32) (graphqlbackend.RegistryExtension, error) = ...\n```\n\nRegistryExtensionByIDInt32 looks up and returns the registry extension in the database with the given ID. If no such extension exists, an error is returned. The func is nil when there is no local registry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#RegistryPublisherByID",
+              "documentation": {
+                "identifier": "RegistryPublisherByID",
+                "newPage": false,
+                "searchKey": "api.RegistryPublisherByID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RegistryPublisherByID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RegistryPublisherByID func(context.Context, graphql.ID) (graphqlbackend.RegistryPublisher, error) = ...\n```\n\nRegistryPublisherByID looks up and returns the registry publisher by GraphQL ID. If there is no local registry, it is not implemented. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#GetLocalExtensionByExtensionID",
+              "documentation": {
+                "identifier": "GetLocalExtensionByExtensionID",
+                "newPage": false,
+                "searchKey": "api.GetLocalExtensionByExtensionID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GetLocalExtensionByExtensionID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GetLocalExtensionByExtensionID func(ctx context.Context, db dbutil.DB, extensionIDWithoutPrefix string) (local graphqlbackend.RegistryExtension, err error) = ...\n```\n\nGetLocalExtensionByExtensionID looks up and returns the registry extension in the local registry with the given extension ID. If there is no local extension registry, it is not implemented. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#mockLocalRegistryExtensionIDPrefix",
+              "documentation": {
+                "identifier": "mockLocalRegistryExtensionIDPrefix",
+                "newPage": false,
+                "searchKey": "api.mockLocalRegistryExtensionIDPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mockLocalRegistryExtensionIDPrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mockLocalRegistryExtensionIDPrefix **string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#IsRemoteExtensionAllowed",
+              "documentation": {
+                "identifier": "IsRemoteExtensionAllowed",
+                "newPage": false,
+                "searchKey": "api.IsRemoteExtensionAllowed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var IsRemoteExtensionAllowed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar IsRemoteExtensionAllowed = func(extensionID string) bool {\n\n\treturn true\n}\n```\n\nIsRemoteExtensionAllowed reports whether to allow usage of the remote extension with the given extension ID. \n\nIt can be overridden to use custom logic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#mockGetRemoteRegistryExtension",
+              "documentation": {
+                "identifier": "mockGetRemoteRegistryExtension",
+                "newPage": false,
+                "searchKey": "api.mockGetRemoteRegistryExtension",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mockGetRemoteRegistryExtension"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mockGetRemoteRegistryExtension func(field, value string) (*registry.Extension, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#FilterRemoteExtensions",
+              "documentation": {
+                "identifier": "FilterRemoteExtensions",
+                "newPage": false,
+                "searchKey": "api.FilterRemoteExtensions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FilterRemoteExtensions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FilterRemoteExtensions = ...\n```\n\nFilterRemoteExtensions is called to filter the list of extensions retrieved from the remote registry before the list is used by any other part of the application. \n\nIt can be overridden to use custom logic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#GetLocalFeaturedExtensions",
+              "documentation": {
+                "identifier": "GetLocalFeaturedExtensions",
+                "newPage": false,
+                "searchKey": "api.GetLocalFeaturedExtensions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GetLocalFeaturedExtensions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GetLocalFeaturedExtensions func(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryExtension, error) = ...\n```\n\nGetLocalFeaturedExtensions looks up and returns the featured registry extensions in the local registry If this is not sourcegraph.com, it is not implemented. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#HandleRegistry",
+              "documentation": {
+                "identifier": "HandleRegistry",
+                "newPage": false,
+                "searchKey": "api.HandleRegistry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var HandleRegistry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar HandleRegistry = ...\n```\n\nHandleRegistry is called to handle HTTP requests for the extension registry. If there is no local extension registry, it returns an HTTP error response. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#ExtensionRegistry",
+              "documentation": {
+                "identifier": "ExtensionRegistry",
+                "newPage": false,
+                "searchKey": "api.ExtensionRegistry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ExtensionRegistry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ExtensionRegistry extensionRegistryResolver\n```\n\nExtensionRegistry is the implementation of the GraphQL types ExtensionRegistry and ExtensionRegistryMutation. \n\nTo supply implementations of extension registry functionality, use the fields on this value of extensionRegistryResolver. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#errNoLocalExtensionRegistry",
+              "documentation": {
+                "identifier": "errNoLocalExtensionRegistry",
+                "newPage": false,
+                "searchKey": "api.errNoLocalExtensionRegistry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errNoLocalExtensionRegistry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errNoLocalExtensionRegistry = errors.New(\"no local extension registry exists\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#ExtensionURL",
+              "documentation": {
+                "identifier": "ExtensionURL",
+                "newPage": false,
+                "searchKey": "api.ExtensionURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ExtensionURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ExtensionURL = router.Extension\n```\n\nExtensionURL returns the URL path to an extension. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#PublisherExtensionsURL",
+              "documentation": {
+                "identifier": "PublisherExtensionsURL",
+                "newPage": false,
+                "searchKey": "api.PublisherExtensionsURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PublisherExtensionsURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PublisherExtensionsURL = router.RegistryPublisherExtensions\n```\n\nPublisherExtensionsURL returns the URL path to a publisher's extensions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#strnilptr",
+              "documentation": {
+                "identifier": "strnilptr",
+                "newPage": false,
+                "searchKey": "api.strnilptr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var strnilptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar strnilptr *string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/registry/api#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#registryExtensionConnectionResolver",
+              "documentation": {
+                "identifier": "registryExtensionConnectionResolver",
+                "newPage": false,
+                "searchKey": "api.registryExtensionConnectionResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type registryExtensionConnectionResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype registryExtensionConnectionResolver struct {\n\targs graphqlbackend.RegistryExtensionConnectionArgs\n\n\t// cache results because they are used by multiple fields\n\tonce               sync.Once\n\tregistryExtensions []graphqlbackend.RegistryExtension\n\terr                error\n\tdb                 dbutil.DB\n}\n```\n\nregistryExtensionConnectionResolver resolves a list of registry extensions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionConnectionResolver.compute",
+                    "documentation": {
+                      "identifier": "registryExtensionConnectionResolver.compute",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionConnectionResolver.compute",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionConnectionResolver) compute(ctx context.Context) ([]graphqlbackend.RegistryExtension, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionConnectionResolver) compute(ctx context.Context) ([]graphqlbackend.RegistryExtension, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionConnectionResolver.Nodes",
+                    "documentation": {
+                      "identifier": "registryExtensionConnectionResolver.Nodes",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionConnectionResolver.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionConnectionResolver) Nodes(ctx context.Context) ([]graphqlbackend.RegistryExtension, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionConnectionResolver) Nodes(ctx context.Context) ([]graphqlbackend.RegistryExtension, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionConnectionResolver.TotalCount",
+                    "documentation": {
+                      "identifier": "registryExtensionConnectionResolver.TotalCount",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionConnectionResolver.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionConnectionResolver) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionConnectionResolver) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionConnectionResolver.PageInfo",
+                    "documentation": {
+                      "identifier": "registryExtensionConnectionResolver.PageInfo",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionConnectionResolver.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionConnectionResolver) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionConnectionResolver.URL",
+                    "documentation": {
+                      "identifier": "registryExtensionConnectionResolver.URL",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionConnectionResolver.URL",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionConnectionResolver) URL(ctx context.Context) (*string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionConnectionResolver) URL(ctx context.Context) (*string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionConnectionResolver.Error",
+                    "documentation": {
+                      "identifier": "registryExtensionConnectionResolver.Error",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionConnectionResolver.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionConnectionResolver) Error(ctx context.Context) *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionConnectionResolver) Error(ctx context.Context) *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#RegistryExtensionID",
+              "documentation": {
+                "identifier": "RegistryExtensionID",
+                "newPage": false,
+                "searchKey": "api.RegistryExtensionID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RegistryExtensionID struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RegistryExtensionID struct {\n\tLocalID  int32                      `json:\"l,omitempty\"`\n\tRemoteID *registryExtensionRemoteID `json:\"r,omitempty\"`\n}\n```\n\nRegistryExtensionID identifies a registry extension, either locally or on a remote registry. Exactly 1 field must be set. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#UnmarshalRegistryExtensionID",
+                    "documentation": {
+                      "identifier": "UnmarshalRegistryExtensionID",
+                      "newPage": false,
+                      "searchKey": "api.UnmarshalRegistryExtensionID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func UnmarshalRegistryExtensionID(id graphql.ID) (registryExtensionID RegistryExtensionID, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc UnmarshalRegistryExtensionID(id graphql.ID) (registryExtensionID RegistryExtensionID, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#extensionManifest",
+              "documentation": {
+                "identifier": "extensionManifest",
+                "newPage": false,
+                "searchKey": "api.extensionManifest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type extensionManifest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype extensionManifest struct {\n\traw string\n\n\t// cache result because it is used by multiple fields\n\tonce   sync.Once\n\tresult *schema.SourcegraphExtensionManifest\n\terr    error\n}\n```\n\nextensionManifest implements the GraphQL type ExtensionManifest. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionManifest.parse",
+                    "documentation": {
+                      "identifier": "extensionManifest.parse",
+                      "newPage": false,
+                      "searchKey": "api.extensionManifest.parse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionManifest) parse() (*schema.SourcegraphExtensionManifest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionManifest) parse() (*schema.SourcegraphExtensionManifest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionManifest.Raw",
+                    "documentation": {
+                      "identifier": "extensionManifest.Raw",
+                      "newPage": false,
+                      "searchKey": "api.extensionManifest.Raw",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionManifest) Raw() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionManifest) Raw() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionManifest.Description",
+                    "documentation": {
+                      "identifier": "extensionManifest.Description",
+                      "newPage": false,
+                      "searchKey": "api.extensionManifest.Description",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionManifest) Description() (*string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionManifest) Description() (*string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionManifest.BundleURL",
+                    "documentation": {
+                      "identifier": "extensionManifest.BundleURL",
+                      "newPage": false,
+                      "searchKey": "api.extensionManifest.BundleURL",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionManifest) BundleURL() (*string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionManifest) BundleURL() (*string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver",
+              "documentation": {
+                "identifier": "registryExtensionRemoteResolver",
+                "newPage": false,
+                "searchKey": "api.registryExtensionRemoteResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type registryExtensionRemoteResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype registryExtensionRemoteResolver struct {\n\tv *registry.Extension\n}\n```\n\nregistryExtensionRemoteResolver implements the GraphQL type RegistryExtension with data from a remote registry. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.ID",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.ID",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.ID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) ID() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) ID() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.UUID",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.UUID",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.UUID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) UUID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) UUID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.ExtensionID",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.ExtensionID",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.ExtensionID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) ExtensionID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) ExtensionID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.ExtensionIDWithoutRegistry",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.ExtensionIDWithoutRegistry",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.ExtensionIDWithoutRegistry",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) ExtensionIDWithoutRegistry() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) ExtensionIDWithoutRegistry() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.Publisher",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.Publisher",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.Publisher",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) Publisher(ctx context.Context) (graphqlbackend.RegistryPublisher, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) Publisher(ctx context.Context) (graphqlbackend.RegistryPublisher, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.Name",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.Name",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.Name",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.Manifest",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.Manifest",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.Manifest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) Manifest(context.Context) (graphqlbackend.ExtensionManifest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) Manifest(context.Context) (graphqlbackend.ExtensionManifest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.CreatedAt",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.CreatedAt",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.CreatedAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) CreatedAt() *graphqlbackend.DateTime"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) CreatedAt() *graphqlbackend.DateTime\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.UpdatedAt",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.UpdatedAt",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.UpdatedAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) UpdatedAt() *graphqlbackend.DateTime"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) UpdatedAt() *graphqlbackend.DateTime\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.PublishedAt",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.PublishedAt",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.PublishedAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) PublishedAt(context.Context) (*graphqlbackend.DateTime, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) PublishedAt(context.Context) (*graphqlbackend.DateTime, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.URL",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.URL",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.URL",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) URL() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) URL() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.RemoteURL",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.RemoteURL",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.RemoteURL",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) RemoteURL() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) RemoteURL() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.RegistryName",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.RegistryName",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.RegistryName",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) RegistryName() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) RegistryName() (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.IsLocal",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.IsLocal",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.IsLocal",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) IsLocal() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) IsLocal() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.IsWorkInProgress",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.IsWorkInProgress",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.IsWorkInProgress",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) IsWorkInProgress() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) IsWorkInProgress() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteResolver.ViewerCanAdminister",
+                    "documentation": {
+                      "identifier": "registryExtensionRemoteResolver.ViewerCanAdminister",
+                      "newPage": false,
+                      "searchKey": "api.registryExtensionRemoteResolver.ViewerCanAdminister",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *registryExtensionRemoteResolver) ViewerCanAdminister(ctx context.Context) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *registryExtensionRemoteResolver) ViewerCanAdminister(ctx context.Context) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#registryExtensionRemoteID",
+              "documentation": {
+                "identifier": "registryExtensionRemoteID",
+                "newPage": false,
+                "searchKey": "api.registryExtensionRemoteID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type registryExtensionRemoteID struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype registryExtensionRemoteID struct {\n\tRegistry string `json:\"r\"`\n\tUUID     string `json:\"u\"`\n}\n```\n\nregistryExtensionRemoteID identifies a registry extension on a remote registry. It is encoded in RegistryExtensionID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#featuredExtensionsResolver",
+              "documentation": {
+                "identifier": "featuredExtensionsResolver",
+                "newPage": false,
+                "searchKey": "api.featuredExtensionsResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type featuredExtensionsResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype featuredExtensionsResolver struct {\n\t// cache results because they are used by multiple fields\n\tonce sync.Once\n\n\tfeaturedExtensions []graphqlbackend.RegistryExtension\n\terr                error\n\tdb                 dbutil.DB\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#featuredExtensionsResolver.compute",
+                    "documentation": {
+                      "identifier": "featuredExtensionsResolver.compute",
+                      "newPage": false,
+                      "searchKey": "api.featuredExtensionsResolver.compute",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *featuredExtensionsResolver) compute(ctx context.Context) ([]graphqlbackend.RegistryExtension, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *featuredExtensionsResolver) compute(ctx context.Context) ([]graphqlbackend.RegistryExtension, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#featuredExtensionsResolver.Nodes",
+                    "documentation": {
+                      "identifier": "featuredExtensionsResolver.Nodes",
+                      "newPage": false,
+                      "searchKey": "api.featuredExtensionsResolver.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *featuredExtensionsResolver) Nodes(ctx context.Context) ([]graphqlbackend.RegistryExtension, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *featuredExtensionsResolver) Nodes(ctx context.Context) ([]graphqlbackend.RegistryExtension, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#featuredExtensionsResolver.Error",
+                    "documentation": {
+                      "identifier": "featuredExtensionsResolver.Error",
+                      "newPage": false,
+                      "searchKey": "api.featuredExtensionsResolver.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *featuredExtensionsResolver) Error(ctx context.Context) *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *featuredExtensionsResolver) Error(ctx context.Context) *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver",
+              "documentation": {
+                "identifier": "extensionRegistryResolver",
+                "newPage": false,
+                "searchKey": "api.extensionRegistryResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type extensionRegistryResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype extensionRegistryResolver struct {\n\tdb                   dbutil.DB\n\tViewerPublishersFunc func(context.Context, dbutil.DB) ([]graphqlbackend.RegistryPublisher, error)\n\tPublishersFunc       func(context.Context, dbutil.DB, *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)\n\tCreateExtensionFunc  func(context.Context, dbutil.DB, *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)\n\tUpdateExtensionFunc  func(context.Context, dbutil.DB, *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)\n\tPublishExtensionFunc func(context.Context, dbutil.DB, *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)\n\tDeleteExtensionFunc  func(context.Context, dbutil.DB, *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)\n}\n```\n\nextensionRegistryResolver implements the GraphQL types ExtensionRegistry and ExtensionRegistryMutation. \n\nSome methods are only implemented if there is a local extension registry. For these methods, the implementation (if one exists) is set on the XyzFunc struct field. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.Extensions",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.Extensions",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.Extensions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) Extensions(ctx context.Context, args *graphqlbackend.RegistryExtensionConnectionArgs) (graphqlbackend.RegistryExtensionConnection, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) Extensions(ctx context.Context, args *graphqlbackend.RegistryExtensionConnectionArgs) (graphqlbackend.RegistryExtensionConnection, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.FeaturedExtensions",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.FeaturedExtensions",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.FeaturedExtensions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) FeaturedExtensions(ctx context.Context) (graphqlbackend.FeaturedExtensionsConnection, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) FeaturedExtensions(ctx context.Context) (graphqlbackend.FeaturedExtensionsConnection, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.Publishers",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.Publishers",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.Publishers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) Publishers(ctx context.Context, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) Publishers(ctx context.Context, args *graphqlutil.ConnectionArgs) (graphqlbackend.RegistryPublisherConnection, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.ViewerPublishers",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.ViewerPublishers",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.ViewerPublishers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) ViewerPublishers(ctx context.Context) ([]graphqlbackend.RegistryPublisher, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) ViewerPublishers(ctx context.Context) ([]graphqlbackend.RegistryPublisher, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.Extension",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.Extension",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.Extension",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) Extension(ctx context.Context, args *graphqlbackend.ExtensionRegistryExtensionArgs) (graphqlbackend.RegistryExtension, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) Extension(ctx context.Context, args *graphqlbackend.ExtensionRegistryExtensionArgs) (graphqlbackend.RegistryExtension, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.CreateExtension",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.CreateExtension",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.CreateExtension",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) CreateExtension(ctx context.Context, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) CreateExtension(ctx context.Context, args *graphqlbackend.ExtensionRegistryCreateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.UpdateExtension",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.UpdateExtension",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.UpdateExtension",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) UpdateExtension(ctx context.Context, args *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) UpdateExtension(ctx context.Context, args *graphqlbackend.ExtensionRegistryUpdateExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.PublishExtension",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.PublishExtension",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.PublishExtension",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) PublishExtension(ctx context.Context, args *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) PublishExtension(ctx context.Context, args *graphqlbackend.ExtensionRegistryPublishExtensionArgs) (graphqlbackend.ExtensionRegistryMutationResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.DeleteExtension",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.DeleteExtension",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.DeleteExtension",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) DeleteExtension(ctx context.Context, args *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) DeleteExtension(ctx context.Context, args *graphqlbackend.ExtensionRegistryDeleteExtensionArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.LocalExtensionIDPrefix",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.LocalExtensionIDPrefix",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.LocalExtensionIDPrefix",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*extensionRegistryResolver) LocalExtensionIDPrefix() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*extensionRegistryResolver) LocalExtensionIDPrefix() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.ImplementsLocalExtensionRegistry",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.ImplementsLocalExtensionRegistry",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.ImplementsLocalExtensionRegistry",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) ImplementsLocalExtensionRegistry() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) ImplementsLocalExtensionRegistry() bool\n```\n\nImplementsLocalExtensionRegistry reports whether there is an implementation of a local extension registry (which is a Sourcegraph Enterprise feature). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#extensionRegistryResolver.FilterRemoteExtensions",
+                    "documentation": {
+                      "identifier": "extensionRegistryResolver.FilterRemoteExtensions",
+                      "newPage": false,
+                      "searchKey": "api.extensionRegistryResolver.FilterRemoteExtensions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *extensionRegistryResolver) FilterRemoteExtensions(ids []string) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *extensionRegistryResolver) FilterRemoteExtensions(ids []string) []string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#ExtensionRegistryMutationResult",
+              "documentation": {
+                "identifier": "ExtensionRegistryMutationResult",
+                "newPage": false,
+                "searchKey": "api.ExtensionRegistryMutationResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExtensionRegistryMutationResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExtensionRegistryMutationResult struct {\n\tID int32 // this is only used for local extensions, so it's OK that this only accepts a local extension ID\n\tDB dbutil.DB\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/registry/api#ExtensionRegistryMutationResult.Extension",
+                    "documentation": {
+                      "identifier": "ExtensionRegistryMutationResult.Extension",
+                      "newPage": false,
+                      "searchKey": "api.ExtensionRegistryMutationResult.Extension",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *ExtensionRegistryMutationResult) Extension(ctx context.Context) (graphqlbackend.RegistryExtension, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *ExtensionRegistryMutationResult) Extension(ctx context.Context) (graphqlbackend.RegistryExtension, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#mockRegistryExtension",
+              "documentation": {
+                "identifier": "mockRegistryExtension",
+                "newPage": false,
+                "searchKey": "api.mockRegistryExtension",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockRegistryExtension struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockRegistryExtension struct {\n\tid   int32\n\tname string\n\tgraphqlbackend.RegistryExtension\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/registry/api#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#makePrioritizeExtensionIDsSet",
+              "documentation": {
+                "identifier": "makePrioritizeExtensionIDsSet",
+                "newPage": false,
+                "searchKey": "api.makePrioritizeExtensionIDsSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makePrioritizeExtensionIDsSet(args graphqlbackend.RegistryExtensionConnectionArgs) map[string]struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makePrioritizeExtensionIDsSet(args graphqlbackend.RegistryExtensionConnectionArgs) map[string]struct{}\n```\n\nmakePrioritizeExtensionIDsSet returns a set whose values are the elements of args.PrioritizeExtensionIDs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#strptr",
+              "documentation": {
+                "identifier": "strptr",
+                "newPage": false,
+                "searchKey": "api.strptr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func strptr(s string) *string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc strptr(s string) *string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "api.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#MarshalRegistryExtensionID",
+              "documentation": {
+                "identifier": "MarshalRegistryExtensionID",
+                "newPage": false,
+                "searchKey": "api.MarshalRegistryExtensionID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MarshalRegistryExtensionID(id RegistryExtensionID) graphql.ID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MarshalRegistryExtensionID(id RegistryExtensionID) graphql.ID\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#registryExtensionByID",
+              "documentation": {
+                "identifier": "registryExtensionByID",
+                "newPage": false,
+                "searchKey": "api.registryExtensionByID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func registryExtensionByID(ctx context.Context, db dbutil.DB, id graphql.ID) (graphqlbackend.RegistryExtension, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc registryExtensionByID(ctx context.Context, db dbutil.DB, id graphql.ID) (graphqlbackend.RegistryExtension, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#NewExtensionManifest",
+              "documentation": {
+                "identifier": "NewExtensionManifest",
+                "newPage": false,
+                "searchKey": "api.NewExtensionManifest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewExtensionManifest(raw *string) graphqlbackend.ExtensionManifest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewExtensionManifest(raw *string) graphqlbackend.ExtensionManifest\n```\n\nNewExtensionManifest creates a new resolver for the GraphQL type ExtensionManifest with the given raw contents of an extension manifest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#SplitExtensionID",
+              "documentation": {
+                "identifier": "SplitExtensionID",
+                "newPage": false,
+                "searchKey": "api.SplitExtensionID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SplitExtensionID(extensionID string) (prefix, publisher, name string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SplitExtensionID(extensionID string) (prefix, publisher, name string, err error)\n```\n\nSplitExtensionID splits an extension ID of the form [host/]publisher/name (where [host/] is the optional registry prefix), such as \"alice/myextension\" or \"sourcegraph.example.com/bob/myextension\". It returns the components, or a non-nil error if parsing failed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#ParseExtensionID",
+              "documentation": {
+                "identifier": "ParseExtensionID",
+                "newPage": false,
+                "searchKey": "api.ParseExtensionID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseExtensionID(extensionID string) (prefix, extensionIDWithoutPrefix string, isLocal bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseExtensionID(extensionID string) (prefix, extensionIDWithoutPrefix string, isLocal bool, err error)\n```\n\nParseExtensionID parses an extension ID of the form [host/]publisher/name (where [host/] is the optional registry prefix), such as \"alice/myextension\" or \"sourcegraph.example.com/bob/myextension\". It validates that the registry prefix is correct given the current configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#GetExtensionByExtensionID",
+              "documentation": {
+                "identifier": "GetExtensionByExtensionID",
+                "newPage": false,
+                "searchKey": "api.GetExtensionByExtensionID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetExtensionByExtensionID(ctx context.Context, db dbutil.DB, extensionID string) (local graphqlbackend.RegistryExtension, remote *registry.Extension, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetExtensionByExtensionID(ctx context.Context, db dbutil.DB, extensionID string) (local graphqlbackend.RegistryExtension, remote *registry.Extension, err error)\n```\n\nGetExtensionByExtensionID gets the extension with the given extension ID. \n\nIt returns either a local or remote extension, depending on what the extension ID refers to. \n\nThe format of an extension ID is [host/]publisher/name. If the host is omitted, the host defaults to the remote registry specified in site configuration (usually sourcegraph.com). The host must be specified to refer to a local extension on the current Sourcegraph site (e.g., sourcegraph.example.com/publisher/name). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#getLocalRegistryName",
+              "documentation": {
+                "identifier": "getLocalRegistryName",
+                "newPage": false,
+                "searchKey": "api.getLocalRegistryName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getLocalRegistryName() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getLocalRegistryName() string\n```\n\ngetLocalRegistryName returns the name of the local registry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#GetLocalRegistryExtensionIDPrefix",
+              "documentation": {
+                "identifier": "GetLocalRegistryExtensionIDPrefix",
+                "newPage": false,
+                "searchKey": "api.GetLocalRegistryExtensionIDPrefix",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetLocalRegistryExtensionIDPrefix() *string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetLocalRegistryExtensionIDPrefix() *string\n```\n\nGetLocalRegistryExtensionIDPrefix returns the extension ID prefix (if any) of extensions in the local registry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#getRemoteRegistryURL",
+              "documentation": {
+                "identifier": "getRemoteRegistryURL",
+                "newPage": false,
+                "searchKey": "api.getRemoteRegistryURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRemoteRegistryURL() (*url.URL, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRemoteRegistryURL() (*url.URL, error)\n```\n\ngetRemoteRegistryURL returns the remote registry URL from site configuration, or nil if there is none. If an error exists while parsing the value in site configuration, the error is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#getRemoteRegistryExtension",
+              "documentation": {
+                "identifier": "getRemoteRegistryExtension",
+                "newPage": false,
+                "searchKey": "api.getRemoteRegistryExtension",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRemoteRegistryExtension(ctx context.Context, field, value string) (*registry.Extension, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRemoteRegistryExtension(ctx context.Context, field, value string) (*registry.Extension, error)\n```\n\ngetRemoteRegistryExtension gets the remote registry extension and rewrites its fields to be from the frame-of-reference of this site. The field is either \"uuid\" or \"extensionID\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#listRemoteRegistryExtensions",
+              "documentation": {
+                "identifier": "listRemoteRegistryExtensions",
+                "newPage": false,
+                "searchKey": "api.listRemoteRegistryExtensions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func listRemoteRegistryExtensions(ctx context.Context, query string) ([]*registry.Extension, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc listRemoteRegistryExtensions(ctx context.Context, query string) ([]*registry.Extension, error)\n```\n\nlistRemoteRegistryExtensions lists the remote registry extensions and rewrites their fields to be from the frame-of-reference of this site. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#GetFeaturedExtensions",
+              "documentation": {
+                "identifier": "GetFeaturedExtensions",
+                "newPage": false,
+                "searchKey": "api.GetFeaturedExtensions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetFeaturedExtensions(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryExtension, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetFeaturedExtensions(ctx context.Context, db dbutil.DB) ([]graphqlbackend.RegistryExtension, error)\n```\n\nGetFeaturedExtensions returns the set of featured extensions. \n\nIf this is sourcegraph.com, these are local extensions. Otherwise, these are remote extensions retrieved from sourcegraph.com. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#IsWorkInProgressExtension",
+              "documentation": {
+                "identifier": "IsWorkInProgressExtension",
+                "newPage": false,
+                "searchKey": "api.IsWorkInProgressExtension",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsWorkInProgressExtension(manifest *string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsWorkInProgressExtension(manifest *string) bool\n```\n\nIsWorkInProgressExtension reports whether the extension manifest indicates that this extension is marked as a work-in-progress extension (by having a \"wip\": true property, or (for backcompat) a title that begins with \"WIP:\" or \"[WIP]\"). \n\nBACKCOMPAT: This still supports titles even though extensions no longer have titles. In Feb 2019 it will probably be safe to remove the title handling. \n\nNOTE: Keep this pattern in sync with WorkInProgressExtensionTitlePostgreSQLPattern. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#FilterRegistryExtensions",
+              "documentation": {
+                "identifier": "FilterRegistryExtensions",
+                "newPage": false,
+                "searchKey": "api.FilterRegistryExtensions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FilterRegistryExtensions(extensions []*registry.Extension, query string) []*registry.Extension"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FilterRegistryExtensions(extensions []*registry.Extension, query string) []*registry.Extension\n```\n\nFilterRegistryExtensions returns the subset of extensions that match the query. It does not modify its arguments. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#FindRegistryExtension",
+              "documentation": {
+                "identifier": "FindRegistryExtension",
+                "newPage": false,
+                "searchKey": "api.FindRegistryExtension",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FindRegistryExtension(extensions []*registry.Extension, field, value string) *registry.Extension"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FindRegistryExtension(extensions []*registry.Extension, field, value string) *registry.Extension\n```\n\nFindRegistryExtension returns the first (and, hopefully, only, although that's not enforced) extension whose field matches the given value, or nil if none match. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "api.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#getExtensionByExtensionID",
+              "documentation": {
+                "identifier": "getExtensionByExtensionID",
+                "newPage": false,
+                "searchKey": "api.getExtensionByExtensionID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getExtensionByExtensionID(ctx context.Context, db dbutil.DB, extensionID string) (graphqlbackend.RegistryExtension, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getExtensionByExtensionID(ctx context.Context, db dbutil.DB, extensionID string) (graphqlbackend.RegistryExtension, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#TestSplitExtensionID",
+              "documentation": {
+                "identifier": "TestSplitExtensionID",
+                "newPage": false,
+                "searchKey": "api.TestSplitExtensionID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplitExtensionID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplitExtensionID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#TestParseExtensionID",
+              "documentation": {
+                "identifier": "TestParseExtensionID",
+                "newPage": false,
+                "searchKey": "api.TestParseExtensionID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseExtensionID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseExtensionID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#TestGetExtensionByExtensionID",
+              "documentation": {
+                "identifier": "TestGetExtensionByExtensionID",
+                "newPage": false,
+                "searchKey": "api.TestGetExtensionByExtensionID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetExtensionByExtensionID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetExtensionByExtensionID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#TestIsWorkInProgressExtension",
+              "documentation": {
+                "identifier": "TestIsWorkInProgressExtension",
+                "newPage": false,
+                "searchKey": "api.TestIsWorkInProgressExtension",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsWorkInProgressExtension(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsWorkInProgressExtension(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/registry/api#strptrptr",
+              "documentation": {
+                "identifier": "strptrptr",
+                "newPage": false,
+                "searchKey": "api.strptrptr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func strptrptr(s string) **string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc strptrptr(s string) **string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

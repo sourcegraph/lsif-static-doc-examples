@@ -1,0 +1,1232 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/auth/saml",
+  "documentation": {
+    "identifier": "saml",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/auth/saml",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package saml"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package saml provides HTTP middleware that provides the necessary endpoints for a SAML Service Provider (SP) to complete the SAML authentication flow to authenticate to the frontend. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/saml#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#authPrefix",
+              "documentation": {
+                "identifier": "authPrefix",
+                "newPage": false,
+                "searchKey": "saml.authPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const authPrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst authPrefix = auth.AuthURLPrefix + \"/saml\"\n```\n\nAll SAML endpoints are under this path prefix. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#providerType",
+              "documentation": {
+                "identifier": "providerType",
+                "newPage": false,
+                "searchKey": "saml.providerType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const providerType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst providerType = \"saml\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#testSAMLSPCert",
+              "documentation": {
+                "identifier": "testSAMLSPCert",
+                "newPage": false,
+                "searchKey": "saml.testSAMLSPCert",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testSAMLSPCert"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testSAMLSPCert = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#testSAMLSPKey",
+              "documentation": {
+                "identifier": "testSAMLSPKey",
+                "newPage": false,
+                "searchKey": "saml.testSAMLSPKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testSAMLSPKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testSAMLSPKey = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#testAuthnResponse",
+              "documentation": {
+                "identifier": "testAuthnResponse",
+                "newPage": false,
+                "searchKey": "saml.testAuthnResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testAuthnResponse"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testAuthnResponse = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/saml#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#mockGetProviderValue",
+              "documentation": {
+                "identifier": "mockGetProviderValue",
+                "newPage": false,
+                "searchKey": "saml.mockGetProviderValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mockGetProviderValue"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mockGetProviderValue *provider\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#traceLogEnabled",
+              "documentation": {
+                "identifier": "traceLogEnabled",
+                "newPage": false,
+                "searchKey": "saml.traceLogEnabled",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var traceLogEnabled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar traceLogEnabled, _ = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#Middleware",
+              "documentation": {
+                "identifier": "Middleware",
+                "newPage": false,
+                "searchKey": "saml.Middleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Middleware"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Middleware = ...\n```\n\nMiddleware is middleware for SAML authentication, adding endpoints under the auth path prefix to enable the login flow an requiring login for all other endpoints. \n\n🚨 SECURITY \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#idpCert",
+              "documentation": {
+                "identifier": "idpCert",
+                "newPage": false,
+                "searchKey": "saml.idpCert",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var idpCert"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar idpCert = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#idpKey",
+              "documentation": {
+                "identifier": "idpKey",
+                "newPage": false,
+                "searchKey": "saml.idpKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var idpKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar idpKey = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#idpCert2",
+              "documentation": {
+                "identifier": "idpCert2",
+                "newPage": false,
+                "searchKey": "saml.idpCert2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var idpCert2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar idpCert2 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/saml#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#relayState",
+              "documentation": {
+                "identifier": "relayState",
+                "newPage": false,
+                "searchKey": "saml.relayState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type relayState struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype relayState struct {\n\tProviderID  string `json:\"k\"`\n\tReturnToURL string `json:\"r\"`\n}\n```\n\nrelayState represents the decoded RelayState value in both the IdP-initiated and SP-initiated login flows. \n\nSAML overloads the term \"RelayState\". * In the SP-initiated login flow, it is an opaque value originated from the SP and reflected \n\n```\nback in the AuthnResponse. The Sourcegraph SP uses the base64-encoded JSON of this struct as\nthe RelayState.\n\n```\n* In the IdP-initiated login flow, the RelayState can be any arbitrary hint, but in practice \n\n```\nis the desired post-login redirect URL in plain text.\n\n```\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#relayState.encode",
+                    "documentation": {
+                      "identifier": "relayState.encode",
+                      "newPage": false,
+                      "searchKey": "saml.relayState.encode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *relayState) encode() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *relayState) encode() string\n```\n\nencode returns the base64-encoded JSON representation of the relay state. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#relayState.decode",
+                    "documentation": {
+                      "identifier": "relayState.decode",
+                      "newPage": false,
+                      "searchKey": "saml.relayState.decode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *relayState) decode(encoded string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *relayState) decode(encoded string)\n```\n\nDecode decodes the base64-encoded JSON representation of the relay state into the receiver. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#provider",
+              "documentation": {
+                "identifier": "provider",
+                "newPage": false,
+                "searchKey": "saml.provider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type provider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype provider struct {\n\tconfig   schema.SAMLAuthProvider\n\tmultiple bool // whether there are multiple SAML auth providers\n\n\tmu         sync.Mutex\n\tsamlSP     *saml2.SAMLServiceProvider\n\trefreshErr error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#getProvider",
+                    "documentation": {
+                      "identifier": "getProvider",
+                      "newPage": false,
+                      "searchKey": "saml.getProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getProvider(pcID string) *provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getProvider(pcID string) *provider\n```\n\ngetProvider looks up the registered saml auth provider with the given ID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#handleGetProvider",
+                    "documentation": {
+                      "identifier": "handleGetProvider",
+                      "newPage": false,
+                      "searchKey": "saml.handleGetProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func handleGetProvider(ctx context.Context, w http.ResponseWriter, pcID string) (p *provider, handled bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc handleGetProvider(ctx context.Context, w http.ResponseWriter, pcID string) (p *provider, handled bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#provider.ConfigID",
+                    "documentation": {
+                      "identifier": "provider.ConfigID",
+                      "newPage": false,
+                      "searchKey": "saml.provider.ConfigID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *provider) ConfigID() providers.ConfigID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *provider) ConfigID() providers.ConfigID\n```\n\nConfigID implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#provider.Config",
+                    "documentation": {
+                      "identifier": "provider.Config",
+                      "newPage": false,
+                      "searchKey": "saml.provider.Config",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *provider) Config() schema.AuthProviders"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *provider) Config() schema.AuthProviders\n```\n\nConfig implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#provider.Refresh",
+                    "documentation": {
+                      "identifier": "provider.Refresh",
+                      "newPage": false,
+                      "searchKey": "saml.provider.Refresh",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *provider) Refresh(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *provider) Refresh(ctx context.Context) error\n```\n\nRefresh implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#provider.getCachedInfoAndError",
+                    "documentation": {
+                      "identifier": "provider.getCachedInfoAndError",
+                      "newPage": false,
+                      "searchKey": "saml.provider.getCachedInfoAndError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *provider) getCachedInfoAndError() (*providers.Info, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *provider) getCachedInfoAndError() (*providers.Info, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#provider.CachedInfo",
+                    "documentation": {
+                      "identifier": "provider.CachedInfo",
+                      "newPage": false,
+                      "searchKey": "saml.provider.CachedInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *provider) CachedInfo() *providers.Info"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *provider) CachedInfo() *providers.Info\n```\n\nCachedInfo implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#entitiesDescriptor",
+              "documentation": {
+                "identifier": "entitiesDescriptor",
+                "newPage": false,
+                "searchKey": "saml.entitiesDescriptor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type entitiesDescriptor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype entitiesDescriptor struct {\n\tXMLName             xml.Name       `xml:\"urn:oasis:names:tc:SAML:2.0:metadata EntitiesDescriptor\"`\n\tID                  *string        `xml:\",attr,omitempty\"`\n\tValidUntil          *time.Time     `xml:\"validUntil,attr,omitempty\"`\n\tCacheDuration       *time.Duration `xml:\"cacheDuration,attr,omitempty\"`\n\tName                *string        `xml:\",attr,omitempty\"`\n\tSignature           *etree.Element\n\tEntitiesDescriptors []entitiesDescriptor     `xml:\"urn:oasis:names:tc:SAML:2.0:metadata EntitiesDescriptor\"`\n\tEntityDescriptors   []types.EntityDescriptor `xml:\"urn:oasis:names:tc:SAML:2.0:metadata EntityDescriptor\"`\n}\n```\n\nentitiesDescriptor represents the SAML EntitiesDescriptor object. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#providerConfig",
+              "documentation": {
+                "identifier": "providerConfig",
+                "newPage": false,
+                "searchKey": "saml.providerConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type providerConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype providerConfig struct {\n\tkeyPair *tls.Certificate\n\n\t// Exactly 1 of these is set:\n\tidentityProviderMetadataURL *url.URL\n\tidentityProviderMetadata    []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#readProviderConfig",
+                    "documentation": {
+                      "identifier": "readProviderConfig",
+                      "newPage": false,
+                      "searchKey": "saml.readProviderConfig",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func readProviderConfig(pc *schema.SAMLAuthProvider) (*providerConfig, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc readProviderConfig(pc *schema.SAMLAuthProvider) (*providerConfig, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#authnResponseInfo",
+              "documentation": {
+                "identifier": "authnResponseInfo",
+                "newPage": false,
+                "searchKey": "saml.authnResponseInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type authnResponseInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype authnResponseInfo struct {\n\tspec                 extsvc.AccountSpec\n\temail, displayName   string\n\tunnormalizedUsername string\n\taccountData          interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#readAuthnResponse",
+                    "documentation": {
+                      "identifier": "readAuthnResponse",
+                      "newPage": false,
+                      "searchKey": "saml.readAuthnResponse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func readAuthnResponse(p *provider, encodedResp string) (*authnResponseInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc readAuthnResponse(p *provider, encodedResp string) (*authnResponseInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#samlAssertionValues",
+              "documentation": {
+                "identifier": "samlAssertionValues",
+                "newPage": false,
+                "searchKey": "saml.samlAssertionValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type samlAssertionValues saml2.Values"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype samlAssertionValues saml2.Values\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/saml#samlAssertionValues.Get",
+                    "documentation": {
+                      "identifier": "samlAssertionValues.Get",
+                      "newPage": false,
+                      "searchKey": "saml.samlAssertionValues.Get",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v samlAssertionValues) Get(key string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v samlAssertionValues) Get(key string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/saml#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "saml.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#validateConfig",
+              "documentation": {
+                "identifier": "validateConfig",
+                "newPage": false,
+                "searchKey": "saml.validateConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateConfig(c conf.Unified) (problems conf.Problems)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateConfig(c conf.Unified) (problems conf.Problems)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#withConfigDefaults",
+              "documentation": {
+                "identifier": "withConfigDefaults",
+                "newPage": false,
+                "searchKey": "saml.withConfigDefaults",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func withConfigDefaults(pc *schema.SAMLAuthProvider) *schema.SAMLAuthProvider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc withConfigDefaults(pc *schema.SAMLAuthProvider) *schema.SAMLAuthProvider\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#getNameIDFormat",
+              "documentation": {
+                "identifier": "getNameIDFormat",
+                "newPage": false,
+                "searchKey": "saml.getNameIDFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getNameIDFormat(pc *schema.SAMLAuthProvider) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getNameIDFormat(pc *schema.SAMLAuthProvider) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#providerConfigID",
+              "documentation": {
+                "identifier": "providerConfigID",
+                "newPage": false,
+                "searchKey": "saml.providerConfigID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func providerConfigID(pc *schema.SAMLAuthProvider, multiple bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc providerConfigID(pc *schema.SAMLAuthProvider, multiple bool) string\n```\n\nproviderConfigID produces a semi-stable identifier for a saml auth provider config object. It is used to distinguish between multiple auth providers of the same type when in multi-step auth flows. Its value is never persisted, and it must be deterministic. \n\nIf there is only a single saml auth provider, it returns the empty string because that satisfies the requirements above. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#traceLog",
+              "documentation": {
+                "identifier": "traceLog",
+                "newPage": false,
+                "searchKey": "saml.traceLog",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func traceLog(description, body string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc traceLog(description, body string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#getProviders",
+              "documentation": {
+                "identifier": "getProviders",
+                "newPage": false,
+                "searchKey": "saml.getProviders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getProviders() []providers.Provider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getProviders() []providers.Provider\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "saml.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#authHandler",
+              "documentation": {
+                "identifier": "authHandler",
+                "newPage": false,
+                "searchKey": "saml.authHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func authHandler(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc authHandler(w http.ResponseWriter, r *http.Request, next http.Handler, isAPIRequest bool)\n```\n\nauthHandler is the new SAML HTTP auth handler. \n\nIt uses github.com/russelhaering/gosaml2 and (unlike authHandler1) makes it possible to support multiple auth providers with SAML and expose more SAML functionality. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#samlSPHandler",
+              "documentation": {
+                "identifier": "samlSPHandler",
+                "newPage": false,
+                "searchKey": "saml.samlSPHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func samlSPHandler(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc samlSPHandler(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#redirectToAuthURL",
+              "documentation": {
+                "identifier": "redirectToAuthURL",
+                "newPage": false,
+                "searchKey": "saml.redirectToAuthURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc redirectToAuthURL(w http.ResponseWriter, r *http.Request, p *provider, returnToURL string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#buildAuthURLRedirect",
+              "documentation": {
+                "identifier": "buildAuthURLRedirect",
+                "newPage": false,
+                "searchKey": "saml.buildAuthURLRedirect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildAuthURLRedirect(p *provider, relayState relayState) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildAuthURLRedirect(p *provider, relayState relayState) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#providerIDQuery",
+              "documentation": {
+                "identifier": "providerIDQuery",
+                "newPage": false,
+                "searchKey": "saml.providerIDQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc providerIDQuery(pc *schema.SAMLAuthProvider, multiple bool) url.Values\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#getServiceProvider",
+              "documentation": {
+                "identifier": "getServiceProvider",
+                "newPage": false,
+                "searchKey": "saml.getServiceProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getServiceProvider(ctx context.Context, pc *schema.SAMLAuthProvider) (*saml2.SAMLServiceProvider, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getServiceProvider(ctx context.Context, pc *schema.SAMLAuthProvider) (*saml2.SAMLServiceProvider, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#unmarshalEntityDescriptor",
+              "documentation": {
+                "identifier": "unmarshalEntityDescriptor",
+                "newPage": false,
+                "searchKey": "saml.unmarshalEntityDescriptor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unmarshalEntityDescriptor(data []byte) (*types.EntityDescriptor, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unmarshalEntityDescriptor(data []byte) (*types.EntityDescriptor, error)\n```\n\nunmarshalEntityDescriptor unmarshals from an XML root <EntityDescriptor> or <EntitiesDescriptor> element. If the latter, it returns the first <EntityDescriptor> child that has an IDPSSODescriptor. \n\nTaken from github.com/crewjam/saml. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#readIdentityProviderMetadata",
+              "documentation": {
+                "identifier": "readIdentityProviderMetadata",
+                "newPage": false,
+                "searchKey": "saml.readIdentityProviderMetadata",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readIdentityProviderMetadata(ctx context.Context, c *providerConfig) ([]byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#SignOut",
+              "documentation": {
+                "identifier": "SignOut",
+                "newPage": false,
+                "searchKey": "saml.SignOut",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SignOut(w http.ResponseWriter, r *http.Request) (logoutURL string, err error)\n```\n\nSignOut returns the URL where the user can initiate a logout from the SAML IdentityProvider, if it has a SingleLogoutService. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#getFirstProviderConfig",
+              "documentation": {
+                "identifier": "getFirstProviderConfig",
+                "newPage": false,
+                "searchKey": "saml.getFirstProviderConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getFirstProviderConfig() (pc *schema.SAMLAuthProvider, multiple bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getFirstProviderConfig() (pc *schema.SAMLAuthProvider, multiple bool)\n```\n\ngetFirstProviderConfig returns the SAML auth provider config. At most 1 can be specified in site config; if there is more than 1, it returns multiple == true (which the caller should handle by returning an error and refusing to proceed with auth). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#newLogoutRequest",
+              "documentation": {
+                "identifier": "newLogoutRequest",
+                "newPage": false,
+                "searchKey": "saml.newLogoutRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newLogoutRequest(p *provider) (*etree.Document, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newLogoutRequest(p *provider) (*etree.Document, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#getOrCreateUser",
+              "documentation": {
+                "identifier": "getOrCreateUser",
+                "newPage": false,
+                "searchKey": "saml.getOrCreateUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getOrCreateUser(ctx context.Context, allowSignup bool, info *authnResponseInfo) (_ *actor.Actor, safeErrMsg string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getOrCreateUser(ctx context.Context, allowSignup bool, info *authnResponseInfo) (_ *actor.Actor, safeErrMsg string, err error)\n```\n\ngetOrCreateUser gets or creates a user account based on the SAML claims. It returns the authenticated actor if successful; otherwise it returns an friendly error message (safeErrMsg) that is safe to display to users, and a non-nil err with lower-level error details. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#mightBeEmail",
+              "documentation": {
+                "identifier": "mightBeEmail",
+                "newPage": false,
+                "searchKey": "saml.mightBeEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mightBeEmail(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mightBeEmail(s string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#TestValidateCustom",
+              "documentation": {
+                "identifier": "TestValidateCustom",
+                "newPage": false,
+                "searchKey": "saml.TestValidateCustom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValidateCustom(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#TestProviderConfigID",
+              "documentation": {
+                "identifier": "TestProviderConfigID",
+                "newPage": false,
+                "searchKey": "saml.TestProviderConfigID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProviderConfigID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProviderConfigID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#newSAMLIDPServer",
+              "documentation": {
+                "identifier": "newSAMLIDPServer",
+                "newPage": false,
+                "searchKey": "saml.newSAMLIDPServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newSAMLIDPServer(t *testing.T) (*httptest.Server, *samlidp.Server)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newSAMLIDPServer(t *testing.T) (*httptest.Server, *samlidp.Server)\n```\n\nnewSAMLIDPServer returns a new running SAML IDP server. It is the caller's responsibility to call Close(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#TestMiddleware",
+              "documentation": {
+                "identifier": "TestMiddleware",
+                "newPage": false,
+                "searchKey": "saml.TestMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMiddleware(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMiddleware(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#unexpiredCookies",
+              "documentation": {
+                "identifier": "unexpiredCookies",
+                "newPage": false,
+                "searchKey": "saml.unexpiredCookies",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unexpiredCookies(resp *http.Response) (cookies []*http.Cookie)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unexpiredCookies(resp *http.Response) (cookies []*http.Cookie)\n```\n\nunexpiredCookies returns the list of unexpired cookies set by the response \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/saml#TestReadAuthnResponse",
+              "documentation": {
+                "identifier": "TestReadAuthnResponse",
+                "newPage": false,
+                "searchKey": "saml.TestReadAuthnResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAuthnResponse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAuthnResponse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

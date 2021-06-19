@@ -1,0 +1,298 @@
+{
+  "pathID": "/enterprise/cmd/precise-code-intel-worker",
+  "documentation": {
+    "identifier": "precise-code-intel-worker",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/precise-code-intel-worker",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "pathID": "/enterprise/cmd/precise-code-intel-worker/internal"
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/precise-code-intel-worker#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#addr",
+              "documentation": {
+                "identifier": "addr",
+                "newPage": false,
+                "searchKey": "main.addr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const addr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst addr = \":3188\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/precise-code-intel-worker#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#Config",
+              "documentation": {
+                "identifier": "Config",
+                "newPage": false,
+                "searchKey": "main.Config",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Config struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Config struct {\n\tenv.BaseConfig\n\n\tUploadStoreConfig  *uploadstore.Config\n\tWorkerPollInterval time.Duration\n\tWorkerConcurrency  int\n\tWorkerBudget       int64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/precise-code-intel-worker#Config.Load",
+                    "documentation": {
+                      "identifier": "Config.Load",
+                      "newPage": false,
+                      "searchKey": "main.Config.Load",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) Load()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) Load()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/precise-code-intel-worker#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustInitializeDB",
+              "documentation": {
+                "identifier": "mustInitializeDB",
+                "newPage": false,
+                "searchKey": "main.mustInitializeDB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustInitializeDB() *sql.DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustInitializeDB() *sql.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustInitializeCodeIntelDB",
+              "documentation": {
+                "identifier": "mustInitializeCodeIntelDB",
+                "newPage": false,
+                "searchKey": "main.mustInitializeCodeIntelDB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustInitializeCodeIntelDB() *sql.DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustInitializeCodeIntelDB() *sql.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#mustRegisterQueueMetric",
+              "documentation": {
+                "identifier": "mustRegisterQueueMetric",
+                "newPage": false,
+                "searchKey": "main.mustRegisterQueueMetric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustRegisterQueueMetric(observationContext *observation.Context, workerStore dbworkerstore.Store)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustRegisterQueueMetric(observationContext *observation.Context, workerStore dbworkerstore.Store)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#makeWorkerMetrics",
+              "documentation": {
+                "identifier": "makeWorkerMetrics",
+                "newPage": false,
+                "searchKey": "main.makeWorkerMetrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeWorkerMetrics(observationContext *observation.Context) workerutil.WorkerMetrics"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeWorkerMetrics(observationContext *observation.Context) workerutil.WorkerMetrics\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#initializeUploadStore",
+              "documentation": {
+                "identifier": "initializeUploadStore",
+                "newPage": false,
+                "searchKey": "main.initializeUploadStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initializeUploadStore(ctx context.Context, uploadStore uploadstore.Store) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initializeUploadStore(ctx context.Context, uploadStore uploadstore.Store) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/precise-code-intel-worker#isRequestError",
+              "documentation": {
+                "identifier": "isRequestError",
+                "newPage": false,
+                "searchKey": "main.isRequestError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isRequestError(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isRequestError(err error) bool\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

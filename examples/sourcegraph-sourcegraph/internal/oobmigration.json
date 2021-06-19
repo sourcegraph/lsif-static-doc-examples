@@ -1,0 +1,3504 @@
+{
+  "pathID": "/internal/oobmigration",
+  "documentation": {
+    "identifier": "oobmigration",
+    "newPage": true,
+    "searchKey": "internal/oobmigration",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package oobmigration"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/oobmigration#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#getByIDQuery",
+              "documentation": {
+                "identifier": "getByIDQuery",
+                "newPage": false,
+                "searchKey": "oobmigration.getByIDQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const getByIDQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst getByIDQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#listQuery",
+              "documentation": {
+                "identifier": "listQuery",
+                "newPage": false,
+                "searchKey": "oobmigration.listQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const listQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst listQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#updateDirectionQuery",
+              "documentation": {
+                "identifier": "updateDirectionQuery",
+                "newPage": false,
+                "searchKey": "oobmigration.updateDirectionQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const updateDirectionQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst updateDirectionQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#updateProgressQuery",
+              "documentation": {
+                "identifier": "updateProgressQuery",
+                "newPage": false,
+                "searchKey": "oobmigration.updateProgressQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const updateProgressQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst updateProgressQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MaxMigrationErrors",
+              "documentation": {
+                "identifier": "MaxMigrationErrors",
+                "newPage": false,
+                "searchKey": "oobmigration.MaxMigrationErrors",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaxMigrationErrors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaxMigrationErrors = 100\n```\n\nMaxMigrationErrors is the maximum number of errors we'll track for a single migration before pruning older entries. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#addErrorQuery",
+              "documentation": {
+                "identifier": "addErrorQuery",
+                "newPage": false,
+                "searchKey": "oobmigration.addErrorQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const addErrorQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst addErrorQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#addErrorUpdateTimeQuery",
+              "documentation": {
+                "identifier": "addErrorUpdateTimeQuery",
+                "newPage": false,
+                "searchKey": "oobmigration.addErrorUpdateTimeQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const addErrorUpdateTimeQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst addErrorUpdateTimeQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#addErrorPruneQuery",
+              "documentation": {
+                "identifier": "addErrorPruneQuery",
+                "newPage": false,
+                "searchKey": "oobmigration.addErrorPruneQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const addErrorPruneQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst addErrorPruneQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#VersionOrderBefore",
+              "documentation": {
+                "identifier": "VersionOrderBefore",
+                "newPage": false,
+                "searchKey": "oobmigration.VersionOrderBefore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const VersionOrderBefore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst VersionOrderBefore VersionOrder = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#VersionOrderEqual",
+              "documentation": {
+                "identifier": "VersionOrderEqual",
+                "newPage": false,
+                "searchKey": "oobmigration.VersionOrderEqual",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const VersionOrderEqual"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst VersionOrderEqual\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#VersionOrderAfter",
+              "documentation": {
+                "identifier": "VersionOrderAfter",
+                "newPage": false,
+                "searchKey": "oobmigration.VersionOrderAfter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const VersionOrderAfter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst VersionOrderAfter\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/oobmigration#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#ErrMigratorConflict",
+              "documentation": {
+                "identifier": "ErrMigratorConflict",
+                "newPage": false,
+                "searchKey": "oobmigration.ErrMigratorConflict",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrMigratorConflict"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrMigratorConflict = errors.New(\"migrator already registered\")\n```\n\nErrMigratorConflict occurs when multiple migrator instances are registered to the same out-of-band migration identifier. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#ReturnEnterpriseMigrations",
+              "documentation": {
+                "identifier": "ReturnEnterpriseMigrations",
+                "newPage": false,
+                "searchKey": "oobmigration.ReturnEnterpriseMigrations",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ReturnEnterpriseMigrations"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ReturnEnterpriseMigrations = false\n```\n\nReturnEnterpriseMigrations is set by the enterprise application to enable the inclusion of enterprise-only migration records in the output of oobmigration.List. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#testTime",
+              "documentation": {
+                "identifier": "testTime",
+                "newPage": false,
+                "searchKey": "oobmigration.testTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testTime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testTime = time.Unix(1613414740, 0)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#testMigrations",
+              "documentation": {
+                "identifier": "testMigrations",
+                "newPage": false,
+                "searchKey": "oobmigration.testMigrations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testMigrations"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testMigrations = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#testEnterpriseMigrations",
+              "documentation": {
+                "identifier": "testEnterpriseMigrations",
+                "newPage": false,
+                "searchKey": "oobmigration.testEnterpriseMigrations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testEnterpriseMigrations"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testEnterpriseMigrations = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/oobmigration#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#storeIface",
+              "documentation": {
+                "identifier": "storeIface",
+                "newPage": false,
+                "searchKey": "oobmigration.storeIface",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type storeIface interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype storeIface interface {\n\tList(ctx context.Context) ([]Migration, error)\n\tUpdateProgress(ctx context.Context, id int, progress float64) error\n\tAddError(ctx context.Context, id int, message string) error\n}\n```\n\nstoreIface is an interface of the Store methods used by Runner. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#Migrator",
+              "documentation": {
+                "identifier": "Migrator",
+                "newPage": false,
+                "searchKey": "oobmigration.Migrator",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Migrator interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Migrator interface {\n\t// Progress returns a percentage (in the range range [0, 1]) of data records that need\n\t// to be upgraded in the forward direction. A value of 1 means that no further action\n\t// is required. A value < 1 denotes that a future invocation of the Up method could\n\t// migrate additional data (excluding error conditions and prerequisite migrations).\n\tProgress(ctx context.Context) (float64, error)\n\n\t// Up runs a batch of the migration. This method is called repeatedly until the Progress\n\t// method reports completion. Errors returned from this method will be associated with the\n\t// migration record.\n\tUp(ctx context.Context) error\n\n\t// Down runs a batch of the migration in reverse. This does not need to be implemented\n\t// for migrations which are non-destructive. A non-destructive migration only adds data,\n\t// and does not transform fields that were read by previous versions of Sourcegraph and\n\t// therefore do not need to be undone prior to a downgrade.\n\tDown(ctx context.Context) error\n}\n```\n\nMigrator handles migrating data from one format into another in a way that cannot easily be done via the in-band migration mechanism. This may be due to a large amount of data, or a process that requires the results of an external API or non-SQL-compatible encoding (e.g., gob-encode or gzipped payloads). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#operations",
+              "documentation": {
+                "identifier": "operations",
+                "newPage": false,
+                "searchKey": "oobmigration.operations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type operations struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype operations struct {\n\tupForMigration   func(migrationID int) *observation.Operation\n\tdownForMigration func(migrationID int) *observation.Operation\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#newOperations",
+                    "documentation": {
+                      "identifier": "newOperations",
+                      "newPage": false,
+                      "searchKey": "oobmigration.newOperations",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newOperations(observationContext *observation.Context) *operations"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newOperations(observationContext *observation.Context) *operations\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#Runner",
+              "documentation": {
+                "identifier": "Runner",
+                "newPage": false,
+                "searchKey": "oobmigration.Runner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Runner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Runner struct {\n\tstore         storeIface\n\trefreshTicker glock.Ticker\n\toperations    *operations\n\tmigrators     map[int]migratorAndOption\n\tctx           context.Context    // root context passed to the handler\n\tcancel        context.CancelFunc // cancels the root context\n\tfinished      chan struct{}      // signals that Start has finished\n}\n```\n\nRunner correlates out-of-band migration records in the database with a migrator instance, and will run each migration that has no yet completed: either reached 100% in the forward direction or 0% in the reverse direction. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#NewRunnerWithDB",
+                    "documentation": {
+                      "identifier": "NewRunnerWithDB",
+                      "newPage": false,
+                      "searchKey": "oobmigration.NewRunnerWithDB",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewRunnerWithDB(db dbutil.DB, refreshInterval time.Duration, observationContext *observation.Context) *Runner"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewRunnerWithDB(db dbutil.DB, refreshInterval time.Duration, observationContext *observation.Context) *Runner\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#newRunner",
+                    "documentation": {
+                      "identifier": "newRunner",
+                      "newPage": false,
+                      "searchKey": "oobmigration.newRunner",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newRunner(store storeIface, refreshTicker glock.Ticker, observationContext *observation.Context) *Runner"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newRunner(store storeIface, refreshTicker glock.Ticker, observationContext *observation.Context) *Runner\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Runner.Register",
+                    "documentation": {
+                      "identifier": "Runner.Register",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Runner.Register",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Runner) Register(id int, migrator Migrator, options MigratorOptions) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Runner) Register(id int, migrator Migrator, options MigratorOptions) error\n```\n\nRegister correlates the given migrator with the given migration identifier. An error is returned if a migrator is already associated with this migration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Runner.Validate",
+                    "documentation": {
+                      "identifier": "Runner.Validate",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Runner.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Runner) Validate(ctx context.Context, currentVersion, firstVersion Version) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Runner) Validate(ctx context.Context, currentVersion, firstVersion Version) error\n```\n\nValidate checks the migration records present in the database (including their progress) and returns an error if there are unfinished migrations relative to the given version. Specifically, it is illegal for a Sourcegraph instance to start up with a migration that has one of the following properties: \n\n- A migration with progress != 0 is introduced _after_ the given version - A migration with progress != 1 is deprecated _on or before_ the given version \n\nThis error is used to block startup of the application with an informative message indicating that the site admin must either (1) run the previous version of Sourcegraph longer to allow the unfinished migrations to complete in the case of a premature upgrade, or (2) run a standalone migration utility to rewind changes on an unmoving database in the case of a premature downgrade. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Runner.Start",
+                    "documentation": {
+                      "identifier": "Runner.Start",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Runner.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Runner) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Runner) Start()\n```\n\nStart runs registered migrators on a loop until they complete. This method will periodically re-read from the database in order to refresh its current view of the migrations. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Runner.listMigrations",
+                    "documentation": {
+                      "identifier": "Runner.listMigrations",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Runner.listMigrations",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Runner) listMigrations(ctx context.Context) <-chan []Migration"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Runner) listMigrations(ctx context.Context) <-chan []Migration\n```\n\nlistMigrations returns a channel that will asynchronously receive the full list of out-of-band migrations that exist in the database. This channel will receive a value periodically as long as the given context is active. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Runner.ensureProcessorIsRunning",
+                    "documentation": {
+                      "identifier": "Runner.ensureProcessorIsRunning",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Runner.ensureProcessorIsRunning",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Runner) ensureProcessorIsRunning(wg *sync.WaitGroup, m map[int]chan Migration, id int, runMigrator func(<-chan Migration))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Runner) ensureProcessorIsRunning(wg *sync.WaitGroup, m map[int]chan Migration, id int, runMigrator func(<-chan Migration))\n```\n\nensureProcessorIsRunning ensures that there is a non-nil channel at m[id]. If this key is not set, a new channel is created and stored in this key. The channel is then passed to runMigrator in a goroutine. \n\nThis method logs the execution of the migration processor in the given wait group. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Runner.Stop",
+                    "documentation": {
+                      "identifier": "Runner.Stop",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Runner.Stop",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Runner) Stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Runner) Stop()\n```\n\nStop will cancel the context used in Start, then blocks until Start has returned. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#migratorAndOption",
+              "documentation": {
+                "identifier": "migratorAndOption",
+                "newPage": false,
+                "searchKey": "oobmigration.migratorAndOption",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type migratorAndOption struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype migratorAndOption struct {\n\tMigrator\n\tmigratorOptions\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MigratorOptions",
+              "documentation": {
+                "identifier": "MigratorOptions",
+                "newPage": false,
+                "searchKey": "oobmigration.MigratorOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MigratorOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MigratorOptions struct {\n\t// Interval specifies the time between invocations of an active migration.\n\tInterval time.Duration\n\n\t// ticker mocks periodic behavior for tests.\n\tticker glock.Ticker\n}\n```\n\nMigratorOptions configures the behavior of a registered migrator. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#migrationStatusError",
+              "documentation": {
+                "identifier": "migrationStatusError",
+                "newPage": false,
+                "searchKey": "oobmigration.migrationStatusError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type migrationStatusError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype migrationStatusError struct {\n\tid               int\n\texpectedProgress float64\n\tactualProgress   float64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#migrationStatusError.Error",
+                    "documentation": {
+                      "identifier": "migrationStatusError.Error",
+                      "newPage": false,
+                      "searchKey": "oobmigration.migrationStatusError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e migrationStatusError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e migrationStatusError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#migratorOptions",
+              "documentation": {
+                "identifier": "migratorOptions",
+                "newPage": false,
+                "searchKey": "oobmigration.migratorOptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type migratorOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype migratorOptions struct {\n\tticker glock.Ticker\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#Migration",
+              "documentation": {
+                "identifier": "Migration",
+                "newPage": false,
+                "searchKey": "oobmigration.Migration",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Migration struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Migration struct {\n\tID             int\n\tTeam           string\n\tComponent      string\n\tDescription    string\n\tIntroduced     Version\n\tDeprecated     *Version\n\tProgress       float64\n\tCreated        time.Time\n\tLastUpdated    *time.Time\n\tNonDestructive bool\n\tApplyReverse   bool\n\tErrors         []MigrationError\n}\n```\n\nMigration stores metadata and tracks progress of an out-of-band migration routine. These fields mirror the out_of_band_migrations table in the database. For docs see the [schema]([https://github.com/sourcegraph/sourcegraph/blob/main/internal/database/schema.md#table-publicout_of_band_migrations](https://github.com/sourcegraph/sourcegraph/blob/main/internal/database/schema.md#table-publicout_of_band_migrations)). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Migration.Complete",
+                    "documentation": {
+                      "identifier": "Migration.Complete",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Migration.Complete",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m Migration) Complete() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m Migration) Complete() bool\n```\n\nComplete returns true if the migration has 0 un-migrated record in whichever direction is indicated by the ApplyReverse flag. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MigrationError",
+              "documentation": {
+                "identifier": "MigrationError",
+                "newPage": false,
+                "searchKey": "oobmigration.MigrationError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MigrationError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MigrationError struct {\n\tMessage string\n\tCreated time.Time\n}\n```\n\nMigrationError pairs an error message and the time the error occurred. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "oobmigration.Store",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Store struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Store struct {\n\t*basestore.Store\n}\n```\n\nStore is the interface over the out-of-band migrations tables. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#NewStoreWithDB",
+                    "documentation": {
+                      "identifier": "NewStoreWithDB",
+                      "newPage": false,
+                      "searchKey": "oobmigration.NewStoreWithDB",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewStoreWithDB(db dbutil.DB) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewStoreWithDB(db dbutil.DB) *Store\n```\n\nNewStoreWithDB creates a new Store with the given database connection. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#testStore",
+                    "documentation": {
+                      "identifier": "testStore",
+                      "newPage": false,
+                      "searchKey": "oobmigration.testStore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func testStore(t *testing.T, db dbutil.DB) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc testStore(t *testing.T, db dbutil.DB) *Store\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.With",
+                    "documentation": {
+                      "identifier": "Store.With",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.With",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) With(other basestore.ShareableStore) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) With(other basestore.ShareableStore) *Store\n```\n\nWith creates a new store with the underlying database handle from the given store. This method should be used when two distinct store instances need to perform an operation within the same shared transaction. \n\nThis method wraps the basestore.With method. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.Transact",
+                    "documentation": {
+                      "identifier": "Store.Transact",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.Transact",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Transact(ctx context.Context) (*Store, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Transact(ctx context.Context) (*Store, error)\n```\n\nTransact returns a new store whose methods operate within the context of a new transaction or a new savepoint. This method will return an error if the underlying connection cannot be interface upgraded to a TxBeginner. \n\nThis method wraps the basestore.Transact method. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.GetByID",
+                    "documentation": {
+                      "identifier": "Store.GetByID",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.GetByID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) GetByID(ctx context.Context, id int) (_ Migration, _ bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) GetByID(ctx context.Context, id int) (_ Migration, _ bool, err error)\n```\n\nGetByID retrieves a migration by its identifier. If the migration does not exist, a false valued flag is returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.List",
+                    "documentation": {
+                      "identifier": "Store.List",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.List",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) List(ctx context.Context) (_ []Migration, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) List(ctx context.Context) (_ []Migration, err error)\n```\n\nList returns the complete list of out-of-band migrations. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.UpdateDirection",
+                    "documentation": {
+                      "identifier": "Store.UpdateDirection",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.UpdateDirection",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) UpdateDirection(ctx context.Context, id int, applyReverse bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) UpdateDirection(ctx context.Context, id int, applyReverse bool) error\n```\n\nUpdateDirection updates the direction for the given migration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.UpdateProgress",
+                    "documentation": {
+                      "identifier": "Store.UpdateProgress",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.UpdateProgress",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) UpdateProgress(ctx context.Context, id int, progress float64) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) UpdateProgress(ctx context.Context, id int, progress float64) error\n```\n\nUpdateProgress updates the progress for the given migration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.updateProgress",
+                    "documentation": {
+                      "identifier": "Store.updateProgress",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.updateProgress",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) updateProgress(ctx context.Context, id int, progress float64, now time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) updateProgress(ctx context.Context, id int, progress float64, now time.Time) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.AddError",
+                    "documentation": {
+                      "identifier": "Store.AddError",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.AddError",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) AddError(ctx context.Context, id int, message string) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) AddError(ctx context.Context, id int, message string) (err error)\n```\n\nAddError associates the given error message with the given migration. While there are more than MaxMigrationErrors errors for this, the oldest error entries will be pruned to keep the error list relevant and short. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Store.addError",
+                    "documentation": {
+                      "identifier": "Store.addError",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Store.addError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) addError(ctx context.Context, id int, message string, now time.Time) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) addError(ctx context.Context, id int, message string, now time.Time) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#Version",
+              "documentation": {
+                "identifier": "Version",
+                "newPage": false,
+                "searchKey": "oobmigration.Version",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Version struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Version struct {\n\tMajor int\n\tMinor int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#NewVersion",
+                    "documentation": {
+                      "identifier": "NewVersion",
+                      "newPage": false,
+                      "searchKey": "oobmigration.NewVersion",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewVersion(major, minor int) Version"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewVersion(major, minor int) Version\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#newVersionPtr",
+                    "documentation": {
+                      "identifier": "newVersionPtr",
+                      "newPage": false,
+                      "searchKey": "oobmigration.newVersionPtr",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newVersionPtr(major, minor int) *Version"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newVersionPtr(major, minor int) *Version\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#Version.String",
+                    "documentation": {
+                      "identifier": "Version.String",
+                      "newPage": false,
+                      "searchKey": "oobmigration.Version.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v Version) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v Version) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#VersionOrder",
+              "documentation": {
+                "identifier": "VersionOrder",
+                "newPage": false,
+                "searchKey": "oobmigration.VersionOrder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type VersionOrder int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype VersionOrder int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#compareVersions",
+                    "documentation": {
+                      "identifier": "compareVersions",
+                      "newPage": false,
+                      "searchKey": "oobmigration.compareVersions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func compareVersions(a, b Version) (VersionOrder, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc compareVersions(a, b Version) (VersionOrder, error)\n```\n\ncompareVersions returns the relationship between `a (op) b`. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MockMigrator",
+              "documentation": {
+                "identifier": "MockMigrator",
+                "newPage": false,
+                "searchKey": "oobmigration.MockMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockMigrator struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockMigrator struct {\n\t// DownFunc is an instance of a mock function object controlling the\n\t// behavior of the method Down.\n\tDownFunc *MigratorDownFunc\n\t// ProgressFunc is an instance of a mock function object controlling the\n\t// behavior of the method Progress.\n\tProgressFunc *MigratorProgressFunc\n\t// UpFunc is an instance of a mock function object controlling the\n\t// behavior of the method Up.\n\tUpFunc *MigratorUpFunc\n}\n```\n\nMockMigrator is a mock implementation of the Migrator interface (from the package github.com/sourcegraph/sourcegraph/internal/oobmigration) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#NewMockMigrator",
+                    "documentation": {
+                      "identifier": "NewMockMigrator",
+                      "newPage": false,
+                      "searchKey": "oobmigration.NewMockMigrator",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockMigrator() *MockMigrator"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockMigrator() *MockMigrator\n```\n\nNewMockMigrator creates a new mock of the Migrator interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#NewMockMigratorFrom",
+                    "documentation": {
+                      "identifier": "NewMockMigratorFrom",
+                      "newPage": false,
+                      "searchKey": "oobmigration.NewMockMigratorFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockMigratorFrom(i Migrator) *MockMigrator"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockMigratorFrom(i Migrator) *MockMigrator\n```\n\nNewMockMigratorFrom creates a new mock of the MockMigrator interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MockMigrator.Down",
+                    "documentation": {
+                      "identifier": "MockMigrator.Down",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MockMigrator.Down",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockMigrator) Down(v0 context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockMigrator) Down(v0 context.Context) error\n```\n\nDown delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MockMigrator.Progress",
+                    "documentation": {
+                      "identifier": "MockMigrator.Progress",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MockMigrator.Progress",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockMigrator) Progress(v0 context.Context) (float64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockMigrator) Progress(v0 context.Context) (float64, error)\n```\n\nProgress delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MockMigrator.Up",
+                    "documentation": {
+                      "identifier": "MockMigrator.Up",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MockMigrator.Up",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockMigrator) Up(v0 context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockMigrator) Up(v0 context.Context) error\n```\n\nUp delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MigratorDownFunc",
+              "documentation": {
+                "identifier": "MigratorDownFunc",
+                "newPage": false,
+                "searchKey": "oobmigration.MigratorDownFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MigratorDownFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MigratorDownFunc struct {\n\tdefaultHook func(context.Context) error\n\thooks       []func(context.Context) error\n\thistory     []MigratorDownFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nMigratorDownFunc describes the behavior when the Down method of the parent MockMigrator instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "MigratorDownFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorDownFunc) SetDefaultHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorDownFunc) SetDefaultHook(hook func(context.Context) error)\n```\n\nSetDefaultHook sets function that is called when the Down method of the parent MockMigrator instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFunc.PushHook",
+                    "documentation": {
+                      "identifier": "MigratorDownFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorDownFunc) PushHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorDownFunc) PushHook(hook func(context.Context) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Down method of the parent MockMigrator instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "MigratorDownFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorDownFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorDownFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "MigratorDownFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorDownFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorDownFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFunc.nextHook",
+                    "documentation": {
+                      "identifier": "MigratorDownFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorDownFunc) nextHook() func(context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorDownFunc) nextHook() func(context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFunc.appendCall",
+                    "documentation": {
+                      "identifier": "MigratorDownFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorDownFunc) appendCall(r0 MigratorDownFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorDownFunc) appendCall(r0 MigratorDownFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFunc.History",
+                    "documentation": {
+                      "identifier": "MigratorDownFunc.History",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorDownFunc) History() []MigratorDownFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorDownFunc) History() []MigratorDownFuncCall\n```\n\nHistory returns a sequence of MigratorDownFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MigratorDownFuncCall",
+              "documentation": {
+                "identifier": "MigratorDownFuncCall",
+                "newPage": false,
+                "searchKey": "oobmigration.MigratorDownFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MigratorDownFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MigratorDownFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nMigratorDownFuncCall is an object that describes an invocation of method Down on an instance of MockMigrator. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFuncCall.Args",
+                    "documentation": {
+                      "identifier": "MigratorDownFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c MigratorDownFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c MigratorDownFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorDownFuncCall.Results",
+                    "documentation": {
+                      "identifier": "MigratorDownFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorDownFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c MigratorDownFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c MigratorDownFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MigratorProgressFunc",
+              "documentation": {
+                "identifier": "MigratorProgressFunc",
+                "newPage": false,
+                "searchKey": "oobmigration.MigratorProgressFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MigratorProgressFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MigratorProgressFunc struct {\n\tdefaultHook func(context.Context) (float64, error)\n\thooks       []func(context.Context) (float64, error)\n\thistory     []MigratorProgressFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nMigratorProgressFunc describes the behavior when the Progress method of the parent MockMigrator instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "MigratorProgressFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorProgressFunc) SetDefaultHook(hook func(context.Context) (float64, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorProgressFunc) SetDefaultHook(hook func(context.Context) (float64, error))\n```\n\nSetDefaultHook sets function that is called when the Progress method of the parent MockMigrator instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFunc.PushHook",
+                    "documentation": {
+                      "identifier": "MigratorProgressFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorProgressFunc) PushHook(hook func(context.Context) (float64, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorProgressFunc) PushHook(hook func(context.Context) (float64, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Progress method of the parent MockMigrator instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "MigratorProgressFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorProgressFunc) SetDefaultReturn(r0 float64, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorProgressFunc) SetDefaultReturn(r0 float64, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "MigratorProgressFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorProgressFunc) PushReturn(r0 float64, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorProgressFunc) PushReturn(r0 float64, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFunc.nextHook",
+                    "documentation": {
+                      "identifier": "MigratorProgressFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorProgressFunc) nextHook() func(context.Context) (float64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorProgressFunc) nextHook() func(context.Context) (float64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFunc.appendCall",
+                    "documentation": {
+                      "identifier": "MigratorProgressFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorProgressFunc) appendCall(r0 MigratorProgressFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorProgressFunc) appendCall(r0 MigratorProgressFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFunc.History",
+                    "documentation": {
+                      "identifier": "MigratorProgressFunc.History",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorProgressFunc) History() []MigratorProgressFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorProgressFunc) History() []MigratorProgressFuncCall\n```\n\nHistory returns a sequence of MigratorProgressFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MigratorProgressFuncCall",
+              "documentation": {
+                "identifier": "MigratorProgressFuncCall",
+                "newPage": false,
+                "searchKey": "oobmigration.MigratorProgressFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MigratorProgressFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MigratorProgressFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 float64\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nMigratorProgressFuncCall is an object that describes an invocation of method Progress on an instance of MockMigrator. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFuncCall.Args",
+                    "documentation": {
+                      "identifier": "MigratorProgressFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c MigratorProgressFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c MigratorProgressFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorProgressFuncCall.Results",
+                    "documentation": {
+                      "identifier": "MigratorProgressFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorProgressFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c MigratorProgressFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c MigratorProgressFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MigratorUpFunc",
+              "documentation": {
+                "identifier": "MigratorUpFunc",
+                "newPage": false,
+                "searchKey": "oobmigration.MigratorUpFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MigratorUpFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MigratorUpFunc struct {\n\tdefaultHook func(context.Context) error\n\thooks       []func(context.Context) error\n\thistory     []MigratorUpFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nMigratorUpFunc describes the behavior when the Up method of the parent MockMigrator instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "MigratorUpFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorUpFunc) SetDefaultHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorUpFunc) SetDefaultHook(hook func(context.Context) error)\n```\n\nSetDefaultHook sets function that is called when the Up method of the parent MockMigrator instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFunc.PushHook",
+                    "documentation": {
+                      "identifier": "MigratorUpFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorUpFunc) PushHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorUpFunc) PushHook(hook func(context.Context) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Up method of the parent MockMigrator instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "MigratorUpFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorUpFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorUpFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "MigratorUpFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorUpFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorUpFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFunc.nextHook",
+                    "documentation": {
+                      "identifier": "MigratorUpFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorUpFunc) nextHook() func(context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorUpFunc) nextHook() func(context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFunc.appendCall",
+                    "documentation": {
+                      "identifier": "MigratorUpFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorUpFunc) appendCall(r0 MigratorUpFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorUpFunc) appendCall(r0 MigratorUpFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFunc.History",
+                    "documentation": {
+                      "identifier": "MigratorUpFunc.History",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *MigratorUpFunc) History() []MigratorUpFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *MigratorUpFunc) History() []MigratorUpFuncCall\n```\n\nHistory returns a sequence of MigratorUpFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MigratorUpFuncCall",
+              "documentation": {
+                "identifier": "MigratorUpFuncCall",
+                "newPage": false,
+                "searchKey": "oobmigration.MigratorUpFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MigratorUpFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MigratorUpFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nMigratorUpFuncCall is an object that describes an invocation of method Up on an instance of MockMigrator. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFuncCall.Args",
+                    "documentation": {
+                      "identifier": "MigratorUpFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c MigratorUpFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c MigratorUpFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MigratorUpFuncCall.Results",
+                    "documentation": {
+                      "identifier": "MigratorUpFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MigratorUpFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c MigratorUpFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c MigratorUpFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#MockStoreIface",
+              "documentation": {
+                "identifier": "MockStoreIface",
+                "newPage": false,
+                "searchKey": "oobmigration.MockStoreIface",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockStoreIface struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockStoreIface struct {\n\t// AddErrorFunc is an instance of a mock function object controlling the\n\t// behavior of the method AddError.\n\tAddErrorFunc *StoreIfaceAddErrorFunc\n\t// ListFunc is an instance of a mock function object controlling the\n\t// behavior of the method List.\n\tListFunc *StoreIfaceListFunc\n\t// UpdateProgressFunc is an instance of a mock function object\n\t// controlling the behavior of the method UpdateProgress.\n\tUpdateProgressFunc *StoreIfaceUpdateProgressFunc\n}\n```\n\nMockStoreIface is a mock implementation of the storeIface interface (from the package github.com/sourcegraph/sourcegraph/internal/oobmigration) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#NewMockStoreIface",
+                    "documentation": {
+                      "identifier": "NewMockStoreIface",
+                      "newPage": false,
+                      "searchKey": "oobmigration.NewMockStoreIface",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockStoreIface() *MockStoreIface"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockStoreIface() *MockStoreIface\n```\n\nNewMockStoreIface creates a new mock of the storeIface interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#NewMockStoreIfaceFrom",
+                    "documentation": {
+                      "identifier": "NewMockStoreIfaceFrom",
+                      "newPage": false,
+                      "searchKey": "oobmigration.NewMockStoreIfaceFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockStoreIfaceFrom(i surrogateMockStoreIface) *MockStoreIface"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockStoreIfaceFrom(i surrogateMockStoreIface) *MockStoreIface\n```\n\nNewMockStoreIfaceFrom creates a new mock of the MockStoreIface interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MockStoreIface.AddError",
+                    "documentation": {
+                      "identifier": "MockStoreIface.AddError",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MockStoreIface.AddError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStoreIface) AddError(v0 context.Context, v1 int, v2 string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStoreIface) AddError(v0 context.Context, v1 int, v2 string) error\n```\n\nAddError delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MockStoreIface.List",
+                    "documentation": {
+                      "identifier": "MockStoreIface.List",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MockStoreIface.List",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStoreIface) List(v0 context.Context) ([]Migration, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStoreIface) List(v0 context.Context) ([]Migration, error)\n```\n\nList delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#MockStoreIface.UpdateProgress",
+                    "documentation": {
+                      "identifier": "MockStoreIface.UpdateProgress",
+                      "newPage": false,
+                      "searchKey": "oobmigration.MockStoreIface.UpdateProgress",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStoreIface) UpdateProgress(v0 context.Context, v1 int, v2 float64) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStoreIface) UpdateProgress(v0 context.Context, v1 int, v2 float64) error\n```\n\nUpdateProgress delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#surrogateMockStoreIface",
+              "documentation": {
+                "identifier": "surrogateMockStoreIface",
+                "newPage": false,
+                "searchKey": "oobmigration.surrogateMockStoreIface",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type surrogateMockStoreIface interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype surrogateMockStoreIface interface {\n\tAddError(context.Context, int, string) error\n\tList(context.Context) ([]Migration, error)\n\tUpdateProgress(context.Context, int, float64) error\n}\n```\n\nsurrogateMockStoreIface is a copy of the storeIface interface (from the package github.com/sourcegraph/sourcegraph/internal/oobmigration). It is redefined here as it is unexported in the source package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#StoreIfaceAddErrorFunc",
+              "documentation": {
+                "identifier": "StoreIfaceAddErrorFunc",
+                "newPage": false,
+                "searchKey": "oobmigration.StoreIfaceAddErrorFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreIfaceAddErrorFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreIfaceAddErrorFunc struct {\n\tdefaultHook func(context.Context, int, string) error\n\thooks       []func(context.Context, int, string) error\n\thistory     []StoreIfaceAddErrorFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreIfaceAddErrorFunc describes the behavior when the AddError method of the parent MockStoreIface instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceAddErrorFunc) SetDefaultHook(hook func(context.Context, int, string) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceAddErrorFunc) SetDefaultHook(hook func(context.Context, int, string) error)\n```\n\nSetDefaultHook sets function that is called when the AddError method of the parent MockStoreIface instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceAddErrorFunc) PushHook(hook func(context.Context, int, string) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceAddErrorFunc) PushHook(hook func(context.Context, int, string) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the AddError method of the parent MockStoreIface instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceAddErrorFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceAddErrorFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceAddErrorFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceAddErrorFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceAddErrorFunc) nextHook() func(context.Context, int, string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceAddErrorFunc) nextHook() func(context.Context, int, string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceAddErrorFunc) appendCall(r0 StoreIfaceAddErrorFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceAddErrorFunc) appendCall(r0 StoreIfaceAddErrorFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFunc.History",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFunc.History",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceAddErrorFunc) History() []StoreIfaceAddErrorFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceAddErrorFunc) History() []StoreIfaceAddErrorFuncCall\n```\n\nHistory returns a sequence of StoreIfaceAddErrorFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#StoreIfaceAddErrorFuncCall",
+              "documentation": {
+                "identifier": "StoreIfaceAddErrorFuncCall",
+                "newPage": false,
+                "searchKey": "oobmigration.StoreIfaceAddErrorFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreIfaceAddErrorFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreIfaceAddErrorFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreIfaceAddErrorFuncCall is an object that describes an invocation of method AddError on an instance of MockStoreIface. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreIfaceAddErrorFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreIfaceAddErrorFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceAddErrorFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreIfaceAddErrorFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceAddErrorFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreIfaceAddErrorFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreIfaceAddErrorFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#StoreIfaceListFunc",
+              "documentation": {
+                "identifier": "StoreIfaceListFunc",
+                "newPage": false,
+                "searchKey": "oobmigration.StoreIfaceListFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreIfaceListFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreIfaceListFunc struct {\n\tdefaultHook func(context.Context) ([]Migration, error)\n\thooks       []func(context.Context) ([]Migration, error)\n\thistory     []StoreIfaceListFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreIfaceListFunc describes the behavior when the List method of the parent MockStoreIface instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceListFunc) SetDefaultHook(hook func(context.Context) ([]Migration, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceListFunc) SetDefaultHook(hook func(context.Context) ([]Migration, error))\n```\n\nSetDefaultHook sets function that is called when the List method of the parent MockStoreIface instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceListFunc) PushHook(hook func(context.Context) ([]Migration, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceListFunc) PushHook(hook func(context.Context) ([]Migration, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the List method of the parent MockStoreIface instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceListFunc) SetDefaultReturn(r0 []Migration, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceListFunc) SetDefaultReturn(r0 []Migration, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceListFunc) PushReturn(r0 []Migration, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceListFunc) PushReturn(r0 []Migration, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceListFunc) nextHook() func(context.Context) ([]Migration, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceListFunc) nextHook() func(context.Context) ([]Migration, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceListFunc) appendCall(r0 StoreIfaceListFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceListFunc) appendCall(r0 StoreIfaceListFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFunc.History",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFunc.History",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceListFunc) History() []StoreIfaceListFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceListFunc) History() []StoreIfaceListFuncCall\n```\n\nHistory returns a sequence of StoreIfaceListFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#StoreIfaceListFuncCall",
+              "documentation": {
+                "identifier": "StoreIfaceListFuncCall",
+                "newPage": false,
+                "searchKey": "oobmigration.StoreIfaceListFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreIfaceListFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreIfaceListFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 []Migration\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreIfaceListFuncCall is an object that describes an invocation of method List on an instance of MockStoreIface. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreIfaceListFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreIfaceListFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceListFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreIfaceListFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceListFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreIfaceListFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreIfaceListFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFunc",
+              "documentation": {
+                "identifier": "StoreIfaceUpdateProgressFunc",
+                "newPage": false,
+                "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreIfaceUpdateProgressFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreIfaceUpdateProgressFunc struct {\n\tdefaultHook func(context.Context, int, float64) error\n\thooks       []func(context.Context, int, float64) error\n\thistory     []StoreIfaceUpdateProgressFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreIfaceUpdateProgressFunc describes the behavior when the UpdateProgress method of the parent MockStoreIface instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.SetDefaultHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceUpdateProgressFunc) SetDefaultHook(hook func(context.Context, int, float64) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceUpdateProgressFunc) SetDefaultHook(hook func(context.Context, int, float64) error)\n```\n\nSetDefaultHook sets function that is called when the UpdateProgress method of the parent MockStoreIface instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.PushHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceUpdateProgressFunc) PushHook(hook func(context.Context, int, float64) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceUpdateProgressFunc) PushHook(hook func(context.Context, int, float64) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the UpdateProgress method of the parent MockStoreIface instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.SetDefaultReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceUpdateProgressFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceUpdateProgressFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.PushReturn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceUpdateProgressFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceUpdateProgressFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceUpdateProgressFunc) nextHook() func(context.Context, int, float64) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceUpdateProgressFunc) nextHook() func(context.Context, int, float64) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceUpdateProgressFunc) appendCall(r0 StoreIfaceUpdateProgressFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceUpdateProgressFunc) appendCall(r0 StoreIfaceUpdateProgressFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFunc.History",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFunc.History",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFunc.History",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreIfaceUpdateProgressFunc) History() []StoreIfaceUpdateProgressFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreIfaceUpdateProgressFunc) History() []StoreIfaceUpdateProgressFuncCall\n```\n\nHistory returns a sequence of StoreIfaceUpdateProgressFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFuncCall",
+              "documentation": {
+                "identifier": "StoreIfaceUpdateProgressFuncCall",
+                "newPage": false,
+                "searchKey": "oobmigration.StoreIfaceUpdateProgressFuncCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreIfaceUpdateProgressFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreIfaceUpdateProgressFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 float64\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreIfaceUpdateProgressFuncCall is an object that describes an invocation of method UpdateProgress on an instance of MockStoreIface. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFuncCall.Args",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreIfaceUpdateProgressFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreIfaceUpdateProgressFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/oobmigration#StoreIfaceUpdateProgressFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreIfaceUpdateProgressFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "oobmigration.StoreIfaceUpdateProgressFuncCall.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreIfaceUpdateProgressFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreIfaceUpdateProgressFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/oobmigration#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#newMigrationStatusError",
+              "documentation": {
+                "identifier": "newMigrationStatusError",
+                "newPage": false,
+                "searchKey": "oobmigration.newMigrationStatusError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newMigrationStatusError(id int, expectedProgress, actualProgress float64) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newMigrationStatusError(id int, expectedProgress, actualProgress float64) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#wrapMigrationErrors",
+              "documentation": {
+                "identifier": "wrapMigrationErrors",
+                "newPage": false,
+                "searchKey": "oobmigration.wrapMigrationErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func wrapMigrationErrors(errs ...error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc wrapMigrationErrors(errs ...error) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#runMigrator",
+              "documentation": {
+                "identifier": "runMigrator",
+                "newPage": false,
+                "searchKey": "oobmigration.runMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runMigrator(ctx context.Context, store storeIface, migrator Migrator, migrations <-chan Migration, options migratorOptions, operations *operations)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runMigrator(ctx context.Context, store storeIface, migrator Migrator, migrations <-chan Migration, options migratorOptions, operations *operations)\n```\n\nrunMigrator runs the given migrator function periodically (on each read from ticker) while the migration is not complete. We will periodically (on each read from migrations) update our current view of the migration progress and (more importantly) its direction. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#runMigrationFunction",
+              "documentation": {
+                "identifier": "runMigrationFunction",
+                "newPage": false,
+                "searchKey": "oobmigration.runMigrationFunction",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runMigrationFunction(ctx context.Context, store storeIface, migration *Migration, migrator Migrator, operations *operations) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runMigrationFunction(ctx context.Context, store storeIface, migration *Migration, migrator Migrator, operations *operations) error\n```\n\nrunMigrationFunction invokes the Up or Down method on the given migrator depending on the migration direction. If an error occurs, it will be associated in the database with the migration record. Regardless of the success of the migration function, the progress function on the migrator will be invoked and the progress written to the database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#updateProgress",
+              "documentation": {
+                "identifier": "updateProgress",
+                "newPage": false,
+                "searchKey": "oobmigration.updateProgress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateProgress(ctx context.Context, store storeIface, migration *Migration, migrator Migrator) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateProgress(ctx context.Context, store storeIface, migration *Migration, migrator Migrator) error\n```\n\nupdateProgress invokes the Progress method on the given migrator, updates the Progress field of the given migration record, and updates the record in the database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#runMigrationUp",
+              "documentation": {
+                "identifier": "runMigrationUp",
+                "newPage": false,
+                "searchKey": "oobmigration.runMigrationUp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runMigrationUp(ctx context.Context, migration *Migration, migrator Migrator, operations *operations) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runMigrationUp(ctx context.Context, migration *Migration, migrator Migrator, operations *operations) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#runMigrationDown",
+              "documentation": {
+                "identifier": "runMigrationDown",
+                "newPage": false,
+                "searchKey": "oobmigration.runMigrationDown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runMigrationDown(ctx context.Context, migration *Migration, migrator Migrator, operations *operations) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runMigrationDown(ctx context.Context, migration *Migration, migrator Migrator, operations *operations) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#scanMigrations",
+              "documentation": {
+                "identifier": "scanMigrations",
+                "newPage": false,
+                "searchKey": "oobmigration.scanMigrations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scanMigrations(rows *sql.Rows, queryErr error) (_ []Migration, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scanMigrations(rows *sql.Rows, queryErr error) (_ []Migration, err error)\n```\n\nscanMigrations scans a slice of migrations from the return value of `*Store.query`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunner",
+              "documentation": {
+                "identifier": "TestRunner",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunner",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunner(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunner(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunnerError",
+              "documentation": {
+                "identifier": "TestRunnerError",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunnerError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunnerError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunnerError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunnerRemovesCompleted",
+              "documentation": {
+                "identifier": "TestRunnerRemovesCompleted",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunnerRemovesCompleted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunnerRemovesCompleted(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunnerRemovesCompleted(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunMigrator",
+              "documentation": {
+                "identifier": "TestRunMigrator",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunMigrator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunMigrator(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunMigrator(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunMigratorMigrationErrors",
+              "documentation": {
+                "identifier": "TestRunMigratorMigrationErrors",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunMigratorMigrationErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunMigratorMigrationErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunMigratorMigrationErrors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunMigratorMigrationFinishesUp",
+              "documentation": {
+                "identifier": "TestRunMigratorMigrationFinishesUp",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunMigratorMigrationFinishesUp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunMigratorMigrationFinishesUp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunMigratorMigrationFinishesUp(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunMigratorMigrationFinishesDown",
+              "documentation": {
+                "identifier": "TestRunMigratorMigrationFinishesDown",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunMigratorMigrationFinishesDown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunMigratorMigrationFinishesDown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunMigratorMigrationFinishesDown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunMigratorMigrationChangesDirection",
+              "documentation": {
+                "identifier": "TestRunMigratorMigrationChangesDirection",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunMigratorMigrationChangesDirection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunMigratorMigrationChangesDirection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunMigratorMigrationChangesDirection(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunMigratorMigrationDesyncedFromData",
+              "documentation": {
+                "identifier": "TestRunMigratorMigrationDesyncedFromData",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunMigratorMigrationDesyncedFromData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunMigratorMigrationDesyncedFromData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunMigratorMigrationDesyncedFromData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#runMigratorWrapped",
+              "documentation": {
+                "identifier": "runMigratorWrapped",
+                "newPage": false,
+                "searchKey": "oobmigration.runMigratorWrapped",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runMigratorWrapped(store storeIface, migrator Migrator, ticker glock.Ticker, interact func(migrations chan<- Migration))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runMigratorWrapped(store storeIface, migrator Migrator, ticker glock.Ticker, interact func(migrations chan<- Migration))\n```\n\nrunMigratorWrapped creates a migrations channel, then passes it to both the runMigrator function and the given interact function, which execute concurrently. This channel can control the behavior of the migration controller from within the interact function. \n\nThis method blocks until both functions return. The return of the interact function cancels a context controlling the runMigrator main loop. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#tickN",
+              "documentation": {
+                "identifier": "tickN",
+                "newPage": false,
+                "searchKey": "oobmigration.tickN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tickN(ticker *glock.MockTicker, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tickN(ticker *glock.MockTicker, n int)\n```\n\ntickN advances the given ticker by one second n times with a guaranteed reader. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunnerValidate",
+              "documentation": {
+                "identifier": "TestRunnerValidate",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunnerValidate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunnerValidate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunnerValidate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunnerValidateUnfinishedUp",
+              "documentation": {
+                "identifier": "TestRunnerValidateUnfinishedUp",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunnerValidateUnfinishedUp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunnerValidateUnfinishedUp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunnerValidateUnfinishedUp(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestRunnerValidateUnfinishedDown",
+              "documentation": {
+                "identifier": "TestRunnerValidateUnfinishedDown",
+                "newPage": false,
+                "searchKey": "oobmigration.TestRunnerValidateUnfinishedDown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunnerValidateUnfinishedDown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunnerValidateUnfinishedDown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "oobmigration.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestList",
+              "documentation": {
+                "identifier": "TestList",
+                "newPage": false,
+                "searchKey": "oobmigration.TestList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestList(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestList(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestListEnterprise",
+              "documentation": {
+                "identifier": "TestListEnterprise",
+                "newPage": false,
+                "searchKey": "oobmigration.TestListEnterprise",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestListEnterprise(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestListEnterprise(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestUpdateDirection",
+              "documentation": {
+                "identifier": "TestUpdateDirection",
+                "newPage": false,
+                "searchKey": "oobmigration.TestUpdateDirection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdateDirection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdateDirection(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestUpdateProgress",
+              "documentation": {
+                "identifier": "TestUpdateProgress",
+                "newPage": false,
+                "searchKey": "oobmigration.TestUpdateProgress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdateProgress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdateProgress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestAddError",
+              "documentation": {
+                "identifier": "TestAddError",
+                "newPage": false,
+                "searchKey": "oobmigration.TestAddError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestAddErrorBounded",
+              "documentation": {
+                "identifier": "TestAddErrorBounded",
+                "newPage": false,
+                "searchKey": "oobmigration.TestAddErrorBounded",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddErrorBounded(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddErrorBounded(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#timePtr",
+              "documentation": {
+                "identifier": "timePtr",
+                "newPage": false,
+                "searchKey": "oobmigration.timePtr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func timePtr(t time.Time) *time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc timePtr(t time.Time) *time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#insertMigration",
+              "documentation": {
+                "identifier": "insertMigration",
+                "newPage": false,
+                "searchKey": "oobmigration.insertMigration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func insertMigration(store *Store, migration Migration, enterpriseOnly bool) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc insertMigration(store *Store, migration Migration, enterpriseOnly bool) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/oobmigration#TestCompareVersions",
+              "documentation": {
+                "identifier": "TestCompareVersions",
+                "newPage": false,
+                "searchKey": "oobmigration.TestCompareVersions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCompareVersions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCompareVersions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

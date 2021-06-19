@@ -1,0 +1,315 @@
+{
+  "pathID": "/internal/sysreq",
+  "documentation": {
+    "identifier": "sysreq",
+    "newPage": true,
+    "searchKey": "internal/sysreq",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package sysreq"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package sysreq implements checking for Sourcegraph system requirements. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/sysreq#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/sysreq#checks",
+              "documentation": {
+                "identifier": "checks",
+                "newPage": false,
+                "searchKey": "sysreq.checks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var checks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar checks = []check{\n\t{\n\t\tName:  \"Rlimit\",\n\t\tCheck: rlimitCheck,\n\t},\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/sysreq#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/sysreq#Status",
+              "documentation": {
+                "identifier": "Status",
+                "newPage": false,
+                "searchKey": "sysreq.Status",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Status struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Status struct {\n\tName    string // the required component\n\tProblem string // if non-empty, a description of the problem\n\tFix     string // if non-empty, how to fix the problem\n\tErr     error  // if non-nil, the error encountered\n\tSkipped bool   // if true, indicates this check was skipped\n}\n```\n\nStatus describes the status of a system requirement. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/sysreq#Status.OK",
+                    "documentation": {
+                      "identifier": "Status.OK",
+                      "newPage": false,
+                      "searchKey": "sysreq.Status.OK",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Status) OK() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Status) OK() bool\n```\n\nOK is whether the component is present, has no errors, and was not skipped. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/sysreq#Status.Failed",
+                    "documentation": {
+                      "identifier": "Status.Failed",
+                      "newPage": false,
+                      "searchKey": "sysreq.Status.Failed",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Status) Failed() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Status) Failed() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sysreq#check",
+              "documentation": {
+                "identifier": "check",
+                "newPage": false,
+                "searchKey": "sysreq.check",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type check struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype check struct {\n\tName  string\n\tCheck CheckFunc\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sysreq#CheckFunc",
+              "documentation": {
+                "identifier": "CheckFunc",
+                "newPage": false,
+                "searchKey": "sysreq.CheckFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CheckFunc func(context.Context) (problem string, fix string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CheckFunc func(context.Context) (problem, fix string, err error)\n```\n\nCheckFunc is a function that checks for a system requirement. If any of problem, fix, or err are non-zero, then the system requirement check is deemed to have failed. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/sysreq#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/sysreq#Check",
+              "documentation": {
+                "identifier": "Check",
+                "newPage": false,
+                "searchKey": "sysreq.Check",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Check(ctx context.Context, skip []string) []Status"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Check(ctx context.Context, skip []string) []Status\n```\n\nCheck checks for the presence of system requirements, such as Docker and Git. The skip list contains case-insensitive names of requirement checks (such as \"Docker\" and \"Git\") that should be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sysreq#AddCheck",
+              "documentation": {
+                "identifier": "AddCheck",
+                "newPage": false,
+                "searchKey": "sysreq.AddCheck",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AddCheck(name string, fn CheckFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AddCheck(name string, fn CheckFunc)\n```\n\nAddCheck adds a new check that will be run when this package's Check func is called. It is used by other packages to specify system requirements. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sysreq#rlimitCheck",
+              "documentation": {
+                "identifier": "rlimitCheck",
+                "newPage": false,
+                "searchKey": "sysreq.rlimitCheck",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func rlimitCheck(ctx context.Context) (problem, fix string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc rlimitCheck(ctx context.Context) (problem, fix string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sysreq#TestCheck",
+              "documentation": {
+                "identifier": "TestCheck",
+                "newPage": false,
+                "searchKey": "sysreq.TestCheck",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCheck(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCheck(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/sysreq#TestCheck_skip",
+              "documentation": {
+                "identifier": "TestCheck_skip",
+                "newPage": false,
+                "searchKey": "sysreq.TestCheck_skip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCheck_skip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCheck_skip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

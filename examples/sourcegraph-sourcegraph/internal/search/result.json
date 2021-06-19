@@ -1,0 +1,1846 @@
+{
+  "pathID": "/internal/search/result",
+  "documentation": {
+    "identifier": "result",
+    "newPage": true,
+    "searchKey": "internal/search/result",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package result"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/search/result#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/result#rankFileMatch",
+              "documentation": {
+                "identifier": "rankFileMatch",
+                "newPage": false,
+                "searchKey": "result.rankFileMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rankFileMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rankFileMatch = 0\n```\n\nMatch ranks are used for sorting the different match types. Match types with lower ranks will be sorted before match types with higher ranks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#rankCommitMatch",
+              "documentation": {
+                "identifier": "rankCommitMatch",
+                "newPage": false,
+                "searchKey": "result.rankCommitMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rankCommitMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rankCommitMatch = 1\n```\n\nMatch ranks are used for sorting the different match types. Match types with lower ranks will be sorted before match types with higher ranks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#rankDiffMatch",
+              "documentation": {
+                "identifier": "rankDiffMatch",
+                "newPage": false,
+                "searchKey": "result.rankDiffMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rankDiffMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rankDiffMatch = 2\n```\n\nMatch ranks are used for sorting the different match types. Match types with lower ranks will be sorted before match types with higher ranks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#rankRepoMatch",
+              "documentation": {
+                "identifier": "rankRepoMatch",
+                "newPage": false,
+                "searchKey": "result.rankRepoMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rankRepoMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rankRepoMatch = 3\n```\n\nMatch ranks are used for sorting the different match types. Match types with lower ranks will be sorted before match types with higher ranks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TypeEmpty",
+              "documentation": {
+                "identifier": "TypeEmpty",
+                "newPage": false,
+                "searchKey": "result.TypeEmpty",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeEmpty"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeEmpty Types = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TypeRepo",
+              "documentation": {
+                "identifier": "TypeRepo",
+                "newPage": false,
+                "searchKey": "result.TypeRepo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeRepo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeRepo Types = 1 << (iota - 1)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TypeSymbol",
+              "documentation": {
+                "identifier": "TypeSymbol",
+                "newPage": false,
+                "searchKey": "result.TypeSymbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeSymbol"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeSymbol\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TypeFile",
+              "documentation": {
+                "identifier": "TypeFile",
+                "newPage": false,
+                "searchKey": "result.TypeFile",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeFile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeFile\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TypePath",
+              "documentation": {
+                "identifier": "TypePath",
+                "newPage": false,
+                "searchKey": "result.TypePath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypePath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypePath\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TypeDiff",
+              "documentation": {
+                "identifier": "TypeDiff",
+                "newPage": false,
+                "searchKey": "result.TypeDiff",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeDiff"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeDiff\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TypeCommit",
+              "documentation": {
+                "identifier": "TypeCommit",
+                "newPage": false,
+                "searchKey": "result.TypeCommit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeCommit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeCommit\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/result#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/result#TypeFromString",
+              "documentation": {
+                "identifier": "TypeFromString",
+                "newPage": false,
+                "searchKey": "result.TypeFromString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var TypeFromString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar TypeFromString = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#toSelectKind",
+              "documentation": {
+                "identifier": "toSelectKind",
+                "newPage": false,
+                "searchKey": "result.toSelectKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var toSelectKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar toSelectKind = ...\n```\n\ntoSelectKind maps an internal symbol kind (cf. ctagsKind) to a corresponding symbol selector kind value in select.go. The single selector value `kind` corresponds 1-to-1 with LSP symbol kinds. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/result#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/result#CommitMatch",
+              "documentation": {
+                "identifier": "CommitMatch",
+                "newPage": false,
+                "searchKey": "result.CommitMatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitMatch struct {\n\tCommit         git.Commit\n\tRepo           types.RepoName\n\tRefs           []string\n\tSourceRefs     []string\n\tMessagePreview *HighlightedString\n\tDiffPreview    *HighlightedString\n\tBody           HighlightedString\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.ResultCount",
+                    "documentation": {
+                      "identifier": "CommitMatch.ResultCount",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.ResultCount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) ResultCount() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) ResultCount() int\n```\n\nResultCount for CommitSearchResult returns the number of highlights if there are highlights and 1 otherwise. We implemented this method because we want to return a more meaningful result count for streaming while maintaining backward compatibility for our GraphQL API. The GraphQL API calls ResultCount on the resolver, while streaming calls ResultCount on CommitSearchResult. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.RepoName",
+                    "documentation": {
+                      "identifier": "CommitMatch.RepoName",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.RepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) RepoName() types.RepoName"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) RepoName() types.RepoName\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.Limit",
+                    "documentation": {
+                      "identifier": "CommitMatch.Limit",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.Limit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) Limit(limit int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) Limit(limit int) int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.Select",
+                    "documentation": {
+                      "identifier": "CommitMatch.Select",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.Select",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) Select(path filter.SelectPath) Match"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) Select(path filter.SelectPath) Match\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.Key",
+                    "documentation": {
+                      "identifier": "CommitMatch.Key",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) Key() Key"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) Key() Key\n```\n\nKey implements Match interface's Key() method \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.Label",
+                    "documentation": {
+                      "identifier": "CommitMatch.Label",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.Label",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) Label() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) Label() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.Detail",
+                    "documentation": {
+                      "identifier": "CommitMatch.Detail",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.Detail",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) Detail() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) Detail() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.URL",
+                    "documentation": {
+                      "identifier": "CommitMatch.URL",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.URL",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) URL() *url.URL"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) URL() *url.URL\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#CommitMatch.searchResultMarker",
+                    "documentation": {
+                      "identifier": "CommitMatch.searchResultMarker",
+                      "newPage": false,
+                      "searchKey": "result.CommitMatch.searchResultMarker",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *CommitMatch) searchResultMarker()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *CommitMatch) searchResultMarker()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#deduper",
+              "documentation": {
+                "identifier": "deduper",
+                "newPage": false,
+                "searchKey": "result.deduper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type deduper map[result.Key]result.Match"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype deduper map[Key]Match\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#NewDeduper",
+                    "documentation": {
+                      "identifier": "NewDeduper",
+                      "newPage": false,
+                      "searchKey": "result.NewDeduper",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewDeduper() deduper"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewDeduper() deduper\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#deduper.Add",
+                    "documentation": {
+                      "identifier": "deduper.Add",
+                      "newPage": false,
+                      "searchKey": "result.deduper.Add",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d deduper) Add(m Match)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d deduper) Add(m Match)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#deduper.Seen",
+                    "documentation": {
+                      "identifier": "deduper.Seen",
+                      "newPage": false,
+                      "searchKey": "result.deduper.Seen",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d deduper) Seen(m Match) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d deduper) Seen(m Match) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#deduper.Results",
+                    "documentation": {
+                      "identifier": "deduper.Results",
+                      "newPage": false,
+                      "searchKey": "result.deduper.Results",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d deduper) Results() []Match"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d deduper) Results() []Match\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#File",
+              "documentation": {
+                "identifier": "File",
+                "newPage": false,
+                "searchKey": "result.File",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type File struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype File struct {\n\t// InputRev is the Git revspec that the user originally requested to search. It is used to\n\t// preserve the original revision specifier from the user instead of navigating them to the\n\t// absolute commit ID when they select a result.\n\tInputRev *string        `json:\"-\"`\n\tRepo     types.RepoName `json:\"-\"`\n\tCommitID api.CommitID   `json:\"-\"`\n\tPath     string\n}\n```\n\nFile represents all the information we need to identify a file in a repository \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#File.URL",
+                    "documentation": {
+                      "identifier": "File.URL",
+                      "newPage": false,
+                      "searchKey": "result.File.URL",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) URL() *url.URL"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) URL() *url.URL\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#FileMatch",
+              "documentation": {
+                "identifier": "FileMatch",
+                "newPage": false,
+                "searchKey": "result.FileMatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileMatch struct {\n\tFile\n\n\tLineMatches []*LineMatch\n\tSymbols     []*SymbolMatch `json:\"-\"`\n\n\tLimitHit bool\n}\n```\n\nFileMatch represents either: - A collection of symbol results (len(Symbols) > 0) - A collection of text content results (len(LineMatches) > 0) - A result repsenting the whole file (len(Symbols) == 0 && len(LineMatches) == 0) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#FileMatch.RepoName",
+                    "documentation": {
+                      "identifier": "FileMatch.RepoName",
+                      "newPage": false,
+                      "searchKey": "result.FileMatch.RepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fm *FileMatch) RepoName() types.RepoName"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fm *FileMatch) RepoName() types.RepoName\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#FileMatch.searchResultMarker",
+                    "documentation": {
+                      "identifier": "FileMatch.searchResultMarker",
+                      "newPage": false,
+                      "searchKey": "result.FileMatch.searchResultMarker",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fm *FileMatch) searchResultMarker()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fm *FileMatch) searchResultMarker()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#FileMatch.ResultCount",
+                    "documentation": {
+                      "identifier": "FileMatch.ResultCount",
+                      "newPage": false,
+                      "searchKey": "result.FileMatch.ResultCount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fm *FileMatch) ResultCount() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fm *FileMatch) ResultCount() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#FileMatch.Select",
+                    "documentation": {
+                      "identifier": "FileMatch.Select",
+                      "newPage": false,
+                      "searchKey": "result.FileMatch.Select",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fm *FileMatch) Select(path filter.SelectPath) Match"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fm *FileMatch) Select(path filter.SelectPath) Match\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#FileMatch.AppendMatches",
+                    "documentation": {
+                      "identifier": "FileMatch.AppendMatches",
+                      "newPage": false,
+                      "searchKey": "result.FileMatch.AppendMatches",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fm *FileMatch) AppendMatches(src *FileMatch)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fm *FileMatch) AppendMatches(src *FileMatch)\n```\n\nAppendMatches appends the line matches from src as well as updating match counts and limit. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#FileMatch.Limit",
+                    "documentation": {
+                      "identifier": "FileMatch.Limit",
+                      "newPage": false,
+                      "searchKey": "result.FileMatch.Limit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fm *FileMatch) Limit(limit int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fm *FileMatch) Limit(limit int) int\n```\n\nLimit will mutate fm such that it only has limit results. limit is a number greater than 0. \n\n```\nif limit >= ResultCount then nothing is done and we return limit - ResultCount.\nif limit < ResultCount then ResultCount becomes limit and we return 0.\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#FileMatch.Key",
+                    "documentation": {
+                      "identifier": "FileMatch.Key",
+                      "newPage": false,
+                      "searchKey": "result.FileMatch.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fm *FileMatch) Key() Key"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fm *FileMatch) Key() Key\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#LineMatch",
+              "documentation": {
+                "identifier": "LineMatch",
+                "newPage": false,
+                "searchKey": "result.LineMatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LineMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LineMatch struct {\n\tPreview          string\n\tOffsetAndLengths [][2]int32\n\tLineNumber       int32\n}\n```\n\nLineMatch is the struct used by vscode to receive search results for a line \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#HighlightedRange",
+              "documentation": {
+                "identifier": "HighlightedRange",
+                "newPage": false,
+                "searchKey": "result.HighlightedRange",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type HighlightedRange struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype HighlightedRange struct {\n\tLine      int32\n\tCharacter int32\n\tLength    int32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#HighlightedString",
+              "documentation": {
+                "identifier": "HighlightedString",
+                "newPage": false,
+                "searchKey": "result.HighlightedString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type HighlightedString struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype HighlightedString struct {\n\tValue      string\n\tHighlights []HighlightedRange\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#Match",
+              "documentation": {
+                "identifier": "Match",
+                "newPage": false,
+                "searchKey": "result.Match",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Match interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Match interface {\n\tResultCount() int\n\tLimit(int) int\n\tSelect(filter.SelectPath) Match\n\tRepoName() types.RepoName\n\n\t// Key returns a key which uniquely identifies this match.\n\tKey() Key\n\n\t// ensure only types in this package can be a Match.\n\tsearchResultMarker()\n}\n```\n\nMatch is *FileMatch | *RepoMatch | *CommitMatch. We have a private method to ensure only those types implement Match. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#selectCommitDiffKind",
+                    "documentation": {
+                      "identifier": "selectCommitDiffKind",
+                      "newPage": false,
+                      "searchKey": "result.selectCommitDiffKind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func selectCommitDiffKind(c *CommitMatch, field string) Match"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc selectCommitDiffKind(c *CommitMatch, field string) Match\n```\n\nselectCommitDiffKind returns a commit match `c` if it contains `added` (resp. `removed`) lines set by `field. It ensures that highlight information only applies to the modified lines selected by `field`. If there are no matches (i.e., no highlight information) coresponding to modified lines, it is removed from the result set (returns nil). \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#Key",
+              "documentation": {
+                "identifier": "Key",
+                "newPage": false,
+                "searchKey": "result.Key",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Key struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Key struct {\n\t// Repo is the name of the repo the match belongs to\n\tRepo api.RepoName\n\n\t// Rev is the revision associated with the repo if it exists\n\tRev string\n\n\t// Commit is the commit hash of the commit the match belongs to.\n\t// Empty if there is no commit associated with the match (e.g. RepoMatch)\n\tCommit api.CommitID\n\n\t// Path is the path of the file the match belongs to.\n\t// Empty if there is no file associated with the match (e.g. RepoMatch or CommitMatch)\n\tPath string\n\n\t// TypeRank is the sorting rank of the type this key belongs to.\n\tTypeRank int\n}\n```\n\nKey is a sorting or deduplicating key for a Match. It contains all the identifying information for the Match. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Key.Less",
+                    "documentation": {
+                      "identifier": "Key.Less",
+                      "newPage": false,
+                      "searchKey": "result.Key.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k Key) Less(other Key) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k Key) Less(other Key) bool\n```\n\nLess compares one key to another for sorting \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#Matches",
+              "documentation": {
+                "identifier": "Matches",
+                "newPage": false,
+                "searchKey": "result.Matches",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Matches []result.Match"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Matches []Match\n```\n\nMatches implements sort.Interface \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Matches.Len",
+                    "documentation": {
+                      "identifier": "Matches.Len",
+                      "newPage": false,
+                      "searchKey": "result.Matches.Len",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m Matches) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m Matches) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Matches.Less",
+                    "documentation": {
+                      "identifier": "Matches.Less",
+                      "newPage": false,
+                      "searchKey": "result.Matches.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m Matches) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m Matches) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Matches.Swap",
+                    "documentation": {
+                      "identifier": "Matches.Swap",
+                      "newPage": false,
+                      "searchKey": "result.Matches.Swap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m Matches) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m Matches) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#RepoMatch",
+              "documentation": {
+                "identifier": "RepoMatch",
+                "newPage": false,
+                "searchKey": "result.RepoMatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoMatch struct {\n\tName api.RepoName\n\tID   api.RepoID\n\n\t// rev optionally specifies a revision to go to for search results.\n\tRev string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#RepoMatch.RepoName",
+                    "documentation": {
+                      "identifier": "RepoMatch.RepoName",
+                      "newPage": false,
+                      "searchKey": "result.RepoMatch.RepoName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r RepoMatch) RepoName() types.RepoName"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r RepoMatch) RepoName() types.RepoName\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#RepoMatch.Limit",
+                    "documentation": {
+                      "identifier": "RepoMatch.Limit",
+                      "newPage": false,
+                      "searchKey": "result.RepoMatch.Limit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r RepoMatch) Limit(limit int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r RepoMatch) Limit(limit int) int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#RepoMatch.ResultCount",
+                    "documentation": {
+                      "identifier": "RepoMatch.ResultCount",
+                      "newPage": false,
+                      "searchKey": "result.RepoMatch.ResultCount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepoMatch) ResultCount() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepoMatch) ResultCount() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#RepoMatch.Select",
+                    "documentation": {
+                      "identifier": "RepoMatch.Select",
+                      "newPage": false,
+                      "searchKey": "result.RepoMatch.Select",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepoMatch) Select(path filter.SelectPath) Match"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepoMatch) Select(path filter.SelectPath) Match\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#RepoMatch.URL",
+                    "documentation": {
+                      "identifier": "RepoMatch.URL",
+                      "newPage": false,
+                      "searchKey": "result.RepoMatch.URL",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepoMatch) URL() *url.URL"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepoMatch) URL() *url.URL\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#RepoMatch.Key",
+                    "documentation": {
+                      "identifier": "RepoMatch.Key",
+                      "newPage": false,
+                      "searchKey": "result.RepoMatch.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepoMatch) Key() Key"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepoMatch) Key() Key\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#RepoMatch.searchResultMarker",
+                    "documentation": {
+                      "identifier": "RepoMatch.searchResultMarker",
+                      "newPage": false,
+                      "searchKey": "result.RepoMatch.searchResultMarker",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepoMatch) searchResultMarker()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepoMatch) searchResultMarker()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#Types",
+              "documentation": {
+                "identifier": "Types",
+                "newPage": false,
+                "searchKey": "result.Types",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Types uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Types uint8\n```\n\nTypes represents a set of result types. It's a bitset corresponding to the disjunction of types it represents. \n\nFor example, the set of file and repo results is represented as Types(TypeFile|TypeRepo) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Types.Has",
+                    "documentation": {
+                      "identifier": "Types.Has",
+                      "newPage": false,
+                      "searchKey": "result.Types.Has",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r Types) Has(t Types) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r Types) Has(t Types) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Types.With",
+                    "documentation": {
+                      "identifier": "Types.With",
+                      "newPage": false,
+                      "searchKey": "result.Types.With",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r Types) With(t Types) Types"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r Types) With(t Types) Types\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Types.Without",
+                    "documentation": {
+                      "identifier": "Types.Without",
+                      "newPage": false,
+                      "searchKey": "result.Types.Without",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r Types) Without(t Types) Types"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r Types) Without(t Types) Types\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Types.String",
+                    "documentation": {
+                      "identifier": "Types.String",
+                      "newPage": false,
+                      "searchKey": "result.Types.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r Types) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r Types) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#Symbol",
+              "documentation": {
+                "identifier": "Symbol",
+                "newPage": false,
+                "searchKey": "result.Symbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Symbol struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Symbol struct {\n\tName string\n\n\t// TODO (@camdencheek): remove path since it's duplicated\n\t// in the file reference of symbol match. Alternatively,\n\t// merge Symbol and SymbolMatch.\n\tPath       string\n\tLine       int\n\tKind       string\n\tLanguage   string\n\tParent     string\n\tParentKind string\n\tSignature  string\n\tPattern    string\n\n\tFileLimited bool\n}\n```\n\nSymbol is a code symbol. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Symbol.LSPKind",
+                    "documentation": {
+                      "identifier": "Symbol.LSPKind",
+                      "newPage": false,
+                      "searchKey": "result.Symbol.LSPKind",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Symbol) LSPKind() lsp.SymbolKind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Symbol) LSPKind() lsp.SymbolKind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Symbol.offset",
+                    "documentation": {
+                      "identifier": "Symbol.offset",
+                      "newPage": false,
+                      "searchKey": "result.Symbol.offset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Symbol) offset() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Symbol) offset() int\n```\n\noffset calculates a symbol offset based on the the only Symbol data member that currently exposes line content: the symbols Pattern member, which has the form /^ ... $/. We find the offset of the symbol name in this line, after escaping the Pattern. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#Symbol.Range",
+                    "documentation": {
+                      "identifier": "Symbol.Range",
+                      "newPage": false,
+                      "searchKey": "result.Symbol.Range",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Symbol) Range() lsp.Range"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Symbol) Range() lsp.Range\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#Symbols",
+              "documentation": {
+                "identifier": "Symbols",
+                "newPage": false,
+                "searchKey": "result.Symbols",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Symbols []result.Symbol"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Symbols = []Symbol\n```\n\nSymbols is the result of a search on the symbols service. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#SymbolMatch",
+              "documentation": {
+                "identifier": "SymbolMatch",
+                "newPage": false,
+                "searchKey": "result.SymbolMatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SymbolMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SymbolMatch struct {\n\tSymbol Symbol\n\tFile   *File\n}\n```\n\nSymbolMatch is a symbol search result decorated with extra metadata in the frontend. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search/result#SymbolMatch.URL",
+                    "documentation": {
+                      "identifier": "SymbolMatch.URL",
+                      "newPage": false,
+                      "searchKey": "result.SymbolMatch.URL",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SymbolMatch) URL() *url.URL"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SymbolMatch) URL() *url.URL\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search/result#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search/result#displayRepoName",
+              "documentation": {
+                "identifier": "displayRepoName",
+                "newPage": false,
+                "searchKey": "result.displayRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func displayRepoName(repoPath string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc displayRepoName(repoPath string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#selectModifiedLines",
+              "documentation": {
+                "identifier": "selectModifiedLines",
+                "newPage": false,
+                "searchKey": "result.selectModifiedLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func selectModifiedLines(lines []string, highlights []HighlightedRange, prefix string, offset int32) []HighlightedRange"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc selectModifiedLines(lines []string, highlights []HighlightedRange, prefix string, offset int32) []HighlightedRange\n```\n\nselectModifiedLines extracts the highlight ranges that correspond to lines that have a `+` or `-` prefix (corresponding to additions resp. removals). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#modifiedLinesExist",
+              "documentation": {
+                "identifier": "modifiedLinesExist",
+                "newPage": false,
+                "searchKey": "result.modifiedLinesExist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func modifiedLinesExist(lines []string, prefix string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc modifiedLinesExist(lines []string, prefix string) bool\n```\n\nmodifiedLinesExist checks whether any `line` in lines starts with `prefix`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#unescapePattern",
+              "documentation": {
+                "identifier": "unescapePattern",
+                "newPage": false,
+                "searchKey": "result.unescapePattern",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unescapePattern(pattern string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unescapePattern(pattern string) string\n```\n\nunescapePattern expects a regexp pattern of the form /^ ... $/ and unescapes the pattern inside it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#urlFragmentFromRange",
+              "documentation": {
+                "identifier": "urlFragmentFromRange",
+                "newPage": false,
+                "searchKey": "result.urlFragmentFromRange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func urlFragmentFromRange(lspRange lsp.Range) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc urlFragmentFromRange(lspRange lsp.Range) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#lineSpecFromPosition",
+              "documentation": {
+                "identifier": "lineSpecFromPosition",
+                "newPage": false,
+                "searchKey": "result.lineSpecFromPosition",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lineSpecFromPosition(pos lsp.Position, forceIncludeCharacter bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lineSpecFromPosition(pos lsp.Position, forceIncludeCharacter bool) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#pick",
+              "documentation": {
+                "identifier": "pick",
+                "newPage": false,
+                "searchKey": "result.pick",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pick(symbols []*SymbolMatch, satisfy func(*SymbolMatch) bool) []*SymbolMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pick(symbols []*SymbolMatch, satisfy func(*SymbolMatch) bool) []*SymbolMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#SelectSymbolKind",
+              "documentation": {
+                "identifier": "SelectSymbolKind",
+                "newPage": false,
+                "searchKey": "result.SelectSymbolKind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SelectSymbolKind(symbols []*SymbolMatch, field string) []*SymbolMatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SelectSymbolKind(symbols []*SymbolMatch, field string) []*SymbolMatch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TestDeduper",
+              "documentation": {
+                "identifier": "TestDeduper",
+                "newPage": false,
+                "searchKey": "result.TestDeduper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDeduper(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDeduper(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TestSelect",
+              "documentation": {
+                "identifier": "TestSelect",
+                "newPage": false,
+                "searchKey": "result.TestSelect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSelect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSelect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TestSymbolRange",
+              "documentation": {
+                "identifier": "TestSymbolRange",
+                "newPage": false,
+                "searchKey": "result.TestSymbolRange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSymbolRange(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSymbolRange(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search/result#TestSymbolURL",
+              "documentation": {
+                "identifier": "TestSymbolURL",
+                "newPage": false,
+                "searchKey": "result.TestSymbolURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSymbolURL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSymbolURL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

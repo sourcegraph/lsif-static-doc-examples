@@ -1,0 +1,1132 @@
+{
+  "pathID": "/cmd/server/shared",
+  "documentation": {
+    "identifier": "shared",
+    "newPage": true,
+    "searchKey": "cmd/server/shared",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package shared"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package shared provides the entrypoint to Sourcegraph's single docker image. It has functionality to setup the shared environment variables, as well as create the Procfile for goreman to run. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/server/shared#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#prometheusProcLine",
+              "documentation": {
+                "identifier": "prometheusProcLine",
+                "newPage": false,
+                "searchKey": "shared.prometheusProcLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const prometheusProcLine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst prometheusProcLine = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#grafanaProcLine",
+              "documentation": {
+                "identifier": "grafanaProcLine",
+                "newPage": false,
+                "searchKey": "shared.grafanaProcLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const grafanaProcLine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst grafanaProcLine = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#jaegerProcLine",
+              "documentation": {
+                "identifier": "jaegerProcLine",
+                "newPage": false,
+                "searchKey": "shared.jaegerProcLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const jaegerProcLine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst jaegerProcLine = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#FrontendInternalHost",
+              "documentation": {
+                "identifier": "FrontendInternalHost",
+                "newPage": false,
+                "searchKey": "shared.FrontendInternalHost",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FrontendInternalHost"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FrontendInternalHost = \"127.0.0.1:3090\"\n```\n\nFrontendInternalHost is the value of SRC_FRONTEND_INTERNAL. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/server/shared#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#SrcProfServices",
+              "documentation": {
+                "identifier": "SrcProfServices",
+                "newPage": false,
+                "searchKey": "shared.SrcProfServices",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SrcProfServices"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SrcProfServices = ...\n```\n\nSrcProfServices defines the default value for SRC_PROF_SERVICES. \n\nIf it is modified by an external package, it must be modified immediately on startup, before `shared.Main` is called. \n\nThis should be kept in sync with dev/src-prof-services.json. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#ProcfileAdditions",
+              "documentation": {
+                "identifier": "ProcfileAdditions",
+                "newPage": false,
+                "searchKey": "shared.ProcfileAdditions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ProcfileAdditions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ProcfileAdditions []string\n```\n\nProcfileAdditions is a list of Procfile lines that should be added to the emitted Procfile that defines the services configuration. \n\nIf it is modified by an external package, it must be modified immediately on startup, before `shared.Main` is called. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#DataDir",
+              "documentation": {
+                "identifier": "DataDir",
+                "newPage": false,
+                "searchKey": "shared.DataDir",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DataDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DataDir = SetDefaultEnv(\"DATA_DIR\", \"/var/opt/sourcegraph\")\n```\n\nDataDir is the root directory for storing persistent data. It should NOT be modified by any external package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#databases",
+              "documentation": {
+                "identifier": "databases",
+                "newPage": false,
+                "searchKey": "shared.databases",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var databases"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar databases = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#logLevelConverter",
+              "documentation": {
+                "identifier": "logLevelConverter",
+                "newPage": false,
+                "searchKey": "shared.logLevelConverter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var logLevelConverter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar logLevelConverter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#redisStoreConfTmpl",
+              "documentation": {
+                "identifier": "redisStoreConfTmpl",
+                "newPage": false,
+                "searchKey": "shared.redisStoreConfTmpl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var redisStoreConfTmpl"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar redisStoreConfTmpl = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#redisCacheConfTmpl",
+              "documentation": {
+                "identifier": "redisCacheConfTmpl",
+                "newPage": false,
+                "searchKey": "shared.redisCacheConfTmpl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var redisCacheConfTmpl"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar redisCacheConfTmpl = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#DefaultEnv",
+              "documentation": {
+                "identifier": "DefaultEnv",
+                "newPage": false,
+                "searchKey": "shared.DefaultEnv",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DefaultEnv"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DefaultEnv = ...\n```\n\nDefaultEnv is environment variables that will be set if not already set. \n\nIf it is modified by an external package, it must be modified immediately on startup, before `shared.Main` is called. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#verbose",
+              "documentation": {
+                "identifier": "verbose",
+                "newPage": false,
+                "searchKey": "shared.verbose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var verbose"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar verbose = os.Getenv(\"SRC_LOG_LEVEL\") == \"dbug\" || os.Getenv(\"SRC_LOG_LEVEL\") == \"info\"\n```\n\nSet verbosity based on simple interpretation of env var to avoid external dependencies (such as on github.com/sourcegraph/sourcegraph/internal/env). \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/server/shared#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#execer",
+              "documentation": {
+                "identifier": "execer",
+                "newPage": false,
+                "searchKey": "shared.execer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type execer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype execer struct {\n\t// Out if set will write the command, stdout and stderr to it\n\tOut io.Writer\n\t// Working directory of the command.\n\tDir string\n\n\terr error\n}\n```\n\nexecer wraps exec.Command, but acts like \"set -x\". If a command fails, all future commands will return the original error. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/server/shared#execer.Command",
+                    "documentation": {
+                      "identifier": "execer.Command",
+                      "newPage": false,
+                      "searchKey": "shared.execer.Command",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *execer) Command(name string, arg ...string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *execer) Command(name string, arg ...string)\n```\n\nCommand creates an exec.Command connected to stdout/stderr and runs it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/server/shared#execer.Run",
+                    "documentation": {
+                      "identifier": "execer.Run",
+                      "newPage": false,
+                      "searchKey": "shared.execer.Run",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *execer) Run(cmd *exec.Cmd)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *execer) Run(cmd *exec.Cmd)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/server/shared#execer.CommandWithFilter",
+                    "documentation": {
+                      "identifier": "execer.CommandWithFilter",
+                      "newPage": false,
+                      "searchKey": "shared.execer.CommandWithFilter",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *execer) CommandWithFilter(errorFilter errorFilter, name string, arg ...string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *execer) CommandWithFilter(errorFilter errorFilter, name string, arg ...string)\n```\n\nCommandWithFilter is like Command but will not set an error on the command object if the given error filter returns false. The command filter is given both the (non-nil) error value and the output of the command. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/server/shared#execer.RunWithFilter",
+                    "documentation": {
+                      "identifier": "execer.RunWithFilter",
+                      "newPage": false,
+                      "searchKey": "shared.execer.RunWithFilter",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *execer) RunWithFilter(errorFilter errorFilter, cmd *exec.Cmd)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *execer) RunWithFilter(errorFilter errorFilter, cmd *exec.Cmd)\n```\n\nRunWithFilter is like Run but will not set an error on the command object if the given error filter returns false. The command filter is given both the (non-nil) error value and the output of the command. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/server/shared#execer.Error",
+                    "documentation": {
+                      "identifier": "execer.Error",
+                      "newPage": false,
+                      "searchKey": "shared.execer.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e execer) Error() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e execer) Error() error\n```\n\nError returns the first error encountered. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#errorFilter",
+              "documentation": {
+                "identifier": "errorFilter",
+                "newPage": false,
+                "searchKey": "shared.errorFilter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errorFilter func(err error, out string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errorFilter func(err error, out string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#redisProcfileConfig",
+              "documentation": {
+                "identifier": "redisProcfileConfig",
+                "newPage": false,
+                "searchKey": "shared.redisProcfileConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type redisProcfileConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype redisProcfileConfig struct {\n\tenvVar  string\n\tname    string\n\tport    string\n\ttmpl    *template.Template\n\tdataDir string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#yesReader",
+              "documentation": {
+                "identifier": "yesReader",
+                "newPage": false,
+                "searchKey": "shared.yesReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type yesReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype yesReader struct {\n\tExpletive []byte\n\toffset    int\n}\n```\n\nyesReader simulates the output of the \"yes\" command. \n\nIt is equivalent to bytes.NewReader(bytes.Repeat(Expletive, infinity)) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/server/shared#yesReader.Read",
+                    "documentation": {
+                      "identifier": "yesReader.Read",
+                      "newPage": false,
+                      "searchKey": "shared.yesReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *yesReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *yesReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/server/shared#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#SetDefaultEnv",
+              "documentation": {
+                "identifier": "SetDefaultEnv",
+                "newPage": false,
+                "searchKey": "shared.SetDefaultEnv",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetDefaultEnv(k, v string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetDefaultEnv(k, v string) string\n```\n\nSetDefaultEnv will set the environment variable if it is not set. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#copyConfigs",
+              "documentation": {
+                "identifier": "copyConfigs",
+                "newPage": false,
+                "searchKey": "shared.copyConfigs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copyConfigs() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copyConfigs() error\n```\n\ncopyConfigs will copy /etc/sourcegraph/{netrc,gitconfig} to locations read by other tools. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#copySSH",
+              "documentation": {
+                "identifier": "copySSH",
+                "newPage": false,
+                "searchKey": "shared.copySSH",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copySSH() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copySSH() error\n```\n\ncopySSH will copy the files at /etc/sourcegraph/ssh and put them into ~/.ssh \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#defaultErrorFilter",
+              "documentation": {
+                "identifier": "defaultErrorFilter",
+                "newPage": false,
+                "searchKey": "shared.defaultErrorFilter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func defaultErrorFilter(err error, out string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc defaultErrorFilter(err error, out string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#maybeMinio",
+              "documentation": {
+                "identifier": "maybeMinio",
+                "newPage": false,
+                "searchKey": "shared.maybeMinio",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maybeMinio() []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maybeMinio() []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#maybeMonitoring",
+              "documentation": {
+                "identifier": "maybeMonitoring",
+                "newPage": false,
+                "searchKey": "shared.maybeMonitoring",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maybeMonitoring() ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maybeMonitoring() ([]string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#nginxProcFile",
+              "documentation": {
+                "identifier": "nginxProcFile",
+                "newPage": false,
+                "searchKey": "shared.nginxProcFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nginxProcFile() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nginxProcFile() (string, error)\n```\n\nnginxProcFile will return a procfile entry for nginx, as well as setup configuration for it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#nginxWriteFiles",
+              "documentation": {
+                "identifier": "nginxWriteFiles",
+                "newPage": false,
+                "searchKey": "shared.nginxWriteFiles",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nginxWriteFiles(configDir string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nginxWriteFiles(configDir string) (string, error)\n```\n\nnginxWriteFiles writes the nginx related configuration files to configDir. It returns the path to the main nginx.conf. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#maybePostgresProcFile",
+              "documentation": {
+                "identifier": "maybePostgresProcFile",
+                "newPage": false,
+                "searchKey": "shared.maybePostgresProcFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maybePostgresProcFile() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maybePostgresProcFile() (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#postgresProcfile",
+              "documentation": {
+                "identifier": "postgresProcfile",
+                "newPage": false,
+                "searchKey": "shared.postgresProcfile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func postgresProcfile() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc postgresProcfile() (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#fileExists",
+              "documentation": {
+                "identifier": "fileExists",
+                "newPage": false,
+                "searchKey": "shared.fileExists",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fileExists(path string) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fileExists(path string) (bool, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#isPostgresConfigured",
+              "documentation": {
+                "identifier": "isPostgresConfigured",
+                "newPage": false,
+                "searchKey": "shared.isPostgresConfigured",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isPostgresConfigured(prefix string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isPostgresConfigured(prefix string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#pgPrintf",
+              "documentation": {
+                "identifier": "pgPrintf",
+                "newPage": false,
+                "searchKey": "shared.pgPrintf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pgPrintf(format string, args ...interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pgPrintf(format string, args ...interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#convertLogLevel",
+              "documentation": {
+                "identifier": "convertLogLevel",
+                "newPage": false,
+                "searchKey": "shared.convertLogLevel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func convertLogLevel(level string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc convertLogLevel(level string) string\n```\n\nconvertLogLevel converts a sourcegraph log level (dbug, info, warn, error, crit) into values postgres exporter accepts (debug, info, warn, error, fatal) If value cannot be converted returns \"warn\" which seems like a good middle-ground. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#maybeRedisStoreProcFile",
+              "documentation": {
+                "identifier": "maybeRedisStoreProcFile",
+                "newPage": false,
+                "searchKey": "shared.maybeRedisStoreProcFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maybeRedisStoreProcFile() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maybeRedisStoreProcFile() (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#maybeRedisCacheProcFile",
+              "documentation": {
+                "identifier": "maybeRedisCacheProcFile",
+                "newPage": false,
+                "searchKey": "shared.maybeRedisCacheProcFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maybeRedisCacheProcFile() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maybeRedisCacheProcFile() (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#maybeRedisProcFile",
+              "documentation": {
+                "identifier": "maybeRedisProcFile",
+                "newPage": false,
+                "searchKey": "shared.maybeRedisProcFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maybeRedisProcFile(c redisProcfileConfig) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maybeRedisProcFile(c redisProcfileConfig) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#tryCreateRedisConf",
+              "documentation": {
+                "identifier": "tryCreateRedisConf",
+                "newPage": false,
+                "searchKey": "shared.tryCreateRedisConf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tryCreateRedisConf(c redisProcfileConfig) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tryCreateRedisConf(c redisProcfileConfig) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#redisProcFileEntry",
+              "documentation": {
+                "identifier": "redisProcFileEntry",
+                "newPage": false,
+                "searchKey": "shared.redisProcFileEntry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func redisProcFileEntry(name, conf string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc redisProcFileEntry(name, conf string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#redisFixAOF",
+              "documentation": {
+                "identifier": "redisFixAOF",
+                "newPage": false,
+                "searchKey": "shared.redisFixAOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func redisFixAOF(rootDataDir string, c redisProcfileConfig)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc redisFixAOF(rootDataDir string, c redisProcfileConfig)\n```\n\nredisFixAOF does a best-effort repair of the AOF file in case it is corrupted [https://github.com/sourcegraph/sourcegraph/issues/651](https://github.com/sourcegraph/sourcegraph/issues/651) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#Main",
+              "documentation": {
+                "identifier": "Main",
+                "newPage": false,
+                "searchKey": "shared.Main",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Main()\n```\n\nMain is the main server command function which is shared between Sourcegraph server's open-source and enterprise variant. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#maybeZoektProcFile",
+              "documentation": {
+                "identifier": "maybeZoektProcFile",
+                "newPage": false,
+                "searchKey": "shared.maybeZoektProcFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func maybeZoektProcFile() []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc maybeZoektProcFile() []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#TestNginx",
+              "documentation": {
+                "identifier": "TestNginx",
+                "newPage": false,
+                "searchKey": "shared.TestNginx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNginx(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNginx(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#TestRedisFixAOF",
+              "documentation": {
+                "identifier": "TestRedisFixAOF",
+                "newPage": false,
+                "searchKey": "shared.TestRedisFixAOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedisFixAOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedisFixAOF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#redisCmd",
+              "documentation": {
+                "identifier": "redisCmd",
+                "newPage": false,
+                "searchKey": "shared.redisCmd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func redisCmd(out io.Writer, parts ...string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc redisCmd(out io.Writer, parts ...string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#TestYesReader",
+              "documentation": {
+                "identifier": "TestYesReader",
+                "newPage": false,
+                "searchKey": "shared.TestYesReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestYesReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestYesReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/server/shared#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "shared.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/cmd/server/shared/assets"
+    }
+  ]
+}

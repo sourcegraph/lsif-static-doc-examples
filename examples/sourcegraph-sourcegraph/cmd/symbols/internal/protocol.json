@@ -1,0 +1,62 @@
+{
+  "pathID": "/cmd/symbols/internal/protocol",
+  "documentation": {
+    "identifier": "protocol",
+    "newPage": true,
+    "searchKey": "cmd/symbols/internal/protocol",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package protocol"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/symbols/internal/protocol#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/protocol#SearchArgs",
+              "documentation": {
+                "identifier": "SearchArgs",
+                "newPage": false,
+                "searchKey": "protocol.SearchArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchArgs struct {\n\t// Repo is the name of the repository to search in.\n\tRepo api.RepoName `json:\"repo\"`\n\n\t// CommitID is the commit to search in.\n\tCommitID api.CommitID `json:\"commitID\"`\n\n\t// Query is the search query.\n\tQuery string\n\n\t// IsRegExp if true will treat the Pattern as a regular expression.\n\tIsRegExp bool\n\n\t// IsCaseSensitive if false will ignore the case of query and file pattern\n\t// when finding matches.\n\tIsCaseSensitive bool\n\n\t// IncludePatterns is a list of regexes that symbol's file paths\n\t// need to match to get included in the result\n\t//\n\t// The patterns are ANDed together; a file's path must match all patterns\n\t// for it to be kept. That is also why it is a list (unlike the singular\n\t// ExcludePattern); it is not possible in general to construct a single\n\t// glob or Go regexp that represents multiple such patterns ANDed together.\n\tIncludePatterns []string\n\n\t// ExcludePattern is an optional regex that symbol's file paths\n\t// need to match to get included in the result\n\tExcludePattern string\n\n\t// First indicates that only the first n symbols should be returned.\n\tFirst int\n}\n```\n\nSearchArgs are the arguments to perform a search on the symbols service. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

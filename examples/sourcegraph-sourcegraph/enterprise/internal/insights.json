@@ -1,0 +1,124 @@
+{
+  "pathID": "/enterprise/internal/insights",
+  "documentation": {
+    "identifier": "insights",
+    "newPage": true,
+    "searchKey": "enterprise/internal/insights",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package insights"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights#IsEnabled",
+              "documentation": {
+                "identifier": "IsEnabled",
+                "newPage": false,
+                "searchKey": "insights.IsEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsEnabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsEnabled() bool\n```\n\nIsEnabled tells if code insights are enabled or not. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "insights.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(ctx context.Context, postgres dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(ctx context.Context, postgres dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error\n```\n\nInit initializes the given enterpriseServices to include the required resolvers for insights. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights#InitializeCodeInsightsDB",
+              "documentation": {
+                "identifier": "InitializeCodeInsightsDB",
+                "newPage": false,
+                "searchKey": "insights.InitializeCodeInsightsDB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitializeCodeInsightsDB() (*sql.DB, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitializeCodeInsightsDB() (*sql.DB, error)\n```\n\nInitializeCodeInsightsDB connects to and initializes the Code Insights Timescale DB, running database migrations before returning. It is safe to call from multiple services/containers (in which case, one's migration will win and the other caller will receive an error and should exit and restart until the other finishes.) \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/internal/insights/background"
+    },
+    {
+      "pathID": "/enterprise/internal/insights/compression"
+    },
+    {
+      "pathID": "/enterprise/internal/insights/dbtesting"
+    },
+    {
+      "pathID": "/enterprise/internal/insights/discovery"
+    },
+    {
+      "pathID": "/enterprise/internal/insights/resolvers"
+    },
+    {
+      "pathID": "/enterprise/internal/insights/store"
+    }
+  ]
+}

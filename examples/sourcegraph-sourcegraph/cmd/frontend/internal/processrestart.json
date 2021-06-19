@@ -1,0 +1,145 @@
+{
+  "pathID": "/cmd/frontend/internal/processrestart",
+  "documentation": {
+    "identifier": "processrestart",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/processrestart",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package processrestart"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package processrestart provides utilities for restarting all Sourcegraph processes associated with a site. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/processrestart#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/processrestart#usingGoremanServer",
+              "documentation": {
+                "identifier": "usingGoremanServer",
+                "newPage": false,
+                "searchKey": "processrestart.usingGoremanServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var usingGoremanServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar usingGoremanServer = os.Getenv(\"GOREMAN_RPC_ADDR\") != \"\"\n```\n\nusingGoremanServer is whether we are running goreman in cmd/server. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/processrestart#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/processrestart#restartGoremanServer",
+              "documentation": {
+                "identifier": "restartGoremanServer",
+                "newPage": false,
+                "searchKey": "processrestart.restartGoremanServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func restartGoremanServer() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc restartGoremanServer() error\n```\n\nrestartGoremanServer restarts the processes when running goreman in cmd/server. It takes care to avoid a race condition where some services have started up with the new config and some are still running with the old config. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/processrestart#CanRestart",
+              "documentation": {
+                "identifier": "CanRestart",
+                "newPage": false,
+                "searchKey": "processrestart.CanRestart",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CanRestart() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CanRestart() bool\n```\n\nCanRestart reports whether the current set of Sourcegraph processes can be restarted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/processrestart#Restart",
+              "documentation": {
+                "identifier": "Restart",
+                "newPage": false,
+                "searchKey": "processrestart.Restart",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Restart() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Restart() error\n```\n\nRestart restarts the current set of Sourcegraph processes associated with this server. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

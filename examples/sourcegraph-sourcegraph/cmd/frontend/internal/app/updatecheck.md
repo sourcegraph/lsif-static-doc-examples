@@ -1,0 +1,1098 @@
+# Package updatecheck
+
+Package updatecheck provides a client and HTTP handler for checking and serving software update information for Sourcegraph versions. 
+
+## Index
+
+* [Constants](#const)
+    * [const redisInfoCommand](#redisInfoCommand)
+* [Variables](#var)
+    * [var metricsRecorder](#metricsRecorder)
+    * [var mu](#mu)
+    * [var startedAt](#startedAt)
+    * [var lastStatus](#lastStatus)
+    * [var started](#started)
+    * [var pubSubPingsTopicID](#pubSubPingsTopicID)
+    * [var latestReleaseDockerServerImageBuild](#latestReleaseDockerServerImageBuild)
+    * [var latestReleaseKubernetesBuild](#latestReleaseKubernetesBuild)
+    * [var latestReleaseDockerComposeOrPureDocker](#latestReleaseDockerComposeOrPureDocker)
+    * [var dateRegex](#dateRegex)
+    * [var timeNow](#timeNow)
+    * [var codeIntelActionNames](#codeIntelActionNames)
+    * [var codeIntelSourceNames](#codeIntelSourceNames)
+    * [var requestCounter](#requestCounter)
+    * [var requestHasUpdateCounter](#requestHasUpdateCounter)
+    * [var errorCounter](#errorCounter)
+* [Types](#type)
+    * [type build struct](#build)
+        * [func newBuild(version string) build](#newBuild)
+        * [func getLatestRelease(deployType string) build](#getLatestRelease)
+    * [type Status struct](#Status)
+        * [func Last() *Status](#Last)
+        * [func (s Status) HasUpdate() bool](#Status.HasUpdate)
+    * [type pingRequest struct](#pingRequest)
+        * [func readPingRequest(r *http.Request) (*pingRequest, error)](#readPingRequest)
+        * [func readPingRequestFromQuery(q url.Values) (*pingRequest, error)](#readPingRequestFromQuery)
+        * [func readPingRequestFromBody(body io.ReadCloser) (*pingRequest, error)](#readPingRequestFromBody)
+    * [type dependencyVersions struct](#dependencyVersions)
+    * [type pingPayload struct](#pingPayload)
+    * [type jsonCodeIntelUsage struct](#jsonCodeIntelUsage)
+    * [type jsonEventSummary struct](#jsonEventSummary)
+        * [func translateEventSummary(es types.CodeIntelEventSummary) jsonEventSummary](#translateEventSummary)
+* [Functions](#func)
+    * [func IsPending() bool](#IsPending)
+    * [func recordOperation(method string) func(*error)](#recordOperation)
+    * [func getAndMarshalSiteActivityJSON(ctx context.Context, db dbutil.DB, criticalOnly bool) (_ json.RawMessage, err error)](#getAndMarshalSiteActivityJSON)
+    * [func hasSearchOccurred(ctx context.Context) (_ bool, err error)](#hasSearchOccurred)
+    * [func hasFindRefsOccurred(ctx context.Context) (_ bool, err error)](#hasFindRefsOccurred)
+    * [func getTotalUsersCount(ctx context.Context) (_ int, err error)](#getTotalUsersCount)
+    * [func getTotalReposCount(ctx context.Context) (_ int, err error)](#getTotalReposCount)
+    * [func getUsersActiveTodayCount(ctx context.Context) (_ int, err error)](#getUsersActiveTodayCount)
+    * [func getInitialSiteAdminEmail(ctx context.Context) (_ string, err error)](#getInitialSiteAdminEmail)
+    * [func getAndMarshalBatchChangesUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalBatchChangesUsageJSON)
+    * [func getAndMarshalGrowthStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalGrowthStatisticsJSON)
+    * [func getAndMarshalSavedSearchesJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalSavedSearchesJSON)
+    * [func getAndMarshalHomepagePanelsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalHomepagePanelsJSON)
+    * [func getAndMarshalRepositoriesJSON(ctx context.Context) (_ json.RawMessage, err error)](#getAndMarshalRepositoriesJSON)
+    * [func getAndMarshalRetentionStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalRetentionStatisticsJSON)
+    * [func getAndMarshalSearchOnboardingJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalSearchOnboardingJSON)
+    * [func getAndMarshalAggregatedCodeIntelUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalAggregatedCodeIntelUsageJSON)
+    * [func getAndMarshalAggregatedSearchUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalAggregatedSearchUsageJSON)
+    * [func getAndMarshalExtensionsUsageStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalExtensionsUsageStatisticsJSON)
+    * [func getAndMarshalCodeInsightsUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalCodeInsightsUsageJSON)
+    * [func getAndMarshalCodeMonitoringUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)](#getAndMarshalCodeMonitoringUsageJSON)
+    * [func getDependencyVersions(ctx context.Context, db dbutil.DB, logFunc func(string, ...interface{})) (json.RawMessage, error)](#getDependencyVersions)
+    * [func getRedisVersion(dialFunc func() (redis.Conn, error)) (string, error)](#getRedisVersion)
+    * [func parseRedisInfo(buf []byte) (map[string]string, error)](#parseRedisInfo)
+    * [func updateBody(ctx context.Context, db dbutil.DB) (io.Reader, error)](#updateBody)
+    * [func authProviderTypes() []string](#authProviderTypes)
+    * [func externalServiceKinds(ctx context.Context) (kinds []string, err error)](#externalServiceKinds)
+    * [func check(db dbutil.DB)](#check)
+    * [func Start(db dbutil.DB)](#Start)
+    * [func Handler(w http.ResponseWriter, r *http.Request)](#Handler)
+    * [func canUpdate(clientVersionString string, latestReleaseBuild build) (bool, error)](#canUpdate)
+    * [func canUpdateVersion(clientVersionString string, latestReleaseBuild build) (bool, error)](#canUpdateVersion)
+    * [func canUpdateDate(clientVersionString string) (bool, error)](#canUpdateDate)
+    * [func toInt(val string) int32](#toInt)
+    * [func toBool(val string) bool](#toBool)
+    * [func toRawMessage(val string) json.RawMessage](#toRawMessage)
+    * [func logPing(r *http.Request, pr *pingRequest, hasUpdate bool)](#logPing)
+    * [func marshalPing(pr *pingRequest, hasUpdate bool, clientAddr string, now time.Time) ([]byte, error)](#marshalPing)
+    * [func reserializeCodeIntelUsage(payload, fallbackPayload json.RawMessage) (json.RawMessage, error)](#reserializeCodeIntelUsage)
+    * [func reserializeNewCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)](#reserializeNewCodeIntelUsage)
+    * [func reserializeOldCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)](#reserializeOldCodeIntelUsage)
+    * [func reserializeSearchUsage(payload json.RawMessage) (json.RawMessage, error)](#reserializeSearchUsage)
+    * [func TestParseRedisInfo(t *testing.T)](#TestParseRedisInfo)
+    * [func TestLatestDockerVersionPushed(t *testing.T)](#TestLatestDockerVersionPushed)
+    * [func TestLatestKubernetesVersionPushed(t *testing.T)](#TestLatestKubernetesVersionPushed)
+    * [func TestLatestDockerComposeOrPureDockerVersionPushed(t *testing.T)](#TestLatestDockerComposeOrPureDockerVersionPushed)
+    * [func TestCanUpdate(t *testing.T)](#TestCanUpdate)
+    * [func TestSerializeBasic(t *testing.T)](#TestSerializeBasic)
+    * [func TestSerializeFromQuery(t *testing.T)](#TestSerializeFromQuery)
+    * [func TestSerializeAutomationUsage(t *testing.T)](#TestSerializeAutomationUsage)
+    * [func TestSerializeCodeIntelUsage(t *testing.T)](#TestSerializeCodeIntelUsage)
+    * [func TestSerializeOldCodeIntelUsage(t *testing.T)](#TestSerializeOldCodeIntelUsage)
+    * [func compareJSON(t *testing.T, actual []byte, expected string)](#compareJSON)
+
+
+## <a id="const" href="#const">Constants</a>
+
+### <a id="redisInfoCommand" href="#redisInfoCommand">const redisInfoCommand</a>
+
+```
+searchKey: updatecheck.redisInfoCommand
+```
+
+```Go
+const redisInfoCommand = ...
+```
+
+output of running the INFO command in redis-cli 
+
+## <a id="var" href="#var">Variables</a>
+
+### <a id="metricsRecorder" href="#metricsRecorder">var metricsRecorder</a>
+
+```
+searchKey: updatecheck.metricsRecorder
+```
+
+```Go
+var metricsRecorder = ...
+```
+
+metricsRecorder records operational metrics for methods. 
+
+### <a id="mu" href="#mu">var mu</a>
+
+```
+searchKey: updatecheck.mu
+```
+
+```Go
+var mu sync.Mutex
+```
+
+### <a id="startedAt" href="#startedAt">var startedAt</a>
+
+```
+searchKey: updatecheck.startedAt
+```
+
+```Go
+var startedAt *time.Time
+```
+
+### <a id="lastStatus" href="#lastStatus">var lastStatus</a>
+
+```
+searchKey: updatecheck.lastStatus
+```
+
+```Go
+var lastStatus *Status
+```
+
+### <a id="started" href="#started">var started</a>
+
+```
+searchKey: updatecheck.started
+```
+
+```Go
+var started bool
+```
+
+### <a id="pubSubPingsTopicID" href="#pubSubPingsTopicID">var pubSubPingsTopicID</a>
+
+```
+searchKey: updatecheck.pubSubPingsTopicID
+```
+
+```Go
+var pubSubPingsTopicID = ...
+```
+
+pubSubPingsTopicID is the topic ID of the topic that forwards messages to Pings' pub/sub subscribers. 
+
+### <a id="latestReleaseDockerServerImageBuild" href="#latestReleaseDockerServerImageBuild">var latestReleaseDockerServerImageBuild</a>
+
+```
+searchKey: updatecheck.latestReleaseDockerServerImageBuild
+```
+
+```Go
+var latestReleaseDockerServerImageBuild = newBuild("3.29.0")
+```
+
+latestReleaseDockerServerImageBuild is only used by sourcegraph.com to tell existing non-cluster, non-docker-compose, and non-pure-docker installations what the latest version is. The version here _must_ be available at [https://hub.docker.com/r/sourcegraph/server/tags/](https://hub.docker.com/r/sourcegraph/server/tags/) before landing in master. 
+
+### <a id="latestReleaseKubernetesBuild" href="#latestReleaseKubernetesBuild">var latestReleaseKubernetesBuild</a>
+
+```
+searchKey: updatecheck.latestReleaseKubernetesBuild
+```
+
+```Go
+var latestReleaseKubernetesBuild = newBuild("3.29.0")
+```
+
+latestReleaseKubernetesBuild is only used by sourcegraph.com to tell existing Sourcegraph cluster deployments what the latest version is. The version here _must_ be available in a tag at [https://github.com/sourcegraph/deploy-sourcegraph](https://github.com/sourcegraph/deploy-sourcegraph) before landing in master. 
+
+### <a id="latestReleaseDockerComposeOrPureDocker" href="#latestReleaseDockerComposeOrPureDocker">var latestReleaseDockerComposeOrPureDocker</a>
+
+```
+searchKey: updatecheck.latestReleaseDockerComposeOrPureDocker
+```
+
+```Go
+var latestReleaseDockerComposeOrPureDocker = newBuild("3.29.0")
+```
+
+latestReleaseDockerComposeOrPureDocker is only used by sourcegraph.com to tell existing Sourcegraph Docker Compose or Pure Docker deployments what the latest version is. The version here _must_ be available in a tag at [https://github.com/sourcegraph/deploy-sourcegraph-docker](https://github.com/sourcegraph/deploy-sourcegraph-docker) before landing in master. 
+
+### <a id="dateRegex" href="#dateRegex">var dateRegex</a>
+
+```
+searchKey: updatecheck.dateRegex
+```
+
+```Go
+var dateRegex = lazyregexp.New("_([0-9]{4}-[0-9]{2}-[0-9]{2})_")
+```
+
+### <a id="timeNow" href="#timeNow">var timeNow</a>
+
+```
+searchKey: updatecheck.timeNow
+```
+
+```Go
+var timeNow = time.Now
+```
+
+### <a id="codeIntelActionNames" href="#codeIntelActionNames">var codeIntelActionNames</a>
+
+```
+searchKey: updatecheck.codeIntelActionNames
+```
+
+```Go
+var codeIntelActionNames = ...
+```
+
+### <a id="codeIntelSourceNames" href="#codeIntelSourceNames">var codeIntelSourceNames</a>
+
+```
+searchKey: updatecheck.codeIntelSourceNames
+```
+
+```Go
+var codeIntelSourceNames = ...
+```
+
+### <a id="requestCounter" href="#requestCounter">var requestCounter</a>
+
+```
+searchKey: updatecheck.requestCounter
+```
+
+```Go
+var requestCounter = ...
+```
+
+### <a id="requestHasUpdateCounter" href="#requestHasUpdateCounter">var requestHasUpdateCounter</a>
+
+```
+searchKey: updatecheck.requestHasUpdateCounter
+```
+
+```Go
+var requestHasUpdateCounter = ...
+```
+
+### <a id="errorCounter" href="#errorCounter">var errorCounter</a>
+
+```
+searchKey: updatecheck.errorCounter
+```
+
+```Go
+var errorCounter = ...
+```
+
+## <a id="type" href="#type">Types</a>
+
+### <a id="build" href="#build">type build struct</a>
+
+```
+searchKey: updatecheck.build
+```
+
+```Go
+type build struct {
+	Version semver.Version `json:"version"`
+}
+```
+
+build is the JSON shape of the update check handler's response body. 
+
+#### <a id="newBuild" href="#newBuild">func newBuild(version string) build</a>
+
+```
+searchKey: updatecheck.newBuild
+```
+
+```Go
+func newBuild(version string) build
+```
+
+#### <a id="getLatestRelease" href="#getLatestRelease">func getLatestRelease(deployType string) build</a>
+
+```
+searchKey: updatecheck.getLatestRelease
+```
+
+```Go
+func getLatestRelease(deployType string) build
+```
+
+### <a id="Status" href="#Status">type Status struct</a>
+
+```
+searchKey: updatecheck.Status
+tags: [exported]
+```
+
+```Go
+type Status struct {
+	Date          time.Time // the time that the last check completed
+	Err           error     // the error that occurred, if any. When present, indicates the instance is offline / unable to contact Sourcegraph.com
+	UpdateVersion string    // the version string of the updated version, if any
+}
+```
+
+Status of the check for software updates for Sourcegraph. 
+
+#### <a id="Last" href="#Last">func Last() *Status</a>
+
+```
+searchKey: updatecheck.Last
+tags: [exported]
+```
+
+```Go
+func Last() *Status
+```
+
+Last returns the status of the last-completed software update check. 
+
+#### <a id="Status.HasUpdate" href="#Status.HasUpdate">func (s Status) HasUpdate() bool</a>
+
+```
+searchKey: updatecheck.Status.HasUpdate
+tags: [exported]
+```
+
+```Go
+func (s Status) HasUpdate() bool
+```
+
+HasUpdate reports whether the status indicates an update is available. 
+
+### <a id="pingRequest" href="#pingRequest">type pingRequest struct</a>
+
+```
+searchKey: updatecheck.pingRequest
+```
+
+```Go
+type pingRequest struct {
+	ClientSiteID         string `json:"site"`
+	LicenseKey           string
+	DeployType           string          `json:"deployType"`
+	ClientVersionString  string          `json:"version"`
+	DependencyVersions   json.RawMessage `json:"dependencyVersions"`
+	AuthProviders        []string        `json:"auth"`
+	ExternalServices     []string        `json:"extsvcs"`
+	BuiltinSignupAllowed bool            `json:"signup"`
+	HasExtURL            bool            `json:"hasExtURL"`
+	UniqueUsers          int32           `json:"u"`
+	Activity             json.RawMessage `json:"act"`
+	BatchChangesUsage    json.RawMessage `json:"batchChangesUsage"`
+	// AutomationUsage (campaigns) is deprecated, but here so we can receive pings from older instances
+	AutomationUsage     json.RawMessage `json:"automationUsage"`
+	GrowthStatistics    json.RawMessage `json:"growthStatistics"`
+	SavedSearches       json.RawMessage `json:"savedSearches"`
+	HomepagePanels      json.RawMessage `json:"homepagePanels"`
+	SearchOnboarding    json.RawMessage `json:"searchOnboarding"`
+	Repositories        json.RawMessage `json:"repositories"`
+	RetentionStatistics json.RawMessage `json:"retentionStatistics"`
+	CodeIntelUsage      json.RawMessage `json:"codeIntelUsage"`
+	NewCodeIntelUsage   json.RawMessage `json:"newCodeIntelUsage"`
+	SearchUsage         json.RawMessage `json:"searchUsage"`
+	ExtensionsUsage     json.RawMessage `json:"extensionsUsage"`
+	CodeInsightsUsage   json.RawMessage `json:"codeInsightsUsage"`
+	CodeMonitoringUsage json.RawMessage `json:"codeMonitoringUsage"`
+	InitialAdminEmail   string          `json:"initAdmin"`
+	TotalUsers          int32           `json:"totalUsers"`
+	HasRepos            bool            `json:"repos"`
+	EverSearched        bool            `json:"searched"`
+	EverFindRefs        bool            `json:"refs"`
+}
+```
+
+pingRequest is the payload of the update check request. These values either supplied via query string or by a JSON body (when the request method is POST). We need to maintain backwards compatibility with the GET-only update checks while expanding the payload size for newer instance versions (via HTTP body). 
+
+#### <a id="readPingRequest" href="#readPingRequest">func readPingRequest(r *http.Request) (*pingRequest, error)</a>
+
+```
+searchKey: updatecheck.readPingRequest
+```
+
+```Go
+func readPingRequest(r *http.Request) (*pingRequest, error)
+```
+
+readPingRequest reads the ping request payload from the request. If the request method is GET, it will read all parameters from the query string. If the request method is POST, it will read the parameters via a JSON encoded HTTP body. 
+
+#### <a id="readPingRequestFromQuery" href="#readPingRequestFromQuery">func readPingRequestFromQuery(q url.Values) (*pingRequest, error)</a>
+
+```
+searchKey: updatecheck.readPingRequestFromQuery
+```
+
+```Go
+func readPingRequestFromQuery(q url.Values) (*pingRequest, error)
+```
+
+#### <a id="readPingRequestFromBody" href="#readPingRequestFromBody">func readPingRequestFromBody(body io.ReadCloser) (*pingRequest, error)</a>
+
+```
+searchKey: updatecheck.readPingRequestFromBody
+```
+
+```Go
+func readPingRequestFromBody(body io.ReadCloser) (*pingRequest, error)
+```
+
+### <a id="dependencyVersions" href="#dependencyVersions">type dependencyVersions struct</a>
+
+```
+searchKey: updatecheck.dependencyVersions
+```
+
+```Go
+type dependencyVersions struct {
+	PostgresVersion   string `json:"postgresVersion"`
+	RedisCacheVersion string `json:"redisCacheVersion"`
+	RedisStoreVersion string `json:"redisStoreVersion"`
+}
+```
+
+### <a id="pingPayload" href="#pingPayload">type pingPayload struct</a>
+
+```
+searchKey: updatecheck.pingPayload
+```
+
+```Go
+type pingPayload struct {
+	RemoteIP             string          `json:"remote_ip"`
+	RemoteSiteVersion    string          `json:"remote_site_version"`
+	RemoteSiteID         string          `json:"remote_site_id"`
+	LicenseKey           string          `json:"license_key"`
+	HasUpdate            string          `json:"has_update"`
+	UniqueUsersToday     string          `json:"unique_users_today"`
+	SiteActivity         json.RawMessage `json:"site_activity"`
+	BatchChangesUsage    json.RawMessage `json:"batch_changes_usage"`
+	CodeIntelUsage       json.RawMessage `json:"code_intel_usage"`
+	NewCodeIntelUsage    json.RawMessage `json:"new_code_intel_usage"`
+	SearchUsage          json.RawMessage `json:"search_usage"`
+	GrowthStatistics     json.RawMessage `json:"growth_statistics"`
+	SavedSearches        json.RawMessage `json:"saved_searches"`
+	HomepagePanels       json.RawMessage `json:"homepage_panels"`
+	RetentionStatistics  json.RawMessage `json:"retention_statistics"`
+	Repositories         json.RawMessage `json:"repositories"`
+	SearchOnboarding     json.RawMessage `json:"search_onboarding"`
+	DependencyVersions   json.RawMessage `json:"dependency_versions"`
+	ExtensionsUsage      json.RawMessage `json:"extensions_usage"`
+	CodeInsightsUsage    json.RawMessage `json:"code_insights_usage"`
+	CodeMonitoringUsage  json.RawMessage `json:"code_monitoring_usage"`
+	InstallerEmail       string          `json:"installer_email"`
+	AuthProviders        string          `json:"auth_providers"`
+	ExtServices          string          `json:"ext_services"`
+	BuiltinSignupAllowed string          `json:"builtin_signup_allowed"`
+	DeployType           string          `json:"deploy_type"`
+	TotalUserAccounts    string          `json:"total_user_accounts"`
+	HasExternalURL       string          `json:"has_external_url"`
+	HasRepos             string          `json:"has_repos"`
+	EverSearched         string          `json:"ever_searched"`
+	EverFindRefs         string          `json:"ever_find_refs"`
+	Timestamp            string          `json:"timestamp"`
+}
+```
+
+### <a id="jsonCodeIntelUsage" href="#jsonCodeIntelUsage">type jsonCodeIntelUsage struct</a>
+
+```
+searchKey: updatecheck.jsonCodeIntelUsage
+```
+
+```Go
+type jsonCodeIntelUsage struct {
+	StartOfWeek                         time.Time          `json:"start_time"`
+	WAUs                                *int32             `json:"waus"`
+	PreciseWAUs                         *int32             `json:"precise_waus"`
+	SearchBasedWAUs                     *int32             `json:"search_waus"`
+	CrossRepositoryWAUs                 *int32             `json:"xrepo_waus"`
+	PreciseCrossRepositoryWAUs          *int32             `json:"precise_xrepo_waus"`
+	SearchBasedCrossRepositoryWAUs      *int32             `json:"search_xrepo_waus"`
+	EventSummaries                      []jsonEventSummary `json:"event_summaries"`
+	NumRepositoriesWithUploadRecords    *int32             `json:"num_repositories_with_upload_records"`
+	NumRepositoriesWithoutUploadRecords *int32             `json:"num_repositories_without_upload_records"`
+}
+```
+
+### <a id="jsonEventSummary" href="#jsonEventSummary">type jsonEventSummary struct</a>
+
+```
+searchKey: updatecheck.jsonEventSummary
+```
+
+```Go
+type jsonEventSummary struct {
+	Action          string `json:"action"`
+	Source          string `json:"source"`
+	LanguageID      string `json:"language_id"`
+	CrossRepository bool   `json:"cross_repository"`
+	WAUs            int32  `json:"waus"`
+	TotalActions    int32  `json:"total_actions"`
+}
+```
+
+#### <a id="translateEventSummary" href="#translateEventSummary">func translateEventSummary(es types.CodeIntelEventSummary) jsonEventSummary</a>
+
+```
+searchKey: updatecheck.translateEventSummary
+```
+
+```Go
+func translateEventSummary(es types.CodeIntelEventSummary) jsonEventSummary
+```
+
+## <a id="func" href="#func">Functions</a>
+
+### <a id="IsPending" href="#IsPending">func IsPending() bool</a>
+
+```
+searchKey: updatecheck.IsPending
+tags: [exported]
+```
+
+```Go
+func IsPending() bool
+```
+
+IsPending returns whether an update check is in progress. 
+
+### <a id="recordOperation" href="#recordOperation">func recordOperation(method string) func(*error)</a>
+
+```
+searchKey: updatecheck.recordOperation
+```
+
+```Go
+func recordOperation(method string) func(*error)
+```
+
+recordOperation returns a record fn that is called on any given return err. If an error is encountered it will register the err metric. The err is never altered. 
+
+### <a id="getAndMarshalSiteActivityJSON" href="#getAndMarshalSiteActivityJSON">func getAndMarshalSiteActivityJSON(ctx context.Context, db dbutil.DB, criticalOnly bool) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalSiteActivityJSON
+```
+
+```Go
+func getAndMarshalSiteActivityJSON(ctx context.Context, db dbutil.DB, criticalOnly bool) (_ json.RawMessage, err error)
+```
+
+### <a id="hasSearchOccurred" href="#hasSearchOccurred">func hasSearchOccurred(ctx context.Context) (_ bool, err error)</a>
+
+```
+searchKey: updatecheck.hasSearchOccurred
+```
+
+```Go
+func hasSearchOccurred(ctx context.Context) (_ bool, err error)
+```
+
+### <a id="hasFindRefsOccurred" href="#hasFindRefsOccurred">func hasFindRefsOccurred(ctx context.Context) (_ bool, err error)</a>
+
+```
+searchKey: updatecheck.hasFindRefsOccurred
+```
+
+```Go
+func hasFindRefsOccurred(ctx context.Context) (_ bool, err error)
+```
+
+### <a id="getTotalUsersCount" href="#getTotalUsersCount">func getTotalUsersCount(ctx context.Context) (_ int, err error)</a>
+
+```
+searchKey: updatecheck.getTotalUsersCount
+```
+
+```Go
+func getTotalUsersCount(ctx context.Context) (_ int, err error)
+```
+
+### <a id="getTotalReposCount" href="#getTotalReposCount">func getTotalReposCount(ctx context.Context) (_ int, err error)</a>
+
+```
+searchKey: updatecheck.getTotalReposCount
+```
+
+```Go
+func getTotalReposCount(ctx context.Context) (_ int, err error)
+```
+
+### <a id="getUsersActiveTodayCount" href="#getUsersActiveTodayCount">func getUsersActiveTodayCount(ctx context.Context) (_ int, err error)</a>
+
+```
+searchKey: updatecheck.getUsersActiveTodayCount
+```
+
+```Go
+func getUsersActiveTodayCount(ctx context.Context) (_ int, err error)
+```
+
+### <a id="getInitialSiteAdminEmail" href="#getInitialSiteAdminEmail">func getInitialSiteAdminEmail(ctx context.Context) (_ string, err error)</a>
+
+```
+searchKey: updatecheck.getInitialSiteAdminEmail
+```
+
+```Go
+func getInitialSiteAdminEmail(ctx context.Context) (_ string, err error)
+```
+
+### <a id="getAndMarshalBatchChangesUsageJSON" href="#getAndMarshalBatchChangesUsageJSON">func getAndMarshalBatchChangesUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalBatchChangesUsageJSON
+```
+
+```Go
+func getAndMarshalBatchChangesUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalGrowthStatisticsJSON" href="#getAndMarshalGrowthStatisticsJSON">func getAndMarshalGrowthStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalGrowthStatisticsJSON
+```
+
+```Go
+func getAndMarshalGrowthStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalSavedSearchesJSON" href="#getAndMarshalSavedSearchesJSON">func getAndMarshalSavedSearchesJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalSavedSearchesJSON
+```
+
+```Go
+func getAndMarshalSavedSearchesJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalHomepagePanelsJSON" href="#getAndMarshalHomepagePanelsJSON">func getAndMarshalHomepagePanelsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalHomepagePanelsJSON
+```
+
+```Go
+func getAndMarshalHomepagePanelsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalRepositoriesJSON" href="#getAndMarshalRepositoriesJSON">func getAndMarshalRepositoriesJSON(ctx context.Context) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalRepositoriesJSON
+```
+
+```Go
+func getAndMarshalRepositoriesJSON(ctx context.Context) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalRetentionStatisticsJSON" href="#getAndMarshalRetentionStatisticsJSON">func getAndMarshalRetentionStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalRetentionStatisticsJSON
+```
+
+```Go
+func getAndMarshalRetentionStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalSearchOnboardingJSON" href="#getAndMarshalSearchOnboardingJSON">func getAndMarshalSearchOnboardingJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalSearchOnboardingJSON
+```
+
+```Go
+func getAndMarshalSearchOnboardingJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalAggregatedCodeIntelUsageJSON" href="#getAndMarshalAggregatedCodeIntelUsageJSON">func getAndMarshalAggregatedCodeIntelUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalAggregatedCodeIntelUsageJSON
+```
+
+```Go
+func getAndMarshalAggregatedCodeIntelUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalAggregatedSearchUsageJSON" href="#getAndMarshalAggregatedSearchUsageJSON">func getAndMarshalAggregatedSearchUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalAggregatedSearchUsageJSON
+```
+
+```Go
+func getAndMarshalAggregatedSearchUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalExtensionsUsageStatisticsJSON" href="#getAndMarshalExtensionsUsageStatisticsJSON">func getAndMarshalExtensionsUsageStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalExtensionsUsageStatisticsJSON
+```
+
+```Go
+func getAndMarshalExtensionsUsageStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalCodeInsightsUsageJSON" href="#getAndMarshalCodeInsightsUsageJSON">func getAndMarshalCodeInsightsUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalCodeInsightsUsageJSON
+```
+
+```Go
+func getAndMarshalCodeInsightsUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getAndMarshalCodeMonitoringUsageJSON" href="#getAndMarshalCodeMonitoringUsageJSON">func getAndMarshalCodeMonitoringUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)</a>
+
+```
+searchKey: updatecheck.getAndMarshalCodeMonitoringUsageJSON
+```
+
+```Go
+func getAndMarshalCodeMonitoringUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)
+```
+
+### <a id="getDependencyVersions" href="#getDependencyVersions">func getDependencyVersions(ctx context.Context, db dbutil.DB, logFunc func(string, ...interface{})) (json.RawMessage, error)</a>
+
+```
+searchKey: updatecheck.getDependencyVersions
+```
+
+```Go
+func getDependencyVersions(ctx context.Context, db dbutil.DB, logFunc func(string, ...interface{})) (json.RawMessage, error)
+```
+
+### <a id="getRedisVersion" href="#getRedisVersion">func getRedisVersion(dialFunc func() (redis.Conn, error)) (string, error)</a>
+
+```
+searchKey: updatecheck.getRedisVersion
+```
+
+```Go
+func getRedisVersion(dialFunc func() (redis.Conn, error)) (string, error)
+```
+
+### <a id="parseRedisInfo" href="#parseRedisInfo">func parseRedisInfo(buf []byte) (map[string]string, error)</a>
+
+```
+searchKey: updatecheck.parseRedisInfo
+```
+
+```Go
+func parseRedisInfo(buf []byte) (map[string]string, error)
+```
+
+### <a id="updateBody" href="#updateBody">func updateBody(ctx context.Context, db dbutil.DB) (io.Reader, error)</a>
+
+```
+searchKey: updatecheck.updateBody
+```
+
+```Go
+func updateBody(ctx context.Context, db dbutil.DB) (io.Reader, error)
+```
+
+### <a id="authProviderTypes" href="#authProviderTypes">func authProviderTypes() []string</a>
+
+```
+searchKey: updatecheck.authProviderTypes
+```
+
+```Go
+func authProviderTypes() []string
+```
+
+### <a id="externalServiceKinds" href="#externalServiceKinds">func externalServiceKinds(ctx context.Context) (kinds []string, err error)</a>
+
+```
+searchKey: updatecheck.externalServiceKinds
+```
+
+```Go
+func externalServiceKinds(ctx context.Context) (kinds []string, err error)
+```
+
+### <a id="check" href="#check">func check(db dbutil.DB)</a>
+
+```
+searchKey: updatecheck.check
+```
+
+```Go
+func check(db dbutil.DB)
+```
+
+check performs an update check and updates the global state. 
+
+### <a id="Start" href="#Start">func Start(db dbutil.DB)</a>
+
+```
+searchKey: updatecheck.Start
+tags: [exported]
+```
+
+```Go
+func Start(db dbutil.DB)
+```
+
+Start starts checking for software updates periodically. 
+
+### <a id="Handler" href="#Handler">func Handler(w http.ResponseWriter, r *http.Request)</a>
+
+```
+searchKey: updatecheck.Handler
+tags: [exported]
+```
+
+```Go
+func Handler(w http.ResponseWriter, r *http.Request)
+```
+
+Handler is an HTTP handler that responds with information about software updates for Sourcegraph. 
+
+### <a id="canUpdate" href="#canUpdate">func canUpdate(clientVersionString string, latestReleaseBuild build) (bool, error)</a>
+
+```
+searchKey: updatecheck.canUpdate
+```
+
+```Go
+func canUpdate(clientVersionString string, latestReleaseBuild build) (bool, error)
+```
+
+canUpdate returns true if the latestReleaseBuild is newer than the clientVersionString. 
+
+### <a id="canUpdateVersion" href="#canUpdateVersion">func canUpdateVersion(clientVersionString string, latestReleaseBuild build) (bool, error)</a>
+
+```
+searchKey: updatecheck.canUpdateVersion
+```
+
+```Go
+func canUpdateVersion(clientVersionString string, latestReleaseBuild build) (bool, error)
+```
+
+canUpdateVersion returns true if the latest released build is newer than the clientVersionString. It returns an error if clientVersionString is not a semver. 
+
+### <a id="canUpdateDate" href="#canUpdateDate">func canUpdateDate(clientVersionString string) (bool, error)</a>
+
+```
+searchKey: updatecheck.canUpdateDate
+```
+
+```Go
+func canUpdateDate(clientVersionString string) (bool, error)
+```
+
+canUpdateDate returns true if clientVersionString contains a date more than 40 days in the past. It returns an error if there is no parsable date in clientVersionString 
+
+### <a id="toInt" href="#toInt">func toInt(val string) int32</a>
+
+```
+searchKey: updatecheck.toInt
+```
+
+```Go
+func toInt(val string) int32
+```
+
+### <a id="toBool" href="#toBool">func toBool(val string) bool</a>
+
+```
+searchKey: updatecheck.toBool
+```
+
+```Go
+func toBool(val string) bool
+```
+
+### <a id="toRawMessage" href="#toRawMessage">func toRawMessage(val string) json.RawMessage</a>
+
+```
+searchKey: updatecheck.toRawMessage
+```
+
+```Go
+func toRawMessage(val string) json.RawMessage
+```
+
+### <a id="logPing" href="#logPing">func logPing(r *http.Request, pr *pingRequest, hasUpdate bool)</a>
+
+```
+searchKey: updatecheck.logPing
+```
+
+```Go
+func logPing(r *http.Request, pr *pingRequest, hasUpdate bool)
+```
+
+### <a id="marshalPing" href="#marshalPing">func marshalPing(pr *pingRequest, hasUpdate bool, clientAddr string, now time.Time) ([]byte, error)</a>
+
+```
+searchKey: updatecheck.marshalPing
+```
+
+```Go
+func marshalPing(pr *pingRequest, hasUpdate bool, clientAddr string, now time.Time) ([]byte, error)
+```
+
+### <a id="reserializeCodeIntelUsage" href="#reserializeCodeIntelUsage">func reserializeCodeIntelUsage(payload, fallbackPayload json.RawMessage) (json.RawMessage, error)</a>
+
+```
+searchKey: updatecheck.reserializeCodeIntelUsage
+```
+
+```Go
+func reserializeCodeIntelUsage(payload, fallbackPayload json.RawMessage) (json.RawMessage, error)
+```
+
+reserializeCodeIntelUsage returns the given data in the shape of the current code intel usage statistics format. The given payload should be populated with either the new-style 
+
+### <a id="reserializeNewCodeIntelUsage" href="#reserializeNewCodeIntelUsage">func reserializeNewCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)</a>
+
+```
+searchKey: updatecheck.reserializeNewCodeIntelUsage
+```
+
+```Go
+func reserializeNewCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)
+```
+
+### <a id="reserializeOldCodeIntelUsage" href="#reserializeOldCodeIntelUsage">func reserializeOldCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)</a>
+
+```
+searchKey: updatecheck.reserializeOldCodeIntelUsage
+```
+
+```Go
+func reserializeOldCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)
+```
+
+### <a id="reserializeSearchUsage" href="#reserializeSearchUsage">func reserializeSearchUsage(payload json.RawMessage) (json.RawMessage, error)</a>
+
+```
+searchKey: updatecheck.reserializeSearchUsage
+```
+
+```Go
+func reserializeSearchUsage(payload json.RawMessage) (json.RawMessage, error)
+```
+
+reserializeSearchUsage will reserialize a code intel usage statistics struct with only the first period in each period type. This reduces the complexity required in the BigQuery schema and downstream ETL transform logic. 
+
+### <a id="TestParseRedisInfo" href="#TestParseRedisInfo">func TestParseRedisInfo(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestParseRedisInfo
+```
+
+```Go
+func TestParseRedisInfo(t *testing.T)
+```
+
+### <a id="TestLatestDockerVersionPushed" href="#TestLatestDockerVersionPushed">func TestLatestDockerVersionPushed(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestLatestDockerVersionPushed
+```
+
+```Go
+func TestLatestDockerVersionPushed(t *testing.T)
+```
+
+### <a id="TestLatestKubernetesVersionPushed" href="#TestLatestKubernetesVersionPushed">func TestLatestKubernetesVersionPushed(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestLatestKubernetesVersionPushed
+```
+
+```Go
+func TestLatestKubernetesVersionPushed(t *testing.T)
+```
+
+### <a id="TestLatestDockerComposeOrPureDockerVersionPushed" href="#TestLatestDockerComposeOrPureDockerVersionPushed">func TestLatestDockerComposeOrPureDockerVersionPushed(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestLatestDockerComposeOrPureDockerVersionPushed
+```
+
+```Go
+func TestLatestDockerComposeOrPureDockerVersionPushed(t *testing.T)
+```
+
+### <a id="TestCanUpdate" href="#TestCanUpdate">func TestCanUpdate(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestCanUpdate
+```
+
+```Go
+func TestCanUpdate(t *testing.T)
+```
+
+### <a id="TestSerializeBasic" href="#TestSerializeBasic">func TestSerializeBasic(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestSerializeBasic
+```
+
+```Go
+func TestSerializeBasic(t *testing.T)
+```
+
+### <a id="TestSerializeFromQuery" href="#TestSerializeFromQuery">func TestSerializeFromQuery(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestSerializeFromQuery
+```
+
+```Go
+func TestSerializeFromQuery(t *testing.T)
+```
+
+### <a id="TestSerializeAutomationUsage" href="#TestSerializeAutomationUsage">func TestSerializeAutomationUsage(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestSerializeAutomationUsage
+```
+
+```Go
+func TestSerializeAutomationUsage(t *testing.T)
+```
+
+### <a id="TestSerializeCodeIntelUsage" href="#TestSerializeCodeIntelUsage">func TestSerializeCodeIntelUsage(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestSerializeCodeIntelUsage
+```
+
+```Go
+func TestSerializeCodeIntelUsage(t *testing.T)
+```
+
+### <a id="TestSerializeOldCodeIntelUsage" href="#TestSerializeOldCodeIntelUsage">func TestSerializeOldCodeIntelUsage(t *testing.T)</a>
+
+```
+searchKey: updatecheck.TestSerializeOldCodeIntelUsage
+```
+
+```Go
+func TestSerializeOldCodeIntelUsage(t *testing.T)
+```
+
+### <a id="compareJSON" href="#compareJSON">func compareJSON(t *testing.T, actual []byte, expected string)</a>
+
+```
+searchKey: updatecheck.compareJSON
+```
+
+```Go
+func compareJSON(t *testing.T, actual []byte, expected string)
+```
+

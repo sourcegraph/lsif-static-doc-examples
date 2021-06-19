@@ -1,0 +1,4063 @@
+{
+  "pathID": "/internal/extsvc/gitlab",
+  "documentation": {
+    "identifier": "gitlab",
+    "newPage": true,
+    "searchKey": "internal/extsvc/gitlab",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package gitlab"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package gitlab implements a GitLab API client. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/extsvc/gitlab#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TokenTypePAT",
+              "documentation": {
+                "identifier": "TokenTypePAT",
+                "newPage": false,
+                "searchKey": "gitlab.TokenTypePAT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TokenTypePAT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TokenTypePAT TokenType = \"pat\" // \"pat\" represents personal access token.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TokenTypeOAuth",
+              "documentation": {
+                "identifier": "TokenTypeOAuth",
+                "newPage": false,
+                "searchKey": "gitlab.TokenTypeOAuth",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TokenTypeOAuth"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TokenTypeOAuth TokenType = \"oauth\" // \"oauth\" represents OAuth token.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequestStateOpened",
+              "documentation": {
+                "identifier": "MergeRequestStateOpened",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequestStateOpened",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MergeRequestStateOpened"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MergeRequestStateOpened MergeRequestState = \"opened\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequestStateClosed",
+              "documentation": {
+                "identifier": "MergeRequestStateClosed",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequestStateClosed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MergeRequestStateClosed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MergeRequestStateClosed MergeRequestState = \"closed\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequestStateLocked",
+              "documentation": {
+                "identifier": "MergeRequestStateLocked",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequestStateLocked",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MergeRequestStateLocked"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MergeRequestStateLocked MergeRequestState = \"locked\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequestStateMerged",
+              "documentation": {
+                "identifier": "MergeRequestStateMerged",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequestStateMerged",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MergeRequestStateMerged"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MergeRequestStateMerged MergeRequestState = \"merged\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#UpdateMergeRequestStateEventClose",
+              "documentation": {
+                "identifier": "UpdateMergeRequestStateEventClose",
+                "newPage": false,
+                "searchKey": "gitlab.UpdateMergeRequestStateEventClose",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UpdateMergeRequestStateEventClose"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UpdateMergeRequestStateEventClose UpdateMergeRequestStateEvent = \"close\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#UpdateMergeRequestStateEventReopen",
+              "documentation": {
+                "identifier": "UpdateMergeRequestStateEventReopen",
+                "newPage": false,
+                "searchKey": "gitlab.UpdateMergeRequestStateEventReopen",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UpdateMergeRequestStateEventReopen"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UpdateMergeRequestStateEventReopen UpdateMergeRequestStateEvent = \"reopen\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#UpdateMergeRequestStateEventUnchanged",
+              "documentation": {
+                "identifier": "UpdateMergeRequestStateEventUnchanged",
+                "newPage": false,
+                "searchKey": "gitlab.UpdateMergeRequestStateEventUnchanged",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UpdateMergeRequestStateEventUnchanged"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UpdateMergeRequestStateEventUnchanged UpdateMergeRequestStateEvent = \"\"\n```\n\nGitLab's update MR API is also used to perform state transitions on MRs: they can be closed or reopened by setting a specific field exposed via UpdateMergeRequestOpts above. To update a merge request _without_ changing the state, you omit that field, which is done via the combination of this empty string constant and the omitempty JSON option above on the relevant field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SystemNoteBodyReviewApproved",
+              "documentation": {
+                "identifier": "SystemNoteBodyReviewApproved",
+                "newPage": false,
+                "searchKey": "gitlab.SystemNoteBodyReviewApproved",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SystemNoteBodyReviewApproved"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SystemNoteBodyReviewApproved SystemNoteBody = \"approved this merge request\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SystemNoteBodyReviewUnapproved",
+              "documentation": {
+                "identifier": "SystemNoteBodyReviewUnapproved",
+                "newPage": false,
+                "searchKey": "gitlab.SystemNoteBodyReviewUnapproved",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SystemNoteBodyReviewUnapproved"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SystemNoteBodyReviewUnapproved SystemNoteBody = \"unapproved this merge request\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SystemNoteBodyUnmarkedWorkInProgress",
+              "documentation": {
+                "identifier": "SystemNoteBodyUnmarkedWorkInProgress",
+                "newPage": false,
+                "searchKey": "gitlab.SystemNoteBodyUnmarkedWorkInProgress",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SystemNoteBodyUnmarkedWorkInProgress"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SystemNoteBodyUnmarkedWorkInProgress SystemNoteBody = \"unmarked as a **Work In Progress**\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SystemNoteBodyMarkedWorkInProgress",
+              "documentation": {
+                "identifier": "SystemNoteBodyMarkedWorkInProgress",
+                "newPage": false,
+                "searchKey": "gitlab.SystemNoteBodyMarkedWorkInProgress",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SystemNoteBodyMarkedWorkInProgress"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SystemNoteBodyMarkedWorkInProgress SystemNoteBody = \"marked as a **Work In Progress**\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SystemNoteBodyMarkedDraft",
+              "documentation": {
+                "identifier": "SystemNoteBodyMarkedDraft",
+                "newPage": false,
+                "searchKey": "gitlab.SystemNoteBodyMarkedDraft",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SystemNoteBodyMarkedDraft"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SystemNoteBodyMarkedDraft SystemNoteBody = \"marked this merge request as **draft**\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SystemNoteBodyMarkedReady",
+              "documentation": {
+                "identifier": "SystemNoteBodyMarkedReady",
+                "newPage": false,
+                "searchKey": "gitlab.SystemNoteBodyMarkedReady",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SystemNoteBodyMarkedReady"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SystemNoteBodyMarkedReady SystemNoteBody = \"marked this merge request as **ready**\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatusRunning",
+              "documentation": {
+                "identifier": "PipelineStatusRunning",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatusRunning",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PipelineStatusRunning"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PipelineStatusRunning PipelineStatus = \"running\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatusPending",
+              "documentation": {
+                "identifier": "PipelineStatusPending",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatusPending",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PipelineStatusPending"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PipelineStatusPending PipelineStatus = \"pending\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatusSuccess",
+              "documentation": {
+                "identifier": "PipelineStatusSuccess",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatusSuccess",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PipelineStatusSuccess"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PipelineStatusSuccess PipelineStatus = \"success\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatusFailed",
+              "documentation": {
+                "identifier": "PipelineStatusFailed",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatusFailed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PipelineStatusFailed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PipelineStatusFailed PipelineStatus = \"failed\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatusCanceled",
+              "documentation": {
+                "identifier": "PipelineStatusCanceled",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatusCanceled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PipelineStatusCanceled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PipelineStatusCanceled PipelineStatus = \"canceled\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatusSkipped",
+              "documentation": {
+                "identifier": "PipelineStatusSkipped",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatusSkipped",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PipelineStatusSkipped"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PipelineStatusSkipped PipelineStatus = \"skipped\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatusCreated",
+              "documentation": {
+                "identifier": "PipelineStatusCreated",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatusCreated",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PipelineStatusCreated"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PipelineStatusCreated PipelineStatus = \"created\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatusManual",
+              "documentation": {
+                "identifier": "PipelineStatusManual",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatusManual",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PipelineStatusManual"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PipelineStatusManual PipelineStatus = \"manual\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Public",
+              "documentation": {
+                "identifier": "Public",
+                "newPage": false,
+                "searchKey": "gitlab.Public",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Public"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Public Visibility = \"public\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Private",
+              "documentation": {
+                "identifier": "Private",
+                "newPage": false,
+                "searchKey": "gitlab.Private",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Private"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Private Visibility = \"private\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Internal",
+              "documentation": {
+                "identifier": "Internal",
+                "newPage": false,
+                "searchKey": "gitlab.Internal",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Internal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Internal Visibility = \"internal\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ResourceStateEventStateClosed",
+              "documentation": {
+                "identifier": "ResourceStateEventStateClosed",
+                "newPage": false,
+                "searchKey": "gitlab.ResourceStateEventStateClosed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ResourceStateEventStateClosed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ResourceStateEventStateClosed ResourceStateEventState = \"closed\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ResourceStateEventStateReopened",
+              "documentation": {
+                "identifier": "ResourceStateEventStateReopened",
+                "newPage": false,
+                "searchKey": "gitlab.ResourceStateEventStateReopened",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ResourceStateEventStateReopened"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ResourceStateEventStateReopened ResourceStateEventState = \"reopened\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ResourceStateEventStateMerged",
+              "documentation": {
+                "identifier": "ResourceStateEventStateMerged",
+                "newPage": false,
+                "searchKey": "gitlab.ResourceStateEventStateMerged",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ResourceStateEventStateMerged"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ResourceStateEventStateMerged ResourceStateEventState = \"merged\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/gitlab#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#requestCounter",
+              "documentation": {
+                "identifier": "requestCounter",
+                "newPage": false,
+                "searchKey": "gitlab.requestCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#traceEnabled",
+              "documentation": {
+                "identifier": "traceEnabled",
+                "newPage": false,
+                "searchKey": "gitlab.traceEnabled",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var traceEnabled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar traceEnabled int32 = 0\n```\n\nWhether debug logging is turned on \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ErrProjectNotFound",
+              "documentation": {
+                "identifier": "ErrProjectNotFound",
+                "newPage": false,
+                "searchKey": "gitlab.ErrProjectNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrProjectNotFound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrProjectNotFound = errors.New(\"GitLab project not found\")\n```\n\nErrProjectNotFound is when the requested GitLab project is not found. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ErrMergeRequestNotFound",
+              "documentation": {
+                "identifier": "ErrMergeRequestNotFound",
+                "newPage": false,
+                "searchKey": "gitlab.ErrMergeRequestNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrMergeRequestNotFound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrMergeRequestNotFound = errors.New(\"GitLab merge request not found\")\n```\n\nErrMergeRequestNotFound is when the requested GitLab merge request is not found. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ErrMergeRequestAlreadyExists",
+              "documentation": {
+                "identifier": "ErrMergeRequestAlreadyExists",
+                "newPage": false,
+                "searchKey": "gitlab.ErrMergeRequestAlreadyExists",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrMergeRequestAlreadyExists"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrMergeRequestAlreadyExists = errors.New(\"merge request already exists\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ErrTooManyMergeRequests",
+              "documentation": {
+                "identifier": "ErrTooManyMergeRequests",
+                "newPage": false,
+                "searchKey": "gitlab.ErrTooManyMergeRequests",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrTooManyMergeRequests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrTooManyMergeRequests = errors.New(\"retrieved too many merge requests\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ErrNotMergeable",
+              "documentation": {
+                "identifier": "ErrNotMergeable",
+                "newPage": false,
+                "searchKey": "gitlab.ErrNotMergeable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotMergeable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotMergeable = errors.New(\"merge request is not in a mergeable state\")\n```\n\nErrNotMergeable is returned by MergeMergeRequest when the merge request cannot be merged, because a precondition isn't met. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockListProjects",
+              "documentation": {
+                "identifier": "MockListProjects",
+                "newPage": false,
+                "searchKey": "gitlab.MockListProjects",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockListProjects"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockListProjects func(c *Client, ctx context.Context, urlStr string) (proj []*Project, nextPageURL *string, err error) = ...\n```\n\nMockListProjects, if non-nil, will be called instead of every invocation of Client.ListProjects. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockListUsers",
+              "documentation": {
+                "identifier": "MockListUsers",
+                "newPage": false,
+                "searchKey": "gitlab.MockListUsers",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockListUsers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockListUsers func(c *Client, ctx context.Context, urlStr string) (users []*User, nextPageURL *string, err error) = ...\n```\n\nMockListUsers, if non-nil, will be called instead of Client.ListUsers \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockGetUser",
+              "documentation": {
+                "identifier": "MockGetUser",
+                "newPage": false,
+                "searchKey": "gitlab.MockGetUser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGetUser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGetUser func(c *Client, ctx context.Context, id string) (*User, error)\n```\n\nMockGetUser, if non-nil, will be called instead of Client.GetUser \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockGetProject",
+              "documentation": {
+                "identifier": "MockGetProject",
+                "newPage": false,
+                "searchKey": "gitlab.MockGetProject",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGetProject"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGetProject func(c *Client, ctx context.Context, op GetProjectOp) (*Project, error)\n```\n\nMockGetProject, if non-nil, will be called instead of Client.GetProject \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockListTree",
+              "documentation": {
+                "identifier": "MockListTree",
+                "newPage": false,
+                "searchKey": "gitlab.MockListTree",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockListTree"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockListTree func(c *Client, ctx context.Context, op ListTreeOp) ([]*Tree, error)\n```\n\nMockListTree, if non-nil, will be called instead of Client.ListTree \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockCreateMergeRequest",
+              "documentation": {
+                "identifier": "MockCreateMergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.MockCreateMergeRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockCreateMergeRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockCreateMergeRequest func(c *Client, ctx context.Context, project *Project, opts CreateMergeRequestOpts) (*MergeRequest, error) = ...\n```\n\nMockCreateMergeRequest, if non-nil, will be called instead of Client.CreateMergeRequest \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockGetMergeRequest",
+              "documentation": {
+                "identifier": "MockGetMergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.MockGetMergeRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGetMergeRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGetMergeRequest func(c *Client, ctx context.Context, project *Project, iid ID) (*MergeRequest, error) = ...\n```\n\nMockGetMergeRequest, if non-nil, will be called instead of Client.GetMergeRequest \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockGetMergeRequestResourceStateEvents",
+              "documentation": {
+                "identifier": "MockGetMergeRequestResourceStateEvents",
+                "newPage": false,
+                "searchKey": "gitlab.MockGetMergeRequestResourceStateEvents",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGetMergeRequestResourceStateEvents"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGetMergeRequestResourceStateEvents func(c *Client, ctx context.Context, project *Project, iid ID) func() ([]*ResourceStateEvent, error) = ...\n```\n\nMockGetMergeRequestResourceStateEvents, if non-nil, will be called instead of Client.GetMergeRequestResourceStateEvents \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockGetMergeRequestNotes",
+              "documentation": {
+                "identifier": "MockGetMergeRequestNotes",
+                "newPage": false,
+                "searchKey": "gitlab.MockGetMergeRequestNotes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGetMergeRequestNotes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGetMergeRequestNotes func(c *Client, ctx context.Context, project *Project, iid ID) func() ([]*Note, error) = ...\n```\n\nMockGetMergeRequestNotes, if non-nil, will be called instead of Client.GetMergeRequestNotes \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockGetMergeRequestPipelines",
+              "documentation": {
+                "identifier": "MockGetMergeRequestPipelines",
+                "newPage": false,
+                "searchKey": "gitlab.MockGetMergeRequestPipelines",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGetMergeRequestPipelines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGetMergeRequestPipelines func(c *Client, ctx context.Context, project *Project, iid ID) func() ([]*Pipeline, error) = ...\n```\n\nMockGetMergeRequestPipelines, if non-nil, will be called instead of Client.GetMergeRequestPipelines \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockGetOpenMergeRequestByRefs",
+              "documentation": {
+                "identifier": "MockGetOpenMergeRequestByRefs",
+                "newPage": false,
+                "searchKey": "gitlab.MockGetOpenMergeRequestByRefs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGetOpenMergeRequestByRefs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGetOpenMergeRequestByRefs func(c *Client, ctx context.Context, project *Project, source, target string) (*MergeRequest, error) = ...\n```\n\nMockGetOpenMergeRequestByRefs, if non-nil, will be called instead of Client.GetOpenMergeRequestByRefs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockUpdateMergeRequest",
+              "documentation": {
+                "identifier": "MockUpdateMergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.MockUpdateMergeRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockUpdateMergeRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockUpdateMergeRequest func(c *Client, ctx context.Context, project *Project, mr *MergeRequest, opts UpdateMergeRequestOpts) (*MergeRequest, error) = ...\n```\n\nMockUpdateMergeRequest, if non-nil, will be called instead of Client.UpdateMergeRequest \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockMergeMergeRequest",
+              "documentation": {
+                "identifier": "MockMergeMergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.MockMergeMergeRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockMergeMergeRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockMergeMergeRequest func(c *Client, ctx context.Context, project *Project, mr *MergeRequest, squash bool) (*MergeRequest, error) = ...\n```\n\nMockMergeMergeRequest, if non-nil, will be called instead of Client.MergeMergeRequest \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockCreateMergeRequestNote",
+              "documentation": {
+                "identifier": "MockCreateMergeRequestNote",
+                "newPage": false,
+                "searchKey": "gitlab.MockCreateMergeRequestNote",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockCreateMergeRequestNote"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockCreateMergeRequestNote func(c *Client, ctx context.Context, project *Project, mr *MergeRequest, body string) error = ...\n```\n\nMockCreateMergeRequestNote, if non-nil, will be called instead of Client.CreateMergeRequestNote \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#projectsGitLabCacheCounter",
+              "documentation": {
+                "identifier": "projectsGitLabCacheCounter",
+                "newPage": false,
+                "searchKey": "gitlab.projectsGitLabCacheCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var projectsGitLabCacheCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar projectsGitLabCacheCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ListTreeMock",
+              "documentation": {
+                "identifier": "ListTreeMock",
+                "newPage": false,
+                "searchKey": "gitlab.ListTreeMock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ListTreeMock"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ListTreeMock func(ctx context.Context, op ListTreeOp) ([]*Tree, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#updateRegex",
+              "documentation": {
+                "identifier": "updateRegex",
+                "newPage": false,
+                "searchKey": "gitlab.updateRegex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var updateRegex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar updateRegex = flag.String(\"update\", \"\", \"Update testdata of tests matching the given regex\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/gitlab#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SudoableToken",
+              "documentation": {
+                "identifier": "SudoableToken",
+                "newPage": false,
+                "searchKey": "gitlab.SudoableToken",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SudoableToken struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SudoableToken struct {\n\tToken string\n\tSudo  string\n}\n```\n\nSudoableToken represents a personal access token with an optional sudo scope. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#SudoableToken.Authenticate",
+                    "documentation": {
+                      "identifier": "SudoableToken.Authenticate",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoableToken.Authenticate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pat *SudoableToken) Authenticate(req *http.Request) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pat *SudoableToken) Authenticate(req *http.Request) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#SudoableToken.Hash",
+                    "documentation": {
+                      "identifier": "SudoableToken.Hash",
+                      "newPage": false,
+                      "searchKey": "gitlab.SudoableToken.Hash",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pat *SudoableToken) Hash() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pat *SudoableToken) Hash() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TokenType",
+              "documentation": {
+                "identifier": "TokenType",
+                "newPage": false,
+                "searchKey": "gitlab.TokenType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TokenType string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TokenType string\n```\n\nTokenType is the type of an access token. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ClientProvider",
+              "documentation": {
+                "identifier": "ClientProvider",
+                "newPage": false,
+                "searchKey": "gitlab.ClientProvider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ClientProvider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ClientProvider struct {\n\t// baseURL is the base URL of GitLab; e.g., https://gitlab.com or https://gitlab.example.com\n\tbaseURL *url.URL\n\n\t// httpClient is the underlying the HTTP client to use\n\thttpClient httpcli.Doer\n\n\tgitlabClients   map[string]*Client\n\tgitlabClientsMu sync.Mutex\n}\n```\n\nClientProvider creates GitLab API clients. Each client has separate authentication creds and a separate cache, but they share an underlying HTTP client and rate limiter. Callers who want a simple unauthenticated API client should use `NewClientProvider(baseURL, transport).GetClient()`. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#NewClientProvider",
+                    "documentation": {
+                      "identifier": "NewClientProvider",
+                      "newPage": false,
+                      "searchKey": "gitlab.NewClientProvider",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewClientProvider(baseURL *url.URL, cli httpcli.Doer) *ClientProvider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewClientProvider(baseURL *url.URL, cli httpcli.Doer) *ClientProvider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#createTestProvider",
+                    "documentation": {
+                      "identifier": "createTestProvider",
+                      "newPage": false,
+                      "searchKey": "gitlab.createTestProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func createTestProvider(t *testing.T) *ClientProvider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc createTestProvider(t *testing.T) *ClientProvider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ClientProvider.GetAuthenticatorClient",
+                    "documentation": {
+                      "identifier": "ClientProvider.GetAuthenticatorClient",
+                      "newPage": false,
+                      "searchKey": "gitlab.ClientProvider.GetAuthenticatorClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ClientProvider) GetAuthenticatorClient(a auth.Authenticator) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ClientProvider) GetAuthenticatorClient(a auth.Authenticator) *Client\n```\n\nGetAuthenticatorClient returns a client authenticated by the given authenticator. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ClientProvider.GetPATClient",
+                    "documentation": {
+                      "identifier": "ClientProvider.GetPATClient",
+                      "newPage": false,
+                      "searchKey": "gitlab.ClientProvider.GetPATClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ClientProvider) GetPATClient(personalAccessToken, sudo string) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ClientProvider) GetPATClient(personalAccessToken, sudo string) *Client\n```\n\nGetPATClient returns a client authenticated by the personal access token. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ClientProvider.GetOAuthClient",
+                    "documentation": {
+                      "identifier": "ClientProvider.GetOAuthClient",
+                      "newPage": false,
+                      "searchKey": "gitlab.ClientProvider.GetOAuthClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ClientProvider) GetOAuthClient(oauthToken string) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ClientProvider) GetOAuthClient(oauthToken string) *Client\n```\n\nGetOAuthClient returns a client authenticated by the OAuth token. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ClientProvider.GetClient",
+                    "documentation": {
+                      "identifier": "ClientProvider.GetClient",
+                      "newPage": false,
+                      "searchKey": "gitlab.ClientProvider.GetClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ClientProvider) GetClient() *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ClientProvider) GetClient() *Client\n```\n\nGetClient returns an unauthenticated client. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ClientProvider.getClient",
+                    "documentation": {
+                      "identifier": "ClientProvider.getClient",
+                      "newPage": false,
+                      "searchKey": "gitlab.ClientProvider.getClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ClientProvider) getClient(a auth.Authenticator) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ClientProvider) getClient(a auth.Authenticator) *Client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ClientProvider.newClient",
+                    "documentation": {
+                      "identifier": "ClientProvider.newClient",
+                      "newPage": false,
+                      "searchKey": "gitlab.ClientProvider.newClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ClientProvider) newClient(baseURL *url.URL, a auth.Authenticator, httpClient httpcli.Doer) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ClientProvider) newClient(baseURL *url.URL, a auth.Authenticator, httpClient httpcli.Doer) *Client\n```\n\nnewClient creates a new GitLab API client with an optional personal access token to authenticate requests. \n\nThe URL must point to the base URL of the GitLab instance. This is [https://gitlab.com](https://gitlab.com) for GitLab.com and http[s]://[gitlab-hostname] for self-hosted GitLab instances. \n\nSee the docstring of Client for the meaning of the parameters. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#CommonOp",
+              "documentation": {
+                "identifier": "CommonOp",
+                "newPage": false,
+                "searchKey": "gitlab.CommonOp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommonOp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommonOp struct {\n\t// NoCache, if true, will bypass any caching done in this package\n\tNoCache bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "gitlab.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\tbaseURL          *url.URL\n\thttpClient       httpcli.Doer\n\tprojCache        *rcache.Cache\n\tAuth             auth.Authenticator\n\trateLimitMonitor *ratelimit.Monitor\n\trateLimiter      *rate.Limiter // Our internal rate limiter\n}\n```\n\nClient is a GitLab API client. Clients are associated with a particular user identity, which is defined by the Auth implementation. In addition to the generic types provided by the auth package, Client also supports SudoableToken: if this is used and its Sudo field is non-empty, then the user identity will be the user ID specified by Sudo (rather than the user that owns the token). \n\nThe Client's cache is keyed by Auth.Hash(). It is NOT keyed by the actual user ID that is defined by the authentication method. So if an OAuth token and personal access token belong to the same user and there are two corresponding Client instances, those Client instances will NOT share the same cache. However, two Client instances sharing the exact same values for those fields WILL share a cache. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#newTestClient",
+                    "documentation": {
+                      "identifier": "newTestClient",
+                      "newPage": false,
+                      "searchKey": "gitlab.newTestClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newTestClient(t *testing.T) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newTestClient(t *testing.T) *Client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.do",
+                    "documentation": {
+                      "identifier": "Client.do",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.do",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) (responseHeader http.Header, responseCode int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) do(ctx context.Context, req *http.Request, result interface{}) (responseHeader http.Header, responseCode int, err error)\n```\n\ndo is the default method for making API requests and will prepare the correct base path. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.doWithBaseURL",
+                    "documentation": {
+                      "identifier": "Client.doWithBaseURL",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.doWithBaseURL",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) doWithBaseURL(ctx context.Context, req *http.Request, result interface{}) (responseHeader http.Header, responseCode int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) doWithBaseURL(ctx context.Context, req *http.Request, result interface{}) (responseHeader http.Header, responseCode int, err error)\n```\n\ndoWithBaseURL will not amend the request URL. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.RateLimitMonitor",
+                    "documentation": {
+                      "identifier": "Client.RateLimitMonitor",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.RateLimitMonitor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RateLimitMonitor() *ratelimit.Monitor"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RateLimitMonitor() *ratelimit.Monitor\n```\n\nRateLimitMonitor exposes the rate limit monitor. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.WithAuthenticator",
+                    "documentation": {
+                      "identifier": "Client.WithAuthenticator",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.WithAuthenticator",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) WithAuthenticator(a auth.Authenticator) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) WithAuthenticator(a auth.Authenticator) *Client\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.ValidateToken",
+                    "documentation": {
+                      "identifier": "Client.ValidateToken",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.ValidateToken",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ValidateToken(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ValidateToken(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.GetAuthenticatedUserOAuthScopes",
+                    "documentation": {
+                      "identifier": "Client.GetAuthenticatedUserOAuthScopes",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.GetAuthenticatedUserOAuthScopes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetAuthenticatedUserOAuthScopes(ctx context.Context) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetAuthenticatedUserOAuthScopes(ctx context.Context) ([]string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.ListMembers",
+                    "documentation": {
+                      "identifier": "Client.ListMembers",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.ListMembers",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListMembers(ctx context.Context, urlStr string) (members []*Member, nextPageURL *string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListMembers(ctx context.Context, urlStr string) (members []*Member, nextPageURL *string, err error)\n```\n\nListMembers returns a list of members parsed from reponse of given URL. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.CreateMergeRequest",
+                    "documentation": {
+                      "identifier": "Client.CreateMergeRequest",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.CreateMergeRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateMergeRequest(ctx context.Context, project *Project, opts CreateMergeRequestOpts) (*MergeRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateMergeRequest(ctx context.Context, project *Project, opts CreateMergeRequestOpts) (*MergeRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.GetMergeRequest",
+                    "documentation": {
+                      "identifier": "Client.GetMergeRequest",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.GetMergeRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetMergeRequest(ctx context.Context, project *Project, iid ID) (*MergeRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetMergeRequest(ctx context.Context, project *Project, iid ID) (*MergeRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.GetOpenMergeRequestByRefs",
+                    "documentation": {
+                      "identifier": "Client.GetOpenMergeRequestByRefs",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.GetOpenMergeRequestByRefs",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetOpenMergeRequestByRefs(ctx context.Context, project *Project, source, target string) (*MergeRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetOpenMergeRequestByRefs(ctx context.Context, project *Project, source, target string) (*MergeRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.UpdateMergeRequest",
+                    "documentation": {
+                      "identifier": "Client.UpdateMergeRequest",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.UpdateMergeRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) UpdateMergeRequest(ctx context.Context, project *Project, mr *MergeRequest, opts UpdateMergeRequestOpts) (*MergeRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) UpdateMergeRequest(ctx context.Context, project *Project, mr *MergeRequest, opts UpdateMergeRequestOpts) (*MergeRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.MergeMergeRequest",
+                    "documentation": {
+                      "identifier": "Client.MergeMergeRequest",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.MergeMergeRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) MergeMergeRequest(ctx context.Context, project *Project, mr *MergeRequest, squash bool) (*MergeRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) MergeMergeRequest(ctx context.Context, project *Project, mr *MergeRequest, squash bool) (*MergeRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.CreateMergeRequestNote",
+                    "documentation": {
+                      "identifier": "Client.CreateMergeRequestNote",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.CreateMergeRequestNote",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateMergeRequestNote(ctx context.Context, project *Project, mr *MergeRequest, body string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateMergeRequestNote(ctx context.Context, project *Project, mr *MergeRequest, body string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.GetMergeRequestNotes",
+                    "documentation": {
+                      "identifier": "Client.GetMergeRequestNotes",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.GetMergeRequestNotes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetMergeRequestNotes(ctx context.Context, project *Project, iid ID) func() ([]*Note, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetMergeRequestNotes(ctx context.Context, project *Project, iid ID) func() ([]*Note, error)\n```\n\nGetMergeRequestNotes retrieves the notes for the given merge request. As the notes are paginated, a function is returned that may be invoked to return the next page of results. An empty slice and a nil error indicates that all pages have been returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.GetMergeRequestPipelines",
+                    "documentation": {
+                      "identifier": "Client.GetMergeRequestPipelines",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.GetMergeRequestPipelines",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetMergeRequestPipelines(ctx context.Context, project *Project, iid ID) func() ([]*Pipeline, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetMergeRequestPipelines(ctx context.Context, project *Project, iid ID) func() ([]*Pipeline, error)\n```\n\nGetMergeRequestPipelines retrieves the pipelines that have been executed as part of the given merge request. As the pipelines are paginated, a function is returned that may be invoked to return the next page of results. An empty slice and a nil error indicates that all pages have been returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.GetProject",
+                    "documentation": {
+                      "identifier": "Client.GetProject",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.GetProject",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetProject(ctx context.Context, op GetProjectOp) (*Project, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetProject(ctx context.Context, op GetProjectOp) (*Project, error)\n```\n\nGetProject gets a project from GitLab by either ID or path with namespace. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.cachedGetProject",
+                    "documentation": {
+                      "identifier": "Client.cachedGetProject",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.cachedGetProject",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) cachedGetProject(ctx context.Context, key string, forceFetch bool, getProjectFromAPI func(context.Context) (proj *Project, keys []string, err error)) (*Project, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) cachedGetProject(ctx context.Context, key string, forceFetch bool, getProjectFromAPI func(context.Context) (proj *Project, keys []string, err error)) (*Project, error)\n```\n\ncachedGetProject caches the getProjectFromAPI call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.getProjectFromCache",
+                    "documentation": {
+                      "identifier": "Client.getProjectFromCache",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.getProjectFromCache",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) getProjectFromCache(ctx context.Context, key string) *cachedProj"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) getProjectFromCache(ctx context.Context, key string) *cachedProj\n```\n\ngetProjectFromCache attempts to get a response from the redis cache. It returns nil error for cache-hit condition and non-nil error for cache-miss. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.addProjectToCache",
+                    "documentation": {
+                      "identifier": "Client.addProjectToCache",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.addProjectToCache",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) addProjectToCache(keys []string, proj *cachedProj)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) addProjectToCache(keys []string, proj *cachedProj)\n```\n\naddProjectToCache will cache the value for proj. The caller can provide multiple cache keys for the multiple ways that this project can be retrieved (e.g., both ID and path with namespace). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.getProjectFromAPI",
+                    "documentation": {
+                      "identifier": "Client.getProjectFromAPI",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.getProjectFromAPI",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) getProjectFromAPI(ctx context.Context, id int, pathWithNamespace string) (proj *Project, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) getProjectFromAPI(ctx context.Context, id int, pathWithNamespace string) (proj *Project, err error)\n```\n\ngetProjectFromAPI attempts to fetch a project from the GitLab API without use of the redis cache. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.ListProjects",
+                    "documentation": {
+                      "identifier": "Client.ListProjects",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.ListProjects",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListProjects(ctx context.Context, urlStr string) (projs []*Project, nextPageURL *string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListProjects(ctx context.Context, urlStr string) (projs []*Project, nextPageURL *string, err error)\n```\n\nListProjects lists GitLab projects. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.ListTree",
+                    "documentation": {
+                      "identifier": "Client.ListTree",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.ListTree",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListTree(ctx context.Context, op ListTreeOp) ([]*Tree, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListTree(ctx context.Context, op ListTreeOp) ([]*Tree, error)\n```\n\nListTree lists the repository tree of the specified project. The underlying GitLab API has more options, but for now, we only support non-recursive queries of the root directory. Requests results are not cached by the client at the moment (i.e., setting op.NoCache to true does not alter behavior). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.listTreeFromAPI",
+                    "documentation": {
+                      "identifier": "Client.listTreeFromAPI",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.listTreeFromAPI",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) listTreeFromAPI(ctx context.Context, projID int, projPathWithNamespace string) (tree []*Tree, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) listTreeFromAPI(ctx context.Context, projID int, projPathWithNamespace string) (tree []*Tree, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.GetMergeRequestResourceStateEvents",
+                    "documentation": {
+                      "identifier": "Client.GetMergeRequestResourceStateEvents",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.GetMergeRequestResourceStateEvents",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetMergeRequestResourceStateEvents(ctx context.Context, project *Project, iid ID) func() ([]*ResourceStateEvent, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetMergeRequestResourceStateEvents(ctx context.Context, project *Project, iid ID) func() ([]*ResourceStateEvent, error)\n```\n\nGetMergeRequestResourceStateEvents retrieves the events for the given merge request. As the events are paginated, a function is returned that may be invoked to return the next page of results. An empty slice and a nil error indicates that all pages have been returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.ListUsers",
+                    "documentation": {
+                      "identifier": "Client.ListUsers",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.ListUsers",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListUsers(ctx context.Context, urlStr string) (users []*User, nextPageURL *string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListUsers(ctx context.Context, urlStr string) (users []*User, nextPageURL *string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Client.GetUser",
+                    "documentation": {
+                      "identifier": "Client.GetUser",
+                      "newPage": false,
+                      "searchKey": "gitlab.Client.GetUser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetUser(ctx context.Context, id string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetUser(ctx context.Context, id string) (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#HTTPError",
+              "documentation": {
+                "identifier": "HTTPError",
+                "newPage": false,
+                "searchKey": "gitlab.HTTPError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type HTTPError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype HTTPError struct {\n\tcode int\n\tbody []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#NewHTTPError",
+                    "documentation": {
+                      "identifier": "NewHTTPError",
+                      "newPage": false,
+                      "searchKey": "gitlab.NewHTTPError",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewHTTPError(code int, body []byte) HTTPError"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewHTTPError(code int, body []byte) HTTPError\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#HTTPError.Code",
+                    "documentation": {
+                      "identifier": "HTTPError.Code",
+                      "newPage": false,
+                      "searchKey": "gitlab.HTTPError.Code",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (err HTTPError) Code() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (err HTTPError) Code() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#HTTPError.Message",
+                    "documentation": {
+                      "identifier": "HTTPError.Message",
+                      "newPage": false,
+                      "searchKey": "gitlab.HTTPError.Message",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (err HTTPError) Message() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (err HTTPError) Message() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#HTTPError.Error",
+                    "documentation": {
+                      "identifier": "HTTPError.Error",
+                      "newPage": false,
+                      "searchKey": "gitlab.HTTPError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (err HTTPError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (err HTTPError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#HTTPError.Unauthorized",
+                    "documentation": {
+                      "identifier": "HTTPError.Unauthorized",
+                      "newPage": false,
+                      "searchKey": "gitlab.HTTPError.Unauthorized",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (err HTTPError) Unauthorized() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (err HTTPError) Unauthorized() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#HTTPError.Forbidden",
+                    "documentation": {
+                      "identifier": "HTTPError.Forbidden",
+                      "newPage": false,
+                      "searchKey": "gitlab.HTTPError.Forbidden",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (err HTTPError) Forbidden() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (err HTTPError) Forbidden() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Label",
+              "documentation": {
+                "identifier": "Label",
+                "newPage": false,
+                "searchKey": "gitlab.Label",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Label struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Label struct {\n\tID          ID     `json:\"id\"`\n\tName        string `json:\"name\"`\n\tColor       string `json:\"color\"`\n\tTextColor   string `json:\"text_color\"`\n\tDescription string `json:\"description\"`\n\tType        string `json:\"type\"`\n\tCreatedAt   Time   `json:\"created_at\"`\n\tUpdatedAt   Time   `json:\"updated_at\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Member",
+              "documentation": {
+                "identifier": "Member",
+                "newPage": false,
+                "searchKey": "gitlab.Member",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Member struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Member struct {\n\tID                int32  `json:\"id\"`\n\tUsername          string `json:\"username\"`\n\tName              string `json:\"name\"`\n\tState             string `json:\"state\"`\n\tAvatarURL         string `json:\"avatar_url\"`\n\tWebURL            string `json:\"web_url\"`\n\tExpiresAt         string `json:\"expires_at\"`\n\tAccessLevel       int    `json:\"access_level\"`\n\tGroupSAMLIdentity *struct {\n\t\tProvider       string `json:\"provider\"`\n\t\tExternUID      string `json:\"extern_uid\"`\n\t\tSAMLProviderID int    `json:\"saml_provider_id\"`\n\t} `json:\"group_saml_identity\"`\n}\n```\n\nMember contains fields for a group or project membership. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ID",
+              "documentation": {
+                "identifier": "ID",
+                "newPage": false,
+                "searchKey": "gitlab.ID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ID int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ID int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequestState",
+              "documentation": {
+                "identifier": "MergeRequestState",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequestState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestState string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestState string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequest",
+              "documentation": {
+                "identifier": "MergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequest struct {\n\tID             ID                `json:\"id\"`\n\tIID            ID                `json:\"iid\"`\n\tProjectID      ID                `json:\"project_id\"`\n\tTitle          string            `json:\"title\"`\n\tDescription    string            `json:\"description\"`\n\tState          MergeRequestState `json:\"state\"`\n\tCreatedAt      Time              `json:\"created_at\"`\n\tUpdatedAt      Time              `json:\"updated_at\"`\n\tMergedAt       *Time             `json:\"merged_at\"`\n\tClosedAt       *Time             `json:\"closed_at\"`\n\tHeadPipeline   *Pipeline         `json:\"head_pipeline\"`\n\tLabels         []string          `json:\"labels\"`\n\tSourceBranch   string            `json:\"source_branch\"`\n\tTargetBranch   string            `json:\"target_branch\"`\n\tWebURL         string            `json:\"web_url\"`\n\tWorkInProgress bool              `json:\"work_in_progress\"`\n\tAuthor         User              `json:\"author\"`\n\n\tDiffRefs DiffRefs `json:\"diff_refs\"`\n\n\t// The fields below are computed from other REST API requests when getting a\n\t// Merge Request. Once our minimum version is GitLab 12.0, we can use the\n\t// GraphQL API to retrieve all of this data at once, but until then, we have\n\t// to do it the old fashioned way with lots of REST requests.\n\tNotes               []*Note\n\tPipelines           []*Pipeline\n\tResourceStateEvents []*ResourceStateEvent\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#DiffRefs",
+              "documentation": {
+                "identifier": "DiffRefs",
+                "newPage": false,
+                "searchKey": "gitlab.DiffRefs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DiffRefs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DiffRefs struct {\n\tBaseSHA  string `json:\"base_sha\"`\n\tHeadSHA  string `json:\"head_sha\"`\n\tStartSHA string `json:\"start_sha\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#CreateMergeRequestOpts",
+              "documentation": {
+                "identifier": "CreateMergeRequestOpts",
+                "newPage": false,
+                "searchKey": "gitlab.CreateMergeRequestOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateMergeRequestOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateMergeRequestOpts struct {\n\tSourceBranch string `json:\"source_branch\"`\n\tTargetBranch string `json:\"target_branch\"`\n\tTitle        string `json:\"title\"`\n\tDescription  string `json:\"description,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#UpdateMergeRequestOpts",
+              "documentation": {
+                "identifier": "UpdateMergeRequestOpts",
+                "newPage": false,
+                "searchKey": "gitlab.UpdateMergeRequestOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UpdateMergeRequestOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UpdateMergeRequestOpts struct {\n\tTargetBranch string                       `json:\"target_branch\"`\n\tTitle        string                       `json:\"title\"`\n\tDescription  string                       `json:\"description,omitempty\"`\n\tStateEvent   UpdateMergeRequestStateEvent `json:\"state_event,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#UpdateMergeRequestStateEvent",
+              "documentation": {
+                "identifier": "UpdateMergeRequestStateEvent",
+                "newPage": false,
+                "searchKey": "gitlab.UpdateMergeRequestStateEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UpdateMergeRequestStateEvent string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UpdateMergeRequestStateEvent string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SystemNoteBody",
+              "documentation": {
+                "identifier": "SystemNoteBody",
+                "newPage": false,
+                "searchKey": "gitlab.SystemNoteBody",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SystemNoteBody string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SystemNoteBody string\n```\n\nSystemNoteBody is a type of all known system message bodies. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Note",
+              "documentation": {
+                "identifier": "Note",
+                "newPage": false,
+                "searchKey": "gitlab.Note",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Note struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Note struct {\n\tID        ID             `json:\"id\"`\n\tBody      SystemNoteBody `json:\"body\"`\n\tAuthor    User           `json:\"author\"`\n\tCreatedAt Time           `json:\"created_at\"`\n\tSystem    bool           `json:\"system\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Note.ToEvent",
+                    "documentation": {
+                      "identifier": "Note.ToEvent",
+                      "newPage": false,
+                      "searchKey": "gitlab.Note.ToEvent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *Note) ToEvent() keyer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *Note) ToEvent() keyer\n```\n\nToEvent returns a pointer to a more specific struct, or nil if the Note is not of a known kind. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ReviewApprovedEvent",
+              "documentation": {
+                "identifier": "ReviewApprovedEvent",
+                "newPage": false,
+                "searchKey": "gitlab.ReviewApprovedEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReviewApprovedEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReviewApprovedEvent struct{ *Note }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ReviewApprovedEvent.Key",
+                    "documentation": {
+                      "identifier": "ReviewApprovedEvent.Key",
+                      "newPage": false,
+                      "searchKey": "gitlab.ReviewApprovedEvent.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *ReviewApprovedEvent) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *ReviewApprovedEvent) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ReviewUnapprovedEvent",
+              "documentation": {
+                "identifier": "ReviewUnapprovedEvent",
+                "newPage": false,
+                "searchKey": "gitlab.ReviewUnapprovedEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReviewUnapprovedEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReviewUnapprovedEvent struct{ *Note }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ReviewUnapprovedEvent.Key",
+                    "documentation": {
+                      "identifier": "ReviewUnapprovedEvent.Key",
+                      "newPage": false,
+                      "searchKey": "gitlab.ReviewUnapprovedEvent.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *ReviewUnapprovedEvent) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *ReviewUnapprovedEvent) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MarkWorkInProgressEvent",
+              "documentation": {
+                "identifier": "MarkWorkInProgressEvent",
+                "newPage": false,
+                "searchKey": "gitlab.MarkWorkInProgressEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MarkWorkInProgressEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MarkWorkInProgressEvent struct{ *Note }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#MarkWorkInProgressEvent.Key",
+                    "documentation": {
+                      "identifier": "MarkWorkInProgressEvent.Key",
+                      "newPage": false,
+                      "searchKey": "gitlab.MarkWorkInProgressEvent.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MarkWorkInProgressEvent) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MarkWorkInProgressEvent) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#UnmarkWorkInProgressEvent",
+              "documentation": {
+                "identifier": "UnmarkWorkInProgressEvent",
+                "newPage": false,
+                "searchKey": "gitlab.UnmarkWorkInProgressEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnmarkWorkInProgressEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnmarkWorkInProgressEvent struct{ *Note }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#UnmarkWorkInProgressEvent.Key",
+                    "documentation": {
+                      "identifier": "UnmarkWorkInProgressEvent.Key",
+                      "newPage": false,
+                      "searchKey": "gitlab.UnmarkWorkInProgressEvent.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *UnmarkWorkInProgressEvent) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *UnmarkWorkInProgressEvent) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#keyer",
+              "documentation": {
+                "identifier": "keyer",
+                "newPage": false,
+                "searchKey": "gitlab.keyer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type keyer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype keyer interface {\n\tKey() string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Pipeline",
+              "documentation": {
+                "identifier": "Pipeline",
+                "newPage": false,
+                "searchKey": "gitlab.Pipeline",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Pipeline struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Pipeline struct {\n\tID        ID             `json:\"id\"`\n\tSHA       string         `json:\"sha\"`\n\tRef       string         `json:\"ref\"`\n\tStatus    PipelineStatus `json:\"status\"`\n\tWebURL    string         `json:\"web_url\"`\n\tCreatedAt Time           `json:\"created_at\"`\n\tUpdatedAt Time           `json:\"updated_at\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Pipeline.Key",
+                    "documentation": {
+                      "identifier": "Pipeline.Key",
+                      "newPage": false,
+                      "searchKey": "gitlab.Pipeline.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#PipelineStatus",
+              "documentation": {
+                "identifier": "PipelineStatus",
+                "newPage": false,
+                "searchKey": "gitlab.PipelineStatus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PipelineStatus string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PipelineStatus string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Visibility",
+              "documentation": {
+                "identifier": "Visibility",
+                "newPage": false,
+                "searchKey": "gitlab.Visibility",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Visibility string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Visibility string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Project",
+              "documentation": {
+                "identifier": "Project",
+                "newPage": false,
+                "searchKey": "gitlab.Project",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Project struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Project struct {\n\tProjectCommon\n\tVisibility        Visibility     `json:\"visibility\"`                    // \"private\", \"internal\", or \"public\"\n\tForkedFromProject *ProjectCommon `json:\"forked_from_project,omitempty\"` // If non-nil, the project from which this project was forked\n\tArchived          bool           `json:\"archived\"`\n\tStarCount         int            `json:\"star_count\"`\n\tForksCount        int            `json:\"forks_count\"`\n}\n```\n\nProject is a GitLab project (equivalent to a GitHub repository). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Project.RequiresAuthentication",
+                    "documentation": {
+                      "identifier": "Project.RequiresAuthentication",
+                      "newPage": false,
+                      "searchKey": "gitlab.Project.RequiresAuthentication",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Project) RequiresAuthentication() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Project) RequiresAuthentication() bool\n```\n\nRequiresAuthentication reports whether this project requires authentication to view (i.e., its visibility is \"private\" or \"internal\"). \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ProjectCommon",
+              "documentation": {
+                "identifier": "ProjectCommon",
+                "newPage": false,
+                "searchKey": "gitlab.ProjectCommon",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ProjectCommon struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ProjectCommon struct {\n\tID                int    `json:\"id\"`                  // ID of project\n\tPathWithNamespace string `json:\"path_with_namespace\"` // full path name of project (\"namespace1/namespace2/name\")\n\tDescription       string `json:\"description\"`         // description of project\n\tWebURL            string `json:\"web_url\"`             // the web URL of this project (\"https://gitlab.com/foo/bar\")i\n\tHTTPURLToRepo     string `json:\"http_url_to_repo\"`    // HTTP clone URL\n\tSSHURLToRepo      string `json:\"ssh_url_to_repo\"`     // SSH clone URL (\"git@example.com:foo/bar.git\")\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#GetProjectOp",
+              "documentation": {
+                "identifier": "GetProjectOp",
+                "newPage": false,
+                "searchKey": "gitlab.GetProjectOp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GetProjectOp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GetProjectOp struct {\n\tID                int\n\tPathWithNamespace string\n\tCommonOp\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#cachedProj",
+              "documentation": {
+                "identifier": "cachedProj",
+                "newPage": false,
+                "searchKey": "gitlab.cachedProj",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cachedProj struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cachedProj struct {\n\tProject\n\n\t// NotFound indicates that the GitLab API reported that the project was not found.\n\tNotFound bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Tree",
+              "documentation": {
+                "identifier": "Tree",
+                "newPage": false,
+                "searchKey": "gitlab.Tree",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Tree struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Tree struct {\n\tID   string `json:\"id\"`\n\tName string `json:\"name\"`\n\tType string `json:\"type\"`\n\tPath string `json:\"path\"`\n\tMode string `json:\"mode\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ListTreeOp",
+              "documentation": {
+                "identifier": "ListTreeOp",
+                "newPage": false,
+                "searchKey": "gitlab.ListTreeOp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ListTreeOp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ListTreeOp struct {\n\tProjID                int\n\tProjPathWithNamespace string\n\tCommonOp\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ResourceStateEventState",
+              "documentation": {
+                "identifier": "ResourceStateEventState",
+                "newPage": false,
+                "searchKey": "gitlab.ResourceStateEventState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ResourceStateEventState string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ResourceStateEventState string\n```\n\nResourceStateEventState is a type of all known resource state event states. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ResourceStateEvent",
+              "documentation": {
+                "identifier": "ResourceStateEvent",
+                "newPage": false,
+                "searchKey": "gitlab.ResourceStateEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ResourceStateEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ResourceStateEvent struct {\n\tID           ID                      `json:\"id\"`\n\tUser         User                    `json:\"user\"`\n\tCreatedAt    Time                    `json:\"created_at\"`\n\tResourceType string                  `json:\"resource_type\"`\n\tResourceID   ID                      `json:\"resource_id\"`\n\tState        ResourceStateEventState `json:\"state\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#ResourceStateEvent.ToEvent",
+                    "documentation": {
+                      "identifier": "ResourceStateEvent.ToEvent",
+                      "newPage": false,
+                      "searchKey": "gitlab.ResourceStateEvent.ToEvent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rse *ResourceStateEvent) ToEvent() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rse *ResourceStateEvent) ToEvent() interface{}\n```\n\nToEvent returns a pointer to a more specific struct, or nil if the ResourceStateEvent is not of a known kind. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequestClosedEvent",
+              "documentation": {
+                "identifier": "MergeRequestClosedEvent",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequestClosedEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestClosedEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestClosedEvent struct{ *ResourceStateEvent }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#MergeRequestClosedEvent.Key",
+                    "documentation": {
+                      "identifier": "MergeRequestClosedEvent.Key",
+                      "newPage": false,
+                      "searchKey": "gitlab.MergeRequestClosedEvent.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestClosedEvent) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestClosedEvent) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequestReopenedEvent",
+              "documentation": {
+                "identifier": "MergeRequestReopenedEvent",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequestReopenedEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestReopenedEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestReopenedEvent struct{ *ResourceStateEvent }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#MergeRequestReopenedEvent.Key",
+                    "documentation": {
+                      "identifier": "MergeRequestReopenedEvent.Key",
+                      "newPage": false,
+                      "searchKey": "gitlab.MergeRequestReopenedEvent.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestReopenedEvent) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestReopenedEvent) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MergeRequestMergedEvent",
+              "documentation": {
+                "identifier": "MergeRequestMergedEvent",
+                "newPage": false,
+                "searchKey": "gitlab.MergeRequestMergedEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MergeRequestMergedEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MergeRequestMergedEvent struct{ *ResourceStateEvent }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#MergeRequestMergedEvent.Key",
+                    "documentation": {
+                      "identifier": "MergeRequestMergedEvent.Key",
+                      "newPage": false,
+                      "searchKey": "gitlab.MergeRequestMergedEvent.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MergeRequestMergedEvent) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MergeRequestMergedEvent) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#mockHTTPResponseBody",
+              "documentation": {
+                "identifier": "mockHTTPResponseBody",
+                "newPage": false,
+                "searchKey": "gitlab.mockHTTPResponseBody",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockHTTPResponseBody struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockHTTPResponseBody struct {\n\tcount        int\n\theader       http.Header\n\tresponseBody string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#mockHTTPResponseBody.Do",
+                    "documentation": {
+                      "identifier": "mockHTTPResponseBody.Do",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockHTTPResponseBody.Do",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *mockHTTPResponseBody) Do(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *mockHTTPResponseBody) Do(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#mockHTTPEmptyResponse",
+              "documentation": {
+                "identifier": "mockHTTPEmptyResponse",
+                "newPage": false,
+                "searchKey": "gitlab.mockHTTPEmptyResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockHTTPEmptyResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockHTTPEmptyResponse struct {\n\tstatusCode int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#mockHTTPEmptyResponse.Do",
+                    "documentation": {
+                      "identifier": "mockHTTPEmptyResponse.Do",
+                      "newPage": false,
+                      "searchKey": "gitlab.mockHTTPEmptyResponse.Do",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s mockHTTPEmptyResponse) Do(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s mockHTTPEmptyResponse) Do(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Time",
+              "documentation": {
+                "identifier": "Time",
+                "newPage": false,
+                "searchKey": "gitlab.Time",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Time struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Time struct{ time.Time }\n```\n\nTime is a type that can unmarshal the multiple date/time formats that GitLab webhooks may include. While GitLab's normal API uses RFC 3339 dates, some objects in webhook payloads include a more legacy format, even though they generally adhere to the REST API otherwise. We need to be able to handle both to be able to handle those types in a unified way. \n\nThe underlying GitLab issue is [https://gitlab.com/gitlab-org/gitlab/-/issues/19567](https://gitlab.com/gitlab-org/gitlab/-/issues/19567) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#Time.UnmarshalJSON",
+                    "documentation": {
+                      "identifier": "Time.UnmarshalJSON",
+                      "newPage": false,
+                      "searchKey": "gitlab.Time.UnmarshalJSON",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Time) UnmarshalJSON(data []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Time) UnmarshalJSON(data []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#User",
+              "documentation": {
+                "identifier": "User",
+                "newPage": false,
+                "searchKey": "gitlab.User",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type User struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype User struct {\n\tID         int32      `json:\"id\"`\n\tName       string     `json:\"name\"`\n\tUsername   string     `json:\"username\"`\n\tEmail      string     `json:\"email\"`\n\tState      string     `json:\"state\"`\n\tAvatarURL  string     `json:\"avatar_url\"`\n\tWebURL     string     `json:\"web_url\"`\n\tIdentities []Identity `json:\"identities\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/gitlab#GetExternalAccountData",
+                    "documentation": {
+                      "identifier": "GetExternalAccountData",
+                      "newPage": false,
+                      "searchKey": "gitlab.GetExternalAccountData",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetExternalAccountData(data *extsvc.AccountData) (usr *User, tok *oauth2.Token, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetExternalAccountData(data *extsvc.AccountData) (usr *User, tok *oauth2.Token, err error)\n```\n\nGetExternalAccountData returns the deserialized user and token from the external account data JSON blob in a typesafe way. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#Identity",
+              "documentation": {
+                "identifier": "Identity",
+                "newPage": false,
+                "searchKey": "gitlab.Identity",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Identity struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Identity struct {\n\tProvider  string `json:\"provider\"`\n\tExternUID string `json:\"extern_uid\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/gitlab#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "gitlab.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#trace",
+              "documentation": {
+                "identifier": "trace",
+                "newPage": false,
+                "searchKey": "gitlab.trace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trace(msg string, ctx ...interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trace(msg string, ctx ...interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#isGitLabDotComURL",
+              "documentation": {
+                "identifier": "isGitLabDotComURL",
+                "newPage": false,
+                "searchKey": "gitlab.isGitLabDotComURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isGitLabDotComURL(baseURL *url.URL) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isGitLabDotComURL(baseURL *url.URL) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#HTTPErrorCode",
+              "documentation": {
+                "identifier": "HTTPErrorCode",
+                "newPage": false,
+                "searchKey": "gitlab.HTTPErrorCode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HTTPErrorCode(err error) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HTTPErrorCode(err error) int\n```\n\nHTTPErrorCode returns err's HTTP status code, if it is an HTTP error from this package. Otherwise it returns 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#IsNotFound",
+              "documentation": {
+                "identifier": "IsNotFound",
+                "newPage": false,
+                "searchKey": "gitlab.IsNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsNotFound(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsNotFound(err error) bool\n```\n\nIsNotFound reports whether err is a GitLab API error of type NOT_FOUND, the equivalent cached response error, or HTTP 404. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#ExternalRepoSpec",
+              "documentation": {
+                "identifier": "ExternalRepoSpec",
+                "newPage": false,
+                "searchKey": "gitlab.ExternalRepoSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExternalRepoSpec(proj *Project, baseURL url.URL) api.ExternalRepoSpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExternalRepoSpec(proj *Project, baseURL url.URL) api.ExternalRepoSpec\n```\n\nExternalRepoSpec returns an api.ExternalRepoSpec that refers to the specified GitLab project. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#IsWIP",
+              "documentation": {
+                "identifier": "IsWIP",
+                "newPage": false,
+                "searchKey": "gitlab.IsWIP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsWIP(title string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsWIP(title string) bool\n```\n\nIsWIP returns true if the given title would result in GitLab rendering the MR as 'work in progress'. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SetWIP",
+              "documentation": {
+                "identifier": "SetWIP",
+                "newPage": false,
+                "searchKey": "gitlab.SetWIP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetWIP(title string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetWIP(title string) string\n```\n\nSetWIP ensures a \"WIP:\" prefix on the given title. If a \"Draft:\" prefix is found, that one is retained instead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#UnsetWIP",
+              "documentation": {
+                "identifier": "UnsetWIP",
+                "newPage": false,
+                "searchKey": "gitlab.UnsetWIP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UnsetWIP(title string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UnsetWIP(title string) string\n```\n\nUnsetWIP removes \"WIP:\" and \"Draft:\" prefixes from the given title. Depending on the GitLab version, either of them are used so we need to strip them both. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#idCacheKey",
+              "documentation": {
+                "identifier": "idCacheKey",
+                "newPage": false,
+                "searchKey": "gitlab.idCacheKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func idCacheKey(id int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc idCacheKey(id int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#pathWithNamespaceCacheKey",
+              "documentation": {
+                "identifier": "pathWithNamespaceCacheKey",
+                "newPage": false,
+                "searchKey": "gitlab.pathWithNamespaceCacheKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pathWithNamespaceCacheKey(pathWithNamespace string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pathWithNamespaceCacheKey(pathWithNamespace string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#MockGetProject_Return",
+              "documentation": {
+                "identifier": "MockGetProject_Return",
+                "newPage": false,
+                "searchKey": "gitlab.MockGetProject_Return",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockGetProject_Return(returns *Project)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockGetProject_Return(returns *Project)\n```\n\nMockGetProject_Return is called by tests to mock (*Client).GetProject. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#SetExternalAccountData",
+              "documentation": {
+                "identifier": "SetExternalAccountData",
+                "newPage": false,
+                "searchKey": "gitlab.SetExternalAccountData",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetExternalAccountData(data *extsvc.AccountData, user *User, token *oauth2.Token)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetExternalAccountData(data *extsvc.AccountData, user *User, token *oauth2.Token)\n```\n\nSetExternalAccountData sets the user and token into the external account data blob. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestSudoableToken",
+              "documentation": {
+                "identifier": "TestSudoableToken",
+                "newPage": false,
+                "searchKey": "gitlab.TestSudoableToken",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSudoableToken(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSudoableToken(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestGetAuthenticatedUserOAuthScopes",
+              "documentation": {
+                "identifier": "TestGetAuthenticatedUserOAuthScopes",
+                "newPage": false,
+                "searchKey": "gitlab.TestGetAuthenticatedUserOAuthScopes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetAuthenticatedUserOAuthScopes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetAuthenticatedUserOAuthScopes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#update",
+              "documentation": {
+                "identifier": "update",
+                "newPage": false,
+                "searchKey": "gitlab.update",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func update(name string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc update(name string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestWIP",
+              "documentation": {
+                "identifier": "TestWIP",
+                "newPage": false,
+                "searchKey": "gitlab.TestWIP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWIP(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWIP(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestCreateMergeRequest",
+              "documentation": {
+                "identifier": "TestCreateMergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.TestCreateMergeRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCreateMergeRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCreateMergeRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestGetMergeRequest",
+              "documentation": {
+                "identifier": "TestGetMergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.TestGetMergeRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetMergeRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetMergeRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestGetOpenMergeRequestByRefs",
+              "documentation": {
+                "identifier": "TestGetOpenMergeRequestByRefs",
+                "newPage": false,
+                "searchKey": "gitlab.TestGetOpenMergeRequestByRefs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetOpenMergeRequestByRefs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetOpenMergeRequestByRefs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestUpdateMergeRequest",
+              "documentation": {
+                "identifier": "TestUpdateMergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.TestUpdateMergeRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUpdateMergeRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUpdateMergeRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestCreateMergeRequestNote",
+              "documentation": {
+                "identifier": "TestCreateMergeRequestNote",
+                "newPage": false,
+                "searchKey": "gitlab.TestCreateMergeRequestNote",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCreateMergeRequestNote(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCreateMergeRequestNote(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestMergeMergeRequest",
+              "documentation": {
+                "identifier": "TestMergeMergeRequest",
+                "newPage": false,
+                "searchKey": "gitlab.TestMergeMergeRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMergeMergeRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMergeMergeRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestGetMergeRequestNotes",
+              "documentation": {
+                "identifier": "TestGetMergeRequestNotes",
+                "newPage": false,
+                "searchKey": "gitlab.TestGetMergeRequestNotes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetMergeRequestNotes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetMergeRequestNotes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestNoteToEvent",
+              "documentation": {
+                "identifier": "TestNoteToEvent",
+                "newPage": false,
+                "searchKey": "gitlab.TestNoteToEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNoteToEvent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNoteToEvent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestGetMergeRequestPipelines",
+              "documentation": {
+                "identifier": "TestGetMergeRequestPipelines",
+                "newPage": false,
+                "searchKey": "gitlab.TestGetMergeRequestPipelines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetMergeRequestPipelines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetMergeRequestPipelines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestPipelineKey",
+              "documentation": {
+                "identifier": "TestPipelineKey",
+                "newPage": false,
+                "searchKey": "gitlab.TestPipelineKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPipelineKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPipelineKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestClient_GetProject",
+              "documentation": {
+                "identifier": "TestClient_GetProject",
+                "newPage": false,
+                "searchKey": "gitlab.TestClient_GetProject",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_GetProject(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_GetProject(t *testing.T)\n```\n\nTestClient_GetProject tests the behavior of GetProject. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestClient_GetProject_nonexistent",
+              "documentation": {
+                "identifier": "TestClient_GetProject_nonexistent",
+                "newPage": false,
+                "searchKey": "gitlab.TestClient_GetProject_nonexistent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_GetProject_nonexistent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_GetProject_nonexistent(t *testing.T)\n```\n\nTestClient_GetProject_nonexistent tests the behavior of GetProject when called on a project that does not exist. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestListTree",
+              "documentation": {
+                "identifier": "TestListTree",
+                "newPage": false,
+                "searchKey": "gitlab.TestListTree",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestListTree(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestListTree(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/gitlab#TestTimeUnmarshal",
+              "documentation": {
+                "identifier": "TestTimeUnmarshal",
+                "newPage": false,
+                "searchKey": "gitlab.TestTimeUnmarshal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeUnmarshal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeUnmarshal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/extsvc/gitlab/webhooks"
+    }
+  ]
+}

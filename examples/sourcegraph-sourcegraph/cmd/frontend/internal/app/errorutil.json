@@ -1,0 +1,62 @@
+{
+  "pathID": "/cmd/frontend/internal/app/errorutil",
+  "documentation": {
+    "identifier": "errorutil",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/app/errorutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package errorutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package errorutil exports a HTTP Middleware for HTTP handlers which return errors. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/errorutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/errorutil#Handler",
+              "documentation": {
+                "identifier": "Handler",
+                "newPage": false,
+                "searchKey": "errorutil.Handler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Handler(h func(http.ResponseWriter, *http.Request) error) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Handler(h func(http.ResponseWriter, *http.Request) error) http.Handler\n```\n\nHandler is a wrapper func for app HTTP handlers that enables app error pages. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

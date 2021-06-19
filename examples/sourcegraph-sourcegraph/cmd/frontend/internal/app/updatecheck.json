@@ -1,0 +1,1819 @@
+{
+  "pathID": "/cmd/frontend/internal/app/updatecheck",
+  "documentation": {
+    "identifier": "updatecheck",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/app/updatecheck",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package updatecheck"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package updatecheck provides a client and HTTP handler for checking and serving software update information for Sourcegraph versions. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/updatecheck#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#redisInfoCommand",
+              "documentation": {
+                "identifier": "redisInfoCommand",
+                "newPage": false,
+                "searchKey": "updatecheck.redisInfoCommand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const redisInfoCommand"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst redisInfoCommand = ...\n```\n\noutput of running the INFO command in redis-cli \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/updatecheck#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#metricsRecorder",
+              "documentation": {
+                "identifier": "metricsRecorder",
+                "newPage": false,
+                "searchKey": "updatecheck.metricsRecorder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricsRecorder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricsRecorder = ...\n```\n\nmetricsRecorder records operational metrics for methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#mu",
+              "documentation": {
+                "identifier": "mu",
+                "newPage": false,
+                "searchKey": "updatecheck.mu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mu sync.Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#startedAt",
+              "documentation": {
+                "identifier": "startedAt",
+                "newPage": false,
+                "searchKey": "updatecheck.startedAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var startedAt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar startedAt *time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#lastStatus",
+              "documentation": {
+                "identifier": "lastStatus",
+                "newPage": false,
+                "searchKey": "updatecheck.lastStatus",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lastStatus"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lastStatus *Status\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#started",
+              "documentation": {
+                "identifier": "started",
+                "newPage": false,
+                "searchKey": "updatecheck.started",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var started"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar started bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#pubSubPingsTopicID",
+              "documentation": {
+                "identifier": "pubSubPingsTopicID",
+                "newPage": false,
+                "searchKey": "updatecheck.pubSubPingsTopicID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pubSubPingsTopicID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pubSubPingsTopicID = ...\n```\n\npubSubPingsTopicID is the topic ID of the topic that forwards messages to Pings' pub/sub subscribers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#latestReleaseDockerServerImageBuild",
+              "documentation": {
+                "identifier": "latestReleaseDockerServerImageBuild",
+                "newPage": false,
+                "searchKey": "updatecheck.latestReleaseDockerServerImageBuild",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var latestReleaseDockerServerImageBuild"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar latestReleaseDockerServerImageBuild = newBuild(\"3.29.0\")\n```\n\nlatestReleaseDockerServerImageBuild is only used by sourcegraph.com to tell existing non-cluster, non-docker-compose, and non-pure-docker installations what the latest version is. The version here _must_ be available at [https://hub.docker.com/r/sourcegraph/server/tags/](https://hub.docker.com/r/sourcegraph/server/tags/) before landing in master. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#latestReleaseKubernetesBuild",
+              "documentation": {
+                "identifier": "latestReleaseKubernetesBuild",
+                "newPage": false,
+                "searchKey": "updatecheck.latestReleaseKubernetesBuild",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var latestReleaseKubernetesBuild"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar latestReleaseKubernetesBuild = newBuild(\"3.29.0\")\n```\n\nlatestReleaseKubernetesBuild is only used by sourcegraph.com to tell existing Sourcegraph cluster deployments what the latest version is. The version here _must_ be available in a tag at [https://github.com/sourcegraph/deploy-sourcegraph](https://github.com/sourcegraph/deploy-sourcegraph) before landing in master. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#latestReleaseDockerComposeOrPureDocker",
+              "documentation": {
+                "identifier": "latestReleaseDockerComposeOrPureDocker",
+                "newPage": false,
+                "searchKey": "updatecheck.latestReleaseDockerComposeOrPureDocker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var latestReleaseDockerComposeOrPureDocker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar latestReleaseDockerComposeOrPureDocker = newBuild(\"3.29.0\")\n```\n\nlatestReleaseDockerComposeOrPureDocker is only used by sourcegraph.com to tell existing Sourcegraph Docker Compose or Pure Docker deployments what the latest version is. The version here _must_ be available in a tag at [https://github.com/sourcegraph/deploy-sourcegraph-docker](https://github.com/sourcegraph/deploy-sourcegraph-docker) before landing in master. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#dateRegex",
+              "documentation": {
+                "identifier": "dateRegex",
+                "newPage": false,
+                "searchKey": "updatecheck.dateRegex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dateRegex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dateRegex = lazyregexp.New(\"_([0-9]{4}-[0-9]{2}-[0-9]{2})_\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#timeNow",
+              "documentation": {
+                "identifier": "timeNow",
+                "newPage": false,
+                "searchKey": "updatecheck.timeNow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var timeNow"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar timeNow = time.Now\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#codeIntelActionNames",
+              "documentation": {
+                "identifier": "codeIntelActionNames",
+                "newPage": false,
+                "searchKey": "updatecheck.codeIntelActionNames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var codeIntelActionNames"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar codeIntelActionNames = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#codeIntelSourceNames",
+              "documentation": {
+                "identifier": "codeIntelSourceNames",
+                "newPage": false,
+                "searchKey": "updatecheck.codeIntelSourceNames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var codeIntelSourceNames"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar codeIntelSourceNames = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#requestCounter",
+              "documentation": {
+                "identifier": "requestCounter",
+                "newPage": false,
+                "searchKey": "updatecheck.requestCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#requestHasUpdateCounter",
+              "documentation": {
+                "identifier": "requestHasUpdateCounter",
+                "newPage": false,
+                "searchKey": "updatecheck.requestHasUpdateCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestHasUpdateCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestHasUpdateCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#errorCounter",
+              "documentation": {
+                "identifier": "errorCounter",
+                "newPage": false,
+                "searchKey": "updatecheck.errorCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errorCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errorCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/updatecheck#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#build",
+              "documentation": {
+                "identifier": "build",
+                "newPage": false,
+                "searchKey": "updatecheck.build",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type build struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype build struct {\n\tVersion semver.Version `json:\"version\"`\n}\n```\n\nbuild is the JSON shape of the update check handler's response body. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/updatecheck#newBuild",
+                    "documentation": {
+                      "identifier": "newBuild",
+                      "newPage": false,
+                      "searchKey": "updatecheck.newBuild",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newBuild(version string) build"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newBuild(version string) build\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/updatecheck#getLatestRelease",
+                    "documentation": {
+                      "identifier": "getLatestRelease",
+                      "newPage": false,
+                      "searchKey": "updatecheck.getLatestRelease",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getLatestRelease(deployType string) build"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getLatestRelease(deployType string) build\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#Status",
+              "documentation": {
+                "identifier": "Status",
+                "newPage": false,
+                "searchKey": "updatecheck.Status",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Status struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Status struct {\n\tDate          time.Time // the time that the last check completed\n\tErr           error     // the error that occurred, if any. When present, indicates the instance is offline / unable to contact Sourcegraph.com\n\tUpdateVersion string    // the version string of the updated version, if any\n}\n```\n\nStatus of the check for software updates for Sourcegraph. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/updatecheck#Last",
+                    "documentation": {
+                      "identifier": "Last",
+                      "newPage": false,
+                      "searchKey": "updatecheck.Last",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Last() *Status"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Last() *Status\n```\n\nLast returns the status of the last-completed software update check. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/updatecheck#Status.HasUpdate",
+                    "documentation": {
+                      "identifier": "Status.HasUpdate",
+                      "newPage": false,
+                      "searchKey": "updatecheck.Status.HasUpdate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Status) HasUpdate() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Status) HasUpdate() bool\n```\n\nHasUpdate reports whether the status indicates an update is available. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#pingRequest",
+              "documentation": {
+                "identifier": "pingRequest",
+                "newPage": false,
+                "searchKey": "updatecheck.pingRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pingRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pingRequest struct {\n\tClientSiteID         string `json:\"site\"`\n\tLicenseKey           string\n\tDeployType           string          `json:\"deployType\"`\n\tClientVersionString  string          `json:\"version\"`\n\tDependencyVersions   json.RawMessage `json:\"dependencyVersions\"`\n\tAuthProviders        []string        `json:\"auth\"`\n\tExternalServices     []string        `json:\"extsvcs\"`\n\tBuiltinSignupAllowed bool            `json:\"signup\"`\n\tHasExtURL            bool            `json:\"hasExtURL\"`\n\tUniqueUsers          int32           `json:\"u\"`\n\tActivity             json.RawMessage `json:\"act\"`\n\tBatchChangesUsage    json.RawMessage `json:\"batchChangesUsage\"`\n\t// AutomationUsage (campaigns) is deprecated, but here so we can receive pings from older instances\n\tAutomationUsage     json.RawMessage `json:\"automationUsage\"`\n\tGrowthStatistics    json.RawMessage `json:\"growthStatistics\"`\n\tSavedSearches       json.RawMessage `json:\"savedSearches\"`\n\tHomepagePanels      json.RawMessage `json:\"homepagePanels\"`\n\tSearchOnboarding    json.RawMessage `json:\"searchOnboarding\"`\n\tRepositories        json.RawMessage `json:\"repositories\"`\n\tRetentionStatistics json.RawMessage `json:\"retentionStatistics\"`\n\tCodeIntelUsage      json.RawMessage `json:\"codeIntelUsage\"`\n\tNewCodeIntelUsage   json.RawMessage `json:\"newCodeIntelUsage\"`\n\tSearchUsage         json.RawMessage `json:\"searchUsage\"`\n\tExtensionsUsage     json.RawMessage `json:\"extensionsUsage\"`\n\tCodeInsightsUsage   json.RawMessage `json:\"codeInsightsUsage\"`\n\tCodeMonitoringUsage json.RawMessage `json:\"codeMonitoringUsage\"`\n\tInitialAdminEmail   string          `json:\"initAdmin\"`\n\tTotalUsers          int32           `json:\"totalUsers\"`\n\tHasRepos            bool            `json:\"repos\"`\n\tEverSearched        bool            `json:\"searched\"`\n\tEverFindRefs        bool            `json:\"refs\"`\n}\n```\n\npingRequest is the payload of the update check request. These values either supplied via query string or by a JSON body (when the request method is POST). We need to maintain backwards compatibility with the GET-only update checks while expanding the payload size for newer instance versions (via HTTP body). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/updatecheck#readPingRequest",
+                    "documentation": {
+                      "identifier": "readPingRequest",
+                      "newPage": false,
+                      "searchKey": "updatecheck.readPingRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func readPingRequest(r *http.Request) (*pingRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc readPingRequest(r *http.Request) (*pingRequest, error)\n```\n\nreadPingRequest reads the ping request payload from the request. If the request method is GET, it will read all parameters from the query string. If the request method is POST, it will read the parameters via a JSON encoded HTTP body. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/updatecheck#readPingRequestFromQuery",
+                    "documentation": {
+                      "identifier": "readPingRequestFromQuery",
+                      "newPage": false,
+                      "searchKey": "updatecheck.readPingRequestFromQuery",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func readPingRequestFromQuery(q url.Values) (*pingRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc readPingRequestFromQuery(q url.Values) (*pingRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/updatecheck#readPingRequestFromBody",
+                    "documentation": {
+                      "identifier": "readPingRequestFromBody",
+                      "newPage": false,
+                      "searchKey": "updatecheck.readPingRequestFromBody",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func readPingRequestFromBody(body io.ReadCloser) (*pingRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc readPingRequestFromBody(body io.ReadCloser) (*pingRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#dependencyVersions",
+              "documentation": {
+                "identifier": "dependencyVersions",
+                "newPage": false,
+                "searchKey": "updatecheck.dependencyVersions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dependencyVersions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dependencyVersions struct {\n\tPostgresVersion   string `json:\"postgresVersion\"`\n\tRedisCacheVersion string `json:\"redisCacheVersion\"`\n\tRedisStoreVersion string `json:\"redisStoreVersion\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#pingPayload",
+              "documentation": {
+                "identifier": "pingPayload",
+                "newPage": false,
+                "searchKey": "updatecheck.pingPayload",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pingPayload struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pingPayload struct {\n\tRemoteIP             string          `json:\"remote_ip\"`\n\tRemoteSiteVersion    string          `json:\"remote_site_version\"`\n\tRemoteSiteID         string          `json:\"remote_site_id\"`\n\tLicenseKey           string          `json:\"license_key\"`\n\tHasUpdate            string          `json:\"has_update\"`\n\tUniqueUsersToday     string          `json:\"unique_users_today\"`\n\tSiteActivity         json.RawMessage `json:\"site_activity\"`\n\tBatchChangesUsage    json.RawMessage `json:\"batch_changes_usage\"`\n\tCodeIntelUsage       json.RawMessage `json:\"code_intel_usage\"`\n\tNewCodeIntelUsage    json.RawMessage `json:\"new_code_intel_usage\"`\n\tSearchUsage          json.RawMessage `json:\"search_usage\"`\n\tGrowthStatistics     json.RawMessage `json:\"growth_statistics\"`\n\tSavedSearches        json.RawMessage `json:\"saved_searches\"`\n\tHomepagePanels       json.RawMessage `json:\"homepage_panels\"`\n\tRetentionStatistics  json.RawMessage `json:\"retention_statistics\"`\n\tRepositories         json.RawMessage `json:\"repositories\"`\n\tSearchOnboarding     json.RawMessage `json:\"search_onboarding\"`\n\tDependencyVersions   json.RawMessage `json:\"dependency_versions\"`\n\tExtensionsUsage      json.RawMessage `json:\"extensions_usage\"`\n\tCodeInsightsUsage    json.RawMessage `json:\"code_insights_usage\"`\n\tCodeMonitoringUsage  json.RawMessage `json:\"code_monitoring_usage\"`\n\tInstallerEmail       string          `json:\"installer_email\"`\n\tAuthProviders        string          `json:\"auth_providers\"`\n\tExtServices          string          `json:\"ext_services\"`\n\tBuiltinSignupAllowed string          `json:\"builtin_signup_allowed\"`\n\tDeployType           string          `json:\"deploy_type\"`\n\tTotalUserAccounts    string          `json:\"total_user_accounts\"`\n\tHasExternalURL       string          `json:\"has_external_url\"`\n\tHasRepos             string          `json:\"has_repos\"`\n\tEverSearched         string          `json:\"ever_searched\"`\n\tEverFindRefs         string          `json:\"ever_find_refs\"`\n\tTimestamp            string          `json:\"timestamp\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#jsonCodeIntelUsage",
+              "documentation": {
+                "identifier": "jsonCodeIntelUsage",
+                "newPage": false,
+                "searchKey": "updatecheck.jsonCodeIntelUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type jsonCodeIntelUsage struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype jsonCodeIntelUsage struct {\n\tStartOfWeek                         time.Time          `json:\"start_time\"`\n\tWAUs                                *int32             `json:\"waus\"`\n\tPreciseWAUs                         *int32             `json:\"precise_waus\"`\n\tSearchBasedWAUs                     *int32             `json:\"search_waus\"`\n\tCrossRepositoryWAUs                 *int32             `json:\"xrepo_waus\"`\n\tPreciseCrossRepositoryWAUs          *int32             `json:\"precise_xrepo_waus\"`\n\tSearchBasedCrossRepositoryWAUs      *int32             `json:\"search_xrepo_waus\"`\n\tEventSummaries                      []jsonEventSummary `json:\"event_summaries\"`\n\tNumRepositoriesWithUploadRecords    *int32             `json:\"num_repositories_with_upload_records\"`\n\tNumRepositoriesWithoutUploadRecords *int32             `json:\"num_repositories_without_upload_records\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#jsonEventSummary",
+              "documentation": {
+                "identifier": "jsonEventSummary",
+                "newPage": false,
+                "searchKey": "updatecheck.jsonEventSummary",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type jsonEventSummary struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype jsonEventSummary struct {\n\tAction          string `json:\"action\"`\n\tSource          string `json:\"source\"`\n\tLanguageID      string `json:\"language_id\"`\n\tCrossRepository bool   `json:\"cross_repository\"`\n\tWAUs            int32  `json:\"waus\"`\n\tTotalActions    int32  `json:\"total_actions\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/updatecheck#translateEventSummary",
+                    "documentation": {
+                      "identifier": "translateEventSummary",
+                      "newPage": false,
+                      "searchKey": "updatecheck.translateEventSummary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func translateEventSummary(es types.CodeIntelEventSummary) jsonEventSummary"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc translateEventSummary(es types.CodeIntelEventSummary) jsonEventSummary\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/updatecheck#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#IsPending",
+              "documentation": {
+                "identifier": "IsPending",
+                "newPage": false,
+                "searchKey": "updatecheck.IsPending",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsPending() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsPending() bool\n```\n\nIsPending returns whether an update check is in progress. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#recordOperation",
+              "documentation": {
+                "identifier": "recordOperation",
+                "newPage": false,
+                "searchKey": "updatecheck.recordOperation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func recordOperation(method string) func(*error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc recordOperation(method string) func(*error)\n```\n\nrecordOperation returns a record fn that is called on any given return err. If an error is encountered it will register the err metric. The err is never altered. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalSiteActivityJSON",
+              "documentation": {
+                "identifier": "getAndMarshalSiteActivityJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalSiteActivityJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalSiteActivityJSON(ctx context.Context, db dbutil.DB, criticalOnly bool) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalSiteActivityJSON(ctx context.Context, db dbutil.DB, criticalOnly bool) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#hasSearchOccurred",
+              "documentation": {
+                "identifier": "hasSearchOccurred",
+                "newPage": false,
+                "searchKey": "updatecheck.hasSearchOccurred",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasSearchOccurred(ctx context.Context) (_ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasSearchOccurred(ctx context.Context) (_ bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#hasFindRefsOccurred",
+              "documentation": {
+                "identifier": "hasFindRefsOccurred",
+                "newPage": false,
+                "searchKey": "updatecheck.hasFindRefsOccurred",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasFindRefsOccurred(ctx context.Context) (_ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasFindRefsOccurred(ctx context.Context) (_ bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getTotalUsersCount",
+              "documentation": {
+                "identifier": "getTotalUsersCount",
+                "newPage": false,
+                "searchKey": "updatecheck.getTotalUsersCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getTotalUsersCount(ctx context.Context) (_ int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getTotalUsersCount(ctx context.Context) (_ int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getTotalReposCount",
+              "documentation": {
+                "identifier": "getTotalReposCount",
+                "newPage": false,
+                "searchKey": "updatecheck.getTotalReposCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getTotalReposCount(ctx context.Context) (_ int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getTotalReposCount(ctx context.Context) (_ int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getUsersActiveTodayCount",
+              "documentation": {
+                "identifier": "getUsersActiveTodayCount",
+                "newPage": false,
+                "searchKey": "updatecheck.getUsersActiveTodayCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getUsersActiveTodayCount(ctx context.Context) (_ int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getUsersActiveTodayCount(ctx context.Context) (_ int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getInitialSiteAdminEmail",
+              "documentation": {
+                "identifier": "getInitialSiteAdminEmail",
+                "newPage": false,
+                "searchKey": "updatecheck.getInitialSiteAdminEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getInitialSiteAdminEmail(ctx context.Context) (_ string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getInitialSiteAdminEmail(ctx context.Context) (_ string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalBatchChangesUsageJSON",
+              "documentation": {
+                "identifier": "getAndMarshalBatchChangesUsageJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalBatchChangesUsageJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalBatchChangesUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalBatchChangesUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalGrowthStatisticsJSON",
+              "documentation": {
+                "identifier": "getAndMarshalGrowthStatisticsJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalGrowthStatisticsJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalGrowthStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalGrowthStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalSavedSearchesJSON",
+              "documentation": {
+                "identifier": "getAndMarshalSavedSearchesJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalSavedSearchesJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalSavedSearchesJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalSavedSearchesJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalHomepagePanelsJSON",
+              "documentation": {
+                "identifier": "getAndMarshalHomepagePanelsJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalHomepagePanelsJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalHomepagePanelsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalHomepagePanelsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalRepositoriesJSON",
+              "documentation": {
+                "identifier": "getAndMarshalRepositoriesJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalRepositoriesJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalRepositoriesJSON(ctx context.Context) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalRepositoriesJSON(ctx context.Context) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalRetentionStatisticsJSON",
+              "documentation": {
+                "identifier": "getAndMarshalRetentionStatisticsJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalRetentionStatisticsJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalRetentionStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalRetentionStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalSearchOnboardingJSON",
+              "documentation": {
+                "identifier": "getAndMarshalSearchOnboardingJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalSearchOnboardingJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalSearchOnboardingJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalSearchOnboardingJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalAggregatedCodeIntelUsageJSON",
+              "documentation": {
+                "identifier": "getAndMarshalAggregatedCodeIntelUsageJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalAggregatedCodeIntelUsageJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalAggregatedCodeIntelUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalAggregatedCodeIntelUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalAggregatedSearchUsageJSON",
+              "documentation": {
+                "identifier": "getAndMarshalAggregatedSearchUsageJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalAggregatedSearchUsageJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalAggregatedSearchUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalAggregatedSearchUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalExtensionsUsageStatisticsJSON",
+              "documentation": {
+                "identifier": "getAndMarshalExtensionsUsageStatisticsJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalExtensionsUsageStatisticsJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalExtensionsUsageStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalExtensionsUsageStatisticsJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalCodeInsightsUsageJSON",
+              "documentation": {
+                "identifier": "getAndMarshalCodeInsightsUsageJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalCodeInsightsUsageJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalCodeInsightsUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalCodeInsightsUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getAndMarshalCodeMonitoringUsageJSON",
+              "documentation": {
+                "identifier": "getAndMarshalCodeMonitoringUsageJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.getAndMarshalCodeMonitoringUsageJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getAndMarshalCodeMonitoringUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getAndMarshalCodeMonitoringUsageJSON(ctx context.Context, db dbutil.DB) (_ json.RawMessage, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getDependencyVersions",
+              "documentation": {
+                "identifier": "getDependencyVersions",
+                "newPage": false,
+                "searchKey": "updatecheck.getDependencyVersions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getDependencyVersions(ctx context.Context, db dbutil.DB, logFunc func(string, ...interface{})) (json.RawMessage, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getDependencyVersions(ctx context.Context, db dbutil.DB, logFunc func(string, ...interface{})) (json.RawMessage, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#getRedisVersion",
+              "documentation": {
+                "identifier": "getRedisVersion",
+                "newPage": false,
+                "searchKey": "updatecheck.getRedisVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRedisVersion(dialFunc func() (redis.Conn, error)) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRedisVersion(dialFunc func() (redis.Conn, error)) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#parseRedisInfo",
+              "documentation": {
+                "identifier": "parseRedisInfo",
+                "newPage": false,
+                "searchKey": "updatecheck.parseRedisInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseRedisInfo(buf []byte) (map[string]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseRedisInfo(buf []byte) (map[string]string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#updateBody",
+              "documentation": {
+                "identifier": "updateBody",
+                "newPage": false,
+                "searchKey": "updatecheck.updateBody",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateBody(ctx context.Context, db dbutil.DB) (io.Reader, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateBody(ctx context.Context, db dbutil.DB) (io.Reader, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#authProviderTypes",
+              "documentation": {
+                "identifier": "authProviderTypes",
+                "newPage": false,
+                "searchKey": "updatecheck.authProviderTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func authProviderTypes() []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc authProviderTypes() []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#externalServiceKinds",
+              "documentation": {
+                "identifier": "externalServiceKinds",
+                "newPage": false,
+                "searchKey": "updatecheck.externalServiceKinds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func externalServiceKinds(ctx context.Context) (kinds []string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc externalServiceKinds(ctx context.Context) (kinds []string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#check",
+              "documentation": {
+                "identifier": "check",
+                "newPage": false,
+                "searchKey": "updatecheck.check",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func check(db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc check(db dbutil.DB)\n```\n\ncheck performs an update check and updates the global state. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#Start",
+              "documentation": {
+                "identifier": "Start",
+                "newPage": false,
+                "searchKey": "updatecheck.Start",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Start(db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Start(db dbutil.DB)\n```\n\nStart starts checking for software updates periodically. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#Handler",
+              "documentation": {
+                "identifier": "Handler",
+                "newPage": false,
+                "searchKey": "updatecheck.Handler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Handler(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Handler(w http.ResponseWriter, r *http.Request)\n```\n\nHandler is an HTTP handler that responds with information about software updates for Sourcegraph. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#canUpdate",
+              "documentation": {
+                "identifier": "canUpdate",
+                "newPage": false,
+                "searchKey": "updatecheck.canUpdate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func canUpdate(clientVersionString string, latestReleaseBuild build) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc canUpdate(clientVersionString string, latestReleaseBuild build) (bool, error)\n```\n\ncanUpdate returns true if the latestReleaseBuild is newer than the clientVersionString. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#canUpdateVersion",
+              "documentation": {
+                "identifier": "canUpdateVersion",
+                "newPage": false,
+                "searchKey": "updatecheck.canUpdateVersion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func canUpdateVersion(clientVersionString string, latestReleaseBuild build) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc canUpdateVersion(clientVersionString string, latestReleaseBuild build) (bool, error)\n```\n\ncanUpdateVersion returns true if the latest released build is newer than the clientVersionString. It returns an error if clientVersionString is not a semver. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#canUpdateDate",
+              "documentation": {
+                "identifier": "canUpdateDate",
+                "newPage": false,
+                "searchKey": "updatecheck.canUpdateDate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func canUpdateDate(clientVersionString string) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc canUpdateDate(clientVersionString string) (bool, error)\n```\n\ncanUpdateDate returns true if clientVersionString contains a date more than 40 days in the past. It returns an error if there is no parsable date in clientVersionString \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#toInt",
+              "documentation": {
+                "identifier": "toInt",
+                "newPage": false,
+                "searchKey": "updatecheck.toInt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toInt(val string) int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toInt(val string) int32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#toBool",
+              "documentation": {
+                "identifier": "toBool",
+                "newPage": false,
+                "searchKey": "updatecheck.toBool",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toBool(val string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toBool(val string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#toRawMessage",
+              "documentation": {
+                "identifier": "toRawMessage",
+                "newPage": false,
+                "searchKey": "updatecheck.toRawMessage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toRawMessage(val string) json.RawMessage"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toRawMessage(val string) json.RawMessage\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#logPing",
+              "documentation": {
+                "identifier": "logPing",
+                "newPage": false,
+                "searchKey": "updatecheck.logPing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logPing(r *http.Request, pr *pingRequest, hasUpdate bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logPing(r *http.Request, pr *pingRequest, hasUpdate bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#marshalPing",
+              "documentation": {
+                "identifier": "marshalPing",
+                "newPage": false,
+                "searchKey": "updatecheck.marshalPing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func marshalPing(pr *pingRequest, hasUpdate bool, clientAddr string, now time.Time) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc marshalPing(pr *pingRequest, hasUpdate bool, clientAddr string, now time.Time) ([]byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#reserializeCodeIntelUsage",
+              "documentation": {
+                "identifier": "reserializeCodeIntelUsage",
+                "newPage": false,
+                "searchKey": "updatecheck.reserializeCodeIntelUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reserializeCodeIntelUsage(payload, fallbackPayload json.RawMessage) (json.RawMessage, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reserializeCodeIntelUsage(payload, fallbackPayload json.RawMessage) (json.RawMessage, error)\n```\n\nreserializeCodeIntelUsage returns the given data in the shape of the current code intel usage statistics format. The given payload should be populated with either the new-style \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#reserializeNewCodeIntelUsage",
+              "documentation": {
+                "identifier": "reserializeNewCodeIntelUsage",
+                "newPage": false,
+                "searchKey": "updatecheck.reserializeNewCodeIntelUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reserializeNewCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reserializeNewCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#reserializeOldCodeIntelUsage",
+              "documentation": {
+                "identifier": "reserializeOldCodeIntelUsage",
+                "newPage": false,
+                "searchKey": "updatecheck.reserializeOldCodeIntelUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reserializeOldCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reserializeOldCodeIntelUsage(payload json.RawMessage) (json.RawMessage, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#reserializeSearchUsage",
+              "documentation": {
+                "identifier": "reserializeSearchUsage",
+                "newPage": false,
+                "searchKey": "updatecheck.reserializeSearchUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reserializeSearchUsage(payload json.RawMessage) (json.RawMessage, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reserializeSearchUsage(payload json.RawMessage) (json.RawMessage, error)\n```\n\nreserializeSearchUsage will reserialize a code intel usage statistics struct with only the first period in each period type. This reduces the complexity required in the BigQuery schema and downstream ETL transform logic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestParseRedisInfo",
+              "documentation": {
+                "identifier": "TestParseRedisInfo",
+                "newPage": false,
+                "searchKey": "updatecheck.TestParseRedisInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseRedisInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseRedisInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestLatestDockerVersionPushed",
+              "documentation": {
+                "identifier": "TestLatestDockerVersionPushed",
+                "newPage": false,
+                "searchKey": "updatecheck.TestLatestDockerVersionPushed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLatestDockerVersionPushed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLatestDockerVersionPushed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestLatestKubernetesVersionPushed",
+              "documentation": {
+                "identifier": "TestLatestKubernetesVersionPushed",
+                "newPage": false,
+                "searchKey": "updatecheck.TestLatestKubernetesVersionPushed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLatestKubernetesVersionPushed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLatestKubernetesVersionPushed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestLatestDockerComposeOrPureDockerVersionPushed",
+              "documentation": {
+                "identifier": "TestLatestDockerComposeOrPureDockerVersionPushed",
+                "newPage": false,
+                "searchKey": "updatecheck.TestLatestDockerComposeOrPureDockerVersionPushed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLatestDockerComposeOrPureDockerVersionPushed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLatestDockerComposeOrPureDockerVersionPushed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestCanUpdate",
+              "documentation": {
+                "identifier": "TestCanUpdate",
+                "newPage": false,
+                "searchKey": "updatecheck.TestCanUpdate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCanUpdate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCanUpdate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestSerializeBasic",
+              "documentation": {
+                "identifier": "TestSerializeBasic",
+                "newPage": false,
+                "searchKey": "updatecheck.TestSerializeBasic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSerializeBasic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSerializeBasic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestSerializeFromQuery",
+              "documentation": {
+                "identifier": "TestSerializeFromQuery",
+                "newPage": false,
+                "searchKey": "updatecheck.TestSerializeFromQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSerializeFromQuery(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSerializeFromQuery(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestSerializeAutomationUsage",
+              "documentation": {
+                "identifier": "TestSerializeAutomationUsage",
+                "newPage": false,
+                "searchKey": "updatecheck.TestSerializeAutomationUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSerializeAutomationUsage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSerializeAutomationUsage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestSerializeCodeIntelUsage",
+              "documentation": {
+                "identifier": "TestSerializeCodeIntelUsage",
+                "newPage": false,
+                "searchKey": "updatecheck.TestSerializeCodeIntelUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSerializeCodeIntelUsage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSerializeCodeIntelUsage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#TestSerializeOldCodeIntelUsage",
+              "documentation": {
+                "identifier": "TestSerializeOldCodeIntelUsage",
+                "newPage": false,
+                "searchKey": "updatecheck.TestSerializeOldCodeIntelUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSerializeOldCodeIntelUsage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSerializeOldCodeIntelUsage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/updatecheck#compareJSON",
+              "documentation": {
+                "identifier": "compareJSON",
+                "newPage": false,
+                "searchKey": "updatecheck.compareJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func compareJSON(t *testing.T, actual []byte, expected string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc compareJSON(t *testing.T, actual []byte, expected string)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

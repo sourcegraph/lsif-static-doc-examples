@@ -1,0 +1,2183 @@
+{
+  "pathID": "/internal/search",
+  "documentation": {
+    "identifier": "search",
+    "newPage": true,
+    "searchKey": "internal/search",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package search"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Validation logic for CommitPatternInfo \n\nValidation logic for TextPatternInfo \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/search#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search#defaultMaxSearchResults",
+              "documentation": {
+                "identifier": "defaultMaxSearchResults",
+                "newPage": false,
+                "searchKey": "search.defaultMaxSearchResults",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultMaxSearchResults"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultMaxSearchResults = 30\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#defaultMaxSearchResultsStreaming",
+              "documentation": {
+                "identifier": "defaultMaxSearchResultsStreaming",
+                "newPage": false,
+                "searchKey": "search.defaultMaxSearchResultsStreaming",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultMaxSearchResultsStreaming"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultMaxSearchResultsStreaming = 500\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#Streaming",
+              "documentation": {
+                "identifier": "Streaming",
+                "newPage": false,
+                "searchKey": "search.Streaming",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Streaming"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Streaming Protocol = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#Batch",
+              "documentation": {
+                "identifier": "Batch",
+                "newPage": false,
+                "searchKey": "search.Batch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Batch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Batch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#Pagination",
+              "documentation": {
+                "identifier": "Pagination",
+                "newPage": false,
+                "searchKey": "search.Pagination",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Pagination"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Pagination\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#RepoStatusCloning",
+              "documentation": {
+                "identifier": "RepoStatusCloning",
+                "newPage": false,
+                "searchKey": "search.RepoStatusCloning",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepoStatusCloning"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepoStatusCloning RepoStatus // could not be searched because they were still being cloned\n = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#RepoStatusMissing",
+              "documentation": {
+                "identifier": "RepoStatusMissing",
+                "newPage": false,
+                "searchKey": "search.RepoStatusMissing",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepoStatusMissing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepoStatusMissing // could not be searched because they do not exist\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#RepoStatusLimitHit",
+              "documentation": {
+                "identifier": "RepoStatusLimitHit",
+                "newPage": false,
+                "searchKey": "search.RepoStatusLimitHit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepoStatusLimitHit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepoStatusLimitHit // searched, but have results that were not returned due to exceeded limits\n = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#RepoStatusTimedout",
+              "documentation": {
+                "identifier": "RepoStatusTimedout",
+                "newPage": false,
+                "searchKey": "search.RepoStatusTimedout",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepoStatusTimedout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepoStatusTimedout // repos that were not searched due to timeout\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#ZoektGlobalSearch",
+              "documentation": {
+                "identifier": "ZoektGlobalSearch",
+                "newPage": false,
+                "searchKey": "search.ZoektGlobalSearch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ZoektGlobalSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ZoektGlobalSearch GlobalSearchMode = iota + 1\n```\n\nZoektGlobalSearch designates a performance optimised code path for indexed searches. For a global search we don't need to resolve repos before searching shards on Zoekt, instead we can resolve repos and call Zoekt concurrently. \n\nNote: Even for a global search we have to resolve repos to filter search results returned by Zoekt. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#SearcherOnly",
+              "documentation": {
+                "identifier": "SearcherOnly",
+                "newPage": false,
+                "searchKey": "search.SearcherOnly",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SearcherOnly"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SearcherOnly\n```\n\nSearcherOnly designated a code path on which we skip indexed search, even if the user specified index:yes. SearcherOnly is used in conjunction with ZoektGlobalSearch and designates the non-indexed part of the performance optimised code path. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#NoFilePath",
+              "documentation": {
+                "identifier": "NoFilePath",
+                "newPage": false,
+                "searchKey": "search.NoFilePath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const NoFilePath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst NoFilePath\n```\n\nDisables file/path search. Used only in conjunction with ZoektGlobalSearch on Sourcegraph.com. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search#searcherURL",
+              "documentation": {
+                "identifier": "searcherURL",
+                "newPage": false,
+                "searchKey": "search.searcherURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var searcherURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar searcherURL = env.Get(\"SEARCHER_URL\", \"k8s+http://searcher:3181\", \"searcher server URL\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#searcherURLsOnce",
+              "documentation": {
+                "identifier": "searcherURLsOnce",
+                "newPage": false,
+                "searchKey": "search.searcherURLsOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var searcherURLsOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar searcherURLsOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#searcherURLs",
+              "documentation": {
+                "identifier": "searcherURLs",
+                "newPage": false,
+                "searchKey": "search.searcherURLs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var searcherURLs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar searcherURLs *endpoint.Map\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#indexedSearchOnce",
+              "documentation": {
+                "identifier": "indexedSearchOnce",
+                "newPage": false,
+                "searchKey": "search.indexedSearchOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexedSearchOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexedSearchOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#indexedSearch",
+              "documentation": {
+                "identifier": "indexedSearch",
+                "newPage": false,
+                "searchKey": "search.indexedSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexedSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexedSearch *backend.Zoekt\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#indexersOnce",
+              "documentation": {
+                "identifier": "indexersOnce",
+                "newPage": false,
+                "searchKey": "search.indexersOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexersOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexersOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#indexers",
+              "documentation": {
+                "identifier": "indexers",
+                "newPage": false,
+                "searchKey": "search.indexers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexers *backend.Indexers\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#repoStatusName",
+              "documentation": {
+                "identifier": "repoStatusName",
+                "newPage": false,
+                "searchKey": "search.repoStatusName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var repoStatusName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar repoStatusName = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#globalSearchModeStrings",
+              "documentation": {
+                "identifier": "globalSearchModeStrings",
+                "newPage": false,
+                "searchKey": "search.globalSearchModeStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var globalSearchModeStrings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar globalSearchModeStrings = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search#Promise",
+              "documentation": {
+                "identifier": "Promise",
+                "newPage": false,
+                "searchKey": "search.Promise",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Promise struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Promise struct {\n\tinitOnce sync.Once\n\tdone     chan struct{}\n\n\tvalueOnce sync.Once\n\tvalue     interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#Promise.init",
+                    "documentation": {
+                      "identifier": "Promise.init",
+                      "newPage": false,
+                      "searchKey": "search.Promise.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Promise) init()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Promise) init()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#Promise.Resolve",
+                    "documentation": {
+                      "identifier": "Promise.Resolve",
+                      "newPage": false,
+                      "searchKey": "search.Promise.Resolve",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Promise) Resolve(v interface{}) *Promise"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Promise) Resolve(v interface{}) *Promise\n```\n\nResolve returns a promise that is resolved with a given value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#Promise.Get",
+                    "documentation": {
+                      "identifier": "Promise.Get",
+                      "newPage": false,
+                      "searchKey": "search.Promise.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Promise) Get(ctx context.Context) (interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Promise) Get(ctx context.Context) (interface{}, error)\n```\n\nGet returns the value. It blocks until the promise resolves or the context is canceled. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#Protocol",
+              "documentation": {
+                "identifier": "Protocol",
+                "newPage": false,
+                "searchKey": "search.Protocol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Protocol int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Protocol int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#RevisionSpecifier",
+              "documentation": {
+                "identifier": "RevisionSpecifier",
+                "newPage": false,
+                "searchKey": "search.RevisionSpecifier",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RevisionSpecifier struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RevisionSpecifier struct {\n\t// RevSpec is a revision range specifier suitable for passing to git. See\n\t// the manpage gitrevisions(7).\n\tRevSpec string\n\n\t// RefGlob is a reference glob to pass to git. See the documentation for\n\t// \"--glob\" in git-log.\n\tRefGlob string\n\n\t// ExcludeRefGlob is a glob for references to exclude. See the\n\t// documentation for \"--exclude\" in git-log.\n\tExcludeRefGlob string\n}\n```\n\nRevisionSpecifier represents either a revspec or a ref glob. At most one field is set. The default branch is represented by all fields being empty. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#parseRev",
+                    "documentation": {
+                      "identifier": "parseRev",
+                      "newPage": false,
+                      "searchKey": "search.parseRev",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseRev(spec string) RevisionSpecifier"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseRev(spec string) RevisionSpecifier\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RevisionSpecifier.String",
+                    "documentation": {
+                      "identifier": "RevisionSpecifier.String",
+                      "newPage": false,
+                      "searchKey": "search.RevisionSpecifier.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r1 RevisionSpecifier) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r1 RevisionSpecifier) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RevisionSpecifier.Less",
+                    "documentation": {
+                      "identifier": "RevisionSpecifier.Less",
+                      "newPage": false,
+                      "searchKey": "search.RevisionSpecifier.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r1 RevisionSpecifier) Less(r2 RevisionSpecifier) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r1 RevisionSpecifier) Less(r2 RevisionSpecifier) bool\n```\n\nLess compares two revspecOrRefGlob entities, suitable for use with sort.Slice() \n\npossibly-undesired: this results in treating an entity with no revspec, but a refGlob, as \"earlier\" than any revspec. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#RepositoryRevisions",
+              "documentation": {
+                "identifier": "RepositoryRevisions",
+                "newPage": false,
+                "searchKey": "search.RepositoryRevisions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepositoryRevisions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepositoryRevisions struct {\n\tRepo types.RepoName\n\tRevs []RevisionSpecifier\n\n\t// resolveOnce protects resolvedRevs\n\tresolveOnce sync.Once\n\n\t// resolvedRevs is set by ExpandedRevSpecs and contains all revisions\n\t// including resolved ref-globs.\n\tresolvedRevs []string\n\n\t// resolveErr stores the error returned by the first call to ExpandedRevSpecs. It\n\t// gives the caller the chance to distinguish between an error and an empty resolvedRevs.\n\tresolveErr error\n\n\t// ListRefs is called to list all Git refs for a repository. It is intended to be mocked by\n\t// tests. If nil, git.ListRefs is used.\n\tListRefs func(context.Context, api.RepoName) ([]git.Ref, error)\n}\n```\n\nRepositoryRevisions specifies a repository and 0 or more revspecs and ref globs.  If no revspecs and no ref globs are specified, then the repository's default branch is used. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepositoryRevisions.Copy",
+                    "documentation": {
+                      "identifier": "RepositoryRevisions.Copy",
+                      "newPage": false,
+                      "searchKey": "search.RepositoryRevisions.Copy",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepositoryRevisions) Copy() *RepositoryRevisions"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepositoryRevisions) Copy() *RepositoryRevisions\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepositoryRevisions.Equal",
+                    "documentation": {
+                      "identifier": "RepositoryRevisions.Equal",
+                      "newPage": false,
+                      "searchKey": "search.RepositoryRevisions.Equal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepositoryRevisions) Equal(other *RepositoryRevisions) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepositoryRevisions) Equal(other *RepositoryRevisions) bool\n```\n\nEqual provides custom comparison which is used by go-cmp \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepositoryRevisions.GitserverRepo",
+                    "documentation": {
+                      "identifier": "RepositoryRevisions.GitserverRepo",
+                      "newPage": false,
+                      "searchKey": "search.RepositoryRevisions.GitserverRepo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepositoryRevisions) GitserverRepo() api.RepoName"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepositoryRevisions) GitserverRepo() api.RepoName\n```\n\nGitserverRepo is a convenience function to return the api.RepoName for r.Repo. The returned Repo will not have the URL set, only the name. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepositoryRevisions.String",
+                    "documentation": {
+                      "identifier": "RepositoryRevisions.String",
+                      "newPage": false,
+                      "searchKey": "search.RepositoryRevisions.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepositoryRevisions) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepositoryRevisions) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepositoryRevisions.OnlyExplicit",
+                    "documentation": {
+                      "identifier": "RepositoryRevisions.OnlyExplicit",
+                      "newPage": false,
+                      "searchKey": "search.RepositoryRevisions.OnlyExplicit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepositoryRevisions) OnlyExplicit() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepositoryRevisions) OnlyExplicit() bool\n```\n\nOnlyExplicit returns true if all revspecs in Revs are explicit. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepositoryRevisions.RevSpecs",
+                    "documentation": {
+                      "identifier": "RepositoryRevisions.RevSpecs",
+                      "newPage": false,
+                      "searchKey": "search.RepositoryRevisions.RevSpecs",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepositoryRevisions) RevSpecs() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepositoryRevisions) RevSpecs() []string\n```\n\nRevSpecs returns a list of all explicitly listed Git revspecs. It does not expand ref globs to their matching revspecs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepositoryRevisions.ExpandedRevSpecs",
+                    "documentation": {
+                      "identifier": "RepositoryRevisions.ExpandedRevSpecs",
+                      "newPage": false,
+                      "searchKey": "search.RepositoryRevisions.ExpandedRevSpecs",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepositoryRevisions) ExpandedRevSpecs(ctx context.Context) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepositoryRevisions) ExpandedRevSpecs(ctx context.Context) ([]string, error)\n```\n\nExpandedRevSpecs is a wrapper around expandedRevSpecs. It uses a sync.Once to ensure we only resolve revisions once. The resolved revisions and the error response are stored in r and returned to future callers. \n\nNote that storing the error causes all callers to return the same error. For example, if the first caller has a context error, all other callers will return a context error, too. \n\nNot all callers need to expand ref glob expressions. If a caller is passing the ref globs as command-line args to `git` directly (e.g., to `git log --glob ... --exclude ...`), it does not need to use this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#RepoStatus",
+              "documentation": {
+                "identifier": "RepoStatus",
+                "newPage": false,
+                "searchKey": "search.RepoStatus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStatus uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStatus uint8\n```\n\nRepoStatus is a bit flag encoding the status of a search on a repository. A repository can be in many states, so any bit may be set. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatus.String",
+                    "documentation": {
+                      "identifier": "RepoStatus.String",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatus.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s RepoStatus) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s RepoStatus) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#RepoStatusMap",
+              "documentation": {
+                "identifier": "RepoStatusMap",
+                "newPage": false,
+                "searchKey": "search.RepoStatusMap",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStatusMap struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStatusMap struct {\n\tm map[api.RepoID]RepoStatus\n\n\t// status is a union of all repo status.\n\tstatus RepoStatus\n}\n```\n\nRepoStatusMap is a mutable map from repository IDs to a union of RepoStatus. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusSingleton",
+                    "documentation": {
+                      "identifier": "RepoStatusSingleton",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusSingleton",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func RepoStatusSingleton(id api.RepoID, status RepoStatus) RepoStatusMap"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc RepoStatusSingleton(id api.RepoID, status RepoStatus) RepoStatusMap\n```\n\nRepoStatusSingleton is a convenience function to contain a RepoStatusMap with one entry. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#mkStatusMap",
+                    "documentation": {
+                      "identifier": "mkStatusMap",
+                      "newPage": false,
+                      "searchKey": "search.mkStatusMap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func mkStatusMap(m map[api.RepoID]RepoStatus) RepoStatusMap"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc mkStatusMap(m map[api.RepoID]RepoStatus) RepoStatusMap\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.Iterate",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.Iterate",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.Iterate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) Iterate(f func(api.RepoID, RepoStatus))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) Iterate(f func(api.RepoID, RepoStatus))\n```\n\nIterate will call f for each RepoID in m. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.Filter",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.Filter",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.Filter",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) Filter(mask RepoStatus, f func(api.RepoID))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) Filter(mask RepoStatus, f func(api.RepoID))\n```\n\nFilter calls f for each repo RepoID where mask is a subset of the repo status. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.Get",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.Get",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) Get(id api.RepoID) RepoStatus"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) Get(id api.RepoID) RepoStatus\n```\n\nGet returns the RepoStatus for id. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.Update",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.Update",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.Update",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) Update(id api.RepoID, status RepoStatus)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) Update(id api.RepoID, status RepoStatus)\n```\n\nUpdate unions status for id with the current status. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.Union",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.Union",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.Union",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) Union(o *RepoStatusMap)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) Union(o *RepoStatusMap)\n```\n\nUnion is a fast path for calling m.Update on all entries in o. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.Any",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.Any",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.Any",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) Any(mask RepoStatus) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) Any(mask RepoStatus) bool\n```\n\nAny returns true if there are any entries which contain a status in mask. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.All",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.All",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.All",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) All(status RepoStatus) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) All(status RepoStatus) bool\n```\n\nAll returns true if all entries contain status. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.Len",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.Len",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.Len",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) Len() int\n```\n\nLen is the number of entries in the map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#RepoStatusMap.String",
+                    "documentation": {
+                      "identifier": "RepoStatusMap.String",
+                      "newPage": false,
+                      "searchKey": "search.RepoStatusMap.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *RepoStatusMap) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *RepoStatusMap) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TypeParameters",
+              "documentation": {
+                "identifier": "TypeParameters",
+                "newPage": false,
+                "searchKey": "search.TypeParameters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TypeParameters interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TypeParameters interface {\n\ttypeParametersValue()\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#CommitParameters",
+              "documentation": {
+                "identifier": "CommitParameters",
+                "newPage": false,
+                "searchKey": "search.CommitParameters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitParameters struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitParameters struct {\n\tRepoRevs           *RepositoryRevisions\n\tPatternInfo        *CommitPatternInfo\n\tQuery              query.Q\n\tDiff               bool\n\tExtraMessageValues []string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#CommitParameters.typeParametersValue",
+                    "documentation": {
+                      "identifier": "CommitParameters.typeParametersValue",
+                      "newPage": false,
+                      "searchKey": "search.CommitParameters.typeParametersValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (CommitParameters) typeParametersValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (CommitParameters) typeParametersValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#DiffParameters",
+              "documentation": {
+                "identifier": "DiffParameters",
+                "newPage": false,
+                "searchKey": "search.DiffParameters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DiffParameters struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DiffParameters struct {\n\tRepo    api.RepoName\n\tOptions git.RawLogDiffSearchOptions\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#DiffParameters.typeParametersValue",
+                    "documentation": {
+                      "identifier": "DiffParameters.typeParametersValue",
+                      "newPage": false,
+                      "searchKey": "search.DiffParameters.typeParametersValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (DiffParameters) typeParametersValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (DiffParameters) typeParametersValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#CommitPatternInfo",
+              "documentation": {
+                "identifier": "CommitPatternInfo",
+                "newPage": false,
+                "searchKey": "search.CommitPatternInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitPatternInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitPatternInfo struct {\n\tPattern         string\n\tIsRegExp        bool\n\tIsCaseSensitive bool\n\tFileMatchLimit  int32\n\n\tIncludePatterns []string\n\tExcludePattern  string\n\n\tPathPatternsAreRegExps       bool\n\tPathPatternsAreCaseSensitive bool\n}\n```\n\nCommitPatternInfo is the data type that describes the properties of a pattern used for commit search. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#CommitPatternInfo.IsEmpty",
+                    "documentation": {
+                      "identifier": "CommitPatternInfo.IsEmpty",
+                      "newPage": false,
+                      "searchKey": "search.CommitPatternInfo.IsEmpty",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *CommitPatternInfo) IsEmpty() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *CommitPatternInfo) IsEmpty() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#CommitPatternInfo.Validate",
+                    "documentation": {
+                      "identifier": "CommitPatternInfo.Validate",
+                      "newPage": false,
+                      "searchKey": "search.CommitPatternInfo.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *CommitPatternInfo) Validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *CommitPatternInfo) Validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#SymbolsParameters",
+              "documentation": {
+                "identifier": "SymbolsParameters",
+                "newPage": false,
+                "searchKey": "search.SymbolsParameters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SymbolsParameters struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SymbolsParameters struct {\n\t// Repo is the name of the repository to search in.\n\tRepo api.RepoName `json:\"repo\"`\n\n\t// CommitID is the commit to search in.\n\tCommitID api.CommitID `json:\"commitID\"`\n\n\t// Query is the search query.\n\tQuery string\n\n\t// IsRegExp if true will treat the Pattern as a regular expression.\n\tIsRegExp bool\n\n\t// IsCaseSensitive if false will ignore the case of query and file pattern\n\t// when finding matches.\n\tIsCaseSensitive bool\n\n\t// IncludePatterns is a list of regexes that symbol's file paths\n\t// need to match to get included in the result\n\t//\n\t// The patterns are ANDed together; a file's path must match all patterns\n\t// for it to be kept. That is also why it is a list (unlike the singular\n\t// ExcludePattern); it is not possible in general to construct a single\n\t// glob or Go regexp that represents multiple such patterns ANDed together.\n\tIncludePatterns []string\n\n\t// ExcludePattern is an optional regex that symbol's file paths\n\t// need to match to get included in the result\n\tExcludePattern string\n\n\t// First indicates that only the first n symbols should be returned.\n\tFirst int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#SymbolsParameters.typeParametersValue",
+                    "documentation": {
+                      "identifier": "SymbolsParameters.typeParametersValue",
+                      "newPage": false,
+                      "searchKey": "search.SymbolsParameters.typeParametersValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (SymbolsParameters) typeParametersValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (SymbolsParameters) typeParametersValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#GlobalSearchMode",
+              "documentation": {
+                "identifier": "GlobalSearchMode",
+                "newPage": false,
+                "searchKey": "search.GlobalSearchMode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GlobalSearchMode int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GlobalSearchMode int\n```\n\nGlobalSearchMode designates code paths which optimize performance for global searches, i.e., literal or regexp, indexed searches without repo: filter. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#GlobalSearchMode.String",
+                    "documentation": {
+                      "identifier": "GlobalSearchMode.String",
+                      "newPage": false,
+                      "searchKey": "search.GlobalSearchMode.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m GlobalSearchMode) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m GlobalSearchMode) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TextParameters",
+              "documentation": {
+                "identifier": "TextParameters",
+                "newPage": false,
+                "searchKey": "search.TextParameters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TextParameters struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TextParameters struct {\n\tPatternInfo *TextPatternInfo\n\n\t// Performance optimization: For global queries, resolving repositories and\n\t// querying zoekt happens concurrently.\n\tRepoPromise *Promise\n\tMode        GlobalSearchMode\n\n\t// Query is the parsed query from the user. You should be using Pattern\n\t// instead, but Query is useful for checking extra fields that are set and\n\t// ignored by Pattern, such as index:no\n\tQuery query.Q\n\n\t// UseFullDeadline indicates that the search should try do as much work as\n\t// it can within context.Deadline. If false the search should try and be\n\t// as fast as possible, even if a \"slow\" deadline is set.\n\t//\n\t// For example searcher will wait to full its archive cache for a\n\t// repository if this field is true. Another example is we set this field\n\t// to true if the user requests a specific timeout or maximum result size.\n\tUseFullDeadline bool\n\n\tZoekt        *searchbackend.Zoekt\n\tSearcherURLs *endpoint.Map\n}\n```\n\nTextParameters are the parameters passed to a search backend. It contains the Pattern to search for, as well as the hydrated list of repository revisions to search. It defines behavior for text search on repository names, file names, and file content. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#TextParameters.typeParametersValue",
+                    "documentation": {
+                      "identifier": "TextParameters.typeParametersValue",
+                      "newPage": false,
+                      "searchKey": "search.TextParameters.typeParametersValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (TextParameters) typeParametersValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (TextParameters) typeParametersValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TextParametersForCommitParameters",
+              "documentation": {
+                "identifier": "TextParametersForCommitParameters",
+                "newPage": false,
+                "searchKey": "search.TextParametersForCommitParameters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TextParametersForCommitParameters struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TextParametersForCommitParameters struct {\n\tPatternInfo *CommitPatternInfo\n\tRepos       []*RepositoryRevisions\n\tQuery       query.Q\n}\n```\n\nTextParametersForCommitParameters is an intermediate type based on TextParameters that encodes parameters exclusively for a commit search. The commit search internals converts this type to CommitParameters. The commitParameter type definitions will be merged in future. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TextPatternInfo",
+              "documentation": {
+                "identifier": "TextPatternInfo",
+                "newPage": false,
+                "searchKey": "search.TextPatternInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TextPatternInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TextPatternInfo struct {\n\tPattern         string\n\tIsNegated       bool\n\tIsRegExp        bool\n\tIsStructuralPat bool\n\tCombyRule       string\n\tIsWordMatch     bool\n\tIsCaseSensitive bool\n\tFileMatchLimit  int32\n\tIndex           query.YesNoOnly\n\tSelect          filter.SelectPath\n\n\t// We do not support IsMultiline\n\t// IsMultiline     bool\n\tIncludePatterns []string\n\tExcludePattern  string\n\n\tFilePatternsReposMustInclude []string\n\tFilePatternsReposMustExclude []string\n\n\tPathPatternsAreCaseSensitive bool\n\n\tPatternMatchesContent bool\n\tPatternMatchesPath    bool\n\n\tLanguages []string\n}\n```\n\nTextPatternInfo is the struct used by vscode pass on search queries. Keep it in sync with pkg/searcher/protocol.PatternInfo. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/search#ToTextPatternInfo",
+                    "documentation": {
+                      "identifier": "ToTextPatternInfo",
+                      "newPage": false,
+                      "searchKey": "search.ToTextPatternInfo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ToTextPatternInfo(q query.Basic, p Protocol, transform query.BasicPass) *TextPatternInfo"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ToTextPatternInfo(q query.Basic, p Protocol, transform query.BasicPass) *TextPatternInfo\n```\n\nToTextPatternInfo converts a an atomic query to internal values that drive text search. An atomic query is a Basic query where the Pattern is either nil, or comprises only one Pattern node (hence, an atom, and not an expression). See TextPatternInfo for the values it computes and populates. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#TextPatternInfo.IsEmpty",
+                    "documentation": {
+                      "identifier": "TextPatternInfo.IsEmpty",
+                      "newPage": false,
+                      "searchKey": "search.TextPatternInfo.IsEmpty",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *TextPatternInfo) IsEmpty() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *TextPatternInfo) IsEmpty() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#TextPatternInfo.Validate",
+                    "documentation": {
+                      "identifier": "TextPatternInfo.Validate",
+                      "newPage": false,
+                      "searchKey": "search.TextPatternInfo.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *TextPatternInfo) Validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *TextPatternInfo) Validate() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/search#TextPatternInfo.String",
+                    "documentation": {
+                      "identifier": "TextPatternInfo.String",
+                      "newPage": false,
+                      "searchKey": "search.TextPatternInfo.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *TextPatternInfo) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *TextPatternInfo) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/search#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/search#SearcherURLs",
+              "documentation": {
+                "identifier": "SearcherURLs",
+                "newPage": false,
+                "searchKey": "search.SearcherURLs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SearcherURLs() *endpoint.Map"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SearcherURLs() *endpoint.Map\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#Indexed",
+              "documentation": {
+                "identifier": "Indexed",
+                "newPage": false,
+                "searchKey": "search.Indexed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Indexed() *backend.Zoekt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Indexed() *backend.Zoekt\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#Indexers",
+              "documentation": {
+                "identifier": "Indexers",
+                "newPage": false,
+                "searchKey": "search.Indexers",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Indexers() *backend.Indexers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Indexers() *backend.Indexers\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#zoektAddr",
+              "documentation": {
+                "identifier": "zoektAddr",
+                "newPage": false,
+                "searchKey": "search.zoektAddr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func zoektAddr(environ []string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc zoektAddr(environ []string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#getEnv",
+              "documentation": {
+                "identifier": "getEnv",
+                "newPage": false,
+                "searchKey": "search.getEnv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getEnv(environ []string, key string) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getEnv(environ []string, key string) (string, bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#reposAtEndpoint",
+              "documentation": {
+                "identifier": "reposAtEndpoint",
+                "newPage": false,
+                "searchKey": "search.reposAtEndpoint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reposAtEndpoint(ctx context.Context, endpoint string) map[string]struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reposAtEndpoint(ctx context.Context, endpoint string) map[string]struct{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#unionRegexp",
+              "documentation": {
+                "identifier": "unionRegexp",
+                "newPage": false,
+                "searchKey": "search.unionRegexp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unionRegexp(values []string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unionRegexp(values []string) string\n```\n\nunionRegexp separates values with a | operator to create a string representing a union of regexp patterns. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#langToFileRegexp",
+              "documentation": {
+                "identifier": "langToFileRegexp",
+                "newPage": false,
+                "searchKey": "search.langToFileRegexp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func langToFileRegexp(lang string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc langToFileRegexp(lang string) string\n```\n\nlangToFileRegexp converts a lang: parameter to its corresponding file patterns for file filters. The lang value must be valid, cf. validate.go \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#mapSlice",
+              "documentation": {
+                "identifier": "mapSlice",
+                "newPage": false,
+                "searchKey": "search.mapSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mapSlice(values []string, f func(string) string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mapSlice(values []string, f func(string) string) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#IncludeExcludeValues",
+              "documentation": {
+                "identifier": "IncludeExcludeValues",
+                "newPage": false,
+                "searchKey": "search.IncludeExcludeValues",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IncludeExcludeValues(q query.Basic, field string) (include, exclude []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IncludeExcludeValues(q query.Basic, field string) (include, exclude []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#count",
+              "documentation": {
+                "identifier": "count",
+                "newPage": false,
+                "searchKey": "search.count",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func count(q query.Basic, p Protocol) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc count(q query.Basic, p Protocol) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#ParseRepositoryRevisions",
+              "documentation": {
+                "identifier": "ParseRepositoryRevisions",
+                "newPage": false,
+                "searchKey": "search.ParseRepositoryRevisions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseRepositoryRevisions(repoAndOptionalRev string) (string, []RevisionSpecifier)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseRepositoryRevisions(repoAndOptionalRev string) (string, []RevisionSpecifier)\n```\n\nParseRepositoryRevisions parses strings that refer to a repository and 0 or more revspecs. The format is: \n\n```\nrepo@revs\n\n```\nwhere repo is a repository regex and revs is a ':'-separated list of revspecs and/or ref globs. A ref glob is a revspec prefixed with '*' (which is not a valid revspec or ref itself; see `man git-check-ref-format`). The '@' and revs may be omitted to refer to the default branch. \n\nFor example: \n\n- 'foo' refers to the 'foo' repo at the default branch - 'foo@bar' refers to the 'foo' repo and the 'bar' revspec. - 'foo@bar:baz:qux' refers to the 'foo' repo and 3 revspecs: 'bar', 'baz', \n\n```\nand 'qux'.\n\n```\n- 'foo@*bar' refers to the 'foo' repo and all refs matching the glob 'bar/*', \n\n```\nbecause git interprets the ref glob 'bar' as being 'bar/*' (see `man git-log`\nsection on the --glob flag)\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#expandedRevSpec",
+              "documentation": {
+                "identifier": "expandedRevSpec",
+                "newPage": false,
+                "searchKey": "search.expandedRevSpec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expandedRevSpec(ctx context.Context, r *RepositoryRevisions) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expandedRevSpec(ctx context.Context, r *RepositoryRevisions) ([]string, error)\n```\n\nexpandedRevSpecs evaluates all of r's ref glob expressions and returns the full, current list of refs matched or resolved by them, plus the explicitly listed Git revspecs. See git.CompileRefGlobs for information on how ref include/exclude globs are handled. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestZoektAddr",
+              "documentation": {
+                "identifier": "TestZoektAddr",
+                "newPage": false,
+                "searchKey": "search.TestZoektAddr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZoektAddr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZoektAddr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#overrideSearchType",
+              "documentation": {
+                "identifier": "overrideSearchType",
+                "newPage": false,
+                "searchKey": "search.overrideSearchType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func overrideSearchType(input string, searchType query.SearchType) query.SearchType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc overrideSearchType(input string, searchType query.SearchType) query.SearchType\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestToTextPatternInfo",
+              "documentation": {
+                "identifier": "TestToTextPatternInfo",
+                "newPage": false,
+                "searchKey": "search.TestToTextPatternInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestToTextPatternInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestToTextPatternInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestParseRepositoryRevisions",
+              "documentation": {
+                "identifier": "TestParseRepositoryRevisions",
+                "newPage": false,
+                "searchKey": "search.TestParseRepositoryRevisions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseRepositoryRevisions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseRepositoryRevisions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestRepoStatusMap",
+              "documentation": {
+                "identifier": "TestRepoStatusMap",
+                "newPage": false,
+                "searchKey": "search.TestRepoStatusMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoStatusMap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoStatusMap(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestRepoStatusMap_nil",
+              "documentation": {
+                "identifier": "TestRepoStatusMap_nil",
+                "newPage": false,
+                "searchKey": "search.TestRepoStatusMap_nil",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoStatusMap_nil(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoStatusMap_nil(t *testing.T)\n```\n\nTest we have reasonable behaviour on nil maps \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestRepoStatusSingleton",
+              "documentation": {
+                "identifier": "TestRepoStatusSingleton",
+                "newPage": false,
+                "searchKey": "search.TestRepoStatusSingleton",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoStatusSingleton(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoStatusSingleton(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#assertReposStatusEqual",
+              "documentation": {
+                "identifier": "assertReposStatusEqual",
+                "newPage": false,
+                "searchKey": "search.assertReposStatusEqual",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertReposStatusEqual(t *testing.T, want, got RepoStatusMap)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertReposStatusEqual(t *testing.T, want, got RepoStatusMap)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestPromiseGet",
+              "documentation": {
+                "identifier": "TestPromiseGet",
+                "newPage": false,
+                "searchKey": "search.TestPromiseGet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPromiseGet(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPromiseGet(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestPromiseGetWithCancel",
+              "documentation": {
+                "identifier": "TestPromiseGetWithCancel",
+                "newPage": false,
+                "searchKey": "search.TestPromiseGetWithCancel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPromiseGetWithCancel(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPromiseGetWithCancel(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/search#TestPromiseGetConcurrent",
+              "documentation": {
+                "identifier": "TestPromiseGetConcurrent",
+                "newPage": false,
+                "searchKey": "search.TestPromiseGetConcurrent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPromiseGetConcurrent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPromiseGetConcurrent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/search/backend"
+    },
+    {
+      "pathID": "/internal/search/filter"
+    },
+    {
+      "pathID": "/internal/search/query"
+    },
+    {
+      "pathID": "/internal/search/repos"
+    },
+    {
+      "pathID": "/internal/search/result"
+    },
+    {
+      "pathID": "/internal/search/run"
+    },
+    {
+      "pathID": "/internal/search/searchcontexts"
+    },
+    {
+      "pathID": "/internal/search/searcher"
+    },
+    {
+      "pathID": "/internal/search/streaming"
+    },
+    {
+      "pathID": "/internal/search/zoekt"
+    }
+  ]
+}

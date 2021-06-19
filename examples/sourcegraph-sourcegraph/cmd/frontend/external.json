@@ -1,0 +1,30 @@
+{
+  "pathID": "/cmd/frontend/external",
+  "documentation": {
+    "identifier": "external",
+    "newPage": true,
+    "searchKey": "cmd/frontend/external",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package external"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package external is a parent package whose sub-packages exist solely to export certain types and variables from internal packages. An internal package should *never* import a sub-package of this package. \n\n"
+  },
+  "children": [
+    {
+      "pathID": "/cmd/frontend/external/app"
+    },
+    {
+      "pathID": "/cmd/frontend/external/globals"
+    },
+    {
+      "pathID": "/cmd/frontend/external/session"
+    }
+  ]
+}

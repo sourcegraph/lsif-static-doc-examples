@@ -1,0 +1,333 @@
+{
+  "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel",
+  "documentation": {
+    "identifier": "codeintel",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/executor-queue/internal/queues/codeintel",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package codeintel"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#StalledJobMaximumAge",
+              "documentation": {
+                "identifier": "StalledJobMaximumAge",
+                "newPage": false,
+                "searchKey": "codeintel.StalledJobMaximumAge",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const StalledJobMaximumAge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst StalledJobMaximumAge = time.Second * 5\n```\n\nStalledJobMaximumAge is the maximum allowable duration between updating the state of a job as \"processing\" and locking the record during processing. An unlocked row that is marked as processing likely indicates that the executor that dequeued the job has died. There should be a nearly-zero delay between these states during normal operation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#MaximumNumResets",
+              "documentation": {
+                "identifier": "MaximumNumResets",
+                "newPage": false,
+                "searchKey": "codeintel.MaximumNumResets",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaximumNumResets"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaximumNumResets = 3\n```\n\nMaximumNumResets is the maximum number of times a job can be reset. If a job's failed attempts counter reaches this threshold, it will be moved into \"errored\" rather than \"queued\" on its next reset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#defaultOutfile",
+              "documentation": {
+                "identifier": "defaultOutfile",
+                "newPage": false,
+                "searchKey": "codeintel.defaultOutfile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultOutfile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultOutfile = \"dump.lsif\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#uploadRoute",
+              "documentation": {
+                "identifier": "uploadRoute",
+                "newPage": false,
+                "searchKey": "codeintel.uploadRoute",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const uploadRoute"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst uploadRoute = \"/.executors/lsif/upload\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#Config",
+              "documentation": {
+                "identifier": "Config",
+                "newPage": false,
+                "searchKey": "codeintel.Config",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Config struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Config struct {\n\tenv.BaseConfig\n\n\tFrontendURL      string\n\tFrontendUsername string\n\tFrontendPassword string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#Config.Load",
+                    "documentation": {
+                      "identifier": "Config.Load",
+                      "newPage": false,
+                      "searchKey": "codeintel.Config.Load",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) Load()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) Load()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#QueueOptions",
+              "documentation": {
+                "identifier": "QueueOptions",
+                "newPage": false,
+                "searchKey": "codeintel.QueueOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QueueOptions(db dbutil.DB, config *Config, observationContext *observation.Context) apiserver.QueueOptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QueueOptions(db dbutil.DB, config *Config, observationContext *observation.Context) apiserver.QueueOptions\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#newWorkerStore",
+              "documentation": {
+                "identifier": "newWorkerStore",
+                "newPage": false,
+                "searchKey": "codeintel.newWorkerStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newWorkerStore(db dbutil.DB, observationContext *observation.Context) dbworkerstore.Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newWorkerStore(db dbutil.DB, observationContext *observation.Context) dbworkerstore.Store\n```\n\nnewWorkerStore creates a dbworker store that wraps the lsif_indexes table. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#transformRecord",
+              "documentation": {
+                "identifier": "transformRecord",
+                "newPage": false,
+                "searchKey": "codeintel.transformRecord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func transformRecord(index store.Index, config *Config) (apiclient.Job, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc transformRecord(index store.Index, config *Config) (apiclient.Job, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#makeURL",
+              "documentation": {
+                "identifier": "makeURL",
+                "newPage": false,
+                "searchKey": "codeintel.makeURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeURL(base, username, password string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeURL(base, username, password string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#TestTransformRecord",
+              "documentation": {
+                "identifier": "TestTransformRecord",
+                "newPage": false,
+                "searchKey": "codeintel.TestTransformRecord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTransformRecord(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTransformRecord(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/executor-queue/internal/queues/codeintel#TestTransformRecordWithoutIndexer",
+              "documentation": {
+                "identifier": "TestTransformRecordWithoutIndexer",
+                "newPage": false,
+                "searchKey": "codeintel.TestTransformRecordWithoutIndexer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTransformRecordWithoutIndexer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTransformRecordWithoutIndexer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

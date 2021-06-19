@@ -1,0 +1,299 @@
+{
+  "pathID": "/internal/actor",
+  "documentation": {
+    "identifier": "actor",
+    "newPage": true,
+    "searchKey": "internal/actor",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package actor"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package actor provides the structures for representing an actor who has access to resources. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/actor#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/actor#actorKey",
+              "documentation": {
+                "identifier": "actorKey",
+                "newPage": false,
+                "searchKey": "actor.actorKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const actorKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst actorKey key = iota\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/actor#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/actor#Actor",
+              "documentation": {
+                "identifier": "Actor",
+                "newPage": false,
+                "searchKey": "actor.Actor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Actor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Actor struct {\n\t// UID is the unique ID of the authenticated user, or 0 for anonymous actors.\n\tUID int32 `json:\",omitempty\"`\n\n\t// Internal is true if the actor represents an internal Sourcegraph service (and is therefore\n\t// not tied to a specific user).\n\tInternal bool `json:\",omitempty\"`\n\n\t// FromSessionCookie is whether a session cookie was used to authenticate the actor. It is used\n\t// to selectively display a logout link. (If the actor wasn't authenticated with a session\n\t// cookie, logout would be ineffective.)\n\tFromSessionCookie bool `json:\"-\"`\n}\n```\n\nActor represents an agent that accesses resources. It can represent an anonymous user, an authenticated user, or an internal Sourcegraph service. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/actor#FromUser",
+                    "documentation": {
+                      "identifier": "FromUser",
+                      "newPage": false,
+                      "searchKey": "actor.FromUser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func FromUser(uid int32) *Actor"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc FromUser(uid int32) *Actor\n```\n\nFromUser returns an actor corresponding to a user \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/actor#FromContext",
+                    "documentation": {
+                      "identifier": "FromContext",
+                      "newPage": false,
+                      "searchKey": "actor.FromContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func FromContext(ctx context.Context) *Actor"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc FromContext(ctx context.Context) *Actor\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/actor#Actor.UIDString",
+                    "documentation": {
+                      "identifier": "Actor.UIDString",
+                      "newPage": false,
+                      "searchKey": "actor.Actor.UIDString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Actor) UIDString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Actor) UIDString() string\n```\n\nUIDString is a helper method that returns the UID as a string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/actor#Actor.String",
+                    "documentation": {
+                      "identifier": "Actor.String",
+                      "newPage": false,
+                      "searchKey": "actor.Actor.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Actor) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Actor) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/actor#Actor.IsAuthenticated",
+                    "documentation": {
+                      "identifier": "Actor.IsAuthenticated",
+                      "newPage": false,
+                      "searchKey": "actor.Actor.IsAuthenticated",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Actor) IsAuthenticated() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Actor) IsAuthenticated() bool\n```\n\nIsAuthenticated returns true if the Actor is derived from an authenticated user. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/actor#key",
+              "documentation": {
+                "identifier": "key",
+                "newPage": false,
+                "searchKey": "actor.key",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type key int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype key int\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/actor#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/actor#WithActor",
+              "documentation": {
+                "identifier": "WithActor",
+                "newPage": false,
+                "searchKey": "actor.WithActor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithActor(ctx context.Context, a *Actor) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithActor(ctx context.Context, a *Actor) context.Context\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/actor#WithInternalActor",
+              "documentation": {
+                "identifier": "WithInternalActor",
+                "newPage": false,
+                "searchKey": "actor.WithInternalActor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithInternalActor(ctx context.Context) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithInternalActor(ctx context.Context) context.Context\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

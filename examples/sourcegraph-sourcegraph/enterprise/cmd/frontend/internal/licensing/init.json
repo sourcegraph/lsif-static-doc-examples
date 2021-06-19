@@ -1,0 +1,124 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/licensing/init",
+  "documentation": {
+    "identifier": "init",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/licensing/init",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package init"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/licensing/init#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/init#usersStore",
+              "documentation": {
+                "identifier": "usersStore",
+                "newPage": false,
+                "searchKey": "init.usersStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type usersStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype usersStore struct {\n\tdb dbutil.DB\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/licensing/init#usersStore.Count",
+                    "documentation": {
+                      "identifier": "usersStore.Count",
+                      "newPage": false,
+                      "searchKey": "init.usersStore.Count",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *usersStore) Count(ctx context.Context) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *usersStore) Count(ctx context.Context) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/licensing/init#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/init#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "init.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error\n```\n\nTODO(efritz) - de-globalize assignments in this function TODO(efritz) - refactor licensing packages - this is a huge mess! \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

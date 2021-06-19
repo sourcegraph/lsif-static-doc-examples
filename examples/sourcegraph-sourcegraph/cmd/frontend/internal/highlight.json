@@ -1,0 +1,644 @@
+{
+  "pathID": "/cmd/frontend/internal/highlight",
+  "documentation": {
+    "identifier": "highlight",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/highlight",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package highlight"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/highlight#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#syntectServer",
+              "documentation": {
+                "identifier": "syntectServer",
+                "newPage": false,
+                "searchKey": "highlight.syntectServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var syntectServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar syntectServer = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "highlight.client",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar client *gosyntect.Client\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#ErrBinary",
+              "documentation": {
+                "identifier": "ErrBinary",
+                "newPage": false,
+                "searchKey": "highlight.ErrBinary",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrBinary"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrBinary = errors.New(\"cannot render binary file\")\n```\n\nErrBinary is returned when a binary file was attempted to be highlighted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#requestCounter",
+              "documentation": {
+                "identifier": "requestCounter",
+                "newPage": false,
+                "searchKey": "highlight.requestCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestCounter = ...\n```\n\nTODO (Dax): Determine if Histogram provides value and either use only histogram or counter, not both \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#metricRequestHistogram",
+              "documentation": {
+                "identifier": "metricRequestHistogram",
+                "newPage": false,
+                "searchKey": "highlight.metricRequestHistogram",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricRequestHistogram"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricRequestHistogram = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#Mocks",
+              "documentation": {
+                "identifier": "Mocks",
+                "newPage": false,
+                "searchKey": "highlight.Mocks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Mocks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Mocks, emptyMocks struct {\n\tCode func(p Params) (h template.HTML, aborted bool, err error)\n}\n```\n\nMocks is used to mock behavior in tests. Tests must call ResetMocks() when finished to ensure its mocks are not (inadvertently) used by subsequent tests. \n\n(The emptyMocks is used by ResetMocks to zero out Mocks without needing to use a named type.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#emptyMocks",
+              "documentation": {
+                "identifier": "emptyMocks",
+                "newPage": false,
+                "searchKey": "highlight.emptyMocks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var emptyMocks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Mocks, emptyMocks struct {\n\tCode func(p Params) (h template.HTML, aborted bool, err error)\n}\n```\n\nMocks is used to mock behavior in tests. Tests must call ResetMocks() when finished to ensure its mocks are not (inadvertently) used by subsequent tests. \n\n(The emptyMocks is used by ResetMocks to zero out Mocks without needing to use a named type.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#SyntectLanguageMap",
+              "documentation": {
+                "identifier": "SyntectLanguageMap",
+                "newPage": false,
+                "searchKey": "highlight.SyntectLanguageMap",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SyntectLanguageMap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SyntectLanguageMap = ...\n```\n\nSyntectLanguageMap is a map that maps language identifiers that may be provided at the end of markdown code fences to valid syntect file extensions. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/highlight#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#Params",
+              "documentation": {
+                "identifier": "Params",
+                "newPage": false,
+                "searchKey": "highlight.Params",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Params struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Params struct {\n\t// Content is the file content.\n\tContent []byte\n\n\t// Filepath is used to detect the language, it must contain at least the\n\t// file name + extension.\n\tFilepath string\n\n\t// DisableTimeout indicates whether or not a user has requested to wait as\n\t// long as needed to get highlighted results (this should never be on by\n\t// default, as some files can take a very long time to highlight).\n\tDisableTimeout bool\n\n\t// Whether or not the light theme should be used to highlight the code.\n\tIsLightTheme bool\n\n\t// HighlightLongLines, if true, highlighting lines which are greater than\n\t// 2000 bytes is enabled. This may produce a significant amount of HTML\n\t// which some browsers (such as Chrome, but not Firefox) may have trouble\n\t// rendering efficiently.\n\tHighlightLongLines bool\n\n\t// Whether or not to simulate the syntax highlighter taking too long to\n\t// respond.\n\tSimulateTimeout bool\n\n\t// Metadata provides optional metadata about the code we're highlighting.\n\tMetadata Metadata\n}\n```\n\nParams defines mandatory and optional parameters to use when highlighting code. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#Metadata",
+              "documentation": {
+                "identifier": "Metadata",
+                "newPage": false,
+                "searchKey": "highlight.Metadata",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Metadata struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Metadata struct {\n\tRepoName string\n\tRevision string\n}\n```\n\nMetadata contains metadata about a request to highlight code. It is used to ensure that when syntax highlighting takes a long time or errors out, we can log enough information to track down what the problematic code we were trying to highlight was. \n\nAll fields are optional. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#LineRange",
+              "documentation": {
+                "identifier": "LineRange",
+                "newPage": false,
+                "searchKey": "highlight.LineRange",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LineRange struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LineRange struct {\n\t// StartLine is the 0-based inclusive start line of the range.\n\tStartLine int32\n\n\t// EndLine is the 0-based exclusive end line of the range.\n\tEndLine int32\n}\n```\n\nLineRange describes a line range. \n\nIt uses int32 for GraphQL compatability. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/highlight#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "highlight.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#IsBinary",
+              "documentation": {
+                "identifier": "IsBinary",
+                "newPage": false,
+                "searchKey": "highlight.IsBinary",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsBinary(content []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsBinary(content []byte) bool\n```\n\nIsBinary is a helper to tell if the content of a file is binary or not. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#Code",
+              "documentation": {
+                "identifier": "Code",
+                "newPage": false,
+                "searchKey": "highlight.Code",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Code(ctx context.Context, p Params) (h template.HTML, aborted bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Code(ctx context.Context, p Params) (h template.HTML, aborted bool, err error)\n```\n\nCode highlights the given file content with the given filepath (must contain at least the file name + extension) and returns the properly escaped HTML table representing the highlighted code. \n\nThe returned boolean represents whether or not highlighting was aborted due to timeout. In this scenario, a plain text table is returned. \n\nIn the event the input content is binary, ErrBinary is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#firstCharacters",
+              "documentation": {
+                "identifier": "firstCharacters",
+                "newPage": false,
+                "searchKey": "highlight.firstCharacters",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func firstCharacters(s string, n int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc firstCharacters(s string, n int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#generatePlainTable",
+              "documentation": {
+                "identifier": "generatePlainTable",
+                "newPage": false,
+                "searchKey": "highlight.generatePlainTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func generatePlainTable(code string) (template.HTML, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc generatePlainTable(code string) (template.HTML, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#CodeAsLines",
+              "documentation": {
+                "identifier": "CodeAsLines",
+                "newPage": false,
+                "searchKey": "highlight.CodeAsLines",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CodeAsLines(ctx context.Context, p Params) ([]template.HTML, bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CodeAsLines(ctx context.Context, p Params) ([]template.HTML, bool, error)\n```\n\nCodeAsLines highlights the file and returns a list of highlighted lines. The returned boolean represents whether or not highlighting was aborted due to timeout. \n\nIn the event the input content is binary, ErrBinary is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#splitHighlightedLines",
+              "documentation": {
+                "identifier": "splitHighlightedLines",
+                "newPage": false,
+                "searchKey": "highlight.splitHighlightedLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func splitHighlightedLines(input template.HTML, wholeRow bool) ([]template.HTML, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc splitHighlightedLines(input template.HTML, wholeRow bool) ([]template.HTML, error)\n```\n\nsplitHighlightedLines takes the highlighted HTML table and returns a slice of highlighted strings, where each string corresponds a single line in the original, highlighted file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#normalizeFilepath",
+              "documentation": {
+                "identifier": "normalizeFilepath",
+                "newPage": false,
+                "searchKey": "highlight.normalizeFilepath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func normalizeFilepath(p string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc normalizeFilepath(p string) string\n```\n\nnormalizeFilepath ensures that the filepath p has a lowercase extension, i.e. it applies the following transformations: \n\n```\na/b/c/FOO.TXT → a/b/c/FOO.txt\nFOO.Sh → FOO.sh\n\n```\nThe following are left unmodified, as they already have lowercase extensions: \n\n```\na/b/c/FOO.txt\na/b/c/Makefile\nMakefile.am\nFOO.txt\n\n```\nIt expects the filepath uses forward slashes always. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#SplitLineRanges",
+              "documentation": {
+                "identifier": "SplitLineRanges",
+                "newPage": false,
+                "searchKey": "highlight.SplitLineRanges",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SplitLineRanges(html template.HTML, ranges []LineRange) ([][]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SplitLineRanges(html template.HTML, ranges []LineRange) ([][]string, error)\n```\n\nSplitLineRanges takes a syntax highlighted HTML table (returned by highlight.Code) and splits out the specified line ranges, returning HTML table rows `<tr>...</tr>` for each line range. \n\nInput line ranges will automatically be clamped within the bounds of the file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#ResetMocks",
+              "documentation": {
+                "identifier": "ResetMocks",
+                "newPage": false,
+                "searchKey": "highlight.ResetMocks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ResetMocks()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ResetMocks()\n```\n\nResetMocks clears the mock functions set on Mocks (so that subsequent tests don't inadvertently use them). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#TestGeneratePlainTable",
+              "documentation": {
+                "identifier": "TestGeneratePlainTable",
+                "newPage": false,
+                "searchKey": "highlight.TestGeneratePlainTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGeneratePlainTable(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGeneratePlainTable(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#TestGeneratePlainTableSecurity",
+              "documentation": {
+                "identifier": "TestGeneratePlainTableSecurity",
+                "newPage": false,
+                "searchKey": "highlight.TestGeneratePlainTableSecurity",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGeneratePlainTableSecurity(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGeneratePlainTableSecurity(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#TestSplitHighlightedLines",
+              "documentation": {
+                "identifier": "TestSplitHighlightedLines",
+                "newPage": false,
+                "searchKey": "highlight.TestSplitHighlightedLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplitHighlightedLines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplitHighlightedLines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#TestCodeAsLines",
+              "documentation": {
+                "identifier": "TestCodeAsLines",
+                "newPage": false,
+                "searchKey": "highlight.TestCodeAsLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCodeAsLines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCodeAsLines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#Test_normalizeFilepath",
+              "documentation": {
+                "identifier": "Test_normalizeFilepath",
+                "newPage": false,
+                "searchKey": "highlight.Test_normalizeFilepath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_normalizeFilepath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_normalizeFilepath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/highlight#TestSplitLineRanges",
+              "documentation": {
+                "identifier": "TestSplitLineRanges",
+                "newPage": false,
+                "searchKey": "highlight.TestSplitLineRanges",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplitLineRanges(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplitLineRanges(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

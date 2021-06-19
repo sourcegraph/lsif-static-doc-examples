@@ -1,0 +1,207 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil",
+  "documentation": {
+    "identifier": "stripeutil",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/dotcom/stripeutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package stripeutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#stripeSecretKey",
+              "documentation": {
+                "identifier": "stripeSecretKey",
+                "newPage": false,
+                "searchKey": "stripeutil.stripeSecretKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stripeSecretKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stripeSecretKey = env.Get(\"STRIPE_SECRET_KEY\", \"\", \"billing: Stripe API secret key\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#stripePublishableKey",
+              "documentation": {
+                "identifier": "stripePublishableKey",
+                "newPage": false,
+                "searchKey": "stripeutil.stripePublishableKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stripePublishableKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stripePublishableKey = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#ValidateAndPublishConfig",
+              "documentation": {
+                "identifier": "ValidateAndPublishConfig",
+                "newPage": false,
+                "searchKey": "stripeutil.ValidateAndPublishConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateAndPublishConfig() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateAndPublishConfig() bool\n```\n\nValidateAndPublishConfig check for and validates config for Stripe and exposes the publishable key through the jscontext. It exists the process, if the variables don't pass validation. It returns true if Stripe was configured. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#isTest",
+              "documentation": {
+                "identifier": "isTest",
+                "newPage": false,
+                "searchKey": "stripeutil.isTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isTest() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isTest() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#baseURL",
+              "documentation": {
+                "identifier": "baseURL",
+                "newPage": false,
+                "searchKey": "stripeutil.baseURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func baseURL() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc baseURL() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#CustomerURL",
+              "documentation": {
+                "identifier": "CustomerURL",
+                "newPage": false,
+                "searchKey": "stripeutil.CustomerURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CustomerURL(id string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CustomerURL(id string) string\n```\n\nCustomerURL returns the URL to the customer with the given ID on the billing system. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil#SubscriptionURL",
+              "documentation": {
+                "identifier": "SubscriptionURL",
+                "newPage": false,
+                "searchKey": "stripeutil.SubscriptionURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SubscriptionURL(id string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SubscriptionURL(id string) string\n```\n\nSubscriptionURL returns the URL to the subscription with the given ID on the billing system. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

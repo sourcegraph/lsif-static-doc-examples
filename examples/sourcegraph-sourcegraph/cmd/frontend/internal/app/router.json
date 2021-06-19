@@ -1,0 +1,796 @@
+{
+  "pathID": "/cmd/frontend/internal/app/router",
+  "documentation": {
+    "identifier": "router",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/app/router",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package router"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package router contains the URL router for the frontend app. \n\nIt is in a separate package from app so that other packages may use it to generate URLs without resulting in Go import cycles. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/router#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#revSuffixNoDots",
+              "documentation": {
+                "identifier": "revSuffixNoDots",
+                "newPage": false,
+                "searchKey": "router.revSuffixNoDots",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const revSuffixNoDots"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst revSuffixNoDots = `{Rev:(?:@(?:(?:[^@=/.-]|(?:[^=/@.]{2,}))/)*(?:[^@=/.-]|(?:[^=/@.]{2,})))?}`\n```\n\nsame as spec.unresolvedRevPattern but also not allowing path components starting with \".\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#RobotsTxt",
+              "documentation": {
+                "identifier": "RobotsTxt",
+                "newPage": false,
+                "searchKey": "router.RobotsTxt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RobotsTxt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RobotsTxt = \"robots-txt\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#Favicon",
+              "documentation": {
+                "identifier": "Favicon",
+                "newPage": false,
+                "searchKey": "router.Favicon",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Favicon"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Favicon = \"favicon\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#OpenSearch",
+              "documentation": {
+                "identifier": "OpenSearch",
+                "newPage": false,
+                "searchKey": "router.OpenSearch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const OpenSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst OpenSearch = \"opensearch\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#RepoBadge",
+              "documentation": {
+                "identifier": "RepoBadge",
+                "newPage": false,
+                "searchKey": "router.RepoBadge",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepoBadge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepoBadge = \"repo.badge\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#Logout",
+              "documentation": {
+                "identifier": "Logout",
+                "newPage": false,
+                "searchKey": "router.Logout",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Logout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Logout = \"logout\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#SignIn",
+              "documentation": {
+                "identifier": "SignIn",
+                "newPage": false,
+                "searchKey": "router.SignIn",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SignIn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SignIn = \"sign-in\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#SignOut",
+              "documentation": {
+                "identifier": "SignOut",
+                "newPage": false,
+                "searchKey": "router.SignOut",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SignOut"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SignOut = \"sign-out\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#SignUp",
+              "documentation": {
+                "identifier": "SignUp",
+                "newPage": false,
+                "searchKey": "router.SignUp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SignUp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SignUp = \"sign-up\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#SiteInit",
+              "documentation": {
+                "identifier": "SiteInit",
+                "newPage": false,
+                "searchKey": "router.SiteInit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SiteInit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SiteInit = \"site-init\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#VerifyEmail",
+              "documentation": {
+                "identifier": "VerifyEmail",
+                "newPage": false,
+                "searchKey": "router.VerifyEmail",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const VerifyEmail"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst VerifyEmail = \"verify-email\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#ResetPasswordInit",
+              "documentation": {
+                "identifier": "ResetPasswordInit",
+                "newPage": false,
+                "searchKey": "router.ResetPasswordInit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ResetPasswordInit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ResetPasswordInit = \"reset-password.init\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#ResetPasswordCode",
+              "documentation": {
+                "identifier": "ResetPasswordCode",
+                "newPage": false,
+                "searchKey": "router.ResetPasswordCode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ResetPasswordCode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ResetPasswordCode = \"reset-password.code\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#CheckUsernameTaken",
+              "documentation": {
+                "identifier": "CheckUsernameTaken",
+                "newPage": false,
+                "searchKey": "router.CheckUsernameTaken",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CheckUsernameTaken"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CheckUsernameTaken = \"check-username-taken\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#RegistryExtensionBundle",
+              "documentation": {
+                "identifier": "RegistryExtensionBundle",
+                "newPage": false,
+                "searchKey": "router.RegistryExtensionBundle",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegistryExtensionBundle"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegistryExtensionBundle = \"registry.extension.bundle\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#UsageStatsDownload",
+              "documentation": {
+                "identifier": "UsageStatsDownload",
+                "newPage": false,
+                "searchKey": "router.UsageStatsDownload",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UsageStatsDownload"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UsageStatsDownload = \"usage-stats.download\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#LatestPing",
+              "documentation": {
+                "identifier": "LatestPing",
+                "newPage": false,
+                "searchKey": "router.LatestPing",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LatestPing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LatestPing = \"pings.latest\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#OldToolsRedirect",
+              "documentation": {
+                "identifier": "OldToolsRedirect",
+                "newPage": false,
+                "searchKey": "router.OldToolsRedirect",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const OldToolsRedirect"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst OldToolsRedirect = \"old-tools-redirect\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#OldTreeRedirect",
+              "documentation": {
+                "identifier": "OldTreeRedirect",
+                "newPage": false,
+                "searchKey": "router.OldTreeRedirect",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const OldTreeRedirect"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst OldTreeRedirect = \"old-tree-redirect\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#GDDORefs",
+              "documentation": {
+                "identifier": "GDDORefs",
+                "newPage": false,
+                "searchKey": "router.GDDORefs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GDDORefs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GDDORefs = \"gddo.refs\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#Editor",
+              "documentation": {
+                "identifier": "Editor",
+                "newPage": false,
+                "searchKey": "router.Editor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Editor"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Editor = \"editor\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#Debug",
+              "documentation": {
+                "identifier": "Debug",
+                "newPage": false,
+                "searchKey": "router.Debug",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Debug"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Debug = \"debug\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#DebugHeaders",
+              "documentation": {
+                "identifier": "DebugHeaders",
+                "newPage": false,
+                "searchKey": "router.DebugHeaders",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DebugHeaders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DebugHeaders = \"debug.headers\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#GopherconLiveBlog",
+              "documentation": {
+                "identifier": "GopherconLiveBlog",
+                "newPage": false,
+                "searchKey": "router.GopherconLiveBlog",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GopherconLiveBlog"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GopherconLiveBlog = \"gophercon.live.blog\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#GoSymbolURL",
+              "documentation": {
+                "identifier": "GoSymbolURL",
+                "newPage": false,
+                "searchKey": "router.GoSymbolURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoSymbolURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoSymbolURL = \"go-symbol-url\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#UI",
+              "documentation": {
+                "identifier": "UI",
+                "newPage": false,
+                "searchKey": "router.UI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UI = \"ui\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/router#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#router",
+              "documentation": {
+                "identifier": "router",
+                "newPage": false,
+                "searchKey": "router.router",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var router"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar router = newRouter()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/router#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#URLToRepoTreeEntry",
+              "documentation": {
+                "identifier": "URLToRepoTreeEntry",
+                "newPage": false,
+                "searchKey": "router.URLToRepoTreeEntry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func URLToRepoTreeEntry(repo api.RepoName, rev, path string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc URLToRepoTreeEntry(repo api.RepoName, rev, path string) *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#revStr",
+              "documentation": {
+                "identifier": "revStr",
+                "newPage": false,
+                "searchKey": "router.revStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func revStr(rev string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc revStr(rev string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#addOldTreeRedirectRoute",
+              "documentation": {
+                "identifier": "addOldTreeRedirectRoute",
+                "newPage": false,
+                "searchKey": "router.addOldTreeRedirectRoute",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addOldTreeRedirectRoute(matchRouter *mux.Router)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addOldTreeRedirectRoute(matchRouter *mux.Router)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#Router",
+              "documentation": {
+                "identifier": "Router",
+                "newPage": false,
+                "searchKey": "router.Router",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Router() *mux.Router"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Router() *mux.Router\n```\n\nRouter returns the frontend app router. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#newRouter",
+              "documentation": {
+                "identifier": "newRouter",
+                "newPage": false,
+                "searchKey": "router.newRouter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newRouter() *mux.Router"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newRouter() *mux.Router\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/router#TestOldTreesRedirect",
+              "documentation": {
+                "identifier": "TestOldTreesRedirect",
+                "newPage": false,
+                "searchKey": "router.TestOldTreesRedirect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOldTreesRedirect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOldTreesRedirect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

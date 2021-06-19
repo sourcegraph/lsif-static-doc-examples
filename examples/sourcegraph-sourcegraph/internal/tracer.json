@@ -1,0 +1,392 @@
+{
+  "pathID": "/internal/tracer",
+  "documentation": {
+    "identifier": "tracer",
+    "newPage": true,
+    "searchKey": "internal/tracer",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package tracer"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package tracer initializes distributed tracing and log15 behavior. It also updates distributed tracing behavior in response to changes in site configuration. When the Init function of this package is invoked, opentracing.SetGlobalTracer is called (and subsequently called again after every Sourcegraph site configuration change). Importing programs should not invoke opentracing.SetGlobalTracer anywhere else. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/tracer#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/tracer#tracingNotEnabledURL",
+              "documentation": {
+                "identifier": "tracingNotEnabledURL",
+                "newPage": false,
+                "searchKey": "tracer.tracingNotEnabledURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const tracingNotEnabledURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst tracingNotEnabledURL = \"#tracing_not_enabled_for_this_request_add_?trace=1_to_url_to_enable\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/tracer#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/tracer#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "tracer.Options",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\tserviceName string\n}\n```\n\nOptions control the behavior of a tracer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/tracer#Option",
+              "documentation": {
+                "identifier": "Option",
+                "newPage": false,
+                "searchKey": "tracer.Option",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Option func(*github.com/sourcegraph/sourcegraph/internal/tracer.Options)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Option func(*Options)\n```\n\nIf this idiom seems strange: [https://github.com/tmrts/go-patterns/blob/master/idiom/functional-options.md](https://github.com/tmrts/go-patterns/blob/master/idiom/functional-options.md) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/tracer#ServiceName",
+                    "documentation": {
+                      "identifier": "ServiceName",
+                      "newPage": false,
+                      "searchKey": "tracer.ServiceName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ServiceName(s string) Option"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ServiceName(s string) Option\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/tracer#jaegerOpts",
+              "documentation": {
+                "identifier": "jaegerOpts",
+                "newPage": false,
+                "searchKey": "tracer.jaegerOpts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type jaegerOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype jaegerOpts struct {\n\tServiceName string\n\tExternalURL string\n\tEnabled     bool\n\tDebug       bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/tracer#switchableTracer",
+              "documentation": {
+                "identifier": "switchableTracer",
+                "newPage": false,
+                "searchKey": "tracer.switchableTracer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type switchableTracer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype switchableTracer struct {\n\tmu           sync.RWMutex\n\ttracer       opentracing.Tracer\n\ttracerCloser io.Closer\n\tlog          bool\n}\n```\n\nswitchableTracer implements opentracing.Tracer. The underlying tracer used is switchable (set via the `set` method). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/tracer#newSwitchableTracer",
+                    "documentation": {
+                      "identifier": "newSwitchableTracer",
+                      "newPage": false,
+                      "searchKey": "tracer.newSwitchableTracer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newSwitchableTracer() *switchableTracer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newSwitchableTracer() *switchableTracer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/tracer#switchableTracer.StartSpan",
+                    "documentation": {
+                      "identifier": "switchableTracer.StartSpan",
+                      "newPage": false,
+                      "searchKey": "tracer.switchableTracer.StartSpan",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *switchableTracer) StartSpan(operationName string, opts ...opentracing.StartSpanOption) opentracing.Span\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/tracer#switchableTracer.Inject",
+                    "documentation": {
+                      "identifier": "switchableTracer.Inject",
+                      "newPage": false,
+                      "searchKey": "tracer.switchableTracer.Inject",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *switchableTracer) Inject(sm opentracing.SpanContext, format interface{}, carrier interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/tracer#switchableTracer.Extract",
+                    "documentation": {
+                      "identifier": "switchableTracer.Extract",
+                      "newPage": false,
+                      "searchKey": "tracer.switchableTracer.Extract",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *switchableTracer) Extract(format interface{}, carrier interface{}) (opentracing.SpanContext, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *switchableTracer) Extract(format interface{}, carrier interface{}) (opentracing.SpanContext, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/tracer#switchableTracer.set",
+                    "documentation": {
+                      "identifier": "switchableTracer.set",
+                      "newPage": false,
+                      "searchKey": "tracer.switchableTracer.set",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *switchableTracer) set(tracer opentracing.Tracer, tracerCloser io.Closer, log bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *switchableTracer) set(tracer opentracing.Tracer, tracerCloser io.Closer, log bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/tracer#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/tracer#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "tracer.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/tracer#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "tracer.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(options ...Option)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(options ...Option)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/tracer#initTracer",
+              "documentation": {
+                "identifier": "initTracer",
+                "newPage": false,
+                "searchKey": "tracer.initTracer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initTracer(serviceName string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initTracer(serviceName string)\n```\n\ninitTracer is a helper that should be called exactly once (from Init). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/tracer#newTracer",
+              "documentation": {
+                "identifier": "newTracer",
+                "newPage": false,
+                "searchKey": "tracer.newTracer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newTracer(opts *jaegerOpts) (opentracing.Tracer, func(span opentracing.Span) string, io.Closer, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newTracer(opts *jaegerOpts) (opentracing.Tracer, func(span opentracing.Span) string, io.Closer, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

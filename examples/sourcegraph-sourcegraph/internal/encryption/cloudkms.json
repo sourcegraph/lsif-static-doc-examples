@@ -1,0 +1,212 @@
+{
+  "pathID": "/internal/encryption/cloudkms",
+  "documentation": {
+    "identifier": "cloudkms",
+    "newPage": true,
+    "searchKey": "internal/encryption/cloudkms",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package cloudkms"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/encryption/cloudkms#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/cloudkms#Key",
+              "documentation": {
+                "identifier": "Key",
+                "newPage": false,
+                "searchKey": "cloudkms.Key",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Key struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Key struct {\n\tname   string\n\tclient *kms.KeyManagementClient\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/cloudkms#Key.Version",
+                    "documentation": {
+                      "identifier": "Key.Version",
+                      "newPage": false,
+                      "searchKey": "cloudkms.Key.Version",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/cloudkms#Key.Decrypt",
+                    "documentation": {
+                      "identifier": "Key.Decrypt",
+                      "newPage": false,
+                      "searchKey": "cloudkms.Key.Decrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Decrypt(ctx context.Context, cipherText []byte) (*encryption.Secret, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Decrypt(ctx context.Context, cipherText []byte) (*encryption.Secret, error)\n```\n\nDecrypt a secret, it must have been encrypted with the same Key encrypted secrets are a base64 encoded string containing the key name and a checksum \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/cloudkms#Key.Encrypt",
+                    "documentation": {
+                      "identifier": "Key.Encrypt",
+                      "newPage": false,
+                      "searchKey": "cloudkms.Key.Encrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)\n```\n\nEncrypt a secret, storing it as a base64 encoded json blob, this json contains the key name, ciphertext, & checksum. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/cloudkms#encryptedValue",
+              "documentation": {
+                "identifier": "encryptedValue",
+                "newPage": false,
+                "searchKey": "cloudkms.encryptedValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encryptedValue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encryptedValue struct {\n\tKeyName    string\n\tCiphertext []byte\n\tChecksum   uint32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption/cloudkms#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/cloudkms#NewKey",
+              "documentation": {
+                "identifier": "NewKey",
+                "newPage": false,
+                "searchKey": "cloudkms.NewKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryption.Key, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewKey(ctx context.Context, config schema.CloudKMSEncryptionKey) (encryption.Key, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/cloudkms#crc32Sum",
+              "documentation": {
+                "identifier": "crc32Sum",
+                "newPage": false,
+                "searchKey": "cloudkms.crc32Sum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func crc32Sum(data []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc crc32Sum(data []byte) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "pathID": "/cmd/worker/shared",
+  "documentation": {
+    "identifier": "shared",
+    "newPage": true,
+    "searchKey": "cmd/worker/shared",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package shared"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/worker/shared#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#addr",
+              "documentation": {
+                "identifier": "addr",
+                "newPage": false,
+                "searchKey": "shared.addr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const addr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst addr = \":3189\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/worker/shared#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#config",
+              "documentation": {
+                "identifier": "config",
+                "newPage": false,
+                "searchKey": "shared.config",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var config"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar config = &Config{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#initDatabaseMemo",
+              "documentation": {
+                "identifier": "initDatabaseMemo",
+                "newPage": false,
+                "searchKey": "shared.initDatabaseMemo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var initDatabaseMemo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar initDatabaseMemo = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#builtins",
+              "documentation": {
+                "identifier": "builtins",
+                "newPage": false,
+                "searchKey": "shared.builtins",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var builtins"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar builtins = map[string]Job{}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/worker/shared#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#Config",
+              "documentation": {
+                "identifier": "Config",
+                "newPage": false,
+                "searchKey": "shared.Config",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Config struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Config struct {\n\tenv.BaseConfig\n\tnames []string\n\n\tJobAllowlist []string\n\tJobBlocklist []string\n}\n```\n\nConfig is the configuration that controls what jobs will be initialized and monitored. By default, all jobs are enabled. Individual jobs can be explicit allowed or blocked from running on a particular instance. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/worker/shared#Config.Load",
+                    "documentation": {
+                      "identifier": "Config.Load",
+                      "newPage": false,
+                      "searchKey": "shared.Config.Load",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) Load()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) Load()\n```\n\nLoad reads from the environment and stores the transformed data on the config object for later retrieval. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/worker/shared#Config.Validate",
+                    "documentation": {
+                      "identifier": "Config.Validate",
+                      "newPage": false,
+                      "searchKey": "shared.Config.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Config) Validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Config) Validate() error\n```\n\nValidate returns an error indicating if there was an invalid environment read during Load. The environment is invalid when a supplied job name is not recognized by the set of names registered to the worker (at compile time). \n\nThis method assumes that the name field has been set externally. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#Job",
+              "documentation": {
+                "identifier": "Job",
+                "newPage": false,
+                "searchKey": "shared.Job",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Job interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Job interface {\n\t// Config returns a set of configuration struct pointers that should be loaded\n\t// and validated as part of application startup.\n\t//\n\t// If called multiple times, the same pointers should be returned.\n\t//\n\t// Note that the Load function of every config object is invoked even if the\n\t// job is not enabled. It is assumed safe to call this method with an invalid\n\t// configuration (and all configuration errors should be surfaced via Validate).\n\tConfig() []env.Config\n\n\t// Routines constructs and returns the set of background routines that\n\t// should run as part of the worker process. Service initialization should\n\t// be shared between setup hooks when possible (e.g. sync.Once initialization).\n\t//\n\t// Note that the given context is meant to be used _only_ for setup. A context\n\t// passed to a periodic routine should be a fresh context unattached to this,\n\t// as the argument to this function will be canceled after all Routine invocations\n\t// have exited after application startup.\n\tRoutines(ctx context.Context) ([]goroutine.BackgroundRoutine, error)\n}\n```\n\nJob creates configuration struct and background routine instances to be run as part of the worker process. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#routinesResult",
+              "documentation": {
+                "identifier": "routinesResult",
+                "newPage": false,
+                "searchKey": "shared.routinesResult",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type routinesResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype routinesResult struct {\n\tname     string\n\troutines []goroutine.BackgroundRoutine\n\terr      error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#MemoizedConstructor",
+              "documentation": {
+                "identifier": "MemoizedConstructor",
+                "newPage": false,
+                "searchKey": "shared.MemoizedConstructor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MemoizedConstructor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MemoizedConstructor struct {\n\tctor  func() (interface{}, error)\n\tvalue interface{}\n\terr   error\n\tonce  sync.Once\n}\n```\n\nMemoizedConstructor wraps a function returning a value and an error and memoizes its result. Multiple calls to Init will result in the underlying constructor being called once. All callers will receive the same return values. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/worker/shared#NewMemoizedConstructor",
+                    "documentation": {
+                      "identifier": "NewMemoizedConstructor",
+                      "newPage": false,
+                      "searchKey": "shared.NewMemoizedConstructor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMemoizedConstructor(ctor func() (interface{}, error)) *MemoizedConstructor"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMemoizedConstructor(ctor func() (interface{}, error)) *MemoizedConstructor\n```\n\nNewMemoizedConstructor memoizes the given constructor \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/worker/shared#MemoizedConstructor.Init",
+                    "documentation": {
+                      "identifier": "MemoizedConstructor.Init",
+                      "newPage": false,
+                      "searchKey": "shared.MemoizedConstructor.Init",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MemoizedConstructor) Init() (interface{}, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MemoizedConstructor) Init() (interface{}, error)\n```\n\nInit ensures that the given constructor has been called exactly once, then returns the constructor's result value and error. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/worker/shared#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#shouldRunJob",
+              "documentation": {
+                "identifier": "shouldRunJob",
+                "newPage": false,
+                "searchKey": "shared.shouldRunJob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shouldRunJob(name string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shouldRunJob(name string) bool\n```\n\nshouldRunJob returns true if the given job should be run. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#safeSplit",
+              "documentation": {
+                "identifier": "safeSplit",
+                "newPage": false,
+                "searchKey": "shared.safeSplit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func safeSplit(text, sep string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc safeSplit(text, sep string) []string\n```\n\nsafeSplit is strings.Split but returns nil (not a []string{\"\"}) on empty input. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#InitDatabase",
+              "documentation": {
+                "identifier": "InitDatabase",
+                "newPage": false,
+                "searchKey": "shared.InitDatabase",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitDatabase() (*sql.DB, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitDatabase() (*sql.DB, error)\n```\n\nInitDatabase initializes and returns a connection to the frontend database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#Start",
+              "documentation": {
+                "identifier": "Start",
+                "newPage": false,
+                "searchKey": "shared.Start",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Start(additionalJobs map[string]Job)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Start(additionalJobs map[string]Job)\n```\n\nStart runs the worker. This method does not return. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#loadConfigs",
+              "documentation": {
+                "identifier": "loadConfigs",
+                "newPage": false,
+                "searchKey": "shared.loadConfigs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadConfigs(jobs map[string]Job)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadConfigs(jobs map[string]Job)\n```\n\nloadConfigs calls Load on the configs of each of the jobs registered in this binary. All configs will be loaded regardless if they would later be validated - this is the best place we have to manipulate the environment before the call to env.Lock. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#mustValidateConfigs",
+              "documentation": {
+                "identifier": "mustValidateConfigs",
+                "newPage": false,
+                "searchKey": "shared.mustValidateConfigs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustValidateConfigs(jobs map[string]Job)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustValidateConfigs(jobs map[string]Job)\n```\n\nmustValidateConfigs calls Validate on the configs of each of the jobs that will be run by this instance of the worker. If any config has a validation error, a fatal log message will be emitted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#emitJobCountMetrics",
+              "documentation": {
+                "identifier": "emitJobCountMetrics",
+                "newPage": false,
+                "searchKey": "shared.emitJobCountMetrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func emitJobCountMetrics(jobs map[string]Job)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc emitJobCountMetrics(jobs map[string]Job)\n```\n\nemitJobCountMetrics registers and emits an initial value for gauges referencing each of the jobs that will be run by this instance of the worker. Since these metrics are summed over all instances (and we don't change the jobs that are registered to a running worker), we only need to emit an initial count once. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#mustCreateBackgroundRoutines",
+              "documentation": {
+                "identifier": "mustCreateBackgroundRoutines",
+                "newPage": false,
+                "searchKey": "shared.mustCreateBackgroundRoutines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustCreateBackgroundRoutines(jobs map[string]Job) []goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustCreateBackgroundRoutines(jobs map[string]Job) []goroutine.BackgroundRoutine\n```\n\nmustCreateBackgroundRoutines runs the Routines function of each of the given jobs concurrently. If an error occurs from any of them, a fatal log message will be emitted. Otherwise, the set of background routines from each job will be returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#runRoutinesConcurrently",
+              "documentation": {
+                "identifier": "runRoutinesConcurrently",
+                "newPage": false,
+                "searchKey": "shared.runRoutinesConcurrently",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runRoutinesConcurrently(jobs map[string]Job) chan routinesResult"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runRoutinesConcurrently(jobs map[string]Job) chan routinesResult\n```\n\nrunRoutinesConcurrently returns a channel that will be populated with the return value of the Routines function from each given job. Each function is called concurrently. If an error occurs in one function, the context passed to all its siblings will be canceled. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#jobNames",
+              "documentation": {
+                "identifier": "jobNames",
+                "newPage": false,
+                "searchKey": "shared.jobNames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func jobNames(jobs map[string]Job) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc jobNames(jobs map[string]Job) []string\n```\n\njobNames returns an ordered slice of keys from the given map. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/worker/shared#WatchServiceConnectionValue",
+              "documentation": {
+                "identifier": "WatchServiceConnectionValue",
+                "newPage": false,
+                "searchKey": "shared.WatchServiceConnectionValue",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WatchServiceConnectionValue(f func(serviceConnections conftypes.ServiceConnections) string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WatchServiceConnectionValue(f func(serviceConnections conftypes.ServiceConnections) string) string\n```\n\nWatchServiceConnectionValue returns the value returned by the given function when passed the current service connection configuration. If this function returns a different value in the future for an updated service connection configuration, a fatal log will be emitted to restart the service to pick up changes. \n\nThis method should only be called for critical values like database connection config. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

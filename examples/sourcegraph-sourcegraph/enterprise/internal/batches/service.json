@@ -1,0 +1,1009 @@
+{
+  "pathID": "/enterprise/internal/batches/service",
+  "documentation": {
+    "identifier": "service",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches/service",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package service"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/service#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#Mocks",
+              "documentation": {
+                "identifier": "Mocks",
+                "newPage": false,
+                "searchKey": "service.Mocks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Mocks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Mocks = ServiceMocks{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#ErrNoNamespace",
+              "documentation": {
+                "identifier": "ErrNoNamespace",
+                "newPage": false,
+                "searchKey": "service.ErrNoNamespace",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNoNamespace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNoNamespace = errors.New(\"no namespace given\")\n```\n\nErrNoNamespace is returned by checkNamespaceAccess if no valid namespace ID is given. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#ErrChangesetsForJobNotFound",
+              "documentation": {
+                "identifier": "ErrChangesetsForJobNotFound",
+                "newPage": false,
+                "searchKey": "service.ErrChangesetsForJobNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrChangesetsForJobNotFound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrChangesetsForJobNotFound = errors.New(\"some changesets could not be found\")\n```\n\nErrChangesetsForJobNotFound can be returned by (*Service).CreateChangesetJobs if the number of changesets returned from the database doesn't match the number if IDs passed in. That can happen if some of the changesets are not published. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#ErrApplyClosedBatchChange",
+              "documentation": {
+                "identifier": "ErrApplyClosedBatchChange",
+                "newPage": false,
+                "searchKey": "service.ErrApplyClosedBatchChange",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrApplyClosedBatchChange"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrApplyClosedBatchChange = errors.New(\"existing batch change matched by batch spec is closed\")\n```\n\nErrApplyClosedBatchChange is returned by ApplyBatchChange when the batch change matched by the batch spec is already closed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#ErrMatchingBatchChangeExists",
+              "documentation": {
+                "identifier": "ErrMatchingBatchChangeExists",
+                "newPage": false,
+                "searchKey": "service.ErrMatchingBatchChangeExists",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrMatchingBatchChangeExists"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrMatchingBatchChangeExists = ...\n```\n\nErrMatchingBatchChangeExists is returned by ApplyBatchChange if a batch change matching the batch spec already exists and FailIfExists was set. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#ErrEnsureBatchChangeFailed",
+              "documentation": {
+                "identifier": "ErrEnsureBatchChangeFailed",
+                "newPage": false,
+                "searchKey": "service.ErrEnsureBatchChangeFailed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrEnsureBatchChangeFailed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrEnsureBatchChangeFailed = ...\n```\n\nErrEnsureBatchChangeFailed is returned by AppplyBatchChange when a ensureBatchChangeID is provided but a batch change with the name specified the batchSpec exists in the given namespace but has a different ID. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/service#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#ServiceMocks",
+              "documentation": {
+                "identifier": "ServiceMocks",
+                "newPage": false,
+                "searchKey": "service.ServiceMocks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ServiceMocks struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ServiceMocks struct {\n\tValidateAuthenticator func(ctx context.Context, externalServiceID, externalServiceType string, a auth.Authenticator) error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#ServiceMocks.Reset",
+                    "documentation": {
+                      "identifier": "ServiceMocks.Reset",
+                      "newPage": false,
+                      "searchKey": "service.ServiceMocks.Reset",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sm ServiceMocks) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sm ServiceMocks) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#Service",
+              "documentation": {
+                "identifier": "Service",
+                "newPage": false,
+                "searchKey": "service.Service",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Service struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Service struct {\n\tstore *store.Store\n\n\tsourcer sources.Sourcer\n\n\tclock func() time.Time\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "service.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(store *store.Store) *Service"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(store *store.Store) *Service\n```\n\nNew returns a Service. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#NewWithClock",
+                    "documentation": {
+                      "identifier": "NewWithClock",
+                      "newPage": false,
+                      "searchKey": "service.NewWithClock",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWithClock(store *store.Store, clock func() time.Time) *Service"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWithClock(store *store.Store, clock func() time.Time) *Service\n```\n\nNewWithClock returns a Service the given clock used to generate timestamps. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.WithStore",
+                    "documentation": {
+                      "identifier": "Service.WithStore",
+                      "newPage": false,
+                      "searchKey": "service.Service.WithStore",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) WithStore(store *store.Store) *Service"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) WithStore(store *store.Store) *Service\n```\n\nWithStore returns a copy of the Service with its store attribute set to the given Store. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.CreateBatchSpec",
+                    "documentation": {
+                      "identifier": "Service.CreateBatchSpec",
+                      "newPage": false,
+                      "searchKey": "service.Service.CreateBatchSpec",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) CreateBatchSpec(ctx context.Context, opts CreateBatchSpecOpts) (spec *btypes.BatchSpec, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) CreateBatchSpec(ctx context.Context, opts CreateBatchSpecOpts) (spec *btypes.BatchSpec, err error)\n```\n\nCreateBatchSpec creates the BatchSpec. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.CreateChangesetSpec",
+                    "documentation": {
+                      "identifier": "Service.CreateChangesetSpec",
+                      "newPage": false,
+                      "searchKey": "service.Service.CreateChangesetSpec",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) CreateChangesetSpec(ctx context.Context, rawSpec string, userID int32) (spec *btypes.ChangesetSpec, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) CreateChangesetSpec(ctx context.Context, rawSpec string, userID int32) (spec *btypes.ChangesetSpec, err error)\n```\n\nCreateChangesetSpec validates the given raw spec input and creates the ChangesetSpec. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.GetBatchChangeMatchingBatchSpec",
+                    "documentation": {
+                      "identifier": "Service.GetBatchChangeMatchingBatchSpec",
+                      "newPage": false,
+                      "searchKey": "service.Service.GetBatchChangeMatchingBatchSpec",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) GetBatchChangeMatchingBatchSpec(ctx context.Context, spec *btypes.BatchSpec) (*btypes.BatchChange, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) GetBatchChangeMatchingBatchSpec(ctx context.Context, spec *btypes.BatchSpec) (*btypes.BatchChange, error)\n```\n\nGetBatchChangeMatchingBatchSpec returns the batch change that the BatchSpec applies to, if that BatchChange already exists. If it doesn't exist yet, both return values are nil. It accepts a *store.Store so that it can be used inside a transaction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.GetNewestBatchSpec",
+                    "documentation": {
+                      "identifier": "Service.GetNewestBatchSpec",
+                      "newPage": false,
+                      "searchKey": "service.Service.GetNewestBatchSpec",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) GetNewestBatchSpec(ctx context.Context, tx *store.Store, spec *btypes.BatchSpec, userID int32) (*btypes.BatchSpec, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) GetNewestBatchSpec(ctx context.Context, tx *store.Store, spec *btypes.BatchSpec, userID int32) (*btypes.BatchSpec, error)\n```\n\nGetNewestBatchSpec returns the newest batch spec that matches the given spec's namespace and name and is owned by the given user, or nil if none is found. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.MoveBatchChange",
+                    "documentation": {
+                      "identifier": "Service.MoveBatchChange",
+                      "newPage": false,
+                      "searchKey": "service.Service.MoveBatchChange",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) MoveBatchChange(ctx context.Context, opts MoveBatchChangeOpts) (batchChange *btypes.BatchChange, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) MoveBatchChange(ctx context.Context, opts MoveBatchChangeOpts) (batchChange *btypes.BatchChange, err error)\n```\n\nMoveBatchChange moves the batch change from one namespace to another and/or renames the batch change. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.CloseBatchChange",
+                    "documentation": {
+                      "identifier": "Service.CloseBatchChange",
+                      "newPage": false,
+                      "searchKey": "service.Service.CloseBatchChange",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) CloseBatchChange(ctx context.Context, id int64, closeChangesets bool) (batchChange *btypes.BatchChange, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) CloseBatchChange(ctx context.Context, id int64, closeChangesets bool) (batchChange *btypes.BatchChange, err error)\n```\n\nCloseBatchChange closes the BatchChange with the given ID if it has not been closed yet. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.DeleteBatchChange",
+                    "documentation": {
+                      "identifier": "Service.DeleteBatchChange",
+                      "newPage": false,
+                      "searchKey": "service.Service.DeleteBatchChange",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) DeleteBatchChange(ctx context.Context, id int64) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) DeleteBatchChange(ctx context.Context, id int64) (err error)\n```\n\nDeleteBatchChange deletes the BatchChange with the given ID if it hasn't been deleted yet. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.EnqueueChangesetSync",
+                    "documentation": {
+                      "identifier": "Service.EnqueueChangesetSync",
+                      "newPage": false,
+                      "searchKey": "service.Service.EnqueueChangesetSync",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) EnqueueChangesetSync(ctx context.Context, id int64) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) EnqueueChangesetSync(ctx context.Context, id int64) (err error)\n```\n\nEnqueueChangesetSync loads the given changeset from the database, checks whether the actor in the context has permission to enqueue a sync and then enqueues a sync by calling the repoupdater client. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.ReenqueueChangeset",
+                    "documentation": {
+                      "identifier": "Service.ReenqueueChangeset",
+                      "newPage": false,
+                      "searchKey": "service.Service.ReenqueueChangeset",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) ReenqueueChangeset(ctx context.Context, id int64) (changeset *btypes.Changeset, repo *types.Repo, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) ReenqueueChangeset(ctx context.Context, id int64) (changeset *btypes.Changeset, repo *types.Repo, err error)\n```\n\nReenqueueChangeset loads the given changeset from the database, checks whether the actor in the context has permission to enqueue a reconciler run and then enqueues it by calling ResetReconcilerState. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.FetchUsernameForBitbucketServerToken",
+                    "documentation": {
+                      "identifier": "Service.FetchUsernameForBitbucketServerToken",
+                      "newPage": false,
+                      "searchKey": "service.Service.FetchUsernameForBitbucketServerToken",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) FetchUsernameForBitbucketServerToken(ctx context.Context, externalServiceID, externalServiceType, token string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) FetchUsernameForBitbucketServerToken(ctx context.Context, externalServiceID, externalServiceType, token string) (string, error)\n```\n\nFetchUsernameForBitbucketServerToken fetches the username associated with a Bitbucket server token. \n\nWe need the username in order to use the token as the password in a HTTP BasicAuth username/password pair used by gitserver to push commits. \n\nIn order to not require from users to type in their BitbucketServer username we only ask for a token and then use that token to talk to the BitbucketServer API and get their username. \n\nSince Bitbucket sends the username as a header in REST responses, we can take it from there and complete the UserCredential. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.ValidateAuthenticator",
+                    "documentation": {
+                      "identifier": "Service.ValidateAuthenticator",
+                      "newPage": false,
+                      "searchKey": "service.Service.ValidateAuthenticator",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) ValidateAuthenticator(ctx context.Context, externalServiceID, externalServiceType string, a auth.Authenticator) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) ValidateAuthenticator(ctx context.Context, externalServiceID, externalServiceType string, a auth.Authenticator) error\n```\n\nValidateAuthenticator creates a ChangesetSource, configures it with the given authenticator and validates it can correctly access the remote server. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.CreateChangesetJobs",
+                    "documentation": {
+                      "identifier": "Service.CreateChangesetJobs",
+                      "newPage": false,
+                      "searchKey": "service.Service.CreateChangesetJobs",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) CreateChangesetJobs(ctx context.Context, batchChangeID int64, ids []int64, jobType btypes.ChangesetJobType, payload interface{}, listOpts store.ListChangesetsOpts) (bulkGroupID string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) CreateChangesetJobs(ctx context.Context, batchChangeID int64, ids []int64, jobType btypes.ChangesetJobType, payload interface{}, listOpts store.ListChangesetsOpts) (bulkGroupID string, err error)\n```\n\nCreateChangesetJobs creates one changeset job for each given Changeset in the given BatchChange, checking whether the actor in the context has permission to trigger a job, and enqueues it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.ApplyBatchChange",
+                    "documentation": {
+                      "identifier": "Service.ApplyBatchChange",
+                      "newPage": false,
+                      "searchKey": "service.Service.ApplyBatchChange",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) ApplyBatchChange(ctx context.Context, opts ApplyBatchChangeOpts) (batchChange *btypes.BatchChange, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) ApplyBatchChange(ctx context.Context, opts ApplyBatchChangeOpts) (batchChange *btypes.BatchChange, err error)\n```\n\nApplyBatchChange creates the BatchChange. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#Service.ReconcileBatchChange",
+                    "documentation": {
+                      "identifier": "Service.ReconcileBatchChange",
+                      "newPage": false,
+                      "searchKey": "service.Service.ReconcileBatchChange",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Service) ReconcileBatchChange(ctx context.Context, batchSpec *btypes.BatchSpec) (batchChange *btypes.BatchChange, previousSpecID int64, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Service) ReconcileBatchChange(ctx context.Context, batchSpec *btypes.BatchSpec) (batchChange *btypes.BatchChange, previousSpecID int64, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#CreateBatchSpecOpts",
+              "documentation": {
+                "identifier": "CreateBatchSpecOpts",
+                "newPage": false,
+                "searchKey": "service.CreateBatchSpecOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateBatchSpecOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateBatchSpecOpts struct {\n\tRawSpec string `json:\"raw_spec\"`\n\n\tNamespaceUserID int32 `json:\"namespace_user_id\"`\n\tNamespaceOrgID  int32 `json:\"namespace_org_id\"`\n\n\tChangesetSpecRandIDs []string `json:\"changeset_spec_rand_ids\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#changesetSpecNotFoundErr",
+              "documentation": {
+                "identifier": "changesetSpecNotFoundErr",
+                "newPage": false,
+                "searchKey": "service.changesetSpecNotFoundErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type changesetSpecNotFoundErr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype changesetSpecNotFoundErr struct {\n\tRandID string\n}\n```\n\nchangesetSpecNotFoundErr is returned by CreateBatchSpec if a ChangesetSpec with the given RandID doesn't exist. It fulfills the interface required by errcode.IsNotFound. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#changesetSpecNotFoundErr.Error",
+                    "documentation": {
+                      "identifier": "changesetSpecNotFoundErr.Error",
+                      "newPage": false,
+                      "searchKey": "service.changesetSpecNotFoundErr.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *changesetSpecNotFoundErr) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *changesetSpecNotFoundErr) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#changesetSpecNotFoundErr.NotFound",
+                    "documentation": {
+                      "identifier": "changesetSpecNotFoundErr.NotFound",
+                      "newPage": false,
+                      "searchKey": "service.changesetSpecNotFoundErr.NotFound",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *changesetSpecNotFoundErr) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *changesetSpecNotFoundErr) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#MoveBatchChangeOpts",
+              "documentation": {
+                "identifier": "MoveBatchChangeOpts",
+                "newPage": false,
+                "searchKey": "service.MoveBatchChangeOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MoveBatchChangeOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MoveBatchChangeOpts struct {\n\tBatchChangeID int64\n\n\tNewName string\n\n\tNewNamespaceUserID int32\n\tNewNamespaceOrgID  int32\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#MoveBatchChangeOpts.String",
+                    "documentation": {
+                      "identifier": "MoveBatchChangeOpts.String",
+                      "newPage": false,
+                      "searchKey": "service.MoveBatchChangeOpts.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o MoveBatchChangeOpts) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o MoveBatchChangeOpts) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#usernameSource",
+              "documentation": {
+                "identifier": "usernameSource",
+                "newPage": false,
+                "searchKey": "service.usernameSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type usernameSource interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype usernameSource interface {\n\t// AuthenticatedUsername makes a request to the code host to fetch the\n\t// username associated with the credentials.\n\t// If no username could be determined an error is returned.\n\tAuthenticatedUsername(ctx context.Context) (string, error)\n}\n```\n\nA usernameSource can fetch the username associated with the credentials used by the Source. It's only used by FetchUsernameForBitbucketServerToken. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#ApplyBatchChangeOpts",
+              "documentation": {
+                "identifier": "ApplyBatchChangeOpts",
+                "newPage": false,
+                "searchKey": "service.ApplyBatchChangeOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ApplyBatchChangeOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ApplyBatchChangeOpts struct {\n\tBatchSpecRandID     string\n\tEnsureBatchChangeID int64\n\n\t// When FailIfBatchChangeExists is true, ApplyBatchChange will fail if a batch change\n\t// matching the given batch spec already exists.\n\tFailIfBatchChangeExists bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/batches/service#ApplyBatchChangeOpts.String",
+                    "documentation": {
+                      "identifier": "ApplyBatchChangeOpts.String",
+                      "newPage": false,
+                      "searchKey": "service.ApplyBatchChangeOpts.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o ApplyBatchChangeOpts) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o ApplyBatchChangeOpts) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches/service#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#checkNamespaceAccess",
+              "documentation": {
+                "identifier": "checkNamespaceAccess",
+                "newPage": false,
+                "searchKey": "service.checkNamespaceAccess",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkNamespaceAccess(ctx context.Context, db dbutil.DB, namespaceUserID, namespaceOrgID int32) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkNamespaceAccess(ctx context.Context, db dbutil.DB, namespaceUserID, namespaceOrgID int32) error\n```\n\ncheckNamespaceAccess checks whether the current user in the ctx has access to either the user ID or the org ID as a namespace. If the userID is non-zero that will be checked. Otherwise the org ID will be checked. If the current user is an admin, true will be returned. Otherwise it checks whether the current user _is_ the namespace user or has access to the namespace org. If both values are zero, an error is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#TestServiceApplyBatchChange",
+              "documentation": {
+                "identifier": "TestServiceApplyBatchChange",
+                "newPage": false,
+                "searchKey": "service.TestServiceApplyBatchChange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServiceApplyBatchChange(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServiceApplyBatchChange(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#applyAndListChangesets",
+              "documentation": {
+                "identifier": "applyAndListChangesets",
+                "newPage": false,
+                "searchKey": "service.applyAndListChangesets",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func applyAndListChangesets(ctx context.Context, t *testing.T, svc *Service, batchSpecRandID string, wantChangesets int) (*btypes.BatchChange, btypes.Changesets)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc applyAndListChangesets(ctx context.Context, t *testing.T, svc *Service, batchSpecRandID string, wantChangesets int) (*btypes.BatchChange, btypes.Changesets)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#TestServicePermissionLevels",
+              "documentation": {
+                "identifier": "TestServicePermissionLevels",
+                "newPage": false,
+                "searchKey": "service.TestServicePermissionLevels",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServicePermissionLevels(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServicePermissionLevels(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#TestService",
+              "documentation": {
+                "identifier": "TestService",
+                "newPage": false,
+                "searchKey": "service.TestService",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestService(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestService(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#testBatchChange",
+              "documentation": {
+                "identifier": "testBatchChange",
+                "newPage": false,
+                "searchKey": "service.testBatchChange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testBatchChange(user int32, spec *btypes.BatchSpec) *btypes.BatchChange"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testBatchChange(user int32, spec *btypes.BatchSpec) *btypes.BatchChange\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#testBatchSpec",
+              "documentation": {
+                "identifier": "testBatchSpec",
+                "newPage": false,
+                "searchKey": "service.testBatchSpec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testBatchSpec(user int32) *btypes.BatchSpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testBatchSpec(user int32) *btypes.BatchSpec\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches/service#testChangeset",
+              "documentation": {
+                "identifier": "testChangeset",
+                "newPage": false,
+                "searchKey": "service.testChangeset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testChangeset(repoID api.RepoID, batchChange int64, extState btypes.ChangesetExternalState) *btypes.Changeset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testChangeset(repoID api.RepoID, batchChange int64, extState btypes.ChangesetExternalState) *btypes.Changeset\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

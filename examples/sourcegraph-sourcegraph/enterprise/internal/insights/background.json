@@ -1,0 +1,902 @@
+{
+  "pathID": "/enterprise/internal/insights/background",
+  "documentation": {
+    "identifier": "background",
+    "newPage": true,
+    "searchKey": "enterprise/internal/insights/background",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package background"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/background#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#queryJobOffsetTime",
+              "documentation": {
+                "identifier": "queryJobOffsetTime",
+                "newPage": false,
+                "searchKey": "background.queryJobOffsetTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const queryJobOffsetTime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst queryJobOffsetTime = 30 * time.Second\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/background#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#testRealGlobalSettings",
+              "documentation": {
+                "identifier": "testRealGlobalSettings",
+                "newPage": false,
+                "searchKey": "background.testRealGlobalSettings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testRealGlobalSettings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testRealGlobalSettings = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/background#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#RepoStore",
+              "documentation": {
+                "identifier": "RepoStore",
+                "newPage": false,
+                "searchKey": "background.RepoStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStore interface {\n\tGetByName(ctx context.Context, name api.RepoName) (*types.Repo, error)\n}\n```\n\nRepoStore is a subset of the API exposed by the database.Repos() store (only the subset used by historicalEnqueuer.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#historicalEnqueuer",
+              "documentation": {
+                "identifier": "historicalEnqueuer",
+                "newPage": false,
+                "searchKey": "background.historicalEnqueuer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type historicalEnqueuer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype historicalEnqueuer struct {\n\t// Required fields used for mocking in tests.\n\tnow                   func() time.Time\n\tsettingStore          discovery.SettingStore\n\tinsightsStore         store.Interface\n\trepoStore             RepoStore\n\tenqueueQueryRunnerJob func(ctx context.Context, job *queryrunner.Job) error\n\tgitFirstEverCommit    func(ctx context.Context, repoName api.RepoName) (*git.Commit, error)\n\tgitFindNearestCommit  func(ctx context.Context, repoName api.RepoName, revSpec string, target time.Time) (*git.Commit, error)\n\n\t// framesToBackfill describes the number of historical timeframes to backfill data for.\n\tframesToBackfill func() int\n\n\t// frameLength describes the length of each timeframe to backfill data for.\n\tframeLength func() time.Duration\n\n\t// The iterator to use for walking over all repositories on Sourcegraph.\n\tallReposIterator func(ctx context.Context, each func(repoName string) error) error\n\tlimiter          *rate.Limiter\n}\n```\n\nhistoricalEnqueuer effectively enqueues jobs that generate historical data for insights. Right now, it only supports search insights. It does this by adjusting the user's search query to be for a specific repo and commit like `repo:<repo>@<commit>`, where `<repo>` is every repository on Sourcegraph (one search per) and `<commit>` is a Git commit closest in time to the historical point in time we're trying to generate data for. A lot of effort is placed into doing the work slowly, linearly, and consistently over time without harming any other part of Sourcegraph (including the search API, by performing searches slowly and on single repositories at a time only.) \n\nIt works roughly like this: \n\n* For every timeframe we want to backfill (e.g. 1 point every week for the past 52 weeks): \n\n```\n* For every repository on Sourcegraph (a subset on Sourcegraph.com):\n  * Consider yielding/sleeping.\n  * Find the oldest commit in the repository.\n    * For every unique search insight series (i.e. search query):\n      * Consider yielding/sleeping.\n      * If the series has data for this timeframe+repo already, nothing to do.\n      * If the timeframe we're generating data for is before the oldest commit in the repo, record a zero value.\n      * Else, locate the commit nearest to the point in time we're trying to get data for and\n        enqueue a queryrunner job to search that repository commit - recording historical data\n        for it.\n\n```\nAs you can no doubt see, there is much complexity and potential room for duplicative API calls here (e.g. \"for every timeframe we list every repository\"). For this exact reason, we do two things: \n\n1. Cache duplicative calls to prevent performing heavy operations multiple times. 2. Lift heavy operations to the layer/loop one level higher, when it is sane to do so. 3. Ensure we perform work slowly, linearly, and with yielding/sleeping between any substantial \n\n```\nwork being performed.\n\n```\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#historicalEnqueuer.Handler",
+                    "documentation": {
+                      "identifier": "historicalEnqueuer.Handler",
+                      "newPage": false,
+                      "searchKey": "background.historicalEnqueuer.Handler",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *historicalEnqueuer) Handler(ctx context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *historicalEnqueuer) Handler(ctx context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#historicalEnqueuer.buildFrames",
+                    "documentation": {
+                      "identifier": "historicalEnqueuer.buildFrames",
+                      "newPage": false,
+                      "searchKey": "background.historicalEnqueuer.buildFrames",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *historicalEnqueuer) buildFrames(ctx context.Context, uniqueSeries map[string]*schema.InsightSeries, sortedSeriesIDs []string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *historicalEnqueuer) buildFrames(ctx context.Context, uniqueSeries map[string]*schema.InsightSeries, sortedSeriesIDs []string) error\n```\n\nbuildFrames is invoked to build historical data for all past timeframes that we care about backfilling data for. This is done in small chunks, e.g. 52 frames to backfill with each frame being 7 days long, specifically so that we perform work incrementally. \n\nIt is only called if there is at least one insights series defined. \n\nIt will return instantly if there are no unique series. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#historicalEnqueuer.buildFrame",
+                    "documentation": {
+                      "identifier": "historicalEnqueuer.buildFrame",
+                      "newPage": false,
+                      "searchKey": "background.historicalEnqueuer.buildFrame",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *historicalEnqueuer) buildFrame(ctx context.Context,..."
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *historicalEnqueuer) buildFrame(\n\tctx context.Context,\n\tuniqueSeries map[string]*schema.InsightSeries,\n\tsortedSeriesIDs []string,\n\tfrom time.Time,\n\tto time.Time,\n) (hardErr, softErr error)\n```\n\nbuildFrame is invoked to build historical data for a specific past timeframe that we care about backfilling data for. \n\nIt is expected to backfill data for all unique series that are missing data, across all repos (using h.allReposIterator.) \n\nIt may return both hard errors (e.g. DB connection failure, future frames are unlikely to build) and soft errors (e.g. user made a mistake or we did partial work, future frames will likely succeed.) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#historicalEnqueuer.buildSeries",
+                    "documentation": {
+                      "identifier": "historicalEnqueuer.buildSeries",
+                      "newPage": false,
+                      "searchKey": "background.historicalEnqueuer.buildSeries",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *historicalEnqueuer) buildSeries(ctx context.Context, bctx *buildSeriesContext) (hardErr, softErr error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *historicalEnqueuer) buildSeries(ctx context.Context, bctx *buildSeriesContext) (hardErr, softErr error)\n```\n\nbuildSeries is invoked to build historical data for every unique timeframe * repo * series that could need backfilling. Note that this means that for a single search insight, this means this function may be called e.g. (52 timeframes) * (500000 repos) * (1 series) times. \n\nIt may return both hard errors (e.g. DB connection failure, future series are unlikely to build) and soft errors (e.g. user's search query is invalid, future series are likely to build.) \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#buildSeriesContext",
+              "documentation": {
+                "identifier": "buildSeriesContext",
+                "newPage": false,
+                "searchKey": "background.buildSeriesContext",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type buildSeriesContext struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype buildSeriesContext struct {\n\t// The timeframe we're building historical data for.\n\tfrom, to time.Time\n\n\t// The repository we're building historical data for.\n\trepo *types.Repo\n\n\t// The first commit made in the repository on the default branch.\n\tfirstHEADCommit *git.Commit\n\n\t// The series we're building historical data for.\n\tseriesID string\n\tseries   *schema.InsightSeries\n}\n```\n\nbuildSeriesContext describes context/parameters for a call to buildSeries() \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#cachedGitFirstEverCommit",
+              "documentation": {
+                "identifier": "cachedGitFirstEverCommit",
+                "newPage": false,
+                "searchKey": "background.cachedGitFirstEverCommit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cachedGitFirstEverCommit struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cachedGitFirstEverCommit struct {\n\timpl func(ctx context.Context, repoName api.RepoName) (*git.Commit, error)\n\n\tmu    sync.Mutex\n\tcache map[api.RepoName]*git.Commit\n}\n```\n\ncachedGitFirstEverCommit is a simple in-memory cache for gitFirstEverCommit calls. It does so using a map, and entries are never evicted because they are expected to be small and in general unchanging. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#cachedGitFirstEverCommit.gitFirstEverCommit",
+                    "documentation": {
+                      "identifier": "cachedGitFirstEverCommit.gitFirstEverCommit",
+                      "newPage": false,
+                      "searchKey": "background.cachedGitFirstEverCommit.gitFirstEverCommit",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cachedGitFirstEverCommit) gitFirstEverCommit(ctx context.Context, repoName api.RepoName) (*git.Commit, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cachedGitFirstEverCommit) gitFirstEverCommit(ctx context.Context, repoName api.RepoName) (*git.Commit, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#MockRepoStore",
+              "documentation": {
+                "identifier": "MockRepoStore",
+                "newPage": false,
+                "searchKey": "background.MockRepoStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockRepoStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockRepoStore struct {\n\t// GetByNameFunc is an instance of a mock function object controlling\n\t// the behavior of the method GetByName.\n\tGetByNameFunc *RepoStoreGetByNameFunc\n}\n```\n\nMockRepoStore is a mock implementation of the RepoStore interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/insights/background) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#NewMockRepoStore",
+                    "documentation": {
+                      "identifier": "NewMockRepoStore",
+                      "newPage": false,
+                      "searchKey": "background.NewMockRepoStore",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockRepoStore() *MockRepoStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockRepoStore() *MockRepoStore\n```\n\nNewMockRepoStore creates a new mock of the RepoStore interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#NewMockRepoStoreFrom",
+                    "documentation": {
+                      "identifier": "NewMockRepoStoreFrom",
+                      "newPage": false,
+                      "searchKey": "background.NewMockRepoStoreFrom",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockRepoStoreFrom(i RepoStore) *MockRepoStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockRepoStoreFrom(i RepoStore) *MockRepoStore\n```\n\nNewMockRepoStoreFrom creates a new mock of the MockRepoStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#MockRepoStore.GetByName",
+                    "documentation": {
+                      "identifier": "MockRepoStore.GetByName",
+                      "newPage": false,
+                      "searchKey": "background.MockRepoStore.GetByName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockRepoStore) GetByName(v0 context.Context, v1 api.RepoName) (*types.Repo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockRepoStore) GetByName(v0 context.Context, v1 api.RepoName) (*types.Repo, error)\n```\n\nGetByName delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFunc",
+              "documentation": {
+                "identifier": "RepoStoreGetByNameFunc",
+                "newPage": false,
+                "searchKey": "background.RepoStoreGetByNameFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStoreGetByNameFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStoreGetByNameFunc struct {\n\tdefaultHook func(context.Context, api.RepoName) (*types.Repo, error)\n\thooks       []func(context.Context, api.RepoName) (*types.Repo, error)\n\thistory     []RepoStoreGetByNameFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nRepoStoreGetByNameFunc describes the behavior when the GetByName method of the parent MockRepoStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreGetByNameFunc) SetDefaultHook(hook func(context.Context, api.RepoName) (*types.Repo, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreGetByNameFunc) SetDefaultHook(hook func(context.Context, api.RepoName) (*types.Repo, error))\n```\n\nSetDefaultHook sets function that is called when the GetByName method of the parent MockRepoStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFunc.PushHook",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreGetByNameFunc) PushHook(hook func(context.Context, api.RepoName) (*types.Repo, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreGetByNameFunc) PushHook(hook func(context.Context, api.RepoName) (*types.Repo, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the GetByName method of the parent MockRepoStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreGetByNameFunc) SetDefaultReturn(r0 *types.Repo, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreGetByNameFunc) SetDefaultReturn(r0 *types.Repo, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreGetByNameFunc) PushReturn(r0 *types.Repo, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreGetByNameFunc) PushReturn(r0 *types.Repo, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFunc.nextHook",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreGetByNameFunc) nextHook() func(context.Context, api.RepoName) (*types.Repo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreGetByNameFunc) nextHook() func(context.Context, api.RepoName) (*types.Repo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFunc.appendCall",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreGetByNameFunc) appendCall(r0 RepoStoreGetByNameFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreGetByNameFunc) appendCall(r0 RepoStoreGetByNameFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFunc.History",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFunc.History",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *RepoStoreGetByNameFunc) History() []RepoStoreGetByNameFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *RepoStoreGetByNameFunc) History() []RepoStoreGetByNameFuncCall\n```\n\nHistory returns a sequence of RepoStoreGetByNameFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFuncCall",
+              "documentation": {
+                "identifier": "RepoStoreGetByNameFuncCall",
+                "newPage": false,
+                "searchKey": "background.RepoStoreGetByNameFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoStoreGetByNameFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoStoreGetByNameFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 api.RepoName\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 *types.Repo\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nRepoStoreGetByNameFuncCall is an object that describes an invocation of method GetByName on an instance of MockRepoStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFuncCall.Args",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RepoStoreGetByNameFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RepoStoreGetByNameFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#RepoStoreGetByNameFuncCall.Results",
+                    "documentation": {
+                      "identifier": "RepoStoreGetByNameFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "background.RepoStoreGetByNameFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RepoStoreGetByNameFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RepoStoreGetByNameFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#testParams",
+              "documentation": {
+                "identifier": "testParams",
+                "newPage": false,
+                "searchKey": "background.testParams",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testParams struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testParams struct {\n\tsettings              *api.Settings\n\tnumRepos              int\n\tframes                int\n\trecordSleepOperations bool\n\thaveData              bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#testResults",
+              "documentation": {
+                "identifier": "testResults",
+                "newPage": false,
+                "searchKey": "background.testResults",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testResults struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testResults struct {\n\tallReposIteratorCalls int\n\tsleeps                int\n\ttotalSleepTimeMS      int\n\treposGetByName        int\n\toperations            []string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/insights/background#testHistoricalEnqueuer",
+                    "documentation": {
+                      "identifier": "testHistoricalEnqueuer",
+                      "newPage": false,
+                      "searchKey": "background.testHistoricalEnqueuer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func testHistoricalEnqueuer(t *testing.T, p *testParams) *testResults"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc testHistoricalEnqueuer(t *testing.T, p *testParams) *testResults\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/background#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#StartBackgroundJobs",
+              "documentation": {
+                "identifier": "StartBackgroundJobs",
+                "newPage": false,
+                "searchKey": "background.StartBackgroundJobs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StartBackgroundJobs(ctx context.Context, mainAppDB *sql.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StartBackgroundJobs(ctx context.Context, mainAppDB *sql.DB)\n```\n\nStartBackgroundJobs is the main entrypoint which starts background jobs for code insights. It is called from the repo-updater service, currently. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#newWorkerMetrics",
+              "documentation": {
+                "identifier": "newWorkerMetrics",
+                "newPage": false,
+                "searchKey": "background.newWorkerMetrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newWorkerMetrics(observationContext *observation.Context, workerName string) (workerutil.WorkerMetrics, dbworker.ResetterMetrics)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newWorkerMetrics(observationContext *observation.Context, workerName string) (workerutil.WorkerMetrics, dbworker.ResetterMetrics)\n```\n\nnewWorkerMetrics returns a basic set of metrics to be used for a worker and its resetter: \n\n* WorkerMetrics records worker operations & number of jobs. * ResetterMetrics records the number of jobs that got reset because workers timed out / took too \n\n```\nlong.\n\n```\nIndividual insights workers may then _also_ want to register their own metrics, if desired, in their NewWorker functions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#newInsightHistoricalEnqueuer",
+              "documentation": {
+                "identifier": "newInsightHistoricalEnqueuer",
+                "newPage": false,
+                "searchKey": "background.newInsightHistoricalEnqueuer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newInsightHistoricalEnqueuer(ctx context.Context, workerBaseStore *basestore.Store, settingStore discovery.SettingStore, insightsStore *store.Store, observationContext *observation.Context) goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newInsightHistoricalEnqueuer(ctx context.Context, workerBaseStore *basestore.Store, settingStore discovery.SettingStore, insightsStore *store.Store, observationContext *observation.Context) goroutine.BackgroundRoutine\n```\n\nnewInsightHistoricalEnqueuer returns a background goroutine which will periodically find all of the search insights across all user settings, and determine for which dates they do not have data and attempt to backfill them by enqueueing work for executing searches with `before:` and `after:` filter ranges. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#getRateLimit",
+              "documentation": {
+                "identifier": "getRateLimit",
+                "newPage": false,
+                "searchKey": "background.getRateLimit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getRateLimit(defaultValue rate.Limit) func() rate.Limit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getRateLimit(defaultValue rate.Limit) func() rate.Limit\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#newInsightEnqueuer",
+              "documentation": {
+                "identifier": "newInsightEnqueuer",
+                "newPage": false,
+                "searchKey": "background.newInsightEnqueuer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newInsightEnqueuer(ctx context.Context, workerBaseStore *basestore.Store, settingStore discovery.SettingStore, observationContext *observation.Context) goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newInsightEnqueuer(ctx context.Context, workerBaseStore *basestore.Store, settingStore discovery.SettingStore, observationContext *observation.Context) goroutine.BackgroundRoutine\n```\n\nnewInsightEnqueuer returns a background goroutine which will periodically find all of the search and webhook insights across all user settings, and enqueue work for the query runner and webhook runner workers to perform. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#discoverAndEnqueueInsights",
+              "documentation": {
+                "identifier": "discoverAndEnqueueInsights",
+                "newPage": false,
+                "searchKey": "background.discoverAndEnqueueInsights",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func discoverAndEnqueueInsights(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc discoverAndEnqueueInsights(\n\tctx context.Context,\n\tnow func() time.Time,\n\tsettingStore discovery.SettingStore,\n\tenqueueQueryRunnerJob func(ctx context.Context, job *queryrunner.Job) error,\n) error\n```\n\ndiscoverAndEnqueueInsights discovers insights defined in the given setting store from user/org/global settings and enqueues them to be executed and have insights recorded. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#withCountUnlimited",
+              "documentation": {
+                "identifier": "withCountUnlimited",
+                "newPage": false,
+                "searchKey": "background.withCountUnlimited",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func withCountUnlimited(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc withCountUnlimited(s string) string\n```\n\nwithCountUnlimited adds `count:9999999` to the given search query string iff `count:` does not exist in the query string. This is extremely important as otherwise the number of results our search query would return would be incomplete and fluctuate. \n\nTODO(slimsag): future: we should pull in the search query parser to avoid cases where `count:` is actually e.g. a search query like `content:\"count:\"`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#Test_historicalEnqueuer",
+              "documentation": {
+                "identifier": "Test_historicalEnqueuer",
+                "newPage": false,
+                "searchKey": "background.Test_historicalEnqueuer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_historicalEnqueuer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_historicalEnqueuer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/background#Test_discoverAndEnqueueInsights",
+              "documentation": {
+                "identifier": "Test_discoverAndEnqueueInsights",
+                "newPage": false,
+                "searchKey": "background.Test_discoverAndEnqueueInsights",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_discoverAndEnqueueInsights(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_discoverAndEnqueueInsights(t *testing.T)\n```\n\nTest_discoverAndEnqueueInsights tests that insight discovery and job enqueueing works and adheres to a few properties: \n\n1. Webhook insights are not enqueued (not yet supported.) 2. Duplicate insights are deduplicated / do not submit multiple jobs. 3. Jobs are scheduled not to all run at the same time. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/internal/insights/background/queryrunner"
+    }
+  ]
+}

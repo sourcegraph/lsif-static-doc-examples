@@ -1,0 +1,406 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader",
+  "documentation": {
+    "identifier": "httpheader",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/auth/httpheader",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package httpheader"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package httpheader implements auth via HTTP Headers. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#providerType",
+              "documentation": {
+                "identifier": "providerType",
+                "newPage": false,
+                "searchKey": "httpheader.providerType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const providerType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst providerType = \"http-header\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#Middleware",
+              "documentation": {
+                "identifier": "Middleware",
+                "newPage": false,
+                "searchKey": "httpheader.Middleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Middleware"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Middleware = &auth.Middleware{\n\tAPI: middleware,\n\tApp: middleware,\n}\n```\n\nMiddleware is the same for both the app and API because the HTTP proxy is assumed to wrap requests to both the app and API and add headers. \n\nSee the \"func middleware\" docs for more information. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider",
+              "documentation": {
+                "identifier": "provider",
+                "newPage": false,
+                "searchKey": "httpheader.provider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type provider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype provider struct {\n\tc *schema.HTTPHeaderAuthProvider\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.ConfigID",
+                    "documentation": {
+                      "identifier": "provider.ConfigID",
+                      "newPage": false,
+                      "searchKey": "httpheader.provider.ConfigID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (provider) ConfigID() providers.ConfigID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (provider) ConfigID() providers.ConfigID\n```\n\nConfigID implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.Config",
+                    "documentation": {
+                      "identifier": "provider.Config",
+                      "newPage": false,
+                      "searchKey": "httpheader.provider.Config",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p provider) Config() schema.AuthProviders"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p provider) Config() schema.AuthProviders\n```\n\nConfig implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.Refresh",
+                    "documentation": {
+                      "identifier": "provider.Refresh",
+                      "newPage": false,
+                      "searchKey": "httpheader.provider.Refresh",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p provider) Refresh(context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p provider) Refresh(context.Context) error\n```\n\nRefresh implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#provider.CachedInfo",
+                    "documentation": {
+                      "identifier": "provider.CachedInfo",
+                      "newPage": false,
+                      "searchKey": "httpheader.provider.CachedInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p provider) CachedInfo() *providers.Info"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p provider) CachedInfo() *providers.Info\n```\n\nCachedInfo implements providers.Provider. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#getProviderConfig",
+              "documentation": {
+                "identifier": "getProviderConfig",
+                "newPage": false,
+                "searchKey": "httpheader.getProviderConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getProviderConfig() (pc *schema.HTTPHeaderAuthProvider, multiple bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getProviderConfig() (pc *schema.HTTPHeaderAuthProvider, multiple bool)\n```\n\ngetProviderConfig returns the HTTP header auth provider config. At most 1 can be specified in site config; if there is more than 1, it returns multiple == true (which the caller should handle by returning an error and refusing to proceed with auth). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "httpheader.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#validateConfig",
+              "documentation": {
+                "identifier": "validateConfig",
+                "newPage": false,
+                "searchKey": "httpheader.validateConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateConfig(c conf.Unified) (problems conf.Problems)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateConfig(c conf.Unified) (problems conf.Problems)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "httpheader.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\nWatch for configuration changes related to the http-header auth provider. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#middleware",
+              "documentation": {
+                "identifier": "middleware",
+                "newPage": false,
+                "searchKey": "httpheader.middleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func middleware(next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc middleware(next http.Handler) http.Handler\n```\n\nmiddleware is middleware that checks for an HTTP header from an auth proxy that specifies the client's authenticated username. It's for use with auth proxies like [https://github.com/bitly/oauth2_proxy](https://github.com/bitly/oauth2_proxy) and is configured with the http-header auth provider in site config. \n\nTESTING: Use the testproxy test program to test HTTP auth proxy behavior. For example, run `go run cmd/frontend/auth/httpheader/testproxy.go -username=alice` then go to [http://localhost:4080](http://localhost:4080). See `-h` for flag help. \n\n🚨 SECURITY \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestValidateCustom",
+              "documentation": {
+                "identifier": "TestValidateCustom",
+                "newPage": false,
+                "searchKey": "httpheader.TestValidateCustom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestValidateCustom(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestValidateCustom(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestMiddleware",
+              "documentation": {
+                "identifier": "TestMiddleware",
+                "newPage": false,
+                "searchKey": "httpheader.TestMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMiddleware(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMiddleware(t *testing.T)\n```\n\nSEE ALSO FOR MANUAL TESTING: See the Middleware docstring for information about the testproxy helper program, which helps with manual testing of the HTTP auth proxy behavior. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/httpheader#TestMiddleware_stripPrefix",
+              "documentation": {
+                "identifier": "TestMiddleware_stripPrefix",
+                "newPage": false,
+                "searchKey": "httpheader.TestMiddleware_stripPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMiddleware_stripPrefix(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMiddleware_stripPrefix(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

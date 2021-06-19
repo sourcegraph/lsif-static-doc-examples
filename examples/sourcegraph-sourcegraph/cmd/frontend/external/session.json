@@ -1,0 +1,154 @@
+{
+  "pathID": "/cmd/frontend/external/session",
+  "documentation": {
+    "identifier": "session",
+    "newPage": true,
+    "searchKey": "cmd/frontend/external/session",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package session"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package session exports symbols from frontend/internal/session. See the parent package godoc for more information. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/external/session#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/session#ResetMockSessionStore",
+              "documentation": {
+                "identifier": "ResetMockSessionStore",
+                "newPage": false,
+                "searchKey": "session.ResetMockSessionStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ResetMockSessionStore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ResetMockSessionStore = session.ResetMockSessionStore\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/session#SetActor",
+              "documentation": {
+                "identifier": "SetActor",
+                "newPage": false,
+                "searchKey": "session.SetActor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SetActor"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SetActor = session.SetActor\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/session#SetData",
+              "documentation": {
+                "identifier": "SetData",
+                "newPage": false,
+                "searchKey": "session.SetData",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SetData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SetData = session.SetData\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/session#GetData",
+              "documentation": {
+                "identifier": "GetData",
+                "newPage": false,
+                "searchKey": "session.GetData",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GetData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GetData = session.GetData\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/session#InvalidateSessionsByID",
+              "documentation": {
+                "identifier": "InvalidateSessionsByID",
+                "newPage": false,
+                "searchKey": "session.InvalidateSessionsByID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var InvalidateSessionsByID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar InvalidateSessionsByID = session.InvalidateSessionsByID\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

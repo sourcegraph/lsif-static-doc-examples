@@ -1,0 +1,440 @@
+{
+  "pathID": "/internal/diskcache",
+  "documentation": {
+    "identifier": "diskcache",
+    "newPage": true,
+    "searchKey": "internal/diskcache",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package diskcache"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/diskcache#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/diskcache#urlMusMu",
+              "documentation": {
+                "identifier": "urlMusMu",
+                "newPage": false,
+                "searchKey": "diskcache.urlMusMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var urlMusMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar urlMusMu sync.Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#urlMus",
+              "documentation": {
+                "identifier": "urlMus",
+                "newPage": false,
+                "searchKey": "diskcache.urlMus",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var urlMus"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar urlMus = map[string]*sync.Mutex{}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/diskcache#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/diskcache#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "diskcache.Store",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Store struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Store struct {\n\t// Dir is the directory to cache items.\n\tDir string\n\n\t// Component when set is reported to OpenTracing as the component.\n\tComponent string\n\n\t// BackgroundTimeout when non-zero will do fetches in the background with\n\t// a timeout. This means the context passed to fetch will be\n\t// context.WithTimeout(context.Background(), BackgroundTimeout). When not\n\t// set fetches are done with the passed in context.\n\tBackgroundTimeout time.Duration\n\n\t// BeforeEvict, when non-nil, is a function to call before evicting a file.\n\t// It is passed the path to the file to be evicted.\n\tBeforeEvict func(string)\n}\n```\n\nStore is an on disk cache, with items cached via calls to Open. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/diskcache#Store.Open",
+                    "documentation": {
+                      "identifier": "Store.Open",
+                      "newPage": false,
+                      "searchKey": "diskcache.Store.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Open(ctx context.Context, key string, fetcher Fetcher) (file *File, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Open(ctx context.Context, key string, fetcher Fetcher) (file *File, err error)\n```\n\nOpen will open a file from the local cache with key. If missing, fetcher will fill the cache first. Open also performs single-flighting for fetcher. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/diskcache#Store.OpenWithPath",
+                    "documentation": {
+                      "identifier": "Store.OpenWithPath",
+                      "newPage": false,
+                      "searchKey": "diskcache.Store.OpenWithPath",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) OpenWithPath(ctx context.Context, key string, fetcher FetcherWithPath) (file *File, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) OpenWithPath(ctx context.Context, key string, fetcher FetcherWithPath) (file *File, err error)\n```\n\nOpenWithPath will open a file from the local cache with key. If missing, fetcher will fill the cache first. Open also performs single-flighting for fetcher. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/diskcache#Store.path",
+                    "documentation": {
+                      "identifier": "Store.path",
+                      "newPage": false,
+                      "searchKey": "diskcache.Store.path",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) path(key string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) path(key string) string\n```\n\npath returns the path for key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/diskcache#Store.Evict",
+                    "documentation": {
+                      "identifier": "Store.Evict",
+                      "newPage": false,
+                      "searchKey": "diskcache.Store.Evict",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Evict(maxCacheSizeBytes int64) (stats EvictStats, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Evict(maxCacheSizeBytes int64) (stats EvictStats, err error)\n```\n\nEvict will remove files from Store.Dir until it is smaller than maxCacheSizeBytes. It evicts files with the oldest modification time first. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#File",
+              "documentation": {
+                "identifier": "File",
+                "newPage": false,
+                "searchKey": "diskcache.File",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type File struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype File struct {\n\t*os.File\n\n\t// The Path on disk for File\n\tPath string\n}\n```\n\nFile is an os.File, but includes the Path \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/diskcache#doFetch",
+                    "documentation": {
+                      "identifier": "doFetch",
+                      "newPage": false,
+                      "searchKey": "diskcache.doFetch",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func doFetch(ctx context.Context, path string, fetcher FetcherWithPath) (file *File, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc doFetch(ctx context.Context, path string, fetcher FetcherWithPath) (file *File, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#Fetcher",
+              "documentation": {
+                "identifier": "Fetcher",
+                "newPage": false,
+                "searchKey": "diskcache.Fetcher",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Fetcher func(context.Context) (io.ReadCloser, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Fetcher func(context.Context) (io.ReadCloser, error)\n```\n\nFetcher returns a ReadCloser. It is used by Open if the key is not in the cache. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#FetcherWithPath",
+              "documentation": {
+                "identifier": "FetcherWithPath",
+                "newPage": false,
+                "searchKey": "diskcache.FetcherWithPath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FetcherWithPath func(context.Context, string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FetcherWithPath func(context.Context, string) error\n```\n\nFetcherWithPath writes a cache entry to the given file. It is used by Open if the key is not in the cache. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#EvictStats",
+              "documentation": {
+                "identifier": "EvictStats",
+                "newPage": false,
+                "searchKey": "diskcache.EvictStats",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EvictStats struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EvictStats struct {\n\t// CacheSize is the size of the cache before evicting.\n\tCacheSize int64\n\n\t// Evicted is the number of items evicted.\n\tEvicted int\n}\n```\n\nEvictStats is information gathered during Evict. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/diskcache#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/diskcache#copyAndClose",
+              "documentation": {
+                "identifier": "copyAndClose",
+                "newPage": false,
+                "searchKey": "diskcache.copyAndClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copyAndClose(dst io.WriteCloser, src io.ReadCloser) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copyAndClose(dst io.WriteCloser, src io.ReadCloser) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#touch",
+              "documentation": {
+                "identifier": "touch",
+                "newPage": false,
+                "searchKey": "diskcache.touch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func touch(path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc touch(path string)\n```\n\ntouch updates the modified time to time.Now(). It is best-effort, and will log if it fails. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#fsync",
+              "documentation": {
+                "identifier": "fsync",
+                "newPage": false,
+                "searchKey": "diskcache.fsync",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fsync(path string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fsync(path string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#urlMu",
+              "documentation": {
+                "identifier": "urlMu",
+                "newPage": false,
+                "searchKey": "diskcache.urlMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func urlMu(path string) *sync.Mutex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc urlMu(path string) *sync.Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/diskcache#TestOpen",
+              "documentation": {
+                "identifier": "TestOpen",
+                "newPage": false,
+                "searchKey": "diskcache.TestOpen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

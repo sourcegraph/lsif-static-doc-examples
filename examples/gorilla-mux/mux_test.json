@@ -1,0 +1,202 @@
+{
+  "pathID": "/mux_test",
+  "documentation": {
+    "identifier": "mux_test",
+    "newPage": true,
+    "searchKey": "_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package mux_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/mux_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/mux_test#authenticationMiddleware",
+              "documentation": {
+                "identifier": "authenticationMiddleware",
+                "newPage": false,
+                "searchKey": "mux_test.authenticationMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type authenticationMiddleware struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype authenticationMiddleware struct {\n\ttokenUsers map[string]string\n}\n```\n\nDefine our struct \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/mux_test#authenticationMiddleware.Populate",
+                    "documentation": {
+                      "identifier": "authenticationMiddleware.Populate",
+                      "newPage": false,
+                      "searchKey": "mux_test.authenticationMiddleware.Populate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (amw *authenticationMiddleware) Populate()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (amw *authenticationMiddleware) Populate()\n```\n\nInitialize it somewhere \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/mux_test#authenticationMiddleware.Middleware",
+                    "documentation": {
+                      "identifier": "authenticationMiddleware.Middleware",
+                      "newPage": false,
+                      "searchKey": "mux_test.authenticationMiddleware.Middleware",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (amw *authenticationMiddleware) Middleware(next http.Handler) http.Handler"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (amw *authenticationMiddleware) Middleware(next http.Handler) http.Handler\n```\n\nMiddleware function, which will be called for each request \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/mux_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/mux_test#Example_authenticationMiddleware",
+              "documentation": {
+                "identifier": "Example_authenticationMiddleware",
+                "newPage": false,
+                "searchKey": "mux_test.Example_authenticationMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_authenticationMiddleware()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_authenticationMiddleware()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mux_test#ExampleCORSMethodMiddleware",
+              "documentation": {
+                "identifier": "ExampleCORSMethodMiddleware",
+                "newPage": false,
+                "searchKey": "mux_test.ExampleCORSMethodMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleCORSMethodMiddleware()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleCORSMethodMiddleware()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mux_test#ExampleRoute_HeadersRegexp",
+              "documentation": {
+                "identifier": "ExampleRoute_HeadersRegexp",
+                "newPage": false,
+                "searchKey": "mux_test.ExampleRoute_HeadersRegexp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRoute_HeadersRegexp()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRoute_HeadersRegexp()\n```\n\nThis example demonstrates setting a regular expression matcher for the header value. A plain word will match any value that contains a matching substring as if the pattern was wrapped with `.*`. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/mux_test#ExampleRoute_HeadersRegexp_exactMatch",
+              "documentation": {
+                "identifier": "ExampleRoute_HeadersRegexp_exactMatch",
+                "newPage": false,
+                "searchKey": "mux_test.ExampleRoute_HeadersRegexp_exactMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRoute_HeadersRegexp_exactMatch()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRoute_HeadersRegexp_exactMatch()\n```\n\nThis example demonstrates setting a strict regular expression matcher for the header value. Using the start and end of string anchors, the value must be an exact match. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

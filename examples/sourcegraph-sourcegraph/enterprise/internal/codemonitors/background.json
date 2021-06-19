@@ -1,0 +1,668 @@
+{
+  "pathID": "/enterprise/internal/codemonitors/background",
+  "documentation": {
+    "identifier": "background",
+    "newPage": true,
+    "searchKey": "enterprise/internal/codemonitors/background",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package background"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/background#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#gqlSearchQuery",
+              "documentation": {
+                "identifier": "gqlSearchQuery",
+                "newPage": false,
+                "searchKey": "background.gqlSearchQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gqlSearchQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gqlSearchQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#eventRetentionInDays",
+              "documentation": {
+                "identifier": "eventRetentionInDays",
+                "newPage": false,
+                "searchKey": "background.eventRetentionInDays",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const eventRetentionInDays"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst eventRetentionInDays int = 7\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/background#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#graphQLQuery",
+              "documentation": {
+                "identifier": "graphQLQuery",
+                "newPage": false,
+                "searchKey": "background.graphQLQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type graphQLQuery struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype graphQLQuery struct {\n\tQuery     string      `json:\"query\"`\n\tVariables interface{} `json:\"variables\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#gqlSearchVars",
+              "documentation": {
+                "identifier": "gqlSearchVars",
+                "newPage": false,
+                "searchKey": "background.gqlSearchVars",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gqlSearchVars struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gqlSearchVars struct {\n\tQuery string `json:\"query\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#gqlSearchResponse",
+              "documentation": {
+                "identifier": "gqlSearchResponse",
+                "newPage": false,
+                "searchKey": "background.gqlSearchResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gqlSearchResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gqlSearchResponse struct {\n\tData struct {\n\t\tSearch struct {\n\t\t\tResults struct {\n\t\t\t\tApproximateResultCount string\n\t\t\t\tCloning                []*api.Repo\n\t\t\t\tTimedout               []*api.Repo\n\t\t\t\tResults                []interface{}\n\t\t\t}\n\t\t}\n\t}\n\tErrors []interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/background#search",
+                    "documentation": {
+                      "identifier": "search",
+                      "newPage": false,
+                      "searchKey": "background.search",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func search(ctx context.Context, query string) (*gqlSearchResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc search(ctx context.Context, query string) (*gqlSearchResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#codeMonitorsMetrics",
+              "documentation": {
+                "identifier": "codeMonitorsMetrics",
+                "newPage": false,
+                "searchKey": "background.codeMonitorsMetrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type codeMonitorsMetrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype codeMonitorsMetrics struct {\n\tworkerMetrics workerutil.WorkerMetrics\n\tresets        prometheus.Counter\n\tresetFailures prometheus.Counter\n\terrors        prometheus.Counter\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/background#newMetricsForTriggerQueries",
+                    "documentation": {
+                      "identifier": "newMetricsForTriggerQueries",
+                      "newPage": false,
+                      "searchKey": "background.newMetricsForTriggerQueries",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newMetricsForTriggerQueries() codeMonitorsMetrics"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newMetricsForTriggerQueries() codeMonitorsMetrics\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/background#newActionMetrics",
+                    "documentation": {
+                      "identifier": "newActionMetrics",
+                      "newPage": false,
+                      "searchKey": "background.newActionMetrics",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newActionMetrics() codeMonitorsMetrics"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newActionMetrics() codeMonitorsMetrics\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#queryRunner",
+              "documentation": {
+                "identifier": "queryRunner",
+                "newPage": false,
+                "searchKey": "background.queryRunner",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type queryRunner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype queryRunner struct {\n\t*cm.Store\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/background#queryRunner.Handle",
+                    "documentation": {
+                      "identifier": "queryRunner.Handle",
+                      "newPage": false,
+                      "searchKey": "background.queryRunner.Handle",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *queryRunner) Handle(ctx context.Context, workerStore dbworkerstore.Store, record workerutil.Record) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *queryRunner) Handle(ctx context.Context, workerStore dbworkerstore.Store, record workerutil.Record) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#actionRunner",
+              "documentation": {
+                "identifier": "actionRunner",
+                "newPage": false,
+                "searchKey": "background.actionRunner",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type actionRunner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype actionRunner struct {\n\t*cm.Store\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/background#actionRunner.Handle",
+                    "documentation": {
+                      "identifier": "actionRunner.Handle",
+                      "newPage": false,
+                      "searchKey": "background.actionRunner.Handle",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *actionRunner) Handle(ctx context.Context, workerStore dbworkerstore.Store, record workerutil.Record) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *actionRunner) Handle(ctx context.Context, workerStore dbworkerstore.Store, record workerutil.Record) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/background#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#StartBackgroundJobs",
+              "documentation": {
+                "identifier": "StartBackgroundJobs",
+                "newPage": false,
+                "searchKey": "background.StartBackgroundJobs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StartBackgroundJobs(ctx context.Context, db *sql.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StartBackgroundJobs(ctx context.Context, db *sql.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#gqlURL",
+              "documentation": {
+                "identifier": "gqlURL",
+                "newPage": false,
+                "searchKey": "background.gqlURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gqlURL(queryName string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gqlURL(queryName string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#extractTime",
+              "documentation": {
+                "identifier": "extractTime",
+                "newPage": false,
+                "searchKey": "background.extractTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func extractTime(result interface{}) (t *time.Time, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc extractTime(result interface{}) (t *time.Time, err error)\n```\n\nextractTime extracts the time from the given search result. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#newTriggerQueryRunner",
+              "documentation": {
+                "identifier": "newTriggerQueryRunner",
+                "newPage": false,
+                "searchKey": "background.newTriggerQueryRunner",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newTriggerQueryRunner(ctx context.Context, s *cm.Store, metrics codeMonitorsMetrics) *workerutil.Worker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newTriggerQueryRunner(ctx context.Context, s *cm.Store, metrics codeMonitorsMetrics) *workerutil.Worker\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#newTriggerQueryEnqueuer",
+              "documentation": {
+                "identifier": "newTriggerQueryEnqueuer",
+                "newPage": false,
+                "searchKey": "background.newTriggerQueryEnqueuer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newTriggerQueryEnqueuer(ctx context.Context, store *cm.Store) goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newTriggerQueryEnqueuer(ctx context.Context, store *cm.Store) goroutine.BackgroundRoutine\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#newTriggerQueryResetter",
+              "documentation": {
+                "identifier": "newTriggerQueryResetter",
+                "newPage": false,
+                "searchKey": "background.newTriggerQueryResetter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newTriggerQueryResetter(ctx context.Context, s *cm.Store, metrics codeMonitorsMetrics) *dbworker.Resetter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newTriggerQueryResetter(ctx context.Context, s *cm.Store, metrics codeMonitorsMetrics) *dbworker.Resetter\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#newTriggerJobsLogDeleter",
+              "documentation": {
+                "identifier": "newTriggerJobsLogDeleter",
+                "newPage": false,
+                "searchKey": "background.newTriggerJobsLogDeleter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newTriggerJobsLogDeleter(ctx context.Context, store *cm.Store) goroutine.BackgroundRoutine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newTriggerJobsLogDeleter(ctx context.Context, store *cm.Store) goroutine.BackgroundRoutine\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#newActionRunner",
+              "documentation": {
+                "identifier": "newActionRunner",
+                "newPage": false,
+                "searchKey": "background.newActionRunner",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newActionRunner(ctx context.Context, s *cm.Store, metrics codeMonitorsMetrics) *workerutil.Worker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newActionRunner(ctx context.Context, s *cm.Store, metrics codeMonitorsMetrics) *workerutil.Worker\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#newActionJobResetter",
+              "documentation": {
+                "identifier": "newActionJobResetter",
+                "newPage": false,
+                "searchKey": "background.newActionJobResetter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newActionJobResetter(ctx context.Context, s *cm.Store, metrics codeMonitorsMetrics) *dbworker.Resetter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newActionJobResetter(ctx context.Context, s *cm.Store, metrics codeMonitorsMetrics) *dbworker.Resetter\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#createDBWorkerStoreForTriggerJobs",
+              "documentation": {
+                "identifier": "createDBWorkerStoreForTriggerJobs",
+                "newPage": false,
+                "searchKey": "background.createDBWorkerStoreForTriggerJobs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createDBWorkerStoreForTriggerJobs(s *cm.Store) dbworkerstore.Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createDBWorkerStoreForTriggerJobs(s *cm.Store) dbworkerstore.Store\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#createDBWorkerStoreForActionJobs",
+              "documentation": {
+                "identifier": "createDBWorkerStoreForActionJobs",
+                "newPage": false,
+                "searchKey": "background.createDBWorkerStoreForActionJobs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createDBWorkerStoreForActionJobs(s *cm.Store) dbworkerstore.Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createDBWorkerStoreForActionJobs(s *cm.Store) dbworkerstore.Store\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#newQueryWithAfterFilter",
+              "documentation": {
+                "identifier": "newQueryWithAfterFilter",
+                "newPage": false,
+                "searchKey": "background.newQueryWithAfterFilter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newQueryWithAfterFilter(q *cm.MonitorQuery) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newQueryWithAfterFilter(q *cm.MonitorQuery) string\n```\n\nnewQueryWithAfterFilter constructs a new query which finds search results introduced after the last time we queried. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#latestResultTime",
+              "documentation": {
+                "identifier": "latestResultTime",
+                "newPage": false,
+                "searchKey": "background.latestResultTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func latestResultTime(previousLastResult *time.Time, v *gqlSearchResponse, searchErr error) time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc latestResultTime(previousLastResult *time.Time, v *gqlSearchResponse, searchErr error) time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#zeroOrVal",
+              "documentation": {
+                "identifier": "zeroOrVal",
+                "newPage": false,
+                "searchKey": "background.zeroOrVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func zeroOrVal(i *int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc zeroOrVal(i *int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "background.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/background#TestActionRunner",
+              "documentation": {
+                "identifier": "TestActionRunner",
+                "newPage": false,
+                "searchKey": "background.TestActionRunner",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestActionRunner(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestActionRunner(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

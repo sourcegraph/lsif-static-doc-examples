@@ -1,0 +1,504 @@
+{
+  "pathID": "/internal/authz/perforce",
+  "documentation": {
+    "identifier": "perforce",
+    "newPage": true,
+    "searchKey": "internal/authz/perforce",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package perforce"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/authz/perforce#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/perforce#Provider",
+              "documentation": {
+                "identifier": "Provider",
+                "newPage": false,
+                "searchKey": "perforce.Provider",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Provider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Provider struct {\n\turn      string\n\tcodeHost *extsvc.CodeHost\n\n\thost     string\n\tuser     string\n\tpassword string\n\n\t// NOTE: We do not need mutex because there is no concurrent access to these\n\t// \tfields in the current implementation.\n\tcachedAllUserEmails map[string]string   // username <-> email\n\tcachedGroupMembers  map[string][]string // group <-> members\n}\n```\n\nProvider implements authz.Provider for Perforce depot permissions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#NewProvider",
+                    "documentation": {
+                      "identifier": "NewProvider",
+                      "newPage": false,
+                      "searchKey": "perforce.NewProvider",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewProvider(urn, host, user, password string) *Provider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewProvider(urn, host, user, password string) *Provider\n```\n\nNewProvider returns a new Perforce authorization provider that uses the given host, user and password to talk to a Perforce Server that is the source of truth for permissions. It assumes emails of Sourcegraph accounts match 1-1 with emails of Perforce Server users. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.FetchAccount",
+                    "documentation": {
+                      "identifier": "Provider.FetchAccount",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.FetchAccount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchAccount(ctx context.Context, user *types.User, _ []*extsvc.Account, verifiedEmails []string) (_ *extsvc.Account, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchAccount(ctx context.Context, user *types.User, _ []*extsvc.Account, verifiedEmails []string) (_ *extsvc.Account, err error)\n```\n\nFetchAccount uses given user's verified emails to match users on the Perforce Server. It returns when any of the verified email has matched and the match result is not deterministic. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.canRevokeReadAccess",
+                    "documentation": {
+                      "identifier": "Provider.canRevokeReadAccess",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.canRevokeReadAccess",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) canRevokeReadAccess(level string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) canRevokeReadAccess(level string) bool\n```\n\ncanRevokeReadAccess returns true if the given access level is able to revoke read account for a depot prefix. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.canGrantReadAccess",
+                    "documentation": {
+                      "identifier": "Provider.canGrantReadAccess",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.canGrantReadAccess",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) canGrantReadAccess(level string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) canGrantReadAccess(level string) bool\n```\n\ncanGrantReadAccess returns true if the given access level is able to grant read account for a depot prefix. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.FetchUserPerms",
+                    "documentation": {
+                      "identifier": "Provider.FetchUserPerms",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.FetchUserPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchUserPerms(ctx context.Context, account *extsvc.Account) (*authz.ExternalUserPermissions, error)\n```\n\nFetchUserPerms returns a list of depot prefixes that the given user has access to on the Perforce Server. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.getAllUserEmails",
+                    "documentation": {
+                      "identifier": "Provider.getAllUserEmails",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.getAllUserEmails",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) getAllUserEmails(ctx context.Context) (map[string]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) getAllUserEmails(ctx context.Context) (map[string]string, error)\n```\n\ngetAllUserEmails returns a set of username <-> email pairs of all users in the Perforce server. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.getAllUsers",
+                    "documentation": {
+                      "identifier": "Provider.getAllUsers",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.getAllUsers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) getAllUsers(ctx context.Context) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) getAllUsers(ctx context.Context) ([]string, error)\n```\n\ngetAllUsers returns a list of usernames of all users in the Perforce server. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.getGroupMembers",
+                    "documentation": {
+                      "identifier": "Provider.getGroupMembers",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.getGroupMembers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) getGroupMembers(ctx context.Context, group string) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) getGroupMembers(ctx context.Context, group string) ([]string, error)\n```\n\ngetGroupMembers returns all members of the given group in the Perforce server. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.FetchRepoPerms",
+                    "documentation": {
+                      "identifier": "Provider.FetchRepoPerms",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.FetchRepoPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) FetchRepoPerms(ctx context.Context, repo *extsvc.Repository) ([]extsvc.AccountID, error)\n```\n\nFetchRepoPerms returns a list of users that have access to the given repository on the Perforce Server. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.ServiceType",
+                    "documentation": {
+                      "identifier": "Provider.ServiceType",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.ServiceType",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) ServiceType() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) ServiceType() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.ServiceID",
+                    "documentation": {
+                      "identifier": "Provider.ServiceID",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.ServiceID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) ServiceID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) ServiceID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.URN",
+                    "documentation": {
+                      "identifier": "Provider.URN",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.URN",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) URN() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) URN() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/authz/perforce#Provider.Validate",
+                    "documentation": {
+                      "identifier": "Provider.Validate",
+                      "newPage": false,
+                      "searchKey": "perforce.Provider.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Provider) Validate() (problems []string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Provider) Validate() (problems []string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/authz/perforce#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/authz/perforce#NewAuthzProviders",
+              "documentation": {
+                "identifier": "NewAuthzProviders",
+                "newPage": false,
+                "searchKey": "perforce.NewAuthzProviders",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewAuthzProviders(conns []*types.PerforceConnection) (ps []authz.Provider, problems []string, warnings []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewAuthzProviders(conns []*types.PerforceConnection) (ps []authz.Provider, problems []string, warnings []string)\n```\n\nNewAuthzProviders returns the set of Perforce authz providers derived from the connections. It also returns any validation problems with the config, separating these into \"serious problems\" and \"warnings\". \"Serious problems\" are those that should make Sourcegraph set authz.allowAccessByDefault to false. \"Warnings\" are all other validation problems. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/perforce#newAuthzProvider",
+              "documentation": {
+                "identifier": "newAuthzProvider",
+                "newPage": false,
+                "searchKey": "perforce.newAuthzProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newAuthzProvider(urn string,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newAuthzProvider(\n\turn string,\n\ta *schema.PerforceAuthorization,\n\thost, user, password string,\n) (authz.Provider, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/perforce#ValidateAuthz",
+              "documentation": {
+                "identifier": "ValidateAuthz",
+                "newPage": false,
+                "searchKey": "perforce.ValidateAuthz",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidateAuthz(cfg *schema.PerforceConnection) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidateAuthz(cfg *schema.PerforceConnection) error\n```\n\nValidateAuthz validates the authorization fields of the given Perforce external service config. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/perforce#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "perforce.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/perforce#TestProvider_FetchAccount",
+              "documentation": {
+                "identifier": "TestProvider_FetchAccount",
+                "newPage": false,
+                "searchKey": "perforce.TestProvider_FetchAccount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProvider_FetchAccount(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProvider_FetchAccount(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/perforce#TestProvider_FetchUserPerms",
+              "documentation": {
+                "identifier": "TestProvider_FetchUserPerms",
+                "newPage": false,
+                "searchKey": "perforce.TestProvider_FetchUserPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProvider_FetchUserPerms(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProvider_FetchUserPerms(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/authz/perforce#TestProvider_FetchRepoPerms",
+              "documentation": {
+                "identifier": "TestProvider_FetchRepoPerms",
+                "newPage": false,
+                "searchKey": "perforce.TestProvider_FetchRepoPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProvider_FetchRepoPerms(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProvider_FetchRepoPerms(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

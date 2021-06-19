@@ -1,0 +1,569 @@
+{
+  "pathID": "/internal/vcs",
+  "documentation": {
+    "identifier": "vcs",
+    "newPage": true,
+    "searchKey": "internal/vcs",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package vcs"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/vcs#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/vcs#usernameRe",
+              "documentation": {
+                "identifier": "usernameRe",
+                "newPage": false,
+                "searchKey": "vcs.usernameRe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const usernameRe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst usernameRe = \"([a-zA-Z0-9-._~]+@)\"\n```\n\nusernameRe is the regexp for the username part in a repo URL. Eg: sourcegraph@ \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#urlRe",
+              "documentation": {
+                "identifier": "urlRe",
+                "newPage": false,
+                "searchKey": "vcs.urlRe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const urlRe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst urlRe = \"([a-zA-Z0-9._-]+)\"\n```\n\nurlRe is the regexp for the url part in a repo URL. Eg: github.com \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#repoRe",
+              "documentation": {
+                "identifier": "repoRe",
+                "newPage": false,
+                "searchKey": "vcs.repoRe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const repoRe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst repoRe = `([a-zA-Z0-9\\@./._-]+)(?:\\?||$)(.*)`\n```\n\nrepoRe is the regexp for the repo in a repo URL. Eg: sourcegraph/sourcegraph \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#formatStdlib",
+              "documentation": {
+                "identifier": "formatStdlib",
+                "newPage": false,
+                "searchKey": "vcs.formatStdlib",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const formatStdlib"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst formatStdlib urlFormat = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#formatRsync",
+              "documentation": {
+                "identifier": "formatRsync",
+                "newPage": false,
+                "searchKey": "vcs.formatRsync",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const formatRsync"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst formatRsync\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#formatLocal",
+              "documentation": {
+                "identifier": "formatLocal",
+                "newPage": false,
+                "searchKey": "vcs.formatLocal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const formatLocal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst formatLocal\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/vcs#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/vcs#schemes",
+              "documentation": {
+                "identifier": "schemes",
+                "newPage": false,
+                "searchKey": "vcs.schemes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var schemes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar schemes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#scpSyntax",
+              "documentation": {
+                "identifier": "scpSyntax",
+                "newPage": false,
+                "searchKey": "vcs.scpSyntax",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var scpSyntax"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar scpSyntax = regexp.MustCompile(fmt.Sprintf(`^%s?%s:%s$`, usernameRe, urlRe, repoRe))\n```\n\nscpSyntax was modified from [https://golang.org/src/cmd/go/vcs.go](https://golang.org/src/cmd/go/vcs.go). \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/vcs#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/vcs#RepoNotExistError",
+              "documentation": {
+                "identifier": "RepoNotExistError",
+                "newPage": false,
+                "searchKey": "vcs.RepoNotExistError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoNotExistError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoNotExistError struct {\n\tRepo api.RepoName\n\n\t// CloneInProgress reports whether the repository is in process of being cloned.\n\tCloneInProgress bool\n\n\t// CloneProgress is a progress message from the running clone command.\n\tCloneProgress string\n}\n```\n\nRepoNotExistError is an error that reports a repository doesn't exist. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/vcs#RepoNotExistError.NotFound",
+                    "documentation": {
+                      "identifier": "RepoNotExistError.NotFound",
+                      "newPage": false,
+                      "searchKey": "vcs.RepoNotExistError.NotFound",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (RepoNotExistError) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (RepoNotExistError) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs#RepoNotExistError.Error",
+                    "documentation": {
+                      "identifier": "RepoNotExistError.Error",
+                      "newPage": false,
+                      "searchKey": "vcs.RepoNotExistError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *RepoNotExistError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *RepoNotExistError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#URL",
+              "documentation": {
+                "identifier": "URL",
+                "newPage": false,
+                "searchKey": "vcs.URL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type URL struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype URL struct {\n\turl.URL\n\n\tformat urlFormat\n}\n```\n\nURL wraps url.URL to provide rsync format compatible `String()` functionality. eg git@foo.com:foo/bar.git stdlib URL.String() would marshal those URLs with a leading slash in the path, which for standard git hosts changes path semantics. This function will only use stdlib URL.String() if a scheme is specified, otherwise it uses a custom format built for compatibility \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/vcs#ParseURL",
+                    "documentation": {
+                      "identifier": "ParseURL",
+                      "newPage": false,
+                      "searchKey": "vcs.ParseURL",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ParseURL(rawurl string) (u *URL, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ParseURL(rawurl string) (u *URL, err error)\n```\n\nParseURL parses rawurl into a URL structure. Parse first attempts to find a standard URL with a valid VCS URL scheme. If that cannot be found, it then attempts to find a SCP-like URL. And if that cannot be found, it assumes rawurl is a local path. If none of these rules apply, Parse returns an error. \n\nCode copied and modified from github.com/whilp/git-urls to support perforce scheme. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs#parseScheme",
+                    "documentation": {
+                      "identifier": "parseScheme",
+                      "newPage": false,
+                      "searchKey": "vcs.parseScheme",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseScheme(rawurl string) (*URL, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseScheme(rawurl string) (*URL, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs#parseScp",
+                    "documentation": {
+                      "identifier": "parseScp",
+                      "newPage": false,
+                      "searchKey": "vcs.parseScp",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseScp(rawurl string) (*URL, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseScp(rawurl string) (*URL, error)\n```\n\nparseScp parses rawurl into a URL object. The rawurl must be an SCP-like URL, otherwise ParseScp returns an error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs#parseLocal",
+                    "documentation": {
+                      "identifier": "parseLocal",
+                      "newPage": false,
+                      "searchKey": "vcs.parseLocal",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parseLocal(rawurl string) (*URL, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parseLocal(rawurl string) (*URL, error)\n```\n\nparseLocal parses rawurl into a URL object with a \"file\" scheme. This will effectively never return an error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs#URL.String",
+                    "documentation": {
+                      "identifier": "URL.String",
+                      "newPage": false,
+                      "searchKey": "vcs.URL.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) String() string\n```\n\nString will return standard url.URL.String() if the url has a .Scheme set, but if not it will produce an rsync format URL, eg `git@foo.com:foo/bar.git` \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/vcs#URL.IsSSH",
+                    "documentation": {
+                      "identifier": "URL.IsSSH",
+                      "newPage": false,
+                      "searchKey": "vcs.URL.IsSSH",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *URL) IsSSH() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *URL) IsSSH() bool\n```\n\nIsSSH returns whether this URL is SSH based, which for vcs.URL means if the scheme is either empty or `ssh`, this is because of rsync format urls being cloned over SSH, but not including a scheme. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#urlFormat",
+              "documentation": {
+                "identifier": "urlFormat",
+                "newPage": false,
+                "searchKey": "vcs.urlFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type urlFormat int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype urlFormat int\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/vcs#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/vcs#IsRepoNotExist",
+              "documentation": {
+                "identifier": "IsRepoNotExist",
+                "newPage": false,
+                "searchKey": "vcs.IsRepoNotExist",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsRepoNotExist(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsRepoNotExist(err error) bool\n```\n\nIsRepoNotExist reports if err is a RepoNotExistError. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#IsCloneInProgress",
+              "documentation": {
+                "identifier": "IsCloneInProgress",
+                "newPage": false,
+                "searchKey": "vcs.IsCloneInProgress",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsCloneInProgress(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsCloneInProgress(err error) bool\n```\n\nIsCloneInProgress reports if err is a RepoNotExistError which has a clone in progress. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/vcs#TestParseURL",
+              "documentation": {
+                "identifier": "TestParseURL",
+                "newPage": false,
+                "searchKey": "vcs.TestParseURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseURL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseURL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/vcs/git"
+    },
+    {
+      "pathID": "/internal/vcs/util"
+    }
+  ]
+}

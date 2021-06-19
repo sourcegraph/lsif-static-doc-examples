@@ -1,0 +1,285 @@
+{
+  "pathID": "/internal/redispool",
+  "documentation": {
+    "identifier": "redispool",
+    "newPage": true,
+    "searchKey": "internal/redispool",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package redispool"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package redispool exports pools to specific redis instances. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/redispool#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/redispool#addrCache",
+              "documentation": {
+                "identifier": "addrCache",
+                "newPage": false,
+                "searchKey": "redispool.addrCache",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var addrCache"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar addrCache string\n```\n\naddrCache is the network address of redis cache. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#addrStore",
+              "documentation": {
+                "identifier": "addrStore",
+                "newPage": false,
+                "searchKey": "redispool.addrStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var addrStore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar addrStore string\n```\n\naddrStore is the network address of redis store. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#schemeMatcher",
+              "documentation": {
+                "identifier": "schemeMatcher",
+                "newPage": false,
+                "searchKey": "redispool.schemeMatcher",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var schemeMatcher"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar schemeMatcher = lazyregexp.New(`^[A-Za-z][A-Za-z0-9\\+\\-\\.]*://`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#Cache",
+              "documentation": {
+                "identifier": "Cache",
+                "newPage": false,
+                "searchKey": "redispool.Cache",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Cache"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Cache = ...\n```\n\nCache is a redis configured for caching. You usually want to use this. Only store data that can be recomputed here. Although this data is treated as ephemeral, Sourcegraph depends on it to operate performantly, so we persist in Redis to avoid cold starts, rather than having it in-memory only. \n\nIn Kubernetes the service is called redis-cache. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "redispool.Store",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Store"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Store = ...\n```\n\nStore is a redis configured for persisting data. Do not abuse this pool, only use if you have data with a high write rate. \n\nIn Kubernetes the service is called redis-store. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#timeout",
+              "documentation": {
+                "identifier": "timeout",
+                "newPage": false,
+                "searchKey": "redispool.timeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var timeout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar timeout, _ = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/redispool#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/redispool#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "redispool.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#dialRedis",
+              "documentation": {
+                "identifier": "dialRedis",
+                "newPage": false,
+                "searchKey": "redispool.dialRedis",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dialRedis(rawEndpoint string) (redis.Conn, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dialRedis(rawEndpoint string) (redis.Conn, error)\n```\n\ndialRedis dials Redis given the raw endpoint string. The string can have two formats: 1) If there is a HTTP scheme, it should be either be \"redis://\" or \"rediss://\" and the URL \n\n```\nmust be of the format specified in [https://www.iana.org/assignments/uri-schemes/prov/redis](https://www.iana.org/assignments/uri-schemes/prov/redis).\n\n```\n2) Otherwise, it is assumed to be of the format $HOSTNAME:$PORT. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "redispool.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#redisCheck",
+              "documentation": {
+                "identifier": "redisCheck",
+                "newPage": false,
+                "searchKey": "redispool.redisCheck",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func redisCheck(name, addr string, timeout time.Duration, pool *redis.Pool) sysreq.CheckFunc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc redisCheck(name, addr string, timeout time.Duration, pool *redis.Pool) sysreq.CheckFunc\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/redispool#TestSchemeMatcher",
+              "documentation": {
+                "identifier": "TestSchemeMatcher",
+                "newPage": false,
+                "searchKey": "redispool.TestSchemeMatcher",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSchemeMatcher(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSchemeMatcher(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

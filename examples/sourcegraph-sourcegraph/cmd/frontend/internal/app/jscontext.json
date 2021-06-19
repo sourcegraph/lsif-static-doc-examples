@@ -1,0 +1,269 @@
+{
+  "pathID": "/cmd/frontend/internal/app/jscontext",
+  "documentation": {
+    "identifier": "jscontext",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/app/jscontext",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package jscontext"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package jscontext contains functionality for information we pass down into the JS webapp. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/jscontext#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#BillingPublishableKey",
+              "documentation": {
+                "identifier": "BillingPublishableKey",
+                "newPage": false,
+                "searchKey": "jscontext.BillingPublishableKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var BillingPublishableKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar BillingPublishableKey string\n```\n\nBillingPublishableKey is the publishable (non-secret) API key for the billing system, if any. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#isBotPat",
+              "documentation": {
+                "identifier": "isBotPat",
+                "newPage": false,
+                "searchKey": "jscontext.isBotPat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isBotPat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isBotPat = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/jscontext#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#authProviderInfo",
+              "documentation": {
+                "identifier": "authProviderInfo",
+                "newPage": false,
+                "searchKey": "jscontext.authProviderInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type authProviderInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype authProviderInfo struct {\n\tIsBuiltin         bool   `json:\"isBuiltin\"`\n\tDisplayName       string `json:\"displayName\"`\n\tServiceType       string `json:\"serviceType\"`\n\tAuthenticationURL string `json:\"authenticationURL\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#JSContext",
+              "documentation": {
+                "identifier": "JSContext",
+                "newPage": false,
+                "searchKey": "jscontext.JSContext",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type JSContext struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype JSContext struct {\n\tAppRoot        string            `json:\"appRoot,omitempty\"`\n\tExternalURL    string            `json:\"externalURL,omitempty\"`\n\tXHRHeaders     map[string]string `json:\"xhrHeaders\"`\n\tCSRFToken      string            `json:\"csrfToken\"`\n\tUserAgentIsBot bool              `json:\"userAgentIsBot\"`\n\tAssetsRoot     string            `json:\"assetsRoot\"`\n\tVersion        string            `json:\"version\"`\n\n\tIsAuthenticatedUser bool `json:\"isAuthenticatedUser\"`\n\n\tSentryDSN     *string `json:\"sentryDSN\"`\n\tSiteID        string  `json:\"siteID\"`\n\tSiteGQLID     string  `json:\"siteGQLID\"`\n\tDebug         bool    `json:\"debug\"`\n\tNeedsSiteInit bool    `json:\"needsSiteInit\"`\n\tEmailEnabled  bool    `json:\"emailEnabled\"`\n\n\tSite              schema.SiteConfiguration `json:\"site\"` // public subset of site configuration\n\tLikelyDockerOnMac bool                     `json:\"likelyDockerOnMac\"`\n\tNeedServerRestart bool                     `json:\"needServerRestart\"`\n\tDeployType        string                   `json:\"deployType\"`\n\n\tSourcegraphDotComMode bool `json:\"sourcegraphDotComMode\"`\n\n\tBillingPublishableKey string `json:\"billingPublishableKey,omitempty\"`\n\n\tAccessTokensAllow conf.AccessTokAllow `json:\"accessTokensAllow\"`\n\n\tAllowSignup bool `json:\"allowSignup\"`\n\n\tResetPasswordEnabled bool `json:\"resetPasswordEnabled\"`\n\n\tExternalServicesUserMode string `json:\"externalServicesUserMode\"`\n\n\tAuthProviders []authProviderInfo `json:\"authProviders\"`\n\n\tBranding *schema.Branding `json:\"branding\"`\n\n\tBatchChangesEnabled bool `json:\"batchChangesEnabled\"`\n\n\tCodeIntelAutoIndexingEnabled bool `json:\"codeIntelAutoIndexingEnabled\"`\n\n\tProductResearchPageEnabled bool `json:\"productResearchPageEnabled\"`\n\n\tExperimentalFeatures schema.ExperimentalFeatures `json:\"experimentalFeatures\"`\n}\n```\n\nJSContext is made available to JavaScript code via the \"sourcegraph/app/context\" module. \n\n🚨 SECURITY: This struct is sent to all users regardless of whether or not they are logged in, for example on an auth.public=false private server. Including secret fields here is OK if it is based on the user's authentication above, but do not include e.g. hard-coded secrets about the server instance here as they would be sent to anonymous users. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/jscontext#NewJSContextFromRequest",
+                    "documentation": {
+                      "identifier": "NewJSContextFromRequest",
+                      "newPage": false,
+                      "searchKey": "jscontext.NewJSContextFromRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewJSContextFromRequest(req *http.Request) JSContext"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewJSContextFromRequest(req *http.Request) JSContext\n```\n\nNewJSContextFromRequest populates a JSContext struct from the HTTP request. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/jscontext#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#publicSiteConfiguration",
+              "documentation": {
+                "identifier": "publicSiteConfiguration",
+                "newPage": false,
+                "searchKey": "jscontext.publicSiteConfiguration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func publicSiteConfiguration() schema.SiteConfiguration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc publicSiteConfiguration() schema.SiteConfiguration\n```\n\npublicSiteConfiguration is the subset of the site.schema.json site configuration that is necessary for the web app and is not sensitive/secret. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#isBot",
+              "documentation": {
+                "identifier": "isBot",
+                "newPage": false,
+                "searchKey": "jscontext.isBot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isBot(userAgent string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isBot(userAgent string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#likelyDockerOnMac",
+              "documentation": {
+                "identifier": "likelyDockerOnMac",
+                "newPage": false,
+                "searchKey": "jscontext.likelyDockerOnMac",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func likelyDockerOnMac() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc likelyDockerOnMac() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/jscontext#TestIsBot",
+              "documentation": {
+                "identifier": "TestIsBot",
+                "newPage": false,
+                "searchKey": "jscontext.TestIsBot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsBot(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsBot(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

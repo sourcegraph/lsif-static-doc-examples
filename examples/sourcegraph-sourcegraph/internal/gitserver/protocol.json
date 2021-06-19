@@ -1,0 +1,719 @@
+{
+  "pathID": "/internal/gitserver/protocol",
+  "documentation": {
+    "identifier": "protocol",
+    "newPage": true,
+    "searchKey": "internal/gitserver/protocol",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package protocol"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/gitserver/protocol#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#GitolitePhabricatorMetadataResponse",
+              "documentation": {
+                "identifier": "GitolitePhabricatorMetadataResponse",
+                "newPage": false,
+                "searchKey": "protocol.GitolitePhabricatorMetadataResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GitolitePhabricatorMetadataResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GitolitePhabricatorMetadataResponse struct {\n\tCallsign string `json:\"callsign\"`\n}\n```\n\nGitolitePhabricatorMetadataResponse is the response for a request for Phabricator metadata through the Gitolite API \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#ExecRequest",
+              "documentation": {
+                "identifier": "ExecRequest",
+                "newPage": false,
+                "searchKey": "protocol.ExecRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExecRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExecRequest struct {\n\tRepo api.RepoName `json:\"repo\"`\n\n\tEnsureRevision string      `json:\"ensureRevision\"`\n\tArgs           []string    `json:\"args\"`\n\tOpt            *RemoteOpts `json:\"opt\"`\n}\n```\n\nExecRequest is a request to execute a command inside a git repository. \n\nNote that this request is deserialized by both gitserver and the frontend's internal proxy route and any major change to this structure will need to be reconciled in both places. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#P4ExecRequest",
+              "documentation": {
+                "identifier": "P4ExecRequest",
+                "newPage": false,
+                "searchKey": "protocol.P4ExecRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type P4ExecRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype P4ExecRequest struct {\n\tP4Port   string   `json:\"p4port\"`\n\tP4User   string   `json:\"p4user\"`\n\tP4Passwd string   `json:\"p4passwd\"`\n\tArgs     []string `json:\"args\"`\n}\n```\n\nP4ExecRequest is a request to execute a p4 command with given arguments. \n\nNote that this request is deserialized by both gitserver and the frontend's internal proxy route and any major change to this structure will need to be reconciled in both places. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RemoteOpts",
+              "documentation": {
+                "identifier": "RemoteOpts",
+                "newPage": false,
+                "searchKey": "protocol.RemoteOpts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RemoteOpts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RemoteOpts struct {\n\tSSH   *SSHConfig   `json:\"ssh\"`   // SSH configuration for communication with the remote\n\tHTTPS *HTTPSConfig `json:\"https\"` // HTTPS configuration for communication with the remote\n}\n```\n\nRemoteOpts configures interactions with a remote repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#SSHConfig",
+              "documentation": {
+                "identifier": "SSHConfig",
+                "newPage": false,
+                "searchKey": "protocol.SSHConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SSHConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SSHConfig struct {\n\tUser       string `json:\"user,omitempty\"`      // SSH user (if empty, inferred from URL)\n\tPublicKey  []byte `json:\"publicKey,omitempty\"` // SSH public key (if nil, inferred from PrivateKey)\n\tPrivateKey []byte `json:\"privateKey\"`          // SSH private key, usually passed to ssh.ParsePrivateKey (passphrases currently unsupported)\n}\n```\n\nSSHConfig configures and authenticates SSH for communication with remotes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#HTTPSConfig",
+              "documentation": {
+                "identifier": "HTTPSConfig",
+                "newPage": false,
+                "searchKey": "protocol.HTTPSConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type HTTPSConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype HTTPSConfig struct {\n\tUser string `json:\"user\"` // the username provided to the remote\n\tPass string `json:\"pass\"` // the password provided to the remote\n}\n```\n\nHTTPSConfig configures and authenticates HTTPS for communication with remotes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoUpdateRequest",
+              "documentation": {
+                "identifier": "RepoUpdateRequest",
+                "newPage": false,
+                "searchKey": "protocol.RepoUpdateRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoUpdateRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoUpdateRequest struct {\n\tRepo  api.RepoName  `json:\"repo\"`  // identifying URL for repo\n\tSince time.Duration `json:\"since\"` // debounce interval for queries, used only with request-repo-update\n}\n```\n\nRepoUpdateRequest is a request to update the contents of a given repo, or clone it if it doesn't exist. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoUpdateResponse",
+              "documentation": {
+                "identifier": "RepoUpdateResponse",
+                "newPage": false,
+                "searchKey": "protocol.RepoUpdateResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoUpdateResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoUpdateResponse struct {\n\tCloned          bool\n\tCloneInProgress bool\n\tLastFetched     *time.Time\n\tLastChanged     *time.Time\n\tError           string // an error reported by the update, as opposed to a protocol error\n\tQueueCap        int    // size of the clone queue\n\tQueueLen        int    // current clone operations\n\t// Following items likely provided only if the request specified waiting.\n\tReceived *time.Time // time request was received by handler function\n\tStarted  *time.Time // time request actually started processing\n\tFinished *time.Time // time request completed\n}\n```\n\nRepoUpdateResponse returns meta information of the repo enqueued for update. \n\nTODO just use RepoInfoResponse? \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#NotFoundPayload",
+              "documentation": {
+                "identifier": "NotFoundPayload",
+                "newPage": false,
+                "searchKey": "protocol.NotFoundPayload",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NotFoundPayload struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NotFoundPayload struct {\n\tCloneInProgress bool `json:\"cloneInProgress\"` // If true, exec returned with noop because clone is in progress.\n\n\t// CloneProgress is a progress message from the running clone command.\n\tCloneProgress string `json:\"cloneProgress,omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#IsRepoCloneableRequest",
+              "documentation": {
+                "identifier": "IsRepoCloneableRequest",
+                "newPage": false,
+                "searchKey": "protocol.IsRepoCloneableRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IsRepoCloneableRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IsRepoCloneableRequest struct {\n\t// Repo is the repository to check.\n\tRepo api.RepoName `json:\"Repo\"`\n}\n```\n\nIsRepoCloneableRequest is a request to determine if a repo is cloneable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#IsRepoCloneableResponse",
+              "documentation": {
+                "identifier": "IsRepoCloneableResponse",
+                "newPage": false,
+                "searchKey": "protocol.IsRepoCloneableResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IsRepoCloneableResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IsRepoCloneableResponse struct {\n\tCloneable bool   // whether the repo is cloneable\n\tReason    string // if not cloneable, the reason why not\n}\n```\n\nIsRepoCloneableResponse is the response type for the IsRepoCloneableRequest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#IsRepoClonedRequest",
+              "documentation": {
+                "identifier": "IsRepoClonedRequest",
+                "newPage": false,
+                "searchKey": "protocol.IsRepoClonedRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IsRepoClonedRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IsRepoClonedRequest struct {\n\t// Repo is the repository to check.\n\tRepo api.RepoName\n}\n```\n\nIsRepoClonedRequest is a request to determine if a repo currently exists on gitserver. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoDeleteRequest",
+              "documentation": {
+                "identifier": "RepoDeleteRequest",
+                "newPage": false,
+                "searchKey": "protocol.RepoDeleteRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoDeleteRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoDeleteRequest struct {\n\t// Repo is the repository to delete.\n\tRepo api.RepoName\n}\n```\n\nRepoDeleteRequest is a request to delete a repository clone on gitserver \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoInfoRequest",
+              "documentation": {
+                "identifier": "RepoInfoRequest",
+                "newPage": false,
+                "searchKey": "protocol.RepoInfoRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoInfoRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoInfoRequest struct {\n\t// Repos are the repositories to get information about.\n\tRepos []api.RepoName\n}\n```\n\nRepoInfoRequest is a request for information about multiple repositories on gitserver. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoInfo",
+              "documentation": {
+                "identifier": "RepoInfo",
+                "newPage": false,
+                "searchKey": "protocol.RepoInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoInfo struct {\n\tURL             string     // this repository's Git remote URL\n\tCloneInProgress bool       // whether the repository is currently being cloned\n\tCloneProgress   string     // a progress message from the running clone command.\n\tCloned          bool       // whether the repository has been cloned successfully\n\tLastFetched     *time.Time // when the last `git remote update` or `git fetch` occurred\n\tLastChanged     *time.Time // timestamp of the most recent ref in the git repository\n\n\t// CloneTime is the time the clone occurred. Note: Repositories may be\n\t// re-cloned automatically, so this time is likely to move forward\n\t// periodically.\n\tCloneTime *time.Time\n}\n```\n\nRepoInfo is the information requests about a single repository via a RepoInfoRequest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoInfoResponse",
+              "documentation": {
+                "identifier": "RepoInfoResponse",
+                "newPage": false,
+                "searchKey": "protocol.RepoInfoResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoInfoResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoInfoResponse struct {\n\t// Results mapping from the repository name to the repository information.\n\tResults map[api.RepoName]*RepoInfo\n}\n```\n\nRepoInfoResponse is the response to a repository information request for multiple repositories at the same time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#ReposStats",
+              "documentation": {
+                "identifier": "ReposStats",
+                "newPage": false,
+                "searchKey": "protocol.ReposStats",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReposStats struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReposStats struct {\n\t// UpdatedAt is the time these statistics were computed. If UpdateAt is\n\t// zero, the statistics have not yet been computed. This can happen on a\n\t// new gitserver.\n\tUpdatedAt time.Time\n\n\t// GitDirBytes is the amount of bytes stored in .git directories.\n\tGitDirBytes int64\n}\n```\n\nReposStats is an aggregation of statistics from a gitserver. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoCloneProgressRequest",
+              "documentation": {
+                "identifier": "RepoCloneProgressRequest",
+                "newPage": false,
+                "searchKey": "protocol.RepoCloneProgressRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoCloneProgressRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoCloneProgressRequest struct {\n\tRepos []api.RepoName\n}\n```\n\nRepoCloneProgressRequest is a request for information about the clone progress of multiple repositories on gitserver. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoCloneProgress",
+              "documentation": {
+                "identifier": "RepoCloneProgress",
+                "newPage": false,
+                "searchKey": "protocol.RepoCloneProgress",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoCloneProgress struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoCloneProgress struct {\n\tCloneInProgress bool   // whether the repository is currently being cloned\n\tCloneProgress   string // a progress message from the running clone command.\n\tCloned          bool   // whether the repository has been cloned successfully\n}\n```\n\nRepoCloneProgress is information about the clone progress of a repo \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#RepoCloneProgressResponse",
+              "documentation": {
+                "identifier": "RepoCloneProgressResponse",
+                "newPage": false,
+                "searchKey": "protocol.RepoCloneProgressResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoCloneProgressResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoCloneProgressResponse struct {\n\tResults map[api.RepoName]*RepoCloneProgress\n}\n```\n\nRepoCloneProgressResponse is the response to a repository clone progress request for multiple repositories at the same time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#CreateCommitFromPatchRequest",
+              "documentation": {
+                "identifier": "CreateCommitFromPatchRequest",
+                "newPage": false,
+                "searchKey": "protocol.CreateCommitFromPatchRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateCommitFromPatchRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateCommitFromPatchRequest struct {\n\t// Repo is the repository to get information about.\n\tRepo api.RepoName\n\t// BaseCommit is the revision that the staging area object is based on\n\tBaseCommit api.CommitID\n\t// Patch is the diff contents to be used to create the staging area revision\n\tPatch string\n\t// TargetRef is the ref that will be created for this patch\n\tTargetRef string\n\t// If set to true and the TargetRef already exists, an unique number will be appended to the end (ie TargetRef-{#}). The generated ref will be returned.\n\tUniqueRef bool\n\t// CommitInfo is the information that will be used when creating the commit from a patch\n\tCommitInfo PatchCommitInfo\n\t// Push specifies whether the target ref will be pushed to the code host: if\n\t// nil, no push will be attempted, if non-nil, a push will be attempted.\n\tPush *PushConfig\n\t// GitApplyArgs are the arguments that will be passed to `git apply` along\n\t// with `--cached`.\n\tGitApplyArgs []string\n}\n```\n\nCreateCommitFromPatchRequest is the request information needed for creating the simulated staging area git object for a repo. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#PatchCommitInfo",
+              "documentation": {
+                "identifier": "PatchCommitInfo",
+                "newPage": false,
+                "searchKey": "protocol.PatchCommitInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PatchCommitInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PatchCommitInfo struct {\n\tMessage        string\n\tAuthorName     string\n\tAuthorEmail    string\n\tCommitterName  string\n\tCommitterEmail string\n\tDate           time.Time\n}\n```\n\nPatchCommitInfo will be used for commit information when creating a commit from a patch \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#PushConfig",
+              "documentation": {
+                "identifier": "PushConfig",
+                "newPage": false,
+                "searchKey": "protocol.PushConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PushConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PushConfig struct {\n\t// RemoteURL is the git remote URL to which to push the commits.\n\t// The URL needs to include HTTP basic auth credentials if no\n\t// unauthenticated requests are allowed by the remote host.\n\tRemoteURL string\n\n\t// PrivateKey is used when the remote URL uses scheme `ssh`. If set,\n\t// this value is used as the content of the private key. Needs to be\n\t// set in conjunction with a passphrase.\n\tPrivateKey string\n\n\t// Passphrase is the passphrase to decrypt the private key. It is required\n\t// when passing PrivateKey.\n\tPassphrase string\n}\n```\n\nPushConfig provides the configuration required to push one or more commits to a code host. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#CreateCommitFromPatchResponse",
+              "documentation": {
+                "identifier": "CreateCommitFromPatchResponse",
+                "newPage": false,
+                "searchKey": "protocol.CreateCommitFromPatchResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateCommitFromPatchResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateCommitFromPatchResponse struct {\n\t// Rev is the tag that the staging object can be found at\n\tRev string\n\n\t// Error is populated only on error\n\tError *CreateCommitFromPatchError\n}\n```\n\nCreateCommitFromPatchResponse is the response type returned after creating a commit from a patch \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver/protocol#CreateCommitFromPatchResponse.SetError",
+                    "documentation": {
+                      "identifier": "CreateCommitFromPatchResponse.SetError",
+                      "newPage": false,
+                      "searchKey": "protocol.CreateCommitFromPatchResponse.SetError",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *CreateCommitFromPatchResponse) SetError(repo, command, out string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *CreateCommitFromPatchResponse) SetError(repo, command, out string, err error)\n```\n\nSetError adds the supplied error related details to e. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#CreateCommitFromPatchError",
+              "documentation": {
+                "identifier": "CreateCommitFromPatchError",
+                "newPage": false,
+                "searchKey": "protocol.CreateCommitFromPatchError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateCommitFromPatchError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateCommitFromPatchError struct {\n\t// RepositoryName is the name of the repository\n\tRepositoryName string\n\n\t// InternalError is the internal error\n\tInternalError string\n\n\t// Command is the last git command that was attempted\n\tCommand string\n\t// CombinedOutput is the combined stderr and stdout from running the command\n\tCombinedOutput string\n}\n```\n\nCreateCommitFromPatchError is populated on errors running CreateCommitFromPatch \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gitserver/protocol#CreateCommitFromPatchError.Error",
+                    "documentation": {
+                      "identifier": "CreateCommitFromPatchError.Error",
+                      "newPage": false,
+                      "searchKey": "protocol.CreateCommitFromPatchError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *CreateCommitFromPatchError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *CreateCommitFromPatchError) Error() string\n```\n\nError returns a detailed error conforming to the error interface \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/gitserver/protocol#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#NormalizeRepo",
+              "documentation": {
+                "identifier": "NormalizeRepo",
+                "newPage": false,
+                "searchKey": "protocol.NormalizeRepo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NormalizeRepo(input api.RepoName) api.RepoName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NormalizeRepo(input api.RepoName) api.RepoName\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#hasUpperASCII",
+              "documentation": {
+                "identifier": "hasUpperASCII",
+                "newPage": false,
+                "searchKey": "protocol.hasUpperASCII",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasUpperASCII(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasUpperASCII(s string) bool\n```\n\nhasUpperASCII returns true if s contains any upper-case letters in ASCII, or if it contains any non-ascii characters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gitserver/protocol#TestNormalizeRepo",
+              "documentation": {
+                "identifier": "TestNormalizeRepo",
+                "newPage": false,
+                "searchKey": "protocol.TestNormalizeRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNormalizeRepo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNormalizeRepo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

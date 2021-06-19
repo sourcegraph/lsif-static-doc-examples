@@ -1,0 +1,173 @@
+{
+  "pathID": "/migrations",
+  "documentation": {
+    "identifier": "migrations",
+    "newPage": true,
+    "searchKey": "migrations",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package migrations"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "package migrations contains embedded migrate sources for our DB migrations. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/migrations#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/migrations#content",
+              "documentation": {
+                "identifier": "content",
+                "newPage": false,
+                "searchKey": "migrations.content",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var content"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar content embed.FS\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations#CodeInsights",
+              "documentation": {
+                "identifier": "CodeInsights",
+                "newPage": false,
+                "searchKey": "migrations.CodeInsights",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CodeInsights"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CodeInsights = mustSub(\"codeinsights\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations#CodeIntel",
+              "documentation": {
+                "identifier": "CodeIntel",
+                "newPage": false,
+                "searchKey": "migrations.CodeIntel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CodeIntel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CodeIntel = mustSub(\"codeintel\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/migrations#Frontend",
+              "documentation": {
+                "identifier": "Frontend",
+                "newPage": false,
+                "searchKey": "migrations.Frontend",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Frontend"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Frontend = mustSub(\"frontend\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/migrations#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/migrations#mustSub",
+              "documentation": {
+                "identifier": "mustSub",
+                "newPage": false,
+                "searchKey": "migrations.mustSub",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustSub(dir string) fs.FS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustSub(dir string) fs.FS\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

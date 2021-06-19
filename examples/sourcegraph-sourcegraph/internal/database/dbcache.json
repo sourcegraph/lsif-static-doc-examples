@@ -1,0 +1,332 @@
+{
+  "pathID": "/internal/database/dbcache",
+  "documentation": {
+    "identifier": "dbcache",
+    "newPage": true,
+    "searchKey": "internal/database/dbcache",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package dbcache"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/database/dbcache#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/dbcache#defaultReposMaxAge",
+              "documentation": {
+                "identifier": "defaultReposMaxAge",
+                "newPage": false,
+                "searchKey": "dbcache.defaultReposMaxAge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultReposMaxAge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultReposMaxAge = time.Minute\n```\n\ndefaultReposMaxAge is how long we cache the list of default repos. The list changes very rarely, so we can cache for a while. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/dbcache#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/dbcache#cachedRepos",
+              "documentation": {
+                "identifier": "cachedRepos",
+                "newPage": false,
+                "searchKey": "dbcache.cachedRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cachedRepos struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cachedRepos struct {\n\trepos   []types.RepoName\n\tfetched time.Time\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbcache#cachedRepos.Repos",
+                    "documentation": {
+                      "identifier": "cachedRepos.Repos",
+                      "newPage": false,
+                      "searchKey": "dbcache.cachedRepos.Repos",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cachedRepos) Repos() ([]types.RepoName, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cachedRepos) Repos() ([]types.RepoName, bool)\n```\n\nRepos returns the current cached repos and boolean value indicating whether an update is required \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbcache#DefaultRepoLister",
+              "documentation": {
+                "identifier": "DefaultRepoLister",
+                "newPage": false,
+                "searchKey": "dbcache.DefaultRepoLister",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DefaultRepoLister struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DefaultRepoLister struct {\n\tstore *database.RepoStore\n\n\tcacheAllRepos    atomic.Value\n\tcachePublicRepos atomic.Value\n\tmu               sync.Mutex\n}\n```\n\nDefaultRepoLister holds the list of default repos which are cached for defaultReposMaxAge. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbcache#NewDefaultRepoLister",
+                    "documentation": {
+                      "identifier": "NewDefaultRepoLister",
+                      "newPage": false,
+                      "searchKey": "dbcache.NewDefaultRepoLister",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewDefaultRepoLister(store *database.RepoStore) *DefaultRepoLister"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewDefaultRepoLister(store *database.RepoStore) *DefaultRepoLister\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbcache#DefaultRepoLister.List",
+                    "documentation": {
+                      "identifier": "DefaultRepoLister.List",
+                      "newPage": false,
+                      "searchKey": "dbcache.DefaultRepoLister.List",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *DefaultRepoLister) List(ctx context.Context) (results []types.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *DefaultRepoLister) List(ctx context.Context) (results []types.RepoName, err error)\n```\n\nList lists ALL default repos. These include anything in the default_repos table, user added repos (both public and private) as well as any repos added to the user_public_repos table. \n\nThe values are cached for up to defaultReposMaxAge. If the cache has expired, we return stale data and start a background refresh. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbcache#DefaultRepoLister.ListPublic",
+                    "documentation": {
+                      "identifier": "DefaultRepoLister.ListPublic",
+                      "newPage": false,
+                      "searchKey": "dbcache.DefaultRepoLister.ListPublic",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *DefaultRepoLister) ListPublic(ctx context.Context) (results []types.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *DefaultRepoLister) ListPublic(ctx context.Context) (results []types.RepoName, err error)\n```\n\nListPublic is similar to List except that it only includes public repos. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbcache#DefaultRepoLister.list",
+                    "documentation": {
+                      "identifier": "DefaultRepoLister.list",
+                      "newPage": false,
+                      "searchKey": "dbcache.DefaultRepoLister.list",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *DefaultRepoLister) list(ctx context.Context, onlyPublic bool) (results []types.RepoName, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *DefaultRepoLister) list(ctx context.Context, onlyPublic bool) (results []types.RepoName, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/dbcache#DefaultRepoLister.refreshCache",
+                    "documentation": {
+                      "identifier": "DefaultRepoLister.refreshCache",
+                      "newPage": false,
+                      "searchKey": "dbcache.DefaultRepoLister.refreshCache",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *DefaultRepoLister) refreshCache(ctx context.Context, onlyPublic bool) ([]types.RepoName, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *DefaultRepoLister) refreshCache(ctx context.Context, onlyPublic bool) ([]types.RepoName, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/dbcache#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/dbcache#TestListDefaultRepos",
+              "documentation": {
+                "identifier": "TestListDefaultRepos",
+                "newPage": false,
+                "searchKey": "dbcache.TestListDefaultRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestListDefaultRepos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestListDefaultRepos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbcache#BenchmarkDefaultRepos_List_Empty",
+              "documentation": {
+                "identifier": "BenchmarkDefaultRepos_List_Empty",
+                "newPage": false,
+                "searchKey": "dbcache.BenchmarkDefaultRepos_List_Empty",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDefaultRepos_List_Empty(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDefaultRepos_List_Empty(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbcache#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "dbcache.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

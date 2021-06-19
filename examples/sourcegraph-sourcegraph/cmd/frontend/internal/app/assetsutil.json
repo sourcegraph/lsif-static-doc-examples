@@ -1,0 +1,185 @@
+{
+  "pathID": "/cmd/frontend/internal/app/assetsutil",
+  "documentation": {
+    "identifier": "assetsutil",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/app/assetsutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package assetsutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package assetsutil is a utils package for static files. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/assetsutil#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/assetsutil#assetsRoot",
+              "documentation": {
+                "identifier": "assetsRoot",
+                "newPage": false,
+                "searchKey": "assetsutil.assetsRoot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var assetsRoot"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar assetsRoot = env.Get(\"ASSETS_ROOT\", \"/.assets\", \"URL to web assets\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/assetsutil#baseURL",
+              "documentation": {
+                "identifier": "baseURL",
+                "newPage": false,
+                "searchKey": "assetsutil.baseURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var baseURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar baseURL = &url.URL{}\n```\n\nbaseURL is the path prefix under which static assets should be served. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/assetsutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/assetsutil#Mount",
+              "documentation": {
+                "identifier": "Mount",
+                "newPage": false,
+                "searchKey": "assetsutil.Mount",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Mount(mux *http.ServeMux)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Mount(mux *http.ServeMux)\n```\n\nMount mounts the static asset handler. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/assetsutil#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "assetsutil.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/assetsutil#isPhabricatorAsset",
+              "documentation": {
+                "identifier": "isPhabricatorAsset",
+                "newPage": false,
+                "searchKey": "assetsutil.isPhabricatorAsset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isPhabricatorAsset(path string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isPhabricatorAsset(path string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/assetsutil#URL",
+              "documentation": {
+                "identifier": "URL",
+                "newPage": false,
+                "searchKey": "assetsutil.URL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func URL(p string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc URL(p string) *url.URL\n```\n\nURL returns a URL, possibly relative, to the asset at path p. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

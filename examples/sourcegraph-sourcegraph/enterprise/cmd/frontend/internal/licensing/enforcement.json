@@ -1,0 +1,418 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement",
+  "documentation": {
+    "identifier": "enforcement",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/licensing/enforcement",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package enforcement"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package enforcement provides hooks that enforce validations on a per-tier basis. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#ExternalServicesStore",
+              "documentation": {
+                "identifier": "ExternalServicesStore",
+                "newPage": false,
+                "searchKey": "enforcement.ExternalServicesStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalServicesStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalServicesStore interface {\n\tCount(context.Context, database.ExternalServicesListOptions) (int, error)\n}\n```\n\nExternalServicesStore is implemented by any type that can act as a repository for external services (e.g. GitHub, GitLab). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#fakeDB",
+              "documentation": {
+                "identifier": "fakeDB",
+                "newPage": false,
+                "searchKey": "enforcement.fakeDB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fakeDB struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fakeDB struct {\n\texecContext func(ctx context.Context, query string, args ...interface{}) (sql.Result, error)\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#fakeDB.QueryContext",
+                    "documentation": {
+                      "identifier": "fakeDB.QueryContext",
+                      "newPage": false,
+                      "searchKey": "enforcement.fakeDB.QueryContext",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (db *fakeDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (db *fakeDB) QueryContext(ctx context.Context, q string, args ...interface{}) (*sql.Rows, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#fakeDB.ExecContext",
+                    "documentation": {
+                      "identifier": "fakeDB.ExecContext",
+                      "newPage": false,
+                      "searchKey": "enforcement.fakeDB.ExecContext",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (db *fakeDB) ExecContext(ctx context.Context, query string, args ...interface{}) (sql.Result, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (db *fakeDB) ExecContext(ctx context.Context, query string, args ...interface{}) (sql.Result, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#fakeDB.QueryRowContext",
+                    "documentation": {
+                      "identifier": "fakeDB.QueryRowContext",
+                      "newPage": false,
+                      "searchKey": "enforcement.fakeDB.QueryRowContext",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (db *fakeDB) QueryRowContext(ctx context.Context, query string, args ...interface{}) *sql.Row"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (db *fakeDB) QueryRowContext(ctx context.Context, query string, args ...interface{}) *sql.Row\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#WriteSubscriptionErrorResponseForFeature",
+              "documentation": {
+                "identifier": "WriteSubscriptionErrorResponseForFeature",
+                "newPage": false,
+                "searchKey": "enforcement.WriteSubscriptionErrorResponseForFeature",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WriteSubscriptionErrorResponseForFeature(w http.ResponseWriter, featureNameHumanReadable string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WriteSubscriptionErrorResponseForFeature(w http.ResponseWriter, featureNameHumanReadable string)\n```\n\nWriteSubscriptionErrorResponseForFeature is a wrapper around WriteSubscriptionErrorResponse that generates the error title and message indicating that the current license does not active the given feature. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#WriteSubscriptionErrorResponse",
+              "documentation": {
+                "identifier": "WriteSubscriptionErrorResponse",
+                "newPage": false,
+                "searchKey": "enforcement.WriteSubscriptionErrorResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WriteSubscriptionErrorResponse(w http.ResponseWriter, statusCode int, title, message string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WriteSubscriptionErrorResponse(w http.ResponseWriter, statusCode int, title, message string)\n```\n\nWriteSubscriptionErrorResponse writes an HTTP response that displays a standalone error page to the user. \n\nThe title and message should be full sentences that describe the problem and how to fix it. Use WriteSubscriptionErrorResponseForFeature to generate these for the common case of a failed license feature check. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#NewBeforeCreateExternalServiceHook",
+              "documentation": {
+                "identifier": "NewBeforeCreateExternalServiceHook",
+                "newPage": false,
+                "searchKey": "enforcement.NewBeforeCreateExternalServiceHook",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewBeforeCreateExternalServiceHook() func(ctx context.Context, db dbutil.DB) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewBeforeCreateExternalServiceHook() func(ctx context.Context, db dbutil.DB) error\n```\n\nNewBeforeCreateExternalServiceHook enforces any per-tier validations prior to creating a new external service. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#NewPreMountGrafanaHook",
+              "documentation": {
+                "identifier": "NewPreMountGrafanaHook",
+                "newPage": false,
+                "searchKey": "enforcement.NewPreMountGrafanaHook",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewPreMountGrafanaHook() func() error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewPreMountGrafanaHook() func() error\n```\n\nNewPreMountGrafanaHook enforces any per-tier validations prior to mounting the Grafana endpoints in the debug router. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#NewBeforeCreateUserHook",
+              "documentation": {
+                "identifier": "NewBeforeCreateUserHook",
+                "newPage": false,
+                "searchKey": "enforcement.NewBeforeCreateUserHook",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewBeforeCreateUserHook() func(context.Context, dbutil.DB) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewBeforeCreateUserHook() func(context.Context, dbutil.DB) error\n```\n\nNewBeforeCreateUserHook returns a BeforeCreateUserHook closure with the given UsersStore that determines whether new user is allowed to be created. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#NewAfterCreateUserHook",
+              "documentation": {
+                "identifier": "NewAfterCreateUserHook",
+                "newPage": false,
+                "searchKey": "enforcement.NewAfterCreateUserHook",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewAfterCreateUserHook() func(context.Context, dbutil.DB, *types.User) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewAfterCreateUserHook() func(context.Context, dbutil.DB, *types.User) error\n```\n\nNewAfterCreateUserHook returns a AfterCreateUserHook closure that determines whether a new user should be promoted to site admin based on the product license. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#NewBeforeSetUserIsSiteAdmin",
+              "documentation": {
+                "identifier": "NewBeforeSetUserIsSiteAdmin",
+                "newPage": false,
+                "searchKey": "enforcement.NewBeforeSetUserIsSiteAdmin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewBeforeSetUserIsSiteAdmin() func(isSiteAdmin bool) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewBeforeSetUserIsSiteAdmin() func(isSiteAdmin bool) error\n```\n\nNewBeforeSetUserIsSiteAdmin returns a BeforeSetUserIsSiteAdmin closure that determines whether non-site admin roles are allowed (i.e. revoke site admins) based on the product license. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#TestNewPreCreateExternalServiceHook",
+              "documentation": {
+                "identifier": "TestNewPreCreateExternalServiceHook",
+                "newPage": false,
+                "searchKey": "enforcement.TestNewPreCreateExternalServiceHook",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewPreCreateExternalServiceHook(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewPreCreateExternalServiceHook(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "enforcement.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#TestEnforcement_PreCreateUser",
+              "documentation": {
+                "identifier": "TestEnforcement_PreCreateUser",
+                "newPage": false,
+                "searchKey": "enforcement.TestEnforcement_PreCreateUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEnforcement_PreCreateUser(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEnforcement_PreCreateUser(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#TestEnforcement_AfterCreateUser",
+              "documentation": {
+                "identifier": "TestEnforcement_AfterCreateUser",
+                "newPage": false,
+                "searchKey": "enforcement.TestEnforcement_AfterCreateUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEnforcement_AfterCreateUser(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEnforcement_AfterCreateUser(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/licensing/enforcement#TestEnforcement_PreSetUserIsSiteAdmin",
+              "documentation": {
+                "identifier": "TestEnforcement_PreSetUserIsSiteAdmin",
+                "newPage": false,
+                "searchKey": "enforcement.TestEnforcement_PreSetUserIsSiteAdmin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEnforcement_PreSetUserIsSiteAdmin(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEnforcement_PreSetUserIsSiteAdmin(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

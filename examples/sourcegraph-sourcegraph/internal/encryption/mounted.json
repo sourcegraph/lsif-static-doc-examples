@@ -1,0 +1,273 @@
+{
+  "pathID": "/internal/encryption/mounted",
+  "documentation": {
+    "identifier": "mounted",
+    "newPage": true,
+    "searchKey": "internal/encryption/mounted",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package mounted"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/encryption/mounted#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/mounted#theScriptOfBeeMovie",
+              "documentation": {
+                "identifier": "theScriptOfBeeMovie",
+                "newPage": false,
+                "searchKey": "mounted.theScriptOfBeeMovie",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var theScriptOfBeeMovie"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar theScriptOfBeeMovie = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption/mounted#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/mounted#Key",
+              "documentation": {
+                "identifier": "Key",
+                "newPage": false,
+                "searchKey": "mounted.Key",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Key struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Key struct {\n\tkeyname string\n\tsecret  []byte\n\tversion string\n}\n```\n\nKey is an encryption.Key implementation that uses AES GCM encryption, using a secret loaded either from an env var or a file \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/mounted#NewKey",
+                    "documentation": {
+                      "identifier": "NewKey",
+                      "newPage": false,
+                      "searchKey": "mounted.NewKey",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewKey(ctx context.Context, k schema.MountedEncryptionKey) (*Key, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewKey(ctx context.Context, k schema.MountedEncryptionKey) (*Key, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/mounted#Key.Version",
+                    "documentation": {
+                      "identifier": "Key.Version",
+                      "newPage": false,
+                      "searchKey": "mounted.Key.Version",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Version(ctx context.Context) (encryption.KeyVersion, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/mounted#Key.Encrypt",
+                    "documentation": {
+                      "identifier": "Key.Encrypt",
+                      "newPage": false,
+                      "searchKey": "mounted.Key.Encrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption/mounted#Key.Decrypt",
+                    "documentation": {
+                      "identifier": "Key.Decrypt",
+                      "newPage": false,
+                      "searchKey": "mounted.Key.Decrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *Key) Decrypt(ctx context.Context, ciphertext []byte) (*encryption.Secret, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/mounted#encryptedValue",
+              "documentation": {
+                "identifier": "encryptedValue",
+                "newPage": false,
+                "searchKey": "mounted.encryptedValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encryptedValue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encryptedValue struct {\n\tKeyName    string\n\tCiphertext []byte\n\tChecksum   uint32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption/mounted#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption/mounted#crc32Sum",
+              "documentation": {
+                "identifier": "crc32Sum",
+                "newPage": false,
+                "searchKey": "mounted.crc32Sum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func crc32Sum(data []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc crc32Sum(data []byte) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption/mounted#TestRoundTrip",
+              "documentation": {
+                "identifier": "TestRoundTrip",
+                "newPage": false,
+                "searchKey": "mounted.TestRoundTrip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRoundTrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRoundTrip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

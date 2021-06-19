@@ -1,0 +1,418 @@
+{
+  "pathID": "/enterprise/internal/codemonitors/email",
+  "documentation": {
+    "identifier": "email",
+    "newPage": true,
+    "searchKey": "enterprise/internal/codemonitors/email",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package email"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/email#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#MonitorKind",
+              "documentation": {
+                "identifier": "MonitorKind",
+                "newPage": false,
+                "searchKey": "email.MonitorKind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MonitorKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MonitorKind = \"CodeMonitor\"\n```\n\nTo avoid a circular dependency with the codemonitors/resolvers package we have to redeclare the MonitorKind. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#utmSourceEmail",
+              "documentation": {
+                "identifier": "utmSourceEmail",
+                "newPage": false,
+                "searchKey": "email.utmSourceEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const utmSourceEmail"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst utmSourceEmail = \"code-monitoring-email\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#priorityCritical",
+              "documentation": {
+                "identifier": "priorityCritical",
+                "newPage": false,
+                "searchKey": "email.priorityCritical",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const priorityCritical"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst priorityCritical = \"CRITICAL\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/email#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#externalURL",
+              "documentation": {
+                "identifier": "externalURL",
+                "newPage": false,
+                "searchKey": "email.externalURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var externalURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar externalURL *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#MockSendEmailForNewSearchResult",
+              "documentation": {
+                "identifier": "MockSendEmailForNewSearchResult",
+                "newPage": false,
+                "searchKey": "email.MockSendEmailForNewSearchResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockSendEmailForNewSearchResult"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockSendEmailForNewSearchResult func(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#MockExternalURL",
+              "documentation": {
+                "identifier": "MockExternalURL",
+                "newPage": false,
+                "searchKey": "email.MockExternalURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockExternalURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockExternalURL func() *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#newSearchResultsEmailTemplates",
+              "documentation": {
+                "identifier": "newSearchResultsEmailTemplates",
+                "newPage": false,
+                "searchKey": "email.newSearchResultsEmailTemplates",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newSearchResultsEmailTemplates"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar newSearchResultsEmailTemplates = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/email#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#TemplateDataNewSearchResults",
+              "documentation": {
+                "identifier": "TemplateDataNewSearchResults",
+                "newPage": false,
+                "searchKey": "email.TemplateDataNewSearchResults",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TemplateDataNewSearchResults struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TemplateDataNewSearchResults struct {\n\tPriority                  string\n\tCodeMonitorURL            string\n\tSearchURL                 string\n\tDescription               string\n\tNumberOfResultsWithDetail string\n\tIsTest                    bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/email#NewTemplateDataForNewSearchResults",
+                    "documentation": {
+                      "identifier": "NewTemplateDataForNewSearchResults",
+                      "newPage": false,
+                      "searchKey": "email.NewTemplateDataForNewSearchResults",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewTemplateDataForNewSearchResults(ctx context.Context, monitorDescription, queryString string, email *codemonitors.MonitorEmail, numResults int) (d *TemplateDataNewSearchResults, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewTemplateDataForNewSearchResults(ctx context.Context, monitorDescription, queryString string, email *codemonitors.MonitorEmail, numResults int) (d *TemplateDataNewSearchResults, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/email#NewTestTemplateDataForNewSearchResults",
+                    "documentation": {
+                      "identifier": "NewTestTemplateDataForNewSearchResults",
+                      "newPage": false,
+                      "searchKey": "email.NewTestTemplateDataForNewSearchResults",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewTestTemplateDataForNewSearchResults(ctx context.Context, monitorDescription string) *TemplateDataNewSearchResults"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewTestTemplateDataForNewSearchResults(ctx context.Context, monitorDescription string) *TemplateDataNewSearchResults\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/email#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#SendEmailForNewSearchResult",
+              "documentation": {
+                "identifier": "SendEmailForNewSearchResult",
+                "newPage": false,
+                "searchKey": "email.SendEmailForNewSearchResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SendEmailForNewSearchResult(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SendEmailForNewSearchResult(ctx context.Context, userID int32, data *TemplateDataNewSearchResults) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#sendEmail",
+              "documentation": {
+                "identifier": "sendEmail",
+                "newPage": false,
+                "searchKey": "email.sendEmail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sendEmail(ctx context.Context, userID int32, template txtypes.Templates, data interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sendEmail(ctx context.Context, userID int32, template txtypes.Templates, data interface{}) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#getSearchURL",
+              "documentation": {
+                "identifier": "getSearchURL",
+                "newPage": false,
+                "searchKey": "email.getSearchURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getSearchURL(ctx context.Context, query, utmSource string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getSearchURL(ctx context.Context, query, utmSource string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#getCodeMonitorURL",
+              "documentation": {
+                "identifier": "getCodeMonitorURL",
+                "newPage": false,
+                "searchKey": "email.getCodeMonitorURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getCodeMonitorURL(ctx context.Context, monitorID int64, utmSource string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getCodeMonitorURL(ctx context.Context, monitorID int64, utmSource string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/email#sourcegraphURL",
+              "documentation": {
+                "identifier": "sourcegraphURL",
+                "newPage": false,
+                "searchKey": "email.sourcegraphURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sourcegraphURL(ctx context.Context, path, query, utmSource string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sourcegraphURL(ctx context.Context, path, query, utmSource string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

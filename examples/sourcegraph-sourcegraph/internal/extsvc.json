@@ -1,0 +1,1612 @@
+{
+  "pathID": "/internal/extsvc",
+  "documentation": {
+    "identifier": "extsvc",
+    "newPage": true,
+    "searchKey": "internal/extsvc",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package extsvc"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/extsvc#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindAWSCodeCommit",
+              "documentation": {
+                "identifier": "KindAWSCodeCommit",
+                "newPage": false,
+                "searchKey": "extsvc.KindAWSCodeCommit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindAWSCodeCommit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindAWSCodeCommit = \"AWSCODECOMMIT\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindBitbucketServer",
+              "documentation": {
+                "identifier": "KindBitbucketServer",
+                "newPage": false,
+                "searchKey": "extsvc.KindBitbucketServer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindBitbucketServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindBitbucketServer = \"BITBUCKETSERVER\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindBitbucketCloud",
+              "documentation": {
+                "identifier": "KindBitbucketCloud",
+                "newPage": false,
+                "searchKey": "extsvc.KindBitbucketCloud",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindBitbucketCloud"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindBitbucketCloud = \"BITBUCKETCLOUD\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindGitHub",
+              "documentation": {
+                "identifier": "KindGitHub",
+                "newPage": false,
+                "searchKey": "extsvc.KindGitHub",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindGitHub"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindGitHub = \"GITHUB\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindGitLab",
+              "documentation": {
+                "identifier": "KindGitLab",
+                "newPage": false,
+                "searchKey": "extsvc.KindGitLab",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindGitLab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindGitLab = \"GITLAB\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindGitolite",
+              "documentation": {
+                "identifier": "KindGitolite",
+                "newPage": false,
+                "searchKey": "extsvc.KindGitolite",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindGitolite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindGitolite = \"GITOLITE\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindPerforce",
+              "documentation": {
+                "identifier": "KindPerforce",
+                "newPage": false,
+                "searchKey": "extsvc.KindPerforce",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindPerforce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindPerforce = \"PERFORCE\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindPhabricator",
+              "documentation": {
+                "identifier": "KindPhabricator",
+                "newPage": false,
+                "searchKey": "extsvc.KindPhabricator",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindPhabricator"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindPhabricator = \"PHABRICATOR\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindOther",
+              "documentation": {
+                "identifier": "KindOther",
+                "newPage": false,
+                "searchKey": "extsvc.KindOther",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const KindOther"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst KindOther = \"OTHER\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeAWSCodeCommit",
+              "documentation": {
+                "identifier": "TypeAWSCodeCommit",
+                "newPage": false,
+                "searchKey": "extsvc.TypeAWSCodeCommit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeAWSCodeCommit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeAWSCodeCommit = \"awscodecommit\"\n```\n\nTypeAWSCodeCommit is the (api.ExternalRepoSpec).ServiceType value for AWS CodeCommit repositories. The ServiceID value is the ARN (Amazon Resource Name) omitting the repository name suffix (e.g., \"arn:aws:codecommit:us-west-1:123456789:\"). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeBitbucketServer",
+              "documentation": {
+                "identifier": "TypeBitbucketServer",
+                "newPage": false,
+                "searchKey": "extsvc.TypeBitbucketServer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeBitbucketServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeBitbucketServer = \"bitbucketServer\"\n```\n\nTypeBitbucketServer is the (api.ExternalRepoSpec).ServiceType value for Bitbucket Server projects. The ServiceID value is the base URL to the Bitbucket Server instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeBitbucketCloud",
+              "documentation": {
+                "identifier": "TypeBitbucketCloud",
+                "newPage": false,
+                "searchKey": "extsvc.TypeBitbucketCloud",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeBitbucketCloud"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeBitbucketCloud = \"bitbucketCloud\"\n```\n\nTypeBitbucketCloud is the (api.ExternalRepoSpec).ServiceType value for Bitbucket Cloud projects. The ServiceID value is the base URL to the Bitbucket Cloud. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeGitHub",
+              "documentation": {
+                "identifier": "TypeGitHub",
+                "newPage": false,
+                "searchKey": "extsvc.TypeGitHub",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeGitHub"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeGitHub = \"github\"\n```\n\nTypeGitHub is the (api.ExternalRepoSpec).ServiceType value for GitHub repositories. The ServiceID value is the base URL to the GitHub instance ([https://github.com](https://github.com) or the GitHub Enterprise URL). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeGitLab",
+              "documentation": {
+                "identifier": "TypeGitLab",
+                "newPage": false,
+                "searchKey": "extsvc.TypeGitLab",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeGitLab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeGitLab = \"gitlab\"\n```\n\nTypeGitLab is the (api.ExternalRepoSpec).ServiceType value for GitLab projects. The ServiceID value is the base URL to the GitLab instance ([https://gitlab.com](https://gitlab.com) or self-hosted GitLab URL). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeGitolite",
+              "documentation": {
+                "identifier": "TypeGitolite",
+                "newPage": false,
+                "searchKey": "extsvc.TypeGitolite",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeGitolite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeGitolite = \"gitolite\"\n```\n\nTypeGitolite is the (api.ExternalRepoSpec).ServiceType value for Gitolite projects. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypePerforce",
+              "documentation": {
+                "identifier": "TypePerforce",
+                "newPage": false,
+                "searchKey": "extsvc.TypePerforce",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypePerforce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypePerforce = \"perforce\"\n```\n\nTypePerforce is the (api.ExternalRepoSpec).ServiceType value for Perforce projects. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypePhabricator",
+              "documentation": {
+                "identifier": "TypePhabricator",
+                "newPage": false,
+                "searchKey": "extsvc.TypePhabricator",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypePhabricator"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypePhabricator = \"phabricator\"\n```\n\nTypePhabricator is the (api.ExternalRepoSpec).ServiceType value for Phabricator projects. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeOther",
+              "documentation": {
+                "identifier": "TypeOther",
+                "newPage": false,
+                "searchKey": "extsvc.TypeOther",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeOther"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeOther = \"other\"\n```\n\nTypeOther is the (api.ExternalRepoSpec).ServiceType value for other projects. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#IDParam",
+              "documentation": {
+                "identifier": "IDParam",
+                "newPage": false,
+                "searchKey": "extsvc.IDParam",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IDParam"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IDParam = \"externalServiceID\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc#GitHubDotComURL",
+              "documentation": {
+                "identifier": "GitHubDotComURL",
+                "newPage": false,
+                "searchKey": "extsvc.GitHubDotComURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GitHubDotComURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GitHubDotComURL = mustParseURL(\"https://github.com\")\n```\n\nKnown public code hosts and their URLs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#GitHubDotCom",
+              "documentation": {
+                "identifier": "GitHubDotCom",
+                "newPage": false,
+                "searchKey": "extsvc.GitHubDotCom",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GitHubDotCom"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GitHubDotCom = NewCodeHost(GitHubDotComURL, TypeGitHub)\n```\n\nKnown public code hosts and their URLs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#GitLabDotComURL",
+              "documentation": {
+                "identifier": "GitLabDotComURL",
+                "newPage": false,
+                "searchKey": "extsvc.GitLabDotComURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GitLabDotComURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GitLabDotComURL = mustParseURL(\"https://gitlab.com\")\n```\n\nKnown public code hosts and their URLs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#GitLabDotCom",
+              "documentation": {
+                "identifier": "GitLabDotCom",
+                "newPage": false,
+                "searchKey": "extsvc.GitLabDotCom",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GitLabDotCom"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GitLabDotCom = NewCodeHost(GitLabDotComURL, TypeGitLab)\n```\n\nKnown public code hosts and their URLs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#PublicCodeHosts",
+              "documentation": {
+                "identifier": "PublicCodeHosts",
+                "newPage": false,
+                "searchKey": "extsvc.PublicCodeHosts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PublicCodeHosts"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PublicCodeHosts = []*CodeHost{\n\tGitHubDotCom,\n\tGitLabDotCom,\n}\n```\n\nKnown public code hosts and their URLs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#bbsLower",
+              "documentation": {
+                "identifier": "bbsLower",
+                "newPage": false,
+                "searchKey": "extsvc.bbsLower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bbsLower"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bbsLower = strings.ToLower(TypeBitbucketServer)\n```\n\nPrecompute these for use in ParseServiceType below since the constants are mixed case \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#bbcLower",
+              "documentation": {
+                "identifier": "bbcLower",
+                "newPage": false,
+                "searchKey": "extsvc.bbcLower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bbcLower"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bbcLower = strings.ToLower(TypeBitbucketCloud)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc#CodeHost",
+              "documentation": {
+                "identifier": "CodeHost",
+                "newPage": false,
+                "searchKey": "extsvc.CodeHost",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CodeHost struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CodeHost struct {\n\tServiceID   string\n\tServiceType string\n\tBaseURL     *url.URL\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#NewCodeHost",
+                    "documentation": {
+                      "identifier": "NewCodeHost",
+                      "newPage": false,
+                      "searchKey": "extsvc.NewCodeHost",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewCodeHost(baseURL *url.URL, serviceType string) *CodeHost"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewCodeHost(baseURL *url.URL, serviceType string) *CodeHost\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#CodeHostOf",
+                    "documentation": {
+                      "identifier": "CodeHostOf",
+                      "newPage": false,
+                      "searchKey": "extsvc.CodeHostOf",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func CodeHostOf(name api.RepoName, codehosts ...*CodeHost) *CodeHost"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc CodeHostOf(name api.RepoName, codehosts ...*CodeHost) *CodeHost\n```\n\nCodeHostOf returns the CodeHost of the given repo, if any, as determined by a common prefix between the repo name and the code hosts' URL hostname component. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#jsonError",
+              "documentation": {
+                "identifier": "jsonError",
+                "newPage": false,
+                "searchKey": "extsvc.jsonError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type jsonError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype jsonError struct {\n\tError string `json:\"__jsonError\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#Account",
+              "documentation": {
+                "identifier": "Account",
+                "newPage": false,
+                "searchKey": "extsvc.Account",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Account struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Account struct {\n\tID          int32\n\tUserID      int32\n\tAccountSpec // ServiceType, ServiceID, ClientID, AccountID\n\tAccountData // AuthData, Data\n\tCreatedAt   time.Time\n\tUpdatedAt   time.Time\n}\n```\n\nAccount represents a row in the `user_external_accounts` table. See the GraphQL API's corresponding fields in \"ExternalAccount\" for documentation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#AccountSpec",
+              "documentation": {
+                "identifier": "AccountSpec",
+                "newPage": false,
+                "searchKey": "extsvc.AccountSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AccountSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AccountSpec struct {\n\tServiceType string\n\tServiceID   string\n\tClientID    string\n\tAccountID   string\n}\n```\n\nAccountSpec specifies a user external account by its external identifier (i.e., by the identifier provided by the account's owner service), instead of by our database's serial ID. See the GraphQL API's corresponding fields in \"ExternalAccount\" for documentation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#AccountData",
+              "documentation": {
+                "identifier": "AccountData",
+                "newPage": false,
+                "searchKey": "extsvc.AccountData",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AccountData struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AccountData struct {\n\tAuthData *json.RawMessage\n\tData     *json.RawMessage\n}\n```\n\nAccountData contains data that can be freely updated in the user external account after it has been created. See the GraphQL API's corresponding fields for documentation. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#AccountData.SetAccountData",
+                    "documentation": {
+                      "identifier": "AccountData.SetAccountData",
+                      "newPage": false,
+                      "searchKey": "extsvc.AccountData.SetAccountData",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *AccountData) SetAccountData(v interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *AccountData) SetAccountData(v interface{})\n```\n\nSetAccountData sets the Data field to the (JSON-encoded) value. If an error occurs during JSON encoding, a JSON object describing the error is written to the field, instead. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#AccountData.SetAuthData",
+                    "documentation": {
+                      "identifier": "AccountData.SetAuthData",
+                      "newPage": false,
+                      "searchKey": "extsvc.AccountData.SetAuthData",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *AccountData) SetAuthData(v interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *AccountData) SetAuthData(v interface{})\n```\n\nSetAuthData sets the AuthData field to the (JSON-encoded) value. If an error occurs during JSON encoding, a JSON object describing the error is written to the field, instead. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#AccountData.GetAccountData",
+                    "documentation": {
+                      "identifier": "AccountData.GetAccountData",
+                      "newPage": false,
+                      "searchKey": "extsvc.AccountData.GetAccountData",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *AccountData) GetAccountData(v interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *AccountData) GetAccountData(v interface{}) error\n```\n\nGetAccountData reads the Data field into the value. The value should be a pointer type to the type that was passed to SetAccountData. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#AccountData.GetAuthData",
+                    "documentation": {
+                      "identifier": "AccountData.GetAuthData",
+                      "newPage": false,
+                      "searchKey": "extsvc.AccountData.GetAuthData",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *AccountData) GetAuthData(v interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *AccountData) GetAuthData(v interface{}) error\n```\n\nGetAuthData reads the AuthData field into the value. The value should be a pointer type to the type that was passed to SetAuthData. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#Repository",
+              "documentation": {
+                "identifier": "Repository",
+                "newPage": false,
+                "searchKey": "extsvc.Repository",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repository struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repository struct {\n\t// URI is the full name for this repository, e.g. \"github.com/user/repo\".\n\tURI string\n\tapi.ExternalRepoSpec\n}\n```\n\nRepository contains necessary information to identify an external repository on the code host. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#Accounts",
+              "documentation": {
+                "identifier": "Accounts",
+                "newPage": false,
+                "searchKey": "extsvc.Accounts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Accounts struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Accounts struct {\n\tServiceType string\n\tServiceID   string\n\tAccountIDs  []string\n}\n```\n\nAccounts contains a list of accounts that belong to the same external service. All fields have a same meaning to AccountSpec. See GraphQL API's corresponding fields in \"ExternalAccount\" for documentation. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#Accounts.TracingFields",
+                    "documentation": {
+                      "identifier": "Accounts.TracingFields",
+                      "newPage": false,
+                      "searchKey": "extsvc.Accounts.TracingFields",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Accounts) TracingFields() []otlog.Field"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Accounts) TracingFields() []otlog.Field\n```\n\nTracingFields returns tracing fields for the opentracing log. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#AccountID",
+              "documentation": {
+                "identifier": "AccountID",
+                "newPage": false,
+                "searchKey": "extsvc.AccountID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AccountID string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AccountID string\n```\n\nAccountID is a descriptive type for the external identifier of an external account on the code host. It can be the string representation of an integer (e.g. GitLab), a GraphQL ID (e.g. GitHub), or a username (e.g. Bitbucket Server) depends on the code host type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#RepoID",
+              "documentation": {
+                "identifier": "RepoID",
+                "newPage": false,
+                "searchKey": "extsvc.RepoID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoID string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoID string\n```\n\nRepoID is a descriptive type for the external identifier of an external repository on the code host. It can be the string representation of an integer (e.g. GitLab and Bitbucket Server) or a GraphQL ID (e.g. GitHub) depends on the code host type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#RepoIDType",
+              "documentation": {
+                "identifier": "RepoIDType",
+                "newPage": false,
+                "searchKey": "extsvc.RepoIDType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoIDType string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoIDType string\n```\n\nRepoIDType indicates the type of the RepoID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#RateLimitConfig",
+              "documentation": {
+                "identifier": "RateLimitConfig",
+                "newPage": false,
+                "searchKey": "extsvc.RateLimitConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RateLimitConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RateLimitConfig struct {\n\tBaseURL     string\n\tDisplayName string\n\tLimit       rate.Limit\n\tIsDefault   bool\n}\n```\n\nRateLimitConfig represents the internal rate limit configured for an external service \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#ExtractRateLimitConfig",
+                    "documentation": {
+                      "identifier": "ExtractRateLimitConfig",
+                      "newPage": false,
+                      "searchKey": "extsvc.ExtractRateLimitConfig",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ExtractRateLimitConfig(config, kind, displayName string) (RateLimitConfig, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ExtractRateLimitConfig(config, kind, displayName string) (RateLimitConfig, error)\n```\n\nExtractRateLimitConfig extracts the rate limit config from the given args. If rate limiting is not supported the error returned will be an ErrRateLimitUnsupported. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#GetLimitFromConfig",
+                    "documentation": {
+                      "identifier": "GetLimitFromConfig",
+                      "newPage": false,
+                      "searchKey": "extsvc.GetLimitFromConfig",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetLimitFromConfig(kind string, config interface{}) (rlc RateLimitConfig, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetLimitFromConfig(kind string, config interface{}) (rlc RateLimitConfig, err error)\n```\n\nGetLimitFromConfig gets RateLimitConfig from an already parsed config schema. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#ErrRateLimitUnsupported",
+              "documentation": {
+                "identifier": "ErrRateLimitUnsupported",
+                "newPage": false,
+                "searchKey": "extsvc.ErrRateLimitUnsupported",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrRateLimitUnsupported struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrRateLimitUnsupported struct {\n\tcodehostKind string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc#ErrRateLimitUnsupported.Error",
+                    "documentation": {
+                      "identifier": "ErrRateLimitUnsupported.Error",
+                      "newPage": false,
+                      "searchKey": "extsvc.ErrRateLimitUnsupported.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ErrRateLimitUnsupported) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ErrRateLimitUnsupported) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#OtherRepoMetadata",
+              "documentation": {
+                "identifier": "OtherRepoMetadata",
+                "newPage": false,
+                "searchKey": "extsvc.OtherRepoMetadata",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OtherRepoMetadata struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OtherRepoMetadata struct {\n\t// RelativePath is relative to ServiceID which is usually the host URL.\n\t// Joining them gives you the clone url.\n\tRelativePath string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc#IsHostOfRepo",
+              "documentation": {
+                "identifier": "IsHostOfRepo",
+                "newPage": false,
+                "searchKey": "extsvc.IsHostOfRepo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsHostOfRepo(c *CodeHost, repo *api.ExternalRepoSpec) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsHostOfRepo(c *CodeHost, repo *api.ExternalRepoSpec) bool\n```\n\nIsHostOfRepo returns true if the repository belongs to given code host. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#IsHostOfAccount",
+              "documentation": {
+                "identifier": "IsHostOfAccount",
+                "newPage": false,
+                "searchKey": "extsvc.IsHostOfAccount",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsHostOfAccount(c *CodeHost, account *Account) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsHostOfAccount(c *CodeHost, account *Account) bool\n```\n\nIsHostOfAccount returns true if the account belongs to given code host. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#NormalizeBaseURL",
+              "documentation": {
+                "identifier": "NormalizeBaseURL",
+                "newPage": false,
+                "searchKey": "extsvc.NormalizeBaseURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NormalizeBaseURL(baseURL *url.URL) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NormalizeBaseURL(baseURL *url.URL) *url.URL\n```\n\nNormalizeBaseURL modifies the input and returns a normalized form of the a base URL with insignificant differences (such as in presence of a trailing slash, or hostname case) eliminated. Its return value should be used for the (ExternalRepoSpec).ServiceID field (and passed to XyzExternalRepoSpec) instead of a non-normalized base URL. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#mustParseURL",
+              "documentation": {
+                "identifier": "mustParseURL",
+                "newPage": false,
+                "searchKey": "extsvc.mustParseURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustParseURL(rawurl string) *url.URL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustParseURL(rawurl string) *url.URL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#setJSONOrError",
+              "documentation": {
+                "identifier": "setJSONOrError",
+                "newPage": false,
+                "searchKey": "extsvc.setJSONOrError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setJSONOrError(field **json.RawMessage, value interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setJSONOrError(field **json.RawMessage, value interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#getJSONOrError",
+              "documentation": {
+                "identifier": "getJSONOrError",
+                "newPage": false,
+                "searchKey": "extsvc.getJSONOrError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getJSONOrError(field *json.RawMessage, v interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getJSONOrError(field *json.RawMessage, v interface{}) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#KindToType",
+              "documentation": {
+                "identifier": "KindToType",
+                "newPage": false,
+                "searchKey": "extsvc.KindToType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func KindToType(kind string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc KindToType(kind string) string\n```\n\nKindToType returns a Type constants given a Kind It will panic when given an unknown kind \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TypeToKind",
+              "documentation": {
+                "identifier": "TypeToKind",
+                "newPage": false,
+                "searchKey": "extsvc.TypeToKind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TypeToKind(t string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TypeToKind(t string) string\n```\n\nTypeToKind returns a Kind constants given a Type It will panic when given an unknown type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#ParseServiceType",
+              "documentation": {
+                "identifier": "ParseServiceType",
+                "newPage": false,
+                "searchKey": "extsvc.ParseServiceType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseServiceType(s string) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseServiceType(s string) (string, bool)\n```\n\nParseServiceType will return a ServiceType constant after doing a case insensitive match on s. It returns (\"\", false) if no match was found. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#ParseServiceKind",
+              "documentation": {
+                "identifier": "ParseServiceKind",
+                "newPage": false,
+                "searchKey": "extsvc.ParseServiceKind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseServiceKind(s string) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseServiceKind(s string) (string, bool)\n```\n\nParseServiceKind will return a ServiceKind constant after doing a case insensitive match on s. It returns (\"\", false) if no match was found. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#ParseConfig",
+              "documentation": {
+                "identifier": "ParseConfig",
+                "newPage": false,
+                "searchKey": "extsvc.ParseConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseConfig(kind, config string) (cfg interface{}, _ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseConfig(kind, config string) (cfg interface{}, _ error)\n```\n\nParseConfig attempts to unmarshal the given JSON config into a configuration struct defined in the schema package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#WebhookURL",
+              "documentation": {
+                "identifier": "WebhookURL",
+                "newPage": false,
+                "searchKey": "extsvc.WebhookURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WebhookURL(kind string, externalServiceID int64, externalURL string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WebhookURL(kind string, externalServiceID int64, externalURL string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#limitOrInf",
+              "documentation": {
+                "identifier": "limitOrInf",
+                "newPage": false,
+                "searchKey": "extsvc.limitOrInf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func limitOrInf(enabled bool, perHour float64) rate.Limit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc limitOrInf(enabled bool, perHour float64) rate.Limit\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#URN",
+              "documentation": {
+                "identifier": "URN",
+                "newPage": false,
+                "searchKey": "extsvc.URN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func URN(kind string, id int64) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc URN(kind string, id int64) string\n```\n\nURN returns a unique resource identifier of an external service by given kind and ID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#DecodeURN",
+              "documentation": {
+                "identifier": "DecodeURN",
+                "newPage": false,
+                "searchKey": "extsvc.DecodeURN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeURN(urn string) (kind string, id int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeURN(urn string) (kind string, id int64)\n```\n\nDecodeURN returns the kind of the external service and its ID. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TestCodeHostOf",
+              "documentation": {
+                "identifier": "TestCodeHostOf",
+                "newPage": false,
+                "searchKey": "extsvc.TestCodeHostOf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCodeHostOf(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCodeHostOf(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TestExtractRateLimitConfig",
+              "documentation": {
+                "identifier": "TestExtractRateLimitConfig",
+                "newPage": false,
+                "searchKey": "extsvc.TestExtractRateLimitConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExtractRateLimitConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExtractRateLimitConfig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TestEncodeURN",
+              "documentation": {
+                "identifier": "TestEncodeURN",
+                "newPage": false,
+                "searchKey": "extsvc.TestEncodeURN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeURN(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeURN(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc#TestDecodeURN",
+              "documentation": {
+                "identifier": "TestDecodeURN",
+                "newPage": false,
+                "searchKey": "extsvc.TestDecodeURN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeURN(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeURN(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/extsvc/auth"
+    },
+    {
+      "pathID": "/internal/extsvc/awscodecommit"
+    },
+    {
+      "pathID": "/internal/extsvc/bitbucketcloud"
+    },
+    {
+      "pathID": "/internal/extsvc/bitbucketserver"
+    },
+    {
+      "pathID": "/internal/extsvc/github"
+    },
+    {
+      "pathID": "/internal/extsvc/gitlab"
+    },
+    {
+      "pathID": "/internal/extsvc/gitolite"
+    },
+    {
+      "pathID": "/internal/extsvc/perforce"
+    },
+    {
+      "pathID": "/internal/extsvc/phabricator"
+    },
+    {
+      "pathID": "/internal/extsvc/phabricator_test"
+    }
+  ]
+}

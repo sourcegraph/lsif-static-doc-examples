@@ -1,0 +1,372 @@
+{
+  "pathID": "/cmd/frontend/internal/confdb",
+  "documentation": {
+    "identifier": "confdb",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/confdb",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package confdb"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package confdb contains the DB logic for configuration storage / manipulation. \n\nOnly the frontend imports this package. \n\nAll other users should go through the conf package and NOT interact with the database on their own. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/confdb#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#ErrNewerEdit",
+              "documentation": {
+                "identifier": "ErrNewerEdit",
+                "newPage": false,
+                "searchKey": "confdb.ErrNewerEdit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNewerEdit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNewerEdit = errors.New(\"someone else has already applied a newer edit\")\n```\n\nErrNewerEdit is returned by SiteCreateIfUpToDate when a newer edit has already been applied and the edit has been rejected. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/confdb#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#SiteConfig",
+              "documentation": {
+                "identifier": "SiteConfig",
+                "newPage": false,
+                "searchKey": "confdb.SiteConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SiteConfig struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SiteConfig struct {\n\tID        int32     // the unique ID of this config\n\tContents  string    // the raw JSON content (with comments and trailing commas allowed)\n\tCreatedAt time.Time // the date when this config was created\n\tUpdatedAt time.Time // the date when this config was updated\n}\n```\n\nSiteConfig contains the contents of a site config along with associated metadata. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/confdb#SiteCreateIfUpToDate",
+                    "documentation": {
+                      "identifier": "SiteCreateIfUpToDate",
+                      "newPage": false,
+                      "searchKey": "confdb.SiteCreateIfUpToDate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func SiteCreateIfUpToDate(ctx context.Context, lastID *int32, contents string) (latest *SiteConfig, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc SiteCreateIfUpToDate(ctx context.Context, lastID *int32, contents string) (latest *SiteConfig, err error)\n```\n\nSiteCreateIfUpToDate saves the given site config \"contents\" to the database iff the supplied \"lastID\" is equal to the one that was most recently saved to the database. \n\nThe site config that was most recently saved to the database is returned. An error is returned if \"contents\" is invalid JSON. \n\n🚨 SECURITY: This method does NOT verify the user is an admin. The caller is responsible for ensuring this or that the response never makes it to a user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/confdb#SiteGetLatest",
+                    "documentation": {
+                      "identifier": "SiteGetLatest",
+                      "newPage": false,
+                      "searchKey": "confdb.SiteGetLatest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func SiteGetLatest(ctx context.Context) (latest *SiteConfig, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc SiteGetLatest(ctx context.Context) (latest *SiteConfig, err error)\n```\n\nSiteGetLatest returns the site config that was most recently saved to the database. This returns nil, nil if there is not yet a site config in the database. \n\n🚨 SECURITY: This method does NOT verify the user is an admin. The caller is responsible for ensuring this or that the response never makes it to a user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/confdb#createIfUpToDate",
+                    "documentation": {
+                      "identifier": "createIfUpToDate",
+                      "newPage": false,
+                      "searchKey": "confdb.createIfUpToDate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func createIfUpToDate(ctx context.Context, tx queryable, lastID *int32, contents string) (latest *SiteConfig, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc createIfUpToDate(ctx context.Context, tx queryable, lastID *int32, contents string) (latest *SiteConfig, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/confdb#getLatest",
+                    "documentation": {
+                      "identifier": "getLatest",
+                      "newPage": false,
+                      "searchKey": "confdb.getLatest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getLatest(ctx context.Context, tx queryable) (*SiteConfig, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getLatest(ctx context.Context, tx queryable) (*SiteConfig, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#queryable",
+              "documentation": {
+                "identifier": "queryable",
+                "newPage": false,
+                "searchKey": "confdb.queryable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type queryable interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype queryable interface {\n\tQueryContext(ctx context.Context, query string, args ...interface{}) (*sql.Rows, error)\n\tQueryRowContext(ctx context.Context, query string, args ...interface{}) *sql.Row\n}\n```\n\nqueryable allows us to reuse the same logic for certain operations both inside and outside an explicit transaction. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/confdb#newTransaction",
+                    "documentation": {
+                      "identifier": "newTransaction",
+                      "newPage": false,
+                      "searchKey": "confdb.newTransaction",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newTransaction(ctx context.Context) (tx queryable, done func(), err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newTransaction(ctx context.Context) (tx queryable, done func(), err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/confdb#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#addDefault",
+              "documentation": {
+                "identifier": "addDefault",
+                "newPage": false,
+                "searchKey": "confdb.addDefault",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addDefault(ctx context.Context, tx queryable, contents string) (newLastID *int32, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#parseQueryRows",
+              "documentation": {
+                "identifier": "parseQueryRows",
+                "newPage": false,
+                "searchKey": "confdb.parseQueryRows",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseQueryRows(ctx context.Context, rows *sql.Rows) ([]*SiteConfig, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#TestSiteGetLatestDefault",
+              "documentation": {
+                "identifier": "TestSiteGetLatestDefault",
+                "newPage": false,
+                "searchKey": "confdb.TestSiteGetLatestDefault",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSiteGetLatestDefault(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSiteGetLatestDefault(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#TestSiteCreate_RejectInvalidJSON",
+              "documentation": {
+                "identifier": "TestSiteCreate_RejectInvalidJSON",
+                "newPage": false,
+                "searchKey": "confdb.TestSiteCreate_RejectInvalidJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSiteCreate_RejectInvalidJSON(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSiteCreate_RejectInvalidJSON(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#TestSiteCreateIfUpToDate",
+              "documentation": {
+                "identifier": "TestSiteCreateIfUpToDate",
+                "newPage": false,
+                "searchKey": "confdb.TestSiteCreateIfUpToDate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSiteCreateIfUpToDate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSiteCreateIfUpToDate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/confdb#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "confdb.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

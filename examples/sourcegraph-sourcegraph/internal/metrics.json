@@ -1,0 +1,742 @@
+{
+  "pathID": "/internal/metrics",
+  "documentation": {
+    "identifier": "metrics",
+    "newPage": true,
+    "searchKey": "internal/metrics",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package metrics"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/metrics#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/metrics#TestRegisterer",
+              "documentation": {
+                "identifier": "TestRegisterer",
+                "newPage": false,
+                "searchKey": "metrics.TestRegisterer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var TestRegisterer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar TestRegisterer prometheus.Registerer = testRegisterer{}\n```\n\nTestRegisterer is a behaviorless Prometheus Registerer usable for unit tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#registerer",
+              "documentation": {
+                "identifier": "registerer",
+                "newPage": false,
+                "searchKey": "metrics.registerer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var registerer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar registerer = prometheus.DefaultRegisterer\n```\n\nregisterer exists so we can override it in tests \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/metrics#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/metrics#testRegisterer",
+              "documentation": {
+                "identifier": "testRegisterer",
+                "newPage": false,
+                "searchKey": "metrics.testRegisterer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testRegisterer struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testRegisterer struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#testRegisterer.Register",
+                    "documentation": {
+                      "identifier": "testRegisterer.Register",
+                      "newPage": false,
+                      "searchKey": "metrics.testRegisterer.Register",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (testRegisterer) Register(prometheus.Collector) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (testRegisterer) Register(prometheus.Collector) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#testRegisterer.MustRegister",
+                    "documentation": {
+                      "identifier": "testRegisterer.MustRegister",
+                      "newPage": false,
+                      "searchKey": "metrics.testRegisterer.MustRegister",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (testRegisterer) MustRegister(...prometheus.Collector)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (testRegisterer) MustRegister(...prometheus.Collector)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#testRegisterer.Unregister",
+                    "documentation": {
+                      "identifier": "testRegisterer.Unregister",
+                      "newPage": false,
+                      "searchKey": "metrics.testRegisterer.Unregister",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (testRegisterer) Unregister(prometheus.Collector) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (testRegisterer) Unregister(prometheus.Collector) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#RequestMeter",
+              "documentation": {
+                "identifier": "RequestMeter",
+                "newPage": false,
+                "searchKey": "metrics.RequestMeter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RequestMeter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RequestMeter struct {\n\tcounter   *prometheus.CounterVec\n\tduration  *prometheus.HistogramVec\n\tsubsystem string\n}\n```\n\nRequestMeter wraps a Prometheus request meter (counter + duration histogram) updated by requests made by derived http.RoundTrippers. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#NewRequestMeter",
+                    "documentation": {
+                      "identifier": "NewRequestMeter",
+                      "newPage": false,
+                      "searchKey": "metrics.NewRequestMeter",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewRequestMeter(subsystem, help string) *RequestMeter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewRequestMeter(subsystem, help string) *RequestMeter\n```\n\nNewRequestMeter creates a new request meter. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#RequestMeter.Transport",
+                    "documentation": {
+                      "identifier": "RequestMeter.Transport",
+                      "newPage": false,
+                      "searchKey": "metrics.RequestMeter.Transport",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rm *RequestMeter) Transport(transport http.RoundTripper, categoryFunc func(*url.URL) string) http.RoundTripper"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rm *RequestMeter) Transport(transport http.RoundTripper, categoryFunc func(*url.URL) string) http.RoundTripper\n```\n\nTransport returns an http.RoundTripper that updates rm for each request. The categoryFunc is called to determine the category label for each request. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#RequestMeter.Doer",
+                    "documentation": {
+                      "identifier": "RequestMeter.Doer",
+                      "newPage": false,
+                      "searchKey": "metrics.RequestMeter.Doer",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rm *RequestMeter) Doer(cli httpcli.Doer, categoryFunc func(*url.URL) string) httpcli.Doer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rm *RequestMeter) Doer(cli httpcli.Doer, categoryFunc func(*url.URL) string) httpcli.Doer\n```\n\nDoer returns an httpcli.Doer that updates rm for each request. The categoryFunc is called to determine the category label for each request. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#requestCounterMiddleware",
+              "documentation": {
+                "identifier": "requestCounterMiddleware",
+                "newPage": false,
+                "searchKey": "metrics.requestCounterMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type requestCounterMiddleware struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype requestCounterMiddleware struct {\n\tmeter        *RequestMeter\n\tcli          httpcli.Doer\n\ttransport    http.RoundTripper\n\tcategoryFunc func(*url.URL) string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#requestCounterMiddleware.RoundTrip",
+                    "documentation": {
+                      "identifier": "requestCounterMiddleware.RoundTrip",
+                      "newPage": false,
+                      "searchKey": "metrics.requestCounterMiddleware.RoundTrip",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *requestCounterMiddleware) RoundTrip(r *http.Request) (resp *http.Response, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *requestCounterMiddleware) RoundTrip(r *http.Request) (resp *http.Response, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#requestCounterMiddleware.Do",
+                    "documentation": {
+                      "identifier": "requestCounterMiddleware.Do",
+                      "newPage": false,
+                      "searchKey": "metrics.requestCounterMiddleware.Do",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *requestCounterMiddleware) Do(req *http.Request) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *requestCounterMiddleware) Do(req *http.Request) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#OperationMetrics",
+              "documentation": {
+                "identifier": "OperationMetrics",
+                "newPage": false,
+                "searchKey": "metrics.OperationMetrics",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OperationMetrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OperationMetrics struct {\n\tDuration *prometheus.HistogramVec // How long did it take?\n\tCount    *prometheus.CounterVec   // How many things were processed?\n\tErrors   *prometheus.CounterVec   // How many errors occurred?\n}\n```\n\nOperationMetrics contains three common metrics for any operation. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#NewOperationMetrics",
+                    "documentation": {
+                      "identifier": "NewOperationMetrics",
+                      "newPage": false,
+                      "searchKey": "metrics.NewOperationMetrics",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewOperationMetrics(r prometheus.Registerer, metricPrefix string, fns ...OperationMetricsOption) *OperationMetrics"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewOperationMetrics(r prometheus.Registerer, metricPrefix string, fns ...OperationMetricsOption) *OperationMetrics\n```\n\nNewOperationMetrics creates an OperationMetrics value. The metrics will be immediately registered to the given registerer. This method panics on registration error. The supplied metricPrefix should be underscore_cased as it is used in the metric name. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#OperationMetrics.Observe",
+                    "documentation": {
+                      "identifier": "OperationMetrics.Observe",
+                      "newPage": false,
+                      "searchKey": "metrics.OperationMetrics.Observe",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *OperationMetrics) Observe(secs, count float64, err *error, lvals ...string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *OperationMetrics) Observe(secs, count float64, err *error, lvals ...string)\n```\n\nObserve registers an observation of a single operation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#operationMetricOptions",
+              "documentation": {
+                "identifier": "operationMetricOptions",
+                "newPage": false,
+                "searchKey": "metrics.operationMetricOptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type operationMetricOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype operationMetricOptions struct {\n\tsubsystem    string\n\tdurationHelp string\n\tcountHelp    string\n\terrorsHelp   string\n\tlabels       []string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#OperationMetricsOption",
+              "documentation": {
+                "identifier": "OperationMetricsOption",
+                "newPage": false,
+                "searchKey": "metrics.OperationMetricsOption",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OperationMetricsOption func(o *github.com/sourcegraph/sourcegraph/internal/metrics.operationMetricOptions)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OperationMetricsOption func(o *operationMetricOptions)\n```\n\nOperationMetricsOption alter the default behavior of NewOperationMetrics. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#WithSubsystem",
+                    "documentation": {
+                      "identifier": "WithSubsystem",
+                      "newPage": false,
+                      "searchKey": "metrics.WithSubsystem",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithSubsystem(subsystem string) OperationMetricsOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithSubsystem(subsystem string) OperationMetricsOption\n```\n\nWithSubsystem overrides the default subsystem for all metrics. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#WithDurationHelp",
+                    "documentation": {
+                      "identifier": "WithDurationHelp",
+                      "newPage": false,
+                      "searchKey": "metrics.WithDurationHelp",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithDurationHelp(text string) OperationMetricsOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithDurationHelp(text string) OperationMetricsOption\n```\n\nWithDurationHelp overrides the default help text for duration metrics. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#WithCountHelp",
+                    "documentation": {
+                      "identifier": "WithCountHelp",
+                      "newPage": false,
+                      "searchKey": "metrics.WithCountHelp",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithCountHelp(text string) OperationMetricsOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithCountHelp(text string) OperationMetricsOption\n```\n\nWithCountHelp overrides the default help text for count metrics. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#WithErrorsHelp",
+                    "documentation": {
+                      "identifier": "WithErrorsHelp",
+                      "newPage": false,
+                      "searchKey": "metrics.WithErrorsHelp",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithErrorsHelp(text string) OperationMetricsOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithErrorsHelp(text string) OperationMetricsOption\n```\n\nWithErrorsHelp overrides the default help text for errors metrics. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#WithLabels",
+                    "documentation": {
+                      "identifier": "WithLabels",
+                      "newPage": false,
+                      "searchKey": "metrics.WithLabels",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithLabels(labels ...string) OperationMetricsOption"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithLabels(labels ...string) OperationMetricsOption\n```\n\nWithLabels overrides the default labels for all metrics. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#SingletonOperationMetrics",
+              "documentation": {
+                "identifier": "SingletonOperationMetrics",
+                "newPage": false,
+                "searchKey": "metrics.SingletonOperationMetrics",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SingletonOperationMetrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SingletonOperationMetrics struct {\n\tsync.Once\n\tmetrics *OperationMetrics\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/metrics#SingletonOperationMetrics.Get",
+                    "documentation": {
+                      "identifier": "SingletonOperationMetrics.Get",
+                      "newPage": false,
+                      "searchKey": "metrics.SingletonOperationMetrics.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *SingletonOperationMetrics) Get(create func() *OperationMetrics) *OperationMetrics"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *SingletonOperationMetrics) Get(create func() *OperationMetrics) *OperationMetrics\n```\n\nSingletonOperationMetrics returns an operation metrics instance. If no instance has been created yet, one is constructed with the given create function. This method is safe to access concurrently. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/metrics#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/metrics#MustRegisterDiskMonitor",
+              "documentation": {
+                "identifier": "MustRegisterDiskMonitor",
+                "newPage": false,
+                "searchKey": "metrics.MustRegisterDiskMonitor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustRegisterDiskMonitor(path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustRegisterDiskMonitor(path string)\n```\n\nMustRegisterDiskMonitor exports two prometheus metrics \"src_disk_space_available_bytes{path=$path}\" and \"src_disk_space_total_bytes{path=$path}\". The values exported are for the filesystem that path is on. \n\nIt is safe to call this function more than once for the same path. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#mustRegisterOnce",
+              "documentation": {
+                "identifier": "mustRegisterOnce",
+                "newPage": false,
+                "searchKey": "metrics.mustRegisterOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustRegisterOnce(c prometheus.Collector)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustRegisterOnce(c prometheus.Collector)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#testingHTTPClient",
+              "documentation": {
+                "identifier": "testingHTTPClient",
+                "newPage": false,
+                "searchKey": "metrics.testingHTTPClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testingHTTPClient(handler http.Handler) (*http.Client, func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testingHTTPClient(handler http.Handler) (*http.Client, func())\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#doRequest",
+              "documentation": {
+                "identifier": "doRequest",
+                "newPage": false,
+                "searchKey": "metrics.doRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func doRequest(hc *http.Client, u string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc doRequest(hc *http.Client, u string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#TestRequestMeterTransport",
+              "documentation": {
+                "identifier": "TestRequestMeterTransport",
+                "newPage": false,
+                "searchKey": "metrics.TestRequestMeterTransport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRequestMeterTransport(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRequestMeterTransport(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/metrics#TestMustRegisterDiskMonitor",
+              "documentation": {
+                "identifier": "TestMustRegisterDiskMonitor",
+                "newPage": false,
+                "searchKey": "metrics.TestMustRegisterDiskMonitor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMustRegisterDiskMonitor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMustRegisterDiskMonitor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth",
+  "documentation": {
+    "identifier": "gitlaboauth",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/auth/gitlaboauth",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package gitlaboauth"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#PkgName",
+              "documentation": {
+                "identifier": "PkgName",
+                "newPage": false,
+                "searchKey": "gitlaboauth.PkgName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PkgName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PkgName = \"gitlaboauth\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#authPrefix",
+              "documentation": {
+                "identifier": "authPrefix",
+                "newPage": false,
+                "searchKey": "gitlaboauth.authPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const authPrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst authPrefix = auth.AuthURLPrefix + \"/gitlab\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#sessionKey",
+              "documentation": {
+                "identifier": "sessionKey",
+                "newPage": false,
+                "searchKey": "gitlaboauth.sessionKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sessionKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sessionKey = \"gitlaboauth@0\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#userKey",
+              "documentation": {
+                "identifier": "userKey",
+                "newPage": false,
+                "searchKey": "gitlaboauth.userKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const userKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst userKey key = iota\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#sessionIssuerHelper",
+              "documentation": {
+                "identifier": "sessionIssuerHelper",
+                "newPage": false,
+                "searchKey": "gitlaboauth.sessionIssuerHelper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sessionIssuerHelper struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sessionIssuerHelper struct {\n\t*extsvc.CodeHost\n\tclientID string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#sessionIssuerHelper.GetOrCreateUser",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.GetOrCreateUser",
+                      "newPage": false,
+                      "searchKey": "gitlaboauth.sessionIssuerHelper.GetOrCreateUser",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) GetOrCreateUser(ctx context.Context, token *oauth2.Token, anonymousUserID, firstSourceURL string) (actr *actor.Actor, safeErrMsg string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) GetOrCreateUser(ctx context.Context, token *oauth2.Token, anonymousUserID, firstSourceURL string) (actr *actor.Actor, safeErrMsg string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#sessionIssuerHelper.CreateCodeHostConnection",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.CreateCodeHostConnection",
+                      "newPage": false,
+                      "searchKey": "gitlaboauth.sessionIssuerHelper.CreateCodeHostConnection",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) CreateCodeHostConnection(ctx context.Context, token *oauth2.Token, providerID string) (safeErrMsg string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) CreateCodeHostConnection(ctx context.Context, token *oauth2.Token, providerID string) (safeErrMsg string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#sessionIssuerHelper.DeleteStateCookie",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.DeleteStateCookie",
+                      "newPage": false,
+                      "searchKey": "gitlaboauth.sessionIssuerHelper.DeleteStateCookie",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) DeleteStateCookie(w http.ResponseWriter)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) DeleteStateCookie(w http.ResponseWriter)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#sessionIssuerHelper.SessionData",
+                    "documentation": {
+                      "identifier": "sessionIssuerHelper.SessionData",
+                      "newPage": false,
+                      "searchKey": "gitlaboauth.sessionIssuerHelper.SessionData",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sessionIssuerHelper) SessionData(token *oauth2.Token) oauth.SessionData"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sessionIssuerHelper) SessionData(token *oauth2.Token) oauth.SessionData\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#key",
+              "documentation": {
+                "identifier": "key",
+                "newPage": false,
+                "searchKey": "gitlaboauth.key",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type key int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype key int\n```\n\nunexported key type prevents collisions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#MockProvider",
+              "documentation": {
+                "identifier": "MockProvider",
+                "newPage": false,
+                "searchKey": "gitlaboauth.MockProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockProvider struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockProvider struct {\n\t*oauth.Provider\n\tlastCallbackRequestURL *url.URL\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#newMockProvider",
+                    "documentation": {
+                      "identifier": "newMockProvider",
+                      "newPage": false,
+                      "searchKey": "gitlaboauth.newMockProvider",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newMockProvider(t *testing.T, clientID, clientSecret, baseURL string) *MockProvider"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newMockProvider(t *testing.T, clientID, clientSecret, baseURL string) *MockProvider\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "gitlaboauth.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#parseConfig",
+              "documentation": {
+                "identifier": "parseConfig",
+                "newPage": false,
+                "searchKey": "gitlaboauth.parseConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseConfig(cfg *conf.Unified) (ps map[schema.GitLabAuthProvider]providers.Provider, problems conf.Problems)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseConfig(cfg *conf.Unified) (ps map[schema.GitLabAuthProvider]providers.Provider, problems conf.Problems)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#LoginHandler",
+              "documentation": {
+                "identifier": "LoginHandler",
+                "newPage": false,
+                "searchKey": "gitlaboauth.LoginHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LoginHandler(config *oauth2.Config, failure http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LoginHandler(config *oauth2.Config, failure http.Handler) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#CallbackHandler",
+              "documentation": {
+                "identifier": "CallbackHandler",
+                "newPage": false,
+                "searchKey": "gitlaboauth.CallbackHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CallbackHandler(config *oauth2.Config, success, failure http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CallbackHandler(config *oauth2.Config, success, failure http.Handler) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#gitlabHandler",
+              "documentation": {
+                "identifier": "gitlabHandler",
+                "newPage": false,
+                "searchKey": "gitlaboauth.gitlabHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gitlabHandler(config *oauth2.Config, success, failure http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gitlabHandler(config *oauth2.Config, success, failure http.Handler) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#validateResponse",
+              "documentation": {
+                "identifier": "validateResponse",
+                "newPage": false,
+                "searchKey": "gitlaboauth.validateResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validateResponse(user *gitlab.User, err error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validateResponse(user *gitlab.User, err error) error\n```\n\nvalidateResponse returns an error if the given GitLab user or error are unexpected. Returns nil if they are valid. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#gitlabClientFromAuthURL",
+              "documentation": {
+                "identifier": "gitlabClientFromAuthURL",
+                "newPage": false,
+                "searchKey": "gitlaboauth.gitlabClientFromAuthURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gitlabClientFromAuthURL(authURL, oauthToken string) (*gitlab.Client, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gitlabClientFromAuthURL(authURL, oauthToken string) (*gitlab.Client, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "gitlaboauth.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#Middleware",
+              "documentation": {
+                "identifier": "Middleware",
+                "newPage": false,
+                "searchKey": "gitlaboauth.Middleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Middleware(db dbutil.DB) *auth.Middleware"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Middleware(db dbutil.DB) *auth.Middleware\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#parseProvider",
+              "documentation": {
+                "identifier": "parseProvider",
+                "newPage": false,
+                "searchKey": "gitlaboauth.parseProvider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseProvider(callbackURL string, p *schema.GitLabAuthProvider, sourceCfg schema.AuthProviders) (provider *oauth.Provider, messages []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseProvider(callbackURL string, p *schema.GitLabAuthProvider, sourceCfg schema.AuthProviders) (provider *oauth.Provider, messages []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#getStateConfig",
+              "documentation": {
+                "identifier": "getStateConfig",
+                "newPage": false,
+                "searchKey": "gitlaboauth.getStateConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getStateConfig() gologin.CookieConfig"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getStateConfig() gologin.CookieConfig\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#requestedScopes",
+              "documentation": {
+                "identifier": "requestedScopes",
+                "newPage": false,
+                "searchKey": "gitlaboauth.requestedScopes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func requestedScopes(extraScopes []string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc requestedScopes(extraScopes []string) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#WithUser",
+              "documentation": {
+                "identifier": "WithUser",
+                "newPage": false,
+                "searchKey": "gitlaboauth.WithUser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithUser(ctx context.Context, user *gitlab.User) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithUser(ctx context.Context, user *gitlab.User) context.Context\n```\n\nWithUser returns a copy of ctx that stores the GitLab User. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#UserFromContext",
+              "documentation": {
+                "identifier": "UserFromContext",
+                "newPage": false,
+                "searchKey": "gitlaboauth.UserFromContext",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UserFromContext(ctx context.Context) (*gitlab.User, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UserFromContext(ctx context.Context) (*gitlab.User, error)\n```\n\nUserFromContext returns the GitLab User from the ctx. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#TestParseConfig",
+              "documentation": {
+                "identifier": "TestParseConfig",
+                "newPage": false,
+                "searchKey": "gitlaboauth.TestParseConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseConfig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#provider",
+              "documentation": {
+                "identifier": "provider",
+                "newPage": false,
+                "searchKey": "gitlaboauth.provider",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func provider(serviceID string, oauth2Config oauth2.Config) *oauth.Provider"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc provider(serviceID string, oauth2Config oauth2.Config) *oauth.Provider\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#TestMiddleware",
+              "documentation": {
+                "identifier": "TestMiddleware",
+                "newPage": false,
+                "searchKey": "gitlaboauth.TestMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMiddleware(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMiddleware(t *testing.T)\n```\n\nTestMiddleware exercises the Middleware with requests that simulate the OAuth 2 login flow on GitLab. This tests the logic between the client-issued HTTP requests and the responses from the various endpoints, but does NOT cover the logic that is contained within `golang.org/x/oauth2` and `github.com/dghubble/gologin` which ensures the correctness of the `/callback` handler. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/auth/gitlaboauth#TestSessionIssuerHelper_CreateCodeHostConnection",
+              "documentation": {
+                "identifier": "TestSessionIssuerHelper_CreateCodeHostConnection",
+                "newPage": false,
+                "searchKey": "gitlaboauth.TestSessionIssuerHelper_CreateCodeHostConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSessionIssuerHelper_CreateCodeHostConnection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSessionIssuerHelper_CreateCodeHostConnection(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

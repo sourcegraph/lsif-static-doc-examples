@@ -1,0 +1,250 @@
+{
+  "pathID": "/cmd/github-proxy",
+  "documentation": {
+    "identifier": "github-proxy",
+    "newPage": true,
+    "searchKey": "cmd/github-proxy",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/github-proxy#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/github-proxy#port",
+              "documentation": {
+                "identifier": "port",
+                "newPage": false,
+                "searchKey": "main.port",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const port"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst port = \"3180\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/github-proxy#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/github-proxy#logRequests",
+              "documentation": {
+                "identifier": "logRequests",
+                "newPage": false,
+                "searchKey": "main.logRequests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var logRequests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar logRequests, _ = strconv.ParseBool(env.Get(\"LOG_REQUESTS\", \"\", \"log HTTP requests\"))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/github-proxy#requestMu",
+              "documentation": {
+                "identifier": "requestMu",
+                "newPage": false,
+                "searchKey": "main.requestMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestMu sync.Mutex\n```\n\nrequestMu ensures we only do one request at a time to prevent tripping abuse detection. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/github-proxy#metricWaitingRequestsGauge",
+              "documentation": {
+                "identifier": "metricWaitingRequestsGauge",
+                "newPage": false,
+                "searchKey": "main.metricWaitingRequestsGauge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricWaitingRequestsGauge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricWaitingRequestsGauge = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/github-proxy#hopHeaders",
+              "documentation": {
+                "identifier": "hopHeaders",
+                "newPage": false,
+                "searchKey": "main.hopHeaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hopHeaders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hopHeaders = ...\n```\n\nlist obtained from httputil of headers not to forward. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/github-proxy#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/github-proxy#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/github-proxy#instrumentHandler",
+              "documentation": {
+                "identifier": "instrumentHandler",
+                "newPage": false,
+                "searchKey": "main.instrumentHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func instrumentHandler(r prometheus.Registerer, h http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc instrumentHandler(r prometheus.Registerer, h http.Handler) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/github-proxy#TestInstrumentHandler",
+              "documentation": {
+                "identifier": "TestInstrumentHandler",
+                "newPage": false,
+                "searchKey": "main.TestInstrumentHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInstrumentHandler(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInstrumentHandler(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

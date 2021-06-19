@@ -1,0 +1,550 @@
+{
+  "pathID": "/internal/repoupdater/protocol",
+  "documentation": {
+    "identifier": "protocol",
+    "newPage": true,
+    "searchKey": "internal/repoupdater/protocol",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package protocol"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/repoupdater/protocol#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoUpdateSchedulerInfoArgs",
+              "documentation": {
+                "identifier": "RepoUpdateSchedulerInfoArgs",
+                "newPage": false,
+                "searchKey": "protocol.RepoUpdateSchedulerInfoArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoUpdateSchedulerInfoArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoUpdateSchedulerInfoArgs struct {\n\t// RepoName is the repository name to look up.\n\t// XXX(tsenart): Depreacted. Remove after lookup by ID is rolled out.\n\tRepoName api.RepoName\n\t// The ID of the repo to lookup the schedule for.\n\tID api.RepoID\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoUpdateSchedulerInfoResult",
+              "documentation": {
+                "identifier": "RepoUpdateSchedulerInfoResult",
+                "newPage": false,
+                "searchKey": "protocol.RepoUpdateSchedulerInfoResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoUpdateSchedulerInfoResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoUpdateSchedulerInfoResult struct {\n\tSchedule *RepoScheduleState `json:\",omitempty\"`\n\tQueue    *RepoQueueState    `json:\",omitempty\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoScheduleState",
+              "documentation": {
+                "identifier": "RepoScheduleState",
+                "newPage": false,
+                "searchKey": "protocol.RepoScheduleState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoScheduleState struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoScheduleState struct {\n\tIndex           int\n\tTotal           int\n\tIntervalSeconds int\n\tDue             time.Time\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoQueueState",
+              "documentation": {
+                "identifier": "RepoQueueState",
+                "newPage": false,
+                "searchKey": "protocol.RepoQueueState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoQueueState struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoQueueState struct {\n\tIndex    int\n\tTotal    int\n\tUpdating bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoExternalServicesRequest",
+              "documentation": {
+                "identifier": "RepoExternalServicesRequest",
+                "newPage": false,
+                "searchKey": "protocol.RepoExternalServicesRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoExternalServicesRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoExternalServicesRequest struct {\n\t// ID of the repository being queried.\n\tID api.RepoID\n}\n```\n\nRepoExternalServicesRequest is a request for the external services associated with a repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoExternalServicesResponse",
+              "documentation": {
+                "identifier": "RepoExternalServicesResponse",
+                "newPage": false,
+                "searchKey": "protocol.RepoExternalServicesResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoExternalServicesResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoExternalServicesResponse struct {\n\tExternalServices []api.ExternalService\n}\n```\n\nRepoExternalServicesResponse is returned in response to an RepoExternalServicesRequest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoLookupArgs",
+              "documentation": {
+                "identifier": "RepoLookupArgs",
+                "newPage": false,
+                "searchKey": "protocol.RepoLookupArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoLookupArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoLookupArgs struct {\n\t// Repo is the repository name to look up.\n\tRepo api.RepoName `json:\",omitempty\"`\n}\n```\n\nRepoLookupArgs is a request for information about a repository on repoupdater. \n\nExactly one of Repo and ExternalRepo should be set. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater/protocol#RepoLookupArgs.String",
+                    "documentation": {
+                      "identifier": "RepoLookupArgs.String",
+                      "newPage": false,
+                      "searchKey": "protocol.RepoLookupArgs.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *RepoLookupArgs) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *RepoLookupArgs) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoLookupResult",
+              "documentation": {
+                "identifier": "RepoLookupResult",
+                "newPage": false,
+                "searchKey": "protocol.RepoLookupResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoLookupResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoLookupResult struct {\n\t// Repo contains information about the repository, if it is found. If an error occurred, it is nil.\n\tRepo *RepoInfo\n\n\tErrorNotFound               bool // the repository host reported that the repository was not found\n\tErrorUnauthorized           bool // the repository host rejected the client's authorization\n\tErrorTemporarilyUnavailable bool // the repository host was temporarily unavailable (e.g., rate limit exceeded)\n}\n```\n\nRepoLookupResult is the response to a repository information request (RepoLookupArgs). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater/protocol#RepoLookupResult.String",
+                    "documentation": {
+                      "identifier": "RepoLookupResult.String",
+                      "newPage": false,
+                      "searchKey": "protocol.RepoLookupResult.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepoLookupResult) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepoLookupResult) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoInfo",
+              "documentation": {
+                "identifier": "RepoInfo",
+                "newPage": false,
+                "searchKey": "protocol.RepoInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoInfo struct {\n\t// Name the canonical name of the repository. Its case (uppercase/lowercase) may differ from the name arg used\n\t// in the lookup. If the repository was renamed on the external service, this name is the new name.\n\tName api.RepoName\n\n\tDescription string // repository description (from the external service)\n\tFork        bool   // whether this repository is a fork of another repository (from the external service)\n\tArchived    bool   // whether this repository is archived (from the external service)\n\tPrivate     bool   // whether this repository is private (from the external service)\n\n\tVCS VCSInfo // VCS-related information (for cloning/updating)\n\n\tLinks *RepoLinks // link URLs related to this repository\n\n\t// ExternalRepo specifies this repository's ID on the external service where it resides (and the external\n\t// service itself).\n\tExternalRepo api.ExternalRepoSpec\n}\n```\n\nRepoInfo is information about a repository that lives on an external service (such as GitHub or GitLab). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater/protocol#RepoInfo.String",
+                    "documentation": {
+                      "identifier": "RepoInfo.String",
+                      "newPage": false,
+                      "searchKey": "protocol.RepoInfo.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *RepoInfo) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *RepoInfo) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#VCSInfo",
+              "documentation": {
+                "identifier": "VCSInfo",
+                "newPage": false,
+                "searchKey": "protocol.VCSInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type VCSInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype VCSInfo struct {\n\tURL string // the Git remote URL\n}\n```\n\nVCSInfo describes how to access an external repository's Git data (to clone or update it). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoLinks",
+              "documentation": {
+                "identifier": "RepoLinks",
+                "newPage": false,
+                "searchKey": "protocol.RepoLinks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoLinks struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoLinks struct {\n\tRoot   string // the repository's main (root) page URL\n\tTree   string // the URL to a tree, with {rev} and {path} substitution variables\n\tBlob   string // the URL to a blob, with {rev} and {path} substitution variables\n\tCommit string // the URL to a commit, with {commit} substitution variable\n}\n```\n\nRepoLinks contains URLs and URL patterns for objects in this repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoUpdateRequest",
+              "documentation": {
+                "identifier": "RepoUpdateRequest",
+                "newPage": false,
+                "searchKey": "protocol.RepoUpdateRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoUpdateRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoUpdateRequest struct {\n\tRepo api.RepoName `json:\"repo\"`\n}\n```\n\nRepoUpdateRequest is a request to update the contents of a given repo, or clone it if it doesn't exist. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/repoupdater/protocol#RepoUpdateRequest.String",
+                    "documentation": {
+                      "identifier": "RepoUpdateRequest.String",
+                      "newPage": false,
+                      "searchKey": "protocol.RepoUpdateRequest.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *RepoUpdateRequest) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *RepoUpdateRequest) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#RepoUpdateResponse",
+              "documentation": {
+                "identifier": "RepoUpdateResponse",
+                "newPage": false,
+                "searchKey": "protocol.RepoUpdateResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepoUpdateResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepoUpdateResponse struct {\n\t// ID of the repo that got an update request.\n\tID api.RepoID `json:\"id\"`\n\t// Name of the repo that got an update request.\n\tName string `json:\"name\"`\n\t// URL of the repo that got an update request.\n\tURL string `json:\"url\"`\n}\n```\n\nRepoUpdateResponse is a response type to a RepoUpdateRequest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#ChangesetSyncRequest",
+              "documentation": {
+                "identifier": "ChangesetSyncRequest",
+                "newPage": false,
+                "searchKey": "protocol.ChangesetSyncRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetSyncRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetSyncRequest struct {\n\tIDs []int64\n}\n```\n\nChangesetSyncRequest is a request to sync a number of changesets \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#ChangesetSyncResponse",
+              "documentation": {
+                "identifier": "ChangesetSyncResponse",
+                "newPage": false,
+                "searchKey": "protocol.ChangesetSyncResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ChangesetSyncResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ChangesetSyncResponse struct {\n\tError string\n}\n```\n\nChangesetSyncResponse is a response to sync a number of changesets \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#PermsSyncRequest",
+              "documentation": {
+                "identifier": "PermsSyncRequest",
+                "newPage": false,
+                "searchKey": "protocol.PermsSyncRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PermsSyncRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PermsSyncRequest struct {\n\tUserIDs []int32      `json:\"user_ids\"`\n\tRepoIDs []api.RepoID `json:\"repo_ids\"`\n}\n```\n\nPermsSyncRequest is a request to sync permissions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#PermsSyncResponse",
+              "documentation": {
+                "identifier": "PermsSyncResponse",
+                "newPage": false,
+                "searchKey": "protocol.PermsSyncResponse",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PermsSyncResponse struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PermsSyncResponse struct {\n\tError string\n}\n```\n\nPermsSyncResponse is a response to sync permissions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#ExternalServiceSyncRequest",
+              "documentation": {
+                "identifier": "ExternalServiceSyncRequest",
+                "newPage": false,
+                "searchKey": "protocol.ExternalServiceSyncRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalServiceSyncRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalServiceSyncRequest struct {\n\tExternalService api.ExternalService\n}\n```\n\nExternalServiceSyncRequest is a request to sync a specific external service eagerly. \n\nThe FrontendAPI is one of the issuers of this request. It does so when creating or updating an external service so that admins don't have to wait until the next sync run to see their repos being synced. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repoupdater/protocol#ExternalServiceSyncResult",
+              "documentation": {
+                "identifier": "ExternalServiceSyncResult",
+                "newPage": false,
+                "searchKey": "protocol.ExternalServiceSyncResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalServiceSyncResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalServiceSyncResult struct {\n\tExternalService api.ExternalService\n\tError           string\n}\n```\n\nExternalServiceSyncResult is a result type of an external service's sync request. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1417 @@
+{
+  "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks",
+  "documentation": {
+    "identifier": "mocks",
+    "newPage": true,
+    "searchKey": "enterprise/internal/codeintel/stores/uploadstore/mocks",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package mocks"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#MockStore",
+              "documentation": {
+                "identifier": "MockStore",
+                "newPage": false,
+                "searchKey": "mocks.MockStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockStore struct {\n\t// ComposeFunc is an instance of a mock function object controlling the\n\t// behavior of the method Compose.\n\tComposeFunc *StoreComposeFunc\n\t// DeleteFunc is an instance of a mock function object controlling the\n\t// behavior of the method Delete.\n\tDeleteFunc *StoreDeleteFunc\n\t// GetFunc is an instance of a mock function object controlling the\n\t// behavior of the method Get.\n\tGetFunc *StoreGetFunc\n\t// InitFunc is an instance of a mock function object controlling the\n\t// behavior of the method Init.\n\tInitFunc *StoreInitFunc\n\t// UploadFunc is an instance of a mock function object controlling the\n\t// behavior of the method Upload.\n\tUploadFunc *StoreUploadFunc\n}\n```\n\nMockStore is a mock implementation of the Store interface (from the package github.com/sourcegraph/sourcegraph/enterprise/internal/codeintel/stores/uploadstore) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#NewMockStore",
+                    "documentation": {
+                      "identifier": "NewMockStore",
+                      "newPage": false,
+                      "searchKey": "mocks.NewMockStore",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockStore() *MockStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockStore() *MockStore\n```\n\nNewMockStore creates a new mock of the Store interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#NewMockStoreFrom",
+                    "documentation": {
+                      "identifier": "NewMockStoreFrom",
+                      "newPage": false,
+                      "searchKey": "mocks.NewMockStoreFrom",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockStoreFrom(i uploadstore.Store) *MockStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockStoreFrom(i uploadstore.Store) *MockStore\n```\n\nNewMockStoreFrom creates a new mock of the MockStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#MockStore.Compose",
+                    "documentation": {
+                      "identifier": "MockStore.Compose",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Compose",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Compose(v0 context.Context, v1 string, v2 ...string) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Compose(v0 context.Context, v1 string, v2 ...string) (int64, error)\n```\n\nCompose delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#MockStore.Delete",
+                    "documentation": {
+                      "identifier": "MockStore.Delete",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Delete",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Delete(v0 context.Context, v1 string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Delete(v0 context.Context, v1 string) error\n```\n\nDelete delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#MockStore.Get",
+                    "documentation": {
+                      "identifier": "MockStore.Get",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Get(v0 context.Context, v1 string) (io.ReadCloser, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Get(v0 context.Context, v1 string) (io.ReadCloser, error)\n```\n\nGet delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#MockStore.Init",
+                    "documentation": {
+                      "identifier": "MockStore.Init",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Init",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Init(v0 context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Init(v0 context.Context) error\n```\n\nInit delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#MockStore.Upload",
+                    "documentation": {
+                      "identifier": "MockStore.Upload",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Upload",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Upload(v0 context.Context, v1 string, v2 io.Reader) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Upload(v0 context.Context, v1 string, v2 io.Reader) (int64, error)\n```\n\nUpload delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFunc",
+              "documentation": {
+                "identifier": "StoreComposeFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreComposeFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreComposeFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreComposeFunc struct {\n\tdefaultHook func(context.Context, string, ...string) (int64, error)\n\thooks       []func(context.Context, string, ...string) (int64, error)\n\thistory     []StoreComposeFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreComposeFunc describes the behavior when the Compose method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreComposeFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreComposeFunc) SetDefaultHook(hook func(context.Context, string, ...string) (int64, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreComposeFunc) SetDefaultHook(hook func(context.Context, string, ...string) (int64, error))\n```\n\nSetDefaultHook sets function that is called when the Compose method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreComposeFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreComposeFunc) PushHook(hook func(context.Context, string, ...string) (int64, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreComposeFunc) PushHook(hook func(context.Context, string, ...string) (int64, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Compose method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreComposeFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreComposeFunc) SetDefaultReturn(r0 int64, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreComposeFunc) SetDefaultReturn(r0 int64, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreComposeFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreComposeFunc) PushReturn(r0 int64, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreComposeFunc) PushReturn(r0 int64, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreComposeFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreComposeFunc) nextHook() func(context.Context, string, ...string) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreComposeFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreComposeFunc) appendCall(r0 StoreComposeFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFunc.History",
+                    "documentation": {
+                      "identifier": "StoreComposeFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreComposeFunc) History() []StoreComposeFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreComposeFunc) History() []StoreComposeFuncCall\n```\n\nHistory returns a sequence of StoreComposeFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFuncCall",
+              "documentation": {
+                "identifier": "StoreComposeFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreComposeFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreComposeFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreComposeFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 string\n\t// Arg2 is a slice containing the values of the variadic arguments\n\t// passed to this method invocation.\n\tArg2 []string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 int64\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreComposeFuncCall is an object that describes an invocation of method Compose on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreComposeFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreComposeFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreComposeFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. The variadic slice argument is flattened in this array such that one positional argument and three variadic arguments would result in a slice of four, not two. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreComposeFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreComposeFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreComposeFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreComposeFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreComposeFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFunc",
+              "documentation": {
+                "identifier": "StoreDeleteFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreDeleteFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDeleteFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDeleteFunc struct {\n\tdefaultHook func(context.Context, string) error\n\thooks       []func(context.Context, string) error\n\thistory     []StoreDeleteFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreDeleteFunc describes the behavior when the Delete method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreDeleteFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDeleteFunc) SetDefaultHook(hook func(context.Context, string) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDeleteFunc) SetDefaultHook(hook func(context.Context, string) error)\n```\n\nSetDefaultHook sets function that is called when the Delete method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreDeleteFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDeleteFunc) PushHook(hook func(context.Context, string) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDeleteFunc) PushHook(hook func(context.Context, string) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Delete method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDeleteFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDeleteFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDeleteFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreDeleteFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDeleteFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDeleteFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreDeleteFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDeleteFunc) nextHook() func(context.Context, string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDeleteFunc) nextHook() func(context.Context, string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreDeleteFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDeleteFunc) appendCall(r0 StoreDeleteFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFunc.History",
+                    "documentation": {
+                      "identifier": "StoreDeleteFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDeleteFunc) History() []StoreDeleteFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDeleteFunc) History() []StoreDeleteFuncCall\n```\n\nHistory returns a sequence of StoreDeleteFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFuncCall",
+              "documentation": {
+                "identifier": "StoreDeleteFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreDeleteFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDeleteFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDeleteFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreDeleteFuncCall is an object that describes an invocation of method Delete on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreDeleteFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDeleteFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDeleteFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreDeleteFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreDeleteFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDeleteFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDeleteFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDeleteFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFunc",
+              "documentation": {
+                "identifier": "StoreGetFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreGetFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreGetFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreGetFunc struct {\n\tdefaultHook func(context.Context, string) (io.ReadCloser, error)\n\thooks       []func(context.Context, string) (io.ReadCloser, error)\n\thistory     []StoreGetFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreGetFunc describes the behavior when the Get method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreGetFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreGetFunc) SetDefaultHook(hook func(context.Context, string) (io.ReadCloser, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreGetFunc) SetDefaultHook(hook func(context.Context, string) (io.ReadCloser, error))\n```\n\nSetDefaultHook sets function that is called when the Get method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreGetFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreGetFunc) PushHook(hook func(context.Context, string) (io.ReadCloser, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreGetFunc) PushHook(hook func(context.Context, string) (io.ReadCloser, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Get method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreGetFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreGetFunc) SetDefaultReturn(r0 io.ReadCloser, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreGetFunc) SetDefaultReturn(r0 io.ReadCloser, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreGetFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreGetFunc) PushReturn(r0 io.ReadCloser, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreGetFunc) PushReturn(r0 io.ReadCloser, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreGetFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreGetFunc) nextHook() func(context.Context, string) (io.ReadCloser, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreGetFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreGetFunc) appendCall(r0 StoreGetFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFunc.History",
+                    "documentation": {
+                      "identifier": "StoreGetFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreGetFunc) History() []StoreGetFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreGetFunc) History() []StoreGetFuncCall\n```\n\nHistory returns a sequence of StoreGetFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFuncCall",
+              "documentation": {
+                "identifier": "StoreGetFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreGetFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreGetFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreGetFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 io.ReadCloser\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreGetFuncCall is an object that describes an invocation of method Get on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreGetFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreGetFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreGetFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreGetFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreGetFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreGetFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreGetFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreGetFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFunc",
+              "documentation": {
+                "identifier": "StoreInitFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreInitFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreInitFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreInitFunc struct {\n\tdefaultHook func(context.Context) error\n\thooks       []func(context.Context) error\n\thistory     []StoreInitFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreInitFunc describes the behavior when the Init method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreInitFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreInitFunc) SetDefaultHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreInitFunc) SetDefaultHook(hook func(context.Context) error)\n```\n\nSetDefaultHook sets function that is called when the Init method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreInitFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreInitFunc) PushHook(hook func(context.Context) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreInitFunc) PushHook(hook func(context.Context) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Init method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreInitFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreInitFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreInitFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreInitFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreInitFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreInitFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreInitFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreInitFunc) nextHook() func(context.Context) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreInitFunc) nextHook() func(context.Context) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreInitFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreInitFunc) appendCall(r0 StoreInitFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFunc.History",
+                    "documentation": {
+                      "identifier": "StoreInitFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreInitFunc) History() []StoreInitFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreInitFunc) History() []StoreInitFuncCall\n```\n\nHistory returns a sequence of StoreInitFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFuncCall",
+              "documentation": {
+                "identifier": "StoreInitFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreInitFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreInitFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreInitFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreInitFuncCall is an object that describes an invocation of method Init on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreInitFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreInitFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreInitFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreInitFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreInitFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreInitFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreInitFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreInitFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFunc",
+              "documentation": {
+                "identifier": "StoreUploadFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreUploadFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreUploadFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreUploadFunc struct {\n\tdefaultHook func(context.Context, string, io.Reader) (int64, error)\n\thooks       []func(context.Context, string, io.Reader) (int64, error)\n\thistory     []StoreUploadFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreUploadFunc describes the behavior when the Upload method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreUploadFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreUploadFunc) SetDefaultHook(hook func(context.Context, string, io.Reader) (int64, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreUploadFunc) SetDefaultHook(hook func(context.Context, string, io.Reader) (int64, error))\n```\n\nSetDefaultHook sets function that is called when the Upload method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreUploadFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreUploadFunc) PushHook(hook func(context.Context, string, io.Reader) (int64, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreUploadFunc) PushHook(hook func(context.Context, string, io.Reader) (int64, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Upload method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreUploadFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreUploadFunc) SetDefaultReturn(r0 int64, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreUploadFunc) SetDefaultReturn(r0 int64, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreUploadFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreUploadFunc) PushReturn(r0 int64, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreUploadFunc) PushReturn(r0 int64, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreUploadFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreUploadFunc) nextHook() func(context.Context, string, io.Reader) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreUploadFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreUploadFunc) appendCall(r0 StoreUploadFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFunc.History",
+                    "documentation": {
+                      "identifier": "StoreUploadFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreUploadFunc) History() []StoreUploadFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreUploadFunc) History() []StoreUploadFuncCall\n```\n\nHistory returns a sequence of StoreUploadFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFuncCall",
+              "documentation": {
+                "identifier": "StoreUploadFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreUploadFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreUploadFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreUploadFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 string\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 io.Reader\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 int64\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreUploadFuncCall is an object that describes an invocation of method Upload on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreUploadFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreUploadFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreUploadFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codeintel/stores/uploadstore/mocks#StoreUploadFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreUploadFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreUploadFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreUploadFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreUploadFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

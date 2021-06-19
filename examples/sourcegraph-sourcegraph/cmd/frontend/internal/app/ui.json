@@ -1,0 +1,2840 @@
+{
+  "pathID": "/cmd/frontend/internal/app/ui",
+  "documentation": {
+    "identifier": "ui",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/app/ui",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package ui"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package ui handles server-side rendering of the Sourcegraph web app. \n\n### hdr-DevelopmentDevelopment\nTo develop, simply update the template files in cmd/frontend/internal/app/ui/... and reload the page (the templates will be automatically reloaded). \n\n### hdr-Testing_the_error_pageTesting the error page\nTesting out the layout/styling of the error page that is used to handle internal server errors, 404s, etc. is very easy by visiting: \n\n```\n[http://localhost:3080/__errorTest?nodebug=true&error=theerror&status=500](http://localhost:3080/__errorTest?nodebug=true&error=theerror&status=500)\n\n```\nThe parameters are as follows: \n\n```\nnodebug=true -- hides error messages (which is ALWAYS the case in production)\nerror=theerror -- controls the error message text\nstatus=500 -- controls the status code\n\n```\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/ui#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeHome",
+              "documentation": {
+                "identifier": "routeHome",
+                "newPage": false,
+                "searchKey": "ui.routeHome",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeHome"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeHome = \"home\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSearch",
+              "documentation": {
+                "identifier": "routeSearch",
+                "newPage": false,
+                "searchKey": "ui.routeSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSearch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSearch = \"search\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSearchBadge",
+              "documentation": {
+                "identifier": "routeSearchBadge",
+                "newPage": false,
+                "searchKey": "ui.routeSearchBadge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSearchBadge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSearchBadge = \"search-badge\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepo",
+              "documentation": {
+                "identifier": "routeRepo",
+                "newPage": false,
+                "searchKey": "ui.routeRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepo = \"repo\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoSettings",
+              "documentation": {
+                "identifier": "routeRepoSettings",
+                "newPage": false,
+                "searchKey": "ui.routeRepoSettings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoSettings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoSettings = \"repo-settings\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoCommit",
+              "documentation": {
+                "identifier": "routeRepoCommit",
+                "newPage": false,
+                "searchKey": "ui.routeRepoCommit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoCommit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoCommit = \"repo-commit\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoBranches",
+              "documentation": {
+                "identifier": "routeRepoBranches",
+                "newPage": false,
+                "searchKey": "ui.routeRepoBranches",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoBranches"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoBranches = \"repo-branches\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoDocs",
+              "documentation": {
+                "identifier": "routeRepoDocs",
+                "newPage": false,
+                "searchKey": "ui.routeRepoDocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoDocs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoDocs = \"repo-docs\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoCommits",
+              "documentation": {
+                "identifier": "routeRepoCommits",
+                "newPage": false,
+                "searchKey": "ui.routeRepoCommits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoCommits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoCommits = \"repo-commits\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoTags",
+              "documentation": {
+                "identifier": "routeRepoTags",
+                "newPage": false,
+                "searchKey": "ui.routeRepoTags",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoTags"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoTags = \"repo-tags\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoCompare",
+              "documentation": {
+                "identifier": "routeRepoCompare",
+                "newPage": false,
+                "searchKey": "ui.routeRepoCompare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoCompare"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoCompare = \"repo-compare\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoStats",
+              "documentation": {
+                "identifier": "routeRepoStats",
+                "newPage": false,
+                "searchKey": "ui.routeRepoStats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoStats"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoStats = \"repo-stats\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeInsights",
+              "documentation": {
+                "identifier": "routeInsights",
+                "newPage": false,
+                "searchKey": "ui.routeInsights",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeInsights"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeInsights = \"insights\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeBatchChanges",
+              "documentation": {
+                "identifier": "routeBatchChanges",
+                "newPage": false,
+                "searchKey": "ui.routeBatchChanges",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeBatchChanges"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeBatchChanges = \"batch-changes\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeCodeMonitoring",
+              "documentation": {
+                "identifier": "routeCodeMonitoring",
+                "newPage": false,
+                "searchKey": "ui.routeCodeMonitoring",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeCodeMonitoring"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeCodeMonitoring = \"code-monitoring\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeContexts",
+              "documentation": {
+                "identifier": "routeContexts",
+                "newPage": false,
+                "searchKey": "ui.routeContexts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeContexts"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeContexts = \"contexts\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeThreads",
+              "documentation": {
+                "identifier": "routeThreads",
+                "newPage": false,
+                "searchKey": "ui.routeThreads",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeThreads"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeThreads = \"threads\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeTree",
+              "documentation": {
+                "identifier": "routeTree",
+                "newPage": false,
+                "searchKey": "ui.routeTree",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeTree"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeTree = \"tree\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeBlob",
+              "documentation": {
+                "identifier": "routeBlob",
+                "newPage": false,
+                "searchKey": "ui.routeBlob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeBlob"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeBlob = \"blob\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRaw",
+              "documentation": {
+                "identifier": "routeRaw",
+                "newPage": false,
+                "searchKey": "ui.routeRaw",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRaw"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRaw = \"raw\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeOrganizations",
+              "documentation": {
+                "identifier": "routeOrganizations",
+                "newPage": false,
+                "searchKey": "ui.routeOrganizations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeOrganizations"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeOrganizations = \"org\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSettings",
+              "documentation": {
+                "identifier": "routeSettings",
+                "newPage": false,
+                "searchKey": "ui.routeSettings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSettings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSettings = \"settings\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSiteAdmin",
+              "documentation": {
+                "identifier": "routeSiteAdmin",
+                "newPage": false,
+                "searchKey": "ui.routeSiteAdmin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSiteAdmin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSiteAdmin = \"site-admin\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeAPIConsole",
+              "documentation": {
+                "identifier": "routeAPIConsole",
+                "newPage": false,
+                "searchKey": "ui.routeAPIConsole",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeAPIConsole"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeAPIConsole = \"api-console\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeUser",
+              "documentation": {
+                "identifier": "routeUser",
+                "newPage": false,
+                "searchKey": "ui.routeUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeUser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeUser = \"user\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeUserSettings",
+              "documentation": {
+                "identifier": "routeUserSettings",
+                "newPage": false,
+                "searchKey": "ui.routeUserSettings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeUserSettings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeUserSettings = \"user-settings\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeUserRedirect",
+              "documentation": {
+                "identifier": "routeUserRedirect",
+                "newPage": false,
+                "searchKey": "ui.routeUserRedirect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeUserRedirect"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeUserRedirect = \"user-redirect\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeAboutSubdomain",
+              "documentation": {
+                "identifier": "routeAboutSubdomain",
+                "newPage": false,
+                "searchKey": "ui.routeAboutSubdomain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeAboutSubdomain"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeAboutSubdomain = \"about-subdomain\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#aboutRedirectScheme",
+              "documentation": {
+                "identifier": "aboutRedirectScheme",
+                "newPage": false,
+                "searchKey": "ui.aboutRedirectScheme",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const aboutRedirectScheme"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst aboutRedirectScheme = \"https\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#aboutRedirectHost",
+              "documentation": {
+                "identifier": "aboutRedirectHost",
+                "newPage": false,
+                "searchKey": "ui.aboutRedirectHost",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const aboutRedirectHost"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst aboutRedirectHost = \"about.sourcegraph.com\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSurvey",
+              "documentation": {
+                "identifier": "routeSurvey",
+                "newPage": false,
+                "searchKey": "ui.routeSurvey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSurvey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSurvey = \"survey\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSurveyScore",
+              "documentation": {
+                "identifier": "routeSurveyScore",
+                "newPage": false,
+                "searchKey": "ui.routeSurveyScore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSurveyScore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSurveyScore = \"survey-score\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRegistry",
+              "documentation": {
+                "identifier": "routeRegistry",
+                "newPage": false,
+                "searchKey": "ui.routeRegistry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRegistry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRegistry = \"registry\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeExtensions",
+              "documentation": {
+                "identifier": "routeExtensions",
+                "newPage": false,
+                "searchKey": "ui.routeExtensions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeExtensions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeExtensions = \"extensions\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeHelp",
+              "documentation": {
+                "identifier": "routeHelp",
+                "newPage": false,
+                "searchKey": "ui.routeHelp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeHelp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeHelp = \"help\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeRepoGroups",
+              "documentation": {
+                "identifier": "routeRepoGroups",
+                "newPage": false,
+                "searchKey": "ui.routeRepoGroups",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeRepoGroups"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeRepoGroups = \"repo-groups\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeCncf",
+              "documentation": {
+                "identifier": "routeCncf",
+                "newPage": false,
+                "searchKey": "ui.routeCncf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeCncf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeCncf = \"repo-groups.cncf\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSnippets",
+              "documentation": {
+                "identifier": "routeSnippets",
+                "newPage": false,
+                "searchKey": "ui.routeSnippets",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSnippets"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSnippets = \"snippets\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSubscriptions",
+              "documentation": {
+                "identifier": "routeSubscriptions",
+                "newPage": false,
+                "searchKey": "ui.routeSubscriptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSubscriptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSubscriptions = \"subscriptions\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeStats",
+              "documentation": {
+                "identifier": "routeStats",
+                "newPage": false,
+                "searchKey": "ui.routeStats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeStats"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeStats = \"stats\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeViews",
+              "documentation": {
+                "identifier": "routeViews",
+                "newPage": false,
+                "searchKey": "ui.routeViews",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeViews"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeViews = \"views\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeDevToolTime",
+              "documentation": {
+                "identifier": "routeDevToolTime",
+                "newPage": false,
+                "searchKey": "ui.routeDevToolTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeDevToolTime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeDevToolTime = \"devtooltime\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSearchQueryBuilder",
+              "documentation": {
+                "identifier": "routeSearchQueryBuilder",
+                "newPage": false,
+                "searchKey": "ui.routeSearchQueryBuilder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSearchQueryBuilder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSearchQueryBuilder = \"search.query-builder\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSearchStream",
+              "documentation": {
+                "identifier": "routeSearchStream",
+                "newPage": false,
+                "searchKey": "ui.routeSearchStream",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSearchStream"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSearchStream = \"search.stream\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeSearchConsole",
+              "documentation": {
+                "identifier": "routeSearchConsole",
+                "newPage": false,
+                "searchKey": "ui.routeSearchConsole",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeSearchConsole"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeSearchConsole = \"search.console\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeLegacyLogin",
+              "documentation": {
+                "identifier": "routeLegacyLogin",
+                "newPage": false,
+                "searchKey": "ui.routeLegacyLogin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeLegacyLogin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeLegacyLogin = \"login\"\n```\n\nLegacy redirects \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeLegacyCareers",
+              "documentation": {
+                "identifier": "routeLegacyCareers",
+                "newPage": false,
+                "searchKey": "ui.routeLegacyCareers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeLegacyCareers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeLegacyCareers = \"careers\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeLegacyDefLanding",
+              "documentation": {
+                "identifier": "routeLegacyDefLanding",
+                "newPage": false,
+                "searchKey": "ui.routeLegacyDefLanding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeLegacyDefLanding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeLegacyDefLanding = \"page.def.landing\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeLegacyOldRouteDefLanding",
+              "documentation": {
+                "identifier": "routeLegacyOldRouteDefLanding",
+                "newPage": false,
+                "searchKey": "ui.routeLegacyOldRouteDefLanding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeLegacyOldRouteDefLanding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeLegacyOldRouteDefLanding = \"page.def.landing.old\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeLegacyRepoLanding",
+              "documentation": {
+                "identifier": "routeLegacyRepoLanding",
+                "newPage": false,
+                "searchKey": "ui.routeLegacyRepoLanding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeLegacyRepoLanding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeLegacyRepoLanding = \"page.repo.landing\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeLegacyDefRedirectToDefLanding",
+              "documentation": {
+                "identifier": "routeLegacyDefRedirectToDefLanding",
+                "newPage": false,
+                "searchKey": "ui.routeLegacyDefRedirectToDefLanding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeLegacyDefRedirectToDefLanding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeLegacyDefRedirectToDefLanding = \"page.def.redirect\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#routeLegacyCampaigns",
+              "documentation": {
+                "identifier": "routeLegacyCampaigns",
+                "newPage": false,
+                "searchKey": "ui.routeLegacyCampaigns",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeLegacyCampaigns"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeLegacyCampaigns = \"campaigns\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/ui#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#webpackDevServer",
+              "documentation": {
+                "identifier": "webpackDevServer",
+                "newPage": false,
+                "searchKey": "ui.webpackDevServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var webpackDevServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar webpackDevServer, _ = strconv.ParseBool(os.Getenv(\"WEBPACK_DEV_SERVER\"))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#mockNewCommon",
+              "documentation": {
+                "identifier": "mockNewCommon",
+                "newPage": false,
+                "searchKey": "ui.mockNewCommon",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mockNewCommon"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mockNewCommon func(w http.ResponseWriter, r *http.Request, title string, serveError serveErrorHandler) (*Common, error) = ...\n```\n\nmockNewCommon is used in tests to mock newCommon (duh!). \n\nEnsure that the mock is reset at the end of every test by adding a call like the following: \n\n```\ndefer func() {\n\tmockNewCommon = nil\n}()\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#goSymbolReg",
+              "documentation": {
+                "identifier": "goSymbolReg",
+                "newPage": false,
+                "searchKey": "ui.goSymbolReg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goSymbolReg"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goSymbolReg = lazyregexp.New(\"/info/GoPackage/(.+)$\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#legacyDefLandingCounter",
+              "documentation": {
+                "identifier": "legacyDefLandingCounter",
+                "newPage": false,
+                "searchKey": "ui.legacyDefLandingCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var legacyDefLandingCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar legacyDefLandingCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#legacyRepoLandingCounter",
+              "documentation": {
+                "identifier": "legacyRepoLandingCounter",
+                "newPage": false,
+                "searchKey": "ui.legacyRepoLandingCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var legacyRepoLandingCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar legacyRepoLandingCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#singleLineRegexp",
+              "documentation": {
+                "identifier": "singleLineRegexp",
+                "newPage": false,
+                "searchKey": "ui.singleLineRegexp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var singleLineRegexp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar singleLineRegexp = lazyregexp.New(`^L(\\d+)(?::\\d+)?$`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#multiLineRangeRegexp",
+              "documentation": {
+                "identifier": "multiLineRangeRegexp",
+                "newPage": false,
+                "searchKey": "ui.multiLineRangeRegexp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var multiLineRangeRegexp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar multiLineRangeRegexp = lazyregexp.New(`^L(\\d+)(?::\\d+)?-(\\d+)(?::\\d+)?$`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#metricRawDuration",
+              "documentation": {
+                "identifier": "metricRawDuration",
+                "newPage": false,
+                "searchKey": "ui.metricRawDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricRawDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricRawDuration = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#metricRawArchiveRunning",
+              "documentation": {
+                "identifier": "metricRawArchiveRunning",
+                "newPage": false,
+                "searchKey": "ui.metricRawArchiveRunning",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricRawArchiveRunning"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricRawArchiveRunning = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#aboutRedirects",
+              "documentation": {
+                "identifier": "aboutRedirects",
+                "newPage": false,
+                "searchKey": "ui.aboutRedirects",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var aboutRedirects"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar aboutRedirects = ...\n```\n\naboutRedirects contains map entries, each of which indicates that sourcegraph.com/$KEY should redirect to about.sourcegraph.com/$VALUE. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#mockServeRepo",
+              "documentation": {
+                "identifier": "mockServeRepo",
+                "newPage": false,
+                "searchKey": "ui.mockServeRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mockServeRepo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mockServeRepo func(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#appHTML",
+              "documentation": {
+                "identifier": "appHTML",
+                "newPage": false,
+                "searchKey": "ui.appHTML",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var appHTML"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar appHTML string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#errorHTML",
+              "documentation": {
+                "identifier": "errorHTML",
+                "newPage": false,
+                "searchKey": "ui.errorHTML",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errorHTML"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errorHTML string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#versionCacheMu",
+              "documentation": {
+                "identifier": "versionCacheMu",
+                "newPage": false,
+                "searchKey": "ui.versionCacheMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var versionCacheMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar versionCacheMu sync.RWMutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#versionCache",
+              "documentation": {
+                "identifier": "versionCache",
+                "newPage": false,
+                "searchKey": "ui.versionCache",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var versionCache"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar versionCache = make(map[string]string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#noAssetVersionString",
+              "documentation": {
+                "identifier": "noAssetVersionString",
+                "newPage": false,
+                "searchKey": "ui.noAssetVersionString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var noAssetVersionString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _, noAssetVersionString = os.LookupEnv(\"WEBPACK_DEV_SERVER\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#funcMap",
+              "documentation": {
+                "identifier": "funcMap",
+                "newPage": false,
+                "searchKey": "ui.funcMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var funcMap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar funcMap = ...\n```\n\nFunctions that are exposed to templates. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#loadTemplateMu",
+              "documentation": {
+                "identifier": "loadTemplateMu",
+                "newPage": false,
+                "searchKey": "ui.loadTemplateMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var loadTemplateMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar loadTemplateMu sync.RWMutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#loadTemplateCache",
+              "documentation": {
+                "identifier": "loadTemplateCache",
+                "newPage": false,
+                "searchKey": "ui.loadTemplateCache",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var loadTemplateCache"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar loadTemplateCache = map[string]*template.Template{}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/ui#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#InjectedHTML",
+              "documentation": {
+                "identifier": "InjectedHTML",
+                "newPage": false,
+                "searchKey": "ui.InjectedHTML",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type InjectedHTML struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype InjectedHTML struct {\n\tHeadTop    template.HTML\n\tHeadBottom template.HTML\n\tBodyTop    template.HTML\n\tBodyBottom template.HTML\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#Metadata",
+              "documentation": {
+                "identifier": "Metadata",
+                "newPage": false,
+                "searchKey": "ui.Metadata",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Metadata struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Metadata struct {\n\t// Title is the title of the page for Twitter cards, OpenGraph, etc.\n\t// e.g. \"Open in Sourcegraph\"\n\tTitle string\n\n\t// Description is the description of the page for Twitter cards, OpenGraph,\n\t// etc. e.g. \"View this link in Sourcegraph Editor.\"\n\tDescription string\n\n\t// ShowPreview controls whether or not OpenGraph/Twitter card/etc metadata is rendered.\n\tShowPreview bool\n\n\t// PreviewImage contains the URL of the preview image for relevant routes (e.g. blob).\n\tPreviewImage string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#Common",
+              "documentation": {
+                "identifier": "Common",
+                "newPage": false,
+                "searchKey": "ui.Common",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Common struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Common struct {\n\tInjected InjectedHTML\n\tMetadata *Metadata\n\tContext  jscontext.JSContext\n\tTitle    string\n\tError    *pageError\n\n\tManifest *assets.WebpackManifest\n\n\tWebpackDevServer bool // whether the Webpack dev server is running (WEBPACK_DEV_SERVER env var)\n\n\t// The fields below have zero values when not on a repo page.\n\tRepo         *types.Repo\n\tRev          string // unresolved / user-specified revision (e.x.: \"@master\")\n\tapi.CommitID        // resolved SHA1 revision\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/ui#newCommon",
+                    "documentation": {
+                      "identifier": "newCommon",
+                      "newPage": false,
+                      "searchKey": "ui.newCommon",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newCommon(w http.ResponseWriter, r *http.Request, title string, serveError serveErrorHandler) (*Common, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newCommon(w http.ResponseWriter, r *http.Request, title string, serveError serveErrorHandler) (*Common, error)\n```\n\nnewCommon builds a *Common data structure, returning an error if one occurs. \n\nIn the event of the repository having been renamed, the request is handled by newCommon and nil, nil is returned. Basic usage looks like: \n\n```\ncommon, err := newCommon(w, r, serveError)\nif err != nil {\n\treturn err\n}\nif common == nil {\n\treturn nil // request was handled\n}\n\n```\nIn the case of a repository that is cloning, a Common data structure is returned but it has an incomplete RevSpec. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveErrorHandler",
+              "documentation": {
+                "identifier": "serveErrorHandler",
+                "newPage": false,
+                "searchKey": "ui.serveErrorHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type serveErrorHandler func(w net/http.ResponseWriter, r *net/http.Request, err error, statusCode int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype serveErrorHandler func(w http.ResponseWriter, r *http.Request, err error, statusCode int)\n```\n\nserveErrorHandler is a function signature used in newCommon and mockNewCommon. This is used as syntactic sugar to prevent programmer's (fragile creatures from planet Earth) from crashing out. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#handlerFunc",
+              "documentation": {
+                "identifier": "handlerFunc",
+                "newPage": false,
+                "searchKey": "ui.handlerFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type handlerFunc func(w net/http.ResponseWriter, r *net/http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype handlerFunc func(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/ui#serveBrandedPageString",
+                    "documentation": {
+                      "identifier": "serveBrandedPageString",
+                      "newPage": false,
+                      "searchKey": "ui.serveBrandedPageString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func serveBrandedPageString(titles string, description *string) handlerFunc"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc serveBrandedPageString(titles string, description *string) handlerFunc\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/ui#serveBasicPage",
+                    "documentation": {
+                      "identifier": "serveBasicPage",
+                      "newPage": false,
+                      "searchKey": "ui.serveBasicPage",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func serveBasicPage(title func(c *Common, r *http.Request) string, description *string) handlerFunc"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc serveBasicPage(title func(c *Common, r *http.Request) string, description *string) handlerFunc\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/ui#serveTree",
+                    "documentation": {
+                      "identifier": "serveTree",
+                      "newPage": false,
+                      "searchKey": "ui.serveTree",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func serveTree(title func(c *Common, r *http.Request) string) handlerFunc"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc serveTree(title func(c *Common, r *http.Request) string) handlerFunc\n```\n\nserveTree serves the tree (directory) pages. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/ui#serveRepoOrBlob",
+                    "documentation": {
+                      "identifier": "serveRepoOrBlob",
+                      "newPage": false,
+                      "searchKey": "ui.serveRepoOrBlob",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func serveRepoOrBlob(routeName string, title func(c *Common, r *http.Request) string) handlerFunc"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc serveRepoOrBlob(routeName string, title func(c *Common, r *http.Request) string) handlerFunc\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#lineRange",
+              "documentation": {
+                "identifier": "lineRange",
+                "newPage": false,
+                "searchKey": "ui.lineRange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type lineRange struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype lineRange struct {\n\tStartLine int\n\tEndLine   int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/ui#findLineRangeInQueryParameters",
+                    "documentation": {
+                      "identifier": "findLineRangeInQueryParameters",
+                      "newPage": false,
+                      "searchKey": "ui.findLineRangeInQueryParameters",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func findLineRangeInQueryParameters(queryParameters map[string][]string) *lineRange"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc findLineRangeInQueryParameters(queryParameters map[string][]string) *lineRange\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/ui#getLineRange",
+                    "documentation": {
+                      "identifier": "getLineRange",
+                      "newPage": false,
+                      "searchKey": "ui.getLineRange",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getLineRange(value string) *lineRange"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getLineRange(value string) *lineRange\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#recoverError",
+              "documentation": {
+                "identifier": "recoverError",
+                "newPage": false,
+                "searchKey": "ui.recoverError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type recoverError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype recoverError struct {\n\trecover interface{}\n\tstack   []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/internal/app/ui#recoverError.Error",
+                    "documentation": {
+                      "identifier": "recoverError.Error",
+                      "newPage": false,
+                      "searchKey": "ui.recoverError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r recoverError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r recoverError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#pageError",
+              "documentation": {
+                "identifier": "pageError",
+                "newPage": false,
+                "searchKey": "ui.pageError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pageError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pageError struct {\n\tStatusCode int    `json:\"statusCode\"`\n\tStatusText string `json:\"statusText\"`\n\tError      string `json:\"error\"`\n\tErrorID    string `json:\"errorID\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/app/ui#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#repoShortName",
+              "documentation": {
+                "identifier": "repoShortName",
+                "newPage": false,
+                "searchKey": "ui.repoShortName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repoShortName(name api.RepoName) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repoShortName(name api.RepoName) string\n```\n\nrepoShortName trims the first path element of the given repo name if it has at least two path components. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveHome",
+              "documentation": {
+                "identifier": "serveHome",
+                "newPage": false,
+                "searchKey": "ui.serveHome",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveHome(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveHome(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveSignIn",
+              "documentation": {
+                "identifier": "serveSignIn",
+                "newPage": false,
+                "searchKey": "ui.serveSignIn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveSignIn(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveSignIn(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#redirectTreeOrBlob",
+              "documentation": {
+                "identifier": "redirectTreeOrBlob",
+                "newPage": false,
+                "searchKey": "ui.redirectTreeOrBlob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func redirectTreeOrBlob(routeName, path string, common *Common, w http.ResponseWriter, r *http.Request) (requestHandled bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc redirectTreeOrBlob(routeName, path string, common *Common, w http.ResponseWriter, r *http.Request) (requestHandled bool, err error)\n```\n\nredirectTreeOrBlob redirects a blob page to a tree page if the file is actually a directory, or a tree page to a blob page if the directory is actually a file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#searchBadgeHandler",
+              "documentation": {
+                "identifier": "searchBadgeHandler",
+                "newPage": false,
+                "searchKey": "ui.searchBadgeHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func searchBadgeHandler() *httputil.ReverseProxy"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc searchBadgeHandler() *httputil.ReverseProxy\n```\n\nsearchBadgeHandler serves the search readme badges from the search-badger service [https://github.com/sourcegraph/search-badger](https://github.com/sourcegraph/search-badger) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#servePingFromSelfHosted",
+              "documentation": {
+                "identifier": "servePingFromSelfHosted",
+                "newPage": false,
+                "searchKey": "ui.servePingFromSelfHosted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func servePingFromSelfHosted(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc servePingFromSelfHosted(w http.ResponseWriter, r *http.Request) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveHelp",
+              "documentation": {
+                "identifier": "serveHelp",
+                "newPage": false,
+                "searchKey": "ui.serveHelp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveHelp(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveHelp(w http.ResponseWriter, r *http.Request)\n```\n\nserveHelp redirects to documentation pages on [https://docs.sourcegraph.com](https://docs.sourcegraph.com) for the current product version, i.e., /help/PATH -> [https://docs.sourcegraph.com/](https://docs.sourcegraph.com/)@VERSION/PATH. In unreleased development builds (whose docs aren't necessarily available on [https://docs.sourcegraph.com](https://docs.sourcegraph.com), it shows a message with instructions on how to see the docs.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveRepoLanding",
+              "documentation": {
+                "identifier": "serveRepoLanding",
+                "newPage": false,
+                "searchKey": "ui.serveRepoLanding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveRepoLanding(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveRepoLanding(w http.ResponseWriter, r *http.Request) error\n```\n\nserveRepoLanding simply redirects the old (sourcegraph.com/<repo>/-/info) repo landing page URLs directly to the repo itself (sourcegraph.com/<repo>). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveDefLanding",
+              "documentation": {
+                "identifier": "serveDefLanding",
+                "newPage": false,
+                "searchKey": "ui.serveDefLanding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveDefLanding(w http.ResponseWriter, r *http.Request) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveDefLanding(w http.ResponseWriter, r *http.Request) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveDefRedirectToDefLanding",
+              "documentation": {
+                "identifier": "serveDefRedirectToDefLanding",
+                "newPage": false,
+                "searchKey": "ui.serveDefRedirectToDefLanding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveDefRedirectToDefLanding(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveDefRedirectToDefLanding(w http.ResponseWriter, r *http.Request)\n```\n\nserveDefRedirectToDefLanding redirects from /REPO/refs/... and /REPO/def/... URLs to the def landing page. Those URLs used to point to JavaScript-backed pages in the UI for a refs list and code view, respectively, but now def URLs are only for SEO (and thus those URLs are only handled by this package). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveOldRouteDefLanding",
+              "documentation": {
+                "identifier": "serveOldRouteDefLanding",
+                "newPage": false,
+                "searchKey": "ui.serveOldRouteDefLanding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveOldRouteDefLanding(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveOldRouteDefLanding(w http.ResponseWriter, r *http.Request)\n```\n\nRedirect from old /land/ def landing URLs to new /info/ URLs \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#formatLineRange",
+              "documentation": {
+                "identifier": "formatLineRange",
+                "newPage": false,
+                "searchKey": "ui.formatLineRange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func formatLineRange(lineRange *lineRange) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc formatLineRange(lineRange *lineRange) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#getBlobPreviewImageURL",
+              "documentation": {
+                "identifier": "getBlobPreviewImageURL",
+                "newPage": false,
+                "searchKey": "ui.getBlobPreviewImageURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getBlobPreviewImageURL(previewServiceURL string, blobURLPath string, lineRange *lineRange) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getBlobPreviewImageURL(previewServiceURL string, blobURLPath string, lineRange *lineRange) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#getBlobPreviewTitle",
+              "documentation": {
+                "identifier": "getBlobPreviewTitle",
+                "newPage": false,
+                "searchKey": "ui.getBlobPreviewTitle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getBlobPreviewTitle(blobFilePath string, lineRange *lineRange) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getBlobPreviewTitle(blobFilePath string, lineRange *lineRange) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveRaw",
+              "documentation": {
+                "identifier": "serveRaw",
+                "newPage": false,
+                "searchKey": "ui.serveRaw",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveRaw(w http.ResponseWriter, r *http.Request) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveRaw(w http.ResponseWriter, r *http.Request) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#openArchiveReader",
+              "documentation": {
+                "identifier": "openArchiveReader",
+                "newPage": false,
+                "searchKey": "ui.openArchiveReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func openArchiveReader(ctx context.Context, opts vfsutil.ArchiveOpts) (io.ReadCloser, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc openArchiveReader(ctx context.Context, opts vfsutil.ArchiveOpts) (io.ReadCloser, error)\n```\n\nopenArchiveReader runs git archive and streams the output. Note: we do not use vfsutil since most archives are just streamed once so caching locally is not useful. Additionally we transfer the output over the internet, so we use default compression levels on zips (instead of no compression). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#Router",
+              "documentation": {
+                "identifier": "Router",
+                "newPage": false,
+                "searchKey": "ui.Router",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Router() *mux.Router"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Router() *mux.Router\n```\n\nRouter returns the router that serves pages for our web app. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#InitRouter",
+              "documentation": {
+                "identifier": "InitRouter",
+                "newPage": false,
+                "searchKey": "ui.InitRouter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitRouter(db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitRouter(db dbutil.DB)\n```\n\nInitRouter create the router that serves pages for our web app and assigns it to uirouter.Router. The router can be accessed by calling Router(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#newRouter",
+              "documentation": {
+                "identifier": "newRouter",
+                "newPage": false,
+                "searchKey": "ui.newRouter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newRouter() *mux.Router"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newRouter() *mux.Router\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#brandNameSubtitle",
+              "documentation": {
+                "identifier": "brandNameSubtitle",
+                "newPage": false,
+                "searchKey": "ui.brandNameSubtitle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func brandNameSubtitle(titles ...string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc brandNameSubtitle(titles ...string) string\n```\n\nbrandNameSubtitle returns a string with the specified title sequence and the brand name as the last title component. This function indirectly calls conf.Get(), so should not be invoked from any function that is invoked by an init function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#initRouter",
+              "documentation": {
+                "identifier": "initRouter",
+                "newPage": false,
+                "searchKey": "ui.initRouter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initRouter(db dbutil.DB, router *mux.Router)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initRouter(db dbutil.DB, router *mux.Router)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#staticRedirectHandler",
+              "documentation": {
+                "identifier": "staticRedirectHandler",
+                "newPage": false,
+                "searchKey": "ui.staticRedirectHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func staticRedirectHandler(u string, code int) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc staticRedirectHandler(u string, code int) http.Handler\n```\n\nstaticRedirectHandler returns an HTTP handler that redirects all requests to the specified url or relative path with the specified status code. \n\nThe scheme, host, and path in the specified url override ones in the incoming request. For example: \n\n```\nstaticRedirectHandler(\"[http://google.com](http://google.com)\") serving \"[https://sourcegraph.com/foobar?q=foo](https://sourcegraph.com/foobar?q=foo)\" -> \"[http://google.com/foobar?q=foo](http://google.com/foobar?q=foo)\"\nstaticRedirectHandler(\"/foo\") serving \"[https://sourcegraph.com/bar?q=foo](https://sourcegraph.com/bar?q=foo)\" -> \"[https://sourcegraph.com/foo?q=foo](https://sourcegraph.com/foo?q=foo)\"\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#limitString",
+              "documentation": {
+                "identifier": "limitString",
+                "newPage": false,
+                "searchKey": "ui.limitString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func limitString(s string, n int, ellipsis bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc limitString(s string, n int, ellipsis bool) string\n```\n\nlimitString limits the given string to at most N characters, optionally adding an ellipsis (…) at the end. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#handler",
+              "documentation": {
+                "identifier": "handler",
+                "newPage": false,
+                "searchKey": "ui.handler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func handler(f func(w http.ResponseWriter, r *http.Request) error) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc handler(f func(w http.ResponseWriter, r *http.Request) error) http.Handler\n```\n\nhandler wraps an HTTP handler that returns potential errors. If any error is returned, serveError is called. \n\nClients that wish to return their own HTTP status code should use this from their handler: \n\n```\n\tserveError(w, r, err, http.MyStatusCode)\n return nil\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveError",
+              "documentation": {
+                "identifier": "serveError",
+                "newPage": false,
+                "searchKey": "ui.serveError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveError(w http.ResponseWriter, r *http.Request, err error, statusCode int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveError(w http.ResponseWriter, r *http.Request, err error, statusCode int)\n```\n\nserveError serves the error template with the specified error message. It is assumed that the error message could accidentally contain sensitive data, and as such is only presented to the user in debug mode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#dangerouslyServeError",
+              "documentation": {
+                "identifier": "dangerouslyServeError",
+                "newPage": false,
+                "searchKey": "ui.dangerouslyServeError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dangerouslyServeError(w http.ResponseWriter, r *http.Request, err error, statusCode int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dangerouslyServeError(w http.ResponseWriter, r *http.Request, err error, statusCode int)\n```\n\ndangerouslyServeError is like serveError except it always shows the error to the user and as such, if it contains sensitive information, it can leak sensitive information. \n\nSee [https://github.com/sourcegraph/sourcegraph/issues/9453](https://github.com/sourcegraph/sourcegraph/issues/9453) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveErrorNoDebug",
+              "documentation": {
+                "identifier": "serveErrorNoDebug",
+                "newPage": false,
+                "searchKey": "ui.serveErrorNoDebug",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveErrorNoDebug(w http.ResponseWriter, r *http.Request, err error, statusCode int, nodebug, forceServeError bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveErrorNoDebug(w http.ResponseWriter, r *http.Request, err error, statusCode int, nodebug, forceServeError bool)\n```\n\nserveErrorNoDebug should not be called by anyone except serveErrorTest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#serveErrorTest",
+              "documentation": {
+                "identifier": "serveErrorTest",
+                "newPage": false,
+                "searchKey": "ui.serveErrorTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func serveErrorTest(w http.ResponseWriter, r *http.Request) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc serveErrorTest(w http.ResponseWriter, r *http.Request) error\n```\n\nserveErrorTest makes it easy to test styling/layout of the error template by visiting: \n\n```\n[http://localhost:3080/__errorTest?nodebug=true&error=theerror&status=500](http://localhost:3080/__errorTest?nodebug=true&error=theerror&status=500)\n\n```\nThe `nodebug=true` parameter hides error messages (which is ALWAYS the case in production), `error` controls the error message text, and status controls the status code. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#mapKeys",
+              "documentation": {
+                "identifier": "mapKeys",
+                "newPage": false,
+                "searchKey": "ui.mapKeys",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mapKeys(m map[string]string) (keys []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mapKeys(m map[string]string) (keys []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#loadTemplate",
+              "documentation": {
+                "identifier": "loadTemplate",
+                "newPage": false,
+                "searchKey": "ui.loadTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadTemplate(path string) (*template.Template, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadTemplate(path string) (*template.Template, error)\n```\n\nloadTemplate loads the template with the given path. Also loaded along with that template is any templates under the shared/ directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#doLoadTemplate",
+              "documentation": {
+                "identifier": "doLoadTemplate",
+                "newPage": false,
+                "searchKey": "ui.doLoadTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func doLoadTemplate(path string) (*template.Template, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc doLoadTemplate(path string) (*template.Template, error)\n```\n\ndoLoadTemplate should only be called by loadTemplate. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#renderTemplate",
+              "documentation": {
+                "identifier": "renderTemplate",
+                "newPage": false,
+                "searchKey": "ui.renderTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func renderTemplate(w http.ResponseWriter, name string, data interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc renderTemplate(w http.ResponseWriter, name string, data interface{}) error\n```\n\nrenderTemplate renders the template with the given name. The template name is its file name, relative to the template directory. \n\nThe given data is accessible in the template via $.Foobar \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestRedirects",
+              "documentation": {
+                "identifier": "TestRedirects",
+                "newPage": false,
+                "searchKey": "ui.TestRedirects",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedirects(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedirects(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestRepoShortName",
+              "documentation": {
+                "identifier": "TestRepoShortName",
+                "newPage": false,
+                "searchKey": "ui.TestRepoShortName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepoShortName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepoShortName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestNewCommon_repo_error",
+              "documentation": {
+                "identifier": "TestNewCommon_repo_error",
+                "newPage": false,
+                "searchKey": "ui.TestNewCommon_repo_error",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewCommon_repo_error(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewCommon_repo_error(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestRedirectTreeOrBlob",
+              "documentation": {
+                "identifier": "TestRedirectTreeOrBlob",
+                "newPage": false,
+                "searchKey": "ui.TestRedirectTreeOrBlob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedirectTreeOrBlob(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedirectTreeOrBlob(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "ui.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestServeHelp",
+              "documentation": {
+                "identifier": "TestServeHelp",
+                "newPage": false,
+                "searchKey": "ui.TestServeHelp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServeHelp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServeHelp(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestFindLineRangeInQueryParameters",
+              "documentation": {
+                "identifier": "TestFindLineRangeInQueryParameters",
+                "newPage": false,
+                "searchKey": "ui.TestFindLineRangeInQueryParameters",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFindLineRangeInQueryParameters(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFindLineRangeInQueryParameters(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestGetBlobPreviewImageURL",
+              "documentation": {
+                "identifier": "TestGetBlobPreviewImageURL",
+                "newPage": false,
+                "searchKey": "ui.TestGetBlobPreviewImageURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetBlobPreviewImageURL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetBlobPreviewImageURL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestGetBlobPreviewTitle",
+              "documentation": {
+                "identifier": "TestGetBlobPreviewTitle",
+                "newPage": false,
+                "searchKey": "ui.TestGetBlobPreviewTitle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetBlobPreviewTitle(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetBlobPreviewTitle(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#initHTTPTestGitServer",
+              "documentation": {
+                "identifier": "initHTTPTestGitServer",
+                "newPage": false,
+                "searchKey": "ui.initHTTPTestGitServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initHTTPTestGitServer(t *testing.T, httpStatusCode int, resp string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initHTTPTestGitServer(t *testing.T, httpStatusCode int, resp string)\n```\n\ninitHTTPTestGitServer instantiates an httptest.Server to make it return an HTTP response as set by httpStatusCode and a body as set by resp. It also ensures that the server is closed during test cleanup, thus ensuring that the caller does not have to remember to close the server. \n\nFinally, initHTTPTestGitServer patches the gitserver.DefaultClient.Addrs to the URL of the test HTTP server, so that API calls to the gitserver are received by the test HTTP server. \n\nTL;DR: This function helps us to mock the gitserver without having to define mock functions for each of the gitserver client methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#Test_serveRawWithHTTPRequestMethodHEAD",
+              "documentation": {
+                "identifier": "Test_serveRawWithHTTPRequestMethodHEAD",
+                "newPage": false,
+                "searchKey": "ui.Test_serveRawWithHTTPRequestMethodHEAD",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_serveRawWithHTTPRequestMethodHEAD(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_serveRawWithHTTPRequestMethodHEAD(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#Test_serveRawWithContentArchive",
+              "documentation": {
+                "identifier": "Test_serveRawWithContentArchive",
+                "newPage": false,
+                "searchKey": "ui.Test_serveRawWithContentArchive",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_serveRawWithContentArchive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_serveRawWithContentArchive(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#Test_serveRawWithContentTypePlain",
+              "documentation": {
+                "identifier": "Test_serveRawWithContentTypePlain",
+                "newPage": false,
+                "searchKey": "ui.Test_serveRawWithContentTypePlain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test_serveRawWithContentTypePlain(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test_serveRawWithContentTypePlain(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "ui.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestRouter",
+              "documentation": {
+                "identifier": "TestRouter",
+                "newPage": false,
+                "searchKey": "ui.TestRouter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRouter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRouter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestRouter_RootPath",
+              "documentation": {
+                "identifier": "TestRouter_RootPath",
+                "newPage": false,
+                "searchKey": "ui.TestRouter_RootPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRouter_RootPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRouter_RootPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/app/ui#TestLoadTemplate",
+              "documentation": {
+                "identifier": "TestLoadTemplate",
+                "newPage": false,
+                "searchKey": "ui.TestLoadTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoadTemplate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoadTemplate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/cmd/frontend/internal/app/ui/router"
+    }
+  ]
+}

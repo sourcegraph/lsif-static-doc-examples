@@ -1,0 +1,178 @@
+{
+  "pathID": "/cmd/frontend/external/app",
+  "documentation": {
+    "identifier": "app",
+    "newPage": true,
+    "searchKey": "cmd/frontend/external/app",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package app"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package app exports symbols from frontend/internal/app. See the parent package godoc for more information. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/external/app#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/app#RegisterSSOSignOutHandler",
+              "documentation": {
+                "identifier": "RegisterSSOSignOutHandler",
+                "newPage": false,
+                "searchKey": "app.RegisterSSOSignOutHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RegisterSSOSignOutHandler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RegisterSSOSignOutHandler = app.RegisterSSOSignOutHandler\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/external/app#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/app#SignOutURL",
+              "documentation": {
+                "identifier": "SignOutURL",
+                "newPage": false,
+                "searchKey": "app.SignOutURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SignOutURL app.SignOutURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SignOutURL = app.SignOutURL\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/external/app#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/app#SetBillingPublishableKey",
+              "documentation": {
+                "identifier": "SetBillingPublishableKey",
+                "newPage": false,
+                "searchKey": "app.SetBillingPublishableKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetBillingPublishableKey(value string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetBillingPublishableKey(value string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/external/app#SetPreMountGrafanaHook",
+              "documentation": {
+                "identifier": "SetPreMountGrafanaHook",
+                "newPage": false,
+                "searchKey": "app.SetPreMountGrafanaHook",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetPreMountGrafanaHook(hookFn func() error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetPreMountGrafanaHook(hookFn func() error)\n```\n\nSetPreMountGrafanaHook allows the enterprise package to inject a tier enforcement function during initialization. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

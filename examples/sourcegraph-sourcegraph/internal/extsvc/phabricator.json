@@ -1,0 +1,628 @@
+{
+  "pathID": "/internal/extsvc/phabricator",
+  "documentation": {
+    "identifier": "phabricator",
+    "newPage": true,
+    "searchKey": "internal/extsvc/phabricator",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package phabricator"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package phabricator is a package to interact with a Phabricator instance and its Conduit API. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/extsvc/phabricator#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#requestDuration",
+              "documentation": {
+                "identifier": "requestDuration",
+                "newPage": false,
+                "searchKey": "phabricator.requestDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestDuration = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/phabricator#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#meteredConn",
+              "documentation": {
+                "identifier": "meteredConn",
+                "newPage": false,
+                "searchKey": "phabricator.meteredConn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type meteredConn struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype meteredConn struct {\n\tgonduit.Conn\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/phabricator#meteredConn.CallContext",
+                    "documentation": {
+                      "identifier": "meteredConn.CallContext",
+                      "newPage": false,
+                      "searchKey": "phabricator.meteredConn.CallContext",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mc *meteredConn) CallContext(ctx context.Context,..."
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mc *meteredConn) CallContext(\n\tctx context.Context,\n\tmethod string,\n\tparams interface{},\n\tresult interface{},\n) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "phabricator.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\tconn *meteredConn\n}\n```\n\nA Client provides high level methods to a Phabricator Conduit API. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/phabricator#NewClient",
+                    "documentation": {
+                      "identifier": "NewClient",
+                      "newPage": false,
+                      "searchKey": "phabricator.NewClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewClient(ctx context.Context, phabUrl, token string, cli httpcli.Doer) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewClient(ctx context.Context, phabUrl, token string, cli httpcli.Doer) (*Client, error)\n```\n\nNewClient returns an authenticated Client, using the given URL and token. If provided, cli will be used to perform the underlying HTTP requests. This constructor needs a context because it calls the Conduit API to negotiate capabilities as part of the dial process. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/phabricator#Client.ListRepos",
+                    "documentation": {
+                      "identifier": "Client.ListRepos",
+                      "newPage": false,
+                      "searchKey": "phabricator.Client.ListRepos",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListRepos(ctx context.Context, args ListReposArgs) ([]*Repo, *Cursor, error)\n```\n\nListRepos lists all repositories matching the given arguments. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/phabricator#Client.GetRawDiff",
+                    "documentation": {
+                      "identifier": "Client.GetRawDiff",
+                      "newPage": false,
+                      "searchKey": "phabricator.Client.GetRawDiff",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetRawDiff(ctx context.Context, diffID int) (diff string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetRawDiff(ctx context.Context, diffID int) (diff string, err error)\n```\n\nGetRawDiff retrieves the raw diff of the diff with the given id. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/phabricator#Client.GetDiffInfo",
+                    "documentation": {
+                      "identifier": "Client.GetDiffInfo",
+                      "newPage": false,
+                      "searchKey": "phabricator.Client.GetDiffInfo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetDiffInfo(ctx context.Context, diffID int) (*DiffInfo, error)\n```\n\nGetDiffInfo retrieves the DiffInfo of the diff with the given id. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#Repo",
+              "documentation": {
+                "identifier": "Repo",
+                "newPage": false,
+                "searchKey": "phabricator.Repo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repo struct {\n\tID           uint64\n\tPHID         string\n\tName         string\n\tVCS          string\n\tCallsign     string\n\tShortname    string\n\tStatus       string\n\tDateCreated  time.Time\n\tDateModified time.Time\n\tViewPolicy   string\n\tEditPolicy   string\n\tURIs         []*URI\n}\n```\n\nRepo represents a single code repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#URI",
+              "documentation": {
+                "identifier": "URI",
+                "newPage": false,
+                "searchKey": "phabricator.URI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type URI struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype URI struct {\n\tID   string\n\tPHID string\n\n\tDisplay    string\n\tEffective  string\n\tNormalized string\n\n\tDisabled bool\n\n\tBuiltinProtocol   string\n\tBuiltinIdentifier string\n\n\tDateCreated  time.Time\n\tDateModified time.Time\n}\n```\n\nURI of a Repository \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiRepo",
+              "documentation": {
+                "identifier": "apiRepo",
+                "newPage": false,
+                "searchKey": "phabricator.apiRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiRepo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiRepo struct {\n\tID          uint64             `json:\"id\"`\n\tPHID        string             `json:\"phid\"`\n\tFields      apiRepoFields      `json:\"fields\"`\n\tAttachments apiRepoAttachments `json:\"attachments\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/phabricator#apiRepo.ToRepo",
+                    "documentation": {
+                      "identifier": "apiRepo.ToRepo",
+                      "newPage": false,
+                      "searchKey": "phabricator.apiRepo.ToRepo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *apiRepo) ToRepo() *Repo"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *apiRepo) ToRepo() *Repo\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiRepoFields",
+              "documentation": {
+                "identifier": "apiRepoFields",
+                "newPage": false,
+                "searchKey": "phabricator.apiRepoFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiRepoFields struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiRepoFields struct {\n\tName         string        `json:\"name\"`\n\tVCS          string        `json:\"vcs\"`\n\tCallsign     string        `json:\"callsign\"`\n\tShortname    string        `json:\"shortname\"`\n\tStatus       string        `json:\"status\"`\n\tPolicy       apiRepoPolicy `json:\"policy\"`\n\tDateCreated  unixTime      `json:\"dateCreated\"`\n\tDateModified unixTime      `json:\"dateModified\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiRepoPolicy",
+              "documentation": {
+                "identifier": "apiRepoPolicy",
+                "newPage": false,
+                "searchKey": "phabricator.apiRepoPolicy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiRepoPolicy struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiRepoPolicy struct {\n\tView string `json:\"view\"`\n\tEdit string `json:\"edit\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiRepoAttachments",
+              "documentation": {
+                "identifier": "apiRepoAttachments",
+                "newPage": false,
+                "searchKey": "phabricator.apiRepoAttachments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiRepoAttachments struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiRepoAttachments struct {\n\tURIs apiURIsContainer `json:\"uris\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiURIsContainer",
+              "documentation": {
+                "identifier": "apiURIsContainer",
+                "newPage": false,
+                "searchKey": "phabricator.apiURIsContainer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiURIsContainer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiURIsContainer struct {\n\tURIs []apiURI `json:\"uris\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiURI",
+              "documentation": {
+                "identifier": "apiURI",
+                "newPage": false,
+                "searchKey": "phabricator.apiURI",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiURI struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiURI struct {\n\tID     string       `json:\"id\"`\n\tPHID   string       `json:\"phid\"`\n\tFields apiURIFields `json:\"fields\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiURIFields",
+              "documentation": {
+                "identifier": "apiURIFields",
+                "newPage": false,
+                "searchKey": "phabricator.apiURIFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiURIFields struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiURIFields struct {\n\tURI          apiURIs      `json:\"uri\"`\n\tBuiltin      apiURIBultin `json:\"builtin\"`\n\tDisabled     bool         `json:\"disabled\"`\n\tDateCreated  unixTime     `json:\"dateCreated\"`\n\tDateModified unixTime     `json:\"dateModified\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiURIs",
+              "documentation": {
+                "identifier": "apiURIs",
+                "newPage": false,
+                "searchKey": "phabricator.apiURIs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiURIs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiURIs struct {\n\tDisplay    string `json:\"display\"`\n\tEffective  string `json:\"effective\"`\n\tNormalized string `json:\"normalized\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#apiURIBultin",
+              "documentation": {
+                "identifier": "apiURIBultin",
+                "newPage": false,
+                "searchKey": "phabricator.apiURIBultin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type apiURIBultin struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype apiURIBultin struct {\n\tProtocol   string `json:\"protocol\"`\n\tIdentifier string `json:\"identifier\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#Cursor",
+              "documentation": {
+                "identifier": "Cursor",
+                "newPage": false,
+                "searchKey": "phabricator.Cursor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Cursor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Cursor struct {\n\tLimit  uint64 `json:\"limit,omitempty\"`\n\tAfter  string `json:\"after,omitempty\"`\n\tBefore string `json:\"before,omitempty\"`\n\tOrder  string `json:\"order,omitempty\"`\n}\n```\n\nCursor represents the pagination cursor on many responses. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#ListReposArgs",
+              "documentation": {
+                "identifier": "ListReposArgs",
+                "newPage": false,
+                "searchKey": "phabricator.ListReposArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ListReposArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ListReposArgs struct {\n\t*Cursor\n}\n```\n\nListReposArgs defines the constraints to be satisfied by the ListRepos method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#DiffInfo",
+              "documentation": {
+                "identifier": "DiffInfo",
+                "newPage": false,
+                "searchKey": "phabricator.DiffInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DiffInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DiffInfo struct {\n\tMessage     string    `json:\"description\"`\n\tAuthorName  string    `json:\"authorName\"`\n\tAuthorEmail string    `json:\"authorEmail\"`\n\tDateCreated string    `json:\"dateCreated\"`\n\tDate        time.Time `json:\"omitempty\"`\n}\n```\n\nDiffInfo contains information for a diff such as the author \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#unixTime",
+              "documentation": {
+                "identifier": "unixTime",
+                "newPage": false,
+                "searchKey": "phabricator.unixTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type unixTime struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype unixTime struct{ t *time.Time }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/phabricator#unixTime.UnmarshalJSON",
+                    "documentation": {
+                      "identifier": "unixTime.UnmarshalJSON",
+                      "newPage": false,
+                      "searchKey": "phabricator.unixTime.UnmarshalJSON",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *unixTime) UnmarshalJSON(data []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *unixTime) UnmarshalJSON(data []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/phabricator#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/phabricator#ParseDate",
+              "documentation": {
+                "identifier": "ParseDate",
+                "newPage": false,
+                "searchKey": "phabricator.ParseDate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseDate(secStr string) (*time.Time, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseDate(secStr string) (*time.Time, error)\n```\n\nParseDate parses the given unix timestamp into a time.Time pointer. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

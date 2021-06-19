@@ -1,0 +1,177 @@
+{
+  "pathID": "/cmd/searcher/protocol",
+  "documentation": {
+    "identifier": "protocol",
+    "newPage": true,
+    "searchKey": "cmd/searcher/protocol",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package protocol"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package protocol contains structures used by the searcher API. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/searcher/protocol#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/searcher/protocol#Request",
+              "documentation": {
+                "identifier": "Request",
+                "newPage": false,
+                "searchKey": "protocol.Request",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Request struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Request struct {\n\t// Repo is the name of the repository to search. eg \"github.com/gorilla/mux\"\n\tRepo api.RepoName\n\n\t// URL specifies the repository's Git remote URL (for gitserver). It is optional. See\n\t// (gitserver.ExecRequest).URL for documentation on what it is used for.\n\tURL string\n\n\t// Commit is which commit to search. It is required to be resolved,\n\t// not a ref like HEAD or master. eg\n\t// \"599cba5e7b6137d46ddf58fb1765f5d928e69604\"\n\tCommit api.CommitID\n\n\t// Branch is used for structural search as an alternative to Commit\n\t// because Zoekt only takes branch names\n\tBranch string\n\n\tPatternInfo\n\n\t// The amount of time to wait for a repo archive to fetch.\n\t// It is parsed with time.ParseDuration.\n\t//\n\t// This timeout should be low when searching across many repos\n\t// so that unfetched repos don't delay the search, and because we are likely\n\t// to get results from the repos that have already been fetched.\n\t//\n\t// This timeout should be high when searching across a single repo\n\t// because returning results slowly is better than returning no results at all.\n\t//\n\t// This only times out how long we wait for the fetch request;\n\t// the fetch will still happen in the background so future requests don't have to wait.\n\tFetchTimeout string\n\n\t// The deadline for the search request.\n\t// It is parsed with time.Time.UnmarshalText.\n\tDeadline string\n\n\t// Endpoint(s) for reaching Zoekt. See description in\n\t// endpoint.go:Static(...)\n\tIndexerEndpoints []string\n\n\t// Whether the revision to be searched is indexed or unindexed. This matters for\n\t// structural search because it will query Zoekt for indexed structural search.\n\tIndexed bool\n}\n```\n\nRequest represents a request to searcher \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/protocol#PatternInfo",
+              "documentation": {
+                "identifier": "PatternInfo",
+                "newPage": false,
+                "searchKey": "protocol.PatternInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PatternInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PatternInfo struct {\n\t// Pattern is the search query. It is a regular expression if IsRegExp\n\t// is true, otherwise a fixed string. eg \"route variable\"\n\tPattern string\n\n\t// IsNegated if true will invert the matching logic for regexp searches. IsNegated=true is\n\t// not supported for structural searches.\n\tIsNegated bool\n\n\t// IsRegExp if true will treat the Pattern as a regular expression.\n\tIsRegExp bool\n\n\t// IsStructuralPat if true will treat the pattern as a Comby structural search pattern.\n\tIsStructuralPat bool\n\n\t// IsWordMatch if true will only match the pattern at word boundaries.\n\tIsWordMatch bool\n\n\t// IsCaseSensitive if false will ignore the case of text and pattern\n\t// when finding matches.\n\tIsCaseSensitive bool\n\n\t// ExcludePattern is a pattern that may not match the returned files' paths.\n\t// eg '**/node_modules'\n\tExcludePattern string\n\n\t// IncludePatterns is a list of patterns that must *all* match the returned\n\t// files' paths.\n\t// eg '**/node_modules'\n\t//\n\t// The patterns are ANDed together; a file's path must match all patterns\n\t// for it to be kept. That is also why it is a list (unlike the singular\n\t// ExcludePattern); it is not possible in general to construct a single\n\t// glob or Go regexp that represents multiple such patterns ANDed together.\n\tIncludePatterns []string\n\n\t// IncludeExcludePatternAreRegExps indicates that ExcludePattern, IncludePattern,\n\t// and IncludePatterns are regular expressions (not globs).\n\tPathPatternsAreRegExps bool\n\n\t// IncludeExcludePatternAreCaseSensitive indicates that ExcludePattern, IncludePattern,\n\t// and IncludePatterns are case sensitive.\n\tPathPatternsAreCaseSensitive bool\n\n\t// FileMatchLimit limits the number of files with matches that are returned.\n\tFileMatchLimit int\n\n\t// PatternMatchesPath is whether the pattern should be matched against the content\n\t// of files.\n\tPatternMatchesContent bool\n\n\t// PatternMatchesPath is whether a file whose path matches Pattern (but whose contents don't) should be\n\t// considered a match.\n\tPatternMatchesPath bool\n\n\t// Languages is the languages passed via the lang filters (e.g., \"lang:c\")\n\tLanguages []string\n\n\t// CombyRule is a rule that constrains matching for structural search.\n\t// It only applies when IsStructuralPat is true.\n\t// As a temporary measure, the expression `where \"backcompat\" == \"backcompat\"` acts as\n\t// a flag to activate the old structural search path, which queries zoekt for the\n\t// file list in the frontend and passes it to searcher.\n\tCombyRule string\n\n\t// Select is the value of the the select field in the query. It is not necessary to\n\t// use it since selection is done after the query completes, but exposing it can enable\n\t// optimizations.\n\tSelect string\n}\n```\n\nPatternInfo describes a search request on a repo. Most of the fields are based on PatternInfo used in vscode. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/searcher/protocol#PatternInfo.String",
+                    "documentation": {
+                      "identifier": "PatternInfo.String",
+                      "newPage": false,
+                      "searchKey": "protocol.PatternInfo.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *PatternInfo) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *PatternInfo) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/protocol#Response",
+              "documentation": {
+                "identifier": "Response",
+                "newPage": false,
+                "searchKey": "protocol.Response",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Response struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Response struct {\n\tMatches []FileMatch\n\n\t// LimitHit is true if Matches may not include all FileMatches because a match limit was hit.\n\tLimitHit bool\n\n\t// DeadlineHit is true if Matches may not include all FileMatches because a deadline was hit.\n\tDeadlineHit bool\n}\n```\n\nResponse represents the response from a Search request. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/protocol#FileMatch",
+              "documentation": {
+                "identifier": "FileMatch",
+                "newPage": false,
+                "searchKey": "protocol.FileMatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileMatch struct {\n\tPath        string\n\tLineMatches []LineMatch\n\t// MatchCount is the number of matches. Different from len(LineMatches), as multiple lines may correspond to one logical match.\n\tMatchCount int\n\n\t// LimitHit is true if LineMatches may not include all LineMatches.\n\tLimitHit bool\n}\n```\n\nFileMatch is the struct used by vscode to receive search results \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher/protocol#LineMatch",
+              "documentation": {
+                "identifier": "LineMatch",
+                "newPage": false,
+                "searchKey": "protocol.LineMatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LineMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LineMatch struct {\n\t// Preview is the matched line.\n\tPreview string\n\n\t// LineNumber is the 0-based line number. Note: Our editors present\n\t// 1-based line numbers, but internally vscode uses 0-based.\n\tLineNumber int\n\n\t// OffsetAndLengths is a slice of 2-tuples (Offset, Length)\n\t// representing each match on a line.\n\t// Offsets and lengths are measured in characters, not bytes.\n\tOffsetAndLengths [][2]int\n}\n```\n\nLineMatch is the struct used by vscode to receive search results for a line. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "pathID": "/internal/eventlogger",
+  "documentation": {
+    "identifier": "eventlogger",
+    "newPage": true,
+    "searchKey": "internal/eventlogger",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package eventlogger"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/eventlogger#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/eventlogger#TelemetryRequest",
+              "documentation": {
+                "identifier": "TelemetryRequest",
+                "newPage": false,
+                "searchKey": "eventlogger.TelemetryRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TelemetryRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TelemetryRequest struct {\n\tUserID    int32\n\tEventName string\n\tArgument  json.RawMessage\n}\n```\n\nTelemetryRequest represents a request to log telemetry. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/eventlogger#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/eventlogger#LogEvent",
+              "documentation": {
+                "identifier": "LogEvent",
+                "newPage": false,
+                "searchKey": "eventlogger.LogEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LogEvent(userID int32, name string, argument json.RawMessage)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LogEvent(userID int32, name string, argument json.RawMessage)\n```\n\nLogEvent sends a payload representing an event to the api/telemetry endpoint. \n\nThis method should be invoked after the frontend service has started. It is safe to not do so (it will just log an error), but logging the actual event will fail otherwise. Consider using e.g. api.InternalClient.RetryPingUntilAvailable to wait for the frontend to start. \n\nNote: This does not block since it creates a new goroutine. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/eventlogger#logEvent",
+              "documentation": {
+                "identifier": "logEvent",
+                "newPage": false,
+                "searchKey": "eventlogger.logEvent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func logEvent(userID int32, name string, argument json.RawMessage) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc logEvent(userID int32, name string, argument json.RawMessage) error\n```\n\nlogEvent sends a payload representing some user event to the InternalClient telemetry API \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

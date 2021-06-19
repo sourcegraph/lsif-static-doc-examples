@@ -1,0 +1,2387 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription",
+  "documentation": {
+    "identifier": "productsubscription",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/dotcom/productsubscription",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package productsubscription"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package productsubscription handles product subscriptions and licensing. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#lastLicenseExpirationCheckKey",
+              "documentation": {
+                "identifier": "lastLicenseExpirationCheckKey",
+                "newPage": false,
+                "searchKey": "productsubscription.lastLicenseExpirationCheckKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const lastLicenseExpirationCheckKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst lastLicenseExpirationCheckKey = \"last_license_expiration_check\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductLicenseIDKind",
+              "documentation": {
+                "identifier": "ProductLicenseIDKind",
+                "newPage": false,
+                "searchKey": "productsubscription.ProductLicenseIDKind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ProductLicenseIDKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ProductLicenseIDKind = \"ProductLicense\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionIDKind",
+              "documentation": {
+                "identifier": "ProductSubscriptionIDKind",
+                "newPage": false,
+                "searchKey": "productsubscription.ProductSubscriptionIDKind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ProductSubscriptionIDKind"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ProductSubscriptionIDKind = \"ProductSubscription\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#licenseExpirationCheckers",
+              "documentation": {
+                "identifier": "licenseExpirationCheckers",
+                "newPage": false,
+                "searchKey": "productsubscription.licenseExpirationCheckers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var licenseExpirationCheckers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar licenseExpirationCheckers uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#errLicenseNotFound",
+              "documentation": {
+                "identifier": "errLicenseNotFound",
+                "newPage": false,
+                "searchKey": "productsubscription.errLicenseNotFound",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errLicenseNotFound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errLicenseNotFound = errors.New(\"product license not found\")\n```\n\nerrLicenseNotFound occurs when a database operation expects a specific Sourcegraph license to exist but it does not exist. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#mocks",
+              "documentation": {
+                "identifier": "mocks",
+                "newPage": false,
+                "searchKey": "productsubscription.mocks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mocks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mocks dbMocks\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#emailQueries",
+              "documentation": {
+                "identifier": "emailQueries",
+                "newPage": false,
+                "searchKey": "productsubscription.emailQueries",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var emailQueries"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar emailQueries = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#errSubscriptionNotFound",
+              "documentation": {
+                "identifier": "errSubscriptionNotFound",
+                "newPage": false,
+                "searchKey": "productsubscription.errSubscriptionNotFound",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errSubscriptionNotFound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errSubscriptionNotFound = errors.New(\"product subscription not found\")\n```\n\nerrSubscriptionNotFound occurs when a database operation expects a specific Sourcegraph license to exist but it does not exist. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver",
+              "documentation": {
+                "identifier": "ProductSubscriptionLicensingResolver",
+                "newPage": false,
+                "searchKey": "productsubscription.ProductSubscriptionLicensingResolver",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ProductSubscriptionLicensingResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ProductSubscriptionLicensingResolver struct {\n\tDB dbutil.DB\n}\n```\n\nProductSubscriptionLicensingResolver implements the GraphQL Query and Mutation fields related to product subscriptions and licensing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.PreviewProductSubscriptionInvoice",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.PreviewProductSubscriptionInvoice",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.PreviewProductSubscriptionInvoice",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) PreviewProductSubscriptionInvoice(ctx context.Context, args *graphqlbackend.PreviewProductSubscriptionInvoiceArgs) (graphqlbackend.ProductSubscriptionPreviewInvoice, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) PreviewProductSubscriptionInvoice(ctx context.Context, args *graphqlbackend.PreviewProductSubscriptionInvoiceArgs) (graphqlbackend.ProductSubscriptionPreviewInvoice, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.ProductLicenseByID",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.ProductLicenseByID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductLicenseByID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ProductSubscriptionLicensingResolver) ProductLicenseByID(ctx context.Context, id graphql.ID) (graphqlbackend.ProductLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ProductSubscriptionLicensingResolver) ProductLicenseByID(ctx context.Context, id graphql.ID) (graphqlbackend.ProductLicense, error)\n```\n\nProductLicenseByID looks up and returns the ProductLicense with the given GraphQL ID. If no such ProductLicense exists, it returns a non-nil error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.GenerateProductLicenseForSubscription",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.GenerateProductLicenseForSubscription",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.GenerateProductLicenseForSubscription",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) GenerateProductLicenseForSubscription(ctx context.Context, args *graphqlbackend.GenerateProductLicenseForSubscriptionArgs) (graphqlbackend.ProductLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) GenerateProductLicenseForSubscription(ctx context.Context, args *graphqlbackend.GenerateProductLicenseForSubscriptionArgs) (graphqlbackend.ProductLicense, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.ProductLicenses",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.ProductLicenses",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductLicenses",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) ProductLicenses(ctx context.Context, args *graphqlbackend.ProductLicensesArgs) (graphqlbackend.ProductLicenseConnection, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) ProductLicenses(ctx context.Context, args *graphqlbackend.ProductLicensesArgs) (graphqlbackend.ProductLicenseConnection, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.ProductSubscriptionByID",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.ProductSubscriptionByID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductSubscriptionByID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ProductSubscriptionLicensingResolver) ProductSubscriptionByID(ctx context.Context, id graphql.ID) (graphqlbackend.ProductSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ProductSubscriptionLicensingResolver) ProductSubscriptionByID(ctx context.Context, id graphql.ID) (graphqlbackend.ProductSubscription, error)\n```\n\nProductSubscriptionByID looks up and returns the ProductSubscription with the given GraphQL ID. If no such ProductSubscription exists, it returns a non-nil error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.CreateProductSubscription",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.CreateProductSubscription",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.CreateProductSubscription",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) CreateProductSubscription(ctx context.Context, args *graphqlbackend.CreateProductSubscriptionArgs) (graphqlbackend.ProductSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) CreateProductSubscription(ctx context.Context, args *graphqlbackend.CreateProductSubscriptionArgs) (graphqlbackend.ProductSubscription, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.SetProductSubscriptionBilling",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.SetProductSubscriptionBilling",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.SetProductSubscriptionBilling",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) SetProductSubscriptionBilling(ctx context.Context, args *graphqlbackend.SetProductSubscriptionBillingArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) SetProductSubscriptionBilling(ctx context.Context, args *graphqlbackend.SetProductSubscriptionBillingArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.CreatePaidProductSubscription",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.CreatePaidProductSubscription",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.CreatePaidProductSubscription",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) CreatePaidProductSubscription(ctx context.Context, args *graphqlbackend.CreatePaidProductSubscriptionArgs) (*graphqlbackend.CreatePaidProductSubscriptionResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) CreatePaidProductSubscription(ctx context.Context, args *graphqlbackend.CreatePaidProductSubscriptionArgs) (*graphqlbackend.CreatePaidProductSubscriptionResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.UpdatePaidProductSubscription",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.UpdatePaidProductSubscription",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.UpdatePaidProductSubscription",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) UpdatePaidProductSubscription(ctx context.Context, args *graphqlbackend.UpdatePaidProductSubscriptionArgs) (*graphqlbackend.UpdatePaidProductSubscriptionResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) UpdatePaidProductSubscription(ctx context.Context, args *graphqlbackend.UpdatePaidProductSubscriptionArgs) (*graphqlbackend.UpdatePaidProductSubscriptionResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.ArchiveProductSubscription",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.ArchiveProductSubscription",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ArchiveProductSubscription",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) ArchiveProductSubscription(ctx context.Context, args *graphqlbackend.ArchiveProductSubscriptionArgs) (*graphqlbackend.EmptyResponse, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) ArchiveProductSubscription(ctx context.Context, args *graphqlbackend.ArchiveProductSubscriptionArgs) (*graphqlbackend.EmptyResponse, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.ProductSubscription",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.ProductSubscription",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductSubscription",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) ProductSubscription(ctx context.Context, args *graphqlbackend.ProductSubscriptionArgs) (graphqlbackend.ProductSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) ProductSubscription(ctx context.Context, args *graphqlbackend.ProductSubscriptionArgs) (graphqlbackend.ProductSubscription, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#ProductSubscriptionLicensingResolver.ProductSubscriptions",
+                    "documentation": {
+                      "identifier": "ProductSubscriptionLicensingResolver.ProductSubscriptions",
+                      "newPage": false,
+                      "searchKey": "productsubscription.ProductSubscriptionLicensingResolver.ProductSubscriptions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r ProductSubscriptionLicensingResolver) ProductSubscriptions(ctx context.Context, args *graphqlbackend.ProductSubscriptionsArgs) (graphqlbackend.ProductSubscriptionConnection, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r ProductSubscriptionLicensingResolver) ProductSubscriptions(ctx context.Context, args *graphqlbackend.ProductSubscriptionsArgs) (graphqlbackend.ProductSubscriptionConnection, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionPreviewInvoice",
+              "documentation": {
+                "identifier": "productSubscriptionPreviewInvoice",
+                "newPage": false,
+                "searchKey": "productsubscription.productSubscriptionPreviewInvoice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type productSubscriptionPreviewInvoice struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype productSubscriptionPreviewInvoice struct {\n\tprice         int32\n\tamountDue     int32\n\tprorationDate *int64\n\tbefore, after *productSubscriptionInvoiceItem\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionPreviewInvoice.Price",
+                    "documentation": {
+                      "identifier": "productSubscriptionPreviewInvoice.Price",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionPreviewInvoice.Price",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionPreviewInvoice) Price() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionPreviewInvoice) Price() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionPreviewInvoice.AmountDue",
+                    "documentation": {
+                      "identifier": "productSubscriptionPreviewInvoice.AmountDue",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionPreviewInvoice.AmountDue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionPreviewInvoice) AmountDue() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionPreviewInvoice) AmountDue() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionPreviewInvoice.ProrationDate",
+                    "documentation": {
+                      "identifier": "productSubscriptionPreviewInvoice.ProrationDate",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionPreviewInvoice.ProrationDate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionPreviewInvoice) ProrationDate() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionPreviewInvoice) ProrationDate() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionPreviewInvoice.IsDowngradeRequiringManualIntervention",
+                    "documentation": {
+                      "identifier": "productSubscriptionPreviewInvoice.IsDowngradeRequiringManualIntervention",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionPreviewInvoice.IsDowngradeRequiringManualIntervention",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionPreviewInvoice) IsDowngradeRequiringManualIntervention() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionPreviewInvoice) IsDowngradeRequiringManualIntervention() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionPreviewInvoice.BeforeInvoiceItem",
+                    "documentation": {
+                      "identifier": "productSubscriptionPreviewInvoice.BeforeInvoiceItem",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionPreviewInvoice.BeforeInvoiceItem",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionPreviewInvoice) BeforeInvoiceItem() graphqlbackend.ProductSubscriptionInvoiceItem"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionPreviewInvoice) BeforeInvoiceItem() graphqlbackend.ProductSubscriptionInvoiceItem\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionPreviewInvoice.AfterInvoiceItem",
+                    "documentation": {
+                      "identifier": "productSubscriptionPreviewInvoice.AfterInvoiceItem",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionPreviewInvoice.AfterInvoiceItem",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionPreviewInvoice) AfterInvoiceItem() graphqlbackend.ProductSubscriptionInvoiceItem"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionPreviewInvoice) AfterInvoiceItem() graphqlbackend.ProductSubscriptionInvoiceItem\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#slackClient",
+              "documentation": {
+                "identifier": "slackClient",
+                "newPage": false,
+                "searchKey": "productsubscription.slackClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type slackClient interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype slackClient interface {\n\tPost(ctx context.Context, payload *slack.Payload) error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicense",
+              "documentation": {
+                "identifier": "dbLicense",
+                "newPage": false,
+                "searchKey": "productsubscription.dbLicense",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dbLicense struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dbLicense struct {\n\tID                    string // UUID\n\tProductSubscriptionID string // UUID\n\tLicenseKey            string\n\tCreatedAt             time.Time\n}\n```\n\ndbLicense describes an product license row in the product_licenses DB table. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicenses",
+              "documentation": {
+                "identifier": "dbLicenses",
+                "newPage": false,
+                "searchKey": "productsubscription.dbLicenses",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dbLicenses struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dbLicenses struct {\n\tdb dbutil.DB\n}\n```\n\ndbLicenses exposes product licenses in the product_licenses DB table. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicenses.Create",
+                    "documentation": {
+                      "identifier": "dbLicenses.Create",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbLicenses.Create",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbLicenses) Create(ctx context.Context, subscriptionID, licenseKey string) (id string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbLicenses) Create(ctx context.Context, subscriptionID, licenseKey string) (id string, err error)\n```\n\nCreate creates a new product license entry given a license key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicenses.GetByID",
+                    "documentation": {
+                      "identifier": "dbLicenses.GetByID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbLicenses.GetByID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbLicenses) GetByID(ctx context.Context, id string) (*dbLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbLicenses) GetByID(ctx context.Context, id string) (*dbLicense, error)\n```\n\nGetByID retrieves the product license (if any) given its ID. \n\n🚨 SECURITY: The caller must ensure that the actor is permitted to view this product license. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicenses.GetByLicenseKey",
+                    "documentation": {
+                      "identifier": "dbLicenses.GetByLicenseKey",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbLicenses.GetByLicenseKey",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbLicenses) GetByLicenseKey(ctx context.Context, licenseKey string) (*dbLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbLicenses) GetByLicenseKey(ctx context.Context, licenseKey string) (*dbLicense, error)\n```\n\nGetByID retrieves the product license (if any) given its license key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicenses.List",
+                    "documentation": {
+                      "identifier": "dbLicenses.List",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbLicenses.List",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbLicenses) List(ctx context.Context, opt dbLicensesListOptions) ([]*dbLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbLicenses) List(ctx context.Context, opt dbLicensesListOptions) ([]*dbLicense, error)\n```\n\nList lists all product licenses that satisfy the options. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicenses.list",
+                    "documentation": {
+                      "identifier": "dbLicenses.list",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbLicenses.list",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbLicenses) list(ctx context.Context, conds []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbLicenses) list(ctx context.Context, conds []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbLicense, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicenses.Count",
+                    "documentation": {
+                      "identifier": "dbLicenses.Count",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbLicenses.Count",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbLicenses) Count(ctx context.Context, opt dbLicensesListOptions) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbLicenses) Count(ctx context.Context, opt dbLicensesListOptions) (int, error)\n```\n\nCount counts all product licenses that satisfy the options (ignoring limit and offset). \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicensesListOptions",
+              "documentation": {
+                "identifier": "dbLicensesListOptions",
+                "newPage": false,
+                "searchKey": "productsubscription.dbLicensesListOptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dbLicensesListOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dbLicensesListOptions struct {\n\tLicenseKeySubstring   string\n\tProductSubscriptionID string // only list product licenses for this subscription (by UUID)\n\t*database.LimitOffset\n}\n```\n\ndbLicensesListOptions contains options for listing product licenses. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbLicensesListOptions.sqlConditions",
+                    "documentation": {
+                      "identifier": "dbLicensesListOptions.sqlConditions",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbLicensesListOptions.sqlConditions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o dbLicensesListOptions) sqlConditions() []*sqlf.Query"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o dbLicensesListOptions) sqlConditions() []*sqlf.Query\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#mockLicenses",
+              "documentation": {
+                "identifier": "mockLicenses",
+                "newPage": false,
+                "searchKey": "productsubscription.mockLicenses",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockLicenses struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockLicenses struct {\n\tCreate          func(subscriptionID, licenseKey string) (id string, err error)\n\tGetByID         func(id string) (*dbLicense, error)\n\tGetByLicenseKey func(licenseKey string) (*dbLicense, error)\n\tList            func(ctx context.Context, opt dbLicensesListOptions) ([]*dbLicense, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicense",
+              "documentation": {
+                "identifier": "productLicense",
+                "newPage": false,
+                "searchKey": "productsubscription.productLicense",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type productLicense struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype productLicense struct {\n\tdb dbutil.DB\n\tv  *dbLicense\n}\n```\n\nproductLicense implements the GraphQL type ProductLicense. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicenseByID",
+                    "documentation": {
+                      "identifier": "productLicenseByID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicenseByID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func productLicenseByID(ctx context.Context, db dbutil.DB, id graphql.ID) (*productLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc productLicenseByID(ctx context.Context, db dbutil.DB, id graphql.ID) (*productLicense, error)\n```\n\nproductLicenseByID looks up and returns the ProductLicense with the given GraphQL ID. If no such ProductLicense exists, it returns a non-nil error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicenseByDBID",
+                    "documentation": {
+                      "identifier": "productLicenseByDBID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicenseByDBID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func productLicenseByDBID(ctx context.Context, db dbutil.DB, id string) (*productLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc productLicenseByDBID(ctx context.Context, db dbutil.DB, id string) (*productLicense, error)\n```\n\nproductLicenseByDBID looks up and returns the ProductLicense with the given database ID. If no such ProductLicense exists, it returns a non-nil error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicense.ID",
+                    "documentation": {
+                      "identifier": "productLicense.ID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicense.ID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicense) ID() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicense) ID() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicense.Subscription",
+                    "documentation": {
+                      "identifier": "productLicense.Subscription",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicense.Subscription",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicense) Subscription(ctx context.Context) (graphqlbackend.ProductSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicense) Subscription(ctx context.Context) (graphqlbackend.ProductSubscription, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicense.Info",
+                    "documentation": {
+                      "identifier": "productLicense.Info",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicense.Info",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicense) Info() (*graphqlbackend.ProductLicenseInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicense) Info() (*graphqlbackend.ProductLicenseInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicense.LicenseKey",
+                    "documentation": {
+                      "identifier": "productLicense.LicenseKey",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicense.LicenseKey",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicense) LicenseKey() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicense) LicenseKey() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicense.CreatedAt",
+                    "documentation": {
+                      "identifier": "productLicense.CreatedAt",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicense.CreatedAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicense) CreatedAt() graphqlbackend.DateTime"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicense) CreatedAt() graphqlbackend.DateTime\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicenseConnection",
+              "documentation": {
+                "identifier": "productLicenseConnection",
+                "newPage": false,
+                "searchKey": "productsubscription.productLicenseConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type productLicenseConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype productLicenseConnection struct {\n\topt dbLicensesListOptions\n\tdb  dbutil.DB\n\n\t// cache results because they are used by multiple fields\n\tonce    sync.Once\n\tresults []*dbLicense\n\terr     error\n}\n```\n\nproductLicenseConnection implements the GraphQL type ProductLicenseConnection. \n\n🚨 SECURITY: When instantiating a productLicenseConnection value, the caller MUST check permissions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicenseConnection.compute",
+                    "documentation": {
+                      "identifier": "productLicenseConnection.compute",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicenseConnection.compute",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicenseConnection) compute(ctx context.Context) ([]*dbLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicenseConnection) compute(ctx context.Context) ([]*dbLicense, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicenseConnection.Nodes",
+                    "documentation": {
+                      "identifier": "productLicenseConnection.Nodes",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicenseConnection.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicenseConnection) Nodes(ctx context.Context) ([]graphqlbackend.ProductLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicenseConnection) Nodes(ctx context.Context) ([]graphqlbackend.ProductLicense, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicenseConnection.TotalCount",
+                    "documentation": {
+                      "identifier": "productLicenseConnection.TotalCount",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicenseConnection.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicenseConnection) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicenseConnection) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productLicenseConnection.PageInfo",
+                    "documentation": {
+                      "identifier": "productLicenseConnection.PageInfo",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productLicenseConnection.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productLicenseConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productLicenseConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbMocks",
+              "documentation": {
+                "identifier": "dbMocks",
+                "newPage": false,
+                "searchKey": "productsubscription.dbMocks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dbMocks struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dbMocks struct {\n\tsubscriptions mockSubscriptions\n\tlicenses      mockLicenses\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionInvoiceItem",
+              "documentation": {
+                "identifier": "productSubscriptionInvoiceItem",
+                "newPage": false,
+                "searchKey": "productsubscription.productSubscriptionInvoiceItem",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type productSubscriptionInvoiceItem struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype productSubscriptionInvoiceItem struct {\n\tplan      *stripe.Plan\n\tuserCount int32\n\texpiresAt time.Time\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionInvoiceItem.Plan",
+                    "documentation": {
+                      "identifier": "productSubscriptionInvoiceItem.Plan",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionInvoiceItem.Plan",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionInvoiceItem) Plan() (graphqlbackend.ProductPlan, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionInvoiceItem) Plan() (graphqlbackend.ProductPlan, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionInvoiceItem.UserCount",
+                    "documentation": {
+                      "identifier": "productSubscriptionInvoiceItem.UserCount",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionInvoiceItem.UserCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionInvoiceItem) UserCount() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionInvoiceItem) UserCount() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionInvoiceItem.ExpiresAt",
+                    "documentation": {
+                      "identifier": "productSubscriptionInvoiceItem.ExpiresAt",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionInvoiceItem.ExpiresAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionInvoiceItem) ExpiresAt() graphqlbackend.DateTime"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionInvoiceItem) ExpiresAt() graphqlbackend.DateTime\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscription",
+              "documentation": {
+                "identifier": "dbSubscription",
+                "newPage": false,
+                "searchKey": "productsubscription.dbSubscription",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dbSubscription struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dbSubscription struct {\n\tID                    string // UUID\n\tUserID                int32\n\tBillingSubscriptionID *string // this subscription's ID in the billing system\n\tCreatedAt             time.Time\n\tArchivedAt            *time.Time\n}\n```\n\ndbSubscription describes an product subscription row in the product_subscriptions DB table. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptions",
+              "documentation": {
+                "identifier": "dbSubscriptions",
+                "newPage": false,
+                "searchKey": "productsubscription.dbSubscriptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dbSubscriptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dbSubscriptions struct {\n\tdb dbutil.DB\n}\n```\n\ndbSubscriptions exposes product subscriptions in the product_subscriptions DB table. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptions.Create",
+                    "documentation": {
+                      "identifier": "dbSubscriptions.Create",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbSubscriptions.Create",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbSubscriptions) Create(ctx context.Context, userID int32) (id string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbSubscriptions) Create(ctx context.Context, userID int32) (id string, err error)\n```\n\nCreate creates a new product subscription entry given a license key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptions.GetByID",
+                    "documentation": {
+                      "identifier": "dbSubscriptions.GetByID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbSubscriptions.GetByID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbSubscriptions) GetByID(ctx context.Context, id string) (*dbSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbSubscriptions) GetByID(ctx context.Context, id string) (*dbSubscription, error)\n```\n\nGetByID retrieves the product subscription (if any) given its ID. \n\n🚨 SECURITY: The caller must ensure that the actor is permitted to view this product subscription. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptions.List",
+                    "documentation": {
+                      "identifier": "dbSubscriptions.List",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbSubscriptions.List",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbSubscriptions) List(ctx context.Context, opt dbSubscriptionsListOptions) ([]*dbSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbSubscriptions) List(ctx context.Context, opt dbSubscriptionsListOptions) ([]*dbSubscription, error)\n```\n\nList lists all product subscriptions that satisfy the options. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptions.list",
+                    "documentation": {
+                      "identifier": "dbSubscriptions.list",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbSubscriptions.list",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbSubscriptions) list(ctx context.Context, conds []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbSubscriptions) list(ctx context.Context, conds []*sqlf.Query, limitOffset *database.LimitOffset) ([]*dbSubscription, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptions.Count",
+                    "documentation": {
+                      "identifier": "dbSubscriptions.Count",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbSubscriptions.Count",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbSubscriptions) Count(ctx context.Context, opt dbSubscriptionsListOptions) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbSubscriptions) Count(ctx context.Context, opt dbSubscriptionsListOptions) (int, error)\n```\n\nCount counts all product subscriptions that satisfy the options (ignoring limit and offset). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptions.Update",
+                    "documentation": {
+                      "identifier": "dbSubscriptions.Update",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbSubscriptions.Update",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbSubscriptions) Update(ctx context.Context, id string, update dbSubscriptionUpdate) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbSubscriptions) Update(ctx context.Context, id string, update dbSubscriptionUpdate) error\n```\n\nUpdate updates a product subscription. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptions.Archive",
+                    "documentation": {
+                      "identifier": "dbSubscriptions.Archive",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbSubscriptions.Archive",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s dbSubscriptions) Archive(ctx context.Context, id string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s dbSubscriptions) Archive(ctx context.Context, id string) error\n```\n\nArchive marks a product subscription as archived given its ID. \n\n🚨 SECURITY: The caller must ensure that the actor is permitted to archive the token. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptionsListOptions",
+              "documentation": {
+                "identifier": "dbSubscriptionsListOptions",
+                "newPage": false,
+                "searchKey": "productsubscription.dbSubscriptionsListOptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dbSubscriptionsListOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dbSubscriptionsListOptions struct {\n\tUserID          int32 // only list product subscriptions for this user\n\tQuery           string\n\tIncludeArchived bool\n\t*database.LimitOffset\n}\n```\n\ndbSubscriptionsListOptions contains options for listing product subscriptions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptionsListOptions.sqlConditions",
+                    "documentation": {
+                      "identifier": "dbSubscriptionsListOptions.sqlConditions",
+                      "newPage": false,
+                      "searchKey": "productsubscription.dbSubscriptionsListOptions.sqlConditions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o dbSubscriptionsListOptions) sqlConditions() []*sqlf.Query"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o dbSubscriptionsListOptions) sqlConditions() []*sqlf.Query\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#dbSubscriptionUpdate",
+              "documentation": {
+                "identifier": "dbSubscriptionUpdate",
+                "newPage": false,
+                "searchKey": "productsubscription.dbSubscriptionUpdate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dbSubscriptionUpdate struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dbSubscriptionUpdate struct {\n\tbillingSubscriptionID *sql.NullString\n}\n```\n\ndbSubscriptionsUpdate represents an update to a product subscription in the database. Each field represents an update to the corresponding database field if the Go value is non-nil. If the Go value is nil, the field remains unchanged in the database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#mockSubscriptions",
+              "documentation": {
+                "identifier": "mockSubscriptions",
+                "newPage": false,
+                "searchKey": "productsubscription.mockSubscriptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mockSubscriptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mockSubscriptions struct {\n\tCreate  func(userID int32) (id string, err error)\n\tGetByID func(id string) (*dbSubscription, error)\n\tArchive func(id string) error\n\tList    func(ctx context.Context, opt dbSubscriptionsListOptions) ([]*dbSubscription, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription",
+              "documentation": {
+                "identifier": "productSubscription",
+                "newPage": false,
+                "searchKey": "productsubscription.productSubscription",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type productSubscription struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype productSubscription struct {\n\tdb dbutil.DB\n\tv  *dbSubscription\n}\n```\n\nproductSubscription implements the GraphQL type ProductSubscription. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionByID",
+                    "documentation": {
+                      "identifier": "productSubscriptionByID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionByID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func productSubscriptionByID(ctx context.Context, db dbutil.DB, id graphql.ID) (*productSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc productSubscriptionByID(ctx context.Context, db dbutil.DB, id graphql.ID) (*productSubscription, error)\n```\n\nproductSubscriptionByID looks up and returns the ProductSubscription with the given GraphQL ID. If no such ProductSubscription exists, it returns a non-nil error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionByDBID",
+                    "documentation": {
+                      "identifier": "productSubscriptionByDBID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionByDBID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func productSubscriptionByDBID(ctx context.Context, db dbutil.DB, id string) (*productSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc productSubscriptionByDBID(ctx context.Context, db dbutil.DB, id string) (*productSubscription, error)\n```\n\nproductSubscriptionByDBID looks up and returns the ProductSubscription with the given database ID. If no such ProductSubscription exists, it returns a non-nil error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.InvoiceItem",
+                    "documentation": {
+                      "identifier": "productSubscription.InvoiceItem",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.InvoiceItem",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) InvoiceItem(ctx context.Context) (graphqlbackend.ProductSubscriptionInvoiceItem, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) InvoiceItem(ctx context.Context) (graphqlbackend.ProductSubscriptionInvoiceItem, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.ID",
+                    "documentation": {
+                      "identifier": "productSubscription.ID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.ID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) ID() graphql.ID"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) ID() graphql.ID\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.UUID",
+                    "documentation": {
+                      "identifier": "productSubscription.UUID",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.UUID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) UUID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) UUID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.Name",
+                    "documentation": {
+                      "identifier": "productSubscription.Name",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.Name",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.Account",
+                    "documentation": {
+                      "identifier": "productSubscription.Account",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.Account",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) Account(ctx context.Context) (*graphqlbackend.UserResolver, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) Account(ctx context.Context) (*graphqlbackend.UserResolver, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.Events",
+                    "documentation": {
+                      "identifier": "productSubscription.Events",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.Events",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) Events(ctx context.Context) ([]graphqlbackend.ProductSubscriptionEvent, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) Events(ctx context.Context) ([]graphqlbackend.ProductSubscriptionEvent, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.ActiveLicense",
+                    "documentation": {
+                      "identifier": "productSubscription.ActiveLicense",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.ActiveLicense",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) ActiveLicense(ctx context.Context) (graphqlbackend.ProductLicense, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) ActiveLicense(ctx context.Context) (graphqlbackend.ProductLicense, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.ProductLicenses",
+                    "documentation": {
+                      "identifier": "productSubscription.ProductLicenses",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.ProductLicenses",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) ProductLicenses(ctx context.Context, args *graphqlutil.ConnectionArgs) (graphqlbackend.ProductLicenseConnection, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) ProductLicenses(ctx context.Context, args *graphqlutil.ConnectionArgs) (graphqlbackend.ProductLicenseConnection, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.CreatedAt",
+                    "documentation": {
+                      "identifier": "productSubscription.CreatedAt",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.CreatedAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) CreatedAt() graphqlbackend.DateTime"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) CreatedAt() graphqlbackend.DateTime\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.IsArchived",
+                    "documentation": {
+                      "identifier": "productSubscription.IsArchived",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.IsArchived",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) IsArchived() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) IsArchived() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.URL",
+                    "documentation": {
+                      "identifier": "productSubscription.URL",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.URL",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) URL(ctx context.Context) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) URL(ctx context.Context) (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.URLForSiteAdmin",
+                    "documentation": {
+                      "identifier": "productSubscription.URLForSiteAdmin",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.URLForSiteAdmin",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) URLForSiteAdmin(ctx context.Context) *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) URLForSiteAdmin(ctx context.Context) *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscription.URLForSiteAdminBilling",
+                    "documentation": {
+                      "identifier": "productSubscription.URLForSiteAdminBilling",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscription.URLForSiteAdminBilling",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscription) URLForSiteAdminBilling(ctx context.Context) (*string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscription) URLForSiteAdminBilling(ctx context.Context) (*string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionConnection",
+              "documentation": {
+                "identifier": "productSubscriptionConnection",
+                "newPage": false,
+                "searchKey": "productsubscription.productSubscriptionConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type productSubscriptionConnection struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype productSubscriptionConnection struct {\n\topt dbSubscriptionsListOptions\n\tdb  dbutil.DB\n\n\t// cache results because they are used by multiple fields\n\tonce    sync.Once\n\tresults []*dbSubscription\n\terr     error\n}\n```\n\nproductSubscriptionConnection implements the GraphQL type ProductSubscriptionConnection. \n\n🚨 SECURITY: When instantiating a productSubscriptionConnection value, the caller MUST check permissions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionConnection.compute",
+                    "documentation": {
+                      "identifier": "productSubscriptionConnection.compute",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionConnection.compute",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionConnection) compute(ctx context.Context) ([]*dbSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionConnection) compute(ctx context.Context) ([]*dbSubscription, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionConnection.Nodes",
+                    "documentation": {
+                      "identifier": "productSubscriptionConnection.Nodes",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionConnection.Nodes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionConnection) Nodes(ctx context.Context) ([]graphqlbackend.ProductSubscription, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionConnection) Nodes(ctx context.Context) ([]graphqlbackend.ProductSubscription, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionConnection.TotalCount",
+                    "documentation": {
+                      "identifier": "productSubscriptionConnection.TotalCount",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionConnection.TotalCount",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionConnection) TotalCount(ctx context.Context) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionConnection) TotalCount(ctx context.Context) (int32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#productSubscriptionConnection.PageInfo",
+                    "documentation": {
+                      "identifier": "productSubscriptionConnection.PageInfo",
+                      "newPage": false,
+                      "searchKey": "productsubscription.productSubscriptionConnection.PageInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *productSubscriptionConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *productSubscriptionConnection) PageInfo(ctx context.Context) (*graphqlutil.PageInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#fakeSlackClient",
+              "documentation": {
+                "identifier": "fakeSlackClient",
+                "newPage": false,
+                "searchKey": "productsubscription.fakeSlackClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fakeSlackClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fakeSlackClient struct {\n\tpayloads []*slack.Payload\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#fakeSlackClient.Post",
+                    "documentation": {
+                      "identifier": "fakeSlackClient.Post",
+                      "newPage": false,
+                      "searchKey": "productsubscription.fakeSlackClient.Post",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *fakeSlackClient) Post(ctx context.Context, payload *slack.Payload) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *fakeSlackClient) Post(ctx context.Context, payload *slack.Payload) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#isDowngradeRequiringManualIntervention",
+              "documentation": {
+                "identifier": "isDowngradeRequiringManualIntervention",
+                "newPage": false,
+                "searchKey": "productsubscription.isDowngradeRequiringManualIntervention",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isDowngradeRequiringManualIntervention(beforeUserCount int32, beforePlanPrice int64, afterUserCount int32, afterPlanPrice int64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isDowngradeRequiringManualIntervention(beforeUserCount int32, beforePlanPrice int64, afterUserCount int32, afterPlanPrice int64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#userCountExceedsPlanMaxError",
+              "documentation": {
+                "identifier": "userCountExceedsPlanMaxError",
+                "newPage": false,
+                "searchKey": "productsubscription.userCountExceedsPlanMaxError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func userCountExceedsPlanMaxError(userCount, max int32) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc userCountExceedsPlanMaxError(userCount, max int32) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#StartCheckForUpcomingLicenseExpirations",
+              "documentation": {
+                "identifier": "StartCheckForUpcomingLicenseExpirations",
+                "newPage": false,
+                "searchKey": "productsubscription.StartCheckForUpcomingLicenseExpirations",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StartCheckForUpcomingLicenseExpirations(db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StartCheckForUpcomingLicenseExpirations(db dbutil.DB)\n```\n\nStartCheckForUpcomingLicenseExpirations checks for upcoming license expirations once per day. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#checkLicensesIfNeeded",
+              "documentation": {
+                "identifier": "checkLicensesIfNeeded",
+                "newPage": false,
+                "searchKey": "productsubscription.checkLicensesIfNeeded",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkLicensesIfNeeded(db dbutil.DB, client slackClient)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkLicensesIfNeeded(db dbutil.DB, client slackClient)\n```\n\ncheckLicensesIfNeeded checks whether a day has passed since the last license check, and if so, initiates one. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#checkForUpcomingLicenseExpirations",
+              "documentation": {
+                "identifier": "checkForUpcomingLicenseExpirations",
+                "newPage": false,
+                "searchKey": "productsubscription.checkForUpcomingLicenseExpirations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkForUpcomingLicenseExpirations(db dbutil.DB, clock glock.Clock, client slackClient)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkForUpcomingLicenseExpirations(db dbutil.DB, clock glock.Clock, client slackClient)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#checkLastSubscriptionLicense",
+              "documentation": {
+                "identifier": "checkLastSubscriptionLicense",
+                "newPage": false,
+                "searchKey": "productsubscription.checkLastSubscriptionLicense",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkLastSubscriptionLicense(ctx context.Context, db dbutil.DB, s *dbSubscription, clock glock.Clock, client slackClient)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkLastSubscriptionLicense(ctx context.Context, db dbutil.DB, s *dbSubscription, clock glock.Clock, client slackClient)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#marshalProductLicenseID",
+              "documentation": {
+                "identifier": "marshalProductLicenseID",
+                "newPage": false,
+                "searchKey": "productsubscription.marshalProductLicenseID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func marshalProductLicenseID(id string) graphql.ID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc marshalProductLicenseID(id string) graphql.ID\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#unmarshalProductLicenseID",
+              "documentation": {
+                "identifier": "unmarshalProductLicenseID",
+                "newPage": false,
+                "searchKey": "productsubscription.unmarshalProductLicenseID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unmarshalProductLicenseID(id graphql.ID) (productLicenseID string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unmarshalProductLicenseID(id graphql.ID) (productLicenseID string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#generateProductLicenseForSubscription",
+              "documentation": {
+                "identifier": "generateProductLicenseForSubscription",
+                "newPage": false,
+                "searchKey": "productsubscription.generateProductLicenseForSubscription",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func generateProductLicenseForSubscription(ctx context.Context, db dbutil.DB, subscriptionID string, input *graphqlbackend.ProductLicenseInput) (id string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc generateProductLicenseForSubscription(ctx context.Context, db dbutil.DB, subscriptionID string, input *graphqlbackend.ProductLicenseInput) (id string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#marshalProductSubscriptionID",
+              "documentation": {
+                "identifier": "marshalProductSubscriptionID",
+                "newPage": false,
+                "searchKey": "productsubscription.marshalProductSubscriptionID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func marshalProductSubscriptionID(id string) graphql.ID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc marshalProductSubscriptionID(id string) graphql.ID\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#unmarshalProductSubscriptionID",
+              "documentation": {
+                "identifier": "unmarshalProductSubscriptionID",
+                "newPage": false,
+                "searchKey": "productsubscription.unmarshalProductSubscriptionID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unmarshalProductSubscriptionID(id graphql.ID) (productSubscriptionID string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unmarshalProductSubscriptionID(id graphql.ID) (productSubscriptionID string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "productsubscription.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#TestCheckForUpcomingLicenseExpirations",
+              "documentation": {
+                "identifier": "TestCheckForUpcomingLicenseExpirations",
+                "newPage": false,
+                "searchKey": "productsubscription.TestCheckForUpcomingLicenseExpirations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCheckForUpcomingLicenseExpirations(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCheckForUpcomingLicenseExpirations(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#TestProductLicenses_Create",
+              "documentation": {
+                "identifier": "TestProductLicenses_Create",
+                "newPage": false,
+                "searchKey": "productsubscription.TestProductLicenses_Create",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProductLicenses_Create(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProductLicenses_Create(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#TestProductLicenses_List",
+              "documentation": {
+                "identifier": "TestProductLicenses_List",
+                "newPage": false,
+                "searchKey": "productsubscription.TestProductLicenses_List",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProductLicenses_List(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProductLicenses_List(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#TestProductSubscriptions_Create",
+              "documentation": {
+                "identifier": "TestProductSubscriptions_Create",
+                "newPage": false,
+                "searchKey": "productsubscription.TestProductSubscriptions_Create",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProductSubscriptions_Create(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProductSubscriptions_Create(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#TestProductSubscriptions_List",
+              "documentation": {
+                "identifier": "TestProductSubscriptions_List",
+                "newPage": false,
+                "searchKey": "productsubscription.TestProductSubscriptions_List",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProductSubscriptions_List(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProductSubscriptions_List(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription#TestProductSubscriptions_Update",
+              "documentation": {
+                "identifier": "TestProductSubscriptions_Update",
+                "newPage": false,
+                "searchKey": "productsubscription.TestProductSubscriptions_Update",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProductSubscriptions_Update(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProductSubscriptions_Update(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

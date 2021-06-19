@@ -1,0 +1,1563 @@
+{
+  "pathID": "/internal/trace",
+  "documentation": {
+    "identifier": "trace",
+    "newPage": true,
+    "searchKey": "internal/trace",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package trace"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/trace#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/trace#routeNameKey",
+              "documentation": {
+                "identifier": "routeNameKey",
+                "newPage": false,
+                "searchKey": "trace.routeNameKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const routeNameKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst routeNameKey key = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#userKey",
+              "documentation": {
+                "identifier": "userKey",
+                "newPage": false,
+                "searchKey": "trace.userKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const userKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst userKey\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#requestErrorCauseKey",
+              "documentation": {
+                "identifier": "requestErrorCauseKey",
+                "newPage": false,
+                "searchKey": "trace.requestErrorCauseKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const requestErrorCauseKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst requestErrorCauseKey\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#graphQLRequestNameKey",
+              "documentation": {
+                "identifier": "graphQLRequestNameKey",
+                "newPage": false,
+                "searchKey": "trace.graphQLRequestNameKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const graphQLRequestNameKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst graphQLRequestNameKey\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#originKey",
+              "documentation": {
+                "identifier": "originKey",
+                "newPage": false,
+                "searchKey": "trace.originKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const originKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst originKey\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#sourceKey",
+              "documentation": {
+                "identifier": "sourceKey",
+                "newPage": false,
+                "searchKey": "trace.sourceKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sourceKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sourceKey\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#GraphQLQueryKey",
+              "documentation": {
+                "identifier": "GraphQLQueryKey",
+                "newPage": false,
+                "searchKey": "trace.GraphQLQueryKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GraphQLQueryKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GraphQLQueryKey\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SourceBrowser",
+              "documentation": {
+                "identifier": "SourceBrowser",
+                "newPage": false,
+                "searchKey": "trace.SourceBrowser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SourceBrowser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SourceBrowser SourceType = \"browser\"\n```\n\nSourceBrowser indicates the request likely came from a web browser. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SourceOther",
+              "documentation": {
+                "identifier": "SourceOther",
+                "newPage": false,
+                "searchKey": "trace.SourceOther",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SourceOther"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SourceOther SourceType = \"other\"\n```\n\nSourceOther indicates the request likely came from a non-browser HTTP client. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#traceKey",
+              "documentation": {
+                "identifier": "traceKey",
+                "newPage": false,
+                "searchKey": "trace.traceKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const traceKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst traceKey = traceContextKey(\"trace\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/trace#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/trace#UserLatencyBuckets",
+              "documentation": {
+                "identifier": "UserLatencyBuckets",
+                "newPage": false,
+                "searchKey": "trace.UserLatencyBuckets",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var UserLatencyBuckets"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar UserLatencyBuckets = []float64{0.2, 0.5, 1, 2, 5, 10, 30}\n```\n\nUserLatencyBuckets is a recommended list of buckets for use in prometheus histograms when measuring latency to users. Motivation: longer than 30s we don't care about. 2 is a general SLA we have. Otherwise rest is somewhat evenly spreadout to get good data \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#trackOrigin",
+              "documentation": {
+                "identifier": "trackOrigin",
+                "newPage": false,
+                "searchKey": "trace.trackOrigin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var trackOrigin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar trackOrigin = \"https://gitlab.com\"\n```\n\ntrackOrigin specifies a URL value. When an incoming request has the request header \"Origin\" set and the header value equals the `trackOrigin` value then the `requestDuration` metric (and other metrics downstream) gets labeled with this value for the \"origin\" label  (otherwise the metric is labeled with \"unknown\"). The tracked value can be changed with the METRICS_TRACK_ORIGIN environmental variable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#metricLabels",
+              "documentation": {
+                "identifier": "metricLabels",
+                "newPage": false,
+                "searchKey": "trace.metricLabels",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var metricLabels"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar metricLabels = []string{\"route\", \"method\", \"code\", \"repo\", \"origin\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#requestDuration",
+              "documentation": {
+                "identifier": "requestDuration",
+                "newPage": false,
+                "searchKey": "trace.requestDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestDuration = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#requestHeartbeat",
+              "documentation": {
+                "identifier": "requestHeartbeat",
+                "newPage": false,
+                "searchKey": "trace.requestHeartbeat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestHeartbeat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestHeartbeat = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#spanURL",
+              "documentation": {
+                "identifier": "spanURL",
+                "newPage": false,
+                "searchKey": "trace.spanURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var spanURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar spanURL atomic.Value\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/trace#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/trace#key",
+              "documentation": {
+                "identifier": "key",
+                "newPage": false,
+                "searchKey": "trace.key",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type key int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype key int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SourceType",
+              "documentation": {
+                "identifier": "SourceType",
+                "newPage": false,
+                "searchKey": "trace.SourceType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SourceType string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SourceType string\n```\n\nSourceType indicates the type of source that likely created the request. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace#RequestSource",
+                    "documentation": {
+                      "identifier": "RequestSource",
+                      "newPage": false,
+                      "searchKey": "trace.RequestSource",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func RequestSource(ctx context.Context) SourceType"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc RequestSource(ctx context.Context) SourceType\n```\n\nRequestSource returns the request source constant for a request context. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#httpErr",
+              "documentation": {
+                "identifier": "httpErr",
+                "newPage": false,
+                "searchKey": "trace.httpErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type httpErr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype httpErr struct {\n\tstatus int\n\tmethod string\n\tpath   string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace#httpErr.Error",
+                    "documentation": {
+                      "identifier": "httpErr.Error",
+                      "newPage": false,
+                      "searchKey": "trace.httpErr.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpErr) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpErr) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#Tracer",
+              "documentation": {
+                "identifier": "Tracer",
+                "newPage": false,
+                "searchKey": "trace.Tracer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Tracer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Tracer struct {\n\tTracer opentracing.Tracer\n}\n```\n\nA Tracer for trace creation, parameterised over an opentracing.Tracer. Use this if you don't want to use the global tracer. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace#Tracer.New",
+                    "documentation": {
+                      "identifier": "Tracer.New",
+                      "newPage": false,
+                      "searchKey": "trace.Tracer.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t Tracer) New(ctx context.Context, family, title string, tags ...Tag) (*Trace, context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t Tracer) New(ctx context.Context, family, title string, tags ...Tag) (*Trace, context.Context)\n```\n\nNew returns a new Trace with the specified family and title. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#traceContextKey",
+              "documentation": {
+                "identifier": "traceContextKey",
+                "newPage": false,
+                "searchKey": "trace.traceContextKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type traceContextKey string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype traceContextKey string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#Trace",
+              "documentation": {
+                "identifier": "Trace",
+                "newPage": false,
+                "searchKey": "trace.Trace",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Trace struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Trace struct {\n\ttrace  nettrace.Trace\n\tspan   opentracing.Span\n\tfamily string\n}\n```\n\nTrace is a combined version of golang.org/x/net/trace.Trace and opentracing.Span. Use New to construct one. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "trace.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(ctx context.Context, family, title string, tags ...Tag) (*Trace, context.Context)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(ctx context.Context, family, title string, tags ...Tag) (*Trace, context.Context)\n```\n\nNew returns a new Trace with the specified family and title. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#TraceFromContext",
+                    "documentation": {
+                      "identifier": "TraceFromContext",
+                      "newPage": false,
+                      "searchKey": "trace.TraceFromContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func TraceFromContext(ctx context.Context) *Trace"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc TraceFromContext(ctx context.Context) *Trace\n```\n\nTraceFromContext returns the Trace previously associated with ctx, or nil if no such Trace could be found. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#Trace.LazyPrintf",
+                    "documentation": {
+                      "identifier": "Trace.LazyPrintf",
+                      "newPage": false,
+                      "searchKey": "trace.Trace.LazyPrintf",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Trace) LazyPrintf(format string, a ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Trace) LazyPrintf(format string, a ...interface{})\n```\n\nLazyPrintf evaluates its arguments with fmt.Sprintf each time the /debug/requests page is rendered. Any memory referenced by a will be pinned until the trace is finished and later discarded. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#Trace.LogFields",
+                    "documentation": {
+                      "identifier": "Trace.LogFields",
+                      "newPage": false,
+                      "searchKey": "trace.Trace.LogFields",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Trace) LogFields(fields ...log.Field)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Trace) LogFields(fields ...log.Field)\n```\n\nLogFields logs fields to the opentracing.Span as well as the nettrace.Trace. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#Trace.SetError",
+                    "documentation": {
+                      "identifier": "Trace.SetError",
+                      "newPage": false,
+                      "searchKey": "trace.Trace.SetError",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Trace) SetError(err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Trace) SetError(err error)\n```\n\nSetError declares that this trace and span resulted in an error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#Trace.SetErrorIfNotContext",
+                    "documentation": {
+                      "identifier": "Trace.SetErrorIfNotContext",
+                      "newPage": false,
+                      "searchKey": "trace.Trace.SetErrorIfNotContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Trace) SetErrorIfNotContext(err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Trace) SetErrorIfNotContext(err error)\n```\n\nSetErrorIfNotContext calls SetError unless err is context.Canceled or context.DeadlineExceeded. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#Trace.Finish",
+                    "documentation": {
+                      "identifier": "Trace.Finish",
+                      "newPage": false,
+                      "searchKey": "trace.Trace.Finish",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Trace) Finish()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Trace) Finish()\n```\n\nFinish declares that this trace and span is complete. The trace should not be used after calling this method. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#Tag",
+              "documentation": {
+                "identifier": "Tag",
+                "newPage": false,
+                "searchKey": "trace.Tag",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Tag struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Tag struct {\n\tKey   string\n\tValue string\n}\n```\n\nTag may be passed when creating a new span. See [https://github.com/opentracing/specification/blob/master/semantic_conventions.md](https://github.com/opentracing/specification/blob/master/semantic_conventions.md) for common tags. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#tagsOpt",
+              "documentation": {
+                "identifier": "tagsOpt",
+                "newPage": false,
+                "searchKey": "trace.tagsOpt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type tagsOpt struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype tagsOpt struct {\n\ttags  []Tag\n\ttitle string\n}\n```\n\ntagsOpt is an opentracing.StartSpanOption which applies all the tags \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace#tagsOpt.Apply",
+                    "documentation": {
+                      "identifier": "tagsOpt.Apply",
+                      "newPage": false,
+                      "searchKey": "trace.tagsOpt.Apply",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t tagsOpt) Apply(o *opentracing.StartSpanOptions)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t tagsOpt) Apply(o *opentracing.StartSpanOptions)\n```\n\nApply satisfies the StartSpanOption interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#fieldsStringer",
+              "documentation": {
+                "identifier": "fieldsStringer",
+                "newPage": false,
+                "searchKey": "trace.fieldsStringer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fieldsStringer []log.Field"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fieldsStringer []log.Field\n```\n\nfieldsStringer lazily marshals a slice of log.Field into a string for printing in net/trace. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace#fieldsStringer.String",
+                    "documentation": {
+                      "identifier": "fieldsStringer.String",
+                      "newPage": false,
+                      "searchKey": "trace.fieldsStringer.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs fieldsStringer) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs fieldsStringer) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#encoder",
+              "documentation": {
+                "identifier": "encoder",
+                "newPage": false,
+                "searchKey": "trace.encoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encoder struct {\n\tstrings.Builder\n\tprefixNewline bool\n}\n```\n\nencoder is a log.Encoder used by fieldsStringer. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitString",
+                    "documentation": {
+                      "identifier": "encoder.EmitString",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitString(key, value string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitString(key, value string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitBool",
+                    "documentation": {
+                      "identifier": "encoder.EmitBool",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitBool",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitBool(key string, value bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitBool(key string, value bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitInt",
+                    "documentation": {
+                      "identifier": "encoder.EmitInt",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitInt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitInt(key string, value int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitInt(key string, value int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitInt32",
+                    "documentation": {
+                      "identifier": "encoder.EmitInt32",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitInt32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitInt32(key string, value int32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitInt32(key string, value int32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitInt64",
+                    "documentation": {
+                      "identifier": "encoder.EmitInt64",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitInt64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitInt64(key string, value int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitInt64(key string, value int64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitUint32",
+                    "documentation": {
+                      "identifier": "encoder.EmitUint32",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitUint32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitUint32(key string, value uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitUint32(key string, value uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitUint64",
+                    "documentation": {
+                      "identifier": "encoder.EmitUint64",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitUint64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitUint64(key string, value uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitUint64(key string, value uint64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitFloat32",
+                    "documentation": {
+                      "identifier": "encoder.EmitFloat32",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitFloat32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitFloat32(key string, value float32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitFloat32(key string, value float32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitFloat64",
+                    "documentation": {
+                      "identifier": "encoder.EmitFloat64",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitFloat64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitFloat64(key string, value float64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitFloat64(key string, value float64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitObject",
+                    "documentation": {
+                      "identifier": "encoder.EmitObject",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitObject",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitObject(key string, value interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitObject(key string, value interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/trace#encoder.EmitLazyLogger",
+                    "documentation": {
+                      "identifier": "encoder.EmitLazyLogger",
+                      "newPage": false,
+                      "searchKey": "trace.encoder.EmitLazyLogger",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) EmitLazyLogger(value log.LazyLogger)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) EmitLazyLogger(value log.LazyLogger)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/trace#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/trace#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "trace.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(shouldInitSentry bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(shouldInitSentry bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#GraphQLRequestName",
+              "documentation": {
+                "identifier": "GraphQLRequestName",
+                "newPage": false,
+                "searchKey": "trace.GraphQLRequestName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GraphQLRequestName(ctx context.Context) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GraphQLRequestName(ctx context.Context) string\n```\n\nGraphQLRequestName returns the GraphQL request name for a request context. For example, a request to /.api/graphql?Foobar would have the name `Foobar`. If the request had no name, or the context is not a GraphQL request, \"unknown\" is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#WithGraphQLRequestName",
+              "documentation": {
+                "identifier": "WithGraphQLRequestName",
+                "newPage": false,
+                "searchKey": "trace.WithGraphQLRequestName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithGraphQLRequestName(ctx context.Context, name string) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithGraphQLRequestName(ctx context.Context, name string) context.Context\n```\n\nWithGraphQLRequestName sets the GraphQL request name in the context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#RequestOrigin",
+              "documentation": {
+                "identifier": "RequestOrigin",
+                "newPage": false,
+                "searchKey": "trace.RequestOrigin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RequestOrigin(ctx context.Context) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RequestOrigin(ctx context.Context) string\n```\n\nRequestOrigin returns the request origin (the value of the request header \"Origin\") for a request context. If the request didn't have this header set \"unknown\" is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#WithRequestOrigin",
+              "documentation": {
+                "identifier": "WithRequestOrigin",
+                "newPage": false,
+                "searchKey": "trace.WithRequestOrigin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithRequestOrigin(ctx context.Context, name string) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithRequestOrigin(ctx context.Context, name string) context.Context\n```\n\nWithRequestOrigin sets the request origin in the context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#WithRequestSource",
+              "documentation": {
+                "identifier": "WithRequestSource",
+                "newPage": false,
+                "searchKey": "trace.WithRequestSource",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithRequestSource(ctx context.Context, source SourceType) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithRequestSource(ctx context.Context, source SourceType) context.Context\n```\n\nWithRequestSource sets the request source type in the context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#HTTPTraceMiddleware",
+              "documentation": {
+                "identifier": "HTTPTraceMiddleware",
+                "newPage": false,
+                "searchKey": "trace.HTTPTraceMiddleware",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HTTPTraceMiddleware(next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HTTPTraceMiddleware(next http.Handler) http.Handler\n```\n\nHTTPTraceMiddleware captures and exports metrics to Prometheus, etc. \n\n🚨 SECURITY: This handler is served to all clients, even on private servers to clients who have not authenticated. It must not reveal any sensitive information. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#Route",
+              "documentation": {
+                "identifier": "Route",
+                "newPage": false,
+                "searchKey": "trace.Route",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Route(next http.Handler) http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Route(next http.Handler) http.Handler\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#User",
+              "documentation": {
+                "identifier": "User",
+                "newPage": false,
+                "searchKey": "trace.User",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func User(ctx context.Context, userID int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc User(ctx context.Context, userID int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SetRequestErrorCause",
+              "documentation": {
+                "identifier": "SetRequestErrorCause",
+                "newPage": false,
+                "searchKey": "trace.SetRequestErrorCause",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetRequestErrorCause(ctx context.Context, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetRequestErrorCause(ctx context.Context, err error)\n```\n\nSetRequestErrorCause will set the error for the request to err. This is used in the reporting layer to inspect the error for richer reporting to Sentry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SetRouteName",
+              "documentation": {
+                "identifier": "SetRouteName",
+                "newPage": false,
+                "searchKey": "trace.SetRouteName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetRouteName(r *http.Request, routeName string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetRouteName(r *http.Request, routeName string)\n```\n\nSetRouteName manually sets the name for the route. This should only be used for non-mux routed routes (ie middlewares). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SpanURL",
+              "documentation": {
+                "identifier": "SpanURL",
+                "newPage": false,
+                "searchKey": "trace.SpanURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SpanURL(span opentracing.Span) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SpanURL(span opentracing.Span) string\n```\n\nSpanURL returns the URL to the tracing UI for the given span. The span must be non-nil. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SpanURLFromContext",
+              "documentation": {
+                "identifier": "SpanURLFromContext",
+                "newPage": false,
+                "searchKey": "trace.SpanURLFromContext",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SpanURLFromContext(ctx context.Context) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SpanURLFromContext(ctx context.Context) string\n```\n\nSpanURLFromContext returns the URL to the tracing UI for the span attached to the given context. An empty string is returned if there is no span associated with the given context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SetSpanURLFunc",
+              "documentation": {
+                "identifier": "SetSpanURLFunc",
+                "newPage": false,
+                "searchKey": "trace.SetSpanURLFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetSpanURLFunc(f func(span opentracing.Span) string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetSpanURLFunc(f func(span opentracing.Span) string)\n```\n\nSetSpanURLFunc sets the function that SpanURL sets. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#contextWithTrace",
+              "documentation": {
+                "identifier": "contextWithTrace",
+                "newPage": false,
+                "searchKey": "trace.contextWithTrace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contextWithTrace(ctx context.Context, tr *Trace) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contextWithTrace(ctx context.Context, tr *Trace) context.Context\n```\n\ncontextWithTrace returns a new context.Context that holds a reference to trace's SpanContext. External callers should likely use CopyContext, as this properly propagates all tracing context from one context to another. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#CopyContext",
+              "documentation": {
+                "identifier": "CopyContext",
+                "newPage": false,
+                "searchKey": "trace.CopyContext",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CopyContext(ctx context.Context, from context.Context) context.Context"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CopyContext(ctx context.Context, from context.Context) context.Context\n```\n\nCopyContext copies the tracing-related context items from one context to another and returns that context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#Printf",
+              "documentation": {
+                "identifier": "Printf",
+                "newPage": false,
+                "searchKey": "trace.Printf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Printf(key, f string, args ...interface{}) log.Field"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Printf(key, f string, args ...interface{}) log.Field\n```\n\nPrintf is an opentracing log.Field which is a LazyLogger. So the format string will only be evaluated if the trace is collected. In the case of net/trace, it will only be evaluated on page load. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#Stringer",
+              "documentation": {
+                "identifier": "Stringer",
+                "newPage": false,
+                "searchKey": "trace.Stringer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Stringer(key string, v fmt.Stringer) log.Field"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Stringer(key string, v fmt.Stringer) log.Field\n```\n\nStringer is an opentracing log.Field which is a LazyLogger. So the String() will only be called if the trace is collected. In the case of net/trace, it will only be evaluated on page load. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#SQL",
+              "documentation": {
+                "identifier": "SQL",
+                "newPage": false,
+                "searchKey": "trace.SQL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SQL(q *sqlf.Query) log.Field"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SQL(q *sqlf.Query) log.Field\n```\n\nSQL is an opentracing log.Field which is a LazyLogger. It will log the query as well as each argument. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/trace#TestSpanURL",
+              "documentation": {
+                "identifier": "TestSpanURL",
+                "newPage": false,
+                "searchKey": "trace.TestSpanURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSpanURL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSpanURL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/trace/ot"
+    }
+  ]
+}

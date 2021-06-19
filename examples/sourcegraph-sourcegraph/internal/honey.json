@@ -1,0 +1,254 @@
+{
+  "pathID": "/internal/honey",
+  "documentation": {
+    "identifier": "honey",
+    "newPage": true,
+    "searchKey": "internal/honey",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package honey"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "package honey is a lightweight wrapper around libhoney which initializes honeycomb based on environment variables. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/honey#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/honey#apiKey",
+              "documentation": {
+                "identifier": "apiKey",
+                "newPage": false,
+                "searchKey": "honey.apiKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var apiKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar apiKey = env.Get(\"HONEYCOMB_TEAM\", \"\", \"The key used for Honeycomb event tracking.\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/honey#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/honey#SearchEventArgs",
+              "documentation": {
+                "identifier": "SearchEventArgs",
+                "newPage": false,
+                "searchKey": "honey.SearchEventArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchEventArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchEventArgs struct {\n\tOriginalQuery string\n\tTyp           string\n\tSource        string\n\tStatus        string\n\tAlertType     string\n\tDurationMs    int64\n\tResultSize    int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/honey#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/honey#Enabled",
+              "documentation": {
+                "identifier": "Enabled",
+                "newPage": false,
+                "searchKey": "honey.Enabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Enabled() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Enabled() bool\n```\n\nEnabled returns true if honeycomb has been configured to run. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/honey#Event",
+              "documentation": {
+                "identifier": "Event",
+                "newPage": false,
+                "searchKey": "honey.Event",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Event(dataset string) *libhoney.Event"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Event(dataset string) *libhoney.Event\n```\n\nEvent creates an event for logging to dataset. Event.Send will only work if Enabled() returns true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/honey#EventWithFields",
+              "documentation": {
+                "identifier": "EventWithFields",
+                "newPage": false,
+                "searchKey": "honey.EventWithFields",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EventWithFields(dataset string, fields map[string]interface{}) *libhoney.Event"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EventWithFields(dataset string, fields map[string]interface{}) *libhoney.Event\n```\n\nEventWithFields creates an event for logging to the given dataset. The given fields are assigned to the event. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/honey#Builder",
+              "documentation": {
+                "identifier": "Builder",
+                "newPage": false,
+                "searchKey": "honey.Builder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Builder(dataset string) *libhoney.Builder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Builder(dataset string) *libhoney.Builder\n```\n\nBuilder creates a builder for logging to a dataset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/honey#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "honey.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/honey#SearchEvent",
+              "documentation": {
+                "identifier": "SearchEvent",
+                "newPage": false,
+                "searchKey": "honey.SearchEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SearchEvent(ctx context.Context, args SearchEventArgs) *libhoney.Event\n```\n\nSearchEvent returns a honey event for the dataset \"search\". \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

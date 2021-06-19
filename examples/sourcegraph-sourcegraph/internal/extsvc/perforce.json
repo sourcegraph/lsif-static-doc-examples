@@ -1,0 +1,107 @@
+{
+  "pathID": "/internal/extsvc/perforce",
+  "documentation": {
+    "identifier": "perforce",
+    "newPage": true,
+    "searchKey": "internal/extsvc/perforce",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package perforce"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/extsvc/perforce#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/perforce#AccountData",
+              "documentation": {
+                "identifier": "AccountData",
+                "newPage": false,
+                "searchKey": "perforce.AccountData",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AccountData struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AccountData struct {\n\tUsername string `json:\"username\"`\n\tEmail    string `json:\"email\"`\n}\n```\n\nAccountData stores information of a Perforce Server account. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/perforce#GetExternalAccountData",
+                    "documentation": {
+                      "identifier": "GetExternalAccountData",
+                      "newPage": false,
+                      "searchKey": "perforce.GetExternalAccountData",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetExternalAccountData(data *extsvc.AccountData) (accountData *AccountData, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetExternalAccountData(data *extsvc.AccountData) (accountData *AccountData, err error)\n```\n\nGetExternalAccountData extracts account data for the external account. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/perforce#Depot",
+              "documentation": {
+                "identifier": "Depot",
+                "newPage": false,
+                "searchKey": "perforce.Depot",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Depot struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Depot struct {\n\tDepot string `json:\"depot\"` // Depot is the path of the Perforce depot.\n}\n```\n\nDepot contains information of a Perforce depot. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

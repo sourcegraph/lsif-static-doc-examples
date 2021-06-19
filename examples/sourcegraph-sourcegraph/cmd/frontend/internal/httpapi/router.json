@@ -1,0 +1,1047 @@
+{
+  "pathID": "/cmd/frontend/internal/httpapi/router",
+  "documentation": {
+    "identifier": "router",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/httpapi/router",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package router"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package router contains the URL router for the HTTP API. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/httpapi/router#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#LSIFUpload",
+              "documentation": {
+                "identifier": "LSIFUpload",
+                "newPage": false,
+                "searchKey": "router.LSIFUpload",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LSIFUpload"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LSIFUpload = \"lsif.upload\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#GraphQL",
+              "documentation": {
+                "identifier": "GraphQL",
+                "newPage": false,
+                "searchKey": "router.GraphQL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GraphQL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GraphQL = \"graphql\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SearchStream",
+              "documentation": {
+                "identifier": "SearchStream",
+                "newPage": false,
+                "searchKey": "router.SearchStream",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SearchStream"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SearchStream = \"search.stream\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SrcCliVersion",
+              "documentation": {
+                "identifier": "SrcCliVersion",
+                "newPage": false,
+                "searchKey": "router.SrcCliVersion",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SrcCliVersion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SrcCliVersion = \"src-cli.version\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SrcCliDownload",
+              "documentation": {
+                "identifier": "SrcCliDownload",
+                "newPage": false,
+                "searchKey": "router.SrcCliDownload",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SrcCliDownload"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SrcCliDownload = \"src-cli.download\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#Registry",
+              "documentation": {
+                "identifier": "Registry",
+                "newPage": false,
+                "searchKey": "router.Registry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Registry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Registry = \"registry\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#RepoShield",
+              "documentation": {
+                "identifier": "RepoShield",
+                "newPage": false,
+                "searchKey": "router.RepoShield",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepoShield"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepoShield = \"repo.shield\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#RepoRefresh",
+              "documentation": {
+                "identifier": "RepoRefresh",
+                "newPage": false,
+                "searchKey": "router.RepoRefresh",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RepoRefresh"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RepoRefresh = \"repo.refresh\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#Telemetry",
+              "documentation": {
+                "identifier": "Telemetry",
+                "newPage": false,
+                "searchKey": "router.Telemetry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Telemetry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Telemetry = \"telemetry\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#GitHubWebhooks",
+              "documentation": {
+                "identifier": "GitHubWebhooks",
+                "newPage": false,
+                "searchKey": "router.GitHubWebhooks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GitHubWebhooks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GitHubWebhooks = \"github.webhooks\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#GitLabWebhooks",
+              "documentation": {
+                "identifier": "GitLabWebhooks",
+                "newPage": false,
+                "searchKey": "router.GitLabWebhooks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GitLabWebhooks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GitLabWebhooks = \"gitlab.webhooks\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#BitbucketServerWebhooks",
+              "documentation": {
+                "identifier": "BitbucketServerWebhooks",
+                "newPage": false,
+                "searchKey": "router.BitbucketServerWebhooks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BitbucketServerWebhooks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BitbucketServerWebhooks = \"bitbucketServer.webhooks\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SavedQueriesListAll",
+              "documentation": {
+                "identifier": "SavedQueriesListAll",
+                "newPage": false,
+                "searchKey": "router.SavedQueriesListAll",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SavedQueriesListAll"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SavedQueriesListAll = \"internal.saved-queries.list-all\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SavedQueriesGetInfo",
+              "documentation": {
+                "identifier": "SavedQueriesGetInfo",
+                "newPage": false,
+                "searchKey": "router.SavedQueriesGetInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SavedQueriesGetInfo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SavedQueriesGetInfo = \"internal.saved-queries.get-info\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SavedQueriesSetInfo",
+              "documentation": {
+                "identifier": "SavedQueriesSetInfo",
+                "newPage": false,
+                "searchKey": "router.SavedQueriesSetInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SavedQueriesSetInfo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SavedQueriesSetInfo = \"internal.saved-queries.set-info\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SavedQueriesDeleteInfo",
+              "documentation": {
+                "identifier": "SavedQueriesDeleteInfo",
+                "newPage": false,
+                "searchKey": "router.SavedQueriesDeleteInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SavedQueriesDeleteInfo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SavedQueriesDeleteInfo = \"internal.saved-queries.delete-info\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SettingsGetForSubject",
+              "documentation": {
+                "identifier": "SettingsGetForSubject",
+                "newPage": false,
+                "searchKey": "router.SettingsGetForSubject",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SettingsGetForSubject"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SettingsGetForSubject = \"internal.settings.get-for-subject\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#OrgsListUsers",
+              "documentation": {
+                "identifier": "OrgsListUsers",
+                "newPage": false,
+                "searchKey": "router.OrgsListUsers",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const OrgsListUsers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst OrgsListUsers = \"internal.orgs.list-users\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#OrgsGetByName",
+              "documentation": {
+                "identifier": "OrgsGetByName",
+                "newPage": false,
+                "searchKey": "router.OrgsGetByName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const OrgsGetByName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst OrgsGetByName = \"internal.orgs.get-by-name\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#UsersGetByUsername",
+              "documentation": {
+                "identifier": "UsersGetByUsername",
+                "newPage": false,
+                "searchKey": "router.UsersGetByUsername",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UsersGetByUsername"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UsersGetByUsername = \"internal.users.get-by-username\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#UserEmailsGetEmail",
+              "documentation": {
+                "identifier": "UserEmailsGetEmail",
+                "newPage": false,
+                "searchKey": "router.UserEmailsGetEmail",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UserEmailsGetEmail"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UserEmailsGetEmail = \"internal.user-emails.get-email\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ExternalURL",
+              "documentation": {
+                "identifier": "ExternalURL",
+                "newPage": false,
+                "searchKey": "router.ExternalURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ExternalURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ExternalURL = \"internal.app-url\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#CanSendEmail",
+              "documentation": {
+                "identifier": "CanSendEmail",
+                "newPage": false,
+                "searchKey": "router.CanSendEmail",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CanSendEmail"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CanSendEmail = \"internal.can-send-email\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SendEmail",
+              "documentation": {
+                "identifier": "SendEmail",
+                "newPage": false,
+                "searchKey": "router.SendEmail",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SendEmail"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SendEmail = \"internal.send-email\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#Extension",
+              "documentation": {
+                "identifier": "Extension",
+                "newPage": false,
+                "searchKey": "router.Extension",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Extension"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Extension = \"internal.extension\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#GitExec",
+              "documentation": {
+                "identifier": "GitExec",
+                "newPage": false,
+                "searchKey": "router.GitExec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GitExec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GitExec = \"internal.git.exec\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#GitInfoRefs",
+              "documentation": {
+                "identifier": "GitInfoRefs",
+                "newPage": false,
+                "searchKey": "router.GitInfoRefs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GitInfoRefs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GitInfoRefs = \"internal.git.info-refs\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#GitResolveRevision",
+              "documentation": {
+                "identifier": "GitResolveRevision",
+                "newPage": false,
+                "searchKey": "router.GitResolveRevision",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GitResolveRevision"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GitResolveRevision = \"internal.git.resolve-revision\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#GitTar",
+              "documentation": {
+                "identifier": "GitTar",
+                "newPage": false,
+                "searchKey": "router.GitTar",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GitTar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GitTar = \"internal.git.tar\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#GitUploadPack",
+              "documentation": {
+                "identifier": "GitUploadPack",
+                "newPage": false,
+                "searchKey": "router.GitUploadPack",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GitUploadPack"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GitUploadPack = \"internal.git.upload-pack\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#PhabricatorRepoCreate",
+              "documentation": {
+                "identifier": "PhabricatorRepoCreate",
+                "newPage": false,
+                "searchKey": "router.PhabricatorRepoCreate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PhabricatorRepoCreate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PhabricatorRepoCreate = \"internal.phabricator.repo.create\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ReposGetByName",
+              "documentation": {
+                "identifier": "ReposGetByName",
+                "newPage": false,
+                "searchKey": "router.ReposGetByName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReposGetByName"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReposGetByName = \"internal.repos.get-by-name\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ReposInventoryUncached",
+              "documentation": {
+                "identifier": "ReposInventoryUncached",
+                "newPage": false,
+                "searchKey": "router.ReposInventoryUncached",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReposInventoryUncached"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReposInventoryUncached = \"internal.repos.inventory-uncached\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ReposInventory",
+              "documentation": {
+                "identifier": "ReposInventory",
+                "newPage": false,
+                "searchKey": "router.ReposInventory",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReposInventory"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReposInventory = \"internal.repos.inventory\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ReposList",
+              "documentation": {
+                "identifier": "ReposList",
+                "newPage": false,
+                "searchKey": "router.ReposList",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReposList"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReposList = \"internal.repos.list\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ReposIndex",
+              "documentation": {
+                "identifier": "ReposIndex",
+                "newPage": false,
+                "searchKey": "router.ReposIndex",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReposIndex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReposIndex = \"internal.repos.index\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ReposListEnabled",
+              "documentation": {
+                "identifier": "ReposListEnabled",
+                "newPage": false,
+                "searchKey": "router.ReposListEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReposListEnabled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReposListEnabled = \"internal.repos.list-enabled\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#Configuration",
+              "documentation": {
+                "identifier": "Configuration",
+                "newPage": false,
+                "searchKey": "router.Configuration",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Configuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Configuration = \"internal.configuration\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#SearchConfiguration",
+              "documentation": {
+                "identifier": "SearchConfiguration",
+                "newPage": false,
+                "searchKey": "router.SearchConfiguration",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SearchConfiguration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SearchConfiguration = \"internal.search-configuration\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ExternalServiceConfigs",
+              "documentation": {
+                "identifier": "ExternalServiceConfigs",
+                "newPage": false,
+                "searchKey": "router.ExternalServiceConfigs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ExternalServiceConfigs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ExternalServiceConfigs = \"internal.external-services.configs\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#ExternalServicesList",
+              "documentation": {
+                "identifier": "ExternalServicesList",
+                "newPage": false,
+                "searchKey": "router.ExternalServicesList",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ExternalServicesList"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ExternalServicesList = \"internal.external-services.list\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/httpapi/router#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#New",
+              "documentation": {
+                "identifier": "New",
+                "newPage": false,
+                "searchKey": "router.New",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New(base *mux.Router) *mux.Router"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New(base *mux.Router) *mux.Router\n```\n\nNew creates a new API router with route URL pattern definitions but no handlers attached to the routes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#NewInternal",
+              "documentation": {
+                "identifier": "NewInternal",
+                "newPage": false,
+                "searchKey": "router.NewInternal",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewInternal(base *mux.Router) *mux.Router"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewInternal(base *mux.Router) *mux.Router\n```\n\nNewInternal creates a new API router for internal endpoints. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#addRegistryRoute",
+              "documentation": {
+                "identifier": "addRegistryRoute",
+                "newPage": false,
+                "searchKey": "router.addRegistryRoute",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addRegistryRoute(m *mux.Router)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addRegistryRoute(m *mux.Router)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/httpapi/router#addGraphQLRoute",
+              "documentation": {
+                "identifier": "addGraphQLRoute",
+                "newPage": false,
+                "searchKey": "router.addGraphQLRoute",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addGraphQLRoute(m *mux.Router)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addGraphQLRoute(m *mux.Router)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

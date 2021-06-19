@@ -1,0 +1,153 @@
+{
+  "pathID": "/enterprise/cmd/frontend/internal/dotcom",
+  "documentation": {
+    "identifier": "dotcom",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/frontend/internal/dotcom",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package dotcom"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/dotcom#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom#dotcomRootResolver",
+              "documentation": {
+                "identifier": "dotcomRootResolver",
+                "newPage": false,
+                "searchKey": "dotcom.dotcomRootResolver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dotcomRootResolver struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dotcomRootResolver struct {\n\tproductsubscription.ProductSubscriptionLicensingResolver\n\tbilling.BillingResolver\n}\n```\n\ndotcomRootResolver implements the GraphQL types DotcomMutation and DotcomQuery. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom#dotcomRootResolver.Dotcom",
+                    "documentation": {
+                      "identifier": "dotcomRootResolver.Dotcom",
+                      "newPage": false,
+                      "searchKey": "dotcom.dotcomRootResolver.Dotcom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d dotcomRootResolver) Dotcom() graphqlbackend.DotcomResolver"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d dotcomRootResolver) Dotcom() graphqlbackend.DotcomResolver\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/cmd/frontend/internal/dotcom#dotcomRootResolver.NodeResolvers",
+                    "documentation": {
+                      "identifier": "dotcomRootResolver.NodeResolvers",
+                      "newPage": false,
+                      "searchKey": "dotcom.dotcomRootResolver.NodeResolvers",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d dotcomRootResolver) NodeResolvers() map[string]graphqlbackend.NodeByIDFunc"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d dotcomRootResolver) NodeResolvers() map[string]graphqlbackend.NodeByIDFunc\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/frontend/internal/dotcom#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/frontend/internal/dotcom#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "dotcom.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/cmd/frontend/internal/dotcom/billing"
+    },
+    {
+      "pathID": "/enterprise/cmd/frontend/internal/dotcom/productsubscription"
+    },
+    {
+      "pathID": "/enterprise/cmd/frontend/internal/dotcom/stripeutil"
+    }
+  ]
+}

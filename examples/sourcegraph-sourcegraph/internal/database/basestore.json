@@ -1,0 +1,1216 @@
+{
+  "pathID": "/internal/database/basestore",
+  "documentation": {
+    "identifier": "basestore",
+    "newPage": true,
+    "searchKey": "internal/database/basestore",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package basestore"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/database/basestore#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#savepointQuery",
+              "documentation": {
+                "identifier": "savepointQuery",
+                "newPage": false,
+                "searchKey": "basestore.savepointQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const savepointQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst savepointQuery = \"SAVEPOINT %s\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#commitSavepointQuery",
+              "documentation": {
+                "identifier": "commitSavepointQuery",
+                "newPage": false,
+                "searchKey": "basestore.commitSavepointQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const commitSavepointQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst commitSavepointQuery = \"RELEASE %s\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#rollbackSavepointQuery",
+              "documentation": {
+                "identifier": "rollbackSavepointQuery",
+                "newPage": false,
+                "searchKey": "basestore.rollbackSavepointQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rollbackSavepointQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rollbackSavepointQuery = \"ROLLBACK TO %s\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/basestore#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ErrNotTransactable",
+              "documentation": {
+                "identifier": "ErrNotTransactable",
+                "newPage": false,
+                "searchKey": "basestore.ErrNotTransactable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotTransactable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotTransactable = errors.New(\"store: not transactable\")\n```\n\nErrNotTransactable occurs when Transact is called on a Store instance whose underlying database handle does not support beginning a transaction. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/basestore#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#TransactableHandle",
+              "documentation": {
+                "identifier": "TransactableHandle",
+                "newPage": false,
+                "searchKey": "basestore.TransactableHandle",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TransactableHandle struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TransactableHandle struct {\n\tdb         dbutil.DB\n\tsavepoints []*savepoint\n\ttxOptions  sql.TxOptions\n}\n```\n\nTransactableHandle is a wrapper around a database connection that provides nested transactions through registration and finalization of savepoints. A transactable database handler can be shared by multiple stores. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#NewHandle",
+                    "documentation": {
+                      "identifier": "NewHandle",
+                      "newPage": false,
+                      "searchKey": "basestore.NewHandle",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewHandle(postgresDSN, app string, txOptions sql.TxOptions) (*TransactableHandle, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewHandle(postgresDSN, app string, txOptions sql.TxOptions) (*TransactableHandle, error)\n```\n\nNewHandle returns a new transactable database handle connected to the given dsn (data store name). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#NewHandleWithDB",
+                    "documentation": {
+                      "identifier": "NewHandleWithDB",
+                      "newPage": false,
+                      "searchKey": "basestore.NewHandleWithDB",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewHandleWithDB(db dbutil.DB, txOptions sql.TxOptions) *TransactableHandle"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewHandleWithDB(db dbutil.DB, txOptions sql.TxOptions) *TransactableHandle\n```\n\nNewHandleWithDB returns a new transactable database handle using the given database connection. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#TransactableHandle.DB",
+                    "documentation": {
+                      "identifier": "TransactableHandle.DB",
+                      "newPage": false,
+                      "searchKey": "basestore.TransactableHandle.DB",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *TransactableHandle) DB() dbutil.DB"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *TransactableHandle) DB() dbutil.DB\n```\n\nDB returns the underlying database handle. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#TransactableHandle.InTransaction",
+                    "documentation": {
+                      "identifier": "TransactableHandle.InTransaction",
+                      "newPage": false,
+                      "searchKey": "basestore.TransactableHandle.InTransaction",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *TransactableHandle) InTransaction() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *TransactableHandle) InTransaction() bool\n```\n\nInTransaction returns true if the underlying database handle is in a transaction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#TransactableHandle.Transact",
+                    "documentation": {
+                      "identifier": "TransactableHandle.Transact",
+                      "newPage": false,
+                      "searchKey": "basestore.TransactableHandle.Transact",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *TransactableHandle) Transact(ctx context.Context) (*TransactableHandle, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *TransactableHandle) Transact(ctx context.Context) (*TransactableHandle, error)\n```\n\nTransact returns a new transactional database handle whose methods operate within the context of a new transaction or a new savepoint. This method will return an error if the underlying connection cannot be interface upgraded to a TxBeginner. \n\nNote that it is not valid to call Transact or Done on the same database handle from distinct goroutines. Because we support properly nested transactions via savepoints, calling Transact from two different goroutines on the same handle will not be deterministic: either transaction could nest the other one, and calling Done in one goroutine may not finalize the expected unit of work. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#TransactableHandle.Done",
+                    "documentation": {
+                      "identifier": "TransactableHandle.Done",
+                      "newPage": false,
+                      "searchKey": "basestore.TransactableHandle.Done",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *TransactableHandle) Done(err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *TransactableHandle) Done(err error) error\n```\n\nDone performs a commit or rollback of the underlying transaction/savepoint depending on the value of the error parameter. The resulting error value is a multierror containing the error parameter along with any error that occurs during commit or rollback of the transaction/savepoint. If the store does not wrap a transaction the original error value is returned unchanged. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#savepoint",
+              "documentation": {
+                "identifier": "savepoint",
+                "newPage": false,
+                "searchKey": "basestore.savepoint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type savepoint struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype savepoint struct {\n\tdb          dbutil.DB\n\tsavepointID string\n}\n```\n\nsavepoint is a small wrapper around committing/rolling back a \"nested transaction\". Each savepoint has an identifier unique to that connection and must be referenced by name on finalization. The transactional database handler takes care to finalize the savepoints in the same order they were created for a particular store. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#newSavepoint",
+                    "documentation": {
+                      "identifier": "newSavepoint",
+                      "newPage": false,
+                      "searchKey": "basestore.newSavepoint",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newSavepoint(ctx context.Context, db dbutil.DB) (*savepoint, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newSavepoint(ctx context.Context, db dbutil.DB) (*savepoint, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#savepoint.Commit",
+                    "documentation": {
+                      "identifier": "savepoint.Commit",
+                      "newPage": false,
+                      "searchKey": "basestore.savepoint.Commit",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *savepoint) Commit() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *savepoint) Commit() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#savepoint.Rollback",
+                    "documentation": {
+                      "identifier": "savepoint.Rollback",
+                      "newPage": false,
+                      "searchKey": "basestore.savepoint.Rollback",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *savepoint) Rollback() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *savepoint) Rollback() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#savepoint.apply",
+                    "documentation": {
+                      "identifier": "savepoint.apply",
+                      "newPage": false,
+                      "searchKey": "basestore.savepoint.apply",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *savepoint) apply(query string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *savepoint) apply(query string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "basestore.Store",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Store struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Store struct {\n\thandle *TransactableHandle\n}\n```\n\nStore is an abstract Postgres-backed data access layer. Instances of this struct should not be used directly, but should be used compositionally by other stores that implement logic specific to a domain. \n\nThe following is a minimal example of decorating the base store that preserves the correct behavior of the underlying base store. Note that `With` and `Transact` must be re-defined in the outer layer in order to create a useful return value. Failure to re-define these methods will result in `With` and `Transact` methods that return a modified base store with no methods from the outer layer. All other methods of the base store are available on the outer layer without needing to be re-defined. \n\n```\ntype SprocketStore struct {\n    *basestore.Store\n}\n\nfunc NewWithDB(database dbutil.DB) *SprocketStore {\n    return &SprocketStore{Store: basestore.NewWithDB(database, sql.TxOptions{})}\n}\n\nfunc (s *SprocketStore) With(other basestore.ShareableStore) *SprocketStore {\n    return &SprocketStore{Store: s.Store.With(other)}\n}\n\nfunc (s *SprocketStore) Transact(ctx context.Context) (*SprocketStore, error) {\n    txBase, err := s.Store.Transact(ctx)\n    return &SprocketStore{Store: txBase}, err\n}\n\n```\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "basestore.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(postgresDSN, app string, txOptions sql.TxOptions) (*Store, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(postgresDSN, app string, txOptions sql.TxOptions) (*Store, error)\n```\n\nNew returns a new base store connected to the given dsn (data store name). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#NewWithDB",
+                    "documentation": {
+                      "identifier": "NewWithDB",
+                      "newPage": false,
+                      "searchKey": "basestore.NewWithDB",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWithDB(db dbutil.DB, txOptions sql.TxOptions) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWithDB(db dbutil.DB, txOptions sql.TxOptions) *Store\n```\n\nNewHandleWithDB returns a new base store connected to the given connection. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#NewWithHandle",
+                    "documentation": {
+                      "identifier": "NewWithHandle",
+                      "newPage": false,
+                      "searchKey": "basestore.NewWithHandle",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWithHandle(handle *TransactableHandle) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWithHandle(handle *TransactableHandle) *Store\n```\n\nNewWithHandle returns a new base store using the given database handle. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#testStore",
+                    "documentation": {
+                      "identifier": "testStore",
+                      "newPage": false,
+                      "searchKey": "basestore.testStore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func testStore(db dbutil.DB) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc testStore(db dbutil.DB) *Store\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.Handle",
+                    "documentation": {
+                      "identifier": "Store.Handle",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.Handle",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Handle() *TransactableHandle"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Handle() *TransactableHandle\n```\n\nHandle returns the underlying transactable database handle. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.With",
+                    "documentation": {
+                      "identifier": "Store.With",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.With",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) With(other ShareableStore) *Store"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) With(other ShareableStore) *Store\n```\n\nWith creates a new store with the underlying database handle from the given store. This method should be used when two distinct store instances need to perform an operation within the same shared transaction. \n\n```\ntxn1 := store1.Transact(ctx) // Creates a transaction\ntxn2 := store2.With(txn1)    // References the same transaction\n\ntxn1.A(ctx) // Occurs within shared transaction\ntxn2.B(ctx) // Occurs within shared transaction\ntxn1.Done() // closes shared transaction\n\n```\nNote that once a handle is shared between two stores, committing or rolling back a transaction will affect the handle of both stores. Most notably, two stores that share the same handle are unable to begin independent transactions. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.Query",
+                    "documentation": {
+                      "identifier": "Store.Query",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.Query",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Query(ctx context.Context, query *sqlf.Query) (*sql.Rows, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Query(ctx context.Context, query *sqlf.Query) (*sql.Rows, error)\n```\n\nQuery performs QueryContext on the underlying connection. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.QueryRow",
+                    "documentation": {
+                      "identifier": "Store.QueryRow",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.QueryRow",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) QueryRow(ctx context.Context, query *sqlf.Query) *sql.Row"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) QueryRow(ctx context.Context, query *sqlf.Query) *sql.Row\n```\n\nQueryRow performs QueryRowContext on the underlying connection. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.Exec",
+                    "documentation": {
+                      "identifier": "Store.Exec",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.Exec",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Exec(ctx context.Context, query *sqlf.Query) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Exec(ctx context.Context, query *sqlf.Query) error\n```\n\nExec performs a query without returning any rows. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.ExecResult",
+                    "documentation": {
+                      "identifier": "Store.ExecResult",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.ExecResult",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) ExecResult(ctx context.Context, query *sqlf.Query) (sql.Result, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) ExecResult(ctx context.Context, query *sqlf.Query) (sql.Result, error)\n```\n\nExecResult performs a query without returning any rows, but includes the result of the execution. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.InTransaction",
+                    "documentation": {
+                      "identifier": "Store.InTransaction",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.InTransaction",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) InTransaction() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) InTransaction() bool\n```\n\nInTransaction returns true if the underlying database handle is in a transaction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.Transact",
+                    "documentation": {
+                      "identifier": "Store.Transact",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.Transact",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Transact(ctx context.Context) (*Store, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Transact(ctx context.Context) (*Store, error)\n```\n\nTransact returns a new store whose methods operate within the context of a new transaction or a new savepoint. This method will return an error if the underlying connection cannot be interface upgraded to a TxBeginner. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/basestore#Store.Done",
+                    "documentation": {
+                      "identifier": "Store.Done",
+                      "newPage": false,
+                      "searchKey": "basestore.Store.Done",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Done(err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Done(err error) error\n```\n\nDone performs a commit or rollback of the underlying transaction/savepoint depending on the value of the error parameter. The resulting error value is a multierror containing the error parameter along with any error that occurs during commit or rollback of the transaction/savepoint. If the store does not wrap a transaction the original error value is returned unchanged. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ShareableStore",
+              "documentation": {
+                "identifier": "ShareableStore",
+                "newPage": false,
+                "searchKey": "basestore.ShareableStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ShareableStore interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ShareableStore interface {\n\t// Handle returns the underlying transactable database handle.\n\tHandle() *TransactableHandle\n}\n```\n\nShareableStore is implemented by stores to explicitly allow distinct store instances to reference the store's underlying handle. This is used to share transactions between multiple stores. See `Store.With` for additional details. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/basestore#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#combineErrors",
+              "documentation": {
+                "identifier": "combineErrors",
+                "newPage": false,
+                "searchKey": "basestore.combineErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func combineErrors(errs ...error) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc combineErrors(errs ...error) (err error)\n```\n\ncombineErrors returns a multierror containing all fo the non-nil error parameter values. This method should be used over multierror when it is not guaranteed that the original error was non-nil (multierror.Append creates a non-nil error even if it is empty). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#CloseRows",
+              "documentation": {
+                "identifier": "CloseRows",
+                "newPage": false,
+                "searchKey": "basestore.CloseRows",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CloseRows(rows *sql.Rows, err error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CloseRows(rows *sql.Rows, err error) error\n```\n\nCloseRows closes the given rows object. The resulting error is a multierror containing the error parameter along with any errors that occur during scanning or closing the rows object. The rows object is assumed to be non-nil. \n\nThe signature of this function allows scan methods to be written uniformly: \n\n```\nfunc ScanThings(rows *sql.Rows, queryErr error) (_ []Thing, err error) {\n    if queryErr != nil {\n        return nil, queryErr\n    }\n    defer func() { err = CloseRows(rows, err) }()\n\n    // read things from rows\n}\n\n```\nScan methods should be called directly with the results of `*store.Query` to ensure that the rows are always properly handled. \n\n```\nthings, err := ScanThings(store.Query(ctx, query))\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanStrings",
+              "documentation": {
+                "identifier": "ScanStrings",
+                "newPage": false,
+                "searchKey": "basestore.ScanStrings",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanStrings(rows *sql.Rows, queryErr error) (_ []string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanStrings(rows *sql.Rows, queryErr error) (_ []string, err error)\n```\n\nScanStrings reads string values from the given row object. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanFirstString",
+              "documentation": {
+                "identifier": "ScanFirstString",
+                "newPage": false,
+                "searchKey": "basestore.ScanFirstString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanFirstString(rows *sql.Rows, queryErr error) (_ string, _ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanFirstString(rows *sql.Rows, queryErr error) (_ string, _ bool, err error)\n```\n\nScanFirstString reads string values from the given row object and returns the first one. If no rows match the query, a false-valued flag is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanFirstNullString",
+              "documentation": {
+                "identifier": "ScanFirstNullString",
+                "newPage": false,
+                "searchKey": "basestore.ScanFirstNullString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanFirstNullString(rows *sql.Rows, queryErr error) (_ string, _ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanFirstNullString(rows *sql.Rows, queryErr error) (_ string, _ bool, err error)\n```\n\nScanFirstNullString reads possibly null string values from the given row object and returns the first one. If no rows match the query, a false-valued flag is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanInts",
+              "documentation": {
+                "identifier": "ScanInts",
+                "newPage": false,
+                "searchKey": "basestore.ScanInts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanInts(rows *sql.Rows, queryErr error) (_ []int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanInts(rows *sql.Rows, queryErr error) (_ []int, err error)\n```\n\nScanInts reads integer values from the given row object. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanInt32s",
+              "documentation": {
+                "identifier": "ScanInt32s",
+                "newPage": false,
+                "searchKey": "basestore.ScanInt32s",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanInt32s(rows *sql.Rows, queryErr error) (_ []int32, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanInt32s(rows *sql.Rows, queryErr error) (_ []int32, err error)\n```\n\nScanInt32s reads integer values from the given row object. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanFirstInt",
+              "documentation": {
+                "identifier": "ScanFirstInt",
+                "newPage": false,
+                "searchKey": "basestore.ScanFirstInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanFirstInt(rows *sql.Rows, queryErr error) (_ int, _ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanFirstInt(rows *sql.Rows, queryErr error) (_ int, _ bool, err error)\n```\n\nScanFirstInt reads integer values from the given row object and returns the first one. If no rows match the query, a false-valued flag is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanFloats",
+              "documentation": {
+                "identifier": "ScanFloats",
+                "newPage": false,
+                "searchKey": "basestore.ScanFloats",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanFloats(rows *sql.Rows, queryErr error) (_ []float64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanFloats(rows *sql.Rows, queryErr error) (_ []float64, err error)\n```\n\nScanFloats reads float values from the given row object. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanFirstFloat",
+              "documentation": {
+                "identifier": "ScanFirstFloat",
+                "newPage": false,
+                "searchKey": "basestore.ScanFirstFloat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanFirstFloat(rows *sql.Rows, queryErr error) (_ float64, _ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanFirstFloat(rows *sql.Rows, queryErr error) (_ float64, _ bool, err error)\n```\n\nScanFirstFloat reads float values from the given row object and returns the first one. If no rows match the query, a false-valued flag is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanBools",
+              "documentation": {
+                "identifier": "ScanBools",
+                "newPage": false,
+                "searchKey": "basestore.ScanBools",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanBools(rows *sql.Rows, queryErr error) (_ []bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanBools(rows *sql.Rows, queryErr error) (_ []bool, err error)\n```\n\nScanBools reads bool values from the given row object. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanFirstBool",
+              "documentation": {
+                "identifier": "ScanFirstBool",
+                "newPage": false,
+                "searchKey": "basestore.ScanFirstBool",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanFirstBool(rows *sql.Rows, queryErr error) (value bool, exists bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanFirstBool(rows *sql.Rows, queryErr error) (value bool, exists bool, err error)\n```\n\nScanFirstBool reads bool values from the given row object and returns the first one. If no rows match the query, a false-valued flag is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanTimes",
+              "documentation": {
+                "identifier": "ScanTimes",
+                "newPage": false,
+                "searchKey": "basestore.ScanTimes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanTimes(rows *sql.Rows, queryErr error) (_ []time.Time, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanTimes(rows *sql.Rows, queryErr error) (_ []time.Time, err error)\n```\n\nScanTimes reads time values from the given row object. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#ScanFirstTime",
+              "documentation": {
+                "identifier": "ScanFirstTime",
+                "newPage": false,
+                "searchKey": "basestore.ScanFirstTime",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ScanFirstTime(rows *sql.Rows, queryErr error) (_ time.Time, _ bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ScanFirstTime(rows *sql.Rows, queryErr error) (_ time.Time, _ bool, err error)\n```\n\nScanFirstTime reads time values from the given row object and returns the first one. If no rows match the query, a false-valued flag is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#makeSavepointID",
+              "documentation": {
+                "identifier": "makeSavepointID",
+                "newPage": false,
+                "searchKey": "basestore.makeSavepointID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeSavepointID() (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeSavepointID() (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "basestore.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#TestTransaction",
+              "documentation": {
+                "identifier": "TestTransaction",
+                "newPage": false,
+                "searchKey": "basestore.TestTransaction",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTransaction(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTransaction(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#TestSavepoints",
+              "documentation": {
+                "identifier": "TestSavepoints",
+                "newPage": false,
+                "searchKey": "basestore.TestSavepoints",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSavepoints(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSavepoints(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#recurSavepoints",
+              "documentation": {
+                "identifier": "recurSavepoints",
+                "newPage": false,
+                "searchKey": "basestore.recurSavepoints",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func recurSavepoints(t *testing.T, store *Store, index, rollbackAt int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc recurSavepoints(t *testing.T, store *Store, index, rollbackAt int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#assertCounts",
+              "documentation": {
+                "identifier": "assertCounts",
+                "newPage": false,
+                "searchKey": "basestore.assertCounts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assertCounts(t *testing.T, db dbutil.DB, expectedCounts map[int]int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assertCounts(t *testing.T, db dbutil.DB, expectedCounts map[int]int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/basestore#setupStoreTest",
+              "documentation": {
+                "identifier": "setupStoreTest",
+                "newPage": false,
+                "searchKey": "basestore.setupStoreTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setupStoreTest(t *testing.T, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setupStoreTest(t *testing.T, db dbutil.DB)\n```\n\nsetupStoreTest creates a table used only for testing. This table does not need to be truncated between tests as all tables in the test database are truncated by SetupGlobalTestDB. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2989 @@
+{
+  "pathID": "/internal/workerutil/dbworker/store/mocks",
+  "documentation": {
+    "identifier": "mocks",
+    "newPage": true,
+    "searchKey": "internal/workerutil/dbworker/store/mocks",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package mocks"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/workerutil/dbworker/store/mocks#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore",
+              "documentation": {
+                "identifier": "MockStore",
+                "newPage": false,
+                "searchKey": "mocks.MockStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockStore struct {\n\t// AddExecutionLogEntryFunc is an instance of a mock function object\n\t// controlling the behavior of the method AddExecutionLogEntry.\n\tAddExecutionLogEntryFunc *StoreAddExecutionLogEntryFunc\n\t// DequeueFunc is an instance of a mock function object controlling the\n\t// behavior of the method Dequeue.\n\tDequeueFunc *StoreDequeueFunc\n\t// DequeueWithIndependentTransactionContextFunc is an instance of a mock\n\t// function object controlling the behavior of the method\n\t// DequeueWithIndependentTransactionContext.\n\tDequeueWithIndependentTransactionContextFunc *StoreDequeueWithIndependentTransactionContextFunc\n\t// DoneFunc is an instance of a mock function object controlling the\n\t// behavior of the method Done.\n\tDoneFunc *StoreDoneFunc\n\t// HandleFunc is an instance of a mock function object controlling the\n\t// behavior of the method Handle.\n\tHandleFunc *StoreHandleFunc\n\t// MarkCompleteFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkComplete.\n\tMarkCompleteFunc *StoreMarkCompleteFunc\n\t// MarkErroredFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkErrored.\n\tMarkErroredFunc *StoreMarkErroredFunc\n\t// MarkFailedFunc is an instance of a mock function object controlling\n\t// the behavior of the method MarkFailed.\n\tMarkFailedFunc *StoreMarkFailedFunc\n\t// QueuedCountFunc is an instance of a mock function object controlling\n\t// the behavior of the method QueuedCount.\n\tQueuedCountFunc *StoreQueuedCountFunc\n\t// RequeueFunc is an instance of a mock function object controlling the\n\t// behavior of the method Requeue.\n\tRequeueFunc *StoreRequeueFunc\n\t// ResetStalledFunc is an instance of a mock function object controlling\n\t// the behavior of the method ResetStalled.\n\tResetStalledFunc *StoreResetStalledFunc\n}\n```\n\nMockStore is a mock implementation of the Store interface (from the package github.com/sourcegraph/sourcegraph/internal/workerutil/dbworker/store) used for unit testing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#NewMockStore",
+                    "documentation": {
+                      "identifier": "NewMockStore",
+                      "newPage": false,
+                      "searchKey": "mocks.NewMockStore",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockStore() *MockStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockStore() *MockStore\n```\n\nNewMockStore creates a new mock of the Store interface. All methods return zero values for all results, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#NewMockStoreFrom",
+                    "documentation": {
+                      "identifier": "NewMockStoreFrom",
+                      "newPage": false,
+                      "searchKey": "mocks.NewMockStoreFrom",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMockStoreFrom(i store.Store) *MockStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMockStoreFrom(i store.Store) *MockStore\n```\n\nNewMockStoreFrom creates a new mock of the MockStore interface. All methods delegate to the given implementation, unless overwritten. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.AddExecutionLogEntry",
+                    "documentation": {
+                      "identifier": "MockStore.AddExecutionLogEntry",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.AddExecutionLogEntry",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) AddExecutionLogEntry(v0 context.Context, v1 int, v2 workerutil.ExecutionLogEntry) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) AddExecutionLogEntry(v0 context.Context, v1 int, v2 workerutil.ExecutionLogEntry) error\n```\n\nAddExecutionLogEntry delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.Dequeue",
+                    "documentation": {
+                      "identifier": "MockStore.Dequeue",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Dequeue",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Dequeue(v0 context.Context, v1 []*sqlf.Query) (workerutil.Record, store.Store, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Dequeue(v0 context.Context, v1 []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n```\n\nDequeue delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.DequeueWithIndependentTransactionContext",
+                    "documentation": {
+                      "identifier": "MockStore.DequeueWithIndependentTransactionContext",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.DequeueWithIndependentTransactionContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) DequeueWithIndependentTransactionContext(v0 context.Context, v1 []*sqlf.Query) (workerutil.Record, store.Store, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) DequeueWithIndependentTransactionContext(v0 context.Context, v1 []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n```\n\nDequeueWithIndependentTransactionContext delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.Done",
+                    "documentation": {
+                      "identifier": "MockStore.Done",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Done",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Done(v0 error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Done(v0 error) error\n```\n\nDone delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.Handle",
+                    "documentation": {
+                      "identifier": "MockStore.Handle",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Handle",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Handle() *basestore.TransactableHandle"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Handle() *basestore.TransactableHandle\n```\n\nHandle delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.MarkComplete",
+                    "documentation": {
+                      "identifier": "MockStore.MarkComplete",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.MarkComplete",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) MarkComplete(v0 context.Context, v1 int) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) MarkComplete(v0 context.Context, v1 int) (bool, error)\n```\n\nMarkComplete delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.MarkErrored",
+                    "documentation": {
+                      "identifier": "MockStore.MarkErrored",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.MarkErrored",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) MarkErrored(v0 context.Context, v1 int, v2 string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) MarkErrored(v0 context.Context, v1 int, v2 string) (bool, error)\n```\n\nMarkErrored delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.MarkFailed",
+                    "documentation": {
+                      "identifier": "MockStore.MarkFailed",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.MarkFailed",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) MarkFailed(v0 context.Context, v1 int, v2 string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) MarkFailed(v0 context.Context, v1 int, v2 string) (bool, error)\n```\n\nMarkFailed delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.QueuedCount",
+                    "documentation": {
+                      "identifier": "MockStore.QueuedCount",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.QueuedCount",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) QueuedCount(v0 context.Context, v1 []*sqlf.Query) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) QueuedCount(v0 context.Context, v1 []*sqlf.Query) (int, error)\n```\n\nQueuedCount delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.Requeue",
+                    "documentation": {
+                      "identifier": "MockStore.Requeue",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.Requeue",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) Requeue(v0 context.Context, v1 int, v2 time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) Requeue(v0 context.Context, v1 int, v2 time.Time) error\n```\n\nRequeue delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#MockStore.ResetStalled",
+                    "documentation": {
+                      "identifier": "MockStore.ResetStalled",
+                      "newPage": false,
+                      "searchKey": "mocks.MockStore.ResetStalled",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *MockStore) ResetStalled(v0 context.Context) ([]int, []int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *MockStore) ResetStalled(v0 context.Context) ([]int, []int, error)\n```\n\nResetStalled delegates to the next hook function in the queue and stores the parameter and result values of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc",
+              "documentation": {
+                "identifier": "StoreAddExecutionLogEntryFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreAddExecutionLogEntryFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreAddExecutionLogEntryFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreAddExecutionLogEntryFunc struct {\n\tdefaultHook func(context.Context, int, workerutil.ExecutionLogEntry) error\n\thooks       []func(context.Context, int, workerutil.ExecutionLogEntry) error\n\thistory     []StoreAddExecutionLogEntryFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreAddExecutionLogEntryFunc describes the behavior when the AddExecutionLogEntry method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)\n```\n\nSetDefaultHook sets function that is called when the AddExecutionLogEntry method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) PushHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) PushHook(hook func(context.Context, int, workerutil.ExecutionLogEntry) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the AddExecutionLogEntry method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, workerutil.ExecutionLogEntry) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) nextHook() func(context.Context, int, workerutil.ExecutionLogEntry) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) appendCall(r0 StoreAddExecutionLogEntryFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFunc.History",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreAddExecutionLogEntryFunc) History() []StoreAddExecutionLogEntryFuncCall\n```\n\nHistory returns a sequence of StoreAddExecutionLogEntryFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFuncCall",
+              "documentation": {
+                "identifier": "StoreAddExecutionLogEntryFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreAddExecutionLogEntryFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreAddExecutionLogEntryFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreAddExecutionLogEntryFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 workerutil.ExecutionLogEntry\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreAddExecutionLogEntryFuncCall is an object that describes an invocation of method AddExecutionLogEntry on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreAddExecutionLogEntryFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreAddExecutionLogEntryFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreAddExecutionLogEntryFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreAddExecutionLogEntryFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreAddExecutionLogEntryFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreAddExecutionLogEntryFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreAddExecutionLogEntryFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc",
+              "documentation": {
+                "identifier": "StoreDequeueFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreDequeueFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDequeueFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDequeueFunc struct {\n\tdefaultHook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n\thooks       []func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n\thistory     []StoreDequeueFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreDequeueFunc describes the behavior when the Dequeue method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the Dequeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) PushHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) PushHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Dequeue method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) PushReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) PushReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) appendCall(r0 StoreDequeueFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFunc.History",
+                    "documentation": {
+                      "identifier": "StoreDequeueFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueFunc) History() []StoreDequeueFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueFunc) History() []StoreDequeueFuncCall\n```\n\nHistory returns a sequence of StoreDequeueFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFuncCall",
+              "documentation": {
+                "identifier": "StoreDequeueFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreDequeueFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDequeueFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDequeueFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 []*sqlf.Query\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 workerutil.Record\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 store.Store\n\t// Result2 is the value of the 3rd result returned from this method\n\t// invocation.\n\tResult2 bool\n\t// Result3 is the value of the 4th result returned from this method\n\t// invocation.\n\tResult3 error\n}\n```\n\nStoreDequeueFuncCall is an object that describes an invocation of method Dequeue on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreDequeueFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDequeueFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDequeueFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreDequeueFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDequeueFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDequeueFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc",
+              "documentation": {
+                "identifier": "StoreDequeueWithIndependentTransactionContextFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDequeueWithIndependentTransactionContextFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDequeueWithIndependentTransactionContextFunc struct {\n\tdefaultHook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n\thooks       []func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n\thistory     []StoreDequeueWithIndependentTransactionContextFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreDequeueWithIndependentTransactionContextFunc describes the behavior when the DequeueWithIndependentTransactionContext method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))\n```\n\nSetDefaultHook sets function that is called when the DequeueWithIndependentTransactionContext method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) PushHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) PushHook(hook func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the DequeueWithIndependentTransactionContext method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) SetDefaultReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) PushReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) PushReturn(r0 workerutil.Record, r1 store.Store, r2 bool, r3 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) nextHook() func(context.Context, []*sqlf.Query) (workerutil.Record, store.Store, bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) appendCall(r0 StoreDequeueWithIndependentTransactionContextFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) appendCall(r0 StoreDequeueWithIndependentTransactionContextFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFunc.History",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDequeueWithIndependentTransactionContextFunc) History() []StoreDequeueWithIndependentTransactionContextFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDequeueWithIndependentTransactionContextFunc) History() []StoreDequeueWithIndependentTransactionContextFuncCall\n```\n\nHistory returns a sequence of StoreDequeueWithIndependentTransactionContextFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFuncCall",
+              "documentation": {
+                "identifier": "StoreDequeueWithIndependentTransactionContextFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDequeueWithIndependentTransactionContextFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDequeueWithIndependentTransactionContextFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 []*sqlf.Query\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 workerutil.Record\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 store.Store\n\t// Result2 is the value of the 3rd result returned from this method\n\t// invocation.\n\tResult2 bool\n\t// Result3 is the value of the 4th result returned from this method\n\t// invocation.\n\tResult3 error\n}\n```\n\nStoreDequeueWithIndependentTransactionContextFuncCall is an object that describes an invocation of method DequeueWithIndependentTransactionContext on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDequeueWithIndependentTransactionContextFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDequeueWithIndependentTransactionContextFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDequeueWithIndependentTransactionContextFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreDequeueWithIndependentTransactionContextFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDequeueWithIndependentTransactionContextFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDequeueWithIndependentTransactionContextFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDequeueWithIndependentTransactionContextFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc",
+              "documentation": {
+                "identifier": "StoreDoneFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreDoneFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDoneFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDoneFunc struct {\n\tdefaultHook func(error) error\n\thooks       []func(error) error\n\thistory     []StoreDoneFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreDoneFunc describes the behavior when the Done method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultHook(hook func(error) error)\n```\n\nSetDefaultHook sets function that is called when the Done method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) PushHook(hook func(error) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) PushHook(hook func(error) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Done method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) nextHook() func(error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) nextHook() func(error) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) appendCall(r0 StoreDoneFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFunc.History",
+                    "documentation": {
+                      "identifier": "StoreDoneFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreDoneFunc) History() []StoreDoneFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreDoneFunc) History() []StoreDoneFuncCall\n```\n\nHistory returns a sequence of StoreDoneFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFuncCall",
+              "documentation": {
+                "identifier": "StoreDoneFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreDoneFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreDoneFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreDoneFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 error\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreDoneFuncCall is an object that describes an invocation of method Done on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreDoneFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDoneFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDoneFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreDoneFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreDoneFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreDoneFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreDoneFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreDoneFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc",
+              "documentation": {
+                "identifier": "StoreHandleFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreHandleFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreHandleFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreHandleFunc struct {\n\tdefaultHook func() *basestore.TransactableHandle\n\thooks       []func() *basestore.TransactableHandle\n\thistory     []StoreHandleFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreHandleFunc describes the behavior when the Handle method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreHandleFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreHandleFunc) SetDefaultHook(hook func() *basestore.TransactableHandle)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreHandleFunc) SetDefaultHook(hook func() *basestore.TransactableHandle)\n```\n\nSetDefaultHook sets function that is called when the Handle method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreHandleFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreHandleFunc) PushHook(hook func() *basestore.TransactableHandle)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreHandleFunc) PushHook(hook func() *basestore.TransactableHandle)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Handle method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreHandleFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreHandleFunc) SetDefaultReturn(r0 *basestore.TransactableHandle)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreHandleFunc) SetDefaultReturn(r0 *basestore.TransactableHandle)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreHandleFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreHandleFunc) PushReturn(r0 *basestore.TransactableHandle)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreHandleFunc) PushReturn(r0 *basestore.TransactableHandle)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreHandleFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreHandleFunc) nextHook() func() *basestore.TransactableHandle"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreHandleFunc) nextHook() func() *basestore.TransactableHandle\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreHandleFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreHandleFunc) appendCall(r0 StoreHandleFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreHandleFunc) appendCall(r0 StoreHandleFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFunc.History",
+                    "documentation": {
+                      "identifier": "StoreHandleFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreHandleFunc) History() []StoreHandleFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreHandleFunc) History() []StoreHandleFuncCall\n```\n\nHistory returns a sequence of StoreHandleFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFuncCall",
+              "documentation": {
+                "identifier": "StoreHandleFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreHandleFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreHandleFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreHandleFuncCall struct {\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 *basestore.TransactableHandle\n}\n```\n\nStoreHandleFuncCall is an object that describes an invocation of method Handle on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreHandleFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreHandleFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreHandleFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreHandleFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreHandleFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreHandleFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreHandleFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreHandleFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc",
+              "documentation": {
+                "identifier": "StoreMarkCompleteFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreMarkCompleteFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkCompleteFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkCompleteFunc struct {\n\tdefaultHook func(context.Context, int) (bool, error)\n\thooks       []func(context.Context, int) (bool, error)\n\thistory     []StoreMarkCompleteFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreMarkCompleteFunc describes the behavior when the MarkComplete method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultHook(hook func(context.Context, int) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkComplete method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) PushHook(hook func(context.Context, int) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) PushHook(hook func(context.Context, int) (bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the MarkComplete method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) PushReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) PushReturn(r0 bool, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) nextHook() func(context.Context, int) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) appendCall(r0 StoreMarkCompleteFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFunc.History",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkCompleteFunc) History() []StoreMarkCompleteFuncCall\n```\n\nHistory returns a sequence of StoreMarkCompleteFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFuncCall",
+              "documentation": {
+                "identifier": "StoreMarkCompleteFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreMarkCompleteFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkCompleteFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkCompleteFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 bool\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreMarkCompleteFuncCall is an object that describes an invocation of method MarkComplete on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkCompleteFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkCompleteFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkCompleteFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreMarkCompleteFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkCompleteFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkCompleteFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkCompleteFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc",
+              "documentation": {
+                "identifier": "StoreMarkErroredFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreMarkErroredFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkErroredFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkErroredFunc struct {\n\tdefaultHook func(context.Context, int, string) (bool, error)\n\thooks       []func(context.Context, int, string) (bool, error)\n\thistory     []StoreMarkErroredFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreMarkErroredFunc describes the behavior when the MarkErrored method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkErrored method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) PushHook(hook func(context.Context, int, string) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) PushHook(hook func(context.Context, int, string) (bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the MarkErrored method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) PushReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) PushReturn(r0 bool, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) appendCall(r0 StoreMarkErroredFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFunc.History",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkErroredFunc) History() []StoreMarkErroredFuncCall\n```\n\nHistory returns a sequence of StoreMarkErroredFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFuncCall",
+              "documentation": {
+                "identifier": "StoreMarkErroredFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreMarkErroredFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkErroredFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkErroredFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 bool\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreMarkErroredFuncCall is an object that describes an invocation of method MarkErrored on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkErroredFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkErroredFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkErroredFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreMarkErroredFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkErroredFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkErroredFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkErroredFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc",
+              "documentation": {
+                "identifier": "StoreMarkFailedFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreMarkFailedFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkFailedFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkFailedFunc struct {\n\tdefaultHook func(context.Context, int, string) (bool, error)\n\thooks       []func(context.Context, int, string) (bool, error)\n\thistory     []StoreMarkFailedFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreMarkFailedFunc describes the behavior when the MarkFailed method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultHook(hook func(context.Context, int, string) (bool, error))\n```\n\nSetDefaultHook sets function that is called when the MarkFailed method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) PushHook(hook func(context.Context, int, string) (bool, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) PushHook(hook func(context.Context, int, string) (bool, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the MarkFailed method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) SetDefaultReturn(r0 bool, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) PushReturn(r0 bool, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) PushReturn(r0 bool, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) nextHook() func(context.Context, int, string) (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) appendCall(r0 StoreMarkFailedFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFunc.History",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreMarkFailedFunc) History() []StoreMarkFailedFuncCall\n```\n\nHistory returns a sequence of StoreMarkFailedFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFuncCall",
+              "documentation": {
+                "identifier": "StoreMarkFailedFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreMarkFailedFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreMarkFailedFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreMarkFailedFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 string\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 bool\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreMarkFailedFuncCall is an object that describes an invocation of method MarkFailed on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkFailedFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkFailedFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreMarkFailedFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreMarkFailedFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreMarkFailedFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreMarkFailedFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreMarkFailedFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc",
+              "documentation": {
+                "identifier": "StoreQueuedCountFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreQueuedCountFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreQueuedCountFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreQueuedCountFunc struct {\n\tdefaultHook func(context.Context, []*sqlf.Query) (int, error)\n\thooks       []func(context.Context, []*sqlf.Query) (int, error)\n\thistory     []StoreQueuedCountFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreQueuedCountFunc describes the behavior when the QueuedCount method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (int, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultHook(hook func(context.Context, []*sqlf.Query) (int, error))\n```\n\nSetDefaultHook sets function that is called when the QueuedCount method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) PushHook(hook func(context.Context, []*sqlf.Query) (int, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) PushHook(hook func(context.Context, []*sqlf.Query) (int, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the QueuedCount method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) SetDefaultReturn(r0 int, r1 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) PushReturn(r0 int, r1 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) PushReturn(r0 int, r1 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) nextHook() func(context.Context, []*sqlf.Query) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) nextHook() func(context.Context, []*sqlf.Query) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) appendCall(r0 StoreQueuedCountFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFunc.History",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreQueuedCountFunc) History() []StoreQueuedCountFuncCall\n```\n\nHistory returns a sequence of StoreQueuedCountFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFuncCall",
+              "documentation": {
+                "identifier": "StoreQueuedCountFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreQueuedCountFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreQueuedCountFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreQueuedCountFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 []*sqlf.Query\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 int\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 error\n}\n```\n\nStoreQueuedCountFuncCall is an object that describes an invocation of method QueuedCount on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreQueuedCountFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreQueuedCountFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreQueuedCountFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreQueuedCountFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreQueuedCountFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreQueuedCountFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreQueuedCountFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc",
+              "documentation": {
+                "identifier": "StoreRequeueFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreRequeueFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreRequeueFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreRequeueFunc struct {\n\tdefaultHook func(context.Context, int, time.Time) error\n\thooks       []func(context.Context, int, time.Time) error\n\thistory     []StoreRequeueFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreRequeueFunc describes the behavior when the Requeue method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreRequeueFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreRequeueFunc) SetDefaultHook(hook func(context.Context, int, time.Time) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) SetDefaultHook(hook func(context.Context, int, time.Time) error)\n```\n\nSetDefaultHook sets function that is called when the Requeue method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreRequeueFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreRequeueFunc) PushHook(hook func(context.Context, int, time.Time) error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) PushHook(hook func(context.Context, int, time.Time) error)\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the Requeue method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreRequeueFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreRequeueFunc) SetDefaultReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) SetDefaultReturn(r0 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreRequeueFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreRequeueFunc) PushReturn(r0 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) PushReturn(r0 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreRequeueFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreRequeueFunc) nextHook() func(context.Context, int, time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) nextHook() func(context.Context, int, time.Time) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreRequeueFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreRequeueFunc) appendCall(r0 StoreRequeueFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) appendCall(r0 StoreRequeueFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFunc.History",
+                    "documentation": {
+                      "identifier": "StoreRequeueFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreRequeueFunc) History() []StoreRequeueFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreRequeueFunc) History() []StoreRequeueFuncCall\n```\n\nHistory returns a sequence of StoreRequeueFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFuncCall",
+              "documentation": {
+                "identifier": "StoreRequeueFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreRequeueFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreRequeueFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreRequeueFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Arg1 is the value of the 2nd argument passed to this method\n\t// invocation.\n\tArg1 int\n\t// Arg2 is the value of the 3rd argument passed to this method\n\t// invocation.\n\tArg2 time.Time\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 error\n}\n```\n\nStoreRequeueFuncCall is an object that describes an invocation of method Requeue on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreRequeueFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreRequeueFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreRequeueFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreRequeueFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreRequeueFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreRequeueFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreRequeueFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreRequeueFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc",
+              "documentation": {
+                "identifier": "StoreResetStalledFunc",
+                "newPage": false,
+                "searchKey": "mocks.StoreResetStalledFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreResetStalledFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreResetStalledFunc struct {\n\tdefaultHook func(context.Context) ([]int, []int, error)\n\thooks       []func(context.Context) ([]int, []int, error)\n\thistory     []StoreResetStalledFuncCall\n\tmutex       sync.Mutex\n}\n```\n\nStoreResetStalledFunc describes the behavior when the ResetStalled method of the parent MockStore instance is invoked. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.SetDefaultHook",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFunc.SetDefaultHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFunc.SetDefaultHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreResetStalledFunc) SetDefaultHook(hook func(context.Context) ([]int, []int, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) SetDefaultHook(hook func(context.Context) ([]int, []int, error))\n```\n\nSetDefaultHook sets function that is called when the ResetStalled method of the parent MockStore instance is invoked and the hook queue is empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.PushHook",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFunc.PushHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFunc.PushHook",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreResetStalledFunc) PushHook(hook func(context.Context) ([]int, []int, error))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) PushHook(hook func(context.Context) ([]int, []int, error))\n```\n\nPushHook adds a function to the end of hook queue. Each invocation of the ResetStalled method of the parent MockStore instance invokes the hook at the front of the queue and discards it. After the queue is empty, the default hook function is invoked for any future action. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.SetDefaultReturn",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFunc.SetDefaultReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFunc.SetDefaultReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreResetStalledFunc) SetDefaultReturn(r0 []int, r1 []int, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) SetDefaultReturn(r0 []int, r1 []int, r2 error)\n```\n\nSetDefaultReturn calls SetDefaultDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.PushReturn",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFunc.PushReturn",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFunc.PushReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreResetStalledFunc) PushReturn(r0 []int, r1 []int, r2 error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) PushReturn(r0 []int, r1 []int, r2 error)\n```\n\nPushReturn calls PushDefaultHook with a function that returns the given values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.nextHook",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFunc.nextHook",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFunc.nextHook",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreResetStalledFunc) nextHook() func(context.Context) ([]int, []int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) nextHook() func(context.Context) ([]int, []int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.appendCall",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFunc.appendCall",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFunc.appendCall",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreResetStalledFunc) appendCall(r0 StoreResetStalledFuncCall)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) appendCall(r0 StoreResetStalledFuncCall)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFunc.History",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFunc.History",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFunc.History",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *StoreResetStalledFunc) History() []StoreResetStalledFuncCall"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *StoreResetStalledFunc) History() []StoreResetStalledFuncCall\n```\n\nHistory returns a sequence of StoreResetStalledFuncCall objects describing the invocations of this function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFuncCall",
+              "documentation": {
+                "identifier": "StoreResetStalledFuncCall",
+                "newPage": false,
+                "searchKey": "mocks.StoreResetStalledFuncCall",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StoreResetStalledFuncCall struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StoreResetStalledFuncCall struct {\n\t// Arg0 is the value of the 1st argument passed to this method\n\t// invocation.\n\tArg0 context.Context\n\t// Result0 is the value of the 1st result returned from this method\n\t// invocation.\n\tResult0 []int\n\t// Result1 is the value of the 2nd result returned from this method\n\t// invocation.\n\tResult1 []int\n\t// Result2 is the value of the 3rd result returned from this method\n\t// invocation.\n\tResult2 error\n}\n```\n\nStoreResetStalledFuncCall is an object that describes an invocation of method ResetStalled on an instance of MockStore. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFuncCall.Args",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFuncCall.Args",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFuncCall.Args",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreResetStalledFuncCall) Args() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreResetStalledFuncCall) Args() []interface{}\n```\n\nArgs returns an interface slice containing the arguments of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/workerutil/dbworker/store/mocks#StoreResetStalledFuncCall.Results",
+                    "documentation": {
+                      "identifier": "StoreResetStalledFuncCall.Results",
+                      "newPage": false,
+                      "searchKey": "mocks.StoreResetStalledFuncCall.Results",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c StoreResetStalledFuncCall) Results() []interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c StoreResetStalledFuncCall) Results() []interface{}\n```\n\nResults returns an interface slice containing the results of this invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

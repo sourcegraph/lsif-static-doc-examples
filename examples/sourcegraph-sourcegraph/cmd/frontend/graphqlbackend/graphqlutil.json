@@ -1,0 +1,222 @@
+{
+  "pathID": "/cmd/frontend/graphqlbackend/graphqlutil",
+  "documentation": {
+    "identifier": "graphqlutil",
+    "newPage": true,
+    "searchKey": "cmd/frontend/graphqlbackend/graphqlutil",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package graphqlutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package graphqlutil contains utilities for working with GraphQL. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#ConnectionArgs",
+              "documentation": {
+                "identifier": "ConnectionArgs",
+                "newPage": false,
+                "searchKey": "graphqlutil.ConnectionArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ConnectionArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ConnectionArgs struct {\n\tFirst *int32 // return the first n items\n}\n```\n\nConnectionArgs is the common set of arguments to GraphQL fields that return connections (lists). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#ConnectionArgs.Set",
+                    "documentation": {
+                      "identifier": "ConnectionArgs.Set",
+                      "newPage": false,
+                      "searchKey": "graphqlutil.ConnectionArgs.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a ConnectionArgs) Set(o **database.LimitOffset)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a ConnectionArgs) Set(o **database.LimitOffset)\n```\n\nSet is a convenience method for setting the DB limit and offset in a DB XyzListOptions struct. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#ConnectionArgs.GetFirst",
+                    "documentation": {
+                      "identifier": "ConnectionArgs.GetFirst",
+                      "newPage": false,
+                      "searchKey": "graphqlutil.ConnectionArgs.GetFirst",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a ConnectionArgs) GetFirst() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a ConnectionArgs) GetFirst() int32\n```\n\nGetFirst is a convenience method returning the value of First, defaulting to the type's zero value if nil. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#PageInfo",
+              "documentation": {
+                "identifier": "PageInfo",
+                "newPage": false,
+                "searchKey": "graphqlutil.PageInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PageInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PageInfo struct {\n\tendCursor   *string\n\thasNextPage bool\n}\n```\n\nPageInfo implements the GraphQL type PageInfo. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#HasNextPage",
+                    "documentation": {
+                      "identifier": "HasNextPage",
+                      "newPage": false,
+                      "searchKey": "graphqlutil.HasNextPage",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func HasNextPage(hasNextPage bool) *PageInfo"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc HasNextPage(hasNextPage bool) *PageInfo\n```\n\nHasNextPage returns a new PageInfo with the given hasNextPage value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#NextPageCursor",
+                    "documentation": {
+                      "identifier": "NextPageCursor",
+                      "newPage": false,
+                      "searchKey": "graphqlutil.NextPageCursor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NextPageCursor(endCursor string) *PageInfo"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NextPageCursor(endCursor string) *PageInfo\n```\n\nNextPageCursor returns a new PageInfo indicating there is a next page with the given end cursor. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#PageInfo.EndCursor",
+                    "documentation": {
+                      "identifier": "PageInfo.EndCursor",
+                      "newPage": false,
+                      "searchKey": "graphqlutil.PageInfo.EndCursor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *PageInfo) EndCursor() *string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *PageInfo) EndCursor() *string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/cmd/frontend/graphqlbackend/graphqlutil#PageInfo.HasNextPage",
+                    "documentation": {
+                      "identifier": "PageInfo.HasNextPage",
+                      "newPage": false,
+                      "searchKey": "graphqlutil.PageInfo.HasNextPage",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *PageInfo) HasNextPage() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *PageInfo) HasNextPage() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

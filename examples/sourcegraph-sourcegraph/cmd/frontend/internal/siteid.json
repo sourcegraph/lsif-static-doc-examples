@@ -1,0 +1,205 @@
+{
+  "pathID": "/cmd/frontend/internal/siteid",
+  "documentation": {
+    "identifier": "siteid",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/siteid",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package siteid"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package siteid provides access to the site ID, a stable identifier for the current Sourcegraph site. \n\nAll servers that are part of the same logical Sourcegraph site have the same site ID (although it is possible for an admin to misconfigure the servers so that this is not true). \n\nThe \"site ID\" was formerly known as the \"app ID\". \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/siteid#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/siteid#inited",
+              "documentation": {
+                "identifier": "inited",
+                "newPage": false,
+                "searchKey": "siteid.inited",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var inited"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar inited bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/siteid#siteID",
+              "documentation": {
+                "identifier": "siteID",
+                "newPage": false,
+                "searchKey": "siteid.siteID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var siteID"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar siteID string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/siteid#fatalln",
+              "documentation": {
+                "identifier": "fatalln",
+                "newPage": false,
+                "searchKey": "siteid.fatalln",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fatalln"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fatalln = log.Fatalln // overridden in tests\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/siteid#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/siteid#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "siteid.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init()\n```\n\nInit reads (or generates) the site ID. This func must be called exactly once before Get can be called. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/siteid#Get",
+              "documentation": {
+                "identifier": "Get",
+                "newPage": false,
+                "searchKey": "siteid.Get",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Get() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Get() string\n```\n\nGet returns the site ID. \n\nGet may only be called after Init has been called. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/siteid#TestNotInited",
+              "documentation": {
+                "identifier": "TestNotInited",
+                "newPage": false,
+                "searchKey": "siteid.TestNotInited",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotInited(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotInited(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/siteid#TestGet",
+              "documentation": {
+                "identifier": "TestGet",
+                "newPage": false,
+                "searchKey": "siteid.TestGet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGet(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGet(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

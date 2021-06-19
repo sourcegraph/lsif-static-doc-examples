@@ -1,0 +1,129 @@
+{
+  "pathID": "/enterprise/internal/batches",
+  "documentation": {
+    "identifier": "batches",
+    "newPage": true,
+    "searchKey": "enterprise/internal/batches",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package batches"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "This package is the main root for all our code. It is meant to be the only batch changes enterprise package to be used outside this folder. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/batches#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches#InitBackgroundJobs",
+              "documentation": {
+                "identifier": "InitBackgroundJobs",
+                "newPage": false,
+                "searchKey": "batches.InitBackgroundJobs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitBackgroundJobs(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitBackgroundJobs(\n\tctx context.Context,\n\tdb dbutil.DB,\n\tkey encryption.Key,\n\tcf *httpcli.Factory,\n) interface {\n\t// EnqueueChangesetSyncs will queue the supplied changesets to sync ASAP.\n\tEnqueueChangesetSyncs(ctx context.Context, ids []int64) error\n\t// HandleExternalServiceSync should be called when an external service changes so that\n\t// the registry can start or stop the syncer associated with the service\n\tHandleExternalServiceSync(es api.ExternalService)\n}\n```\n\nInitBackgroundJobs starts all jobs required to run batches. Currently, it is called from repo-updater and in the future will be the main entry point for the batch changes worker. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/batches#InitFrontend",
+              "documentation": {
+                "identifier": "InitFrontend",
+                "newPage": false,
+                "searchKey": "batches.InitFrontend",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InitFrontend(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InitFrontend(ctx context.Context, db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner, enterpriseServices *enterprise.Services) error\n```\n\nInitFrontend initializes the given enterpriseServices to include the required resolvers for batch changes and sets up webhook handlers for changeset events. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/enterprise/internal/batches/background"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/global"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/reconciler"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/resolvers"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/rewirer"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/scheduler"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/search"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/service"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/sources"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/state"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/store"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/syncer"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/testing"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/types"
+    },
+    {
+      "pathID": "/enterprise/internal/batches/webhooks"
+    }
+  ]
+}

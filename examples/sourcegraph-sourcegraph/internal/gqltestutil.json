@@ -1,0 +1,2356 @@
+{
+  "pathID": "/internal/gqltestutil",
+  "documentation": {
+    "identifier": "gqltestutil",
+    "newPage": true,
+    "searchKey": "internal/gqltestutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package gqltestutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/gqltestutil#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchContextsOrderByUpdatedAt",
+              "documentation": {
+                "identifier": "SearchContextsOrderByUpdatedAt",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchContextsOrderByUpdatedAt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SearchContextsOrderByUpdatedAt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SearchContextsOrderByUpdatedAt SearchContextsOrderBy = \"SEARCH_CONTEXT_UPDATED_AT\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchContextsOrderBySpec",
+              "documentation": {
+                "identifier": "SearchContextsOrderBySpec",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchContextsOrderBySpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SearchContextsOrderBySpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SearchContextsOrderBySpec SearchContextsOrderBy = \"SEARCH_CONTEXT_SPEC\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/gqltestutil#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#graphqlQueryNameRe",
+              "documentation": {
+                "identifier": "graphqlQueryNameRe",
+                "newPage": false,
+                "searchKey": "gqltestutil.graphqlQueryNameRe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var graphqlQueryNameRe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar graphqlQueryNameRe = lazyregexp.New(`(query|mutation) +(\\w)+`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#ErrContinueRetry",
+              "documentation": {
+                "identifier": "ErrContinueRetry",
+                "newPage": false,
+                "searchKey": "gqltestutil.ErrContinueRetry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrContinueRetry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrContinueRetry = errors.New(\"continue Retry\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/gqltestutil#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "gqltestutil.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\tbaseURL       string\n\tcsrfToken     string\n\tcsrfCookie    *http.Cookie\n\tsessionCookie *http.Cookie\n\n\tuserID string\n}\n```\n\nClient is an authenticated client for a Sourcegraph user for doing e2e testing. The user may or may not be a site admin depends on how the client is instantiated. It works by simulating how the browser would send HTTP requests to the server. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SiteAdminInit",
+                    "documentation": {
+                      "identifier": "SiteAdminInit",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SiteAdminInit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func SiteAdminInit(baseURL, email, username, password string) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc SiteAdminInit(baseURL, email, username, password string) (*Client, error)\n```\n\nSiteAdminInit initializes the instance with given admin account. It returns an authenticated client as the admin for doing testing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SignUp",
+                    "documentation": {
+                      "identifier": "SignUp",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SignUp",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func SignUp(baseURL, email, username, password string) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc SignUp(baseURL, email, username, password string) (*Client, error)\n```\n\nSignUp signs up a new user with given credentials. It returns an authenticated client as the user for doing testing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SignIn",
+                    "documentation": {
+                      "identifier": "SignIn",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SignIn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func SignIn(baseURL, email, password string) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc SignIn(baseURL, email, password string) (*Client, error)\n```\n\nSignIn performs the sign in with given user credentials. It returns an authenticated client as the user for doing testing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#authenticate",
+                    "documentation": {
+                      "identifier": "authenticate",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.authenticate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func authenticate(baseURL, path string, body interface{}) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc authenticate(baseURL, path string, body interface{}) (*Client, error)\n```\n\nauthenticate initializes an authenticated client with given request body. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#newClient",
+                    "documentation": {
+                      "identifier": "newClient",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.newClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newClient(baseURL string) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newClient(baseURL string) (*Client, error)\n```\n\nnewClient instantiates a new client by performing a GET request then obtains the CSRF token and cookie from its response. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.CreateAccessToken",
+                    "documentation": {
+                      "identifier": "Client.CreateAccessToken",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.CreateAccessToken",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateAccessToken(note string, scopes []string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateAccessToken(note string, scopes []string) (string, error)\n```\n\nCreateAccessToken creates a new access token with given note and scopes for the authenticated user. It returns the new access token created. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.DeleteAccessToken",
+                    "documentation": {
+                      "identifier": "Client.DeleteAccessToken",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.DeleteAccessToken",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DeleteAccessToken(token string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DeleteAccessToken(token string) error\n```\n\nDeleteAccessToken deletes the given access token of the authenticated user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.authenticate",
+                    "documentation": {
+                      "identifier": "Client.authenticate",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.authenticate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) authenticate(path string, body interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) authenticate(path string, body interface{}) error\n```\n\nauthenticate is used to send a HTTP POST request to an URL that is able to authenticate a user with given body (marshalled to JSON), e.g. site admin init, sign in. Once the client is authenticated, the session cookie will be stored as a proof of authentication. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.CurrentUserID",
+                    "documentation": {
+                      "identifier": "Client.CurrentUserID",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.CurrentUserID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CurrentUserID(token string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CurrentUserID(token string) (string, error)\n```\n\nCurrentUserID returns the current authenticated user's GraphQL node ID. An optional token can be passed to impersonate other users. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.AuthenticatedUserID",
+                    "documentation": {
+                      "identifier": "Client.AuthenticatedUserID",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.AuthenticatedUserID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) AuthenticatedUserID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) AuthenticatedUserID() string\n```\n\nAuthenticatedUserID returns the GraphQL node ID of current authenticated user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.GraphQL",
+                    "documentation": {
+                      "identifier": "Client.GraphQL",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.GraphQL",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GraphQL(token, query string, variables map[string]interface{}, target interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GraphQL(token, query string, variables map[string]interface{}, target interface{}) error\n```\n\nGraphQL makes a GraphQL request to the server on behalf of the user authenticated by the client. An optional token can be passed to impersonate other users. A nil target will skip unmarshalling the returned JSON response. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.Get",
+                    "documentation": {
+                      "identifier": "Client.Get",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Get(url string) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Get(url string) (*http.Response, error)\n```\n\nGet performs a GET request to the URL with authenticated user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.Post",
+                    "documentation": {
+                      "identifier": "Client.Post",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.Post",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Post(url string, body io.Reader) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Post(url string, body io.Reader) (*http.Response, error)\n```\n\nPost performs a POST request to the URL with authenticated user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.addCookies",
+                    "documentation": {
+                      "identifier": "Client.addCookies",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.addCookies",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) addCookies(req *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) addCookies(req *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.AddExternalService",
+                    "documentation": {
+                      "identifier": "Client.AddExternalService",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.AddExternalService",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) AddExternalService(input AddExternalServiceInput) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) AddExternalService(input AddExternalServiceInput) (string, error)\n```\n\nAddExternalService adds a new external service with given input. It returns GraphQL node ID of newly created external service. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.DeleteExternalService",
+                    "documentation": {
+                      "identifier": "Client.DeleteExternalService",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.DeleteExternalService",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DeleteExternalService(id string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DeleteExternalService(id string) error\n```\n\nDeleteExternalService deletes the external service by given GraphQL node ID. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.GitBlob",
+                    "documentation": {
+                      "identifier": "Client.GitBlob",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.GitBlob",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GitBlob(repoName, revision, filePath string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GitBlob(repoName, revision, filePath string) (string, error)\n```\n\nGitBlob returns blob content of the file in given repository at given revision. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.Organization",
+                    "documentation": {
+                      "identifier": "Client.Organization",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.Organization",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Organization(name string) (*Organization, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Organization(name string) (*Organization, error)\n```\n\nOrganization returns basic information of the given organization. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.OrganizationMembers",
+                    "documentation": {
+                      "identifier": "Client.OrganizationMembers",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.OrganizationMembers",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) OrganizationMembers(id string) ([]*OrganizationMember, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) OrganizationMembers(id string) ([]*OrganizationMember, error)\n```\n\nOrganizationMembers returns a list of members of the given organization. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.InviteUserToOrganization",
+                    "documentation": {
+                      "identifier": "Client.InviteUserToOrganization",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.InviteUserToOrganization",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) InviteUserToOrganization(orgID, username string) (*InviteUserToOrganizationResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) InviteUserToOrganization(orgID, username string) (*InviteUserToOrganizationResult, error)\n```\n\nInviteUserToOrganization invites a user to the given organization. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.CreateOrganization",
+                    "documentation": {
+                      "identifier": "Client.CreateOrganization",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.CreateOrganization",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateOrganization(name, displayName string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateOrganization(name, displayName string) (string, error)\n```\n\nCreateOrganization creates a new organization with given name and display name. It returns GraphQL node ID of newly created organization. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.UpdateOrganization",
+                    "documentation": {
+                      "identifier": "Client.UpdateOrganization",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.UpdateOrganization",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) UpdateOrganization(id, displayName string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) UpdateOrganization(id, displayName string) error\n```\n\nUpdateOrganization updates display name of the given organization. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.DeleteOrganization",
+                    "documentation": {
+                      "identifier": "Client.DeleteOrganization",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.DeleteOrganization",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DeleteOrganization(id string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DeleteOrganization(id string) error\n```\n\nDeleteOrganization deletes the organization by given GraphQL node ID. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.RemoveUserFromOrganization",
+                    "documentation": {
+                      "identifier": "Client.RemoveUserFromOrganization",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.RemoveUserFromOrganization",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RemoveUserFromOrganization(userID, orgID string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RemoveUserFromOrganization(userID, orgID string) error\n```\n\nRemoveUserFromOrganization removes user from given organization. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.ScheduleRepositoryPermissionsSync",
+                    "documentation": {
+                      "identifier": "Client.ScheduleRepositoryPermissionsSync",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.ScheduleRepositoryPermissionsSync",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ScheduleRepositoryPermissionsSync(id string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ScheduleRepositoryPermissionsSync(id string) error\n```\n\nScheduleRepositoryPermissionsSync schedules a permissions syncing request for the given repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.WaitForReposToBeCloned",
+                    "documentation": {
+                      "identifier": "Client.WaitForReposToBeCloned",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.WaitForReposToBeCloned",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) WaitForReposToBeCloned(repos ...string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) WaitForReposToBeCloned(repos ...string) error\n```\n\nWaitForReposToBeCloned waits (up to two minutes) for all repositories in the list to be cloned. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.WaitForReposToBeIndex",
+                    "documentation": {
+                      "identifier": "Client.WaitForReposToBeIndex",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.WaitForReposToBeIndex",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) WaitForReposToBeIndex(repos ...string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) WaitForReposToBeIndex(repos ...string) error\n```\n\nWaitForReposToBeIndex waits (up to 30 seconds) for all repositories in the list to be indexed. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.waitForReposByQuery",
+                    "documentation": {
+                      "identifier": "Client.waitForReposByQuery",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.waitForReposByQuery",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) waitForReposByQuery(query string, repos ...string) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) waitForReposByQuery(query string, repos ...string) ([]string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.FileExternalLinks",
+                    "documentation": {
+                      "identifier": "Client.FileExternalLinks",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.FileExternalLinks",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) FileExternalLinks(repoName, revision, filePath string) ([]*ExternalLink, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) FileExternalLinks(repoName, revision, filePath string) ([]*ExternalLink, error)\n```\n\nFileExternalLinks external links for a file or directory in a repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.Repository",
+                    "documentation": {
+                      "identifier": "Client.Repository",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.Repository",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Repository(name string) (*Repository, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Repository(name string) (*Repository, error)\n```\n\nRepository returns basic information of the given repository. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.RepositoryPermissionsInfo",
+                    "documentation": {
+                      "identifier": "Client.RepositoryPermissionsInfo",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.RepositoryPermissionsInfo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RepositoryPermissionsInfo(name string) (*PermissionsInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RepositoryPermissionsInfo(name string) (*PermissionsInfo, error)\n```\n\nRepositoryPermissionsInfo returns permissions information of the given repository. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.SearchRepositories",
+                    "documentation": {
+                      "identifier": "Client.SearchRepositories",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.SearchRepositories",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SearchRepositories(query string) (SearchRepositoryResults, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SearchRepositories(query string) (SearchRepositoryResults, error)\n```\n\nSearchRepositories search repositories with given query. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.SearchFiles",
+                    "documentation": {
+                      "identifier": "Client.SearchFiles",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.SearchFiles",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SearchFiles(query string) (*SearchFileResults, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SearchFiles(query string) (*SearchFileResults, error)\n```\n\nSearchFiles searches files with given query. It returns the match count and corresponding file matches. Search alert is also included if any. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.SearchCommits",
+                    "documentation": {
+                      "identifier": "Client.SearchCommits",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.SearchCommits",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SearchCommits(query string) (*SearchCommitResults, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SearchCommits(query string) (*SearchCommitResults, error)\n```\n\nSearchCommits searches commits with given query. It returns the match count and corresponding file matches. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.SearchAll",
+                    "documentation": {
+                      "identifier": "Client.SearchAll",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.SearchAll",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SearchAll(query string) ([]*AnyResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SearchAll(query string) ([]*AnyResult, error)\n```\n\nSearchAll searches for all matches with a given query corresponding file matches. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.SearchStats",
+                    "documentation": {
+                      "identifier": "Client.SearchStats",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.SearchStats",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SearchStats(query string) (*SearchStatsResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SearchStats(query string) (*SearchStatsResult, error)\n```\n\nSearchStats returns statistics of given query. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.SearchSuggestions",
+                    "documentation": {
+                      "identifier": "Client.SearchSuggestions",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.SearchSuggestions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SearchSuggestions(query string) ([]SearchSuggestionsResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SearchSuggestions(query string) ([]SearchSuggestionsResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.CreateSearchContext",
+                    "documentation": {
+                      "identifier": "Client.CreateSearchContext",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.CreateSearchContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateSearchContext(input CreateSearchContextInput, repositories []SearchContextRepositoryRevisionsInput) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateSearchContext(input CreateSearchContextInput, repositories []SearchContextRepositoryRevisionsInput) (string, error)\n```\n\nCreateSearchContext creates a new search context with the given input and repository revisions to be searched. It returns the GraphQL node ID of the newly created search context. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.GetSearchContext",
+                    "documentation": {
+                      "identifier": "Client.GetSearchContext",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.GetSearchContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetSearchContext(id string) (*GetSearchContextResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetSearchContext(id string) (*GetSearchContextResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.UpdateSearchContext",
+                    "documentation": {
+                      "identifier": "Client.UpdateSearchContext",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.UpdateSearchContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) UpdateSearchContext(id string, input UpdateSearchContextInput, repos []SearchContextRepositoryRevisionsInput) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) UpdateSearchContext(id string, input UpdateSearchContextInput, repos []SearchContextRepositoryRevisionsInput) (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.DeleteSearchContext",
+                    "documentation": {
+                      "identifier": "Client.DeleteSearchContext",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.DeleteSearchContext",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DeleteSearchContext(id string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DeleteSearchContext(id string) error\n```\n\nDeleteSearchContext deletes a search context with the given id. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.ListSearchContexts",
+                    "documentation": {
+                      "identifier": "Client.ListSearchContexts",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.ListSearchContexts",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListSearchContexts(options ListSearchContextsOptions) (*ListSearchContextsResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListSearchContexts(options ListSearchContextsOptions) (*ListSearchContextsResult, error)\n```\n\nListSearchContexts list search contexts filtered by the given options. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.SettingsCascade",
+                    "documentation": {
+                      "identifier": "Client.SettingsCascade",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.SettingsCascade",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SettingsCascade(subjectID string) ([]*SettingsSubject, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SettingsCascade(subjectID string) ([]*SettingsSubject, error)\n```\n\nSettingsCascade returns settings of given subject ID with contents. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.OverwriteSettings",
+                    "documentation": {
+                      "identifier": "Client.OverwriteSettings",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.OverwriteSettings",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) OverwriteSettings(subjectID, contents string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) OverwriteSettings(subjectID, contents string) error\n```\n\nOverwriteSettings overwrites settings for given subject ID with contents. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.lastSettingsID",
+                    "documentation": {
+                      "identifier": "Client.lastSettingsID",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.lastSettingsID",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) lastSettingsID(subjectID string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) lastSettingsID(subjectID string) (int, error)\n```\n\nlastSettingsID returns the ID of last settings of given subject. It is required to be used to update corresponding settings. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.ViewerSettings",
+                    "documentation": {
+                      "identifier": "Client.ViewerSettings",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.ViewerSettings",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ViewerSettings() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ViewerSettings() (string, error)\n```\n\nViewerSettings returns the latest cascaded settings of authenticated user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.SiteConfiguration",
+                    "documentation": {
+                      "identifier": "Client.SiteConfiguration",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.SiteConfiguration",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SiteConfiguration() (*schema.SiteConfiguration, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SiteConfiguration() (*schema.SiteConfiguration, error)\n```\n\nSiteConfiguration returns current effective site configuration. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.UpdateSiteConfiguration",
+                    "documentation": {
+                      "identifier": "Client.UpdateSiteConfiguration",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.UpdateSiteConfiguration",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) UpdateSiteConfiguration(config *schema.SiteConfiguration) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) UpdateSiteConfiguration(config *schema.SiteConfiguration) error\n```\n\nUpdateSiteConfiguration updates site configuration. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.CreateUser",
+                    "documentation": {
+                      "identifier": "Client.CreateUser",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.CreateUser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateUser(username, email string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateUser(username, email string) (string, error)\n```\n\nCreateUser creates a new user with the given username and email. It returns the GraphQL node ID of newly created user. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.DeleteUser",
+                    "documentation": {
+                      "identifier": "Client.DeleteUser",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.DeleteUser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DeleteUser(id string, hard bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DeleteUser(id string, hard bool) error\n```\n\nDeleteUser deletes a user by given GraphQL node ID. \n\nThis method requires the authenticated user to be a site admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#Client.UserOrganizations",
+                    "documentation": {
+                      "identifier": "Client.UserOrganizations",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.Client.UserOrganizations",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) UserOrganizations(username string) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) UserOrganizations(username string) ([]string, error)\n```\n\nUserOrganizations returns organizations name the given user belongs to. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#AddExternalServiceInput",
+              "documentation": {
+                "identifier": "AddExternalServiceInput",
+                "newPage": false,
+                "searchKey": "gqltestutil.AddExternalServiceInput",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AddExternalServiceInput struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AddExternalServiceInput struct {\n\tKind        string `json:\"kind\"`\n\tDisplayName string `json:\"displayName\"`\n\tConfig      string `json:\"config\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#Organization",
+              "documentation": {
+                "identifier": "Organization",
+                "newPage": false,
+                "searchKey": "gqltestutil.Organization",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Organization struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Organization struct {\n\tID             string `json:\"id\"`\n\tViewerIsMember bool   `json:\"viewerIsMember\"`\n}\n```\n\nOrganization contains basic information of an organization. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#OrganizationMember",
+              "documentation": {
+                "identifier": "OrganizationMember",
+                "newPage": false,
+                "searchKey": "gqltestutil.OrganizationMember",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OrganizationMember struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OrganizationMember struct {\n\tID       string `json:\"id\"`\n\tUsername string `json:\"username\"`\n}\n```\n\nOrganizationMember contains basic information of an organization member. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#InviteUserToOrganizationResult",
+              "documentation": {
+                "identifier": "InviteUserToOrganizationResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.InviteUserToOrganizationResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type InviteUserToOrganizationResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype InviteUserToOrganizationResult struct {\n\tSentInvitationEmail bool   `json:\"sentInvitationEmail\"`\n\tInvitationURL       string `json:\"invitationURL\"`\n}\n```\n\nInviteUserToOrganizationResult contains information of a user invitation to an organization. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#ExternalLink",
+              "documentation": {
+                "identifier": "ExternalLink",
+                "newPage": false,
+                "searchKey": "gqltestutil.ExternalLink",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ExternalLink struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ExternalLink struct {\n\tURL         string `json:\"url\"`         // The URL to the resource\n\tServiceKind string `json:\"serviceKind\"` // The kind of service that the URL points to\n\tServiceType string `json:\"serviceType\"` // The type of service that the URL points to\n}\n```\n\nExternalLink is a link to an external service. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#Repository",
+              "documentation": {
+                "identifier": "Repository",
+                "newPage": false,
+                "searchKey": "gqltestutil.Repository",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repository struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repository struct {\n\tID  string `json:\"id\"`\n\tURL string `json:\"url\"`\n}\n```\n\nRepository contains basic information of a repository from GraphQL. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#PermissionsInfo",
+              "documentation": {
+                "identifier": "PermissionsInfo",
+                "newPage": false,
+                "searchKey": "gqltestutil.PermissionsInfo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PermissionsInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PermissionsInfo struct {\n\tSyncedAt time.Time\n}\n```\n\nPermissionsInfo contains permissions information of a repository from GraphQL. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchRepositoryResult",
+              "documentation": {
+                "identifier": "SearchRepositoryResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchRepositoryResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchRepositoryResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchRepositoryResult struct {\n\tName string `json:\"name\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchRepositoryResults",
+              "documentation": {
+                "identifier": "SearchRepositoryResults",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchRepositoryResults",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchRepositoryResults []*gqltestutil.SearchRepositoryResult"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchRepositoryResults []*SearchRepositoryResult\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchRepositoryResults.Exists",
+                    "documentation": {
+                      "identifier": "SearchRepositoryResults.Exists",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchRepositoryResults.Exists",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rs SearchRepositoryResults) Exists(names ...string) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rs SearchRepositoryResults) Exists(names ...string) []string\n```\n\nExists returns the list of missing repositories from given names that do not exist in search results. If all of given names are found, it returns empty list. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchRepositoryResults.String",
+                    "documentation": {
+                      "identifier": "SearchRepositoryResults.String",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchRepositoryResults.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rs SearchRepositoryResults) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rs SearchRepositoryResults) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchFileResults",
+              "documentation": {
+                "identifier": "SearchFileResults",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchFileResults",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchFileResults struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchFileResults struct {\n\tMatchCount int64               `json:\"matchCount\"`\n\tAlert      *SearchAlert        `json:\"alert\"`\n\tResults    []*SearchFileResult `json:\"results\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchFileResult",
+              "documentation": {
+                "identifier": "SearchFileResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchFileResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchFileResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchFileResult struct {\n\tFile struct {\n\t\tName string `json:\"name\"`\n\t} `json:\"file\"`\n\tRepository struct {\n\t\tName string `json:\"name\"`\n\t} `json:\"repository\"`\n\tRevSpec struct {\n\t\tExpr string `json:\"expr\"`\n\t} `json:\"revSpec\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#ProposedQuery",
+              "documentation": {
+                "identifier": "ProposedQuery",
+                "newPage": false,
+                "searchKey": "gqltestutil.ProposedQuery",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ProposedQuery struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ProposedQuery struct {\n\tDescription string `json:\"description\"`\n\tQuery       string `json:\"query\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchAlert",
+              "documentation": {
+                "identifier": "SearchAlert",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchAlert",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchAlert struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchAlert struct {\n\tTitle           string          `json:\"title\"`\n\tDescription     string          `json:\"description\"`\n\tProposedQueries []ProposedQuery `json:\"proposedQueries\"`\n}\n```\n\nSearchAlert is an alert specific to searches (i.e. not site alert). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchCommitResults",
+              "documentation": {
+                "identifier": "SearchCommitResults",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchCommitResults",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchCommitResults struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchCommitResults struct {\n\tMatchCount int64 `json:\"matchCount\"`\n\tResults    []*struct {\n\t\tURL string `json:\"url\"`\n\t} `json:\"results\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#AnyResult",
+              "documentation": {
+                "identifier": "AnyResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.AnyResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AnyResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AnyResult struct {\n\tInner interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#AnyResult.UnmarshalJSON",
+                    "documentation": {
+                      "identifier": "AnyResult.UnmarshalJSON",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.AnyResult.UnmarshalJSON",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *AnyResult) UnmarshalJSON(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *AnyResult) UnmarshalJSON(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#FileResult",
+              "documentation": {
+                "identifier": "FileResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.FileResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileResult struct {\n\tFile struct {\n\t\tPath string\n\t} `json:\"file\"`\n\tRepository  RepositoryResult\n\tLineMatches []struct {\n\t\tOffsetAndLengths [][2]int32 `json:\"offsetAndLengths\"`\n\t} `json:\"lineMatches\"`\n\tSymbols []interface{} `json:\"symbols\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#CommitResult",
+              "documentation": {
+                "identifier": "CommitResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.CommitResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitResult struct {\n\tURL string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#RepositoryResult",
+              "documentation": {
+                "identifier": "RepositoryResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.RepositoryResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepositoryResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepositoryResult struct {\n\tName string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchStatsResult",
+              "documentation": {
+                "identifier": "SearchStatsResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchStatsResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchStatsResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchStatsResult struct {\n\tLanguages []struct {\n\t\tName       string `json:\"name\"`\n\t\tTotalLines int    `json:\"totalLines\"`\n\t} `json:\"languages\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchSuggestionsResult",
+              "documentation": {
+                "identifier": "SearchSuggestionsResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchSuggestionsResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchSuggestionsResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchSuggestionsResult struct {\n\tinner interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchSuggestionsResult.UnmarshalJSON",
+                    "documentation": {
+                      "identifier": "SearchSuggestionsResult.UnmarshalJSON",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchSuggestionsResult.UnmarshalJSON",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (srr *SearchSuggestionsResult) UnmarshalJSON(data []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (srr *SearchSuggestionsResult) UnmarshalJSON(data []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#RepositorySuggestionResult",
+              "documentation": {
+                "identifier": "RepositorySuggestionResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.RepositorySuggestionResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RepositorySuggestionResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RepositorySuggestionResult struct {\n\tName string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#FileSuggestionResult",
+              "documentation": {
+                "identifier": "FileSuggestionResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.FileSuggestionResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileSuggestionResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileSuggestionResult struct {\n\tPath        string\n\tName        string\n\tIsDirectory bool   `json:\"isDirectory\"`\n\tURL         string `json:\"url\"`\n\tRepository  struct {\n\t\tName string\n\t}\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SymbolSuggestionResult",
+              "documentation": {
+                "identifier": "SymbolSuggestionResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.SymbolSuggestionResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SymbolSuggestionResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SymbolSuggestionResult struct {\n\tName          string\n\tContainerName string `json:\"containerName\"`\n\tURL           string `json:\"url\"`\n\tKind          string\n\tLocation      struct {\n\t\tResource struct {\n\t\t\tPath       string\n\t\t\tRepository struct {\n\t\t\t\tName string\n\t\t\t}\n\t\t}\n\t}\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#LanguageSuggestionResult",
+              "documentation": {
+                "identifier": "LanguageSuggestionResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.LanguageSuggestionResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LanguageSuggestionResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LanguageSuggestionResult struct {\n\tName string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchContextSuggestionResult",
+              "documentation": {
+                "identifier": "SearchContextSuggestionResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchContextSuggestionResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchContextSuggestionResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchContextSuggestionResult struct {\n\tSpec        string `json:\"spec\"`\n\tDescription string `json:\"description\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchStreamClient",
+              "documentation": {
+                "identifier": "SearchStreamClient",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchStreamClient",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchStreamClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchStreamClient struct {\n\tClient *Client\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchStreamClient.SearchRepositories",
+                    "documentation": {
+                      "identifier": "SearchStreamClient.SearchRepositories",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchStreamClient.SearchRepositories",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SearchStreamClient) SearchRepositories(query string) (SearchRepositoryResults, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SearchStreamClient) SearchRepositories(query string) (SearchRepositoryResults, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchStreamClient.SearchFiles",
+                    "documentation": {
+                      "identifier": "SearchStreamClient.SearchFiles",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchStreamClient.SearchFiles",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SearchStreamClient) SearchFiles(query string) (*SearchFileResults, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SearchStreamClient) SearchFiles(query string) (*SearchFileResults, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchStreamClient.SearchAll",
+                    "documentation": {
+                      "identifier": "SearchStreamClient.SearchAll",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchStreamClient.SearchAll",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SearchStreamClient) SearchAll(query string) ([]*AnyResult, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SearchStreamClient) SearchAll(query string) ([]*AnyResult, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchStreamClient.OverwriteSettings",
+                    "documentation": {
+                      "identifier": "SearchStreamClient.OverwriteSettings",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchStreamClient.OverwriteSettings",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SearchStreamClient) OverwriteSettings(subjectID, contents string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SearchStreamClient) OverwriteSettings(subjectID, contents string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchStreamClient.AuthenticatedUserID",
+                    "documentation": {
+                      "identifier": "SearchStreamClient.AuthenticatedUserID",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchStreamClient.AuthenticatedUserID",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SearchStreamClient) AuthenticatedUserID() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SearchStreamClient) AuthenticatedUserID() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/gqltestutil#SearchStreamClient.search",
+                    "documentation": {
+                      "identifier": "SearchStreamClient.search",
+                      "newPage": false,
+                      "searchKey": "gqltestutil.SearchStreamClient.search",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SearchStreamClient) search(query string, dec streamhttp.Decoder) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SearchStreamClient) search(query string, dec streamhttp.Decoder) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#CreateSearchContextInput",
+              "documentation": {
+                "identifier": "CreateSearchContextInput",
+                "newPage": false,
+                "searchKey": "gqltestutil.CreateSearchContextInput",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CreateSearchContextInput struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CreateSearchContextInput struct {\n\tName        string `json:\"name\"`\n\tDescription string `json:\"description\"`\n\tPublic      bool   `json:\"public\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#UpdateSearchContextInput",
+              "documentation": {
+                "identifier": "UpdateSearchContextInput",
+                "newPage": false,
+                "searchKey": "gqltestutil.UpdateSearchContextInput",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UpdateSearchContextInput struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UpdateSearchContextInput struct {\n\tName        string `json:\"name\"`\n\tDescription string `json:\"description\"`\n\tPublic      bool   `json:\"public\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchContextRepositoryRevisionsInput",
+              "documentation": {
+                "identifier": "SearchContextRepositoryRevisionsInput",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchContextRepositoryRevisionsInput",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchContextRepositoryRevisionsInput struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchContextRepositoryRevisionsInput struct {\n\tRepositoryID string   `json:\"repositoryID\"`\n\tRevisions    []string `json:\"revisions\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#GetSearchContextResult",
+              "documentation": {
+                "identifier": "GetSearchContextResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.GetSearchContextResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GetSearchContextResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GetSearchContextResult struct {\n\tID           string `json:\"id\"`\n\tDescription  string `json:\"description\"`\n\tSpec         string `json:\"spec\"`\n\tAutoDefined  bool   `json:\"autoDefined\"`\n\tRepositories []struct {\n\t\tRepository struct {\n\t\t\tName string `json:\"name\"`\n\t\t} `json:\"repository\"`\n\t\tRevisions []string `json:\"revisions\"`\n\t} `json:\"repositories\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SearchContextsOrderBy",
+              "documentation": {
+                "identifier": "SearchContextsOrderBy",
+                "newPage": false,
+                "searchKey": "gqltestutil.SearchContextsOrderBy",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SearchContextsOrderBy string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SearchContextsOrderBy string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#ListSearchContextsOptions",
+              "documentation": {
+                "identifier": "ListSearchContextsOptions",
+                "newPage": false,
+                "searchKey": "gqltestutil.ListSearchContextsOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ListSearchContextsOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ListSearchContextsOptions struct {\n\tFirst      int32                  `json:\"first\"`\n\tAfter      *string                `json:\"after\"`\n\tQuery      *string                `json:\"query\"`\n\tNamespaces []*string              `json:\"namespaces\"`\n\tOrderBy    *SearchContextsOrderBy `json:\"orderBy\"`\n\tDescending bool                   `json:\"descending\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#ListSearchContextsResult",
+              "documentation": {
+                "identifier": "ListSearchContextsResult",
+                "newPage": false,
+                "searchKey": "gqltestutil.ListSearchContextsResult",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ListSearchContextsResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ListSearchContextsResult struct {\n\tTotalCount int32 `json:\"totalCount\"`\n\tPageInfo   struct {\n\t\tHasNextPage bool    `json:\"hasNextPage\"`\n\t\tEndCursor   *string `json:\"endCursor\"`\n\t} `json:\"pageInfo\"`\n\tNodes []GetSearchContextResult `json:\"nodes\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#SettingsSubject",
+              "documentation": {
+                "identifier": "SettingsSubject",
+                "newPage": false,
+                "searchKey": "gqltestutil.SettingsSubject",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SettingsSubject struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SettingsSubject struct {\n\tID       int64  `json:\"id\"`\n\tContents string `json:\"contents\"`\n}\n```\n\nSettingsSubject contains contents of a setting. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/gqltestutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#NeedsSiteInit",
+              "documentation": {
+                "identifier": "NeedsSiteInit",
+                "newPage": false,
+                "searchKey": "gqltestutil.NeedsSiteInit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NeedsSiteInit(baseURL string) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NeedsSiteInit(baseURL string) (bool, error)\n```\n\nNeedsSiteInit returns true if the instance hasn't done \"Site admin init\" step. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#extractCSRFToken",
+              "documentation": {
+                "identifier": "extractCSRFToken",
+                "newPage": false,
+                "searchKey": "gqltestutil.extractCSRFToken",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func extractCSRFToken(body string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc extractCSRFToken(body string) string\n```\n\nextractCSRFToken extracts CSRF token from HTML response body. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/gqltestutil#Retry",
+              "documentation": {
+                "identifier": "Retry",
+                "newPage": false,
+                "searchKey": "gqltestutil.Retry",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Retry(timeout time.Duration, fn func() error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Retry(timeout time.Duration, fn func() error) error\n```\n\nRetry retries the given function until the timeout is reached. The function should return ErrContinueRetry to indicate another retry. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

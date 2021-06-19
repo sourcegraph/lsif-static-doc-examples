@@ -1,0 +1,498 @@
+{
+  "pathID": "/internal/encryption",
+  "documentation": {
+    "identifier": "encryption",
+    "newPage": true,
+    "searchKey": "internal/encryption",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package encryption"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/encryption#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption#MockGenerateRSAKey",
+              "documentation": {
+                "identifier": "MockGenerateRSAKey",
+                "newPage": false,
+                "searchKey": "encryption.MockGenerateRSAKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockGenerateRSAKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockGenerateRSAKey func() (key *RSAKey, err error) = nil\n```\n\nMockGenerateRSAKey can be used in tests to speed up key generation. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption#Key",
+              "documentation": {
+                "identifier": "Key",
+                "newPage": false,
+                "searchKey": "encryption.Key",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Key interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Key interface {\n\tEncrypter\n\tDecrypter\n\n\t// Version returns info containing to concretely identify\n\t// the underlying key, eg: key type, name, & version.\n\tVersion(ctx context.Context) (KeyVersion, error)\n}\n```\n\nKey combines the Encrypter & Decrypter interfaces. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption#KeyVersion",
+              "documentation": {
+                "identifier": "KeyVersion",
+                "newPage": false,
+                "searchKey": "encryption.KeyVersion",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type KeyVersion struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype KeyVersion struct {\n\t// TODO: generate this as an enum from JSONSchema\n\tType    string\n\tName    string\n\tVersion string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#KeyVersion.JSON",
+                    "documentation": {
+                      "identifier": "KeyVersion.JSON",
+                      "newPage": false,
+                      "searchKey": "encryption.KeyVersion.JSON",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v KeyVersion) JSON() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v KeyVersion) JSON() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption#Encrypter",
+              "documentation": {
+                "identifier": "Encrypter",
+                "newPage": false,
+                "searchKey": "encryption.Encrypter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Encrypter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Encrypter interface {\n\tEncrypt(ctx context.Context, value []byte) ([]byte, error)\n}\n```\n\nEncrypter is anything that can encrypt a value \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption#Decrypter",
+              "documentation": {
+                "identifier": "Decrypter",
+                "newPage": false,
+                "searchKey": "encryption.Decrypter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Decrypter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Decrypter interface {\n\tDecrypt(ctx context.Context, cipherText []byte) (*Secret, error)\n}\n```\n\nDecrypter is anything that can decrypt a value \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption#Secret",
+              "documentation": {
+                "identifier": "Secret",
+                "newPage": false,
+                "searchKey": "encryption.Secret",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Secret struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Secret struct {\n\tvalue string\n}\n```\n\nSecret is a utility type to make it harder to accidentally leak secret values in logs. The actual value is unexported inside a struct, making harder to leak via reflection, the string value is only ever returned on explicit Secret() calls, meaning we can statically analyse secret usage and statically detect leaks. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#NewSecret",
+                    "documentation": {
+                      "identifier": "NewSecret",
+                      "newPage": false,
+                      "searchKey": "encryption.NewSecret",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewSecret(v string) Secret"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewSecret(v string) Secret\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#Secret.String",
+                    "documentation": {
+                      "identifier": "Secret.String",
+                      "newPage": false,
+                      "searchKey": "encryption.Secret.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Secret) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Secret) String() string\n```\n\nString implements stringer, obfuscating the value \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#Secret.Secret",
+                    "documentation": {
+                      "identifier": "Secret.Secret",
+                      "newPage": false,
+                      "searchKey": "encryption.Secret.Secret",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Secret) Secret() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Secret) Secret() string\n```\n\nSecret returns the unobfuscated value \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#Secret.MarshalJSON",
+                    "documentation": {
+                      "identifier": "Secret.MarshalJSON",
+                      "newPage": false,
+                      "searchKey": "encryption.Secret.MarshalJSON",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Secret) MarshalJSON() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Secret) MarshalJSON() ([]byte, error)\n```\n\nMarshalJSON overrides the default JSON marshaling implementation, obfuscating the value in any marshaled JSON \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption#NoopKey",
+              "documentation": {
+                "identifier": "NoopKey",
+                "newPage": false,
+                "searchKey": "encryption.NoopKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NoopKey struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NoopKey struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#NoopKey.Version",
+                    "documentation": {
+                      "identifier": "NoopKey.Version",
+                      "newPage": false,
+                      "searchKey": "encryption.NoopKey.Version",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *NoopKey) Version(ctx context.Context) (KeyVersion, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#NoopKey.Encrypt",
+                    "documentation": {
+                      "identifier": "NoopKey.Encrypt",
+                      "newPage": false,
+                      "searchKey": "encryption.NoopKey.Encrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *NoopKey) Encrypt(ctx context.Context, plaintext []byte) ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#NoopKey.Decrypt",
+                    "documentation": {
+                      "identifier": "NoopKey.Decrypt",
+                      "newPage": false,
+                      "searchKey": "encryption.NoopKey.Decrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k *NoopKey) Decrypt(ctx context.Context, ciphertext []byte) (*Secret, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k *NoopKey) Decrypt(ctx context.Context, ciphertext []byte) (*Secret, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/encryption#RSAKey",
+              "documentation": {
+                "identifier": "RSAKey",
+                "newPage": false,
+                "searchKey": "encryption.RSAKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RSAKey struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RSAKey struct {\n\tPrivateKey string\n\tPassphrase string\n\tPublicKey  string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/encryption#GenerateRSAKey",
+                    "documentation": {
+                      "identifier": "GenerateRSAKey",
+                      "newPage": false,
+                      "searchKey": "encryption.GenerateRSAKey",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GenerateRSAKey() (key *RSAKey, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GenerateRSAKey() (key *RSAKey, err error)\n```\n\nGenerateRSAKey generates an RSA key pair and encrypts the private key with a passphrase. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/encryption#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/encryption#TestGenerateKey",
+              "documentation": {
+                "identifier": "TestGenerateKey",
+                "newPage": false,
+                "searchKey": "encryption.TestGenerateKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGenerateKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGenerateKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/internal/encryption/awskms"
+    },
+    {
+      "pathID": "/internal/encryption/cache"
+    },
+    {
+      "pathID": "/internal/encryption/cloudkms"
+    },
+    {
+      "pathID": "/internal/encryption/keyring"
+    },
+    {
+      "pathID": "/internal/encryption/mounted"
+    },
+    {
+      "pathID": "/internal/encryption/testing"
+    }
+  ]
+}

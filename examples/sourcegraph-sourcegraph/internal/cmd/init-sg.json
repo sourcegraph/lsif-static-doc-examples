@@ -1,0 +1,361 @@
+{
+  "pathID": "/internal/cmd/init-sg",
+  "documentation": {
+    "identifier": "init-sg",
+    "newPage": true,
+    "searchKey": "internal/cmd/init-sg",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/cmd/init-sg#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#client",
+              "documentation": {
+                "identifier": "client",
+                "newPage": false,
+                "searchKey": "main.client",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var client"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar client *gqltestutil.Client\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#initSG",
+              "documentation": {
+                "identifier": "initSG",
+                "newPage": false,
+                "searchKey": "main.initSG",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var initSG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar initSG = flag.NewFlagSet(\"initserver\", flag.ExitOnError)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#addRepos",
+              "documentation": {
+                "identifier": "addRepos",
+                "newPage": false,
+                "searchKey": "main.addRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var addRepos"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar addRepos = flag.NewFlagSet(\"addrepos\", flag.ExitOnError)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#baseURL",
+              "documentation": {
+                "identifier": "baseURL",
+                "newPage": false,
+                "searchKey": "main.baseURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var baseURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar baseURL = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#email",
+              "documentation": {
+                "identifier": "email",
+                "newPage": false,
+                "searchKey": "main.email",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var email"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar email = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#username",
+              "documentation": {
+                "identifier": "username",
+                "newPage": false,
+                "searchKey": "main.username",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var username"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar username = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#password",
+              "documentation": {
+                "identifier": "password",
+                "newPage": false,
+                "searchKey": "main.password",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var password"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar password = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#githubToken",
+              "documentation": {
+                "identifier": "githubToken",
+                "newPage": false,
+                "searchKey": "main.githubToken",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var githubToken"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar githubToken = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#addReposConfig",
+              "documentation": {
+                "identifier": "addReposConfig",
+                "newPage": false,
+                "searchKey": "main.addReposConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var addReposConfig"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar addReposConfig = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#home",
+              "documentation": {
+                "identifier": "home",
+                "newPage": false,
+                "searchKey": "main.home",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var home"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar home = os.Getenv(\"HOME\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#profile",
+              "documentation": {
+                "identifier": "profile",
+                "newPage": false,
+                "searchKey": "main.profile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var profile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar profile = home + \"/.profile\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/cmd/init-sg#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#initSourcegraph",
+              "documentation": {
+                "identifier": "initSourcegraph",
+                "newPage": false,
+                "searchKey": "main.initSourcegraph",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initSourcegraph()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initSourcegraph()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#mustMarshalJSONString",
+              "documentation": {
+                "identifier": "mustMarshalJSONString",
+                "newPage": false,
+                "searchKey": "main.mustMarshalJSONString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustMarshalJSONString(v interface{}) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustMarshalJSONString(v interface{}) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cmd/init-sg#addReposCommand",
+              "documentation": {
+                "identifier": "addReposCommand",
+                "newPage": false,
+                "searchKey": "main.addReposCommand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addReposCommand()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addReposCommand()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

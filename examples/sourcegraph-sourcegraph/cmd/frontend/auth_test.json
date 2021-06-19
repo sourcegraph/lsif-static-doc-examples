@@ -1,0 +1,80 @@
+{
+  "pathID": "/cmd/frontend/auth_test",
+  "documentation": {
+    "identifier": "auth_test",
+    "newPage": true,
+    "searchKey": "cmd/frontend/auth_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package auth_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/auth_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth_test#TestAllowAnonymousRequest",
+              "documentation": {
+                "identifier": "TestAllowAnonymousRequest",
+                "newPage": false,
+                "searchKey": "auth_test.TestAllowAnonymousRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAllowAnonymousRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAllowAnonymousRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/auth_test#TestNewUserRequiredAuthzMiddleware",
+              "documentation": {
+                "identifier": "TestNewUserRequiredAuthzMiddleware",
+                "newPage": false,
+                "searchKey": "auth_test.TestNewUserRequiredAuthzMiddleware",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewUserRequiredAuthzMiddleware(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewUserRequiredAuthzMiddleware(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

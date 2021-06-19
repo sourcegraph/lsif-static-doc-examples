@@ -1,0 +1,672 @@
+{
+  "pathID": "/internal/extsvc/awscodecommit",
+  "documentation": {
+    "identifier": "awscodecommit",
+    "newPage": true,
+    "searchKey": "internal/extsvc/awscodecommit",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package awscodecommit"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package awscodecommit implements an AWS CodeCommit API client. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/extsvc/awscodecommit#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#MaxMetadataBatch",
+              "documentation": {
+                "identifier": "MaxMetadataBatch",
+                "newPage": false,
+                "searchKey": "awscodecommit.MaxMetadataBatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaxMetadataBatch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaxMetadataBatch = 25\n```\n\nWe can only fetch the metadata in batches of 25 as documented here: [https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/codecommit/model/MaximumRepositoryNamesExceededException.html](https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/com/amazonaws/services/codecommit/model/MaximumRepositoryNamesExceededException.html) \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/awscodecommit#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#ErrNotFound",
+              "documentation": {
+                "identifier": "ErrNotFound",
+                "newPage": false,
+                "searchKey": "awscodecommit.ErrNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotFound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotFound = errors.New(\"AWS CodeCommit repository not found\")\n```\n\nErrNotFound is when the requested AWS CodeCommit repository is not found. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#GetRepositoryMock",
+              "documentation": {
+                "identifier": "GetRepositoryMock",
+                "newPage": false,
+                "searchKey": "awscodecommit.GetRepositoryMock",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GetRepositoryMock"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GetRepositoryMock func(ctx context.Context, arn string) (*Repository, error)\n```\n\nGetRepositoryMock is set by tests to mock (*Client).GetRepository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#reposCacheCounter",
+              "documentation": {
+                "identifier": "reposCacheCounter",
+                "newPage": false,
+                "searchKey": "awscodecommit.reposCacheCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var reposCacheCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar reposCacheCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/awscodecommit#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "awscodecommit.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\taws       aws.Config\n\trepoCache *rcache.Cache\n}\n```\n\nClient is a AWS CodeCommit API client. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#NewClient",
+                    "documentation": {
+                      "identifier": "NewClient",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.NewClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewClient(config aws.Config) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewClient(config aws.Config) *Client\n```\n\nNewClient creates a new AWS CodeCommit API client. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.cacheKeyPrefix",
+                    "documentation": {
+                      "identifier": "Client.cacheKeyPrefix",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.cacheKeyPrefix",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) cacheKeyPrefix(ctx context.Context) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) cacheKeyPrefix(ctx context.Context) (string, error)\n```\n\ncacheKeyPrefix returns the cache key prefix to use. It incorporates the credentials to avoid leaking cached data that was fetched with one set of credentials to a (possibly different) user with a different set of credentials. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.repositoryCacheKey",
+                    "documentation": {
+                      "identifier": "Client.repositoryCacheKey",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.repositoryCacheKey",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) repositoryCacheKey(ctx context.Context, arn string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) repositoryCacheKey(ctx context.Context, arn string) (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.GetRepository",
+                    "documentation": {
+                      "identifier": "Client.GetRepository",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.GetRepository",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) GetRepository(ctx context.Context, arn string) (*Repository, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) GetRepository(ctx context.Context, arn string) (*Repository, error)\n```\n\nGetRepository gets a repository from AWS CodeCommit by ARN (Amazon Resource Name). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.cachedGetRepository",
+                    "documentation": {
+                      "identifier": "Client.cachedGetRepository",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.cachedGetRepository",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) cachedGetRepository(ctx context.Context, arn string) (*Repository, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) cachedGetRepository(ctx context.Context, arn string) (*Repository, error)\n```\n\ncachedGetRepository caches the getRepositoryFromAPI call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.getRepositoryFromCache",
+                    "documentation": {
+                      "identifier": "Client.getRepositoryFromCache",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.getRepositoryFromCache",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) getRepositoryFromCache(ctx context.Context, key string) *cachedRepo"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) getRepositoryFromCache(ctx context.Context, key string) *cachedRepo\n```\n\ngetRepositoryFromCache attempts to get a response from the redis cache. It returns nil error for cache-hit condition and non-nil error for cache-miss. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.addRepositoryToCache",
+                    "documentation": {
+                      "identifier": "Client.addRepositoryToCache",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.addRepositoryToCache",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) addRepositoryToCache(key string, repo *cachedRepo)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) addRepositoryToCache(key string, repo *cachedRepo)\n```\n\naddRepositoryToCache will cache the value for repo. The caller can provide multiple cache key for the multiple ways that this repository can be retrieved (e.g., both \"owner/name\" and the GraphQL node ID). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.getRepositoryFromAPI",
+                    "documentation": {
+                      "identifier": "Client.getRepositoryFromAPI",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.getRepositoryFromAPI",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) getRepositoryFromAPI(ctx context.Context, arn string) (*Repository, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) getRepositoryFromAPI(ctx context.Context, arn string) (*Repository, error)\n```\n\ngetRepositoryFromAPI attempts to fetch a repository from the GitHub API without use of the redis cache. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.ListRepositories",
+                    "documentation": {
+                      "identifier": "Client.ListRepositories",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.ListRepositories",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ListRepositories(ctx context.Context, nextToken string) (repos []*Repository, nextNextToken string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ListRepositories(ctx context.Context, nextToken string) (repos []*Repository, nextNextToken string, err error)\n```\n\nListRepositories calls the ListRepositories API method of AWS CodeCommit. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#Client.getRepositories",
+                    "documentation": {
+                      "identifier": "Client.getRepositories",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.Client.getRepositories",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) getRepositories(ctx context.Context, svc *codecommit.Client, repositoryNames []string) ([]*Repository, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) getRepositories(ctx context.Context, svc *codecommit.Client, repositoryNames []string) ([]*Repository, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#Repository",
+              "documentation": {
+                "identifier": "Repository",
+                "newPage": false,
+                "searchKey": "awscodecommit.Repository",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repository struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repository struct {\n\tARN          string     // the ARN (Amazon Resource Name) of the repository\n\tAccountID    string     // the ID of the AWS account associated with the repository\n\tID           string     // the ID of the repository\n\tName         string     // the name of the repository\n\tDescription  string     // the description of the repository\n\tHTTPCloneURL string     // the HTTP(S) clone URL of the repository\n\tLastModified *time.Time // the last modified date of the repository\n}\n```\n\nRepository is an AWS CodeCommit repository. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#fromRepoMetadata",
+                    "documentation": {
+                      "identifier": "fromRepoMetadata",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.fromRepoMetadata",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func fromRepoMetadata(m *codecommittypes.RepositoryMetadata) *Repository"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc fromRepoMetadata(m *codecommittypes.RepositoryMetadata) *Repository\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#cachedRepo",
+              "documentation": {
+                "identifier": "cachedRepo",
+                "newPage": false,
+                "searchKey": "awscodecommit.cachedRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cachedRepo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cachedRepo struct {\n\tRepository\n\n\t// NotFound indicates that the AWS CodeCommit API reported that the repository was not\n\t// found.\n\tNotFound bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#wrappedError",
+              "documentation": {
+                "identifier": "wrappedError",
+                "newPage": false,
+                "searchKey": "awscodecommit.wrappedError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type wrappedError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype wrappedError struct {\n\terr error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#wrappedError.Error",
+                    "documentation": {
+                      "identifier": "wrappedError.Error",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.wrappedError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *wrappedError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *wrappedError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#wrappedError.NotFound",
+                    "documentation": {
+                      "identifier": "wrappedError.NotFound",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.wrappedError.NotFound",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *wrappedError) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *wrappedError) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/awscodecommit#wrappedError.Unauthorized",
+                    "documentation": {
+                      "identifier": "wrappedError.Unauthorized",
+                      "newPage": false,
+                      "searchKey": "awscodecommit.wrappedError.Unauthorized",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *wrappedError) Unauthorized() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *wrappedError) Unauthorized() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/awscodecommit#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#IsNotFound",
+              "documentation": {
+                "identifier": "IsNotFound",
+                "newPage": false,
+                "searchKey": "awscodecommit.IsNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsNotFound(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsNotFound(err error) bool\n```\n\nIsNotFound reports whether err is a AWS CodeCommit API not-found error or the equivalent cached response error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#IsUnauthorized",
+              "documentation": {
+                "identifier": "IsUnauthorized",
+                "newPage": false,
+                "searchKey": "awscodecommit.IsUnauthorized",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsUnauthorized(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsUnauthorized(err error) bool\n```\n\nIsUnauthorized reports whether err is a AWS CodeCommit API unauthorized error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#ExternalRepoSpec",
+              "documentation": {
+                "identifier": "ExternalRepoSpec",
+                "newPage": false,
+                "searchKey": "awscodecommit.ExternalRepoSpec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExternalRepoSpec(repo *Repository, serviceID string) api.ExternalRepoSpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExternalRepoSpec(repo *Repository, serviceID string) api.ExternalRepoSpec\n```\n\nExternalRepoSpec returns an api.ExternalRepoSpec that refers to the specified AWS CodeCommit repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#ServiceID",
+              "documentation": {
+                "identifier": "ServiceID",
+                "newPage": false,
+                "searchKey": "awscodecommit.ServiceID",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ServiceID(awsPartition, awsRegion, awsAccountID string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ServiceID(awsPartition, awsRegion, awsAccountID string) string\n```\n\nServiceID creates the repository external service ID. See AWSCodeCommitServiceType for documentation on the format of this value. \n\nThis value uniquely identifies the most specific namespace in which AWS CodeCommit repositories are defined. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/awscodecommit#MockGetRepository_Return",
+              "documentation": {
+                "identifier": "MockGetRepository_Return",
+                "newPage": false,
+                "searchKey": "awscodecommit.MockGetRepository_Return",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockGetRepository_Return(returns *Repository)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockGetRepository_Return(returns *Repository)\n```\n\nMockGetRepository_Return is called by tests to mock (*Client).GetRepository. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

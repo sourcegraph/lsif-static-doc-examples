@@ -1,0 +1,173 @@
+{
+  "pathID": "/internal/slack",
+  "documentation": {
+    "identifier": "slack",
+    "newPage": true,
+    "searchKey": "internal/slack",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package slack"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package slack is used to send notifications of an organization's activity to a given Slack webhook. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/slack#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/slack#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "slack.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\tWebhookURL string\n}\n```\n\nClient is capable of posting a message to a Slack webhook \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/slack#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "slack.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(webhookURL string) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(webhookURL string) *Client\n```\n\nNew creates a new Slack client \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/slack#Client.Post",
+                    "documentation": {
+                      "identifier": "Client.Post",
+                      "newPage": false,
+                      "searchKey": "slack.Client.Post",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Post(ctx context.Context, payload *Payload) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Post(ctx context.Context, payload *Payload) error\n```\n\nPost sends payload to a Slack channel. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/slack#Payload",
+              "documentation": {
+                "identifier": "Payload",
+                "newPage": false,
+                "searchKey": "slack.Payload",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Payload struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Payload struct {\n\tUsername    string        `json:\"username,omitempty\"`\n\tIconEmoji   string        `json:\"icon_emoji,omitempty\"`\n\tUnfurlLinks bool          `json:\"unfurl_links,omitempty\"`\n\tUnfurlMedia bool          `json:\"unfurl_media,omitempty\"`\n\tText        string        `json:\"text,omitempty\"`\n\tAttachments []*Attachment `json:\"attachments,omitempty\"`\n}\n```\n\nPayload is the wrapper for a Slack message, defined at: [https://api.slack.com/docs/message-formatting](https://api.slack.com/docs/message-formatting) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/slack#Attachment",
+              "documentation": {
+                "identifier": "Attachment",
+                "newPage": false,
+                "searchKey": "slack.Attachment",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Attachment struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Attachment struct {\n\tAuthorIcon string   `json:\"author_icon,omitempty\"`\n\tAuthorLink string   `json:\"author_link,omitempty\"`\n\tAuthorName string   `json:\"author_name,omitempty\"`\n\tColor      string   `json:\"color\"`\n\tFallback   string   `json:\"fallback\"`\n\tFields     []*Field `json:\"fields\"`\n\tFooter     string   `json:\"footer\"`\n\tMarkdownIn []string `json:\"mrkdwn_in\"`\n\tThumbURL   string   `json:\"thumb_url\"`\n\tText       string   `json:\"text,omitempty\"`\n\tTimestamp  int64    `json:\"ts\"`\n\tTitle      string   `json:\"title\"`\n\tTitleLink  string   `json:\"title_link,omitempty\"`\n}\n```\n\nAttachment is a Slack message attachment, defined at: [https://api.slack.com/docs/message-attachments](https://api.slack.com/docs/message-attachments) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/slack#Field",
+              "documentation": {
+                "identifier": "Field",
+                "newPage": false,
+                "searchKey": "slack.Field",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Field struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Field struct {\n\tShort bool   `json:\"short\"`\n\tTitle string `json:\"title\"`\n\tValue string `json:\"value\"`\n}\n```\n\nField is a single item within an attachment, defined at: [https://api.slack.com/docs/message-attachments](https://api.slack.com/docs/message-attachments) \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

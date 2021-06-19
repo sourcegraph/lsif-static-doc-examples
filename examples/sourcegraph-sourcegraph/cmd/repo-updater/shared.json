@@ -1,0 +1,257 @@
+{
+  "pathID": "/cmd/repo-updater/shared",
+  "documentation": {
+    "identifier": "shared",
+    "newPage": true,
+    "searchKey": "cmd/repo-updater/shared",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package shared"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/repo-updater/shared#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/shared#port",
+              "documentation": {
+                "identifier": "port",
+                "newPage": false,
+                "searchKey": "shared.port",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const port"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst port = \"3182\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/repo-updater/shared#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/shared#stateHTMLTemplate",
+              "documentation": {
+                "identifier": "stateHTMLTemplate",
+                "newPage": false,
+                "searchKey": "shared.stateHTMLTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stateHTMLTemplate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stateHTMLTemplate string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/repo-updater/shared#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/shared#EnterpriseInit",
+              "documentation": {
+                "identifier": "EnterpriseInit",
+                "newPage": false,
+                "searchKey": "shared.EnterpriseInit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EnterpriseInit func(db *database/sql.DB, store *github.com/sourcegraph/sourcegraph/internal/repos.Store, keyring github.com/sourcegraph/sourcegraph/internal/encryption/keyring.Ring, cf *github.com/sourcegraph/sourcegraph/internal/httpcli.Factory, server *github.com/sourcegraph/sourcegraph/cmd/repo-updater/repoupdater.Server) []github.com/sourcegraph/sourcegraph/internal/debugserver.Dumper"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EnterpriseInit func(db *sql.DB, store *repos.Store, keyring keyring.Ring, cf *httpcli.Factory, server *repoupdater.Server) []debugserver.Dumper\n```\n\nEnterpriseInit is a function that allows enterprise code to be triggered when dependencies created in Main are ready for use. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/shared#scheduler",
+              "documentation": {
+                "identifier": "scheduler",
+                "newPage": false,
+                "searchKey": "shared.scheduler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type scheduler interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype scheduler interface {\n\t// UpdateFromDiff updates the scheduled and queued repos from the given sync diff.\n\tUpdateFromDiff(repos.Diff)\n\n\t// SetCloned ensures uncloned repos are given priority in the scheduler.\n\tSetCloned([]string)\n\n\t// EnsureScheduled ensures that all the repos provided are known to the scheduler\n\tEnsureScheduled([]types.RepoName)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/repo-updater/shared#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/shared#Main",
+              "documentation": {
+                "identifier": "Main",
+                "newPage": false,
+                "searchKey": "shared.Main",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Main(enterpriseInit EnterpriseInit)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Main(enterpriseInit EnterpriseInit)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/shared#watchSyncer",
+              "documentation": {
+                "identifier": "watchSyncer",
+                "newPage": false,
+                "searchKey": "shared.watchSyncer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc watchSyncer(ctx context.Context, syncer *repos.Syncer, sched scheduler, gps *repos.GitolitePhabricatorMetadataSyncer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/repo-updater/shared#syncScheduler",
+              "documentation": {
+                "identifier": "syncScheduler",
+                "newPage": false,
+                "searchKey": "shared.syncScheduler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func syncScheduler(ctx context.Context, sched scheduler, gitserverClient *gitserver.Client, store *repos.Store)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc syncScheduler(ctx context.Context, sched scheduler, gitserverClient *gitserver.Client, store *repos.Store)\n```\n\nsyncScheduler will periodically list the cloned repositories on gitserver and update the scheduler with the list. It also ensures that if any of our default repos are missing from the cloned list they will be added for cloning ASAP. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

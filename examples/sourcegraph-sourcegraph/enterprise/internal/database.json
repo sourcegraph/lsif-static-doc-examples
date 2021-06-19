@@ -1,0 +1,1966 @@
+{
+  "pathID": "/enterprise/internal/database",
+  "documentation": {
+    "identifier": "database",
+    "newPage": true,
+    "searchKey": "enterprise/internal/database",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package database"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/database#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#Mocks",
+              "documentation": {
+                "identifier": "Mocks",
+                "newPage": false,
+                "searchKey": "database.Mocks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Mocks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Mocks MockStores\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#ErrPermsUpdatedAtNotSet",
+              "documentation": {
+                "identifier": "ErrPermsUpdatedAtNotSet",
+                "newPage": false,
+                "searchKey": "database.ErrPermsUpdatedAtNotSet",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrPermsUpdatedAtNotSet"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrPermsUpdatedAtNotSet = errors.New(\"permissions UpdatedAt timestamp must be set\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#ErrPermsSyncedAtNotSet",
+              "documentation": {
+                "identifier": "ErrPermsSyncedAtNotSet",
+                "newPage": false,
+                "searchKey": "database.ErrPermsSyncedAtNotSet",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrPermsSyncedAtNotSet"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrPermsSyncedAtNotSet = errors.New(\"permissions SyncedAt timestamp must be set\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#dsn",
+              "documentation": {
+                "identifier": "dsn",
+                "newPage": false,
+                "searchKey": "database.dsn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dsn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dsn = flag.String(\"dsn\", \"\", \"Database connection string to use in integration tests\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#now",
+              "documentation": {
+                "identifier": "now",
+                "newPage": false,
+                "searchKey": "database.now",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var now"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar now = timeutil.Now().UnixNano()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/database#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#authzStore",
+              "documentation": {
+                "identifier": "authzStore",
+                "newPage": false,
+                "searchKey": "database.authzStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type authzStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype authzStore struct {\n\tstore *PermsStore\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#authzStore.GrantPendingPermissions",
+                    "documentation": {
+                      "identifier": "authzStore.GrantPendingPermissions",
+                      "newPage": false,
+                      "searchKey": "database.authzStore.GrantPendingPermissions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *authzStore) GrantPendingPermissions(ctx context.Context, args *database.GrantPendingPermissionsArgs) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *authzStore) GrantPendingPermissions(ctx context.Context, args *database.GrantPendingPermissionsArgs) (err error)\n```\n\nGrantPendingPermissions grants pending permissions for a user, which implements the database.AuthzStore interface. It uses provided arguments to retrieve information directly from the database to offload security concerns from the caller. \n\nIt's possible that there are more than one verified emails and external accounts associated to the user and all of them have pending permissions, we can safely grant all of them whenever possible because permissions are unioned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#authzStore.AuthorizedRepos",
+                    "documentation": {
+                      "identifier": "authzStore.AuthorizedRepos",
+                      "newPage": false,
+                      "searchKey": "database.authzStore.AuthorizedRepos",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *authzStore) AuthorizedRepos(ctx context.Context, args *database.AuthorizedReposArgs) ([]*types.Repo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *authzStore) AuthorizedRepos(ctx context.Context, args *database.AuthorizedReposArgs) ([]*types.Repo, error)\n```\n\nAuthorizedRepos checks if a user is authorized to access repositories in the candidate list, which implements the database.AuthzStore interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#authzStore.RevokeUserPermissions",
+                    "documentation": {
+                      "identifier": "authzStore.RevokeUserPermissions",
+                      "newPage": false,
+                      "searchKey": "database.authzStore.RevokeUserPermissions",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *authzStore) RevokeUserPermissions(ctx context.Context, args *database.RevokeUserPermissionsArgs) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *authzStore) RevokeUserPermissions(ctx context.Context, args *database.RevokeUserPermissionsArgs) (err error)\n```\n\nRevokeUserPermissions deletes both effective and pending permissions that could be related to a user, which implements the database.AuthzStore interface. It proactively clean up left-over pending permissions to prevent accidental reuse (i.e. another user with same username or email address(es) but not the same person). \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#MockStores",
+              "documentation": {
+                "identifier": "MockStores",
+                "newPage": false,
+                "searchKey": "database.MockStores",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockStores struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockStores struct {\n\tPerms MockPerms\n}\n```\n\nMockStores has a field for each store interface with the concrete mock type (to obviate the need for tedious type assertions in test code). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#PermsStore",
+              "documentation": {
+                "identifier": "PermsStore",
+                "newPage": false,
+                "searchKey": "database.PermsStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PermsStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PermsStore struct {\n\t*basestore.Store\n\n\tclock func() time.Time\n}\n```\n\nPermsStore is the unified interface for managing permissions explicitly in the database. It is concurrency-safe and maintains data consistency over the 'user_permissions', 'repo_permissions', 'user_pending_permissions', and 'repo_pending_permissions' tables. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#Perms",
+                    "documentation": {
+                      "identifier": "Perms",
+                      "newPage": false,
+                      "searchKey": "database.Perms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Perms(db dbutil.DB, clock func() time.Time) *PermsStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Perms(db dbutil.DB, clock func() time.Time) *PermsStore\n```\n\nNewPermsStore returns a new PermsStore with given parameters. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.With",
+                    "documentation": {
+                      "identifier": "PermsStore.With",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.With",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) With(other basestore.ShareableStore) *PermsStore"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) With(other basestore.ShareableStore) *PermsStore\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.Transact",
+                    "documentation": {
+                      "identifier": "PermsStore.Transact",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.Transact",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) Transact(ctx context.Context) (*PermsStore, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) Transact(ctx context.Context) (*PermsStore, error)\n```\n\nTransact begins a new transaction and make a new PermsStore over it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.Done",
+                    "documentation": {
+                      "identifier": "PermsStore.Done",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.Done",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) Done(err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) Done(err error) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.LoadUserPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.LoadUserPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.LoadUserPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) LoadUserPermissions(ctx context.Context, p *authz.UserPermissions) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) LoadUserPermissions(ctx context.Context, p *authz.UserPermissions) (err error)\n```\n\nLoadUserPermissions loads stored user permissions into p. An ErrPermsNotFound is returned when there are no valid permissions available. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.LoadRepoPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.LoadRepoPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.LoadRepoPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) LoadRepoPermissions(ctx context.Context, p *authz.RepoPermissions) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) LoadRepoPermissions(ctx context.Context, p *authz.RepoPermissions) (err error)\n```\n\nLoadRepoPermissions loads stored repository permissions into p. An ErrPermsNotFound is returned when there are no valid permissions available. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.SetUserPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.SetUserPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.SetUserPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) SetUserPermissions(ctx context.Context, p *authz.UserPermissions) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) SetUserPermissions(ctx context.Context, p *authz.UserPermissions) (err error)\n```\n\nSetUserPermissions performs a full update for p, new object IDs found in p will be upserted and object IDs no longer in p will be removed. This method updates both `user_permissions` and `repo_permissions` tables. \n\nExample input: &UserPermissions{ \n\n```\nUserID: 1,\nPerm: authz.Read,\nType: authz.PermRepos,\nIDs: bitmap{1, 2},\n\n```\n} \n\nTable states for input: \n\n```\n\t\"user_permissions\":\n  user_id | permission | object_type | object_ids_ints | updated_at | synced_at\n ---------+------------+-------------+-----------------+------------+-----------\n        1 |       read |       repos |          {1, 2} |      NOW() |     NOW()\n\n \"repo_permissions\":\n  repo_id | permission | user_ids_ints | updated_at |  synced_at\n ---------+------------+---------------+------------+-------------\n        1 |       read |           {1} |      NOW() | <Unchanged>\n        2 |       read |           {1} |      NOW() | <Unchanged>\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.SetRepoPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.SetRepoPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.SetRepoPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) SetRepoPermissions(ctx context.Context, p *authz.RepoPermissions) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) SetRepoPermissions(ctx context.Context, p *authz.RepoPermissions) (err error)\n```\n\nSetRepoPermissions performs a full update for p, new user IDs found in p will be upserted and user IDs no longer in p will be removed. This method updates both `user_permissions` and `repo_permissions` tables. \n\nThis method starts its own transaction for update consistency if the caller hasn't started one already. \n\nExample input: &RepoPermissions{ \n\n```\nRepoID: 1,\nPerm: authz.Read,\nUserIDs: bitmap{1, 2},\n\n```\n} \n\nTable states for input: \n\n```\n\t\"user_permissions\":\n  user_id | permission | object_type | object_ids_ints | updated_at |  synced_at\n ---------+------------+-------------+-----------------+------------+-------------\n        1 |       read |       repos |             {1} |      NOW() | <Unchanged>\n        2 |       read |       repos |             {1} |      NOW() | <Unchanged>\n\n \"repo_permissions\":\n  repo_id | permission | user_ids_ints | updated_at | synced_at\n ---------+------------+---------------+------------+-----------\n        1 |       read |        {1, 2} |      NOW() |     NOW()\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.TouchRepoPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.TouchRepoPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.TouchRepoPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) TouchRepoPermissions(ctx context.Context, repoID int32) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) TouchRepoPermissions(ctx context.Context, repoID int32) (err error)\n```\n\nTouchRepoPermissions only updates the value of both `updated_at` and `synced_at` columns of the `repo_permissions` table without modifying the permissions bits. It inserts a new row when the row does not yet exist. The use case is to trick the scheduler to skip the repository for syncing permissions when we can't sync permissions for the repository (e.g. due to insufficient permissions of the access token). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.LoadUserPendingPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.LoadUserPendingPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.LoadUserPendingPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) LoadUserPendingPermissions(ctx context.Context, p *authz.UserPendingPermissions) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) LoadUserPendingPermissions(ctx context.Context, p *authz.UserPendingPermissions) (err error)\n```\n\nLoadUserPendingPermissions returns pending permissions found by given parameters. An ErrPermsNotFound is returned when there are no pending permissions available. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.SetRepoPendingPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.SetRepoPendingPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.SetRepoPendingPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) SetRepoPendingPermissions(ctx context.Context, accounts *extsvc.Accounts, p *authz.RepoPermissions) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) SetRepoPendingPermissions(ctx context.Context, accounts *extsvc.Accounts, p *authz.RepoPermissions) (err error)\n```\n\nSetRepoPendingPermissions performs a full update for p with given accounts, new account IDs found will be upserted and account IDs no longer in AccountIDs will be removed. \n\nThis method updates both `user_pending_permissions` and `repo_pending_permissions` tables. \n\nThis method starts its own transaction for update consistency if the caller hasn't started one already. \n\nExample input: \n\n```\n&extsvc.Accounts{\n    ServiceType: \"sourcegraph\",\n    ServiceID:   \"[https://sourcegraph.com/](https://sourcegraph.com/)\",\n    AccountIDs:  []string{\"alice\", \"bob\"},\n}\n&authz.RepoPermissions{\n    RepoID: 1,\n    Perm: authz.Read,\n}\n\n```\nTable states for input: \n\n```\n\t\"user_pending_permissions\":\n  id | service_type |        service_id        | bind_id | permission | object_type | object_ids_ints | updated_at\n ----+--------------+--------------------------+---------+------------+-------------+-----------------+-----------\n   1 | sourcegraph  | [https://sourcegraph.com/](https://sourcegraph.com/) |   alice |       read |       repos |             {1} | <DateTime>\n   2 | sourcegraph  | [https://sourcegraph.com/](https://sourcegraph.com/) |     bob |       read |       repos |             {1} | <DateTime>\n\n \"repo_pending_permissions\":\n  repo_id | permission | user_ids_ints | updated_at\n ---------+------------+---------------+------------\n        1 |       read |        {1, 2} | <DateTime>\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.loadUserPendingPermissionsIDs",
+                    "documentation": {
+                      "identifier": "PermsStore.loadUserPendingPermissionsIDs",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.loadUserPendingPermissionsIDs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) loadUserPendingPermissionsIDs(ctx context.Context, q *sqlf.Query) (ids []uint32, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) loadUserPendingPermissionsIDs(ctx context.Context, q *sqlf.Query) (ids []uint32, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.GrantPendingPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.GrantPendingPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.GrantPendingPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) GrantPendingPermissions(ctx context.Context, userID int32, p *authz.UserPendingPermissions) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) GrantPendingPermissions(ctx context.Context, userID int32, p *authz.UserPendingPermissions) (err error)\n```\n\nGrantPendingPermissions is used to grant pending permissions when the associated \"ServiceType\", \"ServiceID\" and \"BindID\" found in p becomes effective for a given user, e.g. username as bind ID when a user is created, email as bind ID when the email address is verified. \n\nBecause there could be multiple external services and bind IDs that are associated with a single user (e.g. same user on different code hosts, multiple email addresses), it merges data from \"repo_pending_permissions\" and \"user_pending_permissions\" tables to \"repo_permissions\" and \"user_permissions\" tables for the user. Therefore, permissions are unioned not replaced, which is one of the main differences from SetRepoPermissions and SetRepoPendingPermissions methods. Another main difference is that multiple calls to this method are not idempotent as it conceptually does nothing when there is no data in the pending permissions tables for the user. \n\nThis method starts its own transaction for update consistency if the caller hasn't started one already. \n\n🚨 SECURITY: This method takes arbitrary string as a valid bind ID and does not interpret the meaning of the value it represents. Therefore, it is caller's responsibility to ensure the legitimate relation between the given user ID and the bind ID found in p. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.ListPendingUsers",
+                    "documentation": {
+                      "identifier": "PermsStore.ListPendingUsers",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.ListPendingUsers",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) ListPendingUsers(ctx context.Context, serviceType, serviceID string) (bindIDs []string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) ListPendingUsers(ctx context.Context, serviceType, serviceID string) (bindIDs []string, err error)\n```\n\nListPendingUsers returns a list of bind IDs who have pending permissions by given service type and ID. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.DeleteAllUserPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.DeleteAllUserPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.DeleteAllUserPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) DeleteAllUserPermissions(ctx context.Context, userID int32) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) DeleteAllUserPermissions(ctx context.Context, userID int32) (err error)\n```\n\nDeleteAllUserPermissions deletes all rows with given user ID from the \"user_permissions\" table, which effectively removes access to all repositories for the user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.DeleteAllUserPendingPermissions",
+                    "documentation": {
+                      "identifier": "PermsStore.DeleteAllUserPendingPermissions",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.DeleteAllUserPendingPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) DeleteAllUserPendingPermissions(ctx context.Context, accounts *extsvc.Accounts) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) DeleteAllUserPendingPermissions(ctx context.Context, accounts *extsvc.Accounts) (err error)\n```\n\nDeleteAllUserPendingPermissions deletes all rows with given bind IDs from the \"user_pending_permissions\" table. It accepts list of bind IDs because a user has multiple bind IDs, e.g. username and email addresses. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.execute",
+                    "documentation": {
+                      "identifier": "PermsStore.execute",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.execute",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) execute(ctx context.Context, q *sqlf.Query, vs ...interface{}) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) execute(ctx context.Context, q *sqlf.Query, vs ...interface{}) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.load",
+                    "documentation": {
+                      "identifier": "PermsStore.load",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.load",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) load(ctx context.Context, q *sqlf.Query) (*permsLoadValues, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) load(ctx context.Context, q *sqlf.Query) (*permsLoadValues, error)\n```\n\nload is a generic method that scans three values from one database table row, these values must have types and be scanned in the order of int32 (id), []byte (ids), time.Time (updatedAt) and nullable time.Time (syncedAt). In addition, it unmarshalles the []byte into a *roaring.Bitmap. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.ListExternalAccounts",
+                    "documentation": {
+                      "identifier": "PermsStore.ListExternalAccounts",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.ListExternalAccounts",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) ListExternalAccounts(ctx context.Context, userID int32) (accounts []*extsvc.Account, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) ListExternalAccounts(ctx context.Context, userID int32) (accounts []*extsvc.Account, err error)\n```\n\nListExternalAccounts returns all external accounts that are associated with given user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.GetUserIDsByExternalAccounts",
+                    "documentation": {
+                      "identifier": "PermsStore.GetUserIDsByExternalAccounts",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.GetUserIDsByExternalAccounts",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) GetUserIDsByExternalAccounts(ctx context.Context, accounts *extsvc.Accounts) (_ map[string]int32, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) GetUserIDsByExternalAccounts(ctx context.Context, accounts *extsvc.Accounts) (_ map[string]int32, err error)\n```\n\nGetUserIDsByExternalAccounts returns all user IDs matched by given external account specs. The returned set has mapping relation as \"account ID -> user ID\". The number of results could be less than the candidate list due to some users are not associated with any external account. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.UserIDsWithNoPerms",
+                    "documentation": {
+                      "identifier": "PermsStore.UserIDsWithNoPerms",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.UserIDsWithNoPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) UserIDsWithNoPerms(ctx context.Context) ([]int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) UserIDsWithNoPerms(ctx context.Context) ([]int32, error)\n```\n\nUserIDsWithNoPerms returns a list of user IDs with no permissions found in the database. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.RepoIDsWithNoPerms",
+                    "documentation": {
+                      "identifier": "PermsStore.RepoIDsWithNoPerms",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.RepoIDsWithNoPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) RepoIDsWithNoPerms(ctx context.Context) ([]api.RepoID, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) RepoIDsWithNoPerms(ctx context.Context) ([]api.RepoID, error)\n```\n\nRepoIDsWithNoPerms returns a list of private repository IDs with no permissions found in the database. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.UserIDsWithOldestPerms",
+                    "documentation": {
+                      "identifier": "PermsStore.UserIDsWithOldestPerms",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.UserIDsWithOldestPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) UserIDsWithOldestPerms(ctx context.Context, limit int) (map[int32]time.Time, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) UserIDsWithOldestPerms(ctx context.Context, limit int) (map[int32]time.Time, error)\n```\n\nUserIDsWithOldestPerms returns a list of user ID and last updated pairs for users who have the least recent synced permissions in the database and capped results by the limit. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.ReposIDsWithOldestPerms",
+                    "documentation": {
+                      "identifier": "PermsStore.ReposIDsWithOldestPerms",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.ReposIDsWithOldestPerms",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) ReposIDsWithOldestPerms(ctx context.Context, limit int) (map[api.RepoID]time.Time, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) ReposIDsWithOldestPerms(ctx context.Context, limit int) (map[api.RepoID]time.Time, error)\n```\n\nReposIDsWithOldestPerms returns a list of repository ID and last updated pairs for repositories that have the least recent synced permissions in the database and caps results by the limit. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.loadIDsWithTime",
+                    "documentation": {
+                      "identifier": "PermsStore.loadIDsWithTime",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.loadIDsWithTime",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) loadIDsWithTime(ctx context.Context, q *sqlf.Query) (map[int32]time.Time, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) loadIDsWithTime(ctx context.Context, q *sqlf.Query) (map[int32]time.Time, error)\n```\n\nloadIDsWithTime runs the query and returns a list of ID and nullable time pairs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.Metrics",
+                    "documentation": {
+                      "identifier": "PermsStore.Metrics",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.Metrics",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) Metrics(ctx context.Context, staleDur time.Duration) (*PermsMetrics, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) Metrics(ctx context.Context, staleDur time.Duration) (*PermsMetrics, error)\n```\n\nMetrics returns calculated metrics values by querying the database. The \"staleDur\" argument indicates how long ago was the last update to be considered as stale. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/database#PermsStore.observe",
+                    "documentation": {
+                      "identifier": "PermsStore.observe",
+                      "newPage": false,
+                      "searchKey": "database.PermsStore.observe",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *PermsStore) observe(ctx context.Context, family, title string) (context.Context, func(*error, ...otlog.Field))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *PermsStore) observe(ctx context.Context, family, title string) (context.Context, func(*error, ...otlog.Field))\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#permsLoadValues",
+              "documentation": {
+                "identifier": "permsLoadValues",
+                "newPage": false,
+                "searchKey": "database.permsLoadValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type permsLoadValues struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype permsLoadValues struct {\n\tid        int32           // An integer ID\n\tids       *roaring.Bitmap // Bitmap of unmarshalled IDs\n\tupdatedAt time.Time       // Last updated time of the row\n\tsyncedAt  time.Time       // Last synced time of the row\n}\n```\n\npermsLoadValues contains return values of (*PermsStore).load method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#PermsMetrics",
+              "documentation": {
+                "identifier": "PermsMetrics",
+                "newPage": false,
+                "searchKey": "database.PermsMetrics",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PermsMetrics struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PermsMetrics struct {\n\t// The number of users with stale permissions.\n\tUsersWithStalePerms int64\n\t// The seconds between users with oldest and the most up-to-date permissions.\n\tUsersPermsGapSeconds float64\n\t// The number of repositories with stale permissions.\n\tReposWithStalePerms int64\n\t// The seconds between repositories with oldest and the most up-to-date permissions.\n\tReposPermsGapSeconds float64\n}\n```\n\nPermsMetrics contains metrics values calculated by querying the database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#MockPerms",
+              "documentation": {
+                "identifier": "MockPerms",
+                "newPage": false,
+                "searchKey": "database.MockPerms",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MockPerms struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MockPerms struct {\n\tTransact                     func(ctx context.Context) (*PermsStore, error)\n\tLoadRepoPermissions          func(ctx context.Context, p *authz.RepoPermissions) error\n\tLoadUserPermissions          func(ctx context.Context, p *authz.UserPermissions) error\n\tLoadUserPendingPermissions   func(ctx context.Context, p *authz.UserPendingPermissions) error\n\tSetUserPermissions           func(ctx context.Context, p *authz.UserPermissions) error\n\tSetRepoPermissions           func(ctx context.Context, p *authz.RepoPermissions) error\n\tSetRepoPendingPermissions    func(ctx context.Context, accounts *extsvc.Accounts, p *authz.RepoPermissions) error\n\tTouchRepoPermissions         func(ctx context.Context, repoID int32) error\n\tListPendingUsers             func(ctx context.Context) ([]string, error)\n\tListExternalAccounts         func(ctx context.Context, userID int32) ([]*extsvc.Account, error)\n\tGetUserIDsByExternalAccounts func(ctx context.Context, accounts *extsvc.Accounts) (map[string]int32, error)\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/database#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#NewAuthzStore",
+              "documentation": {
+                "identifier": "NewAuthzStore",
+                "newPage": false,
+                "searchKey": "database.NewAuthzStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewAuthzStore(db dbutil.DB, clock func() time.Time) database.AuthzStore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewAuthzStore(db dbutil.DB, clock func() time.Time) database.AuthzStore\n```\n\nNewAuthzStore returns an OSS database.AuthzStore set with enterprise implementation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#NewExternalServicesStore",
+              "documentation": {
+                "identifier": "NewExternalServicesStore",
+                "newPage": false,
+                "searchKey": "database.NewExternalServicesStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewExternalServicesStore(d dbutil.DB) *database.ExternalServiceStore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewExternalServicesStore(d dbutil.DB) *database.ExternalServiceStore\n```\n\nNewExternalServicesStore returns an OSS database.ExternalServicesStore set with enterprise validators. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#loadUserPermissionsQuery",
+              "documentation": {
+                "identifier": "loadUserPermissionsQuery",
+                "newPage": false,
+                "searchKey": "database.loadUserPermissionsQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadUserPermissionsQuery(p *authz.UserPermissions, lock string) *sqlf.Query"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadUserPermissionsQuery(p *authz.UserPermissions, lock string) *sqlf.Query\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#loadRepoPermissionsQuery",
+              "documentation": {
+                "identifier": "loadRepoPermissionsQuery",
+                "newPage": false,
+                "searchKey": "database.loadRepoPermissionsQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadRepoPermissionsQuery(p *authz.RepoPermissions, lock string) *sqlf.Query"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadRepoPermissionsQuery(p *authz.RepoPermissions, lock string) *sqlf.Query\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#upsertUserPermissionsQuery",
+              "documentation": {
+                "identifier": "upsertUserPermissionsQuery",
+                "newPage": false,
+                "searchKey": "database.upsertUserPermissionsQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func upsertUserPermissionsQuery(p *authz.UserPermissions) (*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc upsertUserPermissionsQuery(p *authz.UserPermissions) (*sqlf.Query, error)\n```\n\nupsertUserPermissionsQuery upserts single row of user permissions, it does the same thing as upsertUserPermissionsBatchQuery but also updates \"synced_at\" column to the value of p.SyncedAt field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#upsertUserPermissionsBatchQuery",
+              "documentation": {
+                "identifier": "upsertUserPermissionsBatchQuery",
+                "newPage": false,
+                "searchKey": "database.upsertUserPermissionsBatchQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func upsertUserPermissionsBatchQuery(addedUserIDs, removedUserIDs, objectIDs []uint32, perm authz.Perms, permType authz.PermType, updatedAt time.Time) (*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc upsertUserPermissionsBatchQuery(addedUserIDs, removedUserIDs, objectIDs []uint32, perm authz.Perms, permType authz.PermType, updatedAt time.Time) (*sqlf.Query, error)\n```\n\nupsertUserPermissionsBatchQuery composes a SQL query that does both addition (for `addedUserIDs`) and deletion ( for `removedUserIDs`) of `objectIDs` using upsert. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#upsertRepoPermissionsQuery",
+              "documentation": {
+                "identifier": "upsertRepoPermissionsQuery",
+                "newPage": false,
+                "searchKey": "database.upsertRepoPermissionsQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func upsertRepoPermissionsQuery(p *authz.RepoPermissions) (*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc upsertRepoPermissionsQuery(p *authz.RepoPermissions) (*sqlf.Query, error)\n```\n\nupsertRepoPermissionsQuery upserts single row of repository permissions, it does the same thing as upsertRepoPermissionsBatchQuery but also updates \"synced_at\" column to the value of p.SyncedAt field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#loadUserPendingPermissionsQuery",
+              "documentation": {
+                "identifier": "loadUserPendingPermissionsQuery",
+                "newPage": false,
+                "searchKey": "database.loadUserPendingPermissionsQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadUserPendingPermissionsQuery(p *authz.UserPendingPermissions, lock string) *sqlf.Query"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadUserPendingPermissionsQuery(p *authz.UserPendingPermissions, lock string) *sqlf.Query\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#insertUserPendingPermissionsBatchQuery",
+              "documentation": {
+                "identifier": "insertUserPendingPermissionsBatchQuery",
+                "newPage": false,
+                "searchKey": "database.insertUserPendingPermissionsBatchQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func insertUserPendingPermissionsBatchQuery(accounts *extsvc.Accounts,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc insertUserPendingPermissionsBatchQuery(\n\taccounts *extsvc.Accounts,\n\tp *authz.RepoPermissions,\n) (*sqlf.Query, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#loadRepoPendingPermissionsQuery",
+              "documentation": {
+                "identifier": "loadRepoPendingPermissionsQuery",
+                "newPage": false,
+                "searchKey": "database.loadRepoPendingPermissionsQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadRepoPendingPermissionsQuery(p *authz.RepoPermissions, lock string) *sqlf.Query"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadRepoPendingPermissionsQuery(p *authz.RepoPermissions, lock string) *sqlf.Query\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#updateUserPendingPermissionsBatchQuery",
+              "documentation": {
+                "identifier": "updateUserPendingPermissionsBatchQuery",
+                "newPage": false,
+                "searchKey": "database.updateUserPendingPermissionsBatchQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateUserPendingPermissionsBatchQuery(addedUserIDs, removedUserIDs, objectIDs []uint32, perm authz.Perms, permType authz.PermType, updatedAt time.Time) (*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateUserPendingPermissionsBatchQuery(addedUserIDs, removedUserIDs, objectIDs []uint32, perm authz.Perms, permType authz.PermType, updatedAt time.Time) (*sqlf.Query, error)\n```\n\nupdateUserPendingPermissionsBatchQuery composes a SQL query that does both addition (for `addedUserIDs`) and deletion ( for `removedUserIDs`) of `objectIDs` using update. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#upsertRepoPendingPermissionsBatchQuery",
+              "documentation": {
+                "identifier": "upsertRepoPendingPermissionsBatchQuery",
+                "newPage": false,
+                "searchKey": "database.upsertRepoPendingPermissionsBatchQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func upsertRepoPendingPermissionsBatchQuery(ps ...*authz.RepoPermissions) (*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc upsertRepoPendingPermissionsBatchQuery(ps ...*authz.RepoPermissions) (*sqlf.Query, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#upsertRepoPermissionsBatchQuery",
+              "documentation": {
+                "identifier": "upsertRepoPermissionsBatchQuery",
+                "newPage": false,
+                "searchKey": "database.upsertRepoPermissionsBatchQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func upsertRepoPermissionsBatchQuery(addedRepoIDs, removedRepoIDs, userIDs []uint32, perm authz.Perms, updatedAt time.Time) (*sqlf.Query, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc upsertRepoPermissionsBatchQuery(addedRepoIDs, removedRepoIDs, userIDs []uint32, perm authz.Perms, updatedAt time.Time) (*sqlf.Query, error)\n```\n\nupsertRepoPermissionsBatchQuery composes a SQL query that does both addition (for `addedRepoIDs`) and deletion ( for `removedRepoIDs`) of `userIDs` using upsert. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#deleteUserPendingPermissionsQuery",
+              "documentation": {
+                "identifier": "deleteUserPendingPermissionsQuery",
+                "newPage": false,
+                "searchKey": "database.deleteUserPendingPermissionsQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func deleteUserPendingPermissionsQuery(p *authz.UserPendingPermissions) *sqlf.Query"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc deleteUserPendingPermissionsQuery(p *authz.UserPendingPermissions) *sqlf.Query\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#TestAuthzStore_GrantPendingPermissions",
+              "documentation": {
+                "identifier": "TestAuthzStore_GrantPendingPermissions",
+                "newPage": false,
+                "searchKey": "database.TestAuthzStore_GrantPendingPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAuthzStore_GrantPendingPermissions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAuthzStore_GrantPendingPermissions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#TestAuthzStore_AuthorizedRepos",
+              "documentation": {
+                "identifier": "TestAuthzStore_AuthorizedRepos",
+                "newPage": false,
+                "searchKey": "database.TestAuthzStore_AuthorizedRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAuthzStore_AuthorizedRepos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAuthzStore_AuthorizedRepos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#TestAuthzStore_RevokeUserPermissions",
+              "documentation": {
+                "identifier": "TestAuthzStore_RevokeUserPermissions",
+                "newPage": false,
+                "searchKey": "database.TestAuthzStore_RevokeUserPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAuthzStore_RevokeUserPermissions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAuthzStore_RevokeUserPermissions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "database.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#equal",
+              "documentation": {
+                "identifier": "equal",
+                "newPage": false,
+                "searchKey": "database.equal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func equal(t testing.TB, name string, want, have interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc equal(t testing.TB, name string, want, have interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#TestExternalServices_ValidateConfig",
+              "documentation": {
+                "identifier": "TestExternalServices_ValidateConfig",
+                "newPage": false,
+                "searchKey": "database.TestExternalServices_ValidateConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExternalServices_ValidateConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExternalServices_ValidateConfig(t *testing.T)\n```\n\nThis test lives in cmd/enterprise because it tests a proprietary super-set of the validation performed by the OSS version. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#TestIntegration_PermsStore",
+              "documentation": {
+                "identifier": "TestIntegration_PermsStore",
+                "newPage": false,
+                "searchKey": "database.TestIntegration_PermsStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIntegration_PermsStore(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIntegration_PermsStore(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#cleanupPermsTables",
+              "documentation": {
+                "identifier": "cleanupPermsTables",
+                "newPage": false,
+                "searchKey": "database.cleanupPermsTables",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cleanupPermsTables(t *testing.T, s *PermsStore)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cleanupPermsTables(t *testing.T, s *PermsStore)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#bitmapToArray",
+              "documentation": {
+                "identifier": "bitmapToArray",
+                "newPage": false,
+                "searchKey": "database.bitmapToArray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bitmapToArray(bm *roaring.Bitmap) []int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bitmapToArray(bm *roaring.Bitmap) []int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#toBitmap",
+              "documentation": {
+                "identifier": "toBitmap",
+                "newPage": false,
+                "searchKey": "database.toBitmap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toBitmap(ids ...uint32) *roaring.Bitmap"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toBitmap(ids ...uint32) *roaring.Bitmap\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#clock",
+              "documentation": {
+                "identifier": "clock",
+                "newPage": false,
+                "searchKey": "database.clock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func clock() time.Time"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc clock() time.Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_LoadUserPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_LoadUserPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_LoadUserPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_LoadUserPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_LoadUserPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_LoadRepoPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_LoadRepoPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_LoadRepoPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_LoadRepoPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_LoadRepoPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#checkRegularPermsTable",
+              "documentation": {
+                "identifier": "checkRegularPermsTable",
+                "newPage": false,
+                "searchKey": "database.checkRegularPermsTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkRegularPermsTable(s *PermsStore, sql string, expects map[int32][]uint32) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkRegularPermsTable(s *PermsStore, sql string, expects map[int32][]uint32) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_SetUserPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_SetUserPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_SetUserPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_SetUserPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_SetUserPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_SetRepoPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_SetRepoPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_SetRepoPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_SetRepoPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_SetRepoPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_TouchRepoPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_TouchRepoPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_TouchRepoPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_TouchRepoPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_TouchRepoPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_LoadUserPendingPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_LoadUserPendingPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_LoadUserPendingPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_LoadUserPendingPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_LoadUserPendingPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#checkUserPendingPermsTable",
+              "documentation": {
+                "identifier": "checkUserPendingPermsTable",
+                "newPage": false,
+                "searchKey": "database.checkUserPendingPermsTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkUserPendingPermsTable(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkUserPendingPermsTable(\n\tctx context.Context,\n\ts *PermsStore,\n\texpects map[extsvc.AccountSpec][]uint32,\n) (\n\tidToSpecs map[int32]extsvc.AccountSpec,\n\terr error,\n)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#checkRepoPendingPermsTable",
+              "documentation": {
+                "identifier": "checkRepoPendingPermsTable",
+                "newPage": false,
+                "searchKey": "database.checkRepoPendingPermsTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkRepoPendingPermsTable(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkRepoPendingPermsTable(\n\tctx context.Context,\n\ts *PermsStore,\n\tidToSpecs map[int32]extsvc.AccountSpec,\n\texpects map[int32][]extsvc.AccountSpec,\n) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_SetRepoPendingPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_SetRepoPendingPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_SetRepoPendingPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_SetRepoPendingPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_SetRepoPendingPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_ListPendingUsers",
+              "documentation": {
+                "identifier": "testPermsStore_ListPendingUsers",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_ListPendingUsers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_ListPendingUsers(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_ListPendingUsers(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_GrantPendingPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_GrantPendingPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_GrantPendingPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_GrantPendingPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_GrantPendingPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_SetPendingPermissionsAfterGrant",
+              "documentation": {
+                "identifier": "testPermsStore_SetPendingPermissionsAfterGrant",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_SetPendingPermissionsAfterGrant",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_SetPendingPermissionsAfterGrant(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_SetPendingPermissionsAfterGrant(db *sql.DB) func(*testing.T)\n```\n\nThis test is used to ensure we ignore invalid pending user IDs on updating repository pending permissions because permissions have been granted for those users. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_DeleteAllUserPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_DeleteAllUserPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_DeleteAllUserPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_DeleteAllUserPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_DeleteAllUserPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_DeleteAllUserPendingPermissions",
+              "documentation": {
+                "identifier": "testPermsStore_DeleteAllUserPendingPermissions",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_DeleteAllUserPendingPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_DeleteAllUserPendingPermissions(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_DeleteAllUserPendingPermissions(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_DatabaseDeadlocks",
+              "documentation": {
+                "identifier": "testPermsStore_DatabaseDeadlocks",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_DatabaseDeadlocks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_DatabaseDeadlocks(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_DatabaseDeadlocks(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#cleanupUsersTable",
+              "documentation": {
+                "identifier": "cleanupUsersTable",
+                "newPage": false,
+                "searchKey": "database.cleanupUsersTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cleanupUsersTable(t *testing.T, s *PermsStore)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cleanupUsersTable(t *testing.T, s *PermsStore)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_ListExternalAccounts",
+              "documentation": {
+                "identifier": "testPermsStore_ListExternalAccounts",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_ListExternalAccounts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_ListExternalAccounts(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_ListExternalAccounts(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_GetUserIDsByExternalAccounts",
+              "documentation": {
+                "identifier": "testPermsStore_GetUserIDsByExternalAccounts",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_GetUserIDsByExternalAccounts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_GetUserIDsByExternalAccounts(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_GetUserIDsByExternalAccounts(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_UserIDsWithNoPerms",
+              "documentation": {
+                "identifier": "testPermsStore_UserIDsWithNoPerms",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_UserIDsWithNoPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_UserIDsWithNoPerms(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_UserIDsWithNoPerms(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#cleanupReposTable",
+              "documentation": {
+                "identifier": "cleanupReposTable",
+                "newPage": false,
+                "searchKey": "database.cleanupReposTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cleanupReposTable(t *testing.T, s *PermsStore)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cleanupReposTable(t *testing.T, s *PermsStore)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_RepoIDsWithNoPerms",
+              "documentation": {
+                "identifier": "testPermsStore_RepoIDsWithNoPerms",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_RepoIDsWithNoPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_RepoIDsWithNoPerms(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_RepoIDsWithNoPerms(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_UserIDsWithOldestPerms",
+              "documentation": {
+                "identifier": "testPermsStore_UserIDsWithOldestPerms",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_UserIDsWithOldestPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_UserIDsWithOldestPerms(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_UserIDsWithOldestPerms(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_ReposIDsWithOldestPerms",
+              "documentation": {
+                "identifier": "testPermsStore_ReposIDsWithOldestPerms",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_ReposIDsWithOldestPerms",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_ReposIDsWithOldestPerms(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_ReposIDsWithOldestPerms(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/database#testPermsStore_Metrics",
+              "documentation": {
+                "identifier": "testPermsStore_Metrics",
+                "newPage": false,
+                "searchKey": "database.testPermsStore_Metrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPermsStore_Metrics(db *sql.DB) func(*testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPermsStore_Metrics(db *sql.DB) func(*testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

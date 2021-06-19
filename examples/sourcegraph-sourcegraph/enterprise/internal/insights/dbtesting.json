@@ -1,0 +1,62 @@
+{
+  "pathID": "/enterprise/internal/insights/dbtesting",
+  "documentation": {
+    "identifier": "dbtesting",
+    "newPage": true,
+    "searchKey": "enterprise/internal/insights/dbtesting",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package dbtesting"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/insights/dbtesting#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/insights/dbtesting#TimescaleDB",
+              "documentation": {
+                "identifier": "TimescaleDB",
+                "newPage": false,
+                "searchKey": "dbtesting.TimescaleDB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TimescaleDB(t testing.TB) (db *sql.DB, cleanup func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TimescaleDB(t testing.TB) (db *sql.DB, cleanup func())\n```\n\nTimescaleDB returns a handle to the Code Insights TimescaleDB instance. \n\nThe returned DB handle is initialized with a unique database just for the specified test, with all migrations applied. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

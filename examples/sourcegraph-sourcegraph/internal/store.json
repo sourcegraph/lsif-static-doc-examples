@@ -1,0 +1,958 @@
+{
+  "pathID": "/internal/store",
+  "documentation": {
+    "identifier": "store",
+    "newPage": true,
+    "searchKey": "internal/store",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package store"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/store#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/store#maxFileSize",
+              "documentation": {
+                "identifier": "maxFileSize",
+                "newPage": false,
+                "searchKey": "store.maxFileSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxFileSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxFileSize // 1MB; match https://sourcegraph.com/search?q=repo:%5Egithub%5C.com/sourcegraph/zoekt%24+%22-file_limit%22\n = ...\n```\n\nmaxFileSize is the limit on file size in bytes. Only files smaller than this are searched. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/store#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/store#cacheSizeBytes",
+              "documentation": {
+                "identifier": "cacheSizeBytes",
+                "newPage": false,
+                "searchKey": "store.cacheSizeBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cacheSizeBytes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cacheSizeBytes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#evictions",
+              "documentation": {
+                "identifier": "evictions",
+                "newPage": false,
+                "searchKey": "store.evictions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var evictions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar evictions = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#fetching",
+              "documentation": {
+                "identifier": "fetching",
+                "newPage": false,
+                "searchKey": "store.fetching",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fetching"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fetching = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#fetchQueueSize",
+              "documentation": {
+                "identifier": "fetchQueueSize",
+                "newPage": false,
+                "searchKey": "store.fetchQueueSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fetchQueueSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fetchQueueSize = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#fetchFailed",
+              "documentation": {
+                "identifier": "fetchFailed",
+                "newPage": false,
+                "searchKey": "store.fetchFailed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fetchFailed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fetchFailed = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/store#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/store#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "store.Store",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Store struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Store struct {\n\t// FetchTar returns an io.ReadCloser to a tar archive of a repository at the specified Git\n\t// remote URL and commit ID. If the error implements \"BadRequest() bool\", it will be used to\n\t// determine if the error is a bad request (eg invalid repo).\n\tFetchTar func(ctx context.Context, repo api.RepoName, commit api.CommitID) (io.ReadCloser, error)\n\n\t// FilterTar returns a FilterFunc that filters out files we don't want to write to disk\n\tFilterTar func(ctx context.Context, repo api.RepoName, commit api.CommitID) (FilterFunc, error)\n\n\t// Path is the directory to store the cache\n\tPath string\n\n\t// MaxCacheSizeBytes is the maximum size of the cache in bytes. Note:\n\t// We can temporarily be larger than MaxCacheSizeBytes. When we go\n\t// over MaxCacheSizeBytes we trigger delete files until we get below\n\t// MaxCacheSizeBytes.\n\tMaxCacheSizeBytes int64\n\n\t// once protects Start\n\tonce sync.Once\n\n\t// cache is the disk backed cache.\n\tcache *diskcache.Store\n\n\t// fetchLimiter limits concurrent calls to FetchTar.\n\tfetchLimiter *mutablelimiter.Limiter\n\n\t// ZipCache provides efficient access to repo zip files.\n\tZipCache ZipCache\n}\n```\n\nStore manages the fetching and storing of git archives. Its main purpose is keeping a local disk cache of the fetched archives to help speed up future requests for the same archive. As a performance optimization, it is also responsible for filtering out files we receive from `git archive` that we do not want to search. \n\nWe use an LRU to do cache eviction: * When to evict is based on the total size of *.zip on disk. * What to evict uses the LRU algorithm. * We touch files when opening them, so can do LRU based on file \n\n```\nmodification times.\n\n```\nNote: The store fetches tarballs but stores zips. We want to be able to filter which files we cache, so we need a format that supports streaming (tar). We want to be able to support random concurrent access for reading, so we store as a zip. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/store#tmpStore",
+                    "documentation": {
+                      "identifier": "tmpStore",
+                      "newPage": false,
+                      "searchKey": "store.tmpStore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func tmpStore(t *testing.T) (*Store, func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc tmpStore(t *testing.T) (*Store, func())\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#Store.Start",
+                    "documentation": {
+                      "identifier": "Store.Start",
+                      "newPage": false,
+                      "searchKey": "store.Store.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) Start()\n```\n\nStart initializes state and starts background goroutines. It can be called more than once. It is optional to call, but starting it earlier avoids a search request paying the cost of initializing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#Store.PrepareZip",
+                    "documentation": {
+                      "identifier": "Store.PrepareZip",
+                      "newPage": false,
+                      "searchKey": "store.Store.PrepareZip",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) PrepareZip(ctx context.Context, repo api.RepoName, commit api.CommitID) (path string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) PrepareZip(ctx context.Context, repo api.RepoName, commit api.CommitID) (path string, err error)\n```\n\nPrepareZip returns the path to a local zip archive of repo at commit. It will first consult the local cache, otherwise will fetch from the network. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#Store.fetch",
+                    "documentation": {
+                      "identifier": "Store.fetch",
+                      "newPage": false,
+                      "searchKey": "store.Store.fetch",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) fetch(ctx context.Context, repo api.RepoName, commit api.CommitID, largeFilePatterns []string) (rc io.ReadCloser, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) fetch(ctx context.Context, repo api.RepoName, commit api.CommitID, largeFilePatterns []string) (rc io.ReadCloser, err error)\n```\n\nfetch fetches an archive from the network and stores it on disk. It does not populate the in-memory cache. You should probably be calling prepareZip. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#Store.String",
+                    "documentation": {
+                      "identifier": "Store.String",
+                      "newPage": false,
+                      "searchKey": "store.Store.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#Store.watchAndEvict",
+                    "documentation": {
+                      "identifier": "Store.watchAndEvict",
+                      "newPage": false,
+                      "searchKey": "store.Store.watchAndEvict",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) watchAndEvict()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) watchAndEvict()\n```\n\nwatchAndEvict is a loop which periodically checks the size of the cache and evicts/deletes items if the store gets too large. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#Store.watchConfig",
+                    "documentation": {
+                      "identifier": "Store.watchConfig",
+                      "newPage": false,
+                      "searchKey": "store.Store.watchConfig",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Store) watchConfig()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Store) watchConfig()\n```\n\nwatchConfig updates fetchLimiter as the number of gitservers change. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#FilterFunc",
+              "documentation": {
+                "identifier": "FilterFunc",
+                "newPage": false,
+                "searchKey": "store.FilterFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FilterFunc func(hdr *archive/tar.Header) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FilterFunc func(hdr *tar.Header) bool\n```\n\nFilterFunc filters tar files based on their header. Tar files for which FilterFunc evaluates to true are not stored in the target zip. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#temporaryError",
+              "documentation": {
+                "identifier": "temporaryError",
+                "newPage": false,
+                "searchKey": "store.temporaryError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type temporaryError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype temporaryError struct {\n\terror\n}\n```\n\ntemporaryError wraps an error but adds the Temporary method. It does not implement Cause so that errors.Cause() returns an error which implements Temporary. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/store#temporaryError.Temporary",
+                    "documentation": {
+                      "identifier": "temporaryError.Temporary",
+                      "newPage": false,
+                      "searchKey": "store.temporaryError.Temporary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (temporaryError) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (temporaryError) Temporary() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#ZipCache",
+              "documentation": {
+                "identifier": "ZipCache",
+                "newPage": false,
+                "searchKey": "store.ZipCache",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ZipCache struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ZipCache struct {\n\t// Split the cache into many parts, to minimize lock contention.\n\t// This matters because, for simplicity,\n\t// we sometimes hold the lock for long-running operations,\n\t// such as reading a zip file from disk\n\t// or waiting for all users of a zip file to finish their work.\n\t// (The latter case should basically never block, since it only\n\t// occurs when a file is being deleted, and files are deleted\n\t// when no one has used them for a long time. Nevertheless, take care.)\n\tshards [64]zipCacheShard\n}\n```\n\nA ZipCache is a shared data structure that provides efficient access to a collection of zip files. The zero value is usable. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/store#ZipCache.shardFor",
+                    "documentation": {
+                      "identifier": "ZipCache.shardFor",
+                      "newPage": false,
+                      "searchKey": "store.ZipCache.shardFor",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *ZipCache) shardFor(path string) *zipCacheShard"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *ZipCache) shardFor(path string) *zipCacheShard\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#ZipCache.Get",
+                    "documentation": {
+                      "identifier": "ZipCache.Get",
+                      "newPage": false,
+                      "searchKey": "store.ZipCache.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *ZipCache) Get(path string) (*ZipFile, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *ZipCache) Get(path string) (*ZipFile, error)\n```\n\nGet returns a zipFile for the file on disk at path. The file MUST be Closed when it is no longer needed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#ZipCache.delete",
+                    "documentation": {
+                      "identifier": "ZipCache.delete",
+                      "newPage": false,
+                      "searchKey": "store.ZipCache.delete",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *ZipCache) delete(path string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *ZipCache) delete(path string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#ZipCache.count",
+                    "documentation": {
+                      "identifier": "ZipCache.count",
+                      "newPage": false,
+                      "searchKey": "store.ZipCache.count",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *ZipCache) count() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *ZipCache) count() int\n```\n\ncount returns the number of elements in c, assuming c is otherwise unused during the call to c. It is intended only for testing. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#zipCacheShard",
+              "documentation": {
+                "identifier": "zipCacheShard",
+                "newPage": false,
+                "searchKey": "store.zipCacheShard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zipCacheShard struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zipCacheShard struct {\n\tmu sync.Mutex\n\tm  map[string]*ZipFile // path -> zipFile\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#ZipFile",
+              "documentation": {
+                "identifier": "ZipFile",
+                "newPage": false,
+                "searchKey": "store.ZipFile",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ZipFile struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ZipFile struct {\n\t// Take care with the size of this struct.\n\t// There are many zipFiles present during typical usage.\n\tFiles  []SrcFile\n\tMaxLen int\n\tData   []byte\n\tf      *os.File\n\twg     sync.WaitGroup // ensures underlying file is not munmap'd or closed while in use\n}\n```\n\nZipFile provides efficient access to a single zip file. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/store#GetZipFileWithRetry",
+                    "documentation": {
+                      "identifier": "GetZipFileWithRetry",
+                      "newPage": false,
+                      "searchKey": "store.GetZipFileWithRetry",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GetZipFileWithRetry(get func() (string, *ZipFile, error)) (validPath string, zf *ZipFile, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GetZipFileWithRetry(get func() (string, *ZipFile, error)) (validPath string, zf *ZipFile, err error)\n```\n\nGetZipFileWithRetry retries getting a zip file if the zip is for some reason invalid. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#readZipFile",
+                    "documentation": {
+                      "identifier": "readZipFile",
+                      "newPage": false,
+                      "searchKey": "store.readZipFile",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func readZipFile(path string) (*ZipFile, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc readZipFile(path string) (*ZipFile, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#MockZipFile",
+                    "documentation": {
+                      "identifier": "MockZipFile",
+                      "newPage": false,
+                      "searchKey": "store.MockZipFile",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MockZipFile(data []byte) (*ZipFile, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MockZipFile(data []byte) (*ZipFile, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#ZipFile.PopulateFiles",
+                    "documentation": {
+                      "identifier": "ZipFile.PopulateFiles",
+                      "newPage": false,
+                      "searchKey": "store.ZipFile.PopulateFiles",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ZipFile) PopulateFiles(r *zip.Reader) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ZipFile) PopulateFiles(r *zip.Reader) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#ZipFile.Close",
+                    "documentation": {
+                      "identifier": "ZipFile.Close",
+                      "newPage": false,
+                      "searchKey": "store.ZipFile.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ZipFile) Close()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ZipFile) Close()\n```\n\nClose allows resources associated with f to be released. It MUST be called exactly once for every file retrieved using get. Contents from any SrcFile from within f MUST NOT be used after Close has been called. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/store#ZipFile.DataFor",
+                    "documentation": {
+                      "identifier": "ZipFile.DataFor",
+                      "newPage": false,
+                      "searchKey": "store.ZipFile.DataFor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *ZipFile) DataFor(s *SrcFile) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *ZipFile) DataFor(s *SrcFile) []byte\n```\n\nData returns the contents of s, which is a SrcFile in f. The contents MUST NOT be modified. It is not safe to use the contents after f has been Closed. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#SrcFile",
+              "documentation": {
+                "identifier": "SrcFile",
+                "newPage": false,
+                "searchKey": "store.SrcFile",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SrcFile struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SrcFile struct {\n\t// Take care with the size of this struct.\n\t// There will be *lots* of these in memory.\n\t// This is why Len is a 32 bit int.\n\t// (Note that this means that ZipCache cannot\n\t// handle files inside the zip archive bigger than 2gb.)\n\tName string\n\tOff  int64\n\tLen  int32\n}\n```\n\nA SrcFile is a single file inside a ZipFile. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/store#SrcFile.String",
+                    "documentation": {
+                      "identifier": "SrcFile.String",
+                      "newPage": false,
+                      "searchKey": "store.SrcFile.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *SrcFile) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *SrcFile) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/store#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/store#copySearchable",
+              "documentation": {
+                "identifier": "copySearchable",
+                "newPage": false,
+                "searchKey": "store.copySearchable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copySearchable(tr *tar.Reader, zw *zip.Writer, largeFilePatterns []string, filter FilterFunc) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copySearchable(tr *tar.Reader, zw *zip.Writer, largeFilePatterns []string, filter FilterFunc) error\n```\n\ncopySearchable copies searchable files from tr to zw. A searchable file is any file that is under size limit, non-binary, and not matching the filter. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#ignoreSizeMax",
+              "documentation": {
+                "identifier": "ignoreSizeMax",
+                "newPage": false,
+                "searchKey": "store.ignoreSizeMax",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ignoreSizeMax(name string, patterns []string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ignoreSizeMax(name string, patterns []string) bool\n```\n\nignoreSizeMax determines whether the max size should be ignored. It uses the glob syntax found here: [https://golang.org/pkg/path/filepath/#Match](https://golang.org/pkg/path/filepath/#Match). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#TestGetZipFileWithRetry",
+              "documentation": {
+                "identifier": "TestGetZipFileWithRetry",
+                "newPage": false,
+                "searchKey": "store.TestGetZipFileWithRetry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetZipFileWithRetry(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetZipFileWithRetry(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#TestPrepareZip",
+              "documentation": {
+                "identifier": "TestPrepareZip",
+                "newPage": false,
+                "searchKey": "store.TestPrepareZip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrepareZip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrepareZip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#TestPrepareZip_fetchTarFail",
+              "documentation": {
+                "identifier": "TestPrepareZip_fetchTarFail",
+                "newPage": false,
+                "searchKey": "store.TestPrepareZip_fetchTarFail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrepareZip_fetchTarFail(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrepareZip_fetchTarFail(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#TestPrepareZip_errHeader",
+              "documentation": {
+                "identifier": "TestPrepareZip_errHeader",
+                "newPage": false,
+                "searchKey": "store.TestPrepareZip_errHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrepareZip_errHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrepareZip_errHeader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#TestIngoreSizeMax",
+              "documentation": {
+                "identifier": "TestIngoreSizeMax",
+                "newPage": false,
+                "searchKey": "store.TestIngoreSizeMax",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIngoreSizeMax(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIngoreSizeMax(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#emptyTar",
+              "documentation": {
+                "identifier": "emptyTar",
+                "newPage": false,
+                "searchKey": "store.emptyTar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func emptyTar(t *testing.T) io.ReadCloser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc emptyTar(t *testing.T) io.ReadCloser\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/store#TestZipCacheDelete",
+              "documentation": {
+                "identifier": "TestZipCacheDelete",
+                "newPage": false,
+                "searchKey": "store.TestZipCacheDelete",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZipCacheDelete(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZipCacheDelete(t *testing.T)\n```\n\nTestZipCacheDelete ensures that zip cache deletion is correctly hooked up to cache eviction. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

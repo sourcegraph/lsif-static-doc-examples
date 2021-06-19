@@ -1,0 +1,462 @@
+{
+  "pathID": "/monitoring/definitions",
+  "documentation": {
+    "identifier": "definitions",
+    "newPage": true,
+    "searchKey": "monitoring/definitions",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package definitions"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/monitoring/definitions#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#workerJobs",
+              "documentation": {
+                "identifier": "workerJobs",
+                "newPage": false,
+                "searchKey": "definitions.workerJobs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var workerJobs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar workerJobs = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/monitoring/definitions#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#ExecutorQueue",
+              "documentation": {
+                "identifier": "ExecutorQueue",
+                "newPage": false,
+                "searchKey": "definitions.ExecutorQueue",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExecutorQueue() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExecutorQueue() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#Frontend",
+              "documentation": {
+                "identifier": "Frontend",
+                "newPage": false,
+                "searchKey": "definitions.Frontend",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Frontend() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Frontend() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#GitServer",
+              "documentation": {
+                "identifier": "GitServer",
+                "newPage": false,
+                "searchKey": "definitions.GitServer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitServer() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitServer() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#GitHubProxy",
+              "documentation": {
+                "identifier": "GitHubProxy",
+                "newPage": false,
+                "searchKey": "definitions.GitHubProxy",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GitHubProxy() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GitHubProxy() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#Postgres",
+              "documentation": {
+                "identifier": "Postgres",
+                "newPage": false,
+                "searchKey": "definitions.Postgres",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Postgres() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Postgres() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#PreciseCodeIntelIndexer",
+              "documentation": {
+                "identifier": "PreciseCodeIntelIndexer",
+                "newPage": false,
+                "searchKey": "definitions.PreciseCodeIntelIndexer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PreciseCodeIntelIndexer() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PreciseCodeIntelIndexer() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#PreciseCodeIntelWorker",
+              "documentation": {
+                "identifier": "PreciseCodeIntelWorker",
+                "newPage": false,
+                "searchKey": "definitions.PreciseCodeIntelWorker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PreciseCodeIntelWorker() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PreciseCodeIntelWorker() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#Prometheus",
+              "documentation": {
+                "identifier": "Prometheus",
+                "newPage": false,
+                "searchKey": "definitions.Prometheus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Prometheus() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Prometheus() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#QueryRunner",
+              "documentation": {
+                "identifier": "QueryRunner",
+                "newPage": false,
+                "searchKey": "definitions.QueryRunner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QueryRunner() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QueryRunner() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#RepoUpdater",
+              "documentation": {
+                "identifier": "RepoUpdater",
+                "newPage": false,
+                "searchKey": "definitions.RepoUpdater",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RepoUpdater() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RepoUpdater() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#Searcher",
+              "documentation": {
+                "identifier": "Searcher",
+                "newPage": false,
+                "searchKey": "definitions.Searcher",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Searcher() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Searcher() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#Symbols",
+              "documentation": {
+                "identifier": "Symbols",
+                "newPage": false,
+                "searchKey": "definitions.Symbols",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Symbols() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Symbols() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#SyntectServer",
+              "documentation": {
+                "identifier": "SyntectServer",
+                "newPage": false,
+                "searchKey": "definitions.SyntectServer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SyntectServer() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SyntectServer() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#Worker",
+              "documentation": {
+                "identifier": "Worker",
+                "newPage": false,
+                "searchKey": "definitions.Worker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Worker() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Worker() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#createWorkerActiveJobRows",
+              "documentation": {
+                "identifier": "createWorkerActiveJobRows",
+                "newPage": false,
+                "searchKey": "definitions.createWorkerActiveJobRows",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createWorkerActiveJobRows() []monitoring.Row"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createWorkerActiveJobRows() []monitoring.Row\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#ZoektIndexServer",
+              "documentation": {
+                "identifier": "ZoektIndexServer",
+                "newPage": false,
+                "searchKey": "definitions.ZoektIndexServer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ZoektIndexServer() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ZoektIndexServer() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/monitoring/definitions#ZoektWebServer",
+              "documentation": {
+                "identifier": "ZoektWebServer",
+                "newPage": false,
+                "searchKey": "definitions.ZoektWebServer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ZoektWebServer() *monitoring.Container"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ZoektWebServer() *monitoring.Container\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/monitoring/definitions/shared"
+    }
+  ]
+}

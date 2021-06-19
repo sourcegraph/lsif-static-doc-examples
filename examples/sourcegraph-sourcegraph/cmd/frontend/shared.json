@@ -1,0 +1,66 @@
+{
+  "pathID": "/cmd/frontend/shared",
+  "documentation": {
+    "identifier": "shared",
+    "newPage": true,
+    "searchKey": "cmd/frontend/shared",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package shared"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package shared contains the frontend command implementation shared \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/shared#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/shared#Main",
+              "documentation": {
+                "identifier": "Main",
+                "newPage": false,
+                "searchKey": "shared.Main",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Main(enterpriseSetupHook func(db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) enterprise.Services)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Main(enterpriseSetupHook func(db dbutil.DB, outOfBandMigrationRunner *oobmigration.Runner) enterprise.Services)\n```\n\nMain is the main function that runs the frontend process. \n\nIt is exposed as function in a package so that it can be called by other main package implementations such as Sourcegraph Enterprise, which import proprietary/private code. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

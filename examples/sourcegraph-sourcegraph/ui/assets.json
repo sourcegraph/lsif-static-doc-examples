@@ -1,0 +1,156 @@
+{
+  "pathID": "/ui/assets",
+  "documentation": {
+    "identifier": "assets",
+    "newPage": true,
+    "searchKey": "ui/assets",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package assets"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package assets contains static assets for the front-end Web app. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/ui/assets#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/ui/assets#Assets",
+              "documentation": {
+                "identifier": "Assets",
+                "newPage": false,
+                "searchKey": "assets.Assets",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Assets"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Assets = http.Dir(\"./ui/assets\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/ui/assets#MockLoadWebpackManifest",
+              "documentation": {
+                "identifier": "MockLoadWebpackManifest",
+                "newPage": false,
+                "searchKey": "assets.MockLoadWebpackManifest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MockLoadWebpackManifest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MockLoadWebpackManifest func() (*WebpackManifest, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/ui/assets#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/ui/assets#WebpackManifest",
+              "documentation": {
+                "identifier": "WebpackManifest",
+                "newPage": false,
+                "searchKey": "assets.WebpackManifest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WebpackManifest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WebpackManifest struct {\n\t// AppJSBundlePath contains the file name of the main\n\t// Webpack bundle that serves as the entrypoint\n\t// for the webapp code.\n\tAppJSBundlePath string `json:\"app.js\"`\n\t// Main CSS bundle, only present in production.\n\tAppCSSBundlePath *string `json:\"app.css\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/ui/assets#LoadWebpackManifest",
+                    "documentation": {
+                      "identifier": "LoadWebpackManifest",
+                      "newPage": false,
+                      "searchKey": "assets.LoadWebpackManifest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func LoadWebpackManifest() (m *WebpackManifest, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc LoadWebpackManifest() (m *WebpackManifest, err error)\n```\n\nLoadWebpackManifest uses Webpack manifest to extract hashed bundle names to serve to the client, see [https://webpack.js.org/concepts/manifest/](https://webpack.js.org/concepts/manifest/) for details. In dev mode, we load this file from disk on demand, so it doesn't have to exist at compile time, to avoid a build dependency between frontend and client. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

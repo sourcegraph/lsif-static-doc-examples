@@ -1,0 +1,107 @@
+{
+  "pathID": "/enterprise/cmd/repo-updater",
+  "documentation": {
+    "identifier": "repo-updater",
+    "newPage": true,
+    "searchKey": "enterprise/cmd/repo-updater",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "pathID": "/enterprise/cmd/repo-updater/internal"
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/cmd/repo-updater#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/repo-updater#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/repo-updater#enterpriseInit",
+              "documentation": {
+                "identifier": "enterpriseInit",
+                "newPage": false,
+                "searchKey": "main.enterpriseInit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func enterpriseInit(db *sql.DB,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc enterpriseInit(\n\tdb *sql.DB,\n\trepoStore *repos.Store,\n\tkeyring keyring.Ring,\n\tcf *httpcli.Factory,\n\tserver *repoupdater.Server,\n) (debugDumpers []debugserver.Dumper)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/cmd/repo-updater#startBackgroundPermsSync",
+              "documentation": {
+                "identifier": "startBackgroundPermsSync",
+                "newPage": false,
+                "searchKey": "main.startBackgroundPermsSync",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startBackgroundPermsSync(ctx context.Context, syncer *authz.PermsSyncer, db dbutil.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startBackgroundPermsSync(ctx context.Context, syncer *authz.PermsSyncer, db dbutil.DB)\n```\n\nstartBackgroundPermsSync sets up background permissions syncing. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

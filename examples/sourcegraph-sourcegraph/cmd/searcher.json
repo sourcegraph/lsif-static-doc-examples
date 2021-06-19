@@ -1,0 +1,199 @@
+{
+  "pathID": "/cmd/searcher",
+  "documentation": {
+    "identifier": "searcher",
+    "newPage": true,
+    "searchKey": "cmd/searcher",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Command searcher is a simple service which exposes an API to text search a repo at a specific commit. See the searcher package for more information. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/searcher#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/searcher#port",
+              "documentation": {
+                "identifier": "port",
+                "newPage": false,
+                "searchKey": "main.port",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const port"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst port = \"3181\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/searcher#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/searcher#cacheDir",
+              "documentation": {
+                "identifier": "cacheDir",
+                "newPage": false,
+                "searchKey": "main.cacheDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cacheDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cacheDir = env.Get(\"CACHE_DIR\", \"/tmp\", \"directory to store cached archives.\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher#cacheSizeMB",
+              "documentation": {
+                "identifier": "cacheSizeMB",
+                "newPage": false,
+                "searchKey": "main.cacheSizeMB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cacheSizeMB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cacheSizeMB = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/searcher#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/searcher#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/searcher#shutdownOnSIGINT",
+              "documentation": {
+                "identifier": "shutdownOnSIGINT",
+                "newPage": false,
+                "searchKey": "main.shutdownOnSIGINT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shutdownOnSIGINT(s *http.Server)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shutdownOnSIGINT(s *http.Server)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/cmd/searcher/protocol"
+    },
+    {
+      "pathID": "/cmd/searcher/search"
+    },
+    {
+      "pathID": "/cmd/searcher/search_test"
+    }
+  ]
+}

@@ -1,0 +1,326 @@
+{
+  "pathID": "/internal/database/dbtest",
+  "documentation": {
+    "identifier": "dbtest",
+    "newPage": true,
+    "searchKey": "internal/database/dbtest",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package dbtest"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/database/dbtest#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#killClientConnsQuery",
+              "documentation": {
+                "identifier": "killClientConnsQuery",
+                "newPage": false,
+                "searchKey": "dbtest.killClientConnsQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const killClientConnsQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst killClientConnsQuery = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/dbtest#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#rng",
+              "documentation": {
+                "identifier": "rng",
+                "newPage": false,
+                "searchKey": "dbtest.rng",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rng"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rng = ...\n```\n\nUse a shared, locked RNG to avoid issues with multiple concurrent tests getting the same random database number (unlikely, but has been observed). Use crypto/rand.Read() to use an OS source of entropy, since, against all odds, using nanotime was causing conflicts. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#rngLock",
+              "documentation": {
+                "identifier": "rngLock",
+                "newPage": false,
+                "searchKey": "dbtest.rngLock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rngLock"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rngLock sync.Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#templateOnce",
+              "documentation": {
+                "identifier": "templateOnce",
+                "newPage": false,
+                "searchKey": "dbtest.templateOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var templateOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar templateOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/dbtest#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#NewTx",
+              "documentation": {
+                "identifier": "NewTx",
+                "newPage": false,
+                "searchKey": "dbtest.NewTx",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewTx(t testing.TB, db *sql.DB) *sql.Tx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewTx(t testing.TB, db *sql.DB) *sql.Tx\n```\n\nNewTx opens a transaction off of the given database, returning that transaction if an error didn't occur. \n\nAfter opening this transaction, it executes the query \n\n```\nSET CONSTRAINTS ALL DEFERRED\n\n```\nwhich aids in testing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#NewDB",
+              "documentation": {
+                "identifier": "NewDB",
+                "newPage": false,
+                "searchKey": "dbtest.NewDB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewDB(t testing.TB, dsn string) *sql.DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewDB(t testing.TB, dsn string) *sql.DB\n```\n\nNewDB returns a connection to a clean, new temporary testing database with the same schema as Sourcegraph's production Postgres database. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#initTemplateDB",
+              "documentation": {
+                "identifier": "initTemplateDB",
+                "newPage": false,
+                "searchKey": "dbtest.initTemplateDB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initTemplateDB(t testing.TB, config *url.URL)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initTemplateDB(t testing.TB, config *url.URL)\n```\n\ninitTemplateDB creates a template database with a fully migrated schema for the current package. New databases can then do a cheap copy of the migrated schema rather than running the full migration every time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#templateDBName",
+              "documentation": {
+                "identifier": "templateDBName",
+                "newPage": false,
+                "searchKey": "dbtest.templateDBName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func templateDBName() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc templateDBName() string\n```\n\ntemplateDBName returns the name of the template database for the currently running package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#wdHash",
+              "documentation": {
+                "identifier": "wdHash",
+                "newPage": false,
+                "searchKey": "dbtest.wdHash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func wdHash() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc wdHash() string\n```\n\nwdHash returns a hash of the current working directory. This is useful to get a stable identifier for the package running the tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#dbConn",
+              "documentation": {
+                "identifier": "dbConn",
+                "newPage": false,
+                "searchKey": "dbtest.dbConn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dbConn(t testing.TB, cfg *url.URL) *sql.DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dbConn(t testing.TB, cfg *url.URL) *sql.DB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#dbExec",
+              "documentation": {
+                "identifier": "dbExec",
+                "newPage": false,
+                "searchKey": "dbtest.dbExec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dbExec(t testing.TB, db *sql.DB, q string, args ...interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dbExec(t testing.TB, db *sql.DB, q string, args ...interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/dbtest#updateDSNFromEnv",
+              "documentation": {
+                "identifier": "updateDSNFromEnv",
+                "newPage": false,
+                "searchKey": "dbtest.updateDSNFromEnv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateDSNFromEnv(dsn *url.URL)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateDSNFromEnv(dsn *url.URL)\n```\n\nupdateDSNFromEnv updates dsn based on PGXXX environment variables set on the frontend. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

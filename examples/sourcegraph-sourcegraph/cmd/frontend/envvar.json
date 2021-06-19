@@ -1,0 +1,237 @@
+{
+  "pathID": "/cmd/frontend/envvar",
+  "documentation": {
+    "identifier": "envvar",
+    "newPage": true,
+    "searchKey": "cmd/frontend/envvar",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package envvar"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package envvar contains helpers for reading common environment variables. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/envvar#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#HTTPAddrInternal",
+              "documentation": {
+                "identifier": "HTTPAddrInternal",
+                "newPage": false,
+                "searchKey": "envvar.HTTPAddrInternal",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var HTTPAddrInternal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar HTTPAddrInternal = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#sourcegraphDotComMode",
+              "documentation": {
+                "identifier": "sourcegraphDotComMode",
+                "newPage": false,
+                "searchKey": "envvar.sourcegraphDotComMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sourcegraphDotComMode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sourcegraphDotComMode, _ = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#disableProfiler",
+              "documentation": {
+                "identifier": "disableProfiler",
+                "newPage": false,
+                "searchKey": "envvar.disableProfiler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var disableProfiler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar disableProfiler, _ = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#openGraphPreviewServiceURL",
+              "documentation": {
+                "identifier": "openGraphPreviewServiceURL",
+                "newPage": false,
+                "searchKey": "envvar.openGraphPreviewServiceURL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var openGraphPreviewServiceURL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar openGraphPreviewServiceURL = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/frontend/envvar#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#SourcegraphDotComMode",
+              "documentation": {
+                "identifier": "SourcegraphDotComMode",
+                "newPage": false,
+                "searchKey": "envvar.SourcegraphDotComMode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SourcegraphDotComMode() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SourcegraphDotComMode() bool\n```\n\nSourcegraphDotComMode is true if this server is running Sourcegraph.com (solely by checking the SOURCEGRAPHDOTCOM_MODE env var). Sourcegraph.com shows additional marketing and sets up some additional redirects. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#MockSourcegraphDotComMode",
+              "documentation": {
+                "identifier": "MockSourcegraphDotComMode",
+                "newPage": false,
+                "searchKey": "envvar.MockSourcegraphDotComMode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MockSourcegraphDotComMode(value bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MockSourcegraphDotComMode(value bool)\n```\n\nMockSourcegraphDotComMode is used by tests to mock the result of SourcegraphDotComMode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#DisableProfiler",
+              "documentation": {
+                "identifier": "DisableProfiler",
+                "newPage": false,
+                "searchKey": "envvar.DisableProfiler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DisableProfiler() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DisableProfiler() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/envvar#OpenGraphPreviewServiceURL",
+              "documentation": {
+                "identifier": "OpenGraphPreviewServiceURL",
+                "newPage": false,
+                "searchKey": "envvar.OpenGraphPreviewServiceURL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OpenGraphPreviewServiceURL() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OpenGraphPreviewServiceURL() string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,722 @@
+{
+  "pathID": "/internal/database/batch",
+  "documentation": {
+    "identifier": "batch",
+    "newPage": true,
+    "searchKey": "internal/database/batch",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package batch"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/database/batch#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/batch#maxNumParameters",
+              "documentation": {
+                "identifier": "maxNumParameters",
+                "newPage": false,
+                "searchKey": "batch.maxNumParameters",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxNumParameters"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxNumParameters = 32767\n```\n\nmaxNumPostgresParameters is the maximum number of placeholder variables allowed by Postgres in a single insert statement. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/batch#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/batch#querySuffixCache",
+              "documentation": {
+                "identifier": "querySuffixCache",
+                "newPage": false,
+                "searchKey": "batch.querySuffixCache",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var querySuffixCache"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar querySuffixCache = map[int]string{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#querySuffixCacheMutex",
+              "documentation": {
+                "identifier": "querySuffixCacheMutex",
+                "newPage": false,
+                "searchKey": "batch.querySuffixCacheMutex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var querySuffixCacheMutex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar querySuffixCacheMutex sync.Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#setup",
+              "documentation": {
+                "identifier": "setup",
+                "newPage": false,
+                "searchKey": "batch.setup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var setup"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar setup sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/batch#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/batch#Inserter",
+              "documentation": {
+                "identifier": "Inserter",
+                "newPage": false,
+                "searchKey": "batch.Inserter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Inserter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Inserter struct {\n\tdb               dbutil.DB\n\tnumColumns       int\n\tmaxBatchSize     int\n\tbatch            []interface{}\n\tqueryPrefix      string\n\tquerySuffix      string\n\treturningSuffix  string\n\treturningScanner ReturningScanner\n}\n```\n\nInserter allows for bulk updates to a single Postgres table. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/database/batch#NewInserter",
+                    "documentation": {
+                      "identifier": "NewInserter",
+                      "newPage": false,
+                      "searchKey": "batch.NewInserter",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewInserter(ctx context.Context, db dbutil.DB, tableName string, columnNames ...string) *Inserter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewInserter(ctx context.Context, db dbutil.DB, tableName string, columnNames ...string) *Inserter\n```\n\nNewInserter creates a new batch inserter using the given database handle, table name, and column names. For performance and atomicity, handle should be a transaction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/batch#NewInserterWithReturn",
+                    "documentation": {
+                      "identifier": "NewInserterWithReturn",
+                      "newPage": false,
+                      "searchKey": "batch.NewInserterWithReturn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewInserterWithReturn(ctx context.Context,..."
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewInserterWithReturn(\n\tctx context.Context,\n\tdb dbutil.DB,\n\ttableName string,\n\tcolumnNames []string,\n\treturningColumnNames []string,\n\treturningScanner ReturningScanner,\n) *Inserter\n```\n\nNewInserterWithReturn creates a new batch inserter using the given database handle, table name, insert column names, and column names to scan on each inserted row. The given scanner will be called once for each row inserted into the target table. Beware that this function may not be called immediately after a call to Insert as rows are only flushed once the current batch is full (or on explicit flush). For performance and atomicity, handle should be a transaction. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/batch#Inserter.Insert",
+                    "documentation": {
+                      "identifier": "Inserter.Insert",
+                      "newPage": false,
+                      "searchKey": "batch.Inserter.Insert",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *Inserter) Insert(ctx context.Context, values ...interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *Inserter) Insert(ctx context.Context, values ...interface{}) error\n```\n\nInsert submits a single row of values to be inserted on the next flush. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/batch#Inserter.Flush",
+                    "documentation": {
+                      "identifier": "Inserter.Flush",
+                      "newPage": false,
+                      "searchKey": "batch.Inserter.Flush",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *Inserter) Flush(ctx context.Context) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *Inserter) Flush(ctx context.Context) (err error)\n```\n\nFlush ensures that all queued rows are inserted. This method must be invoked at the end of insertion to ensure that all records are flushed to the underlying Execable. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/batch#Inserter.pop",
+                    "documentation": {
+                      "identifier": "Inserter.pop",
+                      "newPage": false,
+                      "searchKey": "batch.Inserter.pop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *Inserter) pop() (batch []interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *Inserter) pop() (batch []interface{})\n```\n\npop removes and returns as many values from the current batch that can be attached to a single insert statement. The returned values are the oldest values submitted to the batch (in order). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/database/batch#Inserter.makeQuery",
+                    "documentation": {
+                      "identifier": "Inserter.makeQuery",
+                      "newPage": false,
+                      "searchKey": "batch.Inserter.makeQuery",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i *Inserter) makeQuery(numValues int) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i *Inserter) makeQuery(numValues int) string\n```\n\nmakeQuery returns a parameterized SQL query that has the given number of values worth of placeholder variables. It is assumed that the number of values is non-zero and also is a multiple of the number of columns of the target table. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#ReturningScanner",
+              "documentation": {
+                "identifier": "ReturningScanner",
+                "newPage": false,
+                "searchKey": "batch.ReturningScanner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReturningScanner func(rows *database/sql.Rows) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReturningScanner func(rows *sql.Rows) error\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/database/batch#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/database/batch#InsertValues",
+              "documentation": {
+                "identifier": "InsertValues",
+                "newPage": false,
+                "searchKey": "batch.InsertValues",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InsertValues(ctx context.Context, db dbutil.DB, tableName string, columnNames []string, values <-chan []interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InsertValues(ctx context.Context, db dbutil.DB, tableName string, columnNames []string, values <-chan []interface{}) error\n```\n\nInsertValues creates a new batch inserter using the given database handle, table name, and column names, then reads from the given channel as if they specify values for a single row. The inserter will be flushed and any error that occurred during insertion or flush will be returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#WithInserter",
+              "documentation": {
+                "identifier": "WithInserter",
+                "newPage": false,
+                "searchKey": "batch.WithInserter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithInserter(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithInserter(\n\tctx context.Context,\n\tdb dbutil.DB,\n\ttableName string,\n\tcolumnNames []string,\n\tf func(inserter *Inserter) error,\n) (err error)\n```\n\nWithInserter creates a new batch inserter using the given database handle, table name, and column names, then calls the given function with the new inserter as a parameter. The inserter will be flushed regardless of the error condition of the given function. Any error returned from the given function will be decorated with the inserter's flush error, if one occurs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#WithInserterWithReturn",
+              "documentation": {
+                "identifier": "WithInserterWithReturn",
+                "newPage": false,
+                "searchKey": "batch.WithInserterWithReturn",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WithInserterWithReturn(ctx context.Context,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WithInserterWithReturn(\n\tctx context.Context,\n\tdb dbutil.DB,\n\ttableName string,\n\tcolumnNames []string,\n\treturningColumnNames []string,\n\treturningScanner ReturningScanner,\n\tf func(inserter *Inserter) error,\n) (err error)\n```\n\nWithInserterWithReturn creates a new batch inserter using the given database handle, table name, column names, returning columns and returning scanner, then calls the given function with the new inserter as a parameter. The inserter will be flushed regardless of the error condition of the given function. Any error returned from the given function will be decorated with the inserter's flush error, if one occurs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#with",
+              "documentation": {
+                "identifier": "with",
+                "newPage": false,
+                "searchKey": "batch.with",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func with(ctx context.Context, inserter *Inserter, f func(inserter *Inserter) error) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc with(ctx context.Context, inserter *Inserter, f func(inserter *Inserter) error) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#getMaxBatchSize",
+              "documentation": {
+                "identifier": "getMaxBatchSize",
+                "newPage": false,
+                "searchKey": "batch.getMaxBatchSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getMaxBatchSize(numColumns int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getMaxBatchSize(numColumns int) int\n```\n\ngetMaxBatchSize returns the number of rows that can be inserted into a single table with the given number of columns via a single insert statement. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#makeQueryPrefix",
+              "documentation": {
+                "identifier": "makeQueryPrefix",
+                "newPage": false,
+                "searchKey": "batch.makeQueryPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeQueryPrefix(tableName string, columnNames []string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeQueryPrefix(tableName string, columnNames []string) string\n```\n\nmakeQueryPrefix creates the prefix of the batch insert statement (up to `VALUES `) using the given table and column names. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#makeQuerySuffix",
+              "documentation": {
+                "identifier": "makeQuerySuffix",
+                "newPage": false,
+                "searchKey": "batch.makeQuerySuffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeQuerySuffix(numColumns int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeQuerySuffix(numColumns int) string\n```\n\nmakeQuerySuffix creates the suffix of the batch insert statement containing the placeholder variables, e.g. `($1,$2,$3),($4,$5,$6),...`. The number of rows will be the maximum number of _full_ rows that can be inserted in one insert statement. \n\nIf a fewer number of rows should be inserted (due to flushing a partial batch), then the caller slice the appropriate nubmer of rows from the beginning of the string. The suffix constructed here is done so with this use case in mind (each placeholder is 5 digits), so finding the right substring index is efficient. \n\nThis method is memoized. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#makeReturningSuffix",
+              "documentation": {
+                "identifier": "makeReturningSuffix",
+                "newPage": false,
+                "searchKey": "batch.makeReturningSuffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeReturningSuffix(columnNames []string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeReturningSuffix(columnNames []string) string\n```\n\nmakeReturningSuffix creates a RETURNING ... clause of the batch insert statement, if any returning column names were supplied to the batcher inserter. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "batch.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#TestBatchInserter",
+              "documentation": {
+                "identifier": "TestBatchInserter",
+                "newPage": false,
+                "searchKey": "batch.TestBatchInserter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBatchInserter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBatchInserter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#TestBatchInserterWithReturn",
+              "documentation": {
+                "identifier": "TestBatchInserterWithReturn",
+                "newPage": false,
+                "searchKey": "batch.TestBatchInserterWithReturn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBatchInserterWithReturn(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBatchInserterWithReturn(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#BenchmarkBatchInserter",
+              "documentation": {
+                "identifier": "BenchmarkBatchInserter",
+                "newPage": false,
+                "searchKey": "batch.BenchmarkBatchInserter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkBatchInserter(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkBatchInserter(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#BenchmarkBatchInserterLargePayload",
+              "documentation": {
+                "identifier": "BenchmarkBatchInserterLargePayload",
+                "newPage": false,
+                "searchKey": "batch.BenchmarkBatchInserterLargePayload",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkBatchInserterLargePayload(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkBatchInserterLargePayload(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#setupTestTable",
+              "documentation": {
+                "identifier": "setupTestTable",
+                "newPage": false,
+                "searchKey": "batch.setupTestTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setupTestTable(t testing.TB, db *sql.DB)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setupTestTable(t testing.TB, db *sql.DB)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#makeTestValues",
+              "documentation": {
+                "identifier": "makeTestValues",
+                "newPage": false,
+                "searchKey": "batch.makeTestValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeTestValues(tableSizeFactor, payloadSize int) [][]interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeTestValues(tableSizeFactor, payloadSize int) [][]interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#makePayload",
+              "documentation": {
+                "identifier": "makePayload",
+                "newPage": false,
+                "searchKey": "batch.makePayload",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makePayload(size int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makePayload(size int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#testInsert",
+              "documentation": {
+                "identifier": "testInsert",
+                "newPage": false,
+                "searchKey": "batch.testInsert",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testInsert(t testing.TB, db *sql.DB, expectedValues [][]interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testInsert(t testing.TB, db *sql.DB, expectedValues [][]interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/database/batch#testInsertWithReturn",
+              "documentation": {
+                "identifier": "testInsertWithReturn",
+                "newPage": false,
+                "searchKey": "batch.testInsertWithReturn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testInsertWithReturn(t testing.TB, db *sql.DB, expectedValues [][]interface{}) (insertedIDs []int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testInsertWithReturn(t testing.TB, db *sql.DB, expectedValues [][]interface{}) (insertedIDs []int)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

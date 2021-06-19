@@ -1,0 +1,143 @@
+{
+  "pathID": "/internal/repotrackutil",
+  "documentation": {
+    "identifier": "repotrackutil",
+    "newPage": true,
+    "searchKey": "internal/repotrackutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package repotrackutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/repotrackutil#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/repotrackutil#trackedRepo",
+              "documentation": {
+                "identifier": "trackedRepo",
+                "newPage": false,
+                "searchKey": "repotrackutil.trackedRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var trackedRepo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar trackedRepo = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repotrackutil#trackedRepoRe",
+              "documentation": {
+                "identifier": "trackedRepoRe",
+                "newPage": false,
+                "searchKey": "repotrackutil.trackedRepoRe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var trackedRepoRe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar trackedRepoRe = lazyregexp.New(`\\b(` + strings.Join(trackedRepo, \"|\") + `)\\b`)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/repotrackutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/repotrackutil#GetTrackedRepo",
+              "documentation": {
+                "identifier": "GetTrackedRepo",
+                "newPage": false,
+                "searchKey": "repotrackutil.GetTrackedRepo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GetTrackedRepo(repoPath api.RepoName) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GetTrackedRepo(repoPath api.RepoName) string\n```\n\nGetTrackedRepo guesses which repo a request URL path is for. It only looks at a certain subset of repos for its guess. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/repotrackutil#TestGetTrackedRepo",
+              "documentation": {
+                "identifier": "TestGetTrackedRepo",
+                "newPage": false,
+                "searchKey": "repotrackutil.TestGetTrackedRepo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetTrackedRepo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetTrackedRepo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

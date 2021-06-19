@@ -1,0 +1,82 @@
+{
+  "pathID": "/cmd/frontend/internal/cloneurls",
+  "documentation": {
+    "identifier": "cloneurls",
+    "newPage": true,
+    "searchKey": "cmd/frontend/internal/cloneurls",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package cloneurls"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/frontend/internal/cloneurls#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cloneurls#ReposourceCloneURLToRepoName",
+              "documentation": {
+                "identifier": "ReposourceCloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "cloneurls.ReposourceCloneURLToRepoName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReposourceCloneURLToRepoName(ctx context.Context, cloneURL string) (repoName api.RepoName, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReposourceCloneURLToRepoName(ctx context.Context, cloneURL string) (repoName api.RepoName, err error)\n```\n\nReposourceCloneURLToRepoName maps a Git clone URL (format documented here: [https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a](https://git-scm.com/docs/git-clone#_git_urls_a_id_urls_a)) to the corresponding repo name if there exists a code host configuration that matches the clone URL. Implicitly, it includes a code host configuration for github.com, even if one is not explicitly specified. Returns the empty string and nil error if a matching code host could not be found. This function does not actually check the code host to see if the repository actually exists. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/frontend/internal/cloneurls#TestReposourceCloneURLToRepoName",
+              "documentation": {
+                "identifier": "TestReposourceCloneURLToRepoName",
+                "newPage": false,
+                "searchKey": "cloneurls.TestReposourceCloneURLToRepoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReposourceCloneURLToRepoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReposourceCloneURLToRepoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

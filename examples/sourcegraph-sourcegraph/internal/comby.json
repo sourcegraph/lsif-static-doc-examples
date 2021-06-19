@@ -1,0 +1,850 @@
+{
+  "pathID": "/internal/comby",
+  "documentation": {
+    "identifier": "comby",
+    "newPage": true,
+    "searchKey": "internal/comby",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package comby"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/comby#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/comby#combyPath",
+              "documentation": {
+                "identifier": "combyPath",
+                "newPage": false,
+                "searchKey": "comby.combyPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const combyPath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst combyPath = \"comby\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/comby#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/comby#MatchHoleRegexp",
+              "documentation": {
+                "identifier": "MatchHoleRegexp",
+                "newPage": false,
+                "searchKey": "comby.MatchHoleRegexp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MatchHoleRegexp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MatchHoleRegexp = lazyregexp.New(splitOnHolesPattern())\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#matchRegexpPattern",
+              "documentation": {
+                "identifier": "matchRegexpPattern",
+                "newPage": false,
+                "searchKey": "comby.matchRegexpPattern",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var matchRegexpPattern"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar matchRegexpPattern = lazyregexp.New(`:\\[(\\w+)?~(.*)\\]`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#onMatchWhitespace",
+              "documentation": {
+                "identifier": "onMatchWhitespace",
+                "newPage": false,
+                "searchKey": "comby.onMatchWhitespace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var onMatchWhitespace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar onMatchWhitespace = lazyregexp.New(`[\\s]+`)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/comby#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/comby#Term",
+              "documentation": {
+                "identifier": "Term",
+                "newPage": false,
+                "searchKey": "comby.Term",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Term interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Term interface {\n\tterm()\n\tString() string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#Literal",
+              "documentation": {
+                "identifier": "Literal",
+                "newPage": false,
+                "searchKey": "comby.Literal",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Literal string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Literal string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/comby#Literal.term",
+                    "documentation": {
+                      "identifier": "Literal.term",
+                      "newPage": false,
+                      "searchKey": "comby.Literal.term",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (Literal) term()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (Literal) term()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/comby#Literal.String",
+                    "documentation": {
+                      "identifier": "Literal.String",
+                      "newPage": false,
+                      "searchKey": "comby.Literal.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t Literal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t Literal) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#Hole",
+              "documentation": {
+                "identifier": "Hole",
+                "newPage": false,
+                "searchKey": "comby.Hole",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Hole string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Hole string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/comby#Hole.term",
+                    "documentation": {
+                      "identifier": "Hole.term",
+                      "newPage": false,
+                      "searchKey": "comby.Hole.term",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (Hole) term()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (Hole) term()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/comby#Hole.String",
+                    "documentation": {
+                      "identifier": "Hole.String",
+                      "newPage": false,
+                      "searchKey": "comby.Hole.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t Hole) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t Hole) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#Input",
+              "documentation": {
+                "identifier": "Input",
+                "newPage": false,
+                "searchKey": "comby.Input",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Input interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Input interface {\n\tValue()\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#ZipPath",
+              "documentation": {
+                "identifier": "ZipPath",
+                "newPage": false,
+                "searchKey": "comby.ZipPath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ZipPath string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ZipPath string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/comby#ZipPath.Value",
+                    "documentation": {
+                      "identifier": "ZipPath.Value",
+                      "newPage": false,
+                      "searchKey": "comby.ZipPath.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ZipPath) Value()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ZipPath) Value()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#DirPath",
+              "documentation": {
+                "identifier": "DirPath",
+                "newPage": false,
+                "searchKey": "comby.DirPath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DirPath string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DirPath string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/comby#DirPath.Value",
+                    "documentation": {
+                      "identifier": "DirPath.Value",
+                      "newPage": false,
+                      "searchKey": "comby.DirPath.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (DirPath) Value()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (DirPath) Value()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#Args",
+              "documentation": {
+                "identifier": "Args",
+                "newPage": false,
+                "searchKey": "comby.Args",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Args struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Args struct {\n\t// An Input to process (either a path to a directory or zip file)\n\tInput\n\n\t// A template pattern that expresses what to match\n\tMatchTemplate string\n\n\t// A rule that places constraints on matching or rewriting\n\tRule string\n\n\t// A template pattern that expresses how matches should be rewritten\n\tRewriteTemplate string\n\n\t// Matcher is a file extension (e.g., '.go') which denotes which language parser to use\n\tMatcher string\n\n\t// If MatchOnly is set to true, then comby will only find matches and not perform replacement\n\tMatchOnly bool\n\n\t// FilePatterns is a list of file patterns (suffixes) to filter and process\n\tFilePatterns []string\n\n\t// NumWorkers is the number of worker processes to fork in parallel\n\tNumWorkers int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/comby#Args.String",
+                    "documentation": {
+                      "identifier": "Args.String",
+                      "newPage": false,
+                      "searchKey": "comby.Args.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (args Args) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (args Args) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#Location",
+              "documentation": {
+                "identifier": "Location",
+                "newPage": false,
+                "searchKey": "comby.Location",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Location struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Location struct {\n\tOffset int `json:\"offset\"`\n\tLine   int `json:\"line\"`\n\tColumn int `json:\"column\"`\n}\n```\n\nLocation is the location in a file \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#Range",
+              "documentation": {
+                "identifier": "Range",
+                "newPage": false,
+                "searchKey": "comby.Range",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Range struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Range struct {\n\tStart Location `json:\"start\"`\n\tEnd   Location `json:\"end\"`\n}\n```\n\nRange is a range of start location to end location \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#Match",
+              "documentation": {
+                "identifier": "Match",
+                "newPage": false,
+                "searchKey": "comby.Match",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Match struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Match struct {\n\tRange   Range  `json:\"range\"`\n\tMatched string `json:\"matched\"`\n}\n```\n\nMatch represents a range of matched characters and the matched content \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#FileMatch",
+              "documentation": {
+                "identifier": "FileMatch",
+                "newPage": false,
+                "searchKey": "comby.FileMatch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileMatch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileMatch struct {\n\tURI     string  `json:\"uri\"`\n\tMatches []Match `json:\"matches\"`\n}\n```\n\nFileMatch represents all the matches in a single file \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#FileDiff",
+              "documentation": {
+                "identifier": "FileDiff",
+                "newPage": false,
+                "searchKey": "comby.FileDiff",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileDiff struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileDiff struct {\n\tURI  string `json:\"uri\"`\n\tDiff string `json:\"diff\"`\n}\n```\n\nFileDiff represents a diff for a file \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/comby#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/comby#exists",
+              "documentation": {
+                "identifier": "exists",
+                "newPage": false,
+                "searchKey": "comby.exists",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func exists() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc exists() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#rawArgs",
+              "documentation": {
+                "identifier": "rawArgs",
+                "newPage": false,
+                "searchKey": "comby.rawArgs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func rawArgs(args Args) (rawArgs []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc rawArgs(args Args) (rawArgs []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#waitForCompletion",
+              "documentation": {
+                "identifier": "waitForCompletion",
+                "newPage": false,
+                "searchKey": "comby.waitForCompletion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func waitForCompletion(cmd *exec.Cmd, stdout, stderr io.ReadCloser, w io.Writer) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc waitForCompletion(cmd *exec.Cmd, stdout, stderr io.ReadCloser, w io.Writer) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#kill",
+              "documentation": {
+                "identifier": "kill",
+                "newPage": false,
+                "searchKey": "comby.kill",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func kill(pid int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc kill(pid int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#PipeTo",
+              "documentation": {
+                "identifier": "PipeTo",
+                "newPage": false,
+                "searchKey": "comby.PipeTo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PipeTo(ctx context.Context, args Args, w io.Writer) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PipeTo(ctx context.Context, args Args, w io.Writer) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#Matches",
+              "documentation": {
+                "identifier": "Matches",
+                "newPage": false,
+                "searchKey": "comby.Matches",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Matches(ctx context.Context, args Args) (matches []FileMatch, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Matches(ctx context.Context, args Args) (matches []FileMatch, err error)\n```\n\nMatches returns all matches in all files for which comby finds matches. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#splitOnHolesPattern",
+              "documentation": {
+                "identifier": "splitOnHolesPattern",
+                "newPage": false,
+                "searchKey": "comby.splitOnHolesPattern",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func splitOnHolesPattern() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc splitOnHolesPattern() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#parseTemplate",
+              "documentation": {
+                "identifier": "parseTemplate",
+                "newPage": false,
+                "searchKey": "comby.parseTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseTemplate(buf []byte) []Term"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseTemplate(buf []byte) []Term\n```\n\nparseTemplate parses a comby pattern to a list of Terms where a Term is either a literal or hole metasyntax. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#StructuralPatToRegexpQuery",
+              "documentation": {
+                "identifier": "StructuralPatToRegexpQuery",
+                "newPage": false,
+                "searchKey": "comby.StructuralPatToRegexpQuery",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StructuralPatToRegexpQuery(pattern string, shortcircuit bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StructuralPatToRegexpQuery(pattern string, shortcircuit bool) string\n```\n\nStructuralPatToRegexpQuery converts a comby pattern to an approximate regular expression query. It converts whitespace in the pattern so that content across newlines can be matched in the index. As an incomplete approximation, we use the regex pattern .*? to scan ahead. A shortcircuit option returns a regexp query that may find true matches faster, but may miss all possible matches. \n\nExample: \"ParseInt(:[args]) if err != nil\" -> \"ParseInt(.*)\\s+if\\s+err!=\\s+nil\" \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#TestMatchesUnmarshalling",
+              "documentation": {
+                "identifier": "TestMatchesUnmarshalling",
+                "newPage": false,
+                "searchKey": "comby.TestMatchesUnmarshalling",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatchesUnmarshalling(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatchesUnmarshalling(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#TestMatchesInZip",
+              "documentation": {
+                "identifier": "TestMatchesInZip",
+                "newPage": false,
+                "searchKey": "comby.TestMatchesInZip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatchesInZip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatchesInZip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/comby#TestStructuralPatToRegexpQuery",
+              "documentation": {
+                "identifier": "TestStructuralPatToRegexpQuery",
+                "newPage": false,
+                "searchKey": "comby.TestStructuralPatToRegexpQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStructuralPatToRegexpQuery(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStructuralPatToRegexpQuery(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "pathID": "/cmd/symbols/internal/sqliteutil",
+  "documentation": {
+    "identifier": "sqliteutil",
+    "newPage": true,
+    "searchKey": "cmd/symbols/internal/sqliteutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package sqliteutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/cmd/symbols/internal/sqliteutil#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/sqliteutil#libSqlite3Pcre",
+              "documentation": {
+                "identifier": "libSqlite3Pcre",
+                "newPage": false,
+                "searchKey": "sqliteutil.libSqlite3Pcre",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var libSqlite3Pcre"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar libSqlite3Pcre = env.Get(\"LIBSQLITE3_PCRE\", \"\", \"path to the libsqlite3-pcre library\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/symbols/internal/sqliteutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/sqliteutil#MustRegisterSqlite3WithPcre",
+              "documentation": {
+                "identifier": "MustRegisterSqlite3WithPcre",
+                "newPage": false,
+                "searchKey": "sqliteutil.MustRegisterSqlite3WithPcre",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustRegisterSqlite3WithPcre()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustRegisterSqlite3WithPcre()\n```\n\nMustRegisterSqlite3WithPcre registers a sqlite3 driver with PCRE support and panics if it can't. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols/internal/sqliteutil#SetLocalLibpath",
+              "documentation": {
+                "identifier": "SetLocalLibpath",
+                "newPage": false,
+                "searchKey": "sqliteutil.SetLocalLibpath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetLocalLibpath()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetLocalLibpath()\n```\n\nSetLocalLibpath sets the path to the LIBSQLITE3_PCRE shared library. This should be called only in test environments. Production environments must require that the envvar be set explicitly. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

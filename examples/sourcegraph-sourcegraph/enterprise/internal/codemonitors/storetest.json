@@ -1,0 +1,511 @@
+{
+  "pathID": "/enterprise/internal/codemonitors/storetest",
+  "documentation": {
+    "identifier": "storetest",
+    "newPage": true,
+    "searchKey": "enterprise/internal/codemonitors/storetest",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package storetest"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/storetest#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#TriggerJobs",
+              "documentation": {
+                "identifier": "TriggerJobs",
+                "newPage": false,
+                "searchKey": "storetest.TriggerJobs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TriggerJobs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TriggerJobs JobTable = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#ActionJobs",
+              "documentation": {
+                "identifier": "ActionJobs",
+                "newPage": false,
+                "searchKey": "storetest.ActionJobs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ActionJobs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ActionJobs\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#Queued",
+              "documentation": {
+                "identifier": "Queued",
+                "newPage": false,
+                "searchKey": "storetest.Queued",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Queued"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Queued JobState = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#Processing",
+              "documentation": {
+                "identifier": "Processing",
+                "newPage": false,
+                "searchKey": "storetest.Processing",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Processing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Processing\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#Completed",
+              "documentation": {
+                "identifier": "Completed",
+                "newPage": false,
+                "searchKey": "storetest.Completed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Completed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Completed\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#Errored",
+              "documentation": {
+                "identifier": "Errored",
+                "newPage": false,
+                "searchKey": "storetest.Errored",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Errored"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Errored\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#Failed",
+              "documentation": {
+                "identifier": "Failed",
+                "newPage": false,
+                "searchKey": "storetest.Failed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Failed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Failed\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#setStatusFmtStr",
+              "documentation": {
+                "identifier": "setStatusFmtStr",
+                "newPage": false,
+                "searchKey": "storetest.setStatusFmtStr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const setStatusFmtStr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst setStatusFmtStr = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#testQuery",
+              "documentation": {
+                "identifier": "testQuery",
+                "newPage": false,
+                "searchKey": "storetest.testQuery",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testQuery"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testQuery = \"repo:github\\\\.com/sourcegraph/sourcegraph func type:diff patternType:literal\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#testDescription",
+              "documentation": {
+                "identifier": "testDescription",
+                "newPage": false,
+                "searchKey": "storetest.testDescription",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testDescription"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testDescription = \"test description\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/storetest#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#JobTable",
+              "documentation": {
+                "identifier": "JobTable",
+                "newPage": false,
+                "searchKey": "storetest.JobTable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type JobTable int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype JobTable int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#JobState",
+              "documentation": {
+                "identifier": "JobState",
+                "newPage": false,
+                "searchKey": "storetest.JobState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type JobState int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype JobState int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#TestStore",
+              "documentation": {
+                "identifier": "TestStore",
+                "newPage": false,
+                "searchKey": "storetest.TestStore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestStore struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestStore struct {\n\t*codemonitors.Store\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/storetest#NewTestStoreWithStore",
+                    "documentation": {
+                      "identifier": "NewTestStoreWithStore",
+                      "newPage": false,
+                      "searchKey": "storetest.NewTestStoreWithStore",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewTestStoreWithStore(t *testing.T, store *codemonitors.Store) (context.Context, *TestStore)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewTestStoreWithStore(t *testing.T, store *codemonitors.Store) (context.Context, *TestStore)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/storetest#TestStore.SetJobStatus",
+                    "documentation": {
+                      "identifier": "TestStore.SetJobStatus",
+                      "newPage": false,
+                      "searchKey": "storetest.TestStore.SetJobStatus",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *TestStore) SetJobStatus(ctx context.Context, table JobTable, state JobState, id int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *TestStore) SetJobStatus(ctx context.Context, table JobTable, state JobState, id int) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/enterprise/internal/codemonitors/storetest#TestStore.InsertTestMonitor",
+                    "documentation": {
+                      "identifier": "TestStore.InsertTestMonitor",
+                      "newPage": false,
+                      "searchKey": "storetest.TestStore.InsertTestMonitor",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *TestStore) InsertTestMonitor(ctx context.Context, t *testing.T) (*codemonitors.Monitor, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *TestStore) InsertTestMonitor(ctx context.Context, t *testing.T) (*codemonitors.Monitor, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/enterprise/internal/codemonitors/storetest#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#quote",
+              "documentation": {
+                "identifier": "quote",
+                "newPage": false,
+                "searchKey": "storetest.quote",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quote(s string) *sqlf.Query"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quote(s string) *sqlf.Query\n```\n\nquote wraps the given string in a *sqlf.Query so that it is not passed to the database as a parameter. It is necessary to quote things such as table names, columns, and other expressions that are not simple values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "storetest.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#NewTestUser",
+              "documentation": {
+                "identifier": "NewTestUser",
+                "newPage": false,
+                "searchKey": "storetest.NewTestUser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewTestUser(ctx context.Context, t *testing.T) (name string, id int32, namespace graphql.ID, userContext context.Context)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewTestUser(ctx context.Context, t *testing.T) (name string, id int32, namespace graphql.ID, userContext context.Context)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/enterprise/internal/codemonitors/storetest#insertTestUser",
+              "documentation": {
+                "identifier": "insertTestUser",
+                "newPage": false,
+                "searchKey": "storetest.insertTestUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc insertTestUser(t *testing.T, db *sql.DB, name string, isAdmin bool) (userID int32)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

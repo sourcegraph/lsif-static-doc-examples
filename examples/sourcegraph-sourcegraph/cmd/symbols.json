@@ -1,0 +1,130 @@
+{
+  "pathID": "/cmd/symbols",
+  "documentation": {
+    "identifier": "symbols",
+    "newPage": true,
+    "searchKey": "cmd/symbols",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package main"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Command symbols is a service that serves code symbols (functions, variables, etc.) from a repository at a specific commit. \n\n"
+  },
+  "children": [
+    {
+      "pathID": "/cmd/symbols/internal"
+    },
+    {
+      "node": {
+        "pathID": "/cmd/symbols#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols#port",
+              "documentation": {
+                "identifier": "port",
+                "newPage": false,
+                "searchKey": "main.port",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const port"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst port = \"3184\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/cmd/symbols#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/cmd/symbols#main",
+              "documentation": {
+                "identifier": "main",
+                "newPage": false,
+                "searchKey": "main.main",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func main()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc main()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/cmd/symbols#shutdownOnSIGINT",
+              "documentation": {
+                "identifier": "shutdownOnSIGINT",
+                "newPage": false,
+                "searchKey": "main.shutdownOnSIGINT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shutdownOnSIGINT(s *http.Server)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shutdownOnSIGINT(s *http.Server)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

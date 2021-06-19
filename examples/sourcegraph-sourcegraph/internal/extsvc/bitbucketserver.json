@@ -1,0 +1,3610 @@
+{
+  "pathID": "/internal/extsvc/bitbucketserver",
+  "documentation": {
+    "identifier": "bitbucketserver",
+    "newPage": true,
+    "searchKey": "internal/extsvc/bitbucketserver",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package bitbucketserver"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/extsvc/bitbucketserver#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#defaultRateLimit",
+              "documentation": {
+                "identifier": "defaultRateLimit",
+                "newPage": false,
+                "searchKey": "bitbucketserver.defaultRateLimit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultRateLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultRateLimit = rate.Limit(8) // 480/min or 28,800/hr\n\n```\n\nThese fields define the self-imposed Bitbucket rate limit (since Bitbucket Server does not have a concept of rate limiting in HTTP response headers). \n\nSee [https://godoc.org/golang.org/x/time/rate#Limiter](https://godoc.org/golang.org/x/time/rate#Limiter) for an explanation of these fields. \n\nWe chose the limits here based on the fact that Sourcegraph is a heavy consumer of the Bitbucket Server API and that a large customer had reported to us their Bitbucket instance receives ~100 req/s so it seems reasonable for us to (at max) consume ~8 req/s. \n\nNote that, for comparison, Bitbucket Cloud restricts \"List all repositories\" requests (which are a good portion of our requests) to 1,000/hr, and they restrict \"List a user or team's repositories\" requests (which are roughly equal to our repository lookup requests) to 1,000/hr. We perform a list repositories request for every 1000 repositories on Bitbucket every 1m by default, so for someone with 20,000 Bitbucket repositories we need 20,000/1000 requests per minute (1200/hr) + overhead for repository lookup requests by users, and requests for identifying which repositories a user has access to (if authorization is in use) and requests for changeset synchronization if it is in use. \n\nThese are our default values, they can be changed in configuration \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#defaultRateLimitBurst",
+              "documentation": {
+                "identifier": "defaultRateLimitBurst",
+                "newPage": false,
+                "searchKey": "bitbucketserver.defaultRateLimitBurst",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const defaultRateLimitBurst"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst defaultRateLimitBurst = 500\n```\n\nThese fields define the self-imposed Bitbucket rate limit (since Bitbucket Server does not have a concept of rate limiting in HTTP response headers). \n\nSee [https://godoc.org/golang.org/x/time/rate#Limiter](https://godoc.org/golang.org/x/time/rate#Limiter) for an explanation of these fields. \n\nWe chose the limits here based on the fact that Sourcegraph is a heavy consumer of the Bitbucket Server API and that a large customer had reported to us their Bitbucket instance receives ~100 req/s so it seems reasonable for us to (at max) consume ~8 req/s. \n\nNote that, for comparison, Bitbucket Cloud restricts \"List all repositories\" requests (which are a good portion of our requests) to 1,000/hr, and they restrict \"List a user or team's repositories\" requests (which are roughly equal to our repository lookup requests) to 1,000/hr. We perform a list repositories request for every 1000 repositories on Bitbucket every 1m by default, so for someone with 20,000 Bitbucket repositories we need 20,000/1000 requests per minute (1200/hr) + overhead for repository lookup requests by users, and requests for identifying which repositories a user has access to (if authorization is in use) and requests for changeset synchronization if it is in use. \n\nThese are our default values, they can be changed in configuration \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#userFiltersLimit",
+              "documentation": {
+                "identifier": "userFiltersLimit",
+                "newPage": false,
+                "searchKey": "bitbucketserver.userFiltersLimit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const userFiltersLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst userFiltersLimit = 50\n```\n\nuserFiltersLimit defines the maximum number of UserFilters that can be passed to a single Client.Users call. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermSysAdmin",
+              "documentation": {
+                "identifier": "PermSysAdmin",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermSysAdmin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermSysAdmin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermSysAdmin Perm = \"SYS_ADMIN\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermAdmin",
+              "documentation": {
+                "identifier": "PermAdmin",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermAdmin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermAdmin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermAdmin Perm = \"ADMIN\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermLicensedUser",
+              "documentation": {
+                "identifier": "PermLicensedUser",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermLicensedUser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermLicensedUser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermLicensedUser Perm = \"LICENSED_USER\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermProjectCreate",
+              "documentation": {
+                "identifier": "PermProjectCreate",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermProjectCreate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermProjectCreate"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermProjectCreate Perm = \"PROJECT_CREATE\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermProjectAdmin",
+              "documentation": {
+                "identifier": "PermProjectAdmin",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermProjectAdmin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermProjectAdmin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermProjectAdmin Perm = \"PROJECT_ADMIN\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermProjectWrite",
+              "documentation": {
+                "identifier": "PermProjectWrite",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermProjectWrite",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermProjectWrite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermProjectWrite Perm = \"PROJECT_WRITE\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermProjectView",
+              "documentation": {
+                "identifier": "PermProjectView",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermProjectView",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermProjectView"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermProjectView Perm = \"PROJECT_VIEW\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermProjectRead",
+              "documentation": {
+                "identifier": "PermProjectRead",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermProjectRead",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermProjectRead"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermProjectRead Perm = \"PROJECT_READ\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermRepoAdmin",
+              "documentation": {
+                "identifier": "PermRepoAdmin",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermRepoAdmin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermRepoAdmin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermRepoAdmin Perm = \"REPO_ADMIN\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermRepoRead",
+              "documentation": {
+                "identifier": "PermRepoRead",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermRepoRead",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermRepoRead"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermRepoRead Perm = \"REPO_READ\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermRepoWrite",
+              "documentation": {
+                "identifier": "PermRepoWrite",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermRepoWrite",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PermRepoWrite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PermRepoWrite Perm = \"REPO_WRITE\"\n```\n\nPermission constants. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ApprovedActivityAction",
+              "documentation": {
+                "identifier": "ApprovedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ApprovedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ApprovedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ApprovedActivityAction ActivityAction = \"APPROVED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#UnapprovedActivityAction",
+              "documentation": {
+                "identifier": "UnapprovedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.UnapprovedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UnapprovedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UnapprovedActivityAction ActivityAction = \"UNAPPROVED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#DeclinedActivityAction",
+              "documentation": {
+                "identifier": "DeclinedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.DeclinedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DeclinedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DeclinedActivityAction ActivityAction = \"DECLINED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ReviewedActivityAction",
+              "documentation": {
+                "identifier": "ReviewedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ReviewedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReviewedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReviewedActivityAction ActivityAction = \"REVIEWED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#OpenedActivityAction",
+              "documentation": {
+                "identifier": "OpenedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.OpenedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const OpenedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst OpenedActivityAction ActivityAction = \"OPENED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ReopenedActivityAction",
+              "documentation": {
+                "identifier": "ReopenedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ReopenedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReopenedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReopenedActivityAction ActivityAction = \"REOPENED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#RescopedActivityAction",
+              "documentation": {
+                "identifier": "RescopedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.RescopedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RescopedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RescopedActivityAction ActivityAction = \"RESCOPED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#UpdatedActivityAction",
+              "documentation": {
+                "identifier": "UpdatedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.UpdatedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UpdatedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UpdatedActivityAction ActivityAction = \"UPDATED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#CommentedActivityAction",
+              "documentation": {
+                "identifier": "CommentedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.CommentedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CommentedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CommentedActivityAction ActivityAction = \"COMMENTED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#MergedActivityAction",
+              "documentation": {
+                "identifier": "MergedActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.MergedActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MergedActivityAction"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MergedActivityAction ActivityAction = \"MERGED\"\n```\n\nKnown ActivityActions \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#bitbucketDuplicatePRException",
+              "documentation": {
+                "identifier": "bitbucketDuplicatePRException",
+                "newPage": false,
+                "searchKey": "bitbucketserver.bitbucketDuplicatePRException",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bitbucketDuplicatePRException"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bitbucketDuplicatePRException = \"com.atlassian.bitbucket.pull.DuplicatePullRequestException\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#bitbucketNoSuchLabelException",
+              "documentation": {
+                "identifier": "bitbucketNoSuchLabelException",
+                "newPage": false,
+                "searchKey": "bitbucketserver.bitbucketNoSuchLabelException",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bitbucketNoSuchLabelException"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bitbucketNoSuchLabelException = \"com.atlassian.bitbucket.label.NoSuchLabelException\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#bitbucketNoSuchPullRequestException",
+              "documentation": {
+                "identifier": "bitbucketNoSuchPullRequestException",
+                "newPage": false,
+                "searchKey": "bitbucketserver.bitbucketNoSuchPullRequestException",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bitbucketNoSuchPullRequestException"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bitbucketNoSuchPullRequestException = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#eventTypeHeader",
+              "documentation": {
+                "identifier": "eventTypeHeader",
+                "newPage": false,
+                "searchKey": "bitbucketserver.eventTypeHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const eventTypeHeader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst eventTypeHeader = \"X-Event-Key\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/bitbucketserver#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#requestCounter",
+              "documentation": {
+                "identifier": "requestCounter",
+                "newPage": false,
+                "searchKey": "bitbucketserver.requestCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var requestCounter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar requestCounter = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ErrUserFiltersLimit",
+              "documentation": {
+                "identifier": "ErrUserFiltersLimit",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ErrUserFiltersLimit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrUserFiltersLimit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrUserFiltersLimit = errors.Errorf(\"maximum of %d user filters exceeded\", userFiltersLimit)\n```\n\nErrUserFiltersLimit is returned by Client.Users when the UserFiltersLimit is exceeded. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ErrPullRequestNotFound",
+              "documentation": {
+                "identifier": "ErrPullRequestNotFound",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ErrPullRequestNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrPullRequestNotFound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrPullRequestNotFound = errors.New(\"pull request not found\")\n```\n\nErrPullRequestNotFound is returned by LoadPullRequest when the pull request has been deleted on upstream, or never existed. It will NOT be thrown, if it can't be determined whether the pull request exists, because the credential used cannot view the repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ErrNotMergeable",
+              "documentation": {
+                "identifier": "ErrNotMergeable",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ErrNotMergeable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotMergeable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotMergeable = errors.New(\"pull request cannot be merged\")\n```\n\nErrNotMergeable is returned by MergePullRequest when the pull request failed to merge, because a precondition is not met. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#normalizer",
+              "documentation": {
+                "identifier": "normalizer",
+                "newPage": false,
+                "searchKey": "bitbucketserver.normalizer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var normalizer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar normalizer = lazyregexp.New(\"[^A-Za-z0-9-]+\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#update",
+              "documentation": {
+                "identifier": "update",
+                "newPage": false,
+                "searchKey": "bitbucketserver.update",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var update"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar update = flag.Bool(\"update\", false, \"update testdata\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/bitbucketserver#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#SudoableOAuthClient",
+              "documentation": {
+                "identifier": "SudoableOAuthClient",
+                "newPage": false,
+                "searchKey": "bitbucketserver.SudoableOAuthClient",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SudoableOAuthClient struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SudoableOAuthClient struct {\n\tClient   auth.OAuthClient\n\tUsername string\n}\n```\n\nSudoableOAuthClient extends the generic OAuthClient type to allow for an optional username to be set, which will be attached to the request as a user_id query param if set. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#newSudoableOAuthClient",
+                    "documentation": {
+                      "identifier": "newSudoableOAuthClient",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.newSudoableOAuthClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newSudoableOAuthClient(token, secret, username string) *SudoableOAuthClient"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newSudoableOAuthClient(token, secret, username string) *SudoableOAuthClient\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#SudoableOAuthClient.Authenticate",
+                    "documentation": {
+                      "identifier": "SudoableOAuthClient.Authenticate",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.SudoableOAuthClient.Authenticate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *SudoableOAuthClient) Authenticate(req *http.Request) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *SudoableOAuthClient) Authenticate(req *http.Request) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#SudoableOAuthClient.Hash",
+                    "documentation": {
+                      "identifier": "SudoableOAuthClient.Hash",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.SudoableOAuthClient.Hash",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *SudoableOAuthClient) Hash() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *SudoableOAuthClient) Hash() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\t// HTTP Client used to communicate with the API\n\thttpClient httpcli.Doer\n\n\t// URL is the base URL of Bitbucket Server.\n\tURL *url.URL\n\n\t// Auth is the authentication method used when accessing the server.\n\t// Supported types are:\n\t// * auth.OAuthBearerToken for a personal access token; see also\n\t//   https://bitbucket.example.com/plugins/servlet/access-tokens/manage\n\t// * auth.BasicAuth for a username and password combination. Typically\n\t//   these are only used when the server doesn't support personal access\n\t//   tokens (such as Bitbucket Server 5.4 and older).\n\t// * SudoableClient for an OAuth 1 client used to authenticate requests.\n\t//   This is generally set using SetOAuth.\n\tAuth auth.Authenticator\n\n\t// RateLimit is the self-imposed rate limiter (since Bitbucket does not have a concept\n\t// of rate limiting in HTTP response headers).\n\tRateLimit *rate.Limiter\n}\n```\n\nClient access a Bitbucket Server via the REST API. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#NewClient",
+                    "documentation": {
+                      "identifier": "NewClient",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.NewClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewClient(config *schema.BitbucketServerConnection, httpClient httpcli.Doer) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewClient(config *schema.BitbucketServerConnection, httpClient httpcli.Doer) (*Client, error)\n```\n\nNewClient returns an authenticated Bitbucket Server API client with the provided configuration. If a nil httpClient is provided, http.DefaultClient will be used. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#newClient",
+                    "documentation": {
+                      "identifier": "newClient",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.newClient",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newClient(config *schema.BitbucketServerConnection, httpClient httpcli.Doer) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newClient(config *schema.BitbucketServerConnection, httpClient httpcli.Doer) (*Client, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#NewTestClient",
+                    "documentation": {
+                      "identifier": "NewTestClient",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.NewTestClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewTestClient(t testing.TB, name string, update bool) (*Client, func())"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewTestClient(t testing.TB, name string, update bool) (*Client, func())\n```\n\nNewTestClient returns a bitbucketserver.Client that records its interactions to testdata/vcr/. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.WithAuthenticator",
+                    "documentation": {
+                      "identifier": "Client.WithAuthenticator",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.WithAuthenticator",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) WithAuthenticator(a auth.Authenticator) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) WithAuthenticator(a auth.Authenticator) *Client\n```\n\nWithAuthenticator returns a new Client that uses the same configuration, HTTPClient, and RateLimiter as the current Client, except authenticated user with the given authenticator instance. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.SetOAuth",
+                    "documentation": {
+                      "identifier": "Client.SetOAuth",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.SetOAuth",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) SetOAuth(consumerKey, signingKey string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) SetOAuth(consumerKey, signingKey string) error\n```\n\nSetOAuth enables OAuth authentication in a Client, using the given consumer key to identify with the Bitbucket Server API and the request signing RSA key to authenticate requests. It parses the given Base64 encoded PEM encoded private key, returning an error in case of failure. \n\nWhen using OAuth authentication, it's possible to impersonate any Bitbucket Server API user by passing a ?user_id=$username query parameter. This requires the Application Link in the Bitbucket Server API to be configured with 2 legged OAuth and for it to allow user impersonation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.Sudo",
+                    "documentation": {
+                      "identifier": "Client.Sudo",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.Sudo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Sudo(username string) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Sudo(username string) (*Client, error)\n```\n\nSudo returns a copy of the Client authenticated as the Bitbucket Server user with the given username. This only works when using OAuth authentication and if the Application Link in Bitbucket Server is configured to allow user impersonation, returning an error otherwise. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.Username",
+                    "documentation": {
+                      "identifier": "Client.Username",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.Username",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Username() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Username() (string, error)\n```\n\nUsername returns the username that will be used when communicating with Bitbucket Server, if the authentication method includes a username. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.Users",
+                    "documentation": {
+                      "identifier": "Client.Users",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.Users",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Users(ctx context.Context, pageToken *PageToken, fs ...UserFilter) ([]*User, *PageToken, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Users(ctx context.Context, pageToken *PageToken, fs ...UserFilter) ([]*User, *PageToken, error)\n```\n\nUsers retrieves a page of users, optionally run through provided filters. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.UserPermissions",
+                    "documentation": {
+                      "identifier": "Client.UserPermissions",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.UserPermissions",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) UserPermissions(ctx context.Context, username string) (perms []Perm, _ error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) UserPermissions(ctx context.Context, username string) (perms []Perm, _ error)\n```\n\nUserPermissions retrieves the global permissions assigned to the user with the given username. Used to validate that the client is authenticated as an admin. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateUser",
+                    "documentation": {
+                      "identifier": "Client.CreateUser",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateUser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateUser(ctx context.Context, u *User) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateUser(ctx context.Context, u *User) error\n```\n\nCreateUser creates the given User returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.LoadUser",
+                    "documentation": {
+                      "identifier": "Client.LoadUser",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.LoadUser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LoadUser(ctx context.Context, u *User) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LoadUser(ctx context.Context, u *User) error\n```\n\nLoadUser loads the given User returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.LoadGroup",
+                    "documentation": {
+                      "identifier": "Client.LoadGroup",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.LoadGroup",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LoadGroup(ctx context.Context, g *Group) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LoadGroup(ctx context.Context, g *Group) error\n```\n\nLoadGroup loads the given Group returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateGroup",
+                    "documentation": {
+                      "identifier": "Client.CreateGroup",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateGroup",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateGroup(ctx context.Context, g *Group) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateGroup(ctx context.Context, g *Group) error\n```\n\nCreateGroup creates the given Group returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateGroupMembership",
+                    "documentation": {
+                      "identifier": "Client.CreateGroupMembership",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateGroupMembership",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateGroupMembership(ctx context.Context, g *Group) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateGroupMembership(ctx context.Context, g *Group) error\n```\n\nCreateGroupMembership creates the given Group's membership returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateUserRepoPermission",
+                    "documentation": {
+                      "identifier": "Client.CreateUserRepoPermission",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateUserRepoPermission",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateUserRepoPermission(ctx context.Context, p *UserRepoPermission) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateUserRepoPermission(ctx context.Context, p *UserRepoPermission) error\n```\n\nCreateUserRepoPermission creates the given permission returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateUserProjectPermission",
+                    "documentation": {
+                      "identifier": "Client.CreateUserProjectPermission",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateUserProjectPermission",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateUserProjectPermission(ctx context.Context, p *UserProjectPermission) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateUserProjectPermission(ctx context.Context, p *UserProjectPermission) error\n```\n\nCreateUserProjectPermission creates the given permission returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateGroupProjectPermission",
+                    "documentation": {
+                      "identifier": "Client.CreateGroupProjectPermission",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateGroupProjectPermission",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateGroupProjectPermission(ctx context.Context, p *GroupProjectPermission) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateGroupProjectPermission(ctx context.Context, p *GroupProjectPermission) error\n```\n\nCreateGroupProjectPermission creates the given permission returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateGroupRepoPermission",
+                    "documentation": {
+                      "identifier": "Client.CreateGroupRepoPermission",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateGroupRepoPermission",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateGroupRepoPermission(ctx context.Context, p *GroupRepoPermission) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateGroupRepoPermission(ctx context.Context, p *GroupRepoPermission) error\n```\n\nCreateGroupRepoPermission creates the given permission returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.createPermission",
+                    "documentation": {
+                      "identifier": "Client.createPermission",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.createPermission",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) createPermission(ctx context.Context, path, name string, p Perm) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) createPermission(ctx context.Context, path, name string, p Perm) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateRepo",
+                    "documentation": {
+                      "identifier": "Client.CreateRepo",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateRepo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateRepo(ctx context.Context, r *Repo) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateRepo(ctx context.Context, r *Repo) error\n```\n\nCreateRepo creates the given Repo returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.LoadProject",
+                    "documentation": {
+                      "identifier": "Client.LoadProject",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.LoadProject",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LoadProject(ctx context.Context, p *Project) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LoadProject(ctx context.Context, p *Project) error\n```\n\nLoadProject loads the given Project returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreateProject",
+                    "documentation": {
+                      "identifier": "Client.CreateProject",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreateProject",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreateProject(ctx context.Context, p *Project) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreateProject(ctx context.Context, p *Project) error\n```\n\nCreateProject creates the given Project returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.LoadPullRequest",
+                    "documentation": {
+                      "identifier": "Client.LoadPullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.LoadPullRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LoadPullRequest(ctx context.Context, pr *PullRequest) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LoadPullRequest(ctx context.Context, pr *PullRequest) error\n```\n\nLoadPullRequest loads the given PullRequest returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.UpdatePullRequest",
+                    "documentation": {
+                      "identifier": "Client.UpdatePullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.UpdatePullRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) UpdatePullRequest(ctx context.Context, in *UpdatePullRequestInput) (*PullRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) UpdatePullRequest(ctx context.Context, in *UpdatePullRequestInput) (*PullRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreatePullRequest",
+                    "documentation": {
+                      "identifier": "Client.CreatePullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreatePullRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreatePullRequest(ctx context.Context, pr *PullRequest) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreatePullRequest(ctx context.Context, pr *PullRequest) error\n```\n\nCreatePullRequest creates the given PullRequest returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.FetchDefaultReviewers",
+                    "documentation": {
+                      "identifier": "Client.FetchDefaultReviewers",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.FetchDefaultReviewers",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) FetchDefaultReviewers(ctx context.Context, pr *PullRequest) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) FetchDefaultReviewers(ctx context.Context, pr *PullRequest) ([]string, error)\n```\n\nFetchDefaultReviewers loads the suggested default reviewers for the given PR. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.DeclinePullRequest",
+                    "documentation": {
+                      "identifier": "Client.DeclinePullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.DeclinePullRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) DeclinePullRequest(ctx context.Context, pr *PullRequest) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) DeclinePullRequest(ctx context.Context, pr *PullRequest) error\n```\n\nDeclinePullRequest declines and closes the given PullRequest, returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.ReopenPullRequest",
+                    "documentation": {
+                      "identifier": "Client.ReopenPullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.ReopenPullRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) ReopenPullRequest(ctx context.Context, pr *PullRequest) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) ReopenPullRequest(ctx context.Context, pr *PullRequest) error\n```\n\nReopenPullRequest reopens a previously declined & closed PullRequest, returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.LoadPullRequestActivities",
+                    "documentation": {
+                      "identifier": "Client.LoadPullRequestActivities",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.LoadPullRequestActivities",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LoadPullRequestActivities(ctx context.Context, pr *PullRequest) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LoadPullRequestActivities(ctx context.Context, pr *PullRequest) (err error)\n```\n\nLoadPullRequestActivities loads the given PullRequest's timeline of activities, returning an error in case of failure. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.LoadPullRequestCommits",
+                    "documentation": {
+                      "identifier": "Client.LoadPullRequestCommits",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.LoadPullRequestCommits",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LoadPullRequestCommits(ctx context.Context, pr *PullRequest) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LoadPullRequestCommits(ctx context.Context, pr *PullRequest) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.LoadPullRequestBuildStatuses",
+                    "documentation": {
+                      "identifier": "Client.LoadPullRequestBuildStatuses",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.LoadPullRequestBuildStatuses",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LoadPullRequestBuildStatuses(ctx context.Context, pr *PullRequest) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LoadPullRequestBuildStatuses(ctx context.Context, pr *PullRequest) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.Repo",
+                    "documentation": {
+                      "identifier": "Client.Repo",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.Repo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Repo(ctx context.Context, projectKey, repoSlug string) (*Repo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Repo(ctx context.Context, projectKey, repoSlug string) (*Repo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.Repos",
+                    "documentation": {
+                      "identifier": "Client.Repos",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.Repos",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) Repos(ctx context.Context, pageToken *PageToken, searchQueries ...string) ([]*Repo, *PageToken, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) Repos(ctx context.Context, pageToken *PageToken, searchQueries ...string) ([]*Repo, *PageToken, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.LabeledRepos",
+                    "documentation": {
+                      "identifier": "Client.LabeledRepos",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.LabeledRepos",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) LabeledRepos(ctx context.Context, pageToken *PageToken, label string) ([]*Repo, *PageToken, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) LabeledRepos(ctx context.Context, pageToken *PageToken, label string) ([]*Repo, *PageToken, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.RepoIDs",
+                    "documentation": {
+                      "identifier": "Client.RepoIDs",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.RepoIDs",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RepoIDs(ctx context.Context, permission string) ([]uint32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RepoIDs(ctx context.Context, permission string) ([]uint32, error)\n```\n\nRepoIDs fetches a list of repository IDs that the user token has permission for. Permission: [\"admin\", \"read\", \"write\"] \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.RecentRepos",
+                    "documentation": {
+                      "identifier": "Client.RecentRepos",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.RecentRepos",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) RecentRepos(ctx context.Context, pageToken *PageToken) ([]*Repo, *PageToken, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) RecentRepos(ctx context.Context, pageToken *PageToken) ([]*Repo, *PageToken, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.page",
+                    "documentation": {
+                      "identifier": "Client.page",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.page",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) page(ctx context.Context, path string, qry url.Values, token *PageToken, results interface{}) (*PageToken, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) page(ctx context.Context, path string, qry url.Values, token *PageToken, results interface{}) (*PageToken, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.send",
+                    "documentation": {
+                      "identifier": "Client.send",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.send",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) send(ctx context.Context, method, path string, qry url.Values, payload, result interface{}) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) send(ctx context.Context, method, path string, qry url.Values, payload, result interface{}) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.do",
+                    "documentation": {
+                      "identifier": "Client.do",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.do",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) do(ctx context.Context, req *http.Request, result interface{}) (*http.Response, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) do(ctx context.Context, req *http.Request, result interface{}) (*http.Response, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.AuthenticatedUsername",
+                    "documentation": {
+                      "identifier": "Client.AuthenticatedUsername",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.AuthenticatedUsername",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) AuthenticatedUsername(ctx context.Context) (username string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) AuthenticatedUsername(ctx context.Context) (username string, err error)\n```\n\nAuthenticatedUsername returns the username associated with the credentials used by the client. Since BitbucketServer doesn't offer an endpoint in their API to query the currently-authenticated user, we send a request to list a single user on the instance and then inspect the response headers in which BitbucketServer sets the username in X-Ausername. If no username is found in the response headers, an error is returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.CreatePullRequestComment",
+                    "documentation": {
+                      "identifier": "Client.CreatePullRequestComment",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.CreatePullRequestComment",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) CreatePullRequestComment(ctx context.Context, pr *PullRequest, body string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) CreatePullRequestComment(ctx context.Context, pr *PullRequest, body string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Client.MergePullRequest",
+                    "documentation": {
+                      "identifier": "Client.MergePullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Client.MergePullRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Client) MergePullRequest(ctx context.Context, pr *PullRequest) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Client) MergePullRequest(ctx context.Context, pr *PullRequest) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#UserFilters",
+              "documentation": {
+                "identifier": "UserFilters",
+                "newPage": false,
+                "searchKey": "bitbucketserver.UserFilters",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UserFilters []bitbucketserver.UserFilter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UserFilters []UserFilter\n```\n\nUserFilters is a list of UserFilter that is ANDed together. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#UserFilters.EncodeTo",
+                    "documentation": {
+                      "identifier": "UserFilters.EncodeTo",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.UserFilters.EncodeTo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fs UserFilters) EncodeTo(qry url.Values)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fs UserFilters) EncodeTo(qry url.Values)\n```\n\nEncodeTo encodes the UserFilter to the given url.Values. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#UserFilter",
+              "documentation": {
+                "identifier": "UserFilter",
+                "newPage": false,
+                "searchKey": "bitbucketserver.UserFilter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UserFilter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UserFilter struct {\n\t// Filter filters the returned users to those whose username,\n\t// name or email address contain this value.\n\t// The API doesn't support exact matches.\n\tFilter string\n\t// Group filters the returned users to those who are in the give group.\n\tGroup string\n\t// Permission filters the returned users to those having the given\n\t// permissions.\n\tPermission PermissionFilter\n}\n```\n\nUserFilter defines a sum type of filters to be used when listing users. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#UserFilter.EncodeTo",
+                    "documentation": {
+                      "identifier": "UserFilter.EncodeTo",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.UserFilter.EncodeTo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f UserFilter) EncodeTo(qry url.Values)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f UserFilter) EncodeTo(qry url.Values)\n```\n\nEncodeTo encodes the UserFilter to the given url.Values. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermissionFilter",
+              "documentation": {
+                "identifier": "PermissionFilter",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermissionFilter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PermissionFilter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PermissionFilter struct {\n\tRoot           Perm\n\tProjectID      string\n\tProjectKey     string\n\tRepositoryID   string\n\tRepositorySlug string\n\n\tindex int\n}\n```\n\nA PermissionFilter is a filter used to list users that have specific permissions. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#PermissionFilter.EncodeTo",
+                    "documentation": {
+                      "identifier": "PermissionFilter.EncodeTo",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.PermissionFilter.EncodeTo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p PermissionFilter) EncodeTo(qry url.Values)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p PermissionFilter) EncodeTo(qry url.Values)\n```\n\nEncodeTo encodes the PermissionFilter to the given url.Values. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#UpdatePullRequestInput",
+              "documentation": {
+                "identifier": "UpdatePullRequestInput",
+                "newPage": false,
+                "searchKey": "bitbucketserver.UpdatePullRequestInput",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UpdatePullRequestInput struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UpdatePullRequestInput struct {\n\tPullRequestID string `json:\"-\"`\n\tVersion       int    `json:\"version\"`\n\n\tTitle       string `json:\"title\"`\n\tDescription string `json:\"description\"`\n\tToRef       Ref    `json:\"toRef\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ErrAlreadyExists",
+              "documentation": {
+                "identifier": "ErrAlreadyExists",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ErrAlreadyExists",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrAlreadyExists struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrAlreadyExists struct {\n\tExisting *PullRequest\n}\n```\n\nErrAlreadyExists is returned by Client.CreatePullRequest when a Pull Request for the given FromRef and ToRef already exists. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#ErrAlreadyExists.Error",
+                    "documentation": {
+                      "identifier": "ErrAlreadyExists.Error",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.ErrAlreadyExists.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ErrAlreadyExists) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ErrAlreadyExists) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PageToken",
+              "documentation": {
+                "identifier": "PageToken",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PageToken",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PageToken struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PageToken struct {\n\tSize          int  `json:\"size\"`\n\tLimit         int  `json:\"limit\"`\n\tIsLastPage    bool `json:\"isLastPage\"`\n\tStart         int  `json:\"start\"`\n\tNextPageStart int  `json:\"nextPageStart\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#PageToken.HasMore",
+                    "documentation": {
+                      "identifier": "PageToken.HasMore",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.PageToken.HasMore",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *PageToken) HasMore() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *PageToken) HasMore() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#PageToken.Query",
+                    "documentation": {
+                      "identifier": "PageToken.Query",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.PageToken.Query",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *PageToken) Query() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *PageToken) Query() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#PageToken.Values",
+                    "documentation": {
+                      "identifier": "PageToken.Values",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.PageToken.Values",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *PageToken) Values() url.Values"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *PageToken) Values() url.Values\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Perm",
+              "documentation": {
+                "identifier": "Perm",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Perm",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Perm string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Perm string\n```\n\nPerm represents a Bitbucket Server permission. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#User",
+              "documentation": {
+                "identifier": "User",
+                "newPage": false,
+                "searchKey": "bitbucketserver.User",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type User struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype User struct {\n\tName         string `json:\"name,omitempty\"`\n\tPassword     string `json:\"-\"`\n\tEmailAddress string `json:\"emailAddress,omitempty\"`\n\tID           int    `json:\"id,omitempty\"`\n\tDisplayName  string `json:\"displayName,omitempty\"`\n\tActive       bool   `json:\"active,omitempty\"`\n\tSlug         string `json:\"slug,omitempty\"`\n\tType         string `json:\"type,omitempty\"`\n}\n```\n\nUser account in a Bitbucket Server instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Group",
+              "documentation": {
+                "identifier": "Group",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Group",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Group struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Group struct {\n\tName  string   `json:\"name,omitempty\"`\n\tUsers []string `json:\"users,omitempty\"`\n}\n```\n\nGroup of users in a Bitbucket Server instance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#UserRepoPermission",
+              "documentation": {
+                "identifier": "UserRepoPermission",
+                "newPage": false,
+                "searchKey": "bitbucketserver.UserRepoPermission",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UserRepoPermission struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UserRepoPermission struct {\n\tUser *User\n\tPerm Perm\n\tRepo *Repo\n}\n```\n\nA UserRepoPermission of a User to perform certain actions on a Repo. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#GroupRepoPermission",
+              "documentation": {
+                "identifier": "GroupRepoPermission",
+                "newPage": false,
+                "searchKey": "bitbucketserver.GroupRepoPermission",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GroupRepoPermission struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GroupRepoPermission struct {\n\tGroup *Group\n\tPerm  Perm\n\tRepo  *Repo\n}\n```\n\nA GroupRepoPermission of a Group to perform certain actions on a Repo. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#UserProjectPermission",
+              "documentation": {
+                "identifier": "UserProjectPermission",
+                "newPage": false,
+                "searchKey": "bitbucketserver.UserProjectPermission",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UserProjectPermission struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UserProjectPermission struct {\n\tUser    *User\n\tPerm    Perm\n\tProject *Project\n}\n```\n\nA UserProjectPermission of a User to perform certain actions on a Project. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#GroupProjectPermission",
+              "documentation": {
+                "identifier": "GroupProjectPermission",
+                "newPage": false,
+                "searchKey": "bitbucketserver.GroupProjectPermission",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GroupProjectPermission struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GroupProjectPermission struct {\n\tGroup   *Group\n\tPerm    Perm\n\tProject *Project\n}\n```\n\nA GroupProjectPermission of a Group to perform certain actions on a Project. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Repo",
+              "documentation": {
+                "identifier": "Repo",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Repo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Repo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Repo struct {\n\tSlug          string   `json:\"slug\"`\n\tID            int      `json:\"id\"`\n\tName          string   `json:\"name\"`\n\tSCMID         string   `json:\"scmId\"`\n\tState         string   `json:\"state\"`\n\tStatusMessage string   `json:\"statusMessage\"`\n\tForkable      bool     `json:\"forkable\"`\n\tOrigin        *Repo    `json:\"origin\"`\n\tProject       *Project `json:\"project\"`\n\tPublic        bool     `json:\"public\"`\n\tLinks         struct {\n\t\tClone []struct {\n\t\t\tHref string `json:\"href\"`\n\t\t\tName string `json:\"name\"`\n\t\t} `json:\"clone\"`\n\t\tSelf []struct {\n\t\t\tHref string `json:\"href\"`\n\t\t} `json:\"self\"`\n\t} `json:\"links\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Repo.IsPersonalRepository",
+                    "documentation": {
+                      "identifier": "Repo.IsPersonalRepository",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Repo.IsPersonalRepository",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Repo) IsPersonalRepository() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Repo) IsPersonalRepository() bool\n```\n\nIsPersonalRepository tells if the repository is a personal one. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Project",
+              "documentation": {
+                "identifier": "Project",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Project",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Project struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Project struct {\n\tKey    string `json:\"key\"`\n\tID     int    `json:\"id\"`\n\tName   string `json:\"name\"`\n\tPublic bool   `json:\"public\"`\n\tType   string `json:\"type\"`\n\tLinks  struct {\n\t\tSelf []struct {\n\t\t\tHref string `json:\"href\"`\n\t\t} `json:\"self\"`\n\t} `json:\"links\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Ref",
+              "documentation": {
+                "identifier": "Ref",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Ref",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Ref struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Ref struct {\n\tID         string `json:\"id\"`\n\tRepository struct {\n\t\tID      int    `json:\"id\"`\n\t\tSlug    string `json:\"slug\"`\n\t\tProject struct {\n\t\t\tKey string `json:\"key\"`\n\t\t} `json:\"project\"`\n\t} `json:\"repository\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PullRequest",
+              "documentation": {
+                "identifier": "PullRequest",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PullRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PullRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PullRequest struct {\n\tID           int               `json:\"id\"`\n\tVersion      int               `json:\"version\"`\n\tTitle        string            `json:\"title\"`\n\tDescription  string            `json:\"description\"`\n\tState        string            `json:\"state\"`\n\tOpen         bool              `json:\"open\"`\n\tClosed       bool              `json:\"closed\"`\n\tCreatedDate  int               `json:\"createdDate\"`\n\tUpdatedDate  int               `json:\"updatedDate\"`\n\tFromRef      Ref               `json:\"fromRef\"`\n\tToRef        Ref               `json:\"toRef\"`\n\tLocked       bool              `json:\"locked\"`\n\tAuthor       PullRequestAuthor `json:\"author\"`\n\tReviewers    []Reviewer        `json:\"reviewers\"`\n\tParticipants []Participant     `json:\"participants\"`\n\tLinks        struct {\n\t\tSelf []struct {\n\t\t\tHref string `json:\"href\"`\n\t\t} `json:\"self\"`\n\t} `json:\"links\"`\n\n\tActivities   []*Activity     `json:\"activities,omitempty\"`\n\tCommits      []*Commit       `json:\"commits,omitempty\"`\n\tCommitStatus []*CommitStatus `json:\"commit_status,omitempty\"`\n\n\t// Deprecated, use CommitStatus instead. BuildStatus was not tied to individual commits\n\tBuildStatuses []*BuildStatus `json:\"buildstatuses,omitempty\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#ExtractDuplicatePullRequest",
+                    "documentation": {
+                      "identifier": "ExtractDuplicatePullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.ExtractDuplicatePullRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ExtractDuplicatePullRequest(err error) (*PullRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ExtractDuplicatePullRequest(err error) (*PullRequest, error)\n```\n\nExtractDuplicatePullRequest will attempt to extract a duplicate PR \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PullRequestAuthor",
+              "documentation": {
+                "identifier": "PullRequestAuthor",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PullRequestAuthor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PullRequestAuthor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PullRequestAuthor struct {\n\tUser     *User  `json:\"user\"`\n\tRole     string `json:\"role\"`\n\tApproved bool   `json:\"approved\"`\n\tStatus   string `json:\"status\"`\n}\n```\n\nPullRequestAuthor is the author of a pull request. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Reviewer",
+              "documentation": {
+                "identifier": "Reviewer",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Reviewer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reviewer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reviewer struct {\n\tUser               *User  `json:\"user\"`\n\tLastReviewedCommit string `json:\"lastReviewedCommit\"`\n\tRole               string `json:\"role\"`\n\tApproved           bool   `json:\"approved\"`\n\tStatus             string `json:\"status\"`\n}\n```\n\nReviewer is a user that left feedback on a pull request. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Participant",
+              "documentation": {
+                "identifier": "Participant",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Participant",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Participant struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Participant struct {\n\tUser     *User  `json:\"user\"`\n\tRole     string `json:\"role\"`\n\tApproved bool   `json:\"approved\"`\n\tStatus   string `json:\"status\"`\n}\n```\n\nParticipant is a user that was involved in a pull request. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Activity",
+              "documentation": {
+                "identifier": "Activity",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Activity",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Activity struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Activity struct {\n\tID          int            `json:\"id\"`\n\tCreatedDate int            `json:\"createdDate\"`\n\tUser        User           `json:\"user\"`\n\tAction      ActivityAction `json:\"action\"`\n\n\t// Comment activity fields.\n\tCommentAction string         `json:\"commentAction,omitempty\"`\n\tComment       *Comment       `json:\"comment,omitempty\"`\n\tCommentAnchor *CommentAnchor `json:\"commentAnchor,omitempty\"`\n\n\t// Reviewers change fields.\n\tAddedReviewers   []User `json:\"addedReviewers,omitempty\"`\n\tRemovedReviewers []User `json:\"removedReviewers,omitempty\"`\n\n\t// Merged event fields.\n\tCommit *Commit `json:\"commit,omitempty\"`\n}\n```\n\nActivity is a union type of all supported pull request activity items. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#Activity.Key",
+                    "documentation": {
+                      "identifier": "Activity.Key",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.Activity.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Activity) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Activity) Key() string\n```\n\nKey is a unique key identifying this activity in the context of its pull request. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#BuildStatus",
+              "documentation": {
+                "identifier": "BuildStatus",
+                "newPage": false,
+                "searchKey": "bitbucketserver.BuildStatus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BuildStatus struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BuildStatus struct {\n\tState       string `json:\"state,omitempty\"`\n\tKey         string `json:\"key,omitempty\"`\n\tName        string `json:\"name,omitempty\"`\n\tUrl         string `json:\"url,omitempty\"`\n\tDescription string `json:\"description,omitempty\"`\n\tDateAdded   int64  `json:\"dateAdded,omitempty\"`\n}\n```\n\nBuildStatus represents the build status of a commit \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#CommitStatus",
+              "documentation": {
+                "identifier": "CommitStatus",
+                "newPage": false,
+                "searchKey": "bitbucketserver.CommitStatus",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommitStatus struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommitStatus struct {\n\tCommit string      `json:\"commit,omitempty\"`\n\tStatus BuildStatus `json:\"status,omitempty\"`\n}\n```\n\nCommit status is the build status for a specific commit \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#CommitStatus.Key",
+                    "documentation": {
+                      "identifier": "CommitStatus.Key",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.CommitStatus.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *CommitStatus) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *CommitStatus) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ActivityAction",
+              "documentation": {
+                "identifier": "ActivityAction",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ActivityAction",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ActivityAction string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ActivityAction string\n```\n\nActivityAction defines the action taken in an Activity. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Comment",
+              "documentation": {
+                "identifier": "Comment",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Comment",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Comment struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Comment struct {\n\tID                  int                 `json:\"id\"`\n\tVersion             int                 `json:\"version\"`\n\tText                string              `json:\"text\"`\n\tAuthor              User                `json:\"author\"`\n\tCreatedDate         int                 `json:\"createdDate\"`\n\tUpdatedDate         int                 `json:\"updatedDate\"`\n\tComments            []Comment           `json:\"comments\"` // Replies to the comment\n\tTasks               []Task              `json:\"tasks\"`\n\tPermittedOperations PermittedOperations `json:\"permittedOperations\"`\n}\n```\n\nA Comment in a PullRequest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#CommentAnchor",
+              "documentation": {
+                "identifier": "CommentAnchor",
+                "newPage": false,
+                "searchKey": "bitbucketserver.CommentAnchor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommentAnchor struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommentAnchor struct {\n\tFromHash string `json:\"fromHash\"`\n\tToHash   string `json:\"toHash\"`\n\tLine     int    `json:\"line\"`\n\tLineType string `json:\"lineType\"`\n\tFileType string `json:\"fileType\"`\n\tPath     string `json:\"path\"`\n\tDiffType string `json:\"diffType\"`\n\tOrphaned bool   `json:\"orphaned\"`\n}\n```\n\nA CommentAnchor captures the location of a code comment in a PullRequest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Task",
+              "documentation": {
+                "identifier": "Task",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Task",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Task struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Task struct {\n\tID                  int                 `json:\"id\"`\n\tAuthor              User                `json:\"author\"`\n\tText                string              `json:\"text\"`\n\tState               string              `json:\"state\"`\n\tCreatedDate         int                 `json:\"createdDate\"`\n\tPermittedOperations PermittedOperations `json:\"permittedOperations\"`\n}\n```\n\nA Task in a PullRequest. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PermittedOperations",
+              "documentation": {
+                "identifier": "PermittedOperations",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PermittedOperations",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PermittedOperations struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PermittedOperations struct {\n\tEditable       bool `json:\"editable,omitempty\"`\n\tDeletable      bool `json:\"deletable,omitempty\"`\n\tTransitionable bool `json:\"transitionable,omitempty\"`\n}\n```\n\nPermittedOperations of a Comment or Task. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#Commit",
+              "documentation": {
+                "identifier": "Commit",
+                "newPage": false,
+                "searchKey": "bitbucketserver.Commit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Commit struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Commit struct {\n\tID                 string   `json:\"id,omitempty\"`\n\tDisplayID          string   `json:\"displayId,omitempty\"`\n\tAuthor             *User    `json:\"user,omitempty\"`\n\tAuthorTimestamp    int64    `json:\"authorTimestamp,omitempty\"`\n\tCommitter          *User    `json:\"committer,omitempty\"`\n\tCommitterTimestamp int64    `json:\"committerTimestamp,omitempty\"`\n\tMessage            string   `json:\"message,omitempty\"`\n\tParents            []Commit `json:\"parents,omitempty\"`\n}\n```\n\nA Commit in a Repository. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#httpError",
+              "documentation": {
+                "identifier": "httpError",
+                "newPage": false,
+                "searchKey": "bitbucketserver.httpError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type httpError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype httpError struct {\n\tStatusCode int\n\tURL        *url.URL\n\tBody       []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#httpError.Error",
+                    "documentation": {
+                      "identifier": "httpError.Error",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.httpError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#httpError.Unauthorized",
+                    "documentation": {
+                      "identifier": "httpError.Unauthorized",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.httpError.Unauthorized",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) Unauthorized() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) Unauthorized() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#httpError.NotFound",
+                    "documentation": {
+                      "identifier": "httpError.NotFound",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.httpError.NotFound",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) NotFound() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) NotFound() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#httpError.DuplicatePullRequest",
+                    "documentation": {
+                      "identifier": "httpError.DuplicatePullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.httpError.DuplicatePullRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) DuplicatePullRequest() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) DuplicatePullRequest() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#httpError.NoSuchPullRequestException",
+                    "documentation": {
+                      "identifier": "httpError.NoSuchPullRequestException",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.httpError.NoSuchPullRequestException",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) NoSuchPullRequestException() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) NoSuchPullRequestException() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#httpError.NoSuchLabelException",
+                    "documentation": {
+                      "identifier": "httpError.NoSuchLabelException",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.httpError.NoSuchLabelException",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) NoSuchLabelException() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) NoSuchLabelException() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#httpError.MergePreconditionFailedException",
+                    "documentation": {
+                      "identifier": "httpError.MergePreconditionFailedException",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.httpError.MergePreconditionFailedException",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) MergePreconditionFailedException() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) MergePreconditionFailedException() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#httpError.ExtractExistingPullRequest",
+                    "documentation": {
+                      "identifier": "httpError.ExtractExistingPullRequest",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.httpError.ExtractExistingPullRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *httpError) ExtractExistingPullRequest() (*PullRequest, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *httpError) ExtractExistingPullRequest() (*PullRequest, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PingEvent",
+              "documentation": {
+                "identifier": "PingEvent",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PingEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PingEvent struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PingEvent struct{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PullRequestActivityEvent",
+              "documentation": {
+                "identifier": "PullRequestActivityEvent",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PullRequestActivityEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PullRequestActivityEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PullRequestActivityEvent struct {\n\tDate        time.Time      `json:\"date\"`\n\tActor       User           `json:\"actor\"`\n\tPullRequest PullRequest    `json:\"pullRequest\"`\n\tAction      ActivityAction `json:\"action\"`\n\tActivity    *Activity      `json:\"activity\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#PullRequestParticipantStatusEvent",
+              "documentation": {
+                "identifier": "PullRequestParticipantStatusEvent",
+                "newPage": false,
+                "searchKey": "bitbucketserver.PullRequestParticipantStatusEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PullRequestParticipantStatusEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PullRequestParticipantStatusEvent struct {\n\t*ParticipantStatusEvent\n\tPullRequest PullRequest `json:\"pullRequest\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ParticipantStatusEvent",
+              "documentation": {
+                "identifier": "ParticipantStatusEvent",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ParticipantStatusEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ParticipantStatusEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ParticipantStatusEvent struct {\n\tCreatedDate int            `json:\"createdDate\"`\n\tUser        User           `json:\"user\"`\n\tAction      ActivityAction `json:\"action\"`\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/extsvc/bitbucketserver#ParticipantStatusEvent.Key",
+                    "documentation": {
+                      "identifier": "ParticipantStatusEvent.Key",
+                      "newPage": false,
+                      "searchKey": "bitbucketserver.ParticipantStatusEvent.Key",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ParticipantStatusEvent) Key() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ParticipantStatusEvent) Key() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#BuildStatusEvent",
+              "documentation": {
+                "identifier": "BuildStatusEvent",
+                "newPage": false,
+                "searchKey": "bitbucketserver.BuildStatusEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BuildStatusEvent struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BuildStatusEvent struct {\n\tCommit       string        `json:\"commit\"`\n\tStatus       BuildStatus   `json:\"status\"`\n\tPullRequests []PullRequest `json:\"pullRequests\"`\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/extsvc/bitbucketserver#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#parseQueryStrings",
+              "documentation": {
+                "identifier": "parseQueryStrings",
+                "newPage": false,
+                "searchKey": "bitbucketserver.parseQueryStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseQueryStrings(qs ...string) (url.Values, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseQueryStrings(qs ...string) (url.Values, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#categorize",
+              "documentation": {
+                "identifier": "categorize",
+                "newPage": false,
+                "searchKey": "bitbucketserver.categorize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func categorize(u *url.URL) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc categorize(u *url.URL) string\n```\n\ncategorize returns a category for an API URL. Used by metrics. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#IsNotFound",
+              "documentation": {
+                "identifier": "IsNotFound",
+                "newPage": false,
+                "searchKey": "bitbucketserver.IsNotFound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsNotFound(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsNotFound(err error) bool\n```\n\nIsNotFound reports whether err is a Bitbucket Server API not found error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#IsUnauthorized",
+              "documentation": {
+                "identifier": "IsUnauthorized",
+                "newPage": false,
+                "searchKey": "bitbucketserver.IsUnauthorized",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsUnauthorized(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsUnauthorized(err error) bool\n```\n\nIsUnauthorized reports whether err is a Bitbucket Server API 401 error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#IsNoSuchLabel",
+              "documentation": {
+                "identifier": "IsNoSuchLabel",
+                "newPage": false,
+                "searchKey": "bitbucketserver.IsNoSuchLabel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsNoSuchLabel(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsNoSuchLabel(err error) bool\n```\n\nIsNoSuchLabel reports whether err is a Bitbucket Server API \"No Such Label\" error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#IsDuplicatePullRequest",
+              "documentation": {
+                "identifier": "IsDuplicatePullRequest",
+                "newPage": false,
+                "searchKey": "bitbucketserver.IsDuplicatePullRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsDuplicatePullRequest(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsDuplicatePullRequest(err error) bool\n```\n\nIsDuplicatePullRequest reports whether err is a Bitbucket Server API \"Duplicate Pull Request\" error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#WebhookEventType",
+              "documentation": {
+                "identifier": "WebhookEventType",
+                "newPage": false,
+                "searchKey": "bitbucketserver.WebhookEventType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WebhookEventType(r *http.Request) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WebhookEventType(r *http.Request) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ParseWebhookEvent",
+              "documentation": {
+                "identifier": "ParseWebhookEvent",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ParseWebhookEvent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseWebhookEvent(eventType string, payload []byte) (e interface{}, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseWebhookEvent(eventType string, payload []byte) (e interface{}, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#normalize",
+              "documentation": {
+                "identifier": "normalize",
+                "newPage": false,
+                "searchKey": "bitbucketserver.normalize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func normalize(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc normalize(path string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#ignoreHostMatcher",
+              "documentation": {
+                "identifier": "ignoreHostMatcher",
+                "newPage": false,
+                "searchKey": "bitbucketserver.ignoreHostMatcher",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ignoreHostMatcher(r *http.Request, i cassette.Request) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ignoreHostMatcher(r *http.Request, i cassette.Request) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestSudoableOAuthClient",
+              "documentation": {
+                "identifier": "TestSudoableOAuthClient",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestSudoableOAuthClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSudoableOAuthClient(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSudoableOAuthClient(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestParseQueryStrings",
+              "documentation": {
+                "identifier": "TestParseQueryStrings",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestParseQueryStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseQueryStrings(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseQueryStrings(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestUserFilters",
+              "documentation": {
+                "identifier": "TestUserFilters",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestUserFilters",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserFilters(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserFilters(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_Users",
+              "documentation": {
+                "identifier": "TestClient_Users",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_Users",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_Users(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_Users(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_LabeledRepos",
+              "documentation": {
+                "identifier": "TestClient_LabeledRepos",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_LabeledRepos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_LabeledRepos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_LabeledRepos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_LoadPullRequest",
+              "documentation": {
+                "identifier": "TestClient_LoadPullRequest",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_LoadPullRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_LoadPullRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_LoadPullRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_CreatePullRequest",
+              "documentation": {
+                "identifier": "TestClient_CreatePullRequest",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_CreatePullRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_CreatePullRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_CreatePullRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_FetchDefaultReviewers",
+              "documentation": {
+                "identifier": "TestClient_FetchDefaultReviewers",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_FetchDefaultReviewers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_FetchDefaultReviewers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_FetchDefaultReviewers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_DeclinePullRequest",
+              "documentation": {
+                "identifier": "TestClient_DeclinePullRequest",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_DeclinePullRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_DeclinePullRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_DeclinePullRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_LoadPullRequestActivities",
+              "documentation": {
+                "identifier": "TestClient_LoadPullRequestActivities",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_LoadPullRequestActivities",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_LoadPullRequestActivities(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_LoadPullRequestActivities(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_CreatePullRequestComment",
+              "documentation": {
+                "identifier": "TestClient_CreatePullRequestComment",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_CreatePullRequestComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_CreatePullRequestComment(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_CreatePullRequestComment(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_MergePullRequest",
+              "documentation": {
+                "identifier": "TestClient_MergePullRequest",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_MergePullRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_MergePullRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_MergePullRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_RepoIDs",
+              "documentation": {
+                "identifier": "TestClient_RepoIDs",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_RepoIDs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_RepoIDs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_RepoIDs(t *testing.T)\n```\n\nNOTE: This test validates that correct repository IDs are returned from the roaring bitmap permissions endpoint. Therefore, the expected results are dependent on the user token supplied. The current golden files are generated from using the account zoom@sourcegraph.com on bitbucket.sgdev.org. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#checkGolden",
+              "documentation": {
+                "identifier": "checkGolden",
+                "newPage": false,
+                "searchKey": "bitbucketserver.checkGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkGolden(t *testing.T, name string, got interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkGolden(t *testing.T, name string, got interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestAuth",
+              "documentation": {
+                "identifier": "TestAuth",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestAuth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAuth(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAuth(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestClient_WithAuthenticator",
+              "documentation": {
+                "identifier": "TestClient_WithAuthenticator",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestClient_WithAuthenticator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClient_WithAuthenticator(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClient_WithAuthenticator(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/extsvc/bitbucketserver#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "bitbucketserver.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
