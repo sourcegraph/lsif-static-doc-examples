@@ -1,0 +1,342 @@
+{
+  "pathID": "/std/internal/lazyregexp",
+  "documentation": {
+    "identifier": "lazyregexp",
+    "newPage": true,
+    "searchKey": "std/internal/lazyregexp",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package lazyregexp"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package lazyregexp is a thin wrapper over regexp, allowing the use of global regexp variables without forcing them to be compiled at init. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/internal/lazyregexp#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/lazyregexp#inTest",
+              "documentation": {
+                "identifier": "inTest",
+                "newPage": false,
+                "searchKey": "lazyregexp.inTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var inTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar inTest = len(os.Args) > 0 && strings.HasSuffix(strings.TrimSuffix(os.Args[0], \".exe\"), \".test\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/lazyregexp#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/lazyregexp#Regexp",
+              "documentation": {
+                "identifier": "Regexp",
+                "newPage": false,
+                "searchKey": "lazyregexp.Regexp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Regexp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Regexp struct {\n\tstr  string\n\tonce sync.Once\n\trx   *regexp.Regexp\n}\n```\n\nRegexp is a wrapper around regexp.Regexp, where the underlying regexp will be compiled the first time it is needed. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(str string) *Regexp"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(str string) *Regexp\n```\n\nNew creates a new lazy regexp, delaying the compiling work until it is first needed. If the code is being run as part of tests, the regexp compiling will happen immediately. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.re",
+                    "documentation": {
+                      "identifier": "Regexp.re",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.re",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) re() *regexp.Regexp"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) re() *regexp.Regexp\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.build",
+                    "documentation": {
+                      "identifier": "Regexp.build",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.build",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) build()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) build()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.FindSubmatch",
+                    "documentation": {
+                      "identifier": "Regexp.FindSubmatch",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.FindSubmatch",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) FindSubmatch(s []byte) [][]byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) FindSubmatch(s []byte) [][]byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.FindStringSubmatch",
+                    "documentation": {
+                      "identifier": "Regexp.FindStringSubmatch",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.FindStringSubmatch",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) FindStringSubmatch(s string) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) FindStringSubmatch(s string) []string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.FindStringSubmatchIndex",
+                    "documentation": {
+                      "identifier": "Regexp.FindStringSubmatchIndex",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.FindStringSubmatchIndex",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) FindStringSubmatchIndex(s string) []int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) FindStringSubmatchIndex(s string) []int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.ReplaceAllString",
+                    "documentation": {
+                      "identifier": "Regexp.ReplaceAllString",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.ReplaceAllString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) ReplaceAllString(src, repl string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) ReplaceAllString(src, repl string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.FindString",
+                    "documentation": {
+                      "identifier": "Regexp.FindString",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.FindString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) FindString(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) FindString(s string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.FindAllString",
+                    "documentation": {
+                      "identifier": "Regexp.FindAllString",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.FindAllString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) FindAllString(s string, n int) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) FindAllString(s string, n int) []string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.MatchString",
+                    "documentation": {
+                      "identifier": "Regexp.MatchString",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.MatchString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) MatchString(s string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) MatchString(s string) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/lazyregexp#Regexp.SubexpNames",
+                    "documentation": {
+                      "identifier": "Regexp.SubexpNames",
+                      "newPage": false,
+                      "searchKey": "lazyregexp.Regexp.SubexpNames",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Regexp) SubexpNames() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Regexp) SubexpNames() []string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,565 @@
+{
+  "pathID": "/std/text/tabwriter_test",
+  "documentation": {
+    "identifier": "tabwriter_test",
+    "newPage": true,
+    "searchKey": "std/text/tabwriter_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package tabwriter_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/text/tabwriter_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#codeSnippet",
+              "documentation": {
+                "identifier": "codeSnippet",
+                "newPage": false,
+                "searchKey": "tabwriter_test.codeSnippet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const codeSnippet"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst codeSnippet = `\nsome command\n\nfoo\t# aligned\nbarbaz\t# comments\n\nbut\nmostly\nsingle\ncell\nlines\n`\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/text/tabwriter_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#tests",
+              "documentation": {
+                "identifier": "tests",
+                "newPage": false,
+                "searchKey": "tabwriter_test.tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/text/tabwriter_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#buffer",
+              "documentation": {
+                "identifier": "buffer",
+                "newPage": false,
+                "searchKey": "tabwriter_test.buffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type buffer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype buffer struct {\n\ta []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/text/tabwriter_test#buffer.init",
+                    "documentation": {
+                      "identifier": "buffer.init",
+                      "newPage": false,
+                      "searchKey": "tabwriter_test.buffer.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *buffer) init(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *buffer) init(n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/text/tabwriter_test#buffer.clear",
+                    "documentation": {
+                      "identifier": "buffer.clear",
+                      "newPage": false,
+                      "searchKey": "tabwriter_test.buffer.clear",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *buffer) clear()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *buffer) clear()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/text/tabwriter_test#buffer.Write",
+                    "documentation": {
+                      "identifier": "buffer.Write",
+                      "newPage": false,
+                      "searchKey": "tabwriter_test.buffer.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *buffer) Write(buf []byte) (written int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *buffer) Write(buf []byte) (written int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/text/tabwriter_test#buffer.String",
+                    "documentation": {
+                      "identifier": "buffer.String",
+                      "newPage": false,
+                      "searchKey": "tabwriter_test.buffer.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *buffer) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *buffer) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#panicWriter",
+              "documentation": {
+                "identifier": "panicWriter",
+                "newPage": false,
+                "searchKey": "tabwriter_test.panicWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type panicWriter struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype panicWriter struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/text/tabwriter_test#panicWriter.Write",
+                    "documentation": {
+                      "identifier": "panicWriter.Write",
+                      "newPage": false,
+                      "searchKey": "tabwriter_test.panicWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (panicWriter) Write([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (panicWriter) Write([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/text/tabwriter_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#ExampleWriter_Init",
+              "documentation": {
+                "identifier": "ExampleWriter_Init",
+                "newPage": false,
+                "searchKey": "tabwriter_test.ExampleWriter_Init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWriter_Init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWriter_Init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#Example_elastic",
+              "documentation": {
+                "identifier": "Example_elastic",
+                "newPage": false,
+                "searchKey": "tabwriter_test.Example_elastic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_elastic()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_elastic()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#Example_trailingTab",
+              "documentation": {
+                "identifier": "Example_trailingTab",
+                "newPage": false,
+                "searchKey": "tabwriter_test.Example_trailingTab",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_trailingTab()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_trailingTab()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#write",
+              "documentation": {
+                "identifier": "write",
+                "newPage": false,
+                "searchKey": "tabwriter_test.write",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func write(t *testing.T, testname string, w *Writer, src string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc write(t *testing.T, testname string, w *Writer, src string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#verify",
+              "documentation": {
+                "identifier": "verify",
+                "newPage": false,
+                "searchKey": "tabwriter_test.verify",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func verify(t *testing.T, testname string, w *Writer, b *buffer, src, expected string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc verify(t *testing.T, testname string, w *Writer, b *buffer, src, expected string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#check",
+              "documentation": {
+                "identifier": "check",
+                "newPage": false,
+                "searchKey": "tabwriter_test.check",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func check(t *testing.T, testname string, minwidth, tabwidth, padding int, padchar byte, flags uint, src, expected string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc check(t *testing.T, testname string, minwidth, tabwidth, padding int, padchar byte, flags uint, src, expected string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#Test",
+              "documentation": {
+                "identifier": "Test",
+                "newPage": false,
+                "searchKey": "tabwriter_test.Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#wantPanicString",
+              "documentation": {
+                "identifier": "wantPanicString",
+                "newPage": false,
+                "searchKey": "tabwriter_test.wantPanicString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func wantPanicString(t *testing.T, want string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc wantPanicString(t *testing.T, want string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#TestPanicDuringFlush",
+              "documentation": {
+                "identifier": "TestPanicDuringFlush",
+                "newPage": false,
+                "searchKey": "tabwriter_test.TestPanicDuringFlush",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPanicDuringFlush(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPanicDuringFlush(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#TestPanicDuringWrite",
+              "documentation": {
+                "identifier": "TestPanicDuringWrite",
+                "newPage": false,
+                "searchKey": "tabwriter_test.TestPanicDuringWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPanicDuringWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPanicDuringWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#BenchmarkTable",
+              "documentation": {
+                "identifier": "BenchmarkTable",
+                "newPage": false,
+                "searchKey": "tabwriter_test.BenchmarkTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTable(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTable(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#BenchmarkPyramid",
+              "documentation": {
+                "identifier": "BenchmarkPyramid",
+                "newPage": false,
+                "searchKey": "tabwriter_test.BenchmarkPyramid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPyramid(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPyramid(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#BenchmarkRagged",
+              "documentation": {
+                "identifier": "BenchmarkRagged",
+                "newPage": false,
+                "searchKey": "tabwriter_test.BenchmarkRagged",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRagged(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRagged(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/text/tabwriter_test#BenchmarkCode",
+              "documentation": {
+                "identifier": "BenchmarkCode",
+                "newPage": false,
+                "searchKey": "tabwriter_test.BenchmarkCode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCode(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCode(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

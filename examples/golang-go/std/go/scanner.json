@@ -1,0 +1,1914 @@
+{
+  "pathID": "/std/go/scanner",
+  "documentation": {
+    "identifier": "scanner",
+    "newPage": true,
+    "searchKey": "std/go/scanner",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package scanner"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package scanner implements a scanner for Go source text. It takes a []byte as source which can then be tokenized through repeated calls to the Scan method. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/go/scanner#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/scanner#bom",
+              "documentation": {
+                "identifier": "bom",
+                "newPage": false,
+                "searchKey": "scanner.bom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bom"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bom = 0xFEFF // byte order mark, only permitted as very first character\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#eof",
+              "documentation": {
+                "identifier": "eof",
+                "newPage": false,
+                "searchKey": "scanner.eof",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const eof"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst eof = -1 // end of file\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#ScanComments",
+              "documentation": {
+                "identifier": "ScanComments",
+                "newPage": false,
+                "searchKey": "scanner.ScanComments",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ScanComments"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ScanComments Mode = 1 << iota // return comments as COMMENT tokens\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#dontInsertSemis",
+              "documentation": {
+                "identifier": "dontInsertSemis",
+                "newPage": false,
+                "searchKey": "scanner.dontInsertSemis",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dontInsertSemis"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dontInsertSemis // do not automatically insert semicolons - for testing only\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#special",
+              "documentation": {
+                "identifier": "special",
+                "newPage": false,
+                "searchKey": "scanner.special",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const special"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst special = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#literal",
+              "documentation": {
+                "identifier": "literal",
+                "newPage": false,
+                "searchKey": "scanner.literal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const literal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst literal\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#operator",
+              "documentation": {
+                "identifier": "operator",
+                "newPage": false,
+                "searchKey": "scanner.operator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const operator"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst operator\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#keyword",
+              "documentation": {
+                "identifier": "keyword",
+                "newPage": false,
+                "searchKey": "scanner.keyword",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const keyword"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst keyword\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#whitespace",
+              "documentation": {
+                "identifier": "whitespace",
+                "newPage": false,
+                "searchKey": "scanner.whitespace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const whitespace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst whitespace = \"  \\t  \\n\\n\\n\" // to separate tokens\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/scanner#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/scanner#prefix",
+              "documentation": {
+                "identifier": "prefix",
+                "newPage": false,
+                "searchKey": "scanner.prefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var prefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar prefix = []byte(\"line \")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#fset",
+              "documentation": {
+                "identifier": "fset",
+                "newPage": false,
+                "searchKey": "scanner.fset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fset = token.NewFileSet()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#tokens",
+              "documentation": {
+                "identifier": "tokens",
+                "newPage": false,
+                "searchKey": "scanner.tokens",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tokens"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tokens = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#source",
+              "documentation": {
+                "identifier": "source",
+                "newPage": false,
+                "searchKey": "scanner.source",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var source"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar source = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#lines",
+              "documentation": {
+                "identifier": "lines",
+                "newPage": false,
+                "searchKey": "scanner.lines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lines = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#segments",
+              "documentation": {
+                "identifier": "segments",
+                "newPage": false,
+                "searchKey": "scanner.segments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var segments"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar segments = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#dirsegments",
+              "documentation": {
+                "identifier": "dirsegments",
+                "newPage": false,
+                "searchKey": "scanner.dirsegments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dirsegments"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dirsegments = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#dirUnixSegments",
+              "documentation": {
+                "identifier": "dirUnixSegments",
+                "newPage": false,
+                "searchKey": "scanner.dirUnixSegments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dirUnixSegments"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dirUnixSegments = []segment{\n\t{\"\\n//line /bar:42\\n  line42\", \"/bar\", 42, 0},\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#dirWindowsSegments",
+              "documentation": {
+                "identifier": "dirWindowsSegments",
+                "newPage": false,
+                "searchKey": "scanner.dirWindowsSegments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dirWindowsSegments"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dirWindowsSegments = []segment{\n\t{\"\\n//line c:\\\\bar:42\\n  line42\", \"c:\\\\bar\", 42, 0},\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#invalidSegments",
+              "documentation": {
+                "identifier": "invalidSegments",
+                "newPage": false,
+                "searchKey": "scanner.invalidSegments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var invalidSegments"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar invalidSegments = ...\n```\n\nThe filename is used for the error message in these test cases. The first line directive is valid and used to control the expected error line. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#errors",
+              "documentation": {
+                "identifier": "errors",
+                "newPage": false,
+                "searchKey": "scanner.errors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errors = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/scanner#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/scanner#Error",
+              "documentation": {
+                "identifier": "Error",
+                "newPage": false,
+                "searchKey": "scanner.Error",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Error struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Error struct {\n\tPos token.Position\n\tMsg string\n}\n```\n\nIn an ErrorList, an error is represented by an *Error. The position Pos, if valid, points to the beginning of the offending token, and the error condition is described by Msg. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Error.Error",
+                    "documentation": {
+                      "identifier": "Error.Error",
+                      "newPage": false,
+                      "searchKey": "scanner.Error.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e Error) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e Error) Error() string\n```\n\nError implements the error interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#ErrorList",
+              "documentation": {
+                "identifier": "ErrorList",
+                "newPage": false,
+                "searchKey": "scanner.ErrorList",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrorList []*scanner.Error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrorList []*Error\n```\n\nErrorList is a list of *Errors. The zero value for an ErrorList is an empty ErrorList ready to use. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.Add",
+                    "documentation": {
+                      "identifier": "ErrorList.Add",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ErrorList) Add(pos token.Position, msg string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ErrorList) Add(pos token.Position, msg string)\n```\n\nAdd adds an Error with given position and error message to an ErrorList. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.Reset",
+                    "documentation": {
+                      "identifier": "ErrorList.Reset",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.Reset",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ErrorList) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ErrorList) Reset()\n```\n\nReset resets an ErrorList to no errors. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.Len",
+                    "documentation": {
+                      "identifier": "ErrorList.Len",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.Len",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ErrorList) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ErrorList) Len() int\n```\n\nErrorList implements the sort Interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.Swap",
+                    "documentation": {
+                      "identifier": "ErrorList.Swap",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.Swap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ErrorList) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ErrorList) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.Less",
+                    "documentation": {
+                      "identifier": "ErrorList.Less",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ErrorList) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ErrorList) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.Sort",
+                    "documentation": {
+                      "identifier": "ErrorList.Sort",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.Sort",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ErrorList) Sort()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ErrorList) Sort()\n```\n\nSort sorts an ErrorList. *Error entries are sorted by position, other errors are sorted by error message, and before any *Error entry. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.RemoveMultiples",
+                    "documentation": {
+                      "identifier": "ErrorList.RemoveMultiples",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.RemoveMultiples",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *ErrorList) RemoveMultiples()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *ErrorList) RemoveMultiples()\n```\n\nRemoveMultiples sorts an ErrorList and removes all but the first error per line. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.Error",
+                    "documentation": {
+                      "identifier": "ErrorList.Error",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ErrorList) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ErrorList) Error() string\n```\n\nAn ErrorList implements the error interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#ErrorList.Err",
+                    "documentation": {
+                      "identifier": "ErrorList.Err",
+                      "newPage": false,
+                      "searchKey": "scanner.ErrorList.Err",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ErrorList) Err() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ErrorList) Err() error\n```\n\nErr returns an error equivalent to this error list. If the list is empty, Err returns nil. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#ErrorHandler",
+              "documentation": {
+                "identifier": "ErrorHandler",
+                "newPage": false,
+                "searchKey": "scanner.ErrorHandler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ErrorHandler func(pos go/token.Position, msg string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ErrorHandler func(pos token.Position, msg string)\n```\n\nAn ErrorHandler may be provided to Scanner.Init. If a syntax error is encountered and a handler was installed, the handler is called with a position and an error message. The position points to the beginning of the offending token. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#Scanner",
+              "documentation": {
+                "identifier": "Scanner",
+                "newPage": false,
+                "searchKey": "scanner.Scanner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Scanner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Scanner struct {\n\t// immutable state\n\tfile *token.File  // source file handle\n\tdir  string       // directory portion of file.Name()\n\tsrc  []byte       // source\n\terr  ErrorHandler // error reporting; or nil\n\tmode Mode         // scanning mode\n\n\t// scanning state\n\tch         rune // current character\n\toffset     int  // character offset\n\trdOffset   int  // reading offset (position after current character)\n\tlineOffset int  // current line offset\n\tinsertSemi bool // insert a semicolon before next newline\n\n\t// public state - ok to modify\n\tErrorCount int // number of errors encountered\n}\n```\n\nA Scanner holds the scanner's internal state while processing a given text. It can be allocated as part of another data structure but must be initialized via Init before use. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.next",
+                    "documentation": {
+                      "identifier": "Scanner.next",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.next",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) next()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) next()\n```\n\nRead the next Unicode char into s.ch. s.ch < 0 means end-of-file. \n\nFor optimization, there is some overlap between this method and s.scanIdentifier. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.peek",
+                    "documentation": {
+                      "identifier": "Scanner.peek",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.peek",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) peek() byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) peek() byte\n```\n\npeek returns the byte following the most recently read character without advancing the scanner. If the scanner is at EOF, peek returns 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.Init",
+                    "documentation": {
+                      "identifier": "Scanner.Init",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.Init",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Init(file *token.File, src []byte, err ErrorHandler, mode Mode)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Init(file *token.File, src []byte, err ErrorHandler, mode Mode)\n```\n\nInit prepares the scanner s to tokenize the text src by setting the scanner at the beginning of src. The scanner uses the file set file for position information and it adds line information for each line. It is ok to re-use the same file when re-scanning the same file as line information which is already present is ignored. Init causes a panic if the file size does not match the src size. \n\nCalls to Scan will invoke the error handler err if they encounter a syntax error and err is not nil. Also, for each error encountered, the Scanner field ErrorCount is incremented by one. The mode parameter determines how comments are handled. \n\nNote that Init may call err if there is an error in the first character of the file. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.error",
+                    "documentation": {
+                      "identifier": "Scanner.error",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) error(offs int, msg string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) error(offs int, msg string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.errorf",
+                    "documentation": {
+                      "identifier": "Scanner.errorf",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.errorf",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) errorf(offs int, format string, args ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) errorf(offs int, format string, args ...interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.scanComment",
+                    "documentation": {
+                      "identifier": "Scanner.scanComment",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanComment",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanComment() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanComment() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.updateLineInfo",
+                    "documentation": {
+                      "identifier": "Scanner.updateLineInfo",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.updateLineInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) updateLineInfo(next, offs int, text []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) updateLineInfo(next, offs int, text []byte)\n```\n\nupdateLineInfo parses the incoming comment text at offset offs as a line directive. If successful, it updates the line info table for the position next per the line directive. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.findLineEnd",
+                    "documentation": {
+                      "identifier": "Scanner.findLineEnd",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.findLineEnd",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) findLineEnd() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) findLineEnd() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.scanIdentifier",
+                    "documentation": {
+                      "identifier": "Scanner.scanIdentifier",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanIdentifier",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanIdentifier() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanIdentifier() string\n```\n\nscanIdentifier reads the string of valid identifier characters at s.offset. It must only be called when s.ch is known to be a valid letter. \n\nBe careful when making changes to this function: it is optimized and affects scanning performance significantly. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.digits",
+                    "documentation": {
+                      "identifier": "Scanner.digits",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.digits",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) digits(base int, invalid *int) (digsep int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) digits(base int, invalid *int) (digsep int)\n```\n\ndigits accepts the sequence { digit | '_' }. If base <= 10, digits accepts any decimal digit but records the offset (relative to the source start) of a digit >= base in *invalid, if *invalid < 0. digits returns a bitset describing whether the sequence contained digits (bit 0 is set), or separators '_' (bit 1 is set). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.scanNumber",
+                    "documentation": {
+                      "identifier": "Scanner.scanNumber",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanNumber",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanNumber() (token.Token, string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanNumber() (token.Token, string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.scanEscape",
+                    "documentation": {
+                      "identifier": "Scanner.scanEscape",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanEscape",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanEscape(quote rune) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanEscape(quote rune) bool\n```\n\nscanEscape parses an escape sequence where rune is the accepted escaped quote. In case of a syntax error, it stops at the offending character (without consuming it) and returns false. Otherwise it returns true. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.scanRune",
+                    "documentation": {
+                      "identifier": "Scanner.scanRune",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanRune() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanRune() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.scanString",
+                    "documentation": {
+                      "identifier": "Scanner.scanString",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.scanRawString",
+                    "documentation": {
+                      "identifier": "Scanner.scanRawString",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanRawString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanRawString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanRawString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.skipWhitespace",
+                    "documentation": {
+                      "identifier": "Scanner.skipWhitespace",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.skipWhitespace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) skipWhitespace()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) skipWhitespace()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.switch2",
+                    "documentation": {
+                      "identifier": "Scanner.switch2",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.switch2",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) switch2(tok0, tok1 token.Token) token.Token"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) switch2(tok0, tok1 token.Token) token.Token\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.switch3",
+                    "documentation": {
+                      "identifier": "Scanner.switch3",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.switch3",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) switch3(tok0, tok1 token.Token, ch2 rune, tok2 token.Token) token.Token"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) switch3(tok0, tok1 token.Token, ch2 rune, tok2 token.Token) token.Token\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.switch4",
+                    "documentation": {
+                      "identifier": "Scanner.switch4",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.switch4",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) switch4(tok0, tok1 token.Token, ch2 rune, tok2, tok3 token.Token) token.Token"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) switch4(tok0, tok1 token.Token, ch2 rune, tok2, tok3 token.Token) token.Token\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/scanner#Scanner.Scan",
+                    "documentation": {
+                      "identifier": "Scanner.Scan",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Scan() (pos token.Pos, tok token.Token, lit string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Scan() (pos token.Pos, tok token.Token, lit string)\n```\n\nScan scans the next token and returns the token position, the token, and its literal string if applicable. The source end is indicated by token.EOF. \n\nIf the returned token is a literal (token.IDENT, token.INT, token.FLOAT, token.IMAG, token.CHAR, token.STRING) or token.COMMENT, the literal string has the corresponding value. \n\nIf the returned token is a keyword, the literal string is the keyword. \n\nIf the returned token is token.SEMICOLON, the corresponding literal string is \";\" if the semicolon was present in the source, and \"\\n\" if the semicolon was inserted because of a newline or at EOF. \n\nIf the returned token is token.ILLEGAL, the literal string is the offending character. \n\nIn all other cases, Scan returns an empty literal string. \n\nFor more tolerant parsing, Scan will return a valid token if possible even if a syntax error was encountered. Thus, even if the resulting token sequence contains no illegal tokens, a client may not assume that no error occurred. Instead it must check the scanner's ErrorCount or the number of calls of the error handler, if there was one installed. \n\nScan adds line information to the file added to the file set with Init. Token positions are relative to that file and thus relative to the file set. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#Mode",
+              "documentation": {
+                "identifier": "Mode",
+                "newPage": false,
+                "searchKey": "scanner.Mode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Mode uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Mode uint\n```\n\nA mode value is a set of flags (or 0). They control scanner behavior. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#elt",
+              "documentation": {
+                "identifier": "elt",
+                "newPage": false,
+                "searchKey": "scanner.elt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type elt struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype elt struct {\n\ttok   token.Token\n\tlit   string\n\tclass int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#segment",
+              "documentation": {
+                "identifier": "segment",
+                "newPage": false,
+                "searchKey": "scanner.segment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type segment struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype segment struct {\n\tsrcline      string // a line of source text\n\tfilename     string // filename for current token; error message for invalid line directives\n\tline, column int    // line and column for current token; error position for invalid line directives\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#errorCollector",
+              "documentation": {
+                "identifier": "errorCollector",
+                "newPage": false,
+                "searchKey": "scanner.errorCollector",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errorCollector struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errorCollector struct {\n\tcnt int            // number of errors encountered\n\tmsg string         // last error message encountered\n\tpos token.Position // last error position encountered\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/scanner#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/scanner#PrintError",
+              "documentation": {
+                "identifier": "PrintError",
+                "newPage": false,
+                "searchKey": "scanner.PrintError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PrintError(w io.Writer, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PrintError(w io.Writer, err error)\n```\n\nPrintError is a utility function that prints a list of errors to w, one error per line, if the err parameter is an ErrorList. Otherwise it prints the err string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#trailingDigits",
+              "documentation": {
+                "identifier": "trailingDigits",
+                "newPage": false,
+                "searchKey": "scanner.trailingDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trailingDigits(text []byte) (int, int, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trailingDigits(text []byte) (int, int, bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#isLetter",
+              "documentation": {
+                "identifier": "isLetter",
+                "newPage": false,
+                "searchKey": "scanner.isLetter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isLetter(ch rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isLetter(ch rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#isDigit",
+              "documentation": {
+                "identifier": "isDigit",
+                "newPage": false,
+                "searchKey": "scanner.isDigit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isDigit(ch rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isDigit(ch rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#digitVal",
+              "documentation": {
+                "identifier": "digitVal",
+                "newPage": false,
+                "searchKey": "scanner.digitVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func digitVal(ch rune) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc digitVal(ch rune) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#lower",
+              "documentation": {
+                "identifier": "lower",
+                "newPage": false,
+                "searchKey": "scanner.lower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lower(ch rune) rune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lower(ch rune) rune\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#isDecimal",
+              "documentation": {
+                "identifier": "isDecimal",
+                "newPage": false,
+                "searchKey": "scanner.isDecimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isDecimal(ch rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isDecimal(ch rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#isHex",
+              "documentation": {
+                "identifier": "isHex",
+                "newPage": false,
+                "searchKey": "scanner.isHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isHex(ch rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isHex(ch rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#litname",
+              "documentation": {
+                "identifier": "litname",
+                "newPage": false,
+                "searchKey": "scanner.litname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func litname(prefix rune) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc litname(prefix rune) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#invalidSep",
+              "documentation": {
+                "identifier": "invalidSep",
+                "newPage": false,
+                "searchKey": "scanner.invalidSep",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func invalidSep(x string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc invalidSep(x string) int\n```\n\ninvalidSep returns the index of the first invalid separator in x, or -1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#stripCR",
+              "documentation": {
+                "identifier": "stripCR",
+                "newPage": false,
+                "searchKey": "scanner.stripCR",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stripCR(b []byte, comment bool) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stripCR(b []byte, comment bool) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#tokenclass",
+              "documentation": {
+                "identifier": "tokenclass",
+                "newPage": false,
+                "searchKey": "scanner.tokenclass",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tokenclass(tok token.Token) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tokenclass(tok token.Token) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#newlineCount",
+              "documentation": {
+                "identifier": "newlineCount",
+                "newPage": false,
+                "searchKey": "scanner.newlineCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newlineCount(s string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newlineCount(s string) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#checkPos",
+              "documentation": {
+                "identifier": "checkPos",
+                "newPage": false,
+                "searchKey": "scanner.checkPos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkPos(t *testing.T, lit string, p token.Pos, expected token.Position)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkPos(t *testing.T, lit string, p token.Pos, expected token.Position)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestScan",
+              "documentation": {
+                "identifier": "TestScan",
+                "newPage": false,
+                "searchKey": "scanner.TestScan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScan(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScan(t *testing.T)\n```\n\nVerify that calling Scan() provides the correct results. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestStripCR",
+              "documentation": {
+                "identifier": "TestStripCR",
+                "newPage": false,
+                "searchKey": "scanner.TestStripCR",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStripCR(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStripCR(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#checkSemi",
+              "documentation": {
+                "identifier": "checkSemi",
+                "newPage": false,
+                "searchKey": "scanner.checkSemi",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkSemi(t *testing.T, line string, mode Mode)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkSemi(t *testing.T, line string, mode Mode)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestSemis",
+              "documentation": {
+                "identifier": "TestSemis",
+                "newPage": false,
+                "searchKey": "scanner.TestSemis",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSemis(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSemis(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestLineDirectives",
+              "documentation": {
+                "identifier": "TestLineDirectives",
+                "newPage": false,
+                "searchKey": "scanner.TestLineDirectives",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLineDirectives(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLineDirectives(t *testing.T)\n```\n\nVerify that line directives are interpreted correctly. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#testSegments",
+              "documentation": {
+                "identifier": "testSegments",
+                "newPage": false,
+                "searchKey": "scanner.testSegments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSegments(t *testing.T, segments []segment, filename string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSegments(t *testing.T, segments []segment, filename string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestInvalidLineDirectives",
+              "documentation": {
+                "identifier": "TestInvalidLineDirectives",
+                "newPage": false,
+                "searchKey": "scanner.TestInvalidLineDirectives",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidLineDirectives(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidLineDirectives(t *testing.T)\n```\n\nVerify that invalid line directives get the correct error message. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestInit",
+              "documentation": {
+                "identifier": "TestInit",
+                "newPage": false,
+                "searchKey": "scanner.TestInit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInit(t *testing.T)\n```\n\nVerify that initializing the same scanner more than once works correctly. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestStdErrorHander",
+              "documentation": {
+                "identifier": "TestStdErrorHander",
+                "newPage": false,
+                "searchKey": "scanner.TestStdErrorHander",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStdErrorHander(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStdErrorHander(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#checkError",
+              "documentation": {
+                "identifier": "checkError",
+                "newPage": false,
+                "searchKey": "scanner.checkError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkError(t *testing.T, src string, tok token.Token, pos int, lit, err string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkError(t *testing.T, src string, tok token.Token, pos int, lit, err string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestScanErrors",
+              "documentation": {
+                "identifier": "TestScanErrors",
+                "newPage": false,
+                "searchKey": "scanner.TestScanErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanErrors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestIssue10213",
+              "documentation": {
+                "identifier": "TestIssue10213",
+                "newPage": false,
+                "searchKey": "scanner.TestIssue10213",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue10213(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue10213(t *testing.T)\n```\n\nVerify that no comments show up as literal values when skipping comments. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestIssue28112",
+              "documentation": {
+                "identifier": "TestIssue28112",
+                "newPage": false,
+                "searchKey": "scanner.TestIssue28112",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue28112(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue28112(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#BenchmarkScan",
+              "documentation": {
+                "identifier": "BenchmarkScan",
+                "newPage": false,
+                "searchKey": "scanner.BenchmarkScan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkScan(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkScan(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#BenchmarkScanFiles",
+              "documentation": {
+                "identifier": "BenchmarkScanFiles",
+                "newPage": false,
+                "searchKey": "scanner.BenchmarkScanFiles",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkScanFiles(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkScanFiles(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/scanner#TestNumbers",
+              "documentation": {
+                "identifier": "TestNumbers",
+                "newPage": false,
+                "searchKey": "scanner.TestNumbers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNumbers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNumbers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

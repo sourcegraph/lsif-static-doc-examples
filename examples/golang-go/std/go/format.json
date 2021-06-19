@@ -1,0 +1,474 @@
+{
+  "pathID": "/std/go/format",
+  "documentation": {
+    "identifier": "format",
+    "newPage": true,
+    "searchKey": "std/go/format",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package format"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package format implements standard formatting of Go source. \n\nNote that formatting of Go source code changes over time, so tools relying on consistent formatting should execute a specific version of the gofmt binary instead of using this package. That way, the formatting will be stable, and the tools won't need to be recompiled each time gofmt changes. \n\nFor example, pre-submit checks that use this package directly would behave differently depending on what Go version each developer uses, causing the check to be inherently fragile. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/go/format#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/format#tabWidth",
+              "documentation": {
+                "identifier": "tabWidth",
+                "newPage": false,
+                "searchKey": "format.tabWidth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const tabWidth"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst tabWidth = 8\n```\n\nKeep these in sync with cmd/gofmt/gofmt.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#printerMode",
+              "documentation": {
+                "identifier": "printerMode",
+                "newPage": false,
+                "searchKey": "format.printerMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const printerMode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst printerMode = printer.UseSpaces | printer.TabIndent | printerNormalizeNumbers\n```\n\nKeep these in sync with cmd/gofmt/gofmt.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#printerNormalizeNumbers",
+              "documentation": {
+                "identifier": "printerNormalizeNumbers",
+                "newPage": false,
+                "searchKey": "format.printerNormalizeNumbers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const printerNormalizeNumbers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst printerNormalizeNumbers = 1 << 30\n```\n\nKeep these in sync with cmd/gofmt/gofmt.go. \n\nprinterNormalizeNumbers means to canonicalize number literal prefixes and exponents while printing. See [https://golang.org/doc/go1.13#gofmt](https://golang.org/doc/go1.13#gofmt). \n\nThis value is defined in go/printer specifically for go/format and cmd/gofmt. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#parserMode",
+              "documentation": {
+                "identifier": "parserMode",
+                "newPage": false,
+                "searchKey": "format.parserMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const parserMode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst parserMode = parser.ParseComments\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#testfile",
+              "documentation": {
+                "identifier": "testfile",
+                "newPage": false,
+                "searchKey": "format.testfile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testfile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testfile = \"format_test.go\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/format#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/format#config",
+              "documentation": {
+                "identifier": "config",
+                "newPage": false,
+                "searchKey": "format.config",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var config"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar config = printer.Config{Mode: printerMode, Tabwidth: tabWidth}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#tests",
+              "documentation": {
+                "identifier": "tests",
+                "newPage": false,
+                "searchKey": "format.tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tests = ...\n```\n\nTest cases that are expected to fail are marked by the prefix \"ERROR\". The formatted result must look the same as the input for successful tests. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/format#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/format#Node",
+              "documentation": {
+                "identifier": "Node",
+                "newPage": false,
+                "searchKey": "format.Node",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Node(dst io.Writer, fset *token.FileSet, node interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Node(dst io.Writer, fset *token.FileSet, node interface{}) error\n```\n\nNode formats node in canonical gofmt style and writes the result to dst. \n\nThe node type must be *ast.File, *printer.CommentedNode, []ast.Decl, []ast.Stmt, or assignment-compatible to ast.Expr, ast.Decl, ast.Spec, or ast.Stmt. Node does not modify node. Imports are not sorted for nodes representing partial source files (for instance, if the node is not an *ast.File or a *printer.CommentedNode not wrapping an *ast.File). \n\nThe function may return early (before the entire result is written) and return a formatting error, for instance due to an incorrect AST. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#Source",
+              "documentation": {
+                "identifier": "Source",
+                "newPage": false,
+                "searchKey": "format.Source",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Source(src []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Source(src []byte) ([]byte, error)\n```\n\nSource formats src in canonical gofmt style and returns the result or an (I/O or syntax) error. src is expected to be a syntactically correct Go source file, or a list of Go declarations or statements. \n\nIf src is a partial source file, the leading and trailing space of src is applied to the result (such that it has the same leading and trailing space as src), and the result is indented by the same amount as the first line of src containing code. Imports are not sorted for partial source files. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#hasUnsortedImports",
+              "documentation": {
+                "identifier": "hasUnsortedImports",
+                "newPage": false,
+                "searchKey": "format.hasUnsortedImports",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasUnsortedImports(file *ast.File) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasUnsortedImports(file *ast.File) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#parse",
+              "documentation": {
+                "identifier": "parse",
+                "newPage": false,
+                "searchKey": "format.parse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (file *ast.File,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parse(fset *token.FileSet, filename string, src []byte, fragmentOk bool) (\n\tfile *ast.File,\n\tsourceAdj func(src []byte, indent int) []byte,\n\tindentAdj int,\n\terr error,\n)\n```\n\nparse parses src, which was read from the named file, as a Go source file, declaration, or statement list. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#format",
+              "documentation": {
+                "identifier": "format",
+                "newPage": false,
+                "searchKey": "format.format",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func format(fset *token.FileSet,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc format(\n\tfset *token.FileSet,\n\tfile *ast.File,\n\tsourceAdj func(src []byte, indent int) []byte,\n\tindentAdj int,\n\tsrc []byte,\n\tcfg printer.Config,\n) ([]byte, error)\n```\n\nformat formats the given package file originally obtained from src and adjusts the result based on the original source via sourceAdj and indentAdj. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#isSpace",
+              "documentation": {
+                "identifier": "isSpace",
+                "newPage": false,
+                "searchKey": "format.isSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSpace(b byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSpace(b byte) bool\n```\n\nisSpace reports whether the byte is a space character. isSpace defines a space as being among the following bytes: ' ', '\\t', '\\n' and '\\r'. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#diff",
+              "documentation": {
+                "identifier": "diff",
+                "newPage": false,
+                "searchKey": "format.diff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func diff(t *testing.T, dst, src []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc diff(t *testing.T, dst, src []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#TestNode",
+              "documentation": {
+                "identifier": "TestNode",
+                "newPage": false,
+                "searchKey": "format.TestNode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#TestNodeNoModify",
+              "documentation": {
+                "identifier": "TestNodeNoModify",
+                "newPage": false,
+                "searchKey": "format.TestNodeNoModify",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNodeNoModify(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNodeNoModify(t *testing.T)\n```\n\nNode is documented to not modify the AST. Test that it is so even when numbers are normalized. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#TestSource",
+              "documentation": {
+                "identifier": "TestSource",
+                "newPage": false,
+                "searchKey": "format.TestSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSource(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSource(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#String",
+              "documentation": {
+                "identifier": "String",
+                "newPage": false,
+                "searchKey": "format.String",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func String(s string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc String(s string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/format#TestPartial",
+              "documentation": {
+                "identifier": "TestPartial",
+                "newPage": false,
+                "searchKey": "format.TestPartial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPartial(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPartial(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

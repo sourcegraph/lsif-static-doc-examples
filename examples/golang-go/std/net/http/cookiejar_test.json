@@ -1,0 +1,183 @@
+{
+  "pathID": "/std/net/http/cookiejar_test",
+  "documentation": {
+    "identifier": "cookiejar_test",
+    "newPage": true,
+    "searchKey": "std/net/http/cookiejar_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package cookiejar_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/net/http/cookiejar_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/http/cookiejar_test#publicsuffix",
+              "documentation": {
+                "identifier": "publicsuffix",
+                "newPage": false,
+                "searchKey": "cookiejar_test.publicsuffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var publicsuffix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar publicsuffix = dummypsl{}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/net/http/cookiejar_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/http/cookiejar_test#dummypsl",
+              "documentation": {
+                "identifier": "dummypsl",
+                "newPage": false,
+                "searchKey": "cookiejar_test.dummypsl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dummypsl struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dummypsl struct {\n\tList cookiejar.PublicSuffixList\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cookiejar_test#dummypsl.PublicSuffix",
+                    "documentation": {
+                      "identifier": "dummypsl.PublicSuffix",
+                      "newPage": false,
+                      "searchKey": "cookiejar_test.dummypsl.PublicSuffix",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (dummypsl) PublicSuffix(domain string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (dummypsl) PublicSuffix(domain string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cookiejar_test#dummypsl.String",
+                    "documentation": {
+                      "identifier": "dummypsl.String",
+                      "newPage": false,
+                      "searchKey": "cookiejar_test.dummypsl.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (dummypsl) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (dummypsl) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/net/http/cookiejar_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/http/cookiejar_test#ExampleNew",
+              "documentation": {
+                "identifier": "ExampleNew",
+                "newPage": false,
+                "searchKey": "cookiejar_test.ExampleNew",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleNew()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleNew()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,442 @@
+{
+  "pathID": "/std/unicode/utf16_test",
+  "documentation": {
+    "identifier": "utf16_test",
+    "newPage": true,
+    "searchKey": "std/unicode/utf16_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package utf16_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/unicode/utf16_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#encodeTests",
+              "documentation": {
+                "identifier": "encodeTests",
+                "newPage": false,
+                "searchKey": "utf16_test.encodeTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var encodeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar encodeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#decodeTests",
+              "documentation": {
+                "identifier": "decodeTests",
+                "newPage": false,
+                "searchKey": "utf16_test.decodeTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var decodeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar decodeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#decodeRuneTests",
+              "documentation": {
+                "identifier": "decodeRuneTests",
+                "newPage": false,
+                "searchKey": "utf16_test.decodeRuneTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var decodeRuneTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar decodeRuneTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#surrogateTests",
+              "documentation": {
+                "identifier": "surrogateTests",
+                "newPage": false,
+                "searchKey": "utf16_test.surrogateTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var surrogateTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar surrogateTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/unicode/utf16_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#encodeTest",
+              "documentation": {
+                "identifier": "encodeTest",
+                "newPage": false,
+                "searchKey": "utf16_test.encodeTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encodeTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encodeTest struct {\n\tin  []rune\n\tout []uint16\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#decodeTest",
+              "documentation": {
+                "identifier": "decodeTest",
+                "newPage": false,
+                "searchKey": "utf16_test.decodeTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type decodeTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype decodeTest struct {\n\tin  []uint16\n\tout []rune\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/unicode/utf16_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#TestConstants",
+              "documentation": {
+                "identifier": "TestConstants",
+                "newPage": false,
+                "searchKey": "utf16_test.TestConstants",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConstants(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConstants(t *testing.T)\n```\n\nValidate the constants redefined from unicode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#TestEncode",
+              "documentation": {
+                "identifier": "TestEncode",
+                "newPage": false,
+                "searchKey": "utf16_test.TestEncode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#TestEncodeRune",
+              "documentation": {
+                "identifier": "TestEncodeRune",
+                "newPage": false,
+                "searchKey": "utf16_test.TestEncodeRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#TestDecode",
+              "documentation": {
+                "identifier": "TestDecode",
+                "newPage": false,
+                "searchKey": "utf16_test.TestDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#TestDecodeRune",
+              "documentation": {
+                "identifier": "TestDecodeRune",
+                "newPage": false,
+                "searchKey": "utf16_test.TestDecodeRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#TestIsSurrogate",
+              "documentation": {
+                "identifier": "TestIsSurrogate",
+                "newPage": false,
+                "searchKey": "utf16_test.TestIsSurrogate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsSurrogate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsSurrogate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#BenchmarkDecodeValidASCII",
+              "documentation": {
+                "identifier": "BenchmarkDecodeValidASCII",
+                "newPage": false,
+                "searchKey": "utf16_test.BenchmarkDecodeValidASCII",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeValidASCII(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeValidASCII(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#BenchmarkDecodeValidJapaneseChars",
+              "documentation": {
+                "identifier": "BenchmarkDecodeValidJapaneseChars",
+                "newPage": false,
+                "searchKey": "utf16_test.BenchmarkDecodeValidJapaneseChars",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeValidJapaneseChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeValidJapaneseChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#BenchmarkDecodeRune",
+              "documentation": {
+                "identifier": "BenchmarkDecodeRune",
+                "newPage": false,
+                "searchKey": "utf16_test.BenchmarkDecodeRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeRune(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeRune(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#BenchmarkEncodeValidASCII",
+              "documentation": {
+                "identifier": "BenchmarkEncodeValidASCII",
+                "newPage": false,
+                "searchKey": "utf16_test.BenchmarkEncodeValidASCII",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeValidASCII(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeValidASCII(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#BenchmarkEncodeValidJapaneseChars",
+              "documentation": {
+                "identifier": "BenchmarkEncodeValidJapaneseChars",
+                "newPage": false,
+                "searchKey": "utf16_test.BenchmarkEncodeValidJapaneseChars",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeValidJapaneseChars(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeValidJapaneseChars(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16_test#BenchmarkEncodeRune",
+              "documentation": {
+                "identifier": "BenchmarkEncodeRune",
+                "newPage": false,
+                "searchKey": "utf16_test.BenchmarkEncodeRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeRune(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeRune(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

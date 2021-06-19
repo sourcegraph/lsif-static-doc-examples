@@ -1,0 +1,1089 @@
+{
+  "pathID": "/std/unicode/utf8",
+  "documentation": {
+    "identifier": "utf8",
+    "newPage": true,
+    "searchKey": "std/unicode/utf8",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package utf8"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package utf8 implements functions and constants to support text encoded in UTF-8. It includes functions to translate between runes and UTF-8 byte sequences. See [https://en.wikipedia.org/wiki/UTF-8](https://en.wikipedia.org/wiki/UTF-8) \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/unicode/utf8#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#RuneError",
+              "documentation": {
+                "identifier": "RuneError",
+                "newPage": false,
+                "searchKey": "utf8.RuneError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RuneError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RuneError = '\\uFFFD' // the \"error\" Rune or \"Unicode replacement character\"\n\n```\n\nNumbers fundamental to the encoding. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#RuneSelf",
+              "documentation": {
+                "identifier": "RuneSelf",
+                "newPage": false,
+                "searchKey": "utf8.RuneSelf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RuneSelf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RuneSelf = 0x80 // characters below RuneSelf are represented as themselves in a single byte.\n\n```\n\nNumbers fundamental to the encoding. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#MaxRune",
+              "documentation": {
+                "identifier": "MaxRune",
+                "newPage": false,
+                "searchKey": "utf8.MaxRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaxRune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaxRune = '\\U0010FFFF' // Maximum valid Unicode code point.\n\n```\n\nNumbers fundamental to the encoding. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#UTFMax",
+              "documentation": {
+                "identifier": "UTFMax",
+                "newPage": false,
+                "searchKey": "utf8.UTFMax",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UTFMax"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UTFMax = 4 // maximum number of bytes of a UTF-8 encoded Unicode character.\n\n```\n\nNumbers fundamental to the encoding. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#surrogateMin",
+              "documentation": {
+                "identifier": "surrogateMin",
+                "newPage": false,
+                "searchKey": "utf8.surrogateMin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surrogateMin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surrogateMin = 0xD800\n```\n\nCode points in the surrogate range are not valid for UTF-8. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#surrogateMax",
+              "documentation": {
+                "identifier": "surrogateMax",
+                "newPage": false,
+                "searchKey": "utf8.surrogateMax",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surrogateMax"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surrogateMax = 0xDFFF\n```\n\nCode points in the surrogate range are not valid for UTF-8. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#t1",
+              "documentation": {
+                "identifier": "t1",
+                "newPage": false,
+                "searchKey": "utf8.t1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const t1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst t1 = 0b00000000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#tx",
+              "documentation": {
+                "identifier": "tx",
+                "newPage": false,
+                "searchKey": "utf8.tx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const tx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst tx = 0b10000000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#t2",
+              "documentation": {
+                "identifier": "t2",
+                "newPage": false,
+                "searchKey": "utf8.t2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const t2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst t2 = 0b11000000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#t3",
+              "documentation": {
+                "identifier": "t3",
+                "newPage": false,
+                "searchKey": "utf8.t3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const t3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst t3 = 0b11100000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#t4",
+              "documentation": {
+                "identifier": "t4",
+                "newPage": false,
+                "searchKey": "utf8.t4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const t4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst t4 = 0b11110000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#t5",
+              "documentation": {
+                "identifier": "t5",
+                "newPage": false,
+                "searchKey": "utf8.t5",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const t5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst t5 = 0b11111000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#maskx",
+              "documentation": {
+                "identifier": "maskx",
+                "newPage": false,
+                "searchKey": "utf8.maskx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maskx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maskx = 0b00111111\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#mask2",
+              "documentation": {
+                "identifier": "mask2",
+                "newPage": false,
+                "searchKey": "utf8.mask2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mask2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mask2 = 0b00011111\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#mask3",
+              "documentation": {
+                "identifier": "mask3",
+                "newPage": false,
+                "searchKey": "utf8.mask3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mask3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mask3 = 0b00001111\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#mask4",
+              "documentation": {
+                "identifier": "mask4",
+                "newPage": false,
+                "searchKey": "utf8.mask4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mask4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mask4 = 0b00000111\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#rune1Max",
+              "documentation": {
+                "identifier": "rune1Max",
+                "newPage": false,
+                "searchKey": "utf8.rune1Max",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rune1Max"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rune1Max = 1<<7 - 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#rune2Max",
+              "documentation": {
+                "identifier": "rune2Max",
+                "newPage": false,
+                "searchKey": "utf8.rune2Max",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rune2Max"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rune2Max = 1<<11 - 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#rune3Max",
+              "documentation": {
+                "identifier": "rune3Max",
+                "newPage": false,
+                "searchKey": "utf8.rune3Max",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rune3Max"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rune3Max = 1<<16 - 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#locb",
+              "documentation": {
+                "identifier": "locb",
+                "newPage": false,
+                "searchKey": "utf8.locb",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const locb"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst locb = 0b10000000\n```\n\nThe default lowest and highest continuation byte. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#hicb",
+              "documentation": {
+                "identifier": "hicb",
+                "newPage": false,
+                "searchKey": "utf8.hicb",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const hicb"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst hicb = 0b10111111\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#xx",
+              "documentation": {
+                "identifier": "xx",
+                "newPage": false,
+                "searchKey": "utf8.xx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const xx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst xx = 0xF1 // invalid: size 1\n\n```\n\nThese names of these constants are chosen to give nice alignment in the table below. The first nibble is an index into acceptRanges or F for special one-byte cases. The second nibble is the Rune length or the Status for the special one-byte case. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#as",
+              "documentation": {
+                "identifier": "as",
+                "newPage": false,
+                "searchKey": "utf8.as",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const as"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst as = 0xF0 // ASCII: size 1\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#s1",
+              "documentation": {
+                "identifier": "s1",
+                "newPage": false,
+                "searchKey": "utf8.s1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const s1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst s1 = 0x02 // accept 0, size 2\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#s2",
+              "documentation": {
+                "identifier": "s2",
+                "newPage": false,
+                "searchKey": "utf8.s2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const s2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst s2 = 0x13 // accept 1, size 3\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#s3",
+              "documentation": {
+                "identifier": "s3",
+                "newPage": false,
+                "searchKey": "utf8.s3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const s3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst s3 = 0x03 // accept 0, size 3\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#s4",
+              "documentation": {
+                "identifier": "s4",
+                "newPage": false,
+                "searchKey": "utf8.s4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const s4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst s4 = 0x23 // accept 2, size 3\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#s5",
+              "documentation": {
+                "identifier": "s5",
+                "newPage": false,
+                "searchKey": "utf8.s5",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const s5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst s5 = 0x34 // accept 3, size 4\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#s6",
+              "documentation": {
+                "identifier": "s6",
+                "newPage": false,
+                "searchKey": "utf8.s6",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const s6"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst s6 = 0x04 // accept 0, size 4\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#s7",
+              "documentation": {
+                "identifier": "s7",
+                "newPage": false,
+                "searchKey": "utf8.s7",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const s7"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst s7 = 0x44 // accept 4, size 4\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/unicode/utf8#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#first",
+              "documentation": {
+                "identifier": "first",
+                "newPage": false,
+                "searchKey": "utf8.first",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var first"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar first = ...\n```\n\nfirst is information about the first byte in a UTF-8 sequence. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#acceptRanges",
+              "documentation": {
+                "identifier": "acceptRanges",
+                "newPage": false,
+                "searchKey": "utf8.acceptRanges",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var acceptRanges"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar acceptRanges = ...\n```\n\nacceptRanges has size 16 to avoid bounds checks in the code that uses it. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/unicode/utf8#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#acceptRange",
+              "documentation": {
+                "identifier": "acceptRange",
+                "newPage": false,
+                "searchKey": "utf8.acceptRange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type acceptRange struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype acceptRange struct {\n\tlo uint8 // lowest value for second byte.\n\thi uint8 // highest value for second byte.\n}\n```\n\nacceptRange gives the range of valid values for the second byte in a UTF-8 sequence. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/unicode/utf8#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#FullRune",
+              "documentation": {
+                "identifier": "FullRune",
+                "newPage": false,
+                "searchKey": "utf8.FullRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FullRune(p []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FullRune(p []byte) bool\n```\n\nFullRune reports whether the bytes in p begin with a full UTF-8 encoding of a rune. An invalid encoding is considered a full Rune since it will convert as a width-1 error rune. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#FullRuneInString",
+              "documentation": {
+                "identifier": "FullRuneInString",
+                "newPage": false,
+                "searchKey": "utf8.FullRuneInString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FullRuneInString(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FullRuneInString(s string) bool\n```\n\nFullRuneInString is like FullRune but its input is a string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#DecodeRune",
+              "documentation": {
+                "identifier": "DecodeRune",
+                "newPage": false,
+                "searchKey": "utf8.DecodeRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeRune(p []byte) (r rune, size int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeRune(p []byte) (r rune, size int)\n```\n\nDecodeRune unpacks the first UTF-8 encoding in p and returns the rune and its width in bytes. If p is empty it returns (RuneError, 0). Otherwise, if the encoding is invalid, it returns (RuneError, 1). Both are impossible results for correct, non-empty UTF-8. \n\nAn encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of range, or is not the shortest possible UTF-8 encoding for the value. No other validation is performed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#DecodeRuneInString",
+              "documentation": {
+                "identifier": "DecodeRuneInString",
+                "newPage": false,
+                "searchKey": "utf8.DecodeRuneInString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeRuneInString(s string) (r rune, size int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeRuneInString(s string) (r rune, size int)\n```\n\nDecodeRuneInString is like DecodeRune but its input is a string. If s is empty it returns (RuneError, 0). Otherwise, if the encoding is invalid, it returns (RuneError, 1). Both are impossible results for correct, non-empty UTF-8. \n\nAn encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of range, or is not the shortest possible UTF-8 encoding for the value. No other validation is performed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#DecodeLastRune",
+              "documentation": {
+                "identifier": "DecodeLastRune",
+                "newPage": false,
+                "searchKey": "utf8.DecodeLastRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeLastRune(p []byte) (r rune, size int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeLastRune(p []byte) (r rune, size int)\n```\n\nDecodeLastRune unpacks the last UTF-8 encoding in p and returns the rune and its width in bytes. If p is empty it returns (RuneError, 0). Otherwise, if the encoding is invalid, it returns (RuneError, 1). Both are impossible results for correct, non-empty UTF-8. \n\nAn encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of range, or is not the shortest possible UTF-8 encoding for the value. No other validation is performed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#DecodeLastRuneInString",
+              "documentation": {
+                "identifier": "DecodeLastRuneInString",
+                "newPage": false,
+                "searchKey": "utf8.DecodeLastRuneInString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeLastRuneInString(s string) (r rune, size int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeLastRuneInString(s string) (r rune, size int)\n```\n\nDecodeLastRuneInString is like DecodeLastRune but its input is a string. If s is empty it returns (RuneError, 0). Otherwise, if the encoding is invalid, it returns (RuneError, 1). Both are impossible results for correct, non-empty UTF-8. \n\nAn encoding is invalid if it is incorrect UTF-8, encodes a rune that is out of range, or is not the shortest possible UTF-8 encoding for the value. No other validation is performed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#RuneLen",
+              "documentation": {
+                "identifier": "RuneLen",
+                "newPage": false,
+                "searchKey": "utf8.RuneLen",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RuneLen(r rune) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RuneLen(r rune) int\n```\n\nRuneLen returns the number of bytes required to encode the rune. It returns -1 if the rune is not a valid value to encode in UTF-8. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#EncodeRune",
+              "documentation": {
+                "identifier": "EncodeRune",
+                "newPage": false,
+                "searchKey": "utf8.EncodeRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EncodeRune(p []byte, r rune) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EncodeRune(p []byte, r rune) int\n```\n\nEncodeRune writes into p (which must be large enough) the UTF-8 encoding of the rune. If the rune is out of range, it writes the encoding of RuneError. It returns the number of bytes written. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#RuneCount",
+              "documentation": {
+                "identifier": "RuneCount",
+                "newPage": false,
+                "searchKey": "utf8.RuneCount",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RuneCount(p []byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RuneCount(p []byte) int\n```\n\nRuneCount returns the number of runes in p. Erroneous and short encodings are treated as single runes of width 1 byte. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#RuneCountInString",
+              "documentation": {
+                "identifier": "RuneCountInString",
+                "newPage": false,
+                "searchKey": "utf8.RuneCountInString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RuneCountInString(s string) (n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RuneCountInString(s string) (n int)\n```\n\nRuneCountInString is like RuneCount but its input is a string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#RuneStart",
+              "documentation": {
+                "identifier": "RuneStart",
+                "newPage": false,
+                "searchKey": "utf8.RuneStart",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RuneStart(b byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RuneStart(b byte) bool\n```\n\nRuneStart reports whether the byte could be the first byte of an encoded, possibly invalid rune. Second and subsequent bytes always have the top two bits set to 10. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#Valid",
+              "documentation": {
+                "identifier": "Valid",
+                "newPage": false,
+                "searchKey": "utf8.Valid",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Valid(p []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Valid(p []byte) bool\n```\n\nValid reports whether p consists entirely of valid UTF-8-encoded runes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#ValidString",
+              "documentation": {
+                "identifier": "ValidString",
+                "newPage": false,
+                "searchKey": "utf8.ValidString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidString(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidString(s string) bool\n```\n\nValidString reports whether s consists entirely of valid UTF-8-encoded runes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf8#ValidRune",
+              "documentation": {
+                "identifier": "ValidRune",
+                "newPage": false,
+                "searchKey": "utf8.ValidRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ValidRune(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ValidRune(r rune) bool\n```\n\nValidRune reports whether r can be legally encoded as UTF-8. Code points that are out of range or a surrogate half are illegal. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

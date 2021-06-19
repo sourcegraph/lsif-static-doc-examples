@@ -1,0 +1,3456 @@
+{
+  "pathID": "/std/go/printer",
+  "documentation": {
+    "identifier": "printer",
+    "newPage": true,
+    "searchKey": "std/go/printer",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package printer"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package printer implements printing of AST nodes. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/go/printer#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/printer#commaTerm",
+              "documentation": {
+                "identifier": "commaTerm",
+                "newPage": false,
+                "searchKey": "printer.commaTerm",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const commaTerm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst commaTerm exprListMode = 1 << iota // list is optionally terminated by a comma\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#noIndent",
+              "documentation": {
+                "identifier": "noIndent",
+                "newPage": false,
+                "searchKey": "printer.noIndent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const noIndent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst noIndent // no extra indentation in multi-line lists\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#filteredMsg",
+              "documentation": {
+                "identifier": "filteredMsg",
+                "newPage": false,
+                "searchKey": "printer.filteredMsg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const filteredMsg"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst filteredMsg = \"contains filtered or unexported fields\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#maxNewlines",
+              "documentation": {
+                "identifier": "maxNewlines",
+                "newPage": false,
+                "searchKey": "printer.maxNewlines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxNewlines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxNewlines = 2 // max. number of newlines between source text\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#debug",
+              "documentation": {
+                "identifier": "debug",
+                "newPage": false,
+                "searchKey": "printer.debug",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const debug"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst debug = false // enable for debugging\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#infinity",
+              "documentation": {
+                "identifier": "infinity",
+                "newPage": false,
+                "searchKey": "printer.infinity",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const infinity"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst infinity = 1 << 30\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#ignore",
+              "documentation": {
+                "identifier": "ignore",
+                "newPage": false,
+                "searchKey": "printer.ignore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ignore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ignore = whiteSpace(0)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#blank",
+              "documentation": {
+                "identifier": "blank",
+                "newPage": false,
+                "searchKey": "printer.blank",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const blank"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst blank = whiteSpace(' ')\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#vtab",
+              "documentation": {
+                "identifier": "vtab",
+                "newPage": false,
+                "searchKey": "printer.vtab",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const vtab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst vtab = whiteSpace('\\v')\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#newline",
+              "documentation": {
+                "identifier": "newline",
+                "newPage": false,
+                "searchKey": "printer.newline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const newline"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst newline = whiteSpace('\\n')\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#formfeed",
+              "documentation": {
+                "identifier": "formfeed",
+                "newPage": false,
+                "searchKey": "printer.formfeed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const formfeed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst formfeed = whiteSpace('\\f')\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#indent",
+              "documentation": {
+                "identifier": "indent",
+                "newPage": false,
+                "searchKey": "printer.indent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const indent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst indent = whiteSpace('>')\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#unindent",
+              "documentation": {
+                "identifier": "unindent",
+                "newPage": false,
+                "searchKey": "printer.unindent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const unindent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst unindent = whiteSpace('<')\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#noExtraBlank",
+              "documentation": {
+                "identifier": "noExtraBlank",
+                "newPage": false,
+                "searchKey": "printer.noExtraBlank",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const noExtraBlank"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst noExtraBlank pmode = 1 << iota // disables extra blank after /*-style comment\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#noExtraLinebreak",
+              "documentation": {
+                "identifier": "noExtraLinebreak",
+                "newPage": false,
+                "searchKey": "printer.noExtraLinebreak",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const noExtraLinebreak"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst noExtraLinebreak // disables extra line break after /*-style comment\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#inSpace",
+              "documentation": {
+                "identifier": "inSpace",
+                "newPage": false,
+                "searchKey": "printer.inSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const inSpace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst inSpace = iota // inside space\n\n```\n\ntrimmer is implemented as a state machine. It can be in one of the following states: \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#inEscape",
+              "documentation": {
+                "identifier": "inEscape",
+                "newPage": false,
+                "searchKey": "printer.inEscape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const inEscape"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst inEscape // inside text bracketed by tabwriter.Escapes\n\n```\n\ntrimmer is implemented as a state machine. It can be in one of the following states: \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#inText",
+              "documentation": {
+                "identifier": "inText",
+                "newPage": false,
+                "searchKey": "printer.inText",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const inText"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst inText // inside text\n\n```\n\ntrimmer is implemented as a state machine. It can be in one of the following states: \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#RawFormat",
+              "documentation": {
+                "identifier": "RawFormat",
+                "newPage": false,
+                "searchKey": "printer.RawFormat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RawFormat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RawFormat Mode = 1 << iota // do not use a tabwriter; if set, UseSpaces is ignored\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TabIndent",
+              "documentation": {
+                "identifier": "TabIndent",
+                "newPage": false,
+                "searchKey": "printer.TabIndent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TabIndent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TabIndent // use tabs for indentation independent of UseSpaces\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#UseSpaces",
+              "documentation": {
+                "identifier": "UseSpaces",
+                "newPage": false,
+                "searchKey": "printer.UseSpaces",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const UseSpaces"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst UseSpaces // use spaces instead of tabs for alignment\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#SourcePos",
+              "documentation": {
+                "identifier": "SourcePos",
+                "newPage": false,
+                "searchKey": "printer.SourcePos",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SourcePos"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SourcePos // emit //line directives to preserve original source positions\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#normalizeNumbers",
+              "documentation": {
+                "identifier": "normalizeNumbers",
+                "newPage": false,
+                "searchKey": "printer.normalizeNumbers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const normalizeNumbers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst normalizeNumbers Mode = 1 << 30\n```\n\nThe mode below is not included in printer's public API because editing code text is deemed out of scope. Because this mode is unexported, it's also possible to modify or remove it based on the evolving needs of go/format and cmd/gofmt without breaking users. See discussion in CL 240683. \n\nnormalizeNumbers means to canonicalize number literal prefixes and exponents while printing. \n\nThis value is known in and used by go/format and cmd/gofmt. It is currently more convenient and performant for those packages to apply number normalization during printing, rather than by modifying the AST in advance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#dataDir",
+              "documentation": {
+                "identifier": "dataDir",
+                "newPage": false,
+                "searchKey": "printer.dataDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dataDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dataDir = \"testdata\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#tabwidth",
+              "documentation": {
+                "identifier": "tabwidth",
+                "newPage": false,
+                "searchKey": "printer.tabwidth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const tabwidth"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst tabwidth = 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#export",
+              "documentation": {
+                "identifier": "export",
+                "newPage": false,
+                "searchKey": "printer.export",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const export"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst export checkMode = 1 << iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#rawFormat",
+              "documentation": {
+                "identifier": "rawFormat",
+                "newPage": false,
+                "searchKey": "printer.rawFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rawFormat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rawFormat\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#normNumber",
+              "documentation": {
+                "identifier": "normNumber",
+                "newPage": false,
+                "searchKey": "printer.normNumber",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const normNumber"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst normNumber\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#idempotent",
+              "documentation": {
+                "identifier": "idempotent",
+                "newPage": false,
+                "searchKey": "printer.idempotent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const idempotent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst idempotent\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#allowTypeParams",
+              "documentation": {
+                "identifier": "allowTypeParams",
+                "newPage": false,
+                "searchKey": "printer.allowTypeParams",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const allowTypeParams"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst allowTypeParams\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/printer#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/printer#aNewline",
+              "documentation": {
+                "identifier": "aNewline",
+                "newPage": false,
+                "searchKey": "printer.aNewline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var aNewline"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar aNewline = []byte(\"\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#testfile",
+              "documentation": {
+                "identifier": "testfile",
+                "newPage": false,
+                "searchKey": "printer.testfile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testfile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testfile *ast.File\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#update",
+              "documentation": {
+                "identifier": "update",
+                "newPage": false,
+                "searchKey": "printer.update",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var update"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar update = flag.Bool(\"update\", false, \"update golden files\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#fset",
+              "documentation": {
+                "identifier": "fset",
+                "newPage": false,
+                "searchKey": "printer.fset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fset = token.NewFileSet()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#data",
+              "documentation": {
+                "identifier": "data",
+                "newPage": false,
+                "searchKey": "printer.data",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var data"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar data = ...\n```\n\nUse go test -update to create/update the respective golden files. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#decls",
+              "documentation": {
+                "identifier": "decls",
+                "newPage": false,
+                "searchKey": "printer.decls",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var decls"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar decls = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#stmts",
+              "documentation": {
+                "identifier": "stmts",
+                "newPage": false,
+                "searchKey": "printer.stmts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stmts"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stmts = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/printer#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/printer#exprListMode",
+              "documentation": {
+                "identifier": "exprListMode",
+                "newPage": false,
+                "searchKey": "printer.exprListMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type exprListMode uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype exprListMode uint\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#whiteSpace",
+              "documentation": {
+                "identifier": "whiteSpace",
+                "newPage": false,
+                "searchKey": "printer.whiteSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type whiteSpace byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype whiteSpace byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#pmode",
+              "documentation": {
+                "identifier": "pmode",
+                "newPage": false,
+                "searchKey": "printer.pmode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pmode int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pmode int\n```\n\nA pmode value represents the current printer mode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#commentInfo",
+              "documentation": {
+                "identifier": "commentInfo",
+                "newPage": false,
+                "searchKey": "printer.commentInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type commentInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype commentInfo struct {\n\tcindex         int               // current comment index\n\tcomment        *ast.CommentGroup // = printer.comments[cindex]; or nil\n\tcommentOffset  int               // = printer.posFor(printer.comments[cindex].List[0].Pos()).Offset; or infinity\n\tcommentNewline bool              // true if the comment group contains newlines\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#printer",
+              "documentation": {
+                "identifier": "printer",
+                "newPage": false,
+                "searchKey": "printer.printer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type printer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype printer struct {\n\t// Configuration (does not change after initialization)\n\tConfig\n\tfset *token.FileSet\n\n\t// Current state\n\toutput       []byte       // raw printer result\n\tindent       int          // current indentation\n\tlevel        int          // level == 0: outside composite literal; level > 0: inside composite literal\n\tmode         pmode        // current printer mode\n\tendAlignment bool         // if set, terminate alignment immediately\n\timpliedSemi  bool         // if set, a linebreak implies a semicolon\n\tlastTok      token.Token  // last token printed (token.ILLEGAL if it's whitespace)\n\tprevOpen     token.Token  // previous non-brace \"open\" token (, [, or token.ILLEGAL\n\twsbuf        []whiteSpace // delayed white space\n\tgoBuild      []int        // start index of all //go:build comments in output\n\tplusBuild    []int        // start index of all // +build comments in output\n\n\t// Positions\n\t// The out position differs from the pos position when the result\n\t// formatting differs from the source formatting (in the amount of\n\t// white space). If there's a difference and SourcePos is set in\n\t// ConfigMode, //line directives are used in the output to restore\n\t// original source positions for a reader.\n\tpos     token.Position // current position in AST (source) space\n\tout     token.Position // current position in output space\n\tlast    token.Position // value of pos after calling writeString\n\tlinePtr *int           // if set, record out.Line for the next token in *linePtr\n\n\t// The list of all source comments, in order of appearance.\n\tcomments        []*ast.CommentGroup // may be nil\n\tuseNodeComments bool                // if not set, ignore lead and line comments of nodes\n\n\t// Information about p.comments[p.cindex]; set up by nextComment.\n\tcommentInfo\n\n\t// Cache of already computed node sizes.\n\tnodeSizes map[ast.Node]int\n\n\t// Cache of most recently computed line position.\n\tcachedPos  token.Pos\n\tcachedLine int // line corresponding to cachedPos\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.fixGoBuildLines",
+                    "documentation": {
+                      "identifier": "printer.fixGoBuildLines",
+                      "newPage": false,
+                      "searchKey": "printer.printer.fixGoBuildLines",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) fixGoBuildLines()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) fixGoBuildLines()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.lineAt",
+                    "documentation": {
+                      "identifier": "printer.lineAt",
+                      "newPage": false,
+                      "searchKey": "printer.printer.lineAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) lineAt(start int) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) lineAt(start int) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.commentTextAt",
+                    "documentation": {
+                      "identifier": "printer.commentTextAt",
+                      "newPage": false,
+                      "searchKey": "printer.printer.commentTextAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) commentTextAt(start int) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) commentTextAt(start int) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.linebreak",
+                    "documentation": {
+                      "identifier": "printer.linebreak",
+                      "newPage": false,
+                      "searchKey": "printer.printer.linebreak",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) linebreak(line, min int, ws whiteSpace, newSection bool) (nbreaks int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) linebreak(line, min int, ws whiteSpace, newSection bool) (nbreaks int)\n```\n\nPrint as many newlines as necessary (but at least min newlines) to get to the current line. ws is printed before the first line break. If newSection is set, the first line break is printed as formfeed. Returns 0 if no line breaks were printed, returns 1 if there was exactly one newline printed, and returns a value > 1 if there was a formfeed or more than one newline printed. \n\nTODO(gri): linebreak may add too many lines if the next statement at \"line\" \n\n```\nis preceded by comments because the computation of n assumes\nthe current position before the comment and the target position\nafter the comment. Thus, after interspersing such comments, the\nspace taken up by them is not considered to reduce the number of\nlinebreaks. At the moment there is no easy way to know about\nfuture (not yet interspersed) comments in this function.\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.setComment",
+                    "documentation": {
+                      "identifier": "printer.setComment",
+                      "newPage": false,
+                      "searchKey": "printer.printer.setComment",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) setComment(g *ast.CommentGroup)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) setComment(g *ast.CommentGroup)\n```\n\nsetComment sets g as the next comment if g != nil and if node comments are enabled - this mode is used when printing source code fragments such as exports only. It assumes that there is no pending comment in p.comments and at most one pending comment in the p.comment cache. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.identList",
+                    "documentation": {
+                      "identifier": "printer.identList",
+                      "newPage": false,
+                      "searchKey": "printer.printer.identList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) identList(list []*ast.Ident, indent bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) identList(list []*ast.Ident, indent bool)\n```\n\nIf indent is set, a multi-line identifier list is indented after the first linebreak encountered. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.exprList",
+                    "documentation": {
+                      "identifier": "printer.exprList",
+                      "newPage": false,
+                      "searchKey": "printer.printer.exprList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) exprList(prev0 token.Pos, list []ast.Expr, depth int, mode exprListMode, next0 token.Pos, isIncomplete bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) exprList(prev0 token.Pos, list []ast.Expr, depth int, mode exprListMode, next0 token.Pos, isIncomplete bool)\n```\n\nPrint a list of expressions. If the list spans multiple source lines, the original line breaks are respected between expressions. \n\nTODO(gri) Consider rewriting this to be independent of []ast.Expr \n\n```\nso that we can use the algorithm for any kind of list\n(e.g., pass list via a channel over which to range).\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.parameters",
+                    "documentation": {
+                      "identifier": "printer.parameters",
+                      "newPage": false,
+                      "searchKey": "printer.printer.parameters",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) parameters(fields *ast.FieldList, isTypeParam bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) parameters(fields *ast.FieldList, isTypeParam bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.signature",
+                    "documentation": {
+                      "identifier": "printer.signature",
+                      "newPage": false,
+                      "searchKey": "printer.printer.signature",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) signature(sig *ast.FuncType)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) signature(sig *ast.FuncType)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.isOneLineFieldList",
+                    "documentation": {
+                      "identifier": "printer.isOneLineFieldList",
+                      "newPage": false,
+                      "searchKey": "printer.printer.isOneLineFieldList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) isOneLineFieldList(list []*ast.Field) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) isOneLineFieldList(list []*ast.Field) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.setLineComment",
+                    "documentation": {
+                      "identifier": "printer.setLineComment",
+                      "newPage": false,
+                      "searchKey": "printer.printer.setLineComment",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) setLineComment(text string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) setLineComment(text string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.fieldList",
+                    "documentation": {
+                      "identifier": "printer.fieldList",
+                      "newPage": false,
+                      "searchKey": "printer.printer.fieldList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) fieldList(fields *ast.FieldList, isStruct, isIncomplete bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) fieldList(fields *ast.FieldList, isStruct, isIncomplete bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.binaryExpr",
+                    "documentation": {
+                      "identifier": "printer.binaryExpr",
+                      "newPage": false,
+                      "searchKey": "printer.printer.binaryExpr",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) binaryExpr(x *ast.BinaryExpr, prec1, cutoff, depth int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) binaryExpr(x *ast.BinaryExpr, prec1, cutoff, depth int)\n```\n\nFormat the binary expression: decide the cutoff and then format. Let's call depth == 1 Normal mode, and depth > 1 Compact mode. (Algorithm suggestion by Russ Cox.) \n\nThe precedences are: \n\n```\n5             *  /  %  <<  >>  &  &^\n4             +  -  |  ^\n3             ==  !=  <  <=  >  >=\n2             &&\n1             ||\n\n```\nThe only decision is whether there will be spaces around levels 4 and 5. There are never spaces at level 6 (unary), and always spaces at levels 3 and below. \n\nTo choose the cutoff, look at the whole expression but excluding primary expressions (function calls, parenthesized exprs), and apply these rules: \n\n```\n\t1) If there is a binary operator with a right side unary operand\n\t   that would clash without a space, the cutoff must be (in order):\n\n\t\t/*\t6\n\t\t&&\t6\n\t\t&^\t6\n\t\t++\t5\n\t\t--\t5\n\n        (Comparison operators always have spaces around them.)\n\n\t2) If there is a mix of level 5 and level 4 operators, then the cutoff\n\t   is 5 (use spaces to distinguish precedence) in Normal mode\n\t   and 4 (never use spaces) in Compact mode.\n\n\t3) If there are no level 4 operators or no level 5 operators, then the\n\t   cutoff is 6 (always use spaces) in Normal mode\n\t   and 4 (never use spaces) in Compact mode.\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.expr1",
+                    "documentation": {
+                      "identifier": "printer.expr1",
+                      "newPage": false,
+                      "searchKey": "printer.printer.expr1",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) expr1(expr ast.Expr, prec1, depth int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) expr1(expr ast.Expr, prec1, depth int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.possibleSelectorExpr",
+                    "documentation": {
+                      "identifier": "printer.possibleSelectorExpr",
+                      "newPage": false,
+                      "searchKey": "printer.printer.possibleSelectorExpr",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) possibleSelectorExpr(expr ast.Expr, prec1, depth int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) possibleSelectorExpr(expr ast.Expr, prec1, depth int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.selectorExpr",
+                    "documentation": {
+                      "identifier": "printer.selectorExpr",
+                      "newPage": false,
+                      "searchKey": "printer.printer.selectorExpr",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) selectorExpr(x *ast.SelectorExpr, depth int, isMethod bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) selectorExpr(x *ast.SelectorExpr, depth int, isMethod bool) bool\n```\n\nselectorExpr handles an *ast.SelectorExpr node and reports whether x spans multiple lines. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.expr0",
+                    "documentation": {
+                      "identifier": "printer.expr0",
+                      "newPage": false,
+                      "searchKey": "printer.printer.expr0",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) expr0(x ast.Expr, depth int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) expr0(x ast.Expr, depth int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.expr",
+                    "documentation": {
+                      "identifier": "printer.expr",
+                      "newPage": false,
+                      "searchKey": "printer.printer.expr",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) expr(x ast.Expr)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) expr(x ast.Expr)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.stmtList",
+                    "documentation": {
+                      "identifier": "printer.stmtList",
+                      "newPage": false,
+                      "searchKey": "printer.printer.stmtList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) stmtList(list []ast.Stmt, nindent int, nextIsRBrace bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) stmtList(list []ast.Stmt, nindent int, nextIsRBrace bool)\n```\n\nPrint the statement list indented, but without a newline after the last statement. Extra line breaks between statements in the source are respected but at most one empty line is printed between statements. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.block",
+                    "documentation": {
+                      "identifier": "printer.block",
+                      "newPage": false,
+                      "searchKey": "printer.printer.block",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) block(b *ast.BlockStmt, nindent int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) block(b *ast.BlockStmt, nindent int)\n```\n\nblock prints an *ast.BlockStmt; it always spans at least two lines. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.controlClause",
+                    "documentation": {
+                      "identifier": "printer.controlClause",
+                      "newPage": false,
+                      "searchKey": "printer.printer.controlClause",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) controlClause(isForStmt bool, init ast.Stmt, expr ast.Expr, post ast.Stmt)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) controlClause(isForStmt bool, init ast.Stmt, expr ast.Expr, post ast.Stmt)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.indentList",
+                    "documentation": {
+                      "identifier": "printer.indentList",
+                      "newPage": false,
+                      "searchKey": "printer.printer.indentList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) indentList(list []ast.Expr) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) indentList(list []ast.Expr) bool\n```\n\nindentList reports whether an expression list would look better if it were indented wholesale (starting with the very first element, rather than starting at the first line break). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.stmt",
+                    "documentation": {
+                      "identifier": "printer.stmt",
+                      "newPage": false,
+                      "searchKey": "printer.printer.stmt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) stmt(stmt ast.Stmt, nextIsRBrace bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) stmt(stmt ast.Stmt, nextIsRBrace bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.valueSpec",
+                    "documentation": {
+                      "identifier": "printer.valueSpec",
+                      "newPage": false,
+                      "searchKey": "printer.printer.valueSpec",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) valueSpec(s *ast.ValueSpec, keepType bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) valueSpec(s *ast.ValueSpec, keepType bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.spec",
+                    "documentation": {
+                      "identifier": "printer.spec",
+                      "newPage": false,
+                      "searchKey": "printer.printer.spec",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) spec(spec ast.Spec, n int, doIndent bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) spec(spec ast.Spec, n int, doIndent bool)\n```\n\nThe parameter n is the number of specs in the group. If doIndent is set, multi-line identifier lists in the spec are indented when the first linebreak is encountered. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.genDecl",
+                    "documentation": {
+                      "identifier": "printer.genDecl",
+                      "newPage": false,
+                      "searchKey": "printer.printer.genDecl",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) genDecl(d *ast.GenDecl)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) genDecl(d *ast.GenDecl)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.nodeSize",
+                    "documentation": {
+                      "identifier": "printer.nodeSize",
+                      "newPage": false,
+                      "searchKey": "printer.printer.nodeSize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) nodeSize(n ast.Node, maxSize int) (size int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) nodeSize(n ast.Node, maxSize int) (size int)\n```\n\nnodeSize determines the size of n in chars after formatting. The result is <= maxSize if the node fits on one line with at most maxSize chars and the formatted output doesn't contain any control chars. Otherwise, the result is > maxSize. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.numLines",
+                    "documentation": {
+                      "identifier": "printer.numLines",
+                      "newPage": false,
+                      "searchKey": "printer.printer.numLines",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) numLines(n ast.Node) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) numLines(n ast.Node) int\n```\n\nnumLines returns the number of lines spanned by node n in the original source. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.bodySize",
+                    "documentation": {
+                      "identifier": "printer.bodySize",
+                      "newPage": false,
+                      "searchKey": "printer.printer.bodySize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) bodySize(b *ast.BlockStmt, maxSize int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) bodySize(b *ast.BlockStmt, maxSize int) int\n```\n\nbodySize is like nodeSize but it is specialized for *ast.BlockStmt's. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.funcBody",
+                    "documentation": {
+                      "identifier": "printer.funcBody",
+                      "newPage": false,
+                      "searchKey": "printer.printer.funcBody",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) funcBody(headerSize int, sep whiteSpace, b *ast.BlockStmt)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) funcBody(headerSize int, sep whiteSpace, b *ast.BlockStmt)\n```\n\nfuncBody prints a function body following a function header of given headerSize. If the header's and block's size are \"small enough\" and the block is \"simple enough\", the block is printed on the current line, without line breaks, spaced from the header by sep. Otherwise the block's opening \"{\" is printed on the current line, followed by lines for the block's statements and its closing \"}\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.distanceFrom",
+                    "documentation": {
+                      "identifier": "printer.distanceFrom",
+                      "newPage": false,
+                      "searchKey": "printer.printer.distanceFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) distanceFrom(startPos token.Pos, startOutCol int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) distanceFrom(startPos token.Pos, startOutCol int) int\n```\n\ndistanceFrom returns the column difference between p.out (the current output position) and startOutCol. If the start position is on a different line from the current position (or either is unknown), the result is infinity. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.funcDecl",
+                    "documentation": {
+                      "identifier": "printer.funcDecl",
+                      "newPage": false,
+                      "searchKey": "printer.printer.funcDecl",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) funcDecl(d *ast.FuncDecl)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) funcDecl(d *ast.FuncDecl)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.decl",
+                    "documentation": {
+                      "identifier": "printer.decl",
+                      "newPage": false,
+                      "searchKey": "printer.printer.decl",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) decl(decl ast.Decl)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) decl(decl ast.Decl)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.declList",
+                    "documentation": {
+                      "identifier": "printer.declList",
+                      "newPage": false,
+                      "searchKey": "printer.printer.declList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) declList(list []ast.Decl)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) declList(list []ast.Decl)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.file",
+                    "documentation": {
+                      "identifier": "printer.file",
+                      "newPage": false,
+                      "searchKey": "printer.printer.file",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) file(src *ast.File)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) file(src *ast.File)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.init",
+                    "documentation": {
+                      "identifier": "printer.init",
+                      "newPage": false,
+                      "searchKey": "printer.printer.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) init(cfg *Config, fset *token.FileSet, nodeSizes map[ast.Node]int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) init(cfg *Config, fset *token.FileSet, nodeSizes map[ast.Node]int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.internalError",
+                    "documentation": {
+                      "identifier": "printer.internalError",
+                      "newPage": false,
+                      "searchKey": "printer.printer.internalError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) internalError(msg ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) internalError(msg ...interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.commentsHaveNewline",
+                    "documentation": {
+                      "identifier": "printer.commentsHaveNewline",
+                      "newPage": false,
+                      "searchKey": "printer.printer.commentsHaveNewline",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) commentsHaveNewline(list []*ast.Comment) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) commentsHaveNewline(list []*ast.Comment) bool\n```\n\ncommentsHaveNewline reports whether a list of comments belonging to an *ast.CommentGroup contains newlines. Because the position information may only be partially correct, we also have to read the comment text. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.nextComment",
+                    "documentation": {
+                      "identifier": "printer.nextComment",
+                      "newPage": false,
+                      "searchKey": "printer.printer.nextComment",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) nextComment()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) nextComment()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.commentBefore",
+                    "documentation": {
+                      "identifier": "printer.commentBefore",
+                      "newPage": false,
+                      "searchKey": "printer.printer.commentBefore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) commentBefore(next token.Position) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) commentBefore(next token.Position) bool\n```\n\ncommentBefore reports whether the current comment group occurs before the next position in the source code and printing it does not introduce implicit semicolons. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.commentSizeBefore",
+                    "documentation": {
+                      "identifier": "printer.commentSizeBefore",
+                      "newPage": false,
+                      "searchKey": "printer.printer.commentSizeBefore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) commentSizeBefore(next token.Position) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) commentSizeBefore(next token.Position) int\n```\n\ncommentSizeBefore returns the estimated size of the comments on the same line before the next position. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.recordLine",
+                    "documentation": {
+                      "identifier": "printer.recordLine",
+                      "newPage": false,
+                      "searchKey": "printer.printer.recordLine",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) recordLine(linePtr *int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) recordLine(linePtr *int)\n```\n\nrecordLine records the output line number for the next non-whitespace token in *linePtr. It is used to compute an accurate line number for a formatted construct, independent of pending (not yet emitted) whitespace or comments. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.linesFrom",
+                    "documentation": {
+                      "identifier": "printer.linesFrom",
+                      "newPage": false,
+                      "searchKey": "printer.printer.linesFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) linesFrom(line int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) linesFrom(line int) int\n```\n\nlinesFrom returns the number of output lines between the current output line and the line argument, ignoring any pending (not yet emitted) whitespace or comments. It is used to compute an accurate size (in number of lines) for a formatted construct. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.posFor",
+                    "documentation": {
+                      "identifier": "printer.posFor",
+                      "newPage": false,
+                      "searchKey": "printer.printer.posFor",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) posFor(pos token.Pos) token.Position"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) posFor(pos token.Pos) token.Position\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.lineFor",
+                    "documentation": {
+                      "identifier": "printer.lineFor",
+                      "newPage": false,
+                      "searchKey": "printer.printer.lineFor",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) lineFor(pos token.Pos) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) lineFor(pos token.Pos) int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.writeLineDirective",
+                    "documentation": {
+                      "identifier": "printer.writeLineDirective",
+                      "newPage": false,
+                      "searchKey": "printer.printer.writeLineDirective",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) writeLineDirective(pos token.Position)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) writeLineDirective(pos token.Position)\n```\n\nwriteLineDirective writes a //line directive if necessary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.writeIndent",
+                    "documentation": {
+                      "identifier": "printer.writeIndent",
+                      "newPage": false,
+                      "searchKey": "printer.printer.writeIndent",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) writeIndent()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) writeIndent()\n```\n\nwriteIndent writes indentation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.writeByte",
+                    "documentation": {
+                      "identifier": "printer.writeByte",
+                      "newPage": false,
+                      "searchKey": "printer.printer.writeByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) writeByte(ch byte, n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) writeByte(ch byte, n int)\n```\n\nwriteByte writes ch n times to p.output and updates p.pos. Only used to write formatting (white space) characters. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.writeString",
+                    "documentation": {
+                      "identifier": "printer.writeString",
+                      "newPage": false,
+                      "searchKey": "printer.printer.writeString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) writeString(pos token.Position, s string, isLit bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) writeString(pos token.Position, s string, isLit bool)\n```\n\nwriteString writes the string s to p.output and updates p.pos, p.out, and p.last. If isLit is set, s is escaped w/ tabwriter.Escape characters to protect s from being interpreted by the tabwriter. \n\nNote: writeString is only used to write Go tokens, literals, and comments, all of which must be written literally. Thus, it is correct to always set isLit = true. However, setting it explicitly only when needed (i.e., when we don't know that s contains no tabs or line breaks) avoids processing extra escape characters and reduces run time of the printer benchmark by up to 10%. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.writeCommentPrefix",
+                    "documentation": {
+                      "identifier": "printer.writeCommentPrefix",
+                      "newPage": false,
+                      "searchKey": "printer.printer.writeCommentPrefix",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) writeCommentPrefix(pos, next token.Position, prev *ast.Comment, tok token.Token)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) writeCommentPrefix(pos, next token.Position, prev *ast.Comment, tok token.Token)\n```\n\nwriteCommentPrefix writes the whitespace before a comment. If there is any pending whitespace, it consumes as much of it as is likely to help position the comment nicely. pos is the comment position, next the position of the item after all pending comments, prev is the previous comment in a group of comments (or nil), and tok is the next token. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.writeComment",
+                    "documentation": {
+                      "identifier": "printer.writeComment",
+                      "newPage": false,
+                      "searchKey": "printer.printer.writeComment",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) writeComment(comment *ast.Comment)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) writeComment(comment *ast.Comment)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.writeCommentSuffix",
+                    "documentation": {
+                      "identifier": "printer.writeCommentSuffix",
+                      "newPage": false,
+                      "searchKey": "printer.printer.writeCommentSuffix",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) writeCommentSuffix(needsLinebreak bool) (wroteNewline, droppedFF bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) writeCommentSuffix(needsLinebreak bool) (wroteNewline, droppedFF bool)\n```\n\nwriteCommentSuffix writes a line break after a comment if indicated and processes any leftover indentation information. If a line break is needed, the kind of break (newline vs formfeed) depends on the pending whitespace. The writeCommentSuffix result indicates if a newline was written or if a formfeed was dropped from the whitespace buffer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.containsLinebreak",
+                    "documentation": {
+                      "identifier": "printer.containsLinebreak",
+                      "newPage": false,
+                      "searchKey": "printer.printer.containsLinebreak",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) containsLinebreak() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) containsLinebreak() bool\n```\n\ncontainsLinebreak reports whether the whitespace buffer contains any line breaks. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.intersperseComments",
+                    "documentation": {
+                      "identifier": "printer.intersperseComments",
+                      "newPage": false,
+                      "searchKey": "printer.printer.intersperseComments",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) intersperseComments(next token.Position, tok token.Token) (wroteNewline, droppedFF bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) intersperseComments(next token.Position, tok token.Token) (wroteNewline, droppedFF bool)\n```\n\nintersperseComments consumes all comments that appear before the next token tok and prints it together with the buffered whitespace (i.e., the whitespace that needs to be written before the next token). A heuristic is used to mix the comments and whitespace. The intersperseComments result indicates if a newline was written or if a formfeed was dropped from the whitespace buffer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.writeWhitespace",
+                    "documentation": {
+                      "identifier": "printer.writeWhitespace",
+                      "newPage": false,
+                      "searchKey": "printer.printer.writeWhitespace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) writeWhitespace(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) writeWhitespace(n int)\n```\n\nwhiteWhitespace writes the first n whitespace entries. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.print",
+                    "documentation": {
+                      "identifier": "printer.print",
+                      "newPage": false,
+                      "searchKey": "printer.printer.print",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) print(args ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) print(args ...interface{})\n```\n\nprint prints a list of \"items\" (roughly corresponding to syntactic tokens, but also including whitespace and formatting information). It is the only print function that should be called directly from any of the AST printing functions in nodes.go. \n\nWhitespace is accumulated until a non-whitespace token appears. Any comments that need to appear before that token are printed first, taking into account the amount and structure of any pending white- space for best comment placement. Then, any leftover whitespace is printed, followed by the actual token. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.flush",
+                    "documentation": {
+                      "identifier": "printer.flush",
+                      "newPage": false,
+                      "searchKey": "printer.printer.flush",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) flush(next token.Position, tok token.Token) (wroteNewline, droppedFF bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) flush(next token.Position, tok token.Token) (wroteNewline, droppedFF bool)\n```\n\nflush prints any pending comments and whitespace occurring textually before the position of the next token tok. The flush result indicates if a newline was written or if a formfeed was dropped from the whitespace buffer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#printer.printNode",
+                    "documentation": {
+                      "identifier": "printer.printNode",
+                      "newPage": false,
+                      "searchKey": "printer.printer.printNode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *printer) printNode(node interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *printer) printNode(node interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#trimmer",
+              "documentation": {
+                "identifier": "trimmer",
+                "newPage": false,
+                "searchKey": "printer.trimmer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type trimmer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype trimmer struct {\n\toutput io.Writer\n\tstate  int\n\tspace  []byte\n}\n```\n\nA trimmer is an io.Writer filter for stripping tabwriter.Escape characters, trailing blanks and tabs, and for converting formfeed and vtab characters into newlines and htabs (in case no tabwriter is used). Text bracketed by tabwriter.Escape characters is passed through unchanged. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#trimmer.resetSpace",
+                    "documentation": {
+                      "identifier": "trimmer.resetSpace",
+                      "newPage": false,
+                      "searchKey": "printer.trimmer.resetSpace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *trimmer) resetSpace()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *trimmer) resetSpace()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#trimmer.Write",
+                    "documentation": {
+                      "identifier": "trimmer.Write",
+                      "newPage": false,
+                      "searchKey": "printer.trimmer.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *trimmer) Write(data []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *trimmer) Write(data []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#Mode",
+              "documentation": {
+                "identifier": "Mode",
+                "newPage": false,
+                "searchKey": "printer.Mode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Mode uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Mode uint\n```\n\nA Mode value is a set of flags (or 0). They control printing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#Config",
+              "documentation": {
+                "identifier": "Config",
+                "newPage": false,
+                "searchKey": "printer.Config",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Config struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Config struct {\n\tMode     Mode // default: 0\n\tTabwidth int  // default: 8\n\tIndent   int  // default: 0 (all code is indented at least by this much)\n}\n```\n\nA Config node controls the output of Fprint. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#Config.fprint",
+                    "documentation": {
+                      "identifier": "Config.fprint",
+                      "newPage": false,
+                      "searchKey": "printer.Config.fprint",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cfg *Config) fprint(output io.Writer, fset *token.FileSet, node interface{}, nodeSizes map[ast.Node]int) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cfg *Config) fprint(output io.Writer, fset *token.FileSet, node interface{}, nodeSizes map[ast.Node]int) (err error)\n```\n\nfprint implements Fprint and takes a nodesSizes map for setting up the printer state. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#Config.Fprint",
+                    "documentation": {
+                      "identifier": "Config.Fprint",
+                      "newPage": false,
+                      "searchKey": "printer.Config.Fprint",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cfg *Config) Fprint(output io.Writer, fset *token.FileSet, node interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cfg *Config) Fprint(output io.Writer, fset *token.FileSet, node interface{}) error\n```\n\nFprint \"pretty-prints\" an AST node to output for a given configuration cfg. Position information is interpreted relative to the file set fset. The node type must be *ast.File, *CommentedNode, []ast.Decl, []ast.Stmt, or assignment-compatible to ast.Expr, ast.Decl, ast.Spec, or ast.Stmt. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#CommentedNode",
+              "documentation": {
+                "identifier": "CommentedNode",
+                "newPage": false,
+                "searchKey": "printer.CommentedNode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CommentedNode struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CommentedNode struct {\n\tNode     interface{} // *ast.File, or ast.Expr, ast.Decl, ast.Spec, or ast.Stmt\n\tComments []*ast.CommentGroup\n}\n```\n\nA CommentedNode bundles an AST node and corresponding comments. It may be provided as argument to any of the Fprint functions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#checkMode",
+              "documentation": {
+                "identifier": "checkMode",
+                "newPage": false,
+                "searchKey": "printer.checkMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type checkMode uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype checkMode uint\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#entry",
+              "documentation": {
+                "identifier": "entry",
+                "newPage": false,
+                "searchKey": "printer.entry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type entry struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype entry struct {\n\tsource, golden string\n\tmode           checkMode\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#visitor",
+              "documentation": {
+                "identifier": "visitor",
+                "newPage": false,
+                "searchKey": "printer.visitor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type visitor chan *ast.Ident"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype visitor chan *ast.Ident\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#visitor.Visit",
+                    "documentation": {
+                      "identifier": "visitor.Visit",
+                      "newPage": false,
+                      "searchKey": "printer.visitor.Visit",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v visitor) Visit(n ast.Node) (w ast.Visitor)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v visitor) Visit(n ast.Node) (w ast.Visitor)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#limitWriter",
+              "documentation": {
+                "identifier": "limitWriter",
+                "newPage": false,
+                "searchKey": "printer.limitWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type limitWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype limitWriter struct {\n\tremaining int\n\terrCount  int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/printer#limitWriter.Write",
+                    "documentation": {
+                      "identifier": "limitWriter.Write",
+                      "newPage": false,
+                      "searchKey": "printer.limitWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *limitWriter) Write(buf []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *limitWriter) Write(buf []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/printer#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/printer#appendLines",
+              "documentation": {
+                "identifier": "appendLines",
+                "newPage": false,
+                "searchKey": "printer.appendLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendLines(x, y []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendLines(x, y []byte) []byte\n```\n\nappendLines is like append(x, y...) but it avoids creating doubled blank lines, which would not be gofmt-standard output. It assumes that only whole blocks of lines are being appended, not line fragments. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#isNL",
+              "documentation": {
+                "identifier": "isNL",
+                "newPage": false,
+                "searchKey": "printer.isNL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isNL(b byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isNL(b byte) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#identListSize",
+              "documentation": {
+                "identifier": "identListSize",
+                "newPage": false,
+                "searchKey": "printer.identListSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func identListSize(list []*ast.Ident, maxSize int) (size int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc identListSize(list []*ast.Ident, maxSize int) (size int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#walkBinary",
+              "documentation": {
+                "identifier": "walkBinary",
+                "newPage": false,
+                "searchKey": "printer.walkBinary",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func walkBinary(e *ast.BinaryExpr) (has4, has5 bool, maxProblem int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc walkBinary(e *ast.BinaryExpr) (has4, has5 bool, maxProblem int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#cutoff",
+              "documentation": {
+                "identifier": "cutoff",
+                "newPage": false,
+                "searchKey": "printer.cutoff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cutoff(e *ast.BinaryExpr, depth int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cutoff(e *ast.BinaryExpr, depth int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#diffPrec",
+              "documentation": {
+                "identifier": "diffPrec",
+                "newPage": false,
+                "searchKey": "printer.diffPrec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func diffPrec(expr ast.Expr, prec int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc diffPrec(expr ast.Expr, prec int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#reduceDepth",
+              "documentation": {
+                "identifier": "reduceDepth",
+                "newPage": false,
+                "searchKey": "printer.reduceDepth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reduceDepth(depth int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reduceDepth(depth int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#isBinary",
+              "documentation": {
+                "identifier": "isBinary",
+                "newPage": false,
+                "searchKey": "printer.isBinary",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isBinary(expr ast.Expr) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isBinary(expr ast.Expr) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#normalizedNumber",
+              "documentation": {
+                "identifier": "normalizedNumber",
+                "newPage": false,
+                "searchKey": "printer.normalizedNumber",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func normalizedNumber(lit *ast.BasicLit) *ast.BasicLit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc normalizedNumber(lit *ast.BasicLit) *ast.BasicLit\n```\n\nnormalizedNumber rewrites base prefixes and exponents of numbers to use lower-case letters (0X123 to 0x123 and 1.2E3 to 1.2e3), and removes leading 0's from integer imaginary literals (0765i to 765i). It leaves hexadecimal digits alone. \n\nnormalizedNumber doesn't modify the ast.BasicLit value lit points to. If lit is not a number or a number in canonical format already, lit is returned as is. Otherwise a new ast.BasicLit is created. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#isTypeName",
+              "documentation": {
+                "identifier": "isTypeName",
+                "newPage": false,
+                "searchKey": "printer.isTypeName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isTypeName(x ast.Expr) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isTypeName(x ast.Expr) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#stripParens",
+              "documentation": {
+                "identifier": "stripParens",
+                "newPage": false,
+                "searchKey": "printer.stripParens",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stripParens(x ast.Expr) ast.Expr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stripParens(x ast.Expr) ast.Expr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#stripParensAlways",
+              "documentation": {
+                "identifier": "stripParensAlways",
+                "newPage": false,
+                "searchKey": "printer.stripParensAlways",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stripParensAlways(x ast.Expr) ast.Expr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stripParensAlways(x ast.Expr) ast.Expr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#keepTypeColumn",
+              "documentation": {
+                "identifier": "keepTypeColumn",
+                "newPage": false,
+                "searchKey": "printer.keepTypeColumn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func keepTypeColumn(specs []ast.Spec) []bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc keepTypeColumn(specs []ast.Spec) []bool\n```\n\nThe keepTypeColumn function determines if the type column of a series of consecutive const or var declarations must be kept, or if initialization values (V) can be placed in the type column (T) instead. The i'th entry in the result slice is true if the type column in spec[i] must be kept. \n\nFor example, the declaration: \n\n```\n\tconst (\n\t\tfoobar int = 42 // comment\n\t\tx          = 7  // comment\n\t\tfoo\n             bar = 991\n\t)\n\n```\nleads to the type/values matrix below. A run of value columns (V) can be moved into the type column if there is no type for any of the values in that column (we only move entire columns so that they align properly). \n\n```\n\tmatrix        formatted     result\n                   matrix\n\tT  V    ->    T  V     ->   true      there is a T and so the type\n\t-  V          -  V          true      column must be kept\n\t-  -          -  -          false\n\t-  V          V  -          false     V is moved into T column\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#sanitizeImportPath",
+              "documentation": {
+                "identifier": "sanitizeImportPath",
+                "newPage": false,
+                "searchKey": "printer.sanitizeImportPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sanitizeImportPath(lit *ast.BasicLit) *ast.BasicLit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sanitizeImportPath(lit *ast.BasicLit) *ast.BasicLit\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#declToken",
+              "documentation": {
+                "identifier": "declToken",
+                "newPage": false,
+                "searchKey": "printer.declToken",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func declToken(decl ast.Decl) (tok token.Token)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc declToken(decl ast.Decl) (tok token.Token)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#isBlank",
+              "documentation": {
+                "identifier": "isBlank",
+                "newPage": false,
+                "searchKey": "printer.isBlank",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isBlank(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isBlank(s string) bool\n```\n\nReturns true if s contains only white space (only tabs and blanks can appear in the printer's context). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#commonPrefix",
+              "documentation": {
+                "identifier": "commonPrefix",
+                "newPage": false,
+                "searchKey": "printer.commonPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func commonPrefix(a, b string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc commonPrefix(a, b string) string\n```\n\ncommonPrefix returns the common prefix of a and b. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#trimRight",
+              "documentation": {
+                "identifier": "trimRight",
+                "newPage": false,
+                "searchKey": "printer.trimRight",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trimRight(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trimRight(s string) string\n```\n\ntrimRight returns s with trailing whitespace removed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#stripCommonPrefix",
+              "documentation": {
+                "identifier": "stripCommonPrefix",
+                "newPage": false,
+                "searchKey": "printer.stripCommonPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stripCommonPrefix(lines []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stripCommonPrefix(lines []string)\n```\n\nstripCommonPrefix removes a common prefix from /*-style comment lines (unless no comment line is indented, all but the first line have some form of space prefix). The prefix is computed using heuristics such that is likely that the comment contents are nicely laid out after re-printing each line using the printer's current indentation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#nlimit",
+              "documentation": {
+                "identifier": "nlimit",
+                "newPage": false,
+                "searchKey": "printer.nlimit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nlimit(n int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nlimit(n int) int\n```\n\nnlimit limits n to maxNewlines. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#mayCombine",
+              "documentation": {
+                "identifier": "mayCombine",
+                "newPage": false,
+                "searchKey": "printer.mayCombine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mayCombine(prev token.Token, next byte) (b bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mayCombine(prev token.Token, next byte) (b bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#getDoc",
+              "documentation": {
+                "identifier": "getDoc",
+                "newPage": false,
+                "searchKey": "printer.getDoc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getDoc(n ast.Node) *ast.CommentGroup"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getDoc(n ast.Node) *ast.CommentGroup\n```\n\ngetNode returns the ast.CommentGroup associated with n, if any. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#getLastComment",
+              "documentation": {
+                "identifier": "getLastComment",
+                "newPage": false,
+                "searchKey": "printer.getLastComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getLastComment(n ast.Node) *ast.CommentGroup"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getLastComment(n ast.Node) *ast.CommentGroup\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#Fprint",
+              "documentation": {
+                "identifier": "Fprint",
+                "newPage": false,
+                "searchKey": "printer.Fprint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fprint(output io.Writer, fset *token.FileSet, node interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fprint(output io.Writer, fset *token.FileSet, node interface{}) error\n```\n\nFprint \"pretty-prints\" an AST node to output. It calls Config.Fprint with default settings. Note that gofmt uses tabs for indentation but spaces for alignment; use format.Node (package go/format) for output that matches gofmt. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#testprint",
+              "documentation": {
+                "identifier": "testprint",
+                "newPage": false,
+                "searchKey": "printer.testprint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testprint(out io.Writer, file *ast.File)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testprint(out io.Writer, file *ast.File)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#initialize",
+              "documentation": {
+                "identifier": "initialize",
+                "newPage": false,
+                "searchKey": "printer.initialize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initialize()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initialize()\n```\n\ncannot initialize in init because (printer) Fprint launches goroutines. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#BenchmarkPrint",
+              "documentation": {
+                "identifier": "BenchmarkPrint",
+                "newPage": false,
+                "searchKey": "printer.BenchmarkPrint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPrint(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPrint(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#format",
+              "documentation": {
+                "identifier": "format",
+                "newPage": false,
+                "searchKey": "printer.format",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func format(src []byte, mode checkMode) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc format(src []byte, mode checkMode) ([]byte, error)\n```\n\nformat parses src, prints the corresponding AST, verifies the resulting src is syntactically correct, and returns the resulting src or an error if any. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#lineAt",
+              "documentation": {
+                "identifier": "lineAt",
+                "newPage": false,
+                "searchKey": "printer.lineAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lineAt(text []byte, offs int) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lineAt(text []byte, offs int) []byte\n```\n\nlineAt returns the line in text starting at offset offs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#diff",
+              "documentation": {
+                "identifier": "diff",
+                "newPage": false,
+                "searchKey": "printer.diff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func diff(aname, bname string, a, b []byte) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc diff(aname, bname string, a, b []byte) error\n```\n\ndiff compares a and b. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#runcheck",
+              "documentation": {
+                "identifier": "runcheck",
+                "newPage": false,
+                "searchKey": "printer.runcheck",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runcheck(t *testing.T, source, golden string, mode checkMode)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runcheck(t *testing.T, source, golden string, mode checkMode)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#check",
+              "documentation": {
+                "identifier": "check",
+                "newPage": false,
+                "searchKey": "printer.check",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func check(t *testing.T, source, golden string, mode checkMode)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc check(t *testing.T, source, golden string, mode checkMode)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestFiles",
+              "documentation": {
+                "identifier": "TestFiles",
+                "newPage": false,
+                "searchKey": "printer.TestFiles",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFiles(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFiles(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestLineComments",
+              "documentation": {
+                "identifier": "TestLineComments",
+                "newPage": false,
+                "searchKey": "printer.TestLineComments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLineComments(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLineComments(t *testing.T)\n```\n\nTestLineComments, using a simple test case, checks that consecutive line comments are properly terminated with a newline even if the AST position information is incorrect. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "printer.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\nVerify that the printer can be invoked during initialization. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestBadNodes",
+              "documentation": {
+                "identifier": "TestBadNodes",
+                "newPage": false,
+                "searchKey": "printer.TestBadNodes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBadNodes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBadNodes(t *testing.T)\n```\n\nVerify that the printer doesn't crash if the AST contains BadXXX nodes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#testComment",
+              "documentation": {
+                "identifier": "testComment",
+                "newPage": false,
+                "searchKey": "printer.testComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testComment(t *testing.T, f *ast.File, srclen int, comment *ast.Comment)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testComment(t *testing.T, f *ast.File, srclen int, comment *ast.Comment)\n```\n\ntestComment verifies that f can be parsed again after printing it with its first comment set to comment at any possible source offset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestBadComments",
+              "documentation": {
+                "identifier": "TestBadComments",
+                "newPage": false,
+                "searchKey": "printer.TestBadComments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBadComments(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBadComments(t *testing.T)\n```\n\nVerify that the printer produces a correct program even if the position information of comments introducing newlines is incorrect. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#idents",
+              "documentation": {
+                "identifier": "idents",
+                "newPage": false,
+                "searchKey": "printer.idents",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func idents(f *ast.File) <-chan *ast.Ident"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc idents(f *ast.File) <-chan *ast.Ident\n```\n\nidents is an iterator that returns all idents in f via the result channel. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#identCount",
+              "documentation": {
+                "identifier": "identCount",
+                "newPage": false,
+                "searchKey": "printer.identCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func identCount(f *ast.File) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc identCount(f *ast.File) int\n```\n\nidentCount returns the number of identifiers found in f. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestSourcePos",
+              "documentation": {
+                "identifier": "TestSourcePos",
+                "newPage": false,
+                "searchKey": "printer.TestSourcePos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSourcePos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSourcePos(t *testing.T)\n```\n\nVerify that the SourcePos mode emits correct //line directives by testing that position information for matching identifiers is maintained. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestIssue5945",
+              "documentation": {
+                "identifier": "TestIssue5945",
+                "newPage": false,
+                "searchKey": "printer.TestIssue5945",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue5945(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue5945(t *testing.T)\n```\n\nVerify that the SourcePos mode doesn't emit unnecessary //line directives before empty lines. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestDeclLists",
+              "documentation": {
+                "identifier": "TestDeclLists",
+                "newPage": false,
+                "searchKey": "printer.TestDeclLists",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDeclLists(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDeclLists(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestStmtLists",
+              "documentation": {
+                "identifier": "TestStmtLists",
+                "newPage": false,
+                "searchKey": "printer.TestStmtLists",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStmtLists(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStmtLists(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestBaseIndent",
+              "documentation": {
+                "identifier": "TestBaseIndent",
+                "newPage": false,
+                "searchKey": "printer.TestBaseIndent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBaseIndent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBaseIndent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestFuncType",
+              "documentation": {
+                "identifier": "TestFuncType",
+                "newPage": false,
+                "searchKey": "printer.TestFuncType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFuncType(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFuncType(t *testing.T)\n```\n\nTestFuncType tests that an ast.FuncType with a nil Params field can be printed (per go/ast specification). Test case for issue 3870. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestWriteErrors",
+              "documentation": {
+                "identifier": "TestWriteErrors",
+                "newPage": false,
+                "searchKey": "printer.TestWriteErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteErrors(t *testing.T)\n```\n\nTest whether the printer stops writing after the first error \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestX",
+              "documentation": {
+                "identifier": "TestX",
+                "newPage": false,
+                "searchKey": "printer.TestX",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestX(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestX(t *testing.T)\n```\n\nTextX is a skeleton test that can be filled in for debugging one-off cases. Do not remove. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestCommentedNode",
+              "documentation": {
+                "identifier": "TestCommentedNode",
+                "newPage": false,
+                "searchKey": "printer.TestCommentedNode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommentedNode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommentedNode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestIssue11151",
+              "documentation": {
+                "identifier": "TestIssue11151",
+                "newPage": false,
+                "searchKey": "printer.TestIssue11151",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue11151(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue11151(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestParenthesizedDecl",
+              "documentation": {
+                "identifier": "TestParenthesizedDecl",
+                "newPage": false,
+                "searchKey": "printer.TestParenthesizedDecl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParenthesizedDecl(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParenthesizedDecl(t *testing.T)\n```\n\nIf a declaration has multiple specifications, a parenthesized declaration must be printed even if Lparen is token.NoPos. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/printer#TestIssue32854",
+              "documentation": {
+                "identifier": "TestIssue32854",
+                "newPage": false,
+                "searchKey": "printer.TestIssue32854",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue32854(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue32854(t *testing.T)\n```\n\nVerify that we don't print a newline between \"return\" and its results, as that would incorrectly cause a naked return. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

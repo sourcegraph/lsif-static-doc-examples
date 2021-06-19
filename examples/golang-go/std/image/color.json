@@ -1,0 +1,1782 @@
+{
+  "pathID": "/std/image/color",
+  "documentation": {
+    "identifier": "color",
+    "newPage": true,
+    "searchKey": "std/image/color",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package color"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package color implements a basic color library. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/image/color#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/color#RGBAModel",
+              "documentation": {
+                "identifier": "RGBAModel",
+                "newPage": false,
+                "searchKey": "color.RGBAModel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RGBAModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RGBAModel Model = ModelFunc(rgbaModel)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#RGBA64Model",
+              "documentation": {
+                "identifier": "RGBA64Model",
+                "newPage": false,
+                "searchKey": "color.RGBA64Model",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RGBA64Model"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RGBA64Model Model = ModelFunc(rgba64Model)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#NRGBAModel",
+              "documentation": {
+                "identifier": "NRGBAModel",
+                "newPage": false,
+                "searchKey": "color.NRGBAModel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NRGBAModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NRGBAModel Model = ModelFunc(nrgbaModel)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#NRGBA64Model",
+              "documentation": {
+                "identifier": "NRGBA64Model",
+                "newPage": false,
+                "searchKey": "color.NRGBA64Model",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NRGBA64Model"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NRGBA64Model Model = ModelFunc(nrgba64Model)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#AlphaModel",
+              "documentation": {
+                "identifier": "AlphaModel",
+                "newPage": false,
+                "searchKey": "color.AlphaModel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var AlphaModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar AlphaModel Model = ModelFunc(alphaModel)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Alpha16Model",
+              "documentation": {
+                "identifier": "Alpha16Model",
+                "newPage": false,
+                "searchKey": "color.Alpha16Model",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Alpha16Model"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Alpha16Model Model = ModelFunc(alpha16Model)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#GrayModel",
+              "documentation": {
+                "identifier": "GrayModel",
+                "newPage": false,
+                "searchKey": "color.GrayModel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GrayModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GrayModel Model = ModelFunc(grayModel)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Gray16Model",
+              "documentation": {
+                "identifier": "Gray16Model",
+                "newPage": false,
+                "searchKey": "color.Gray16Model",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Gray16Model"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Gray16Model Model = ModelFunc(gray16Model)\n```\n\nModels for the standard color types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Black",
+              "documentation": {
+                "identifier": "Black",
+                "newPage": false,
+                "searchKey": "color.Black",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Black"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Black = Gray16{0}\n```\n\nStandard colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#White",
+              "documentation": {
+                "identifier": "White",
+                "newPage": false,
+                "searchKey": "color.White",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var White"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar White = Gray16{0xffff}\n```\n\nStandard colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Transparent",
+              "documentation": {
+                "identifier": "Transparent",
+                "newPage": false,
+                "searchKey": "color.Transparent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Transparent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Transparent = Alpha16{0}\n```\n\nStandard colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Opaque",
+              "documentation": {
+                "identifier": "Opaque",
+                "newPage": false,
+                "searchKey": "color.Opaque",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Opaque"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Opaque = Alpha16{0xffff}\n```\n\nStandard colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#YCbCrModel",
+              "documentation": {
+                "identifier": "YCbCrModel",
+                "newPage": false,
+                "searchKey": "color.YCbCrModel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var YCbCrModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar YCbCrModel Model = ModelFunc(yCbCrModel)\n```\n\nYCbCrModel is the Model for Y'CbCr colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#NYCbCrAModel",
+              "documentation": {
+                "identifier": "NYCbCrAModel",
+                "newPage": false,
+                "searchKey": "color.NYCbCrAModel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var NYCbCrAModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar NYCbCrAModel Model = ModelFunc(nYCbCrAModel)\n```\n\nNYCbCrAModel is the Model for non-alpha-premultiplied Y'CbCr-with-alpha colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#CMYKModel",
+              "documentation": {
+                "identifier": "CMYKModel",
+                "newPage": false,
+                "searchKey": "color.CMYKModel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CMYKModel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CMYKModel Model = ModelFunc(cmykModel)\n```\n\nCMYKModel is the Model for CMYK colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#sink8",
+              "documentation": {
+                "identifier": "sink8",
+                "newPage": false,
+                "searchKey": "color.sink8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sink8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sink8 uint8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#sink32",
+              "documentation": {
+                "identifier": "sink32",
+                "newPage": false,
+                "searchKey": "color.sink32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sink32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sink32 uint32\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/color#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/color#Color",
+              "documentation": {
+                "identifier": "Color",
+                "newPage": false,
+                "searchKey": "color.Color",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Color interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Color interface {\n\t// RGBA returns the alpha-premultiplied red, green, blue and alpha values\n\t// for the color. Each value ranges within [0, 0xffff], but is represented\n\t// by a uint32 so that multiplying by a blend factor up to 0xffff will not\n\t// overflow.\n\t//\n\t// An alpha-premultiplied color component c has been scaled by alpha (a),\n\t// so has valid values 0 <= c <= a.\n\tRGBA() (r, g, b, a uint32)\n}\n```\n\nColor can convert itself to alpha-premultiplied 16-bits per channel RGBA. The conversion may be lossy. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#rgbaModel",
+                    "documentation": {
+                      "identifier": "rgbaModel",
+                      "newPage": false,
+                      "searchKey": "color.rgbaModel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func rgbaModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc rgbaModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#rgba64Model",
+                    "documentation": {
+                      "identifier": "rgba64Model",
+                      "newPage": false,
+                      "searchKey": "color.rgba64Model",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func rgba64Model(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc rgba64Model(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#nrgbaModel",
+                    "documentation": {
+                      "identifier": "nrgbaModel",
+                      "newPage": false,
+                      "searchKey": "color.nrgbaModel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func nrgbaModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc nrgbaModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#nrgba64Model",
+                    "documentation": {
+                      "identifier": "nrgba64Model",
+                      "newPage": false,
+                      "searchKey": "color.nrgba64Model",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func nrgba64Model(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc nrgba64Model(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#alphaModel",
+                    "documentation": {
+                      "identifier": "alphaModel",
+                      "newPage": false,
+                      "searchKey": "color.alphaModel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func alphaModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc alphaModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#alpha16Model",
+                    "documentation": {
+                      "identifier": "alpha16Model",
+                      "newPage": false,
+                      "searchKey": "color.alpha16Model",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func alpha16Model(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc alpha16Model(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#grayModel",
+                    "documentation": {
+                      "identifier": "grayModel",
+                      "newPage": false,
+                      "searchKey": "color.grayModel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func grayModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc grayModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#gray16Model",
+                    "documentation": {
+                      "identifier": "gray16Model",
+                      "newPage": false,
+                      "searchKey": "color.gray16Model",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func gray16Model(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc gray16Model(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#yCbCrModel",
+                    "documentation": {
+                      "identifier": "yCbCrModel",
+                      "newPage": false,
+                      "searchKey": "color.yCbCrModel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func yCbCrModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc yCbCrModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#nYCbCrAModel",
+                    "documentation": {
+                      "identifier": "nYCbCrAModel",
+                      "newPage": false,
+                      "searchKey": "color.nYCbCrAModel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func nYCbCrAModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc nYCbCrAModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#cmykModel",
+                    "documentation": {
+                      "identifier": "cmykModel",
+                      "newPage": false,
+                      "searchKey": "color.cmykModel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func cmykModel(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc cmykModel(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#RGBA",
+              "documentation": {
+                "identifier": "RGBA",
+                "newPage": false,
+                "searchKey": "color.RGBA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RGBA struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RGBA struct {\n\tR, G, B, A uint8\n}\n```\n\nRGBA represents a traditional 32-bit alpha-premultiplied color, having 8 bits for each of red, green, blue and alpha. \n\nAn alpha-premultiplied color component C has been scaled by alpha (A), so has valid values 0 <= C <= A. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#RGBA.RGBA",
+                    "documentation": {
+                      "identifier": "RGBA.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.RGBA.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RGBA) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RGBA) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#RGBA64",
+              "documentation": {
+                "identifier": "RGBA64",
+                "newPage": false,
+                "searchKey": "color.RGBA64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RGBA64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RGBA64 struct {\n\tR, G, B, A uint16\n}\n```\n\nRGBA64 represents a 64-bit alpha-premultiplied color, having 16 bits for each of red, green, blue and alpha. \n\nAn alpha-premultiplied color component C has been scaled by alpha (A), so has valid values 0 <= C <= A. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#RGBA64.RGBA",
+                    "documentation": {
+                      "identifier": "RGBA64.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.RGBA64.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c RGBA64) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c RGBA64) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#NRGBA",
+              "documentation": {
+                "identifier": "NRGBA",
+                "newPage": false,
+                "searchKey": "color.NRGBA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NRGBA struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NRGBA struct {\n\tR, G, B, A uint8\n}\n```\n\nNRGBA represents a non-alpha-premultiplied 32-bit color. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#NRGBA.RGBA",
+                    "documentation": {
+                      "identifier": "NRGBA.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.NRGBA.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c NRGBA) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c NRGBA) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#NRGBA64",
+              "documentation": {
+                "identifier": "NRGBA64",
+                "newPage": false,
+                "searchKey": "color.NRGBA64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NRGBA64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NRGBA64 struct {\n\tR, G, B, A uint16\n}\n```\n\nNRGBA64 represents a non-alpha-premultiplied 64-bit color, having 16 bits for each of red, green, blue and alpha. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#NRGBA64.RGBA",
+                    "documentation": {
+                      "identifier": "NRGBA64.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.NRGBA64.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c NRGBA64) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c NRGBA64) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Alpha",
+              "documentation": {
+                "identifier": "Alpha",
+                "newPage": false,
+                "searchKey": "color.Alpha",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Alpha struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Alpha struct {\n\tA uint8\n}\n```\n\nAlpha represents an 8-bit alpha color. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#Alpha.RGBA",
+                    "documentation": {
+                      "identifier": "Alpha.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.Alpha.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Alpha) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Alpha) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Alpha16",
+              "documentation": {
+                "identifier": "Alpha16",
+                "newPage": false,
+                "searchKey": "color.Alpha16",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Alpha16 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Alpha16 struct {\n\tA uint16\n}\n```\n\nAlpha16 represents a 16-bit alpha color. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#Alpha16.RGBA",
+                    "documentation": {
+                      "identifier": "Alpha16.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.Alpha16.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Alpha16) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Alpha16) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Gray",
+              "documentation": {
+                "identifier": "Gray",
+                "newPage": false,
+                "searchKey": "color.Gray",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Gray struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Gray struct {\n\tY uint8\n}\n```\n\nGray represents an 8-bit grayscale color. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#Gray.RGBA",
+                    "documentation": {
+                      "identifier": "Gray.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.Gray.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Gray) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Gray) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Gray16",
+              "documentation": {
+                "identifier": "Gray16",
+                "newPage": false,
+                "searchKey": "color.Gray16",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Gray16 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Gray16 struct {\n\tY uint16\n}\n```\n\nGray16 represents a 16-bit grayscale color. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#Gray16.RGBA",
+                    "documentation": {
+                      "identifier": "Gray16.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.Gray16.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Gray16) RGBA() (r, g, b, a uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Gray16) RGBA() (r, g, b, a uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Model",
+              "documentation": {
+                "identifier": "Model",
+                "newPage": false,
+                "searchKey": "color.Model",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Model interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Model interface {\n\tConvert(c Color) Color\n}\n```\n\nModel can convert any Color to one from its own color model. The conversion may be lossy. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#ModelFunc",
+                    "documentation": {
+                      "identifier": "ModelFunc",
+                      "newPage": false,
+                      "searchKey": "color.ModelFunc",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ModelFunc(f func(Color) Color) Model"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ModelFunc(f func(Color) Color) Model\n```\n\nModelFunc returns a Model that invokes f to implement the conversion. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#modelFunc",
+              "documentation": {
+                "identifier": "modelFunc",
+                "newPage": false,
+                "searchKey": "color.modelFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type modelFunc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype modelFunc struct {\n\tf func(Color) Color\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#modelFunc.Convert",
+                    "documentation": {
+                      "identifier": "modelFunc.Convert",
+                      "newPage": false,
+                      "searchKey": "color.modelFunc.Convert",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *modelFunc) Convert(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *modelFunc) Convert(c Color) Color\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#Palette",
+              "documentation": {
+                "identifier": "Palette",
+                "newPage": false,
+                "searchKey": "color.Palette",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Palette []color.Color"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Palette []Color\n```\n\nPalette is a palette of colors. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#Palette.Convert",
+                    "documentation": {
+                      "identifier": "Palette.Convert",
+                      "newPage": false,
+                      "searchKey": "color.Palette.Convert",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Palette) Convert(c Color) Color"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Palette) Convert(c Color) Color\n```\n\nConvert returns the palette color closest to c in Euclidean R,G,B space. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/color#Palette.Index",
+                    "documentation": {
+                      "identifier": "Palette.Index",
+                      "newPage": false,
+                      "searchKey": "color.Palette.Index",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Palette) Index(c Color) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Palette) Index(c Color) int\n```\n\nIndex returns the index of the palette color closest to c in Euclidean R,G,B,A space. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#YCbCr",
+              "documentation": {
+                "identifier": "YCbCr",
+                "newPage": false,
+                "searchKey": "color.YCbCr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type YCbCr struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype YCbCr struct {\n\tY, Cb, Cr uint8\n}\n```\n\nYCbCr represents a fully opaque 24-bit Y'CbCr color, having 8 bits each for one luma and two chroma components. \n\nJPEG, VP8, the MPEG family and other codecs use this color model. Such codecs often use the terms YUV and Y'CbCr interchangeably, but strictly speaking, the term YUV applies only to analog video signals, and Y' (luma) is Y (luminance) after applying gamma correction. \n\nConversion between RGB and Y'CbCr is lossy and there are multiple, slightly different formulae for converting between the two. This package follows the JFIF specification at [https://www.w3.org/Graphics/JPEG/jfif3.pdf](https://www.w3.org/Graphics/JPEG/jfif3.pdf). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#YCbCr.RGBA",
+                    "documentation": {
+                      "identifier": "YCbCr.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.YCbCr.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c YCbCr) RGBA() (uint32, uint32, uint32, uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c YCbCr) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#NYCbCrA",
+              "documentation": {
+                "identifier": "NYCbCrA",
+                "newPage": false,
+                "searchKey": "color.NYCbCrA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NYCbCrA struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NYCbCrA struct {\n\tYCbCr\n\tA uint8\n}\n```\n\nNYCbCrA represents a non-alpha-premultiplied Y'CbCr-with-alpha color, having 8 bits each for one luma, two chroma and one alpha component. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#NYCbCrA.RGBA",
+                    "documentation": {
+                      "identifier": "NYCbCrA.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.NYCbCrA.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c NYCbCrA) RGBA() (uint32, uint32, uint32, uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c NYCbCrA) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#CMYK",
+              "documentation": {
+                "identifier": "CMYK",
+                "newPage": false,
+                "searchKey": "color.CMYK",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CMYK struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CMYK struct {\n\tC, M, Y, K uint8\n}\n```\n\nCMYK represents a fully opaque CMYK color, having 8 bits for each of cyan, magenta, yellow and black. \n\nIt is not associated with any particular color profile. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/color#CMYK.RGBA",
+                    "documentation": {
+                      "identifier": "CMYK.RGBA",
+                      "newPage": false,
+                      "searchKey": "color.CMYK.RGBA",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c CMYK) RGBA() (uint32, uint32, uint32, uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c CMYK) RGBA() (uint32, uint32, uint32, uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/color#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/color#sqDiff",
+              "documentation": {
+                "identifier": "sqDiff",
+                "newPage": false,
+                "searchKey": "color.sqDiff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sqDiff(x, y uint32) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sqDiff(x, y uint32) uint32\n```\n\nsqDiff returns the squared-difference of x and y, shifted by 2 so that adding four of those won't overflow a uint32. \n\nx and y are both assumed to be in the range [0, 0xffff]. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#RGBToYCbCr",
+              "documentation": {
+                "identifier": "RGBToYCbCr",
+                "newPage": false,
+                "searchKey": "color.RGBToYCbCr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RGBToYCbCr(r, g, b uint8) (uint8, uint8, uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RGBToYCbCr(r, g, b uint8) (uint8, uint8, uint8)\n```\n\nRGBToYCbCr converts an RGB triple to a Y'CbCr triple. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#YCbCrToRGB",
+              "documentation": {
+                "identifier": "YCbCrToRGB",
+                "newPage": false,
+                "searchKey": "color.YCbCrToRGB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func YCbCrToRGB(y, cb, cr uint8) (uint8, uint8, uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc YCbCrToRGB(y, cb, cr uint8) (uint8, uint8, uint8)\n```\n\nYCbCrToRGB converts a Y'CbCr triple to an RGB triple. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#RGBToCMYK",
+              "documentation": {
+                "identifier": "RGBToCMYK",
+                "newPage": false,
+                "searchKey": "color.RGBToCMYK",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RGBToCMYK(r, g, b uint8) (uint8, uint8, uint8, uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RGBToCMYK(r, g, b uint8) (uint8, uint8, uint8, uint8)\n```\n\nRGBToCMYK converts an RGB triple to a CMYK quadruple. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#CMYKToRGB",
+              "documentation": {
+                "identifier": "CMYKToRGB",
+                "newPage": false,
+                "searchKey": "color.CMYKToRGB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CMYKToRGB(c, m, y, k uint8) (uint8, uint8, uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CMYKToRGB(c, m, y, k uint8) (uint8, uint8, uint8)\n```\n\nCMYKToRGB converts a CMYK quadruple to an RGB triple. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestSqDiff",
+              "documentation": {
+                "identifier": "TestSqDiff",
+                "newPage": false,
+                "searchKey": "color.TestSqDiff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSqDiff(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSqDiff(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#delta",
+              "documentation": {
+                "identifier": "delta",
+                "newPage": false,
+                "searchKey": "color.delta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func delta(x, y uint8) uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc delta(x, y uint8) uint8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#eq",
+              "documentation": {
+                "identifier": "eq",
+                "newPage": false,
+                "searchKey": "color.eq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eq(c0, c1 Color) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eq(c0, c1 Color) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestYCbCrRoundtrip",
+              "documentation": {
+                "identifier": "TestYCbCrRoundtrip",
+                "newPage": false,
+                "searchKey": "color.TestYCbCrRoundtrip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestYCbCrRoundtrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestYCbCrRoundtrip(t *testing.T)\n```\n\nTestYCbCrRoundtrip tests that a subset of RGB space can be converted to YCbCr and back to within 2/256 tolerance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestYCbCrToRGBConsistency",
+              "documentation": {
+                "identifier": "TestYCbCrToRGBConsistency",
+                "newPage": false,
+                "searchKey": "color.TestYCbCrToRGBConsistency",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestYCbCrToRGBConsistency(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestYCbCrToRGBConsistency(t *testing.T)\n```\n\nTestYCbCrToRGBConsistency tests that calling the RGBA method (16 bit color) then truncating to 8 bits is equivalent to calling the YCbCrToRGB function (8 bit color). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestYCbCrGray",
+              "documentation": {
+                "identifier": "TestYCbCrGray",
+                "newPage": false,
+                "searchKey": "color.TestYCbCrGray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestYCbCrGray(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestYCbCrGray(t *testing.T)\n```\n\nTestYCbCrGray tests that YCbCr colors are a superset of Gray colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestNYCbCrAAlpha",
+              "documentation": {
+                "identifier": "TestNYCbCrAAlpha",
+                "newPage": false,
+                "searchKey": "color.TestNYCbCrAAlpha",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNYCbCrAAlpha(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNYCbCrAAlpha(t *testing.T)\n```\n\nTestNYCbCrAAlpha tests that NYCbCrA colors are a superset of Alpha colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestNYCbCrAYCbCr",
+              "documentation": {
+                "identifier": "TestNYCbCrAYCbCr",
+                "newPage": false,
+                "searchKey": "color.TestNYCbCrAYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNYCbCrAYCbCr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNYCbCrAYCbCr(t *testing.T)\n```\n\nTestNYCbCrAYCbCr tests that NYCbCrA colors are a superset of YCbCr colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestCMYKRoundtrip",
+              "documentation": {
+                "identifier": "TestCMYKRoundtrip",
+                "newPage": false,
+                "searchKey": "color.TestCMYKRoundtrip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCMYKRoundtrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCMYKRoundtrip(t *testing.T)\n```\n\nTestCMYKRoundtrip tests that a subset of RGB space can be converted to CMYK and back to within 1/256 tolerance. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestCMYKToRGBConsistency",
+              "documentation": {
+                "identifier": "TestCMYKToRGBConsistency",
+                "newPage": false,
+                "searchKey": "color.TestCMYKToRGBConsistency",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCMYKToRGBConsistency(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCMYKToRGBConsistency(t *testing.T)\n```\n\nTestCMYKToRGBConsistency tests that calling the RGBA method (16 bit color) then truncating to 8 bits is equivalent to calling the CMYKToRGB function (8 bit color). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestCMYKGray",
+              "documentation": {
+                "identifier": "TestCMYKGray",
+                "newPage": false,
+                "searchKey": "color.TestCMYKGray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCMYKGray(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCMYKGray(t *testing.T)\n```\n\nTestCMYKGray tests that CMYK colors are a superset of Gray colors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#TestPalette",
+              "documentation": {
+                "identifier": "TestPalette",
+                "newPage": false,
+                "searchKey": "color.TestPalette",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPalette(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPalette(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#BenchmarkYCbCrToRGB",
+              "documentation": {
+                "identifier": "BenchmarkYCbCrToRGB",
+                "newPage": false,
+                "searchKey": "color.BenchmarkYCbCrToRGB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkYCbCrToRGB(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkYCbCrToRGB(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#BenchmarkRGBToYCbCr",
+              "documentation": {
+                "identifier": "BenchmarkRGBToYCbCr",
+                "newPage": false,
+                "searchKey": "color.BenchmarkRGBToYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRGBToYCbCr(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRGBToYCbCr(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#BenchmarkYCbCrToRGBA",
+              "documentation": {
+                "identifier": "BenchmarkYCbCrToRGBA",
+                "newPage": false,
+                "searchKey": "color.BenchmarkYCbCrToRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkYCbCrToRGBA(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkYCbCrToRGBA(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/color#BenchmarkNYCbCrAToRGBA",
+              "documentation": {
+                "identifier": "BenchmarkNYCbCrAToRGBA",
+                "newPage": false,
+                "searchKey": "color.BenchmarkNYCbCrAToRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNYCbCrAToRGBA(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNYCbCrAToRGBA(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/std/image/color/palette"
+    }
+  ]
+}

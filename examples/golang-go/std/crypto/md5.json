@@ -1,0 +1,1182 @@
+{
+  "pathID": "/std/crypto/md5",
+  "documentation": {
+    "identifier": "md5",
+    "newPage": true,
+    "searchKey": "std/crypto/md5",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package md5"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package md5 implements the MD5 hash algorithm as defined in RFC 1321. \n\nMD5 is cryptographically broken and should not be used for secure applications. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/crypto/md5#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#Size",
+              "documentation": {
+                "identifier": "Size",
+                "newPage": false,
+                "searchKey": "md5.Size",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Size"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Size = 16\n```\n\nThe size of an MD5 checksum in bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BlockSize",
+              "documentation": {
+                "identifier": "BlockSize",
+                "newPage": false,
+                "searchKey": "md5.BlockSize",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BlockSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BlockSize = 64\n```\n\nThe blocksize of MD5 in bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#init0",
+              "documentation": {
+                "identifier": "init0",
+                "newPage": false,
+                "searchKey": "md5.init0",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init0"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init0 = 0x67452301\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#init1",
+              "documentation": {
+                "identifier": "init1",
+                "newPage": false,
+                "searchKey": "md5.init1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init1 = 0xEFCDAB89\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#init2",
+              "documentation": {
+                "identifier": "init2",
+                "newPage": false,
+                "searchKey": "md5.init2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init2 = 0x98BADCFE\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#init3",
+              "documentation": {
+                "identifier": "init3",
+                "newPage": false,
+                "searchKey": "md5.init3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init3 = 0x10325476\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#magic",
+              "documentation": {
+                "identifier": "magic",
+                "newPage": false,
+                "searchKey": "md5.magic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic = \"md5\\x01\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#marshaledSize",
+              "documentation": {
+                "identifier": "marshaledSize",
+                "newPage": false,
+                "searchKey": "md5.marshaledSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const marshaledSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst marshaledSize = len(magic) + 4*4 + BlockSize + 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#haveAsm",
+              "documentation": {
+                "identifier": "haveAsm",
+                "newPage": false,
+                "searchKey": "md5.haveAsm",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const haveAsm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst haveAsm = true\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/md5#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#golden",
+              "documentation": {
+                "identifier": "golden",
+                "newPage": false,
+                "searchKey": "md5.golden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#largeUnmarshalTests",
+              "documentation": {
+                "identifier": "largeUnmarshalTests",
+                "newPage": false,
+                "searchKey": "md5.largeUnmarshalTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var largeUnmarshalTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar largeUnmarshalTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#bench",
+              "documentation": {
+                "identifier": "bench",
+                "newPage": false,
+                "searchKey": "md5.bench",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bench"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bench = New()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#buf",
+              "documentation": {
+                "identifier": "buf",
+                "newPage": false,
+                "searchKey": "md5.buf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var buf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar buf = make([]byte, 1024*1024*8+1)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#sum",
+              "documentation": {
+                "identifier": "sum",
+                "newPage": false,
+                "searchKey": "md5.sum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sum"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sum = make([]byte, bench.Size())\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/md5#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#digest",
+              "documentation": {
+                "identifier": "digest",
+                "newPage": false,
+                "searchKey": "md5.digest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type digest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype digest struct {\n\ts   [4]uint32\n\tx   [BlockSize]byte\n\tnx  int\n\tlen uint64\n}\n```\n\ndigest represents the partial evaluation of a checksum. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/crypto/md5#digest.Reset",
+                    "documentation": {
+                      "identifier": "digest.Reset",
+                      "newPage": false,
+                      "searchKey": "md5.digest.Reset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/md5#digest.MarshalBinary",
+                    "documentation": {
+                      "identifier": "digest.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "md5.digest.MarshalBinary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/md5#digest.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "digest.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "md5.digest.UnmarshalBinary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) UnmarshalBinary(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) UnmarshalBinary(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/md5#digest.Size",
+                    "documentation": {
+                      "identifier": "digest.Size",
+                      "newPage": false,
+                      "searchKey": "md5.digest.Size",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/md5#digest.BlockSize",
+                    "documentation": {
+                      "identifier": "digest.BlockSize",
+                      "newPage": false,
+                      "searchKey": "md5.digest.BlockSize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/md5#digest.Write",
+                    "documentation": {
+                      "identifier": "digest.Write",
+                      "newPage": false,
+                      "searchKey": "md5.digest.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Write(p []byte) (nn int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Write(p []byte) (nn int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/md5#digest.Sum",
+                    "documentation": {
+                      "identifier": "digest.Sum",
+                      "newPage": false,
+                      "searchKey": "md5.digest.Sum",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/md5#digest.checkSum",
+                    "documentation": {
+                      "identifier": "digest.checkSum",
+                      "newPage": false,
+                      "searchKey": "md5.digest.checkSum",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) checkSum() [Size]byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) checkSum() [Size]byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#md5Test",
+              "documentation": {
+                "identifier": "md5Test",
+                "newPage": false,
+                "searchKey": "md5.md5Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type md5Test struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype md5Test struct {\n\tout       string\n\tin        string\n\thalfState string // marshaled hash state after first half of in written, used by TestGoldenMarshal\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#unmarshalTest",
+              "documentation": {
+                "identifier": "unmarshalTest",
+                "newPage": false,
+                "searchKey": "md5.unmarshalTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type unmarshalTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype unmarshalTest struct {\n\tstate string\n\tsum   string\n}\n```\n\nTests for unmarshaling hashes that have hashed a large amount of data The initial hash generation is omitted from the test, because it takes a long time. The test contains some already-generated states, and their expected sums Tests a problem that is outlined in GitHub issue #29541 The problem is triggered when an amount of data has been hashed for which the data length has a 1 in the 32nd bit. When casted to int, this changes the sign of the value, and causes the modulus operation to return a different result. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/md5#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "md5.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#appendUint64",
+              "documentation": {
+                "identifier": "appendUint64",
+                "newPage": false,
+                "searchKey": "md5.appendUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendUint64(b []byte, x uint64) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendUint64(b []byte, x uint64) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#appendUint32",
+              "documentation": {
+                "identifier": "appendUint32",
+                "newPage": false,
+                "searchKey": "md5.appendUint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendUint32(b []byte, x uint32) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendUint32(b []byte, x uint32) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#consumeUint64",
+              "documentation": {
+                "identifier": "consumeUint64",
+                "newPage": false,
+                "searchKey": "md5.consumeUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func consumeUint64(b []byte) ([]byte, uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc consumeUint64(b []byte) ([]byte, uint64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#consumeUint32",
+              "documentation": {
+                "identifier": "consumeUint32",
+                "newPage": false,
+                "searchKey": "md5.consumeUint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func consumeUint32(b []byte) ([]byte, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc consumeUint32(b []byte) ([]byte, uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#New",
+              "documentation": {
+                "identifier": "New",
+                "newPage": false,
+                "searchKey": "md5.New",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New() hash.Hash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New() hash.Hash\n```\n\nNew returns a new hash.Hash computing the MD5 checksum. The Hash also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#Sum",
+              "documentation": {
+                "identifier": "Sum",
+                "newPage": false,
+                "searchKey": "md5.Sum",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sum(data []byte) [Size]byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sum(data []byte) [Size]byte\n```\n\nSum returns the MD5 checksum of the data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#blockGeneric",
+              "documentation": {
+                "identifier": "blockGeneric",
+                "newPage": false,
+                "searchKey": "md5.blockGeneric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func blockGeneric(dig *digest, p []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc blockGeneric(dig *digest, p []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#block",
+              "documentation": {
+                "identifier": "block",
+                "newPage": false,
+                "searchKey": "md5.block",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func block(dig *digest, p []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc block(dig *digest, p []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#TestGolden",
+              "documentation": {
+                "identifier": "TestGolden",
+                "newPage": false,
+                "searchKey": "md5.TestGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#TestGoldenMarshal",
+              "documentation": {
+                "identifier": "TestGoldenMarshal",
+                "newPage": false,
+                "searchKey": "md5.TestGoldenMarshal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGoldenMarshal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGoldenMarshal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#TestLarge",
+              "documentation": {
+                "identifier": "TestLarge",
+                "newPage": false,
+                "searchKey": "md5.TestLarge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLarge(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLarge(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#TestBlockGeneric",
+              "documentation": {
+                "identifier": "TestBlockGeneric",
+                "newPage": false,
+                "searchKey": "md5.TestBlockGeneric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBlockGeneric(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBlockGeneric(t *testing.T)\n```\n\nTests that blockGeneric (pure Go) and block (in assembly for amd64, 386, arm) match. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#safeSum",
+              "documentation": {
+                "identifier": "safeSum",
+                "newPage": false,
+                "searchKey": "md5.safeSum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func safeSum(h hash.Hash) (sum []byte, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc safeSum(h hash.Hash) (sum []byte, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#TestLargeHashes",
+              "documentation": {
+                "identifier": "TestLargeHashes",
+                "newPage": false,
+                "searchKey": "md5.TestLargeHashes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLargeHashes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLargeHashes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#benchmarkSize",
+              "documentation": {
+                "identifier": "benchmarkSize",
+                "newPage": false,
+                "searchKey": "md5.benchmarkSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkSize(b *testing.B, size int, unaligned bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkSize(b *testing.B, size int, unaligned bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash8Bytes",
+              "documentation": {
+                "identifier": "BenchmarkHash8Bytes",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash8Bytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash8Bytes(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash8Bytes(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash64",
+              "documentation": {
+                "identifier": "BenchmarkHash64",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash128",
+              "documentation": {
+                "identifier": "BenchmarkHash128",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash128",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash128(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash128(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash256",
+              "documentation": {
+                "identifier": "BenchmarkHash256",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash256",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash256(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash256(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash512",
+              "documentation": {
+                "identifier": "BenchmarkHash512",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash512",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash512(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash512(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash1K",
+              "documentation": {
+                "identifier": "BenchmarkHash1K",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash1K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash1K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash1K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash8K",
+              "documentation": {
+                "identifier": "BenchmarkHash8K",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash8K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash8K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash8K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash1M",
+              "documentation": {
+                "identifier": "BenchmarkHash1M",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash1M",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash1M(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash1M(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash8M",
+              "documentation": {
+                "identifier": "BenchmarkHash8M",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash8M",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash8M(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash8M(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash8BytesUnaligned",
+              "documentation": {
+                "identifier": "BenchmarkHash8BytesUnaligned",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash8BytesUnaligned",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash8BytesUnaligned(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash8BytesUnaligned(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash1KUnaligned",
+              "documentation": {
+                "identifier": "BenchmarkHash1KUnaligned",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash1KUnaligned",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash1KUnaligned(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash1KUnaligned(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/md5#BenchmarkHash8KUnaligned",
+              "documentation": {
+                "identifier": "BenchmarkHash8KUnaligned",
+                "newPage": false,
+                "searchKey": "md5.BenchmarkHash8KUnaligned",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash8KUnaligned(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash8KUnaligned(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

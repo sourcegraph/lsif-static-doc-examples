@@ -1,0 +1,141 @@
+{
+  "pathID": "/std/image/png_test",
+  "documentation": {
+    "identifier": "png_test",
+    "newPage": true,
+    "searchKey": "std/image/png_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package png_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/image/png_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/png_test#gopher",
+              "documentation": {
+                "identifier": "gopher",
+                "newPage": false,
+                "searchKey": "png_test.gopher",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const gopher"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst gopher = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/png_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/png_test#gopherPNG",
+              "documentation": {
+                "identifier": "gopherPNG",
+                "newPage": false,
+                "searchKey": "png_test.gopherPNG",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gopherPNG() io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gopherPNG() io.Reader\n```\n\ngopherPNG creates an io.Reader by decoding the base64 encoded image data string in the gopher constant. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png_test#ExampleDecode",
+              "documentation": {
+                "identifier": "ExampleDecode",
+                "newPage": false,
+                "searchKey": "png_test.ExampleDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDecode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDecode()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png_test#ExampleEncode",
+              "documentation": {
+                "identifier": "ExampleEncode",
+                "newPage": false,
+                "searchKey": "png_test.ExampleEncode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleEncode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleEncode()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

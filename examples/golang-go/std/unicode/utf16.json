@@ -1,0 +1,337 @@
+{
+  "pathID": "/std/unicode/utf16",
+  "documentation": {
+    "identifier": "utf16",
+    "newPage": true,
+    "searchKey": "std/unicode/utf16",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package utf16"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package utf16 implements encoding and decoding of UTF-16 sequences. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/unicode/utf16#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#replacementChar",
+              "documentation": {
+                "identifier": "replacementChar",
+                "newPage": false,
+                "searchKey": "utf16.replacementChar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const replacementChar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst replacementChar = '\\uFFFD' // Unicode replacement character\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#maxRune",
+              "documentation": {
+                "identifier": "maxRune",
+                "newPage": false,
+                "searchKey": "utf16.maxRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxRune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxRune = '\\U0010FFFF' // Maximum valid Unicode code point.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#surr1",
+              "documentation": {
+                "identifier": "surr1",
+                "newPage": false,
+                "searchKey": "utf16.surr1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surr1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surr1 = 0xd800\n```\n\n0xd800-0xdc00 encodes the high 10 bits of a pair. 0xdc00-0xe000 encodes the low 10 bits of a pair. the value is those 20 bits plus 0x10000. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#surr2",
+              "documentation": {
+                "identifier": "surr2",
+                "newPage": false,
+                "searchKey": "utf16.surr2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surr2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surr2 = 0xdc00\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#surr3",
+              "documentation": {
+                "identifier": "surr3",
+                "newPage": false,
+                "searchKey": "utf16.surr3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surr3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surr3 = 0xe000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#surrSelf",
+              "documentation": {
+                "identifier": "surrSelf",
+                "newPage": false,
+                "searchKey": "utf16.surrSelf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const surrSelf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst surrSelf = 0x10000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#MaxRune",
+              "documentation": {
+                "identifier": "MaxRune",
+                "newPage": false,
+                "searchKey": "utf16.MaxRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaxRune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaxRune = maxRune\n```\n\nExtra names for constants so we can validate them during testing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#ReplacementChar",
+              "documentation": {
+                "identifier": "ReplacementChar",
+                "newPage": false,
+                "searchKey": "utf16.ReplacementChar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ReplacementChar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ReplacementChar = replacementChar\n```\n\nExtra names for constants so we can validate them during testing. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/unicode/utf16#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#IsSurrogate",
+              "documentation": {
+                "identifier": "IsSurrogate",
+                "newPage": false,
+                "searchKey": "utf16.IsSurrogate",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsSurrogate(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsSurrogate(r rune) bool\n```\n\nIsSurrogate reports whether the specified Unicode code point can appear in a surrogate pair. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#DecodeRune",
+              "documentation": {
+                "identifier": "DecodeRune",
+                "newPage": false,
+                "searchKey": "utf16.DecodeRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeRune(r1, r2 rune) rune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeRune(r1, r2 rune) rune\n```\n\nDecodeRune returns the UTF-16 decoding of a surrogate pair. If the pair is not a valid UTF-16 surrogate pair, DecodeRune returns the Unicode replacement code point U+FFFD. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#EncodeRune",
+              "documentation": {
+                "identifier": "EncodeRune",
+                "newPage": false,
+                "searchKey": "utf16.EncodeRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EncodeRune(r rune) (r1, r2 rune)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EncodeRune(r rune) (r1, r2 rune)\n```\n\nEncodeRune returns the UTF-16 surrogate pair r1, r2 for the given rune. If the rune is not a valid Unicode code point or does not need encoding, EncodeRune returns U+FFFD, U+FFFD. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#Encode",
+              "documentation": {
+                "identifier": "Encode",
+                "newPage": false,
+                "searchKey": "utf16.Encode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Encode(s []rune) []uint16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Encode(s []rune) []uint16\n```\n\nEncode returns the UTF-16 encoding of the Unicode code point sequence s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unicode/utf16#Decode",
+              "documentation": {
+                "identifier": "Decode",
+                "newPage": false,
+                "searchKey": "utf16.Decode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Decode(s []uint16) []rune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Decode(s []uint16) []rune\n```\n\nDecode returns the Unicode code point sequence represented by the UTF-16 encoding s. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

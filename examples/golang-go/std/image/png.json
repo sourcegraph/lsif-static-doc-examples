@@ -1,0 +1,2911 @@
+{
+  "pathID": "/std/image/png",
+  "documentation": {
+    "identifier": "png",
+    "newPage": true,
+    "searchKey": "std/image/png",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package png"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package png implements a PNG image decoder and encoder. \n\nThe PNG specification is at [https://www.w3.org/TR/PNG/](https://www.w3.org/TR/PNG/). \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/image/png#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/png#intSize",
+              "documentation": {
+                "identifier": "intSize",
+                "newPage": false,
+                "searchKey": "png.intSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const intSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst intSize = 32 << (^uint(0) >> 63)\n```\n\nintSize is either 32 or 64. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ctGrayscale",
+              "documentation": {
+                "identifier": "ctGrayscale",
+                "newPage": false,
+                "searchKey": "png.ctGrayscale",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ctGrayscale"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ctGrayscale = 0\n```\n\nColor type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ctTrueColor",
+              "documentation": {
+                "identifier": "ctTrueColor",
+                "newPage": false,
+                "searchKey": "png.ctTrueColor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ctTrueColor"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ctTrueColor = 2\n```\n\nColor type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ctPaletted",
+              "documentation": {
+                "identifier": "ctPaletted",
+                "newPage": false,
+                "searchKey": "png.ctPaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ctPaletted"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ctPaletted = 3\n```\n\nColor type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ctGrayscaleAlpha",
+              "documentation": {
+                "identifier": "ctGrayscaleAlpha",
+                "newPage": false,
+                "searchKey": "png.ctGrayscaleAlpha",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ctGrayscaleAlpha"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ctGrayscaleAlpha = 4\n```\n\nColor type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ctTrueColorAlpha",
+              "documentation": {
+                "identifier": "ctTrueColorAlpha",
+                "newPage": false,
+                "searchKey": "png.ctTrueColorAlpha",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ctTrueColorAlpha"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ctTrueColorAlpha = 6\n```\n\nColor type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbInvalid",
+              "documentation": {
+                "identifier": "cbInvalid",
+                "newPage": false,
+                "searchKey": "png.cbInvalid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbInvalid"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbInvalid = iota\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbG1",
+              "documentation": {
+                "identifier": "cbG1",
+                "newPage": false,
+                "searchKey": "png.cbG1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbG1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbG1\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbG2",
+              "documentation": {
+                "identifier": "cbG2",
+                "newPage": false,
+                "searchKey": "png.cbG2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbG2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbG2\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbG4",
+              "documentation": {
+                "identifier": "cbG4",
+                "newPage": false,
+                "searchKey": "png.cbG4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbG4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbG4\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbG8",
+              "documentation": {
+                "identifier": "cbG8",
+                "newPage": false,
+                "searchKey": "png.cbG8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbG8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbG8\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbGA8",
+              "documentation": {
+                "identifier": "cbGA8",
+                "newPage": false,
+                "searchKey": "png.cbGA8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbGA8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbGA8\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbTC8",
+              "documentation": {
+                "identifier": "cbTC8",
+                "newPage": false,
+                "searchKey": "png.cbTC8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbTC8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbTC8\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbP1",
+              "documentation": {
+                "identifier": "cbP1",
+                "newPage": false,
+                "searchKey": "png.cbP1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbP1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbP1\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbP2",
+              "documentation": {
+                "identifier": "cbP2",
+                "newPage": false,
+                "searchKey": "png.cbP2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbP2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbP2\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbP4",
+              "documentation": {
+                "identifier": "cbP4",
+                "newPage": false,
+                "searchKey": "png.cbP4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbP4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbP4\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbP8",
+              "documentation": {
+                "identifier": "cbP8",
+                "newPage": false,
+                "searchKey": "png.cbP8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbP8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbP8\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbTCA8",
+              "documentation": {
+                "identifier": "cbTCA8",
+                "newPage": false,
+                "searchKey": "png.cbTCA8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbTCA8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbTCA8\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbG16",
+              "documentation": {
+                "identifier": "cbG16",
+                "newPage": false,
+                "searchKey": "png.cbG16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbG16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbG16\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbGA16",
+              "documentation": {
+                "identifier": "cbGA16",
+                "newPage": false,
+                "searchKey": "png.cbGA16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbGA16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbGA16\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbTC16",
+              "documentation": {
+                "identifier": "cbTC16",
+                "newPage": false,
+                "searchKey": "png.cbTC16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbTC16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbTC16\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbTCA16",
+              "documentation": {
+                "identifier": "cbTCA16",
+                "newPage": false,
+                "searchKey": "png.cbTCA16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cbTCA16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cbTCA16\n```\n\nA cb is a combination of color type and bit depth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ftNone",
+              "documentation": {
+                "identifier": "ftNone",
+                "newPage": false,
+                "searchKey": "png.ftNone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ftNone"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ftNone = 0\n```\n\nFilter type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ftSub",
+              "documentation": {
+                "identifier": "ftSub",
+                "newPage": false,
+                "searchKey": "png.ftSub",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ftSub"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ftSub = 1\n```\n\nFilter type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ftUp",
+              "documentation": {
+                "identifier": "ftUp",
+                "newPage": false,
+                "searchKey": "png.ftUp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ftUp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ftUp = 2\n```\n\nFilter type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ftAverage",
+              "documentation": {
+                "identifier": "ftAverage",
+                "newPage": false,
+                "searchKey": "png.ftAverage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ftAverage"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ftAverage = 3\n```\n\nFilter type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#ftPaeth",
+              "documentation": {
+                "identifier": "ftPaeth",
+                "newPage": false,
+                "searchKey": "png.ftPaeth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ftPaeth"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ftPaeth = 4\n```\n\nFilter type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#nFilter",
+              "documentation": {
+                "identifier": "nFilter",
+                "newPage": false,
+                "searchKey": "png.nFilter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const nFilter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst nFilter = 5\n```\n\nFilter type, as per the PNG spec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#itNone",
+              "documentation": {
+                "identifier": "itNone",
+                "newPage": false,
+                "searchKey": "png.itNone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const itNone"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst itNone = 0\n```\n\nInterlace type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#itAdam7",
+              "documentation": {
+                "identifier": "itAdam7",
+                "newPage": false,
+                "searchKey": "png.itAdam7",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const itAdam7"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst itAdam7 = 1\n```\n\nInterlace type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#dsStart",
+              "documentation": {
+                "identifier": "dsStart",
+                "newPage": false,
+                "searchKey": "png.dsStart",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dsStart"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dsStart = iota\n```\n\nDecoding stage. The PNG specification says that the IHDR, PLTE (if present), tRNS (if present), IDAT and IEND chunks must appear in that order. There may be multiple IDAT chunks, and IDAT chunks must be sequential (i.e. they may not have any other chunks between them). [https://www.w3.org/TR/PNG/#5ChunkOrdering](https://www.w3.org/TR/PNG/#5ChunkOrdering) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#dsSeenIHDR",
+              "documentation": {
+                "identifier": "dsSeenIHDR",
+                "newPage": false,
+                "searchKey": "png.dsSeenIHDR",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dsSeenIHDR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dsSeenIHDR\n```\n\nDecoding stage. The PNG specification says that the IHDR, PLTE (if present), tRNS (if present), IDAT and IEND chunks must appear in that order. There may be multiple IDAT chunks, and IDAT chunks must be sequential (i.e. they may not have any other chunks between them). [https://www.w3.org/TR/PNG/#5ChunkOrdering](https://www.w3.org/TR/PNG/#5ChunkOrdering) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#dsSeenPLTE",
+              "documentation": {
+                "identifier": "dsSeenPLTE",
+                "newPage": false,
+                "searchKey": "png.dsSeenPLTE",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dsSeenPLTE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dsSeenPLTE\n```\n\nDecoding stage. The PNG specification says that the IHDR, PLTE (if present), tRNS (if present), IDAT and IEND chunks must appear in that order. There may be multiple IDAT chunks, and IDAT chunks must be sequential (i.e. they may not have any other chunks between them). [https://www.w3.org/TR/PNG/#5ChunkOrdering](https://www.w3.org/TR/PNG/#5ChunkOrdering) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#dsSeentRNS",
+              "documentation": {
+                "identifier": "dsSeentRNS",
+                "newPage": false,
+                "searchKey": "png.dsSeentRNS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dsSeentRNS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dsSeentRNS\n```\n\nDecoding stage. The PNG specification says that the IHDR, PLTE (if present), tRNS (if present), IDAT and IEND chunks must appear in that order. There may be multiple IDAT chunks, and IDAT chunks must be sequential (i.e. they may not have any other chunks between them). [https://www.w3.org/TR/PNG/#5ChunkOrdering](https://www.w3.org/TR/PNG/#5ChunkOrdering) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#dsSeenIDAT",
+              "documentation": {
+                "identifier": "dsSeenIDAT",
+                "newPage": false,
+                "searchKey": "png.dsSeenIDAT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dsSeenIDAT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dsSeenIDAT\n```\n\nDecoding stage. The PNG specification says that the IHDR, PLTE (if present), tRNS (if present), IDAT and IEND chunks must appear in that order. There may be multiple IDAT chunks, and IDAT chunks must be sequential (i.e. they may not have any other chunks between them). [https://www.w3.org/TR/PNG/#5ChunkOrdering](https://www.w3.org/TR/PNG/#5ChunkOrdering) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#dsSeenIEND",
+              "documentation": {
+                "identifier": "dsSeenIEND",
+                "newPage": false,
+                "searchKey": "png.dsSeenIEND",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dsSeenIEND"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dsSeenIEND\n```\n\nDecoding stage. The PNG specification says that the IHDR, PLTE (if present), tRNS (if present), IDAT and IEND chunks must appear in that order. There may be multiple IDAT chunks, and IDAT chunks must be sequential (i.e. they may not have any other chunks between them). [https://www.w3.org/TR/PNG/#5ChunkOrdering](https://www.w3.org/TR/PNG/#5ChunkOrdering) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#pngHeader",
+              "documentation": {
+                "identifier": "pngHeader",
+                "newPage": false,
+                "searchKey": "png.pngHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pngHeader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pngHeader = \"\\x89PNG\\r\\n\\x1a\\n\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#DefaultCompression",
+              "documentation": {
+                "identifier": "DefaultCompression",
+                "newPage": false,
+                "searchKey": "png.DefaultCompression",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultCompression"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultCompression CompressionLevel = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#NoCompression",
+              "documentation": {
+                "identifier": "NoCompression",
+                "newPage": false,
+                "searchKey": "png.NoCompression",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const NoCompression"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst NoCompression CompressionLevel = -1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BestSpeed",
+              "documentation": {
+                "identifier": "BestSpeed",
+                "newPage": false,
+                "searchKey": "png.BestSpeed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BestSpeed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BestSpeed CompressionLevel = -2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BestCompression",
+              "documentation": {
+                "identifier": "BestCompression",
+                "newPage": false,
+                "searchKey": "png.BestCompression",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BestCompression"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BestCompression CompressionLevel = -3\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/png#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/png#interlacing",
+              "documentation": {
+                "identifier": "interlacing",
+                "newPage": false,
+                "searchKey": "png.interlacing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var interlacing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar interlacing = ...\n```\n\ninterlacing defines Adam7 interlacing, with 7 passes of reduced images. See [https://www.w3.org/TR/PNG/#8Interlace](https://www.w3.org/TR/PNG/#8Interlace) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#chunkOrderError",
+              "documentation": {
+                "identifier": "chunkOrderError",
+                "newPage": false,
+                "searchKey": "png.chunkOrderError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var chunkOrderError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar chunkOrderError = FormatError(\"chunk out of order\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#filenames",
+              "documentation": {
+                "identifier": "filenames",
+                "newPage": false,
+                "searchKey": "png.filenames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var filenames"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar filenames = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#filenamesPaletted",
+              "documentation": {
+                "identifier": "filenamesPaletted",
+                "newPage": false,
+                "searchKey": "png.filenamesPaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var filenamesPaletted"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar filenamesPaletted = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#filenamesShort",
+              "documentation": {
+                "identifier": "filenamesShort",
+                "newPage": false,
+                "searchKey": "png.filenamesShort",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var filenamesShort"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar filenamesShort = []string{\n\t\"basn0g01\",\n\t\"basn0g04-31\",\n\t\"basn6a16\",\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#fakebKGDs",
+              "documentation": {
+                "identifier": "fakebKGDs",
+                "newPage": false,
+                "searchKey": "png.fakebKGDs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fakebKGDs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fakebKGDs = ...\n```\n\nfakebKGDs maps from filenames to fake bKGD chunks for our approximation to the sng command-line tool. Package png doesn't keep that metadata when png.Decode returns an image.Image. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#fakegAMAs",
+              "documentation": {
+                "identifier": "fakegAMAs",
+                "newPage": false,
+                "searchKey": "png.fakegAMAs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fakegAMAs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fakegAMAs = map[string]string{\n\t\"ftbbn0g01\": \"\",\n\t\"ftbbn0g02\": \"gAMA {0.45455}\\n\",\n}\n```\n\nfakegAMAs maps from filenames to fake gAMA chunks for our approximation to the sng command-line tool. Package png doesn't keep that metadata when png.Decode returns an image.Image. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#fakeIHDRUsings",
+              "documentation": {
+                "identifier": "fakeIHDRUsings",
+                "newPage": false,
+                "searchKey": "png.fakeIHDRUsings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fakeIHDRUsings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fakeIHDRUsings = ...\n```\n\nfakeIHDRUsings maps from filenames to fake IHDR \"using\" lines for our approximation to the sng command-line tool. The PNG model is that transparency (in the tRNS chunk) is separate to the color/grayscale/palette color model (in the IHDR chunk). The Go model is that the concrete image.Image type returned by png.Decode, such as image.RGBA (with all pixels having 100% alpha) or image.NRGBA, encapsulates whether or not the image has transparency. This map is a hack to work around the fact that the Go model can't otherwise discriminate PNG's \"IHDR says color (with no alpha) but tRNS says alpha\" and \"IHDR says color with alpha\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#readerErrors",
+              "documentation": {
+                "identifier": "readerErrors",
+                "newPage": false,
+                "searchKey": "png.readerErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readerErrors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readerErrors = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/png#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/png#interlaceScan",
+              "documentation": {
+                "identifier": "interlaceScan",
+                "newPage": false,
+                "searchKey": "png.interlaceScan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type interlaceScan struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype interlaceScan struct {\n\txFactor, yFactor, xOffset, yOffset int\n}\n```\n\ninterlaceScan defines the placement and size of a pass for Adam7 interlacing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#decoder",
+              "documentation": {
+                "identifier": "decoder",
+                "newPage": false,
+                "searchKey": "png.decoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type decoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype decoder struct {\n\tr             io.Reader\n\timg           image.Image\n\tcrc           hash.Hash32\n\twidth, height int\n\tdepth         int\n\tpalette       color.Palette\n\tcb            int\n\tstage         int\n\tidatLength    uint32\n\ttmp           [3 * 256]byte\n\tinterlace     int\n\n\t// useTransparent and transparent are used for grayscale and truecolor\n\t// transparency, as opposed to palette transparency.\n\tuseTransparent bool\n\ttransparent    [6]byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.parseIHDR",
+                    "documentation": {
+                      "identifier": "decoder.parseIHDR",
+                      "newPage": false,
+                      "searchKey": "png.decoder.parseIHDR",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) parseIHDR(length uint32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) parseIHDR(length uint32) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.parsePLTE",
+                    "documentation": {
+                      "identifier": "decoder.parsePLTE",
+                      "newPage": false,
+                      "searchKey": "png.decoder.parsePLTE",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) parsePLTE(length uint32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) parsePLTE(length uint32) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.parsetRNS",
+                    "documentation": {
+                      "identifier": "decoder.parsetRNS",
+                      "newPage": false,
+                      "searchKey": "png.decoder.parsetRNS",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) parsetRNS(length uint32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) parsetRNS(length uint32) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.Read",
+                    "documentation": {
+                      "identifier": "decoder.Read",
+                      "newPage": false,
+                      "searchKey": "png.decoder.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) Read(p []byte) (int, error)\n```\n\nRead presents one or more IDAT chunks as one continuous stream (minus the intermediate chunk headers and footers). If the PNG data looked like: \n\n```\n... len0 IDAT xxx crc0 len1 IDAT yy crc1 len2 IEND crc2\n\n```\nthen this reader presents xxxyy. For well-formed PNG data, the decoder state immediately before the first Read call is that d.r is positioned between the first IDAT and xxx, and the decoder state immediately after the last Read call is that d.r is positioned between yy and crc1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.decode",
+                    "documentation": {
+                      "identifier": "decoder.decode",
+                      "newPage": false,
+                      "searchKey": "png.decoder.decode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) decode() (image.Image, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) decode() (image.Image, error)\n```\n\ndecode decodes the IDAT data into an image. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.readImagePass",
+                    "documentation": {
+                      "identifier": "decoder.readImagePass",
+                      "newPage": false,
+                      "searchKey": "png.decoder.readImagePass",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) readImagePass(r io.Reader, pass int, allocateOnly bool) (image.Image, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) readImagePass(r io.Reader, pass int, allocateOnly bool) (image.Image, error)\n```\n\nreadImagePass reads a single image pass, sized according to the pass number. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.mergePassInto",
+                    "documentation": {
+                      "identifier": "decoder.mergePassInto",
+                      "newPage": false,
+                      "searchKey": "png.decoder.mergePassInto",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) mergePassInto(dst image.Image, src image.Image, pass int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) mergePassInto(dst image.Image, src image.Image, pass int)\n```\n\nmergePassInto merges a single pass into a full sized image. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.parseIDAT",
+                    "documentation": {
+                      "identifier": "decoder.parseIDAT",
+                      "newPage": false,
+                      "searchKey": "png.decoder.parseIDAT",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) parseIDAT(length uint32) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) parseIDAT(length uint32) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.parseIEND",
+                    "documentation": {
+                      "identifier": "decoder.parseIEND",
+                      "newPage": false,
+                      "searchKey": "png.decoder.parseIEND",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) parseIEND(length uint32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) parseIEND(length uint32) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.parseChunk",
+                    "documentation": {
+                      "identifier": "decoder.parseChunk",
+                      "newPage": false,
+                      "searchKey": "png.decoder.parseChunk",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) parseChunk() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) parseChunk() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.verifyChecksum",
+                    "documentation": {
+                      "identifier": "decoder.verifyChecksum",
+                      "newPage": false,
+                      "searchKey": "png.decoder.verifyChecksum",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) verifyChecksum() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) verifyChecksum() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#decoder.checkHeader",
+                    "documentation": {
+                      "identifier": "decoder.checkHeader",
+                      "newPage": false,
+                      "searchKey": "png.decoder.checkHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) checkHeader() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) checkHeader() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#FormatError",
+              "documentation": {
+                "identifier": "FormatError",
+                "newPage": false,
+                "searchKey": "png.FormatError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FormatError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FormatError string\n```\n\nA FormatError reports that the input is not a valid PNG. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/png#FormatError.Error",
+                    "documentation": {
+                      "identifier": "FormatError.Error",
+                      "newPage": false,
+                      "searchKey": "png.FormatError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e FormatError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e FormatError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#UnsupportedError",
+              "documentation": {
+                "identifier": "UnsupportedError",
+                "newPage": false,
+                "searchKey": "png.UnsupportedError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnsupportedError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnsupportedError string\n```\n\nAn UnsupportedError reports that the input uses a valid but unimplemented PNG feature. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/png#UnsupportedError.Error",
+                    "documentation": {
+                      "identifier": "UnsupportedError.Error",
+                      "newPage": false,
+                      "searchKey": "png.UnsupportedError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnsupportedError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnsupportedError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#Encoder",
+              "documentation": {
+                "identifier": "Encoder",
+                "newPage": false,
+                "searchKey": "png.Encoder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Encoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Encoder struct {\n\tCompressionLevel CompressionLevel\n\n\t// BufferPool optionally specifies a buffer pool to get temporary\n\t// EncoderBuffers when encoding an image.\n\tBufferPool EncoderBufferPool\n}\n```\n\nEncoder configures encoding PNG images. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/png#Encoder.Encode",
+                    "documentation": {
+                      "identifier": "Encoder.Encode",
+                      "newPage": false,
+                      "searchKey": "png.Encoder.Encode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc *Encoder) Encode(w io.Writer, m image.Image) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc *Encoder) Encode(w io.Writer, m image.Image) error\n```\n\nEncode writes the Image m to w in PNG format. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#EncoderBufferPool",
+              "documentation": {
+                "identifier": "EncoderBufferPool",
+                "newPage": false,
+                "searchKey": "png.EncoderBufferPool",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EncoderBufferPool interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EncoderBufferPool interface {\n\tGet() *EncoderBuffer\n\tPut(*EncoderBuffer)\n}\n```\n\nEncoderBufferPool is an interface for getting and returning temporary instances of the EncoderBuffer struct. This can be used to reuse buffers when encoding multiple images. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#EncoderBuffer",
+              "documentation": {
+                "identifier": "EncoderBuffer",
+                "newPage": false,
+                "searchKey": "png.EncoderBuffer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type EncoderBuffer png.encoder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype EncoderBuffer encoder\n```\n\nEncoderBuffer holds the buffers used for encoding PNG images. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#encoder",
+              "documentation": {
+                "identifier": "encoder",
+                "newPage": false,
+                "searchKey": "png.encoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encoder struct {\n\tenc     *Encoder\n\tw       io.Writer\n\tm       image.Image\n\tcb      int\n\terr     error\n\theader  [8]byte\n\tfooter  [4]byte\n\ttmp     [4 * 256]byte\n\tcr      [nFilter][]uint8\n\tpr      []uint8\n\tzw      *zlib.Writer\n\tzwLevel int\n\tbw      *bufio.Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/png#encoder.writeChunk",
+                    "documentation": {
+                      "identifier": "encoder.writeChunk",
+                      "newPage": false,
+                      "searchKey": "png.encoder.writeChunk",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeChunk(b []byte, name string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeChunk(b []byte, name string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#encoder.writeIHDR",
+                    "documentation": {
+                      "identifier": "encoder.writeIHDR",
+                      "newPage": false,
+                      "searchKey": "png.encoder.writeIHDR",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeIHDR()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeIHDR()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#encoder.writePLTEAndTRNS",
+                    "documentation": {
+                      "identifier": "encoder.writePLTEAndTRNS",
+                      "newPage": false,
+                      "searchKey": "png.encoder.writePLTEAndTRNS",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writePLTEAndTRNS(p color.Palette)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writePLTEAndTRNS(p color.Palette)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#encoder.Write",
+                    "documentation": {
+                      "identifier": "encoder.Write",
+                      "newPage": false,
+                      "searchKey": "png.encoder.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) Write(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) Write(b []byte) (int, error)\n```\n\nAn encoder is an io.Writer that satisfies writes by writing PNG IDAT chunks, including an 8-byte header and 4-byte CRC checksum per Write call. Such calls should be relatively infrequent, since writeIDATs uses a bufio.Writer. \n\nThis method should only be called from writeIDATs (via writeImage). No other code should treat an encoder as an io.Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#encoder.writeImage",
+                    "documentation": {
+                      "identifier": "encoder.writeImage",
+                      "newPage": false,
+                      "searchKey": "png.encoder.writeImage",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeImage(w io.Writer, m image.Image, cb int, level int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeImage(w io.Writer, m image.Image, cb int, level int) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#encoder.writeIDATs",
+                    "documentation": {
+                      "identifier": "encoder.writeIDATs",
+                      "newPage": false,
+                      "searchKey": "png.encoder.writeIDATs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeIDATs()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeIDATs()\n```\n\nWrite the actual image data to one or more IDAT chunks. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#encoder.writeIEND",
+                    "documentation": {
+                      "identifier": "encoder.writeIEND",
+                      "newPage": false,
+                      "searchKey": "png.encoder.writeIEND",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeIEND()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeIEND()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#CompressionLevel",
+              "documentation": {
+                "identifier": "CompressionLevel",
+                "newPage": false,
+                "searchKey": "png.CompressionLevel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CompressionLevel int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CompressionLevel int\n```\n\nCompressionLevel indicates the compression level. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#opaquer",
+              "documentation": {
+                "identifier": "opaquer",
+                "newPage": false,
+                "searchKey": "png.opaquer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type opaquer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype opaquer interface {\n\tOpaque() bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#pool",
+              "documentation": {
+                "identifier": "pool",
+                "newPage": false,
+                "searchKey": "png.pool",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pool struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pool struct {\n\tb *EncoderBuffer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/png#pool.Get",
+                    "documentation": {
+                      "identifier": "pool.Get",
+                      "newPage": false,
+                      "searchKey": "png.pool.Get",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pool) Get() *EncoderBuffer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pool) Get() *EncoderBuffer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/png#pool.Put",
+                    "documentation": {
+                      "identifier": "pool.Put",
+                      "newPage": false,
+                      "searchKey": "png.pool.Put",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pool) Put(b *EncoderBuffer)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pool) Put(b *EncoderBuffer)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/png#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/png#abs",
+              "documentation": {
+                "identifier": "abs",
+                "newPage": false,
+                "searchKey": "png.abs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func abs(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc abs(x int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#paeth",
+              "documentation": {
+                "identifier": "paeth",
+                "newPage": false,
+                "searchKey": "png.paeth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func paeth(a, b, c uint8) uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc paeth(a, b, c uint8) uint8\n```\n\npaeth implements the Paeth filter function, as per the PNG specification. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#filterPaeth",
+              "documentation": {
+                "identifier": "filterPaeth",
+                "newPage": false,
+                "searchKey": "png.filterPaeth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterPaeth(cdat, pdat []byte, bytesPerPixel int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterPaeth(cdat, pdat []byte, bytesPerPixel int)\n```\n\nfilterPaeth applies the Paeth filter to the cdat slice. cdat is the current row's data, pdat is the previous row's data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#cbPaletted",
+              "documentation": {
+                "identifier": "cbPaletted",
+                "newPage": false,
+                "searchKey": "png.cbPaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cbPaletted(cb int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cbPaletted(cb int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#min",
+              "documentation": {
+                "identifier": "min",
+                "newPage": false,
+                "searchKey": "png.min",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func min(a, b int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc min(a, b int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#Decode",
+              "documentation": {
+                "identifier": "Decode",
+                "newPage": false,
+                "searchKey": "png.Decode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Decode(r io.Reader) (image.Image, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Decode(r io.Reader) (image.Image, error)\n```\n\nDecode reads a PNG image from r and returns it as an image.Image. The type of Image returned depends on the PNG contents. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#DecodeConfig",
+              "documentation": {
+                "identifier": "DecodeConfig",
+                "newPage": false,
+                "searchKey": "png.DecodeConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeConfig(r io.Reader) (image.Config, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeConfig(r io.Reader) (image.Config, error)\n```\n\nDecodeConfig returns the color model and dimensions of a PNG image without decoding the entire image. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "png.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#opaque",
+              "documentation": {
+                "identifier": "opaque",
+                "newPage": false,
+                "searchKey": "png.opaque",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func opaque(m image.Image) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc opaque(m image.Image) bool\n```\n\nReturns whether or not the image is fully opaque. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#abs8",
+              "documentation": {
+                "identifier": "abs8",
+                "newPage": false,
+                "searchKey": "png.abs8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func abs8(d uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc abs8(d uint8) int\n```\n\nThe absolute value of a byte interpreted as a signed int8. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#filter",
+              "documentation": {
+                "identifier": "filter",
+                "newPage": false,
+                "searchKey": "png.filter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filter(cr *[nFilter][]byte, pr []byte, bpp int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filter(cr *[nFilter][]byte, pr []byte, bpp int) int\n```\n\nChooses the filter to use for encoding the current row, and applies it. The return value is the index of the filter and also of the row in cr that has had it applied. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#zeroMemory",
+              "documentation": {
+                "identifier": "zeroMemory",
+                "newPage": false,
+                "searchKey": "png.zeroMemory",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func zeroMemory(v []uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc zeroMemory(v []uint8)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#levelToZlib",
+              "documentation": {
+                "identifier": "levelToZlib",
+                "newPage": false,
+                "searchKey": "png.levelToZlib",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func levelToZlib(l CompressionLevel) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc levelToZlib(l CompressionLevel) int\n```\n\nThis function is required because we want the zero value of Encoder.CompressionLevel to map to zlib.DefaultCompression. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#Encode",
+              "documentation": {
+                "identifier": "Encode",
+                "newPage": false,
+                "searchKey": "png.Encode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Encode(w io.Writer, m image.Image) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Encode(w io.Writer, m image.Image) error\n```\n\nEncode writes the Image m to w in PNG format. Any Image may be encoded, but images that are not image.NRGBA might be encoded lossily. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#slowAbs",
+              "documentation": {
+                "identifier": "slowAbs",
+                "newPage": false,
+                "searchKey": "png.slowAbs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slowAbs(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slowAbs(x int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#slowPaeth",
+              "documentation": {
+                "identifier": "slowPaeth",
+                "newPage": false,
+                "searchKey": "png.slowPaeth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slowPaeth(a, b, c uint8) uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slowPaeth(a, b, c uint8) uint8\n```\n\nslowPaeth is a slow but simple implementation of the Paeth function. It is a straight port of the sample code in the PNG spec, section 9.4. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#slowFilterPaeth",
+              "documentation": {
+                "identifier": "slowFilterPaeth",
+                "newPage": false,
+                "searchKey": "png.slowFilterPaeth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slowFilterPaeth(cdat, pdat []byte, bytesPerPixel int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slowFilterPaeth(cdat, pdat []byte, bytesPerPixel int)\n```\n\nslowFilterPaeth is a slow but simple implementation of func filterPaeth. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestPaeth",
+              "documentation": {
+                "identifier": "TestPaeth",
+                "newPage": false,
+                "searchKey": "png.TestPaeth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPaeth(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPaeth(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkPaeth",
+              "documentation": {
+                "identifier": "BenchmarkPaeth",
+                "newPage": false,
+                "searchKey": "png.BenchmarkPaeth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPaeth(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPaeth(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestPaethDecode",
+              "documentation": {
+                "identifier": "TestPaethDecode",
+                "newPage": false,
+                "searchKey": "png.TestPaethDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPaethDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPaethDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#readPNG",
+              "documentation": {
+                "identifier": "readPNG",
+                "newPage": false,
+                "searchKey": "png.readPNG",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readPNG(filename string) (image.Image, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readPNG(filename string) (image.Image, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#sng",
+              "documentation": {
+                "identifier": "sng",
+                "newPage": false,
+                "searchKey": "png.sng",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sng(w io.WriteCloser, filename string, png image.Image)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sng(w io.WriteCloser, filename string, png image.Image)\n```\n\nAn approximation of the sng command-line tool. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestReader",
+              "documentation": {
+                "identifier": "TestReader",
+                "newPage": false,
+                "searchKey": "png.TestReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestReaderError",
+              "documentation": {
+                "identifier": "TestReaderError",
+                "newPage": false,
+                "searchKey": "png.TestReaderError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestPalettedDecodeConfig",
+              "documentation": {
+                "identifier": "TestPalettedDecodeConfig",
+                "newPage": false,
+                "searchKey": "png.TestPalettedDecodeConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPalettedDecodeConfig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPalettedDecodeConfig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestInterlaced",
+              "documentation": {
+                "identifier": "TestInterlaced",
+                "newPage": false,
+                "searchKey": "png.TestInterlaced",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInterlaced(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInterlaced(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestIncompleteIDATOnRowBoundary",
+              "documentation": {
+                "identifier": "TestIncompleteIDATOnRowBoundary",
+                "newPage": false,
+                "searchKey": "png.TestIncompleteIDATOnRowBoundary",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIncompleteIDATOnRowBoundary(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIncompleteIDATOnRowBoundary(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestTrailingIDATChunks",
+              "documentation": {
+                "identifier": "TestTrailingIDATChunks",
+                "newPage": false,
+                "searchKey": "png.TestTrailingIDATChunks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTrailingIDATChunks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTrailingIDATChunks(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestMultipletRNSChunks",
+              "documentation": {
+                "identifier": "TestMultipletRNSChunks",
+                "newPage": false,
+                "searchKey": "png.TestMultipletRNSChunks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultipletRNSChunks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultipletRNSChunks(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestUnknownChunkLengthUnderflow",
+              "documentation": {
+                "identifier": "TestUnknownChunkLengthUnderflow",
+                "newPage": false,
+                "searchKey": "png.TestUnknownChunkLengthUnderflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnknownChunkLengthUnderflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnknownChunkLengthUnderflow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestPaletted8OutOfRangePixel",
+              "documentation": {
+                "identifier": "TestPaletted8OutOfRangePixel",
+                "newPage": false,
+                "searchKey": "png.TestPaletted8OutOfRangePixel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPaletted8OutOfRangePixel(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPaletted8OutOfRangePixel(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestGray8Transparent",
+              "documentation": {
+                "identifier": "TestGray8Transparent",
+                "newPage": false,
+                "searchKey": "png.TestGray8Transparent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGray8Transparent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGray8Transparent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestDimensionOverflow",
+              "documentation": {
+                "identifier": "TestDimensionOverflow",
+                "newPage": false,
+                "searchKey": "png.TestDimensionOverflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDimensionOverflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDimensionOverflow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#benchmarkDecode",
+              "documentation": {
+                "identifier": "benchmarkDecode",
+                "newPage": false,
+                "searchKey": "png.benchmarkDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkDecode(b *testing.B, filename string, bytesPerPixel int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkDecode(b *testing.B, filename string, bytesPerPixel int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkDecodeGray",
+              "documentation": {
+                "identifier": "BenchmarkDecodeGray",
+                "newPage": false,
+                "searchKey": "png.BenchmarkDecodeGray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeGray(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeGray(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkDecodeNRGBAGradient",
+              "documentation": {
+                "identifier": "BenchmarkDecodeNRGBAGradient",
+                "newPage": false,
+                "searchKey": "png.BenchmarkDecodeNRGBAGradient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeNRGBAGradient(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeNRGBAGradient(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkDecodeNRGBAOpaque",
+              "documentation": {
+                "identifier": "BenchmarkDecodeNRGBAOpaque",
+                "newPage": false,
+                "searchKey": "png.BenchmarkDecodeNRGBAOpaque",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeNRGBAOpaque(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeNRGBAOpaque(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkDecodePaletted",
+              "documentation": {
+                "identifier": "BenchmarkDecodePaletted",
+                "newPage": false,
+                "searchKey": "png.BenchmarkDecodePaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodePaletted(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodePaletted(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkDecodeRGB",
+              "documentation": {
+                "identifier": "BenchmarkDecodeRGB",
+                "newPage": false,
+                "searchKey": "png.BenchmarkDecodeRGB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeRGB(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeRGB(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkDecodeInterlacing",
+              "documentation": {
+                "identifier": "BenchmarkDecodeInterlacing",
+                "newPage": false,
+                "searchKey": "png.BenchmarkDecodeInterlacing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeInterlacing(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeInterlacing(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#diff",
+              "documentation": {
+                "identifier": "diff",
+                "newPage": false,
+                "searchKey": "png.diff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func diff(m0, m1 image.Image) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc diff(m0, m1 image.Image) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#encodeDecode",
+              "documentation": {
+                "identifier": "encodeDecode",
+                "newPage": false,
+                "searchKey": "png.encodeDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func encodeDecode(m image.Image) (image.Image, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc encodeDecode(m image.Image) (image.Image, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestWriter",
+              "documentation": {
+                "identifier": "TestWriter",
+                "newPage": false,
+                "searchKey": "png.TestWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestWriterPaletted",
+              "documentation": {
+                "identifier": "TestWriterPaletted",
+                "newPage": false,
+                "searchKey": "png.TestWriterPaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterPaletted(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterPaletted(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestWriterLevels",
+              "documentation": {
+                "identifier": "TestWriterLevels",
+                "newPage": false,
+                "searchKey": "png.TestWriterLevels",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterLevels(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterLevels(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#TestSubImage",
+              "documentation": {
+                "identifier": "TestSubImage",
+                "newPage": false,
+                "searchKey": "png.TestSubImage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSubImage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSubImage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkEncodeGray",
+              "documentation": {
+                "identifier": "BenchmarkEncodeGray",
+                "newPage": false,
+                "searchKey": "png.BenchmarkEncodeGray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeGray(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeGray(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkEncodeGrayWithBufferPool",
+              "documentation": {
+                "identifier": "BenchmarkEncodeGrayWithBufferPool",
+                "newPage": false,
+                "searchKey": "png.BenchmarkEncodeGrayWithBufferPool",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeGrayWithBufferPool(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeGrayWithBufferPool(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkEncodeNRGBOpaque",
+              "documentation": {
+                "identifier": "BenchmarkEncodeNRGBOpaque",
+                "newPage": false,
+                "searchKey": "png.BenchmarkEncodeNRGBOpaque",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeNRGBOpaque(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeNRGBOpaque(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkEncodeNRGBA",
+              "documentation": {
+                "identifier": "BenchmarkEncodeNRGBA",
+                "newPage": false,
+                "searchKey": "png.BenchmarkEncodeNRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeNRGBA(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeNRGBA(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkEncodePaletted",
+              "documentation": {
+                "identifier": "BenchmarkEncodePaletted",
+                "newPage": false,
+                "searchKey": "png.BenchmarkEncodePaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodePaletted(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodePaletted(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkEncodeRGBOpaque",
+              "documentation": {
+                "identifier": "BenchmarkEncodeRGBOpaque",
+                "newPage": false,
+                "searchKey": "png.BenchmarkEncodeRGBOpaque",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeRGBOpaque(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeRGBOpaque(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/png#BenchmarkEncodeRGBA",
+              "documentation": {
+                "identifier": "BenchmarkEncodeRGBA",
+                "newPage": false,
+                "searchKey": "png.BenchmarkEncodeRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeRGBA(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeRGBA(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

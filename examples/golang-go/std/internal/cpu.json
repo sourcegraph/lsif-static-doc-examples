@@ -1,0 +1,929 @@
+{
+  "pathID": "/std/internal/cpu",
+  "documentation": {
+    "identifier": "cpu",
+    "newPage": true,
+    "searchKey": "std/internal/cpu",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package cpu"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package cpu implements processor feature detection used by the Go standard library. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/internal/cpu#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#GOARCH",
+              "documentation": {
+                "identifier": "GOARCH",
+                "newPage": false,
+                "searchKey": "cpu.GOARCH",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GOARCH"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GOARCH = \"amd64\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#CacheLinePadSize",
+              "documentation": {
+                "identifier": "CacheLinePadSize",
+                "newPage": false,
+                "searchKey": "cpu.CacheLinePadSize",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CacheLinePadSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CacheLinePadSize = 64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_SSE2",
+              "documentation": {
+                "identifier": "cpuid_SSE2",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_SSE2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_SSE2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_SSE2 = 1 << 26\n```\n\nedx bits \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_SSE3",
+              "documentation": {
+                "identifier": "cpuid_SSE3",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_SSE3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_SSE3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_SSE3 = 1 << 0\n```\n\necx bits \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_PCLMULQDQ",
+              "documentation": {
+                "identifier": "cpuid_PCLMULQDQ",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_PCLMULQDQ",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_PCLMULQDQ"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_PCLMULQDQ = 1 << 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_SSSE3",
+              "documentation": {
+                "identifier": "cpuid_SSSE3",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_SSSE3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_SSSE3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_SSSE3 = 1 << 9\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_FMA",
+              "documentation": {
+                "identifier": "cpuid_FMA",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_FMA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_FMA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_FMA = 1 << 12\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_SSE41",
+              "documentation": {
+                "identifier": "cpuid_SSE41",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_SSE41",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_SSE41"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_SSE41 = 1 << 19\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_SSE42",
+              "documentation": {
+                "identifier": "cpuid_SSE42",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_SSE42",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_SSE42"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_SSE42 = 1 << 20\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_POPCNT",
+              "documentation": {
+                "identifier": "cpuid_POPCNT",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_POPCNT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_POPCNT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_POPCNT = 1 << 23\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_AES",
+              "documentation": {
+                "identifier": "cpuid_AES",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_AES",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_AES"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_AES = 1 << 25\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_OSXSAVE",
+              "documentation": {
+                "identifier": "cpuid_OSXSAVE",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_OSXSAVE",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_OSXSAVE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_OSXSAVE = 1 << 27\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_AVX",
+              "documentation": {
+                "identifier": "cpuid_AVX",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_AVX",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_AVX"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_AVX = 1 << 28\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_BMI1",
+              "documentation": {
+                "identifier": "cpuid_BMI1",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_BMI1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_BMI1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_BMI1 = 1 << 3\n```\n\nebx bits \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_AVX2",
+              "documentation": {
+                "identifier": "cpuid_AVX2",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_AVX2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_AVX2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_AVX2 = 1 << 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_BMI2",
+              "documentation": {
+                "identifier": "cpuid_BMI2",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_BMI2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_BMI2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_BMI2 = 1 << 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_ERMS",
+              "documentation": {
+                "identifier": "cpuid_ERMS",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_ERMS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_ERMS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_ERMS = 1 << 9\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid_ADX",
+              "documentation": {
+                "identifier": "cpuid_ADX",
+                "newPage": false,
+                "searchKey": "cpu.cpuid_ADX",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuid_ADX"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuid_ADX = 1 << 19\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/cpu#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#DebugOptions",
+              "documentation": {
+                "identifier": "DebugOptions",
+                "newPage": false,
+                "searchKey": "cpu.DebugOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DebugOptions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DebugOptions bool\n```\n\nDebugOptions is set to true by the runtime if the OS supports reading GODEBUG early in runtime startup. This should not be changed after it is initialized. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#CacheLineSize",
+              "documentation": {
+                "identifier": "CacheLineSize",
+                "newPage": false,
+                "searchKey": "cpu.CacheLineSize",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CacheLineSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CacheLineSize uintptr = CacheLinePadSize\n```\n\nCacheLineSize is the CPU's assumed cache line size. There is currently no runtime detection of the real cache line size so we use the constant per GOARCH CacheLinePadSize as an approximation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#X86",
+              "documentation": {
+                "identifier": "X86",
+                "newPage": false,
+                "searchKey": "cpu.X86",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var X86"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar X86 struct {\n\t_            CacheLinePad\n\tHasAES       bool\n\tHasADX       bool\n\tHasAVX       bool\n\tHasAVX2      bool\n\tHasBMI1      bool\n\tHasBMI2      bool\n\tHasERMS      bool\n\tHasFMA       bool\n\tHasOSXSAVE   bool\n\tHasPCLMULQDQ bool\n\tHasPOPCNT    bool\n\tHasSSE2      bool\n\tHasSSE3      bool\n\tHasSSSE3     bool\n\tHasSSE41     bool\n\tHasSSE42     bool\n\t_            CacheLinePad\n} = ...\n```\n\nThe booleans in X86 contain the correspondingly named cpuid feature bit. HasAVX and HasAVX2 are only set if the OS does support XMM and YMM registers in addition to the cpuid feature bit being set. The struct is padded to avoid false sharing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#ARM",
+              "documentation": {
+                "identifier": "ARM",
+                "newPage": false,
+                "searchKey": "cpu.ARM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ARM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ARM struct {\n\t_        CacheLinePad\n\tHasVFPv4 bool\n\tHasIDIVA bool\n\t_        CacheLinePad\n}\n```\n\nThe booleans in ARM contain the correspondingly named cpu feature bit. The struct is padded to avoid false sharing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#ARM64",
+              "documentation": {
+                "identifier": "ARM64",
+                "newPage": false,
+                "searchKey": "cpu.ARM64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ARM64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ARM64 struct {\n\t_            CacheLinePad\n\tHasAES       bool\n\tHasPMULL     bool\n\tHasSHA1      bool\n\tHasSHA2      bool\n\tHasCRC32     bool\n\tHasATOMICS   bool\n\tHasCPUID     bool\n\tIsNeoverseN1 bool\n\tIsZeus       bool\n\t_            CacheLinePad\n} = ...\n```\n\nThe booleans in ARM64 contain the correspondingly named cpu feature bit. The struct is padded to avoid false sharing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#MIPS64X",
+              "documentation": {
+                "identifier": "MIPS64X",
+                "newPage": false,
+                "searchKey": "cpu.MIPS64X",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var MIPS64X"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar MIPS64X struct {\n\t_      CacheLinePad\n\tHasMSA bool // MIPS SIMD architecture\n\t_      CacheLinePad\n} = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#PPC64",
+              "documentation": {
+                "identifier": "PPC64",
+                "newPage": false,
+                "searchKey": "cpu.PPC64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var PPC64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar PPC64 struct {\n\t_        CacheLinePad\n\tHasDARN  bool // Hardware random number generator (requires kernel enablement)\n\tHasSCV   bool // Syscall vectored (requires kernel enablement)\n\tIsPOWER8 bool // ISA v2.07 (POWER8)\n\tIsPOWER9 bool // ISA v3.00 (POWER9)\n\t_        CacheLinePad\n} = ...\n```\n\nFor ppc64(le), it is safe to check only for ISA level starting on ISA v3.00, since there are no optional categories. There are some exceptions that also require kernel support to work (darn, scv), so there are feature bits for those as well. The minimum processor requirement is POWER8 (ISA 2.07). The struct is padded to avoid false sharing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#S390X",
+              "documentation": {
+                "identifier": "S390X",
+                "newPage": false,
+                "searchKey": "cpu.S390X",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var S390X"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar S390X struct {\n\t_         CacheLinePad\n\tHasZARCH  bool // z architecture mode is active [mandatory]\n\tHasSTFLE  bool // store facility list extended [mandatory]\n\tHasLDISP  bool // long (20-bit) displacements [mandatory]\n\tHasEIMM   bool // 32-bit immediates [mandatory]\n\tHasDFP    bool // decimal floating point\n\tHasETF3EH bool // ETF-3 enhanced\n\tHasMSA    bool // message security assist (CPACF)\n\tHasAES    bool // KM-AES{128,192,256} functions\n\tHasAESCBC bool // KMC-AES{128,192,256} functions\n\tHasAESCTR bool // KMCTR-AES{128,192,256} functions\n\tHasAESGCM bool // KMA-GCM-AES{128,192,256} functions\n\tHasGHASH  bool // KIMD-GHASH function\n\tHasSHA1   bool // K{I,L}MD-SHA-1 functions\n\tHasSHA256 bool // K{I,L}MD-SHA-256 functions\n\tHasSHA512 bool // K{I,L}MD-SHA-512 functions\n\tHasSHA3   bool // K{I,L}MD-SHA3-{224,256,384,512} and K{I,L}MD-SHAKE-{128,256} functions\n\tHasVX     bool // vector facility. Note: the runtime sets this when it processes auxv records.\n\tHasVXE    bool // vector-enhancements facility 1\n\tHasKDSA   bool // elliptic curve functions\n\tHasECDSA  bool // NIST curves\n\tHasEDDSA  bool // Edwards curves\n\t_         CacheLinePad\n} = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#options",
+              "documentation": {
+                "identifier": "options",
+                "newPage": false,
+                "searchKey": "cpu.options",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var options"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar options []option\n```\n\noptions contains the cpu debug options that can be used in GODEBUG. Options are arch dependent and are added by the arch specific doinit functions. Features that are mandatory for the specific GOARCH should not be added to options (e.g. SSE2 on amd64). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#maxExtendedFunctionInformation",
+              "documentation": {
+                "identifier": "maxExtendedFunctionInformation",
+                "newPage": false,
+                "searchKey": "cpu.maxExtendedFunctionInformation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var maxExtendedFunctionInformation"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar maxExtendedFunctionInformation uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "cpu.Options",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Options"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Options = options\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/cpu#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#CacheLinePad",
+              "documentation": {
+                "identifier": "CacheLinePad",
+                "newPage": false,
+                "searchKey": "cpu.CacheLinePad",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CacheLinePad struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CacheLinePad struct{ _ [CacheLinePadSize]byte }\n```\n\nCacheLinePad is used to pad structs to avoid false sharing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#option",
+              "documentation": {
+                "identifier": "option",
+                "newPage": false,
+                "searchKey": "cpu.option",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type option struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype option struct {\n\tName      string\n\tFeature   *bool\n\tSpecified bool // whether feature value was specified in GODEBUG\n\tEnable    bool // whether feature should be enabled\n\tRequired  bool // whether feature is mandatory and can not be disabled\n}\n```\n\nOption names should be lower case. e.g. avx instead of AVX. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/cpu#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#Initialize",
+              "documentation": {
+                "identifier": "Initialize",
+                "newPage": false,
+                "searchKey": "cpu.Initialize",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Initialize(env string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Initialize(env string)\n```\n\nInitialize examines the processor and sets the relevant variables above. This is called by the runtime package early in program initialization, before normal init functions are run. env is set by runtime if the OS supports cpu feature options in GODEBUG. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#processOptions",
+              "documentation": {
+                "identifier": "processOptions",
+                "newPage": false,
+                "searchKey": "cpu.processOptions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func processOptions(env string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc processOptions(env string)\n```\n\nprocessOptions enables or disables CPU feature values based on the parsed env string. The env string is expected to be of the form cpu.feature1=value1,cpu.feature2=value2... where feature names is one of the architecture specific list stored in the cpu packages options variable and values are either 'on' or 'off'. If env contains cpu.all=off then all cpu features referenced through the options variable are disabled. Other feature names and values result in warning messages. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#indexByte",
+              "documentation": {
+                "identifier": "indexByte",
+                "newPage": false,
+                "searchKey": "cpu.indexByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func indexByte(s string, c byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc indexByte(s string, c byte) int\n```\n\nindexByte returns the index of the first instance of c in s, or -1 if c is not present in s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#cpuid",
+              "documentation": {
+                "identifier": "cpuid",
+                "newPage": false,
+                "searchKey": "cpu.cpuid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cpuid(eaxArg, ecxArg uint32) (eax, ebx, ecx, edx uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cpuid(eaxArg, ecxArg uint32) (eax, ebx, ecx, edx uint32)\n```\n\ncpuid is implemented in cpu_x86.s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#xgetbv",
+              "documentation": {
+                "identifier": "xgetbv",
+                "newPage": false,
+                "searchKey": "cpu.xgetbv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func xgetbv() (eax, edx uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc xgetbv() (eax, edx uint32)\n```\n\nxgetbv with ecx = 0 is implemented in cpu_x86.s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#doinit",
+              "documentation": {
+                "identifier": "doinit",
+                "newPage": false,
+                "searchKey": "cpu.doinit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func doinit()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc doinit()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#isSet",
+              "documentation": {
+                "identifier": "isSet",
+                "newPage": false,
+                "searchKey": "cpu.isSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSet(hwc uint32, value uint32) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSet(hwc uint32, value uint32) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#Name",
+              "documentation": {
+                "identifier": "Name",
+                "newPage": false,
+                "searchKey": "cpu.Name",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Name() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Name() string\n```\n\nName returns the CPU name given by the vendor. If the CPU name can not be determined an empty string is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/cpu#appendBytes",
+              "documentation": {
+                "identifier": "appendBytes",
+                "newPage": false,
+                "searchKey": "cpu.appendBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendBytes(b []byte, args ...uint32) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendBytes(b []byte, args ...uint32) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

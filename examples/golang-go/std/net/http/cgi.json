@@ -1,0 +1,1485 @@
+{
+  "pathID": "/std/net/http/cgi",
+  "documentation": {
+    "identifier": "cgi",
+    "newPage": true,
+    "searchKey": "std/net/http/cgi",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package cgi"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package cgi implements CGI (Common Gateway Interface) as specified in RFC 3875. \n\nNote that using CGI means starting a new process to handle each request, which is typically less efficient than using a long-running server. This package is intended primarily for compatibility with existing systems. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/net/http/cgi#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#trailingPort",
+              "documentation": {
+                "identifier": "trailingPort",
+                "newPage": false,
+                "searchKey": "cgi.trailingPort",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var trailingPort"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar trailingPort = regexp.MustCompile(`:([0-9]+)$`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#osDefaultInheritEnv",
+              "documentation": {
+                "identifier": "osDefaultInheritEnv",
+                "newPage": false,
+                "searchKey": "cgi.osDefaultInheritEnv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var osDefaultInheritEnv"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar osDefaultInheritEnv = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#testHookStartProcess",
+              "documentation": {
+                "identifier": "testHookStartProcess",
+                "newPage": false,
+                "searchKey": "cgi.testHookStartProcess",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testHookStartProcess"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testHookStartProcess func(*os.Process) // nil except for some tests\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#cgiTested",
+              "documentation": {
+                "identifier": "cgiTested",
+                "newPage": false,
+                "searchKey": "cgi.cgiTested",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cgiTested"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cgiTested, cgiWorks bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#cgiWorks",
+              "documentation": {
+                "identifier": "cgiWorks",
+                "newPage": false,
+                "searchKey": "cgi.cgiWorks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cgiWorks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cgiTested, cgiWorks bool\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/net/http/cgi#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#response",
+              "documentation": {
+                "identifier": "response",
+                "newPage": false,
+                "searchKey": "cgi.response",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type response struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype response struct {\n\treq            *http.Request\n\theader         http.Header\n\tcode           int\n\twroteHeader    bool\n\twroteCGIHeader bool\n\tbufw           *bufio.Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#response.Flush",
+                    "documentation": {
+                      "identifier": "response.Flush",
+                      "newPage": false,
+                      "searchKey": "cgi.response.Flush",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) Flush()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) Flush()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#response.Header",
+                    "documentation": {
+                      "identifier": "response.Header",
+                      "newPage": false,
+                      "searchKey": "cgi.response.Header",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) Header() http.Header"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) Header() http.Header\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#response.Write",
+                    "documentation": {
+                      "identifier": "response.Write",
+                      "newPage": false,
+                      "searchKey": "cgi.response.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#response.WriteHeader",
+                    "documentation": {
+                      "identifier": "response.WriteHeader",
+                      "newPage": false,
+                      "searchKey": "cgi.response.WriteHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) WriteHeader(code int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) WriteHeader(code int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#response.writeCGIHeader",
+                    "documentation": {
+                      "identifier": "response.writeCGIHeader",
+                      "newPage": false,
+                      "searchKey": "cgi.response.writeCGIHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) writeCGIHeader(p []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) writeCGIHeader(p []byte)\n```\n\nwriteCGIHeader finalizes the header sent to the client and writes it to the output. p is not written by writeHeader, but is the first chunk of the body that will be written. It is sniffed for a Content-Type if none is set explicitly. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#Handler",
+              "documentation": {
+                "identifier": "Handler",
+                "newPage": false,
+                "searchKey": "cgi.Handler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Handler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Handler struct {\n\tPath string // path to the CGI executable\n\tRoot string // root URI prefix of handler or empty for \"/\"\n\n\t// Dir specifies the CGI executable's working directory.\n\t// If Dir is empty, the base directory of Path is used.\n\t// If Path has no base directory, the current working\n\t// directory is used.\n\tDir string\n\n\tEnv        []string    // extra environment variables to set, if any, as \"key=value\"\n\tInheritEnv []string    // environment variables to inherit from host, as \"key\"\n\tLogger     *log.Logger // optional log for errors or nil to use log.Print\n\tArgs       []string    // optional arguments to pass to child process\n\tStderr     io.Writer   // optional stderr for the child process; nil means os.Stderr\n\n\t// PathLocationHandler specifies the root http Handler that\n\t// should handle internal redirects when the CGI process\n\t// returns a Location header value starting with a \"/\", as\n\t// specified in RFC 3875 § 6.3.2. This will likely be\n\t// http.DefaultServeMux.\n\t//\n\t// If nil, a CGI response with a local URI path is instead sent\n\t// back to the client and not redirected internally.\n\tPathLocationHandler http.Handler\n}\n```\n\nHandler runs an executable in a subprocess with a CGI environment. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#Handler.stderr",
+                    "documentation": {
+                      "identifier": "Handler.stderr",
+                      "newPage": false,
+                      "searchKey": "cgi.Handler.stderr",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Handler) stderr() io.Writer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Handler) stderr() io.Writer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#Handler.ServeHTTP",
+                    "documentation": {
+                      "identifier": "Handler.ServeHTTP",
+                      "newPage": false,
+                      "searchKey": "cgi.Handler.ServeHTTP",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Handler) ServeHTTP(rw http.ResponseWriter, req *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Handler) ServeHTTP(rw http.ResponseWriter, req *http.Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#Handler.printf",
+                    "documentation": {
+                      "identifier": "Handler.printf",
+                      "newPage": false,
+                      "searchKey": "cgi.Handler.printf",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Handler) printf(format string, v ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Handler) printf(format string, v ...interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#Handler.handleInternalRedirect",
+                    "documentation": {
+                      "identifier": "Handler.handleInternalRedirect",
+                      "newPage": false,
+                      "searchKey": "cgi.Handler.handleInternalRedirect",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *Handler) handleInternalRedirect(rw http.ResponseWriter, req *http.Request, path string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *Handler) handleInternalRedirect(rw http.ResponseWriter, req *http.Request, path string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#customWriterRecorder",
+              "documentation": {
+                "identifier": "customWriterRecorder",
+                "newPage": false,
+                "searchKey": "cgi.customWriterRecorder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type customWriterRecorder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype customWriterRecorder struct {\n\tw io.Writer\n\t*httptest.ResponseRecorder\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#customWriterRecorder.Write",
+                    "documentation": {
+                      "identifier": "customWriterRecorder.Write",
+                      "newPage": false,
+                      "searchKey": "cgi.customWriterRecorder.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *customWriterRecorder) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *customWriterRecorder) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#limitWriter",
+              "documentation": {
+                "identifier": "limitWriter",
+                "newPage": false,
+                "searchKey": "cgi.limitWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type limitWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype limitWriter struct {\n\tw io.Writer\n\tn int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#limitWriter.Write",
+                    "documentation": {
+                      "identifier": "limitWriter.Write",
+                      "newPage": false,
+                      "searchKey": "cgi.limitWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *limitWriter) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *limitWriter) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#neverEnding",
+              "documentation": {
+                "identifier": "neverEnding",
+                "newPage": false,
+                "searchKey": "cgi.neverEnding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type neverEnding byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype neverEnding byte\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/http/cgi#neverEnding.Read",
+                    "documentation": {
+                      "identifier": "neverEnding.Read",
+                      "newPage": false,
+                      "searchKey": "cgi.neverEnding.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b neverEnding) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b neverEnding) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/net/http/cgi#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#Request",
+              "documentation": {
+                "identifier": "Request",
+                "newPage": false,
+                "searchKey": "cgi.Request",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Request() (*http.Request, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Request() (*http.Request, error)\n```\n\nRequest returns the HTTP request as represented in the current environment. This assumes the current program is being run by a web server in a CGI environment. The returned Request's Body is populated, if applicable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#envMap",
+              "documentation": {
+                "identifier": "envMap",
+                "newPage": false,
+                "searchKey": "cgi.envMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func envMap(env []string) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc envMap(env []string) map[string]string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#RequestFromMap",
+              "documentation": {
+                "identifier": "RequestFromMap",
+                "newPage": false,
+                "searchKey": "cgi.RequestFromMap",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RequestFromMap(params map[string]string) (*http.Request, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RequestFromMap(params map[string]string) (*http.Request, error)\n```\n\nRequestFromMap creates an http.Request from CGI variables. The returned Request's Body field is not populated. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#Serve",
+              "documentation": {
+                "identifier": "Serve",
+                "newPage": false,
+                "searchKey": "cgi.Serve",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Serve(handler http.Handler) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Serve(handler http.Handler) error\n```\n\nServe executes the provided Handler on the currently active CGI request, if any. If there's no current CGI environment an error is returned. The provided handler may be nil to use http.DefaultServeMux. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#removeLeadingDuplicates",
+              "documentation": {
+                "identifier": "removeLeadingDuplicates",
+                "newPage": false,
+                "searchKey": "cgi.removeLeadingDuplicates",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func removeLeadingDuplicates(env []string) (ret []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc removeLeadingDuplicates(env []string) (ret []string)\n```\n\nremoveLeadingDuplicates remove leading duplicate in environments. It's possible to override environment like following. \n\n```\ncgi.Handler{\n  ...\n  Env: []string{\"SCRIPT_FILENAME=foo.php\"},\n}\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#upperCaseAndUnderscore",
+              "documentation": {
+                "identifier": "upperCaseAndUnderscore",
+                "newPage": false,
+                "searchKey": "cgi.upperCaseAndUnderscore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func upperCaseAndUnderscore(r rune) rune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc upperCaseAndUnderscore(r rune) rune\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestRequest",
+              "documentation": {
+                "identifier": "TestRequest",
+                "newPage": false,
+                "searchKey": "cgi.TestRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestRequestWithTLS",
+              "documentation": {
+                "identifier": "TestRequestWithTLS",
+                "newPage": false,
+                "searchKey": "cgi.TestRequestWithTLS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRequestWithTLS(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRequestWithTLS(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestRequestWithoutHost",
+              "documentation": {
+                "identifier": "TestRequestWithoutHost",
+                "newPage": false,
+                "searchKey": "cgi.TestRequestWithoutHost",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRequestWithoutHost(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRequestWithoutHost(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestRequestWithoutRequestURI",
+              "documentation": {
+                "identifier": "TestRequestWithoutRequestURI",
+                "newPage": false,
+                "searchKey": "cgi.TestRequestWithoutRequestURI",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRequestWithoutRequestURI(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRequestWithoutRequestURI(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestRequestWithoutRemotePort",
+              "documentation": {
+                "identifier": "TestRequestWithoutRemotePort",
+                "newPage": false,
+                "searchKey": "cgi.TestRequestWithoutRemotePort",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRequestWithoutRemotePort(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRequestWithoutRemotePort(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestResponse",
+              "documentation": {
+                "identifier": "TestResponse",
+                "newPage": false,
+                "searchKey": "cgi.TestResponse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResponse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResponse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#newRequest",
+              "documentation": {
+                "identifier": "newRequest",
+                "newPage": false,
+                "searchKey": "cgi.newRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newRequest(httpreq string) *http.Request"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newRequest(httpreq string) *http.Request\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#runCgiTest",
+              "documentation": {
+                "identifier": "runCgiTest",
+                "newPage": false,
+                "searchKey": "cgi.runCgiTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runCgiTest(t *testing.T, h *Handler,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runCgiTest(t *testing.T, h *Handler,\n\thttpreq string,\n\texpectedMap map[string]string, checks ...func(reqInfo map[string]string)) *httptest.ResponseRecorder\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#runResponseChecks",
+              "documentation": {
+                "identifier": "runResponseChecks",
+                "newPage": false,
+                "searchKey": "cgi.runResponseChecks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runResponseChecks(t *testing.T, rw *httptest.ResponseRecorder,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runResponseChecks(t *testing.T, rw *httptest.ResponseRecorder,\n\texpectedMap map[string]string, checks ...func(reqInfo map[string]string))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#check",
+              "documentation": {
+                "identifier": "check",
+                "newPage": false,
+                "searchKey": "cgi.check",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func check(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc check(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestCGIBasicGet",
+              "documentation": {
+                "identifier": "TestCGIBasicGet",
+                "newPage": false,
+                "searchKey": "cgi.TestCGIBasicGet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCGIBasicGet(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCGIBasicGet(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestCGIEnvIPv6",
+              "documentation": {
+                "identifier": "TestCGIEnvIPv6",
+                "newPage": false,
+                "searchKey": "cgi.TestCGIEnvIPv6",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCGIEnvIPv6(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCGIEnvIPv6(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestCGIBasicGetAbsPath",
+              "documentation": {
+                "identifier": "TestCGIBasicGetAbsPath",
+                "newPage": false,
+                "searchKey": "cgi.TestCGIBasicGetAbsPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCGIBasicGetAbsPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCGIBasicGetAbsPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestPathInfo",
+              "documentation": {
+                "identifier": "TestPathInfo",
+                "newPage": false,
+                "searchKey": "cgi.TestPathInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPathInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPathInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestPathInfoDirRoot",
+              "documentation": {
+                "identifier": "TestPathInfoDirRoot",
+                "newPage": false,
+                "searchKey": "cgi.TestPathInfoDirRoot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPathInfoDirRoot(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPathInfoDirRoot(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestDupHeaders",
+              "documentation": {
+                "identifier": "TestDupHeaders",
+                "newPage": false,
+                "searchKey": "cgi.TestDupHeaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDupHeaders(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDupHeaders(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestDropProxyHeader",
+              "documentation": {
+                "identifier": "TestDropProxyHeader",
+                "newPage": false,
+                "searchKey": "cgi.TestDropProxyHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDropProxyHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDropProxyHeader(t *testing.T)\n```\n\nIssue 16405: CGI+http.Transport differing uses of HTTP_PROXY. Verify we don't set the HTTP_PROXY environment variable. Hope nobody was depending on it. It's not a known header, though. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestPathInfoNoRoot",
+              "documentation": {
+                "identifier": "TestPathInfoNoRoot",
+                "newPage": false,
+                "searchKey": "cgi.TestPathInfoNoRoot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPathInfoNoRoot(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPathInfoNoRoot(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestCGIBasicPost",
+              "documentation": {
+                "identifier": "TestCGIBasicPost",
+                "newPage": false,
+                "searchKey": "cgi.TestCGIBasicPost",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCGIBasicPost(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCGIBasicPost(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#chunk",
+              "documentation": {
+                "identifier": "chunk",
+                "newPage": false,
+                "searchKey": "cgi.chunk",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func chunk(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc chunk(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestCGIPostChunked",
+              "documentation": {
+                "identifier": "TestCGIPostChunked",
+                "newPage": false,
+                "searchKey": "cgi.TestCGIPostChunked",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCGIPostChunked(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCGIPostChunked(t *testing.T)\n```\n\nThe CGI spec doesn't allow chunked requests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestRedirect",
+              "documentation": {
+                "identifier": "TestRedirect",
+                "newPage": false,
+                "searchKey": "cgi.TestRedirect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRedirect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRedirect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestInternalRedirect",
+              "documentation": {
+                "identifier": "TestInternalRedirect",
+                "newPage": false,
+                "searchKey": "cgi.TestInternalRedirect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInternalRedirect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInternalRedirect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestCopyError",
+              "documentation": {
+                "identifier": "TestCopyError",
+                "newPage": false,
+                "searchKey": "cgi.TestCopyError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCopyError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCopyError(t *testing.T)\n```\n\nTestCopyError tests that we kill the process if there's an error copying its output. (for example, from the client having gone away) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestDirUnix",
+              "documentation": {
+                "identifier": "TestDirUnix",
+                "newPage": false,
+                "searchKey": "cgi.TestDirUnix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDirUnix(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDirUnix(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#findPerl",
+              "documentation": {
+                "identifier": "findPerl",
+                "newPage": false,
+                "searchKey": "cgi.findPerl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func findPerl(t *testing.T) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc findPerl(t *testing.T) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestDirWindows",
+              "documentation": {
+                "identifier": "TestDirWindows",
+                "newPage": false,
+                "searchKey": "cgi.TestDirWindows",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDirWindows(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDirWindows(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestEnvOverride",
+              "documentation": {
+                "identifier": "TestEnvOverride",
+                "newPage": false,
+                "searchKey": "cgi.TestEnvOverride",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEnvOverride(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEnvOverride(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestHandlerStderr",
+              "documentation": {
+                "identifier": "TestHandlerStderr",
+                "newPage": false,
+                "searchKey": "cgi.TestHandlerStderr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandlerStderr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandlerStderr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestRemoveLeadingDuplicates",
+              "documentation": {
+                "identifier": "TestRemoveLeadingDuplicates",
+                "newPage": false,
+                "searchKey": "cgi.TestRemoveLeadingDuplicates",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveLeadingDuplicates(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveLeadingDuplicates(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestHostingOurselves",
+              "documentation": {
+                "identifier": "TestHostingOurselves",
+                "newPage": false,
+                "searchKey": "cgi.TestHostingOurselves",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHostingOurselves(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHostingOurselves(t *testing.T)\n```\n\nThis test is a CGI host (testing host.go) that runs its own binary as a child process testing the other half of CGI (child.go). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestKillChildAfterCopyError",
+              "documentation": {
+                "identifier": "TestKillChildAfterCopyError",
+                "newPage": false,
+                "searchKey": "cgi.TestKillChildAfterCopyError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestKillChildAfterCopyError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestKillChildAfterCopyError(t *testing.T)\n```\n\nIf there's an error copying the child's output to the parent, test that we kill the child. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestChildOnlyHeaders",
+              "documentation": {
+                "identifier": "TestChildOnlyHeaders",
+                "newPage": false,
+                "searchKey": "cgi.TestChildOnlyHeaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChildOnlyHeaders(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChildOnlyHeaders(t *testing.T)\n```\n\nTest that a child handler writing only headers works. golang.org/issue/7196 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestNilRequestBody",
+              "documentation": {
+                "identifier": "TestNilRequestBody",
+                "newPage": false,
+                "searchKey": "cgi.TestNilRequestBody",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNilRequestBody(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNilRequestBody(t *testing.T)\n```\n\nTest that a child handler does not receive a nil Request Body. golang.org/issue/39190 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestChildContentType",
+              "documentation": {
+                "identifier": "TestChildContentType",
+                "newPage": false,
+                "searchKey": "cgi.TestChildContentType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChildContentType(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChildContentType(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#Test500WithNoHeaders",
+              "documentation": {
+                "identifier": "Test500WithNoHeaders",
+                "newPage": false,
+                "searchKey": "cgi.Test500WithNoHeaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test500WithNoHeaders(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test500WithNoHeaders(t *testing.T)\n```\n\ngolang.org/issue/7198 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#Test500WithNoContentType",
+              "documentation": {
+                "identifier": "Test500WithNoContentType",
+                "newPage": false,
+                "searchKey": "cgi.Test500WithNoContentType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test500WithNoContentType(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test500WithNoContentType(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#Test500WithEmptyHeaders",
+              "documentation": {
+                "identifier": "Test500WithEmptyHeaders",
+                "newPage": false,
+                "searchKey": "cgi.Test500WithEmptyHeaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test500WithEmptyHeaders(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test500WithEmptyHeaders(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#want500Test",
+              "documentation": {
+                "identifier": "want500Test",
+                "newPage": false,
+                "searchKey": "cgi.want500Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func want500Test(t *testing.T, path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc want500Test(t *testing.T, path string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#TestBeChildCGIProcess",
+              "documentation": {
+                "identifier": "TestBeChildCGIProcess",
+                "newPage": false,
+                "searchKey": "cgi.TestBeChildCGIProcess",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBeChildCGIProcess(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBeChildCGIProcess(t *testing.T)\n```\n\nNote: not actually a test. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/http/cgi#isProcessRunning",
+              "documentation": {
+                "identifier": "isProcessRunning",
+                "newPage": false,
+                "searchKey": "cgi.isProcessRunning",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isProcessRunning(pid int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isProcessRunning(pid int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

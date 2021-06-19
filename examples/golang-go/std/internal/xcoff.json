@@ -1,0 +1,4379 @@
+{
+  "pathID": "/std/internal/xcoff",
+  "documentation": {
+    "identifier": "xcoff",
+    "newPage": true,
+    "searchKey": "std/internal/xcoff",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package xcoff"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package xcoff implements access to XCOFF (Extended Common Object File Format) files. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/internal/xcoff#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SAIAMAG",
+              "documentation": {
+                "identifier": "SAIAMAG",
+                "newPage": false,
+                "searchKey": "xcoff.SAIAMAG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SAIAMAG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SAIAMAG = 0x8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AIAFMAG",
+              "documentation": {
+                "identifier": "AIAFMAG",
+                "newPage": false,
+                "searchKey": "xcoff.AIAFMAG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AIAFMAG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AIAFMAG = \"`\\n\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AIAMAG",
+              "documentation": {
+                "identifier": "AIAMAG",
+                "newPage": false,
+                "searchKey": "xcoff.AIAMAG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AIAMAG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AIAMAG = \"<aiaff>\\n\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AIAMAGBIG",
+              "documentation": {
+                "identifier": "AIAMAGBIG",
+                "newPage": false,
+                "searchKey": "xcoff.AIAMAGBIG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AIAMAGBIG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AIAMAGBIG = \"<bigaf>\\n\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#FL_HSZ_BIG",
+              "documentation": {
+                "identifier": "FL_HSZ_BIG",
+                "newPage": false,
+                "searchKey": "xcoff.FL_HSZ_BIG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FL_HSZ_BIG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FL_HSZ_BIG = 0x80\n```\n\nSizeof \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AR_HSZ_BIG",
+              "documentation": {
+                "identifier": "AR_HSZ_BIG",
+                "newPage": false,
+                "searchKey": "xcoff.AR_HSZ_BIG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AR_HSZ_BIG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AR_HSZ_BIG = 0x70\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#FILHSZ_32",
+              "documentation": {
+                "identifier": "FILHSZ_32",
+                "newPage": false,
+                "searchKey": "xcoff.FILHSZ_32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FILHSZ_32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FILHSZ_32 = 20\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#FILHSZ_64",
+              "documentation": {
+                "identifier": "FILHSZ_64",
+                "newPage": false,
+                "searchKey": "xcoff.FILHSZ_64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FILHSZ_64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FILHSZ_64 = 24\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#U802TOCMAGIC",
+              "documentation": {
+                "identifier": "U802TOCMAGIC",
+                "newPage": false,
+                "searchKey": "xcoff.U802TOCMAGIC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const U802TOCMAGIC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst U802TOCMAGIC = 0737 // AIX 32-bit XCOFF\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#U64_TOCMAGIC",
+              "documentation": {
+                "identifier": "U64_TOCMAGIC",
+                "newPage": false,
+                "searchKey": "xcoff.U64_TOCMAGIC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const U64_TOCMAGIC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst U64_TOCMAGIC = 0767 // AIX 64-bit XCOFF\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_RELFLG",
+              "documentation": {
+                "identifier": "F_RELFLG",
+                "newPage": false,
+                "searchKey": "xcoff.F_RELFLG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_RELFLG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_RELFLG = 0x0001\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_EXEC",
+              "documentation": {
+                "identifier": "F_EXEC",
+                "newPage": false,
+                "searchKey": "xcoff.F_EXEC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_EXEC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_EXEC = 0x0002\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_LNNO",
+              "documentation": {
+                "identifier": "F_LNNO",
+                "newPage": false,
+                "searchKey": "xcoff.F_LNNO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_LNNO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_LNNO = 0x0004\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_FDPR_PROF",
+              "documentation": {
+                "identifier": "F_FDPR_PROF",
+                "newPage": false,
+                "searchKey": "xcoff.F_FDPR_PROF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_FDPR_PROF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_FDPR_PROF = 0x0010\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_FDPR_OPTI",
+              "documentation": {
+                "identifier": "F_FDPR_OPTI",
+                "newPage": false,
+                "searchKey": "xcoff.F_FDPR_OPTI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_FDPR_OPTI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_FDPR_OPTI = 0x0020\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_DSA",
+              "documentation": {
+                "identifier": "F_DSA",
+                "newPage": false,
+                "searchKey": "xcoff.F_DSA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_DSA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_DSA = 0x0040\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_VARPG",
+              "documentation": {
+                "identifier": "F_VARPG",
+                "newPage": false,
+                "searchKey": "xcoff.F_VARPG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_VARPG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_VARPG = 0x0100\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_DYNLOAD",
+              "documentation": {
+                "identifier": "F_DYNLOAD",
+                "newPage": false,
+                "searchKey": "xcoff.F_DYNLOAD",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_DYNLOAD"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_DYNLOAD = 0x1000\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_SHROBJ",
+              "documentation": {
+                "identifier": "F_SHROBJ",
+                "newPage": false,
+                "searchKey": "xcoff.F_SHROBJ",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_SHROBJ"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_SHROBJ = 0x2000\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#F_LOADONLY",
+              "documentation": {
+                "identifier": "F_LOADONLY",
+                "newPage": false,
+                "searchKey": "xcoff.F_LOADONLY",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const F_LOADONLY"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst F_LOADONLY = 0x4000\n```\n\nFlags that describe the type of the object file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_DWARF",
+              "documentation": {
+                "identifier": "STYP_DWARF",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_DWARF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_DWARF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_DWARF = 0x0010\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_TEXT",
+              "documentation": {
+                "identifier": "STYP_TEXT",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_TEXT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_TEXT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_TEXT = 0x0020\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_DATA",
+              "documentation": {
+                "identifier": "STYP_DATA",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_DATA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_DATA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_DATA = 0x0040\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_BSS",
+              "documentation": {
+                "identifier": "STYP_BSS",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_BSS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_BSS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_BSS = 0x0080\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_EXCEPT",
+              "documentation": {
+                "identifier": "STYP_EXCEPT",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_EXCEPT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_EXCEPT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_EXCEPT = 0x0100\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_INFO",
+              "documentation": {
+                "identifier": "STYP_INFO",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_INFO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_INFO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_INFO = 0x0200\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_TDATA",
+              "documentation": {
+                "identifier": "STYP_TDATA",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_TDATA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_TDATA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_TDATA = 0x0400\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_TBSS",
+              "documentation": {
+                "identifier": "STYP_TBSS",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_TBSS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_TBSS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_TBSS = 0x0800\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_LOADER",
+              "documentation": {
+                "identifier": "STYP_LOADER",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_LOADER",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_LOADER"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_LOADER = 0x1000\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_DEBUG",
+              "documentation": {
+                "identifier": "STYP_DEBUG",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_DEBUG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_DEBUG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_DEBUG = 0x2000\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_TYPCHK",
+              "documentation": {
+                "identifier": "STYP_TYPCHK",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_TYPCHK",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_TYPCHK"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_TYPCHK = 0x4000\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#STYP_OVRFLO",
+              "documentation": {
+                "identifier": "STYP_OVRFLO",
+                "newPage": false,
+                "searchKey": "xcoff.STYP_OVRFLO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const STYP_OVRFLO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst STYP_OVRFLO = 0x8000\n```\n\nFlags defining the section type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWINFO",
+              "documentation": {
+                "identifier": "SSUBTYP_DWINFO",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWINFO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWINFO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWINFO = 0x10000 // DWARF info section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWLINE",
+              "documentation": {
+                "identifier": "SSUBTYP_DWLINE",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWLINE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWLINE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWLINE = 0x20000 // DWARF line-number section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWPBNMS",
+              "documentation": {
+                "identifier": "SSUBTYP_DWPBNMS",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWPBNMS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWPBNMS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWPBNMS = 0x30000 // DWARF public names section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWPBTYP",
+              "documentation": {
+                "identifier": "SSUBTYP_DWPBTYP",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWPBTYP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWPBTYP"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWPBTYP = 0x40000 // DWARF public types section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWARNGE",
+              "documentation": {
+                "identifier": "SSUBTYP_DWARNGE",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWARNGE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWARNGE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWARNGE = 0x50000 // DWARF aranges section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWABREV",
+              "documentation": {
+                "identifier": "SSUBTYP_DWABREV",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWABREV",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWABREV"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWABREV = 0x60000 // DWARF abbreviation section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWSTR",
+              "documentation": {
+                "identifier": "SSUBTYP_DWSTR",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWSTR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWSTR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWSTR = 0x70000 // DWARF strings section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWRNGES",
+              "documentation": {
+                "identifier": "SSUBTYP_DWRNGES",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWRNGES",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWRNGES"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWRNGES = 0x80000 // DWARF ranges section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWLOC",
+              "documentation": {
+                "identifier": "SSUBTYP_DWLOC",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWLOC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWLOC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWLOC = 0x90000 // DWARF location lists section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWFRAME",
+              "documentation": {
+                "identifier": "SSUBTYP_DWFRAME",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWFRAME",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWFRAME"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWFRAME = 0xA0000 // DWARF frames section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SSUBTYP_DWMAC",
+              "documentation": {
+                "identifier": "SSUBTYP_DWMAC",
+                "newPage": false,
+                "searchKey": "xcoff.SSUBTYP_DWMAC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SSUBTYP_DWMAC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SSUBTYP_DWMAC = 0xB0000 // DWARF macros section\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SYMESZ",
+              "documentation": {
+                "identifier": "SYMESZ",
+                "newPage": false,
+                "searchKey": "xcoff.SYMESZ",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SYMESZ"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SYMESZ = 18\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#N_DEBUG",
+              "documentation": {
+                "identifier": "N_DEBUG",
+                "newPage": false,
+                "searchKey": "xcoff.N_DEBUG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const N_DEBUG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst N_DEBUG = -2\n```\n\nNscnum \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#N_ABS",
+              "documentation": {
+                "identifier": "N_ABS",
+                "newPage": false,
+                "searchKey": "xcoff.N_ABS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const N_ABS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst N_ABS = -1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#N_UNDEF",
+              "documentation": {
+                "identifier": "N_UNDEF",
+                "newPage": false,
+                "searchKey": "xcoff.N_UNDEF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const N_UNDEF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst N_UNDEF = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SYM_V_INTERNAL",
+              "documentation": {
+                "identifier": "SYM_V_INTERNAL",
+                "newPage": false,
+                "searchKey": "xcoff.SYM_V_INTERNAL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SYM_V_INTERNAL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SYM_V_INTERNAL = 0x1000\n```\n\nNtype \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SYM_V_HIDDEN",
+              "documentation": {
+                "identifier": "SYM_V_HIDDEN",
+                "newPage": false,
+                "searchKey": "xcoff.SYM_V_HIDDEN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SYM_V_HIDDEN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SYM_V_HIDDEN = 0x2000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SYM_V_PROTECTED",
+              "documentation": {
+                "identifier": "SYM_V_PROTECTED",
+                "newPage": false,
+                "searchKey": "xcoff.SYM_V_PROTECTED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SYM_V_PROTECTED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SYM_V_PROTECTED = 0x3000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SYM_V_EXPORTED",
+              "documentation": {
+                "identifier": "SYM_V_EXPORTED",
+                "newPage": false,
+                "searchKey": "xcoff.SYM_V_EXPORTED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SYM_V_EXPORTED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SYM_V_EXPORTED = 0x4000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SYM_TYPE_FUNC",
+              "documentation": {
+                "identifier": "SYM_TYPE_FUNC",
+                "newPage": false,
+                "searchKey": "xcoff.SYM_TYPE_FUNC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SYM_TYPE_FUNC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SYM_TYPE_FUNC = 0x0020 // is function\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_NULL",
+              "documentation": {
+                "identifier": "C_NULL",
+                "newPage": false,
+                "searchKey": "xcoff.C_NULL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_NULL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_NULL = 0 // Symbol table entry marked for deletion\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_EXT",
+              "documentation": {
+                "identifier": "C_EXT",
+                "newPage": false,
+                "searchKey": "xcoff.C_EXT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_EXT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_EXT = 2 // External symbol\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_STAT",
+              "documentation": {
+                "identifier": "C_STAT",
+                "newPage": false,
+                "searchKey": "xcoff.C_STAT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_STAT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_STAT = 3 // Static symbol\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_BLOCK",
+              "documentation": {
+                "identifier": "C_BLOCK",
+                "newPage": false,
+                "searchKey": "xcoff.C_BLOCK",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_BLOCK"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_BLOCK = 100 // Beginning or end of inner block\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_FCN",
+              "documentation": {
+                "identifier": "C_FCN",
+                "newPage": false,
+                "searchKey": "xcoff.C_FCN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_FCN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_FCN = 101 // Beginning or end of function\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_FILE",
+              "documentation": {
+                "identifier": "C_FILE",
+                "newPage": false,
+                "searchKey": "xcoff.C_FILE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_FILE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_FILE = 103 // Source file name and compiler information\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_HIDEXT",
+              "documentation": {
+                "identifier": "C_HIDEXT",
+                "newPage": false,
+                "searchKey": "xcoff.C_HIDEXT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_HIDEXT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_HIDEXT = 107 // Unnamed external symbol\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_BINCL",
+              "documentation": {
+                "identifier": "C_BINCL",
+                "newPage": false,
+                "searchKey": "xcoff.C_BINCL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_BINCL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_BINCL = 108 // Beginning of include file\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_EINCL",
+              "documentation": {
+                "identifier": "C_EINCL",
+                "newPage": false,
+                "searchKey": "xcoff.C_EINCL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_EINCL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_EINCL = 109 // End of include file\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_WEAKEXT",
+              "documentation": {
+                "identifier": "C_WEAKEXT",
+                "newPage": false,
+                "searchKey": "xcoff.C_WEAKEXT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_WEAKEXT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_WEAKEXT = 111 // Weak external symbol\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_DWARF",
+              "documentation": {
+                "identifier": "C_DWARF",
+                "newPage": false,
+                "searchKey": "xcoff.C_DWARF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_DWARF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_DWARF = 112 // DWARF symbol\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_GSYM",
+              "documentation": {
+                "identifier": "C_GSYM",
+                "newPage": false,
+                "searchKey": "xcoff.C_GSYM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_GSYM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_GSYM = 128 // Global variable\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_LSYM",
+              "documentation": {
+                "identifier": "C_LSYM",
+                "newPage": false,
+                "searchKey": "xcoff.C_LSYM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_LSYM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_LSYM = 129 // Automatic variable allocated on stack\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_PSYM",
+              "documentation": {
+                "identifier": "C_PSYM",
+                "newPage": false,
+                "searchKey": "xcoff.C_PSYM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_PSYM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_PSYM = 130 // Argument to subroutine allocated on stack\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_RSYM",
+              "documentation": {
+                "identifier": "C_RSYM",
+                "newPage": false,
+                "searchKey": "xcoff.C_RSYM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_RSYM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_RSYM = 131 // Register variable\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_RPSYM",
+              "documentation": {
+                "identifier": "C_RPSYM",
+                "newPage": false,
+                "searchKey": "xcoff.C_RPSYM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_RPSYM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_RPSYM = 132 // Argument to function or procedure stored in register\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_STSYM",
+              "documentation": {
+                "identifier": "C_STSYM",
+                "newPage": false,
+                "searchKey": "xcoff.C_STSYM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_STSYM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_STSYM = 133 // Statically allocated symbol\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_BCOMM",
+              "documentation": {
+                "identifier": "C_BCOMM",
+                "newPage": false,
+                "searchKey": "xcoff.C_BCOMM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_BCOMM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_BCOMM = 135 // Beginning of common block\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_ECOML",
+              "documentation": {
+                "identifier": "C_ECOML",
+                "newPage": false,
+                "searchKey": "xcoff.C_ECOML",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_ECOML"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_ECOML = 136 // Local member of common block\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_ECOMM",
+              "documentation": {
+                "identifier": "C_ECOMM",
+                "newPage": false,
+                "searchKey": "xcoff.C_ECOMM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_ECOMM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_ECOMM = 137 // End of common block\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_DECL",
+              "documentation": {
+                "identifier": "C_DECL",
+                "newPage": false,
+                "searchKey": "xcoff.C_DECL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_DECL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_DECL = 140 // Declaration of object\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_ENTRY",
+              "documentation": {
+                "identifier": "C_ENTRY",
+                "newPage": false,
+                "searchKey": "xcoff.C_ENTRY",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_ENTRY"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_ENTRY = 141 // Alternate entry\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_FUN",
+              "documentation": {
+                "identifier": "C_FUN",
+                "newPage": false,
+                "searchKey": "xcoff.C_FUN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_FUN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_FUN = 142 // Function or procedure\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_BSTAT",
+              "documentation": {
+                "identifier": "C_BSTAT",
+                "newPage": false,
+                "searchKey": "xcoff.C_BSTAT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_BSTAT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_BSTAT = 143 // Beginning of static block\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_ESTAT",
+              "documentation": {
+                "identifier": "C_ESTAT",
+                "newPage": false,
+                "searchKey": "xcoff.C_ESTAT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_ESTAT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_ESTAT = 144 // End of static block\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_GTLS",
+              "documentation": {
+                "identifier": "C_GTLS",
+                "newPage": false,
+                "searchKey": "xcoff.C_GTLS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_GTLS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_GTLS = 145 // Global thread-local variable\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#C_STTLS",
+              "documentation": {
+                "identifier": "C_STTLS",
+                "newPage": false,
+                "searchKey": "xcoff.C_STTLS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const C_STTLS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst C_STTLS = 146 // Static thread-local variable\n\n```\n\nStorage Class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#_AUX_EXCEPT",
+              "documentation": {
+                "identifier": "_AUX_EXCEPT",
+                "newPage": false,
+                "searchKey": "xcoff._AUX_EXCEPT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _AUX_EXCEPT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _AUX_EXCEPT = 255\n```\n\nAuxiliary type \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#_AUX_FCN",
+              "documentation": {
+                "identifier": "_AUX_FCN",
+                "newPage": false,
+                "searchKey": "xcoff._AUX_FCN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _AUX_FCN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _AUX_FCN = 254\n```\n\nAuxiliary type \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#_AUX_SYM",
+              "documentation": {
+                "identifier": "_AUX_SYM",
+                "newPage": false,
+                "searchKey": "xcoff._AUX_SYM",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _AUX_SYM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _AUX_SYM = 253\n```\n\nAuxiliary type \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#_AUX_FILE",
+              "documentation": {
+                "identifier": "_AUX_FILE",
+                "newPage": false,
+                "searchKey": "xcoff._AUX_FILE",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _AUX_FILE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _AUX_FILE = 252\n```\n\nAuxiliary type \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#_AUX_CSECT",
+              "documentation": {
+                "identifier": "_AUX_CSECT",
+                "newPage": false,
+                "searchKey": "xcoff._AUX_CSECT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _AUX_CSECT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _AUX_CSECT = 251\n```\n\nAuxiliary type \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#_AUX_SECT",
+              "documentation": {
+                "identifier": "_AUX_SECT",
+                "newPage": false,
+                "searchKey": "xcoff._AUX_SECT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _AUX_SECT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _AUX_SECT = 250\n```\n\nAuxiliary type \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XTY_ER",
+              "documentation": {
+                "identifier": "XTY_ER",
+                "newPage": false,
+                "searchKey": "xcoff.XTY_ER",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XTY_ER"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XTY_ER = 0 // External reference\n\n```\n\nSymbol type field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XTY_SD",
+              "documentation": {
+                "identifier": "XTY_SD",
+                "newPage": false,
+                "searchKey": "xcoff.XTY_SD",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XTY_SD"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XTY_SD = 1 // Section definition\n\n```\n\nSymbol type field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XTY_LD",
+              "documentation": {
+                "identifier": "XTY_LD",
+                "newPage": false,
+                "searchKey": "xcoff.XTY_LD",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XTY_LD"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XTY_LD = 2 // Label definition\n\n```\n\nSymbol type field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XTY_CM",
+              "documentation": {
+                "identifier": "XTY_CM",
+                "newPage": false,
+                "searchKey": "xcoff.XTY_CM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XTY_CM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XTY_CM = 3 // Common csect definition\n\n```\n\nSymbol type field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XFT_FN",
+              "documentation": {
+                "identifier": "XFT_FN",
+                "newPage": false,
+                "searchKey": "xcoff.XFT_FN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XFT_FN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XFT_FN = 0 // Source File Name\n\n```\n\nDefines for File auxiliary definitions: x_ftype field of x_file \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XFT_CT",
+              "documentation": {
+                "identifier": "XFT_CT",
+                "newPage": false,
+                "searchKey": "xcoff.XFT_CT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XFT_CT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XFT_CT = 1 // Compile Time Stamp\n\n```\n\nDefines for File auxiliary definitions: x_ftype field of x_file \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XFT_CV",
+              "documentation": {
+                "identifier": "XFT_CV",
+                "newPage": false,
+                "searchKey": "xcoff.XFT_CV",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XFT_CV"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XFT_CV = 2 // Compiler Version Number\n\n```\n\nDefines for File auxiliary definitions: x_ftype field of x_file \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XFT_CD",
+              "documentation": {
+                "identifier": "XFT_CD",
+                "newPage": false,
+                "searchKey": "xcoff.XFT_CD",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XFT_CD"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XFT_CD = 128 // Compiler Defined Information\n\n```\n\nDefines for File auxiliary definitions: x_ftype field of x_file \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_PR",
+              "documentation": {
+                "identifier": "XMC_PR",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_PR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_PR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_PR = 0 // Program code\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_RO",
+              "documentation": {
+                "identifier": "XMC_RO",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_RO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_RO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_RO = 1 // Read-only constant\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_DB",
+              "documentation": {
+                "identifier": "XMC_DB",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_DB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_DB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_DB = 2 // Debug dictionary table\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_TC",
+              "documentation": {
+                "identifier": "XMC_TC",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_TC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_TC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_TC = 3 // TOC entry\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_UA",
+              "documentation": {
+                "identifier": "XMC_UA",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_UA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_UA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_UA = 4 // Unclassified\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_RW",
+              "documentation": {
+                "identifier": "XMC_RW",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_RW",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_RW"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_RW = 5 // Read/Write data\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_GL",
+              "documentation": {
+                "identifier": "XMC_GL",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_GL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_GL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_GL = 6 // Global linkage\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_XO",
+              "documentation": {
+                "identifier": "XMC_XO",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_XO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_XO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_XO = 7 // Extended operation\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_SV",
+              "documentation": {
+                "identifier": "XMC_SV",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_SV",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_SV"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_SV = 8 // 32-bit supervisor call descriptor\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_BS",
+              "documentation": {
+                "identifier": "XMC_BS",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_BS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_BS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_BS = 9 // BSS class\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_DS",
+              "documentation": {
+                "identifier": "XMC_DS",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_DS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_DS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_DS = 10 // Function descriptor\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_UC",
+              "documentation": {
+                "identifier": "XMC_UC",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_UC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_UC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_UC = 11 // Unnamed FORTRAN common\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_TC0",
+              "documentation": {
+                "identifier": "XMC_TC0",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_TC0",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_TC0"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_TC0 = 15 // TOC anchor\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_TD",
+              "documentation": {
+                "identifier": "XMC_TD",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_TD",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_TD"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_TD = 16 // Scalar data entry in the TOC\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_SV64",
+              "documentation": {
+                "identifier": "XMC_SV64",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_SV64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_SV64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_SV64 = 17 // 64-bit supervisor call descriptor\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_SV3264",
+              "documentation": {
+                "identifier": "XMC_SV3264",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_SV3264",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_SV3264"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_SV3264 = 18 // Supervisor call descriptor for both 32-bit and 64-bit\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_TL",
+              "documentation": {
+                "identifier": "XMC_TL",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_TL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_TL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_TL = 20 // Read/Write thread-local data\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_UL",
+              "documentation": {
+                "identifier": "XMC_UL",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_UL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_UL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_UL = 21 // Read/Write thread-local data (.tbss)\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#XMC_TE",
+              "documentation": {
+                "identifier": "XMC_TE",
+                "newPage": false,
+                "searchKey": "xcoff.XMC_TE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const XMC_TE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst XMC_TE = 22 // TOC entry\n\n```\n\nStorage-mapping class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#LDHDRSZ_32",
+              "documentation": {
+                "identifier": "LDHDRSZ_32",
+                "newPage": false,
+                "searchKey": "xcoff.LDHDRSZ_32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LDHDRSZ_32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LDHDRSZ_32 = 32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#LDHDRSZ_64",
+              "documentation": {
+                "identifier": "LDHDRSZ_64",
+                "newPage": false,
+                "searchKey": "xcoff.LDHDRSZ_64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LDHDRSZ_64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LDHDRSZ_64 = 56\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_POS",
+              "documentation": {
+                "identifier": "R_POS",
+                "newPage": false,
+                "searchKey": "xcoff.R_POS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_POS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_POS = 0x00 // A(sym) Positive Relocation\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_NEG",
+              "documentation": {
+                "identifier": "R_NEG",
+                "newPage": false,
+                "searchKey": "xcoff.R_NEG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_NEG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_NEG = 0x01 // -A(sym) Negative Relocation\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_REL",
+              "documentation": {
+                "identifier": "R_REL",
+                "newPage": false,
+                "searchKey": "xcoff.R_REL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_REL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_REL = 0x02 // A(sym-*) Relative to self\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TOC",
+              "documentation": {
+                "identifier": "R_TOC",
+                "newPage": false,
+                "searchKey": "xcoff.R_TOC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TOC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TOC = 0x03 // A(sym-TOC) Relative to TOC\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TRL",
+              "documentation": {
+                "identifier": "R_TRL",
+                "newPage": false,
+                "searchKey": "xcoff.R_TRL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TRL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TRL = 0x12 // A(sym-TOC) TOC Relative indirect load.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TRLA",
+              "documentation": {
+                "identifier": "R_TRLA",
+                "newPage": false,
+                "searchKey": "xcoff.R_TRLA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TRLA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TRLA = 0x13 // A(sym-TOC) TOC Rel load address. modifiable inst\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_GL",
+              "documentation": {
+                "identifier": "R_GL",
+                "newPage": false,
+                "searchKey": "xcoff.R_GL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_GL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_GL = 0x05 // A(external TOC of sym) Global Linkage\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TCL",
+              "documentation": {
+                "identifier": "R_TCL",
+                "newPage": false,
+                "searchKey": "xcoff.R_TCL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TCL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TCL = 0x06 // A(local TOC of sym) Local object TOC address\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_RL",
+              "documentation": {
+                "identifier": "R_RL",
+                "newPage": false,
+                "searchKey": "xcoff.R_RL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_RL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_RL = 0x0C // A(sym) Pos indirect load. modifiable instruction\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_RLA",
+              "documentation": {
+                "identifier": "R_RLA",
+                "newPage": false,
+                "searchKey": "xcoff.R_RLA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_RLA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_RLA = 0x0D // A(sym) Pos Load Address. modifiable instruction\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_REF",
+              "documentation": {
+                "identifier": "R_REF",
+                "newPage": false,
+                "searchKey": "xcoff.R_REF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_REF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_REF = 0x0F // AL0(sym) Non relocating ref. No garbage collect\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_BA",
+              "documentation": {
+                "identifier": "R_BA",
+                "newPage": false,
+                "searchKey": "xcoff.R_BA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_BA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_BA = 0x08 // A(sym) Branch absolute. Cannot modify instruction\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_RBA",
+              "documentation": {
+                "identifier": "R_RBA",
+                "newPage": false,
+                "searchKey": "xcoff.R_RBA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_RBA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_RBA = 0x18 // A(sym) Branch absolute. modifiable instruction\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_BR",
+              "documentation": {
+                "identifier": "R_BR",
+                "newPage": false,
+                "searchKey": "xcoff.R_BR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_BR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_BR = 0x0A // A(sym-*) Branch rel to self. non modifiable\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_RBR",
+              "documentation": {
+                "identifier": "R_RBR",
+                "newPage": false,
+                "searchKey": "xcoff.R_RBR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_RBR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_RBR = 0x1A // A(sym-*) Branch rel to self. modifiable instr\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TLS",
+              "documentation": {
+                "identifier": "R_TLS",
+                "newPage": false,
+                "searchKey": "xcoff.R_TLS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TLS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TLS = 0x20 // General-dynamic reference to TLS symbol\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TLS_IE",
+              "documentation": {
+                "identifier": "R_TLS_IE",
+                "newPage": false,
+                "searchKey": "xcoff.R_TLS_IE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TLS_IE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TLS_IE = 0x21 // Initial-exec reference to TLS symbol\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TLS_LD",
+              "documentation": {
+                "identifier": "R_TLS_LD",
+                "newPage": false,
+                "searchKey": "xcoff.R_TLS_LD",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TLS_LD"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TLS_LD = 0x22 // Local-dynamic reference to TLS symbol\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TLS_LE",
+              "documentation": {
+                "identifier": "R_TLS_LE",
+                "newPage": false,
+                "searchKey": "xcoff.R_TLS_LE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TLS_LE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TLS_LE = 0x23 // Local-exec reference to TLS symbol\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TLSM",
+              "documentation": {
+                "identifier": "R_TLSM",
+                "newPage": false,
+                "searchKey": "xcoff.R_TLSM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TLSM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TLSM = 0x24 // Module reference to TLS symbol\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TLSML",
+              "documentation": {
+                "identifier": "R_TLSML",
+                "newPage": false,
+                "searchKey": "xcoff.R_TLSML",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TLSML"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TLSML = 0x25 // Module reference to local (own) module\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TOCU",
+              "documentation": {
+                "identifier": "R_TOCU",
+                "newPage": false,
+                "searchKey": "xcoff.R_TOCU",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TOCU"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TOCU = 0x30 // Relative to TOC - high order bits\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#R_TOCL",
+              "documentation": {
+                "identifier": "R_TOCL",
+                "newPage": false,
+                "searchKey": "xcoff.R_TOCL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const R_TOCL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst R_TOCL = 0x31 // Relative to TOC - low order bits\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/xcoff#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#archTest",
+              "documentation": {
+                "identifier": "archTest",
+                "newPage": false,
+                "searchKey": "xcoff.archTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var archTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar archTest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#fileTests",
+              "documentation": {
+                "identifier": "fileTests",
+                "newPage": false,
+                "searchKey": "xcoff.fileTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fileTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fileTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/xcoff#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#bigarFileHeader",
+              "documentation": {
+                "identifier": "bigarFileHeader",
+                "newPage": false,
+                "searchKey": "xcoff.bigarFileHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bigarFileHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bigarFileHeader struct {\n\tFlmagic    [SAIAMAG]byte // Archive magic string\n\tFlmemoff   [20]byte      // Member table offset\n\tFlgstoff   [20]byte      // 32-bits global symtab offset\n\tFlgst64off [20]byte      // 64-bits global symtab offset\n\tFlfstmoff  [20]byte      // First member offset\n\tFllstmoff  [20]byte      // Last member offset\n\tFlfreeoff  [20]byte      // First member on free list offset\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#bigarMemberHeader",
+              "documentation": {
+                "identifier": "bigarMemberHeader",
+                "newPage": false,
+                "searchKey": "xcoff.bigarMemberHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bigarMemberHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bigarMemberHeader struct {\n\tArsize   [20]byte // File member size\n\tArnxtmem [20]byte // Next member pointer\n\tArprvmem [20]byte // Previous member pointer\n\tArdate   [12]byte // File member date\n\tAruid    [12]byte // File member uid\n\tArgid    [12]byte // File member gid\n\tArmode   [12]byte // File member mode (octal)\n\tArnamlen [4]byte  // File member name length\n\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#Archive",
+              "documentation": {
+                "identifier": "Archive",
+                "newPage": false,
+                "searchKey": "xcoff.Archive",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Archive struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Archive struct {\n\tArchiveHeader\n\tMembers []*Member\n\n\tcloser io.Closer\n}\n```\n\nArchive represents an open AIX big archive. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#OpenArchive",
+                    "documentation": {
+                      "identifier": "OpenArchive",
+                      "newPage": false,
+                      "searchKey": "xcoff.OpenArchive",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func OpenArchive(name string) (*Archive, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc OpenArchive(name string) (*Archive, error)\n```\n\nOpenArchive opens the named archive using os.Open and prepares it for use as an AIX big archive. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#NewArchive",
+                    "documentation": {
+                      "identifier": "NewArchive",
+                      "newPage": false,
+                      "searchKey": "xcoff.NewArchive",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewArchive(r io.ReaderAt) (*Archive, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewArchive(r io.ReaderAt) (*Archive, error)\n```\n\nNewArchive creates a new Archive for accessing an AIX big archive in an underlying reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#Archive.Close",
+                    "documentation": {
+                      "identifier": "Archive.Close",
+                      "newPage": false,
+                      "searchKey": "xcoff.Archive.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Archive) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Archive) Close() error\n```\n\nClose closes the Archive. If the Archive was created using NewArchive directly instead of OpenArchive, Close has no effect. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#Archive.GetFile",
+                    "documentation": {
+                      "identifier": "Archive.GetFile",
+                      "newPage": false,
+                      "searchKey": "xcoff.Archive.GetFile",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (arch *Archive) GetFile(name string) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (arch *Archive) GetFile(name string) (*File, error)\n```\n\nGetFile returns the XCOFF file defined by member name. FIXME: This doesn't work if an archive has two members with the same name which can occur if a archive has both 32-bits and 64-bits files. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#ArchiveHeader",
+              "documentation": {
+                "identifier": "ArchiveHeader",
+                "newPage": false,
+                "searchKey": "xcoff.ArchiveHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ArchiveHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ArchiveHeader struct {\n\tmagic string\n}\n```\n\nMemberHeader holds information about a big archive file header \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#Member",
+              "documentation": {
+                "identifier": "Member",
+                "newPage": false,
+                "searchKey": "xcoff.Member",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Member struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Member struct {\n\tMemberHeader\n\tsr *io.SectionReader\n}\n```\n\nMember represents a member of an AIX big archive. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#MemberHeader",
+              "documentation": {
+                "identifier": "MemberHeader",
+                "newPage": false,
+                "searchKey": "xcoff.MemberHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MemberHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MemberHeader struct {\n\tName string\n\tSize uint64\n}\n```\n\nMemberHeader holds information about a big archive member \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SectionHeader",
+              "documentation": {
+                "identifier": "SectionHeader",
+                "newPage": false,
+                "searchKey": "xcoff.SectionHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SectionHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SectionHeader struct {\n\tName           string\n\tVirtualAddress uint64\n\tSize           uint64\n\tType           uint32\n\tRelptr         uint64\n\tNreloc         uint32\n}\n```\n\nSectionHeader holds information about an XCOFF section header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#Section",
+              "documentation": {
+                "identifier": "Section",
+                "newPage": false,
+                "searchKey": "xcoff.Section",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Section struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Section struct {\n\tSectionHeader\n\tRelocs []Reloc\n\tio.ReaderAt\n\tsr *io.SectionReader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#Section.Data",
+                    "documentation": {
+                      "identifier": "Section.Data",
+                      "newPage": false,
+                      "searchKey": "xcoff.Section.Data",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Section) Data() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Section) Data() ([]byte, error)\n```\n\nData reads and returns the contents of the XCOFF section s. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AuxiliaryCSect",
+              "documentation": {
+                "identifier": "AuxiliaryCSect",
+                "newPage": false,
+                "searchKey": "xcoff.AuxiliaryCSect",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AuxiliaryCSect struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AuxiliaryCSect struct {\n\tLength              int64\n\tStorageMappingClass int\n\tSymbolType          int\n}\n```\n\nAuxiliaryCSect holds information about an XCOFF symbol in an AUX_CSECT entry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AuxiliaryFcn",
+              "documentation": {
+                "identifier": "AuxiliaryFcn",
+                "newPage": false,
+                "searchKey": "xcoff.AuxiliaryFcn",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AuxiliaryFcn struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AuxiliaryFcn struct {\n\tSize int64\n}\n```\n\nAuxiliaryFcn holds information about an XCOFF symbol in an AUX_FCN entry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#Symbol",
+              "documentation": {
+                "identifier": "Symbol",
+                "newPage": false,
+                "searchKey": "xcoff.Symbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Symbol struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Symbol struct {\n\tName          string\n\tValue         uint64\n\tSectionNumber int\n\tStorageClass  int\n\tAuxFcn        AuxiliaryFcn\n\tAuxCSect      AuxiliaryCSect\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#Reloc",
+              "documentation": {
+                "identifier": "Reloc",
+                "newPage": false,
+                "searchKey": "xcoff.Reloc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reloc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reloc struct {\n\tVirtualAddress   uint64\n\tSymbol           *Symbol\n\tSigned           bool\n\tInstructionFixed bool\n\tLength           uint8\n\tType             uint8\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#ImportedSymbol",
+              "documentation": {
+                "identifier": "ImportedSymbol",
+                "newPage": false,
+                "searchKey": "xcoff.ImportedSymbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ImportedSymbol struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ImportedSymbol struct {\n\tName    string\n\tLibrary string\n}\n```\n\nImportedSymbol holds information about an imported XCOFF symbol. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#FileHeader",
+              "documentation": {
+                "identifier": "FileHeader",
+                "newPage": false,
+                "searchKey": "xcoff.FileHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileHeader struct {\n\tTargetMachine uint16\n}\n```\n\nFileHeader holds information about an XCOFF file header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#File",
+              "documentation": {
+                "identifier": "File",
+                "newPage": false,
+                "searchKey": "xcoff.File",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type File struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype File struct {\n\tFileHeader\n\tSections     []*Section\n\tSymbols      []*Symbol\n\tStringTable  []byte\n\tLibraryPaths []string\n\n\tcloser io.Closer\n}\n```\n\nA File represents an open XCOFF file. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#Open",
+                    "documentation": {
+                      "identifier": "Open",
+                      "newPage": false,
+                      "searchKey": "xcoff.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Open(name string) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Open(name string) (*File, error)\n```\n\nOpen opens the named file using os.Open and prepares it for use as an XCOFF binary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#NewFile",
+                    "documentation": {
+                      "identifier": "NewFile",
+                      "newPage": false,
+                      "searchKey": "xcoff.NewFile",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewFile(r io.ReaderAt) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewFile(r io.ReaderAt) (*File, error)\n```\n\nNewFile creates a new File for accessing an XCOFF binary in an underlying reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#File.Close",
+                    "documentation": {
+                      "identifier": "File.Close",
+                      "newPage": false,
+                      "searchKey": "xcoff.File.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) Close() error\n```\n\nClose closes the File. If the File was created using NewFile directly instead of Open, Close has no effect. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#File.Section",
+                    "documentation": {
+                      "identifier": "File.Section",
+                      "newPage": false,
+                      "searchKey": "xcoff.File.Section",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) Section(name string) *Section"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) Section(name string) *Section\n```\n\nSection returns the first section with the given name, or nil if no such section exists. Xcoff have section's name limited to 8 bytes. Some sections like .gosymtab can be trunked but this method will still find them. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#File.SectionByType",
+                    "documentation": {
+                      "identifier": "File.SectionByType",
+                      "newPage": false,
+                      "searchKey": "xcoff.File.SectionByType",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) SectionByType(typ uint32) *Section"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) SectionByType(typ uint32) *Section\n```\n\nSectionByType returns the first section in f with the given type, or nil if there is no such section. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#File.CSect",
+                    "documentation": {
+                      "identifier": "File.CSect",
+                      "newPage": false,
+                      "searchKey": "xcoff.File.CSect",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) CSect(name string) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) CSect(name string) []byte\n```\n\nCSect reads and returns the contents of a csect. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#File.DWARF",
+                    "documentation": {
+                      "identifier": "File.DWARF",
+                      "newPage": false,
+                      "searchKey": "xcoff.File.DWARF",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) DWARF() (*dwarf.Data, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) DWARF() (*dwarf.Data, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#File.readImportIDs",
+                    "documentation": {
+                      "identifier": "File.readImportIDs",
+                      "newPage": false,
+                      "searchKey": "xcoff.File.readImportIDs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) readImportIDs(s *Section) ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) readImportIDs(s *Section) ([]string, error)\n```\n\nreadImportID returns the import file IDs stored inside the .loader section. Library name pattern is either path/base/member or base/member \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#File.ImportedSymbols",
+                    "documentation": {
+                      "identifier": "File.ImportedSymbols",
+                      "newPage": false,
+                      "searchKey": "xcoff.File.ImportedSymbols",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) ImportedSymbols() ([]ImportedSymbol, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) ImportedSymbols() ([]ImportedSymbol, error)\n```\n\nImportedSymbols returns the names of all symbols referred to by the binary f that are expected to be satisfied by other libraries at dynamic load time. It does not return weak symbols. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#File.ImportedLibraries",
+                    "documentation": {
+                      "identifier": "File.ImportedLibraries",
+                      "newPage": false,
+                      "searchKey": "xcoff.File.ImportedLibraries",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) ImportedLibraries() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) ImportedLibraries() ([]string, error)\n```\n\nImportedLibraries returns the names of all libraries referred to by the binary f that are expected to be linked with the binary at dynamic link time. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#zeroReaderAt",
+              "documentation": {
+                "identifier": "zeroReaderAt",
+                "newPage": false,
+                "searchKey": "xcoff.zeroReaderAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zeroReaderAt struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zeroReaderAt struct{}\n```\n\nzeroReaderAt is ReaderAt that reads 0s. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/internal/xcoff#zeroReaderAt.ReadAt",
+                    "documentation": {
+                      "identifier": "zeroReaderAt.ReadAt",
+                      "newPage": false,
+                      "searchKey": "xcoff.zeroReaderAt.ReadAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w zeroReaderAt) ReadAt(p []byte, off int64) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w zeroReaderAt) ReadAt(p []byte, off int64) (n int, err error)\n```\n\nReadAt writes len(p) 0s into p. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#FileHeader32",
+              "documentation": {
+                "identifier": "FileHeader32",
+                "newPage": false,
+                "searchKey": "xcoff.FileHeader32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileHeader32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileHeader32 struct {\n\tFmagic   uint16 // Target machine\n\tFnscns   uint16 // Number of sections\n\tFtimedat int32  // Time and date of file creation\n\tFsymptr  uint32 // Byte offset to symbol table start\n\tFnsyms   int32  // Number of entries in symbol table\n\tFopthdr  uint16 // Number of bytes in optional header\n\tFflags   uint16 // Flags\n}\n```\n\nFile Header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#FileHeader64",
+              "documentation": {
+                "identifier": "FileHeader64",
+                "newPage": false,
+                "searchKey": "xcoff.FileHeader64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileHeader64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileHeader64 struct {\n\tFmagic   uint16 // Target machine\n\tFnscns   uint16 // Number of sections\n\tFtimedat int32  // Time and date of file creation\n\tFsymptr  uint64 // Byte offset to symbol table start\n\tFopthdr  uint16 // Number of bytes in optional header\n\tFflags   uint16 // Flags\n\tFnsyms   int32  // Number of entries in symbol table\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SectionHeader32",
+              "documentation": {
+                "identifier": "SectionHeader32",
+                "newPage": false,
+                "searchKey": "xcoff.SectionHeader32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SectionHeader32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SectionHeader32 struct {\n\tSname    [8]byte // Section name\n\tSpaddr   uint32  // Physical address\n\tSvaddr   uint32  // Virtual address\n\tSsize    uint32  // Section size\n\tSscnptr  uint32  // Offset in file to raw data for section\n\tSrelptr  uint32  // Offset in file to relocation entries for section\n\tSlnnoptr uint32  // Offset in file to line number entries for section\n\tSnreloc  uint16  // Number of relocation entries\n\tSnlnno   uint16  // Number of line number entries\n\tSflags   uint32  // Flags to define the section type\n}\n```\n\nSection Header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SectionHeader64",
+              "documentation": {
+                "identifier": "SectionHeader64",
+                "newPage": false,
+                "searchKey": "xcoff.SectionHeader64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SectionHeader64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SectionHeader64 struct {\n\tSname    [8]byte // Section name\n\tSpaddr   uint64  // Physical address\n\tSvaddr   uint64  // Virtual address\n\tSsize    uint64  // Section size\n\tSscnptr  uint64  // Offset in file to raw data for section\n\tSrelptr  uint64  // Offset in file to relocation entries for section\n\tSlnnoptr uint64  // Offset in file to line number entries for section\n\tSnreloc  uint32  // Number of relocation entries\n\tSnlnno   uint32  // Number of line number entries\n\tSflags   uint32  // Flags to define the section type\n\tSpad     uint32  // Needs to be 72 bytes long\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SymEnt32",
+              "documentation": {
+                "identifier": "SymEnt32",
+                "newPage": false,
+                "searchKey": "xcoff.SymEnt32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SymEnt32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SymEnt32 struct {\n\tNname   [8]byte // Symbol name\n\tNvalue  uint32  // Symbol value\n\tNscnum  int16   // Section number of symbol\n\tNtype   uint16  // Basic and derived type specification\n\tNsclass int8    // Storage class of symbol\n\tNnumaux int8    // Number of auxiliary entries\n}\n```\n\nSymbol Table Entry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#SymEnt64",
+              "documentation": {
+                "identifier": "SymEnt64",
+                "newPage": false,
+                "searchKey": "xcoff.SymEnt64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SymEnt64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SymEnt64 struct {\n\tNvalue  uint64 // Symbol value\n\tNoffset uint32 // Offset of the name in string table or .debug section\n\tNscnum  int16  // Section number of symbol\n\tNtype   uint16 // Basic and derived type specification\n\tNsclass int8   // Storage class of symbol\n\tNnumaux int8   // Number of auxiliary entries\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AuxFile64",
+              "documentation": {
+                "identifier": "AuxFile64",
+                "newPage": false,
+                "searchKey": "xcoff.AuxFile64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AuxFile64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AuxFile64 struct {\n\tXfname   [8]byte // Name or offset inside string table\n\tXftype   uint8   // Source file string type\n\tXauxtype uint8   // Type of auxiliary entry\n}\n```\n\nFile Auxiliary Entry \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AuxFcn32",
+              "documentation": {
+                "identifier": "AuxFcn32",
+                "newPage": false,
+                "searchKey": "xcoff.AuxFcn32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AuxFcn32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AuxFcn32 struct {\n\tXexptr   uint32 // File offset to exception table entry\n\tXfsize   uint32 // Size of function in bytes\n\tXlnnoptr uint32 // File pointer to line number\n\tXendndx  uint32 // Symbol table index of next entry\n\tXpad     uint16 // Unused\n}\n```\n\nFunction Auxiliary Entry \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AuxFcn64",
+              "documentation": {
+                "identifier": "AuxFcn64",
+                "newPage": false,
+                "searchKey": "xcoff.AuxFcn64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AuxFcn64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AuxFcn64 struct {\n\tXlnnoptr uint64 // File pointer to line number\n\tXfsize   uint32 // Size of function in bytes\n\tXendndx  uint32 // Symbol table index of next entry\n\tXpad     uint8  // Unused\n\tXauxtype uint8  // Type of auxiliary entry\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AuxSect64",
+              "documentation": {
+                "identifier": "AuxSect64",
+                "newPage": false,
+                "searchKey": "xcoff.AuxSect64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AuxSect64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AuxSect64 struct {\n\tXscnlen  uint64 // section length\n\tXnreloc  uint64 // Num RLDs\n\tpad      uint8\n\tXauxtype uint8 // Type of auxiliary entry\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AuxCSect32",
+              "documentation": {
+                "identifier": "AuxCSect32",
+                "newPage": false,
+                "searchKey": "xcoff.AuxCSect32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AuxCSect32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AuxCSect32 struct {\n\tXscnlen   int32  // Length or symbol table index\n\tXparmhash uint32 // Offset of parameter type-check string\n\tXsnhash   uint16 // .typchk section number\n\tXsmtyp    uint8  // Symbol alignment and type\n\tXsmclas   uint8  // Storage-mapping class\n\tXstab     uint32 // Reserved\n\tXsnstab   uint16 // Reserved\n}\n```\n\ncsect Auxiliary Entry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#AuxCSect64",
+              "documentation": {
+                "identifier": "AuxCSect64",
+                "newPage": false,
+                "searchKey": "xcoff.AuxCSect64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AuxCSect64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AuxCSect64 struct {\n\tXscnlenlo uint32 // Lower 4 bytes of length or symbol table index\n\tXparmhash uint32 // Offset of parameter type-check string\n\tXsnhash   uint16 // .typchk section number\n\tXsmtyp    uint8  // Symbol alignment and type\n\tXsmclas   uint8  // Storage-mapping class\n\tXscnlenhi int32  // Upper 4 bytes of length or symbol table index\n\tXpad      uint8  // Unused\n\tXauxtype  uint8  // Type of auxiliary entry\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#LoaderHeader32",
+              "documentation": {
+                "identifier": "LoaderHeader32",
+                "newPage": false,
+                "searchKey": "xcoff.LoaderHeader32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LoaderHeader32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LoaderHeader32 struct {\n\tLversion int32  // Loader section version number\n\tLnsyms   int32  // Number of symbol table entries\n\tLnreloc  int32  // Number of relocation table entries\n\tListlen  uint32 // Length of import file ID string table\n\tLnimpid  int32  // Number of import file IDs\n\tLimpoff  uint32 // Offset to start of import file IDs\n\tLstlen   uint32 // Length of string table\n\tLstoff   uint32 // Offset to start of string table\n}\n```\n\nLoader Header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#LoaderHeader64",
+              "documentation": {
+                "identifier": "LoaderHeader64",
+                "newPage": false,
+                "searchKey": "xcoff.LoaderHeader64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LoaderHeader64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LoaderHeader64 struct {\n\tLversion int32  // Loader section version number\n\tLnsyms   int32  // Number of symbol table entries\n\tLnreloc  int32  // Number of relocation table entries\n\tListlen  uint32 // Length of import file ID string table\n\tLnimpid  int32  // Number of import file IDs\n\tLstlen   uint32 // Length of string table\n\tLimpoff  uint64 // Offset to start of import file IDs\n\tLstoff   uint64 // Offset to start of string table\n\tLsymoff  uint64 // Offset to start of symbol table\n\tLrldoff  uint64 // Offset to start of relocation entries\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#LoaderSymbol32",
+              "documentation": {
+                "identifier": "LoaderSymbol32",
+                "newPage": false,
+                "searchKey": "xcoff.LoaderSymbol32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LoaderSymbol32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LoaderSymbol32 struct {\n\tLname   [8]byte // Symbol name or byte offset into string table\n\tLvalue  uint32  // Address field\n\tLscnum  int16   // Section number containing symbol\n\tLsmtype int8    // Symbol type, export, import flags\n\tLsmclas int8    // Symbol storage class\n\tLifile  int32   // Import file ID; ordinal of import file IDs\n\tLparm   uint32  // Parameter type-check field\n}\n```\n\nLoader Symbol. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#LoaderSymbol64",
+              "documentation": {
+                "identifier": "LoaderSymbol64",
+                "newPage": false,
+                "searchKey": "xcoff.LoaderSymbol64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LoaderSymbol64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LoaderSymbol64 struct {\n\tLvalue  uint64 // Address field\n\tLoffset uint32 // Byte offset into string table of symbol name\n\tLscnum  int16  // Section number containing symbol\n\tLsmtype int8   // Symbol type, export, import flags\n\tLsmclas int8   // Symbol storage class\n\tLifile  int32  // Import file ID; ordinal of import file IDs\n\tLparm   uint32 // Parameter type-check field\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#Reloc32",
+              "documentation": {
+                "identifier": "Reloc32",
+                "newPage": false,
+                "searchKey": "xcoff.Reloc32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reloc32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reloc32 struct {\n\tRvaddr  uint32 // (virtual) address of reference\n\tRsymndx uint32 // Index into symbol table\n\tRsize   uint8  // Sign and reloc bit len\n\tRtype   uint8  // Toc relocation type\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#Reloc64",
+              "documentation": {
+                "identifier": "Reloc64",
+                "newPage": false,
+                "searchKey": "xcoff.Reloc64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reloc64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reloc64 struct {\n\tRvaddr  uint64 // (virtual) address of reference\n\tRsymndx uint32 // Index into symbol table\n\tRsize   uint8  // Sign and reloc bit len\n\tRtype   uint8  // Toc relocation type\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#archiveTest",
+              "documentation": {
+                "identifier": "archiveTest",
+                "newPage": false,
+                "searchKey": "xcoff.archiveTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type archiveTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype archiveTest struct {\n\tfile              string\n\thdr               ArchiveHeader\n\tmembers           []*MemberHeader\n\tmembersFileHeader []FileHeader\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#fileTest",
+              "documentation": {
+                "identifier": "fileTest",
+                "newPage": false,
+                "searchKey": "xcoff.fileTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileTest struct {\n\tfile     string\n\thdr      FileHeader\n\tsections []*SectionHeader\n\tneeded   []string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/xcoff#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#cstring",
+              "documentation": {
+                "identifier": "cstring",
+                "newPage": false,
+                "searchKey": "xcoff.cstring",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cstring(b []byte) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cstring(b []byte) string\n```\n\ncstring converts ASCII byte sequence b to string. It stops once it finds 0 or reaches end of b. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#getString",
+              "documentation": {
+                "identifier": "getString",
+                "newPage": false,
+                "searchKey": "xcoff.getString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getString(st []byte, offset uint32) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getString(st []byte, offset uint32) (string, bool)\n```\n\ngetString extracts a string from an XCOFF string table. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#TestOpenArchive",
+              "documentation": {
+                "identifier": "TestOpenArchive",
+                "newPage": false,
+                "searchKey": "xcoff.TestOpenArchive",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenArchive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenArchive(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#TestOpen",
+              "documentation": {
+                "identifier": "TestOpen",
+                "newPage": false,
+                "searchKey": "xcoff.TestOpen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/xcoff#TestOpenFailure",
+              "documentation": {
+                "identifier": "TestOpenFailure",
+                "newPage": false,
+                "searchKey": "xcoff.TestOpenFailure",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

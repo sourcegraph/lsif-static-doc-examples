@@ -1,0 +1,221 @@
+{
+  "pathID": "/std/net/internal/socktest_test",
+  "documentation": {
+    "identifier": "socktest_test",
+    "newPage": true,
+    "searchKey": "std/net/internal/socktest_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package socktest_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/net/internal/socktest_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest_test#sw",
+              "documentation": {
+                "identifier": "sw",
+                "newPage": false,
+                "searchKey": "socktest_test.sw",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sw"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sw socktest.Switch\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest_test#socketFunc",
+              "documentation": {
+                "identifier": "socketFunc",
+                "newPage": false,
+                "searchKey": "socktest_test.socketFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var socketFunc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar socketFunc func(int, int, int) (int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest_test#closeFunc",
+              "documentation": {
+                "identifier": "closeFunc",
+                "newPage": false,
+                "searchKey": "socktest_test.closeFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var closeFunc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar closeFunc func(int) error\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/net/internal/socktest_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest_test#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "socktest_test.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest_test#TestSwitch",
+              "documentation": {
+                "identifier": "TestSwitch",
+                "newPage": false,
+                "searchKey": "socktest_test.TestSwitch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSwitch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSwitch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest_test#TestSocket",
+              "documentation": {
+                "identifier": "TestSocket",
+                "newPage": false,
+                "searchKey": "socktest_test.TestSocket",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSocket(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSocket(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest_test#installTestHooks",
+              "documentation": {
+                "identifier": "installTestHooks",
+                "newPage": false,
+                "searchKey": "socktest_test.installTestHooks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func installTestHooks()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc installTestHooks()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest_test#uninstallTestHooks",
+              "documentation": {
+                "identifier": "uninstallTestHooks",
+                "newPage": false,
+                "searchKey": "socktest_test.uninstallTestHooks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func uninstallTestHooks()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc uninstallTestHooks()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

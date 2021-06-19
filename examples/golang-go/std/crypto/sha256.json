@@ -1,0 +1,1408 @@
+{
+  "pathID": "/std/crypto/sha256",
+  "documentation": {
+    "identifier": "sha256",
+    "newPage": true,
+    "searchKey": "std/crypto/sha256",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package sha256"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package sha256 implements the SHA224 and SHA256 hash algorithms as defined in FIPS 180-4. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/crypto/sha256#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#Size",
+              "documentation": {
+                "identifier": "Size",
+                "newPage": false,
+                "searchKey": "sha256.Size",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Size"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Size = 32\n```\n\nThe size of a SHA256 checksum in bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#Size224",
+              "documentation": {
+                "identifier": "Size224",
+                "newPage": false,
+                "searchKey": "sha256.Size224",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Size224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Size224 = 28\n```\n\nThe size of a SHA224 checksum in bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#BlockSize",
+              "documentation": {
+                "identifier": "BlockSize",
+                "newPage": false,
+                "searchKey": "sha256.BlockSize",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BlockSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BlockSize = 64\n```\n\nThe blocksize of SHA256 and SHA224 in bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#chunk",
+              "documentation": {
+                "identifier": "chunk",
+                "newPage": false,
+                "searchKey": "sha256.chunk",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const chunk"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst chunk = 64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init0",
+              "documentation": {
+                "identifier": "init0",
+                "newPage": false,
+                "searchKey": "sha256.init0",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init0"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init0 = 0x6A09E667\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init1",
+              "documentation": {
+                "identifier": "init1",
+                "newPage": false,
+                "searchKey": "sha256.init1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init1 = 0xBB67AE85\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init2",
+              "documentation": {
+                "identifier": "init2",
+                "newPage": false,
+                "searchKey": "sha256.init2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init2 = 0x3C6EF372\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init3",
+              "documentation": {
+                "identifier": "init3",
+                "newPage": false,
+                "searchKey": "sha256.init3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init3 = 0xA54FF53A\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init4",
+              "documentation": {
+                "identifier": "init4",
+                "newPage": false,
+                "searchKey": "sha256.init4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init4 = 0x510E527F\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init5",
+              "documentation": {
+                "identifier": "init5",
+                "newPage": false,
+                "searchKey": "sha256.init5",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init5 = 0x9B05688C\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init6",
+              "documentation": {
+                "identifier": "init6",
+                "newPage": false,
+                "searchKey": "sha256.init6",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init6"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init6 = 0x1F83D9AB\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init7",
+              "documentation": {
+                "identifier": "init7",
+                "newPage": false,
+                "searchKey": "sha256.init7",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init7"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init7 = 0x5BE0CD19\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init0_224",
+              "documentation": {
+                "identifier": "init0_224",
+                "newPage": false,
+                "searchKey": "sha256.init0_224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init0_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init0_224 = 0xC1059ED8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init1_224",
+              "documentation": {
+                "identifier": "init1_224",
+                "newPage": false,
+                "searchKey": "sha256.init1_224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init1_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init1_224 = 0x367CD507\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init2_224",
+              "documentation": {
+                "identifier": "init2_224",
+                "newPage": false,
+                "searchKey": "sha256.init2_224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init2_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init2_224 = 0x3070DD17\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init3_224",
+              "documentation": {
+                "identifier": "init3_224",
+                "newPage": false,
+                "searchKey": "sha256.init3_224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init3_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init3_224 = 0xF70E5939\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init4_224",
+              "documentation": {
+                "identifier": "init4_224",
+                "newPage": false,
+                "searchKey": "sha256.init4_224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init4_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init4_224 = 0xFFC00B31\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init5_224",
+              "documentation": {
+                "identifier": "init5_224",
+                "newPage": false,
+                "searchKey": "sha256.init5_224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init5_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init5_224 = 0x68581511\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init6_224",
+              "documentation": {
+                "identifier": "init6_224",
+                "newPage": false,
+                "searchKey": "sha256.init6_224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init6_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init6_224 = 0x64F98FA7\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init7_224",
+              "documentation": {
+                "identifier": "init7_224",
+                "newPage": false,
+                "searchKey": "sha256.init7_224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const init7_224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst init7_224 = 0xBEFA4FA4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#magic224",
+              "documentation": {
+                "identifier": "magic224",
+                "newPage": false,
+                "searchKey": "sha256.magic224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic224 = \"sha\\x02\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#magic256",
+              "documentation": {
+                "identifier": "magic256",
+                "newPage": false,
+                "searchKey": "sha256.magic256",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic256"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic256 = \"sha\\x03\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#marshaledSize",
+              "documentation": {
+                "identifier": "marshaledSize",
+                "newPage": false,
+                "searchKey": "sha256.marshaledSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const marshaledSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst marshaledSize = len(magic256) + 8*4 + chunk + 8\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/sha256#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#_K",
+              "documentation": {
+                "identifier": "_K",
+                "newPage": false,
+                "searchKey": "sha256._K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _K"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _K = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#useAVX2",
+              "documentation": {
+                "identifier": "useAVX2",
+                "newPage": false,
+                "searchKey": "sha256.useAVX2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var useAVX2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar useAVX2 = cpu.X86.HasAVX2 && cpu.X86.HasBMI2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#golden",
+              "documentation": {
+                "identifier": "golden",
+                "newPage": false,
+                "searchKey": "sha256.golden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#golden224",
+              "documentation": {
+                "identifier": "golden224",
+                "newPage": false,
+                "searchKey": "sha256.golden224",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden224"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden224 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#largeUnmarshalTests",
+              "documentation": {
+                "identifier": "largeUnmarshalTests",
+                "newPage": false,
+                "searchKey": "sha256.largeUnmarshalTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var largeUnmarshalTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar largeUnmarshalTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#bench",
+              "documentation": {
+                "identifier": "bench",
+                "newPage": false,
+                "searchKey": "sha256.bench",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bench"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bench = New()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#buf",
+              "documentation": {
+                "identifier": "buf",
+                "newPage": false,
+                "searchKey": "sha256.buf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var buf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar buf = make([]byte, 8192)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/sha256#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#digest",
+              "documentation": {
+                "identifier": "digest",
+                "newPage": false,
+                "searchKey": "sha256.digest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type digest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype digest struct {\n\th     [8]uint32\n\tx     [chunk]byte\n\tnx    int\n\tlen   uint64\n\tis224 bool // mark if this digest is SHA-224\n}\n```\n\ndigest represents the partial evaluation of a checksum. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/crypto/sha256#digest.MarshalBinary",
+                    "documentation": {
+                      "identifier": "digest.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "sha256.digest.MarshalBinary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/sha256#digest.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "digest.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "sha256.digest.UnmarshalBinary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) UnmarshalBinary(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) UnmarshalBinary(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/sha256#digest.Reset",
+                    "documentation": {
+                      "identifier": "digest.Reset",
+                      "newPage": false,
+                      "searchKey": "sha256.digest.Reset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/sha256#digest.Size",
+                    "documentation": {
+                      "identifier": "digest.Size",
+                      "newPage": false,
+                      "searchKey": "sha256.digest.Size",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/sha256#digest.BlockSize",
+                    "documentation": {
+                      "identifier": "digest.BlockSize",
+                      "newPage": false,
+                      "searchKey": "sha256.digest.BlockSize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/sha256#digest.Write",
+                    "documentation": {
+                      "identifier": "digest.Write",
+                      "newPage": false,
+                      "searchKey": "sha256.digest.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Write(p []byte) (nn int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Write(p []byte) (nn int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/sha256#digest.Sum",
+                    "documentation": {
+                      "identifier": "digest.Sum",
+                      "newPage": false,
+                      "searchKey": "sha256.digest.Sum",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/sha256#digest.checkSum",
+                    "documentation": {
+                      "identifier": "digest.checkSum",
+                      "newPage": false,
+                      "searchKey": "sha256.digest.checkSum",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) checkSum() [Size]byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) checkSum() [Size]byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#sha256Test",
+              "documentation": {
+                "identifier": "sha256Test",
+                "newPage": false,
+                "searchKey": "sha256.sha256Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sha256Test struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sha256Test struct {\n\tout       string\n\tin        string\n\thalfState string // marshaled hash state after first half of in written, used by TestGoldenMarshal\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#unmarshalTest",
+              "documentation": {
+                "identifier": "unmarshalTest",
+                "newPage": false,
+                "searchKey": "sha256.unmarshalTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type unmarshalTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype unmarshalTest struct {\n\tstate string\n\tsum   string\n}\n```\n\nTests for unmarshaling hashes that have hashed a large amount of data The initial hash generation is omitted from the test, because it takes a long time. The test contains some already-generated states, and their expected sums Tests a problem that is outlined in GitHub issue #29517 The problem is triggered when an amount of data has been hashed for which the data length has a 1 in the 32nd bit. When casted to int, this changes the sign of the value, and causes the modulus operation to return a different result. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/sha256#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "sha256.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#appendUint64",
+              "documentation": {
+                "identifier": "appendUint64",
+                "newPage": false,
+                "searchKey": "sha256.appendUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendUint64(b []byte, x uint64) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendUint64(b []byte, x uint64) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#appendUint32",
+              "documentation": {
+                "identifier": "appendUint32",
+                "newPage": false,
+                "searchKey": "sha256.appendUint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendUint32(b []byte, x uint32) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendUint32(b []byte, x uint32) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#consumeUint64",
+              "documentation": {
+                "identifier": "consumeUint64",
+                "newPage": false,
+                "searchKey": "sha256.consumeUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func consumeUint64(b []byte) ([]byte, uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc consumeUint64(b []byte) ([]byte, uint64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#consumeUint32",
+              "documentation": {
+                "identifier": "consumeUint32",
+                "newPage": false,
+                "searchKey": "sha256.consumeUint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func consumeUint32(b []byte) ([]byte, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc consumeUint32(b []byte) ([]byte, uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#New",
+              "documentation": {
+                "identifier": "New",
+                "newPage": false,
+                "searchKey": "sha256.New",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New() hash.Hash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New() hash.Hash\n```\n\nNew returns a new hash.Hash computing the SHA256 checksum. The Hash also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#New224",
+              "documentation": {
+                "identifier": "New224",
+                "newPage": false,
+                "searchKey": "sha256.New224",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New224() hash.Hash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New224() hash.Hash\n```\n\nNew224 returns a new hash.Hash computing the SHA224 checksum. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#Sum256",
+              "documentation": {
+                "identifier": "Sum256",
+                "newPage": false,
+                "searchKey": "sha256.Sum256",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sum256(data []byte) [Size]byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sum256(data []byte) [Size]byte\n```\n\nSum256 returns the SHA256 checksum of the data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#Sum224",
+              "documentation": {
+                "identifier": "Sum224",
+                "newPage": false,
+                "searchKey": "sha256.Sum224",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sum224(data []byte) (sum224 [Size224]byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sum224(data []byte) (sum224 [Size224]byte)\n```\n\nSum224 returns the SHA224 checksum of the data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#blockGeneric",
+              "documentation": {
+                "identifier": "blockGeneric",
+                "newPage": false,
+                "searchKey": "sha256.blockGeneric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func blockGeneric(dig *digest, p []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc blockGeneric(dig *digest, p []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#block",
+              "documentation": {
+                "identifier": "block",
+                "newPage": false,
+                "searchKey": "sha256.block",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func block(dig *digest, p []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc block(dig *digest, p []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#TestGolden",
+              "documentation": {
+                "identifier": "TestGolden",
+                "newPage": false,
+                "searchKey": "sha256.TestGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#TestGoldenMarshal",
+              "documentation": {
+                "identifier": "TestGoldenMarshal",
+                "newPage": false,
+                "searchKey": "sha256.TestGoldenMarshal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGoldenMarshal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGoldenMarshal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#TestMarshalTypeMismatch",
+              "documentation": {
+                "identifier": "TestMarshalTypeMismatch",
+                "newPage": false,
+                "searchKey": "sha256.TestMarshalTypeMismatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarshalTypeMismatch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarshalTypeMismatch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#TestSize",
+              "documentation": {
+                "identifier": "TestSize",
+                "newPage": false,
+                "searchKey": "sha256.TestSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#TestBlockSize",
+              "documentation": {
+                "identifier": "TestBlockSize",
+                "newPage": false,
+                "searchKey": "sha256.TestBlockSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBlockSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBlockSize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#TestBlockGeneric",
+              "documentation": {
+                "identifier": "TestBlockGeneric",
+                "newPage": false,
+                "searchKey": "sha256.TestBlockGeneric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBlockGeneric(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBlockGeneric(t *testing.T)\n```\n\nTests that blockGeneric (pure Go) and block (in assembly for some architectures) match. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#safeSum",
+              "documentation": {
+                "identifier": "safeSum",
+                "newPage": false,
+                "searchKey": "sha256.safeSum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func safeSum(h hash.Hash) (sum []byte, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc safeSum(h hash.Hash) (sum []byte, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#TestLargeHashes",
+              "documentation": {
+                "identifier": "TestLargeHashes",
+                "newPage": false,
+                "searchKey": "sha256.TestLargeHashes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLargeHashes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLargeHashes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#benchmarkSize",
+              "documentation": {
+                "identifier": "benchmarkSize",
+                "newPage": false,
+                "searchKey": "sha256.benchmarkSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkSize(b *testing.B, size int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkSize(b *testing.B, size int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#BenchmarkHash8Bytes",
+              "documentation": {
+                "identifier": "BenchmarkHash8Bytes",
+                "newPage": false,
+                "searchKey": "sha256.BenchmarkHash8Bytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash8Bytes(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash8Bytes(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#BenchmarkHash1K",
+              "documentation": {
+                "identifier": "BenchmarkHash1K",
+                "newPage": false,
+                "searchKey": "sha256.BenchmarkHash1K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash1K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash1K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/sha256#BenchmarkHash8K",
+              "documentation": {
+                "identifier": "BenchmarkHash8K",
+                "newPage": false,
+                "searchKey": "sha256.BenchmarkHash8K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHash8K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHash8K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,3840 @@
+{
+  "pathID": "/std/image/jpeg",
+  "documentation": {
+    "identifier": "jpeg",
+    "newPage": true,
+    "searchKey": "std/image/jpeg",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package jpeg"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package jpeg implements a JPEG image decoder and encoder. \n\nJPEG is defined in ITU-T T.81: [https://www.w3.org/Graphics/JPEG/itu-t81.pdf](https://www.w3.org/Graphics/JPEG/itu-t81.pdf). \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/image/jpeg#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_0_298631336",
+              "documentation": {
+                "identifier": "fix_0_298631336",
+                "newPage": false,
+                "searchKey": "jpeg.fix_0_298631336",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_0_298631336"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_0_298631336 = 2446\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_0_390180644",
+              "documentation": {
+                "identifier": "fix_0_390180644",
+                "newPage": false,
+                "searchKey": "jpeg.fix_0_390180644",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_0_390180644"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_0_390180644 = 3196\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_0_541196100",
+              "documentation": {
+                "identifier": "fix_0_541196100",
+                "newPage": false,
+                "searchKey": "jpeg.fix_0_541196100",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_0_541196100"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_0_541196100 = 4433\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_0_765366865",
+              "documentation": {
+                "identifier": "fix_0_765366865",
+                "newPage": false,
+                "searchKey": "jpeg.fix_0_765366865",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_0_765366865"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_0_765366865 = 6270\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_0_899976223",
+              "documentation": {
+                "identifier": "fix_0_899976223",
+                "newPage": false,
+                "searchKey": "jpeg.fix_0_899976223",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_0_899976223"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_0_899976223 = 7373\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_1_175875602",
+              "documentation": {
+                "identifier": "fix_1_175875602",
+                "newPage": false,
+                "searchKey": "jpeg.fix_1_175875602",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_1_175875602"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_1_175875602 = 9633\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_1_501321110",
+              "documentation": {
+                "identifier": "fix_1_501321110",
+                "newPage": false,
+                "searchKey": "jpeg.fix_1_501321110",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_1_501321110"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_1_501321110 = 12299\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_1_847759065",
+              "documentation": {
+                "identifier": "fix_1_847759065",
+                "newPage": false,
+                "searchKey": "jpeg.fix_1_847759065",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_1_847759065"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_1_847759065 = 15137\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_1_961570560",
+              "documentation": {
+                "identifier": "fix_1_961570560",
+                "newPage": false,
+                "searchKey": "jpeg.fix_1_961570560",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_1_961570560"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_1_961570560 = 16069\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_2_053119869",
+              "documentation": {
+                "identifier": "fix_2_053119869",
+                "newPage": false,
+                "searchKey": "jpeg.fix_2_053119869",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_2_053119869"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_2_053119869 = 16819\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_2_562915447",
+              "documentation": {
+                "identifier": "fix_2_562915447",
+                "newPage": false,
+                "searchKey": "jpeg.fix_2_562915447",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_2_562915447"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_2_562915447 = 20995\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fix_3_072711026",
+              "documentation": {
+                "identifier": "fix_3_072711026",
+                "newPage": false,
+                "searchKey": "jpeg.fix_3_072711026",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fix_3_072711026"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fix_3_072711026 = 25172\n```\n\nTrigonometric constants in 13-bit fixed point format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#constBits",
+              "documentation": {
+                "identifier": "constBits",
+                "newPage": false,
+                "searchKey": "jpeg.constBits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const constBits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst constBits = 13\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#pass1Bits",
+              "documentation": {
+                "identifier": "pass1Bits",
+                "newPage": false,
+                "searchKey": "jpeg.pass1Bits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pass1Bits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pass1Bits = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#centerJSample",
+              "documentation": {
+                "identifier": "centerJSample",
+                "newPage": false,
+                "searchKey": "jpeg.centerJSample",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const centerJSample"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst centerJSample = 128\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#maxCodeLength",
+              "documentation": {
+                "identifier": "maxCodeLength",
+                "newPage": false,
+                "searchKey": "jpeg.maxCodeLength",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxCodeLength"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxCodeLength = 16\n```\n\nmaxCodeLength is the maximum (inclusive) number of bits in a Huffman code. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#maxNCodes",
+              "documentation": {
+                "identifier": "maxNCodes",
+                "newPage": false,
+                "searchKey": "jpeg.maxNCodes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxNCodes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxNCodes = 256\n```\n\nmaxNCodes is the maximum (inclusive) number of codes in a Huffman tree. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#lutSize",
+              "documentation": {
+                "identifier": "lutSize",
+                "newPage": false,
+                "searchKey": "jpeg.lutSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const lutSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst lutSize = 8\n```\n\nlutSize is the log-2 size of the Huffman decoder's look-up table. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#blockSize",
+              "documentation": {
+                "identifier": "blockSize",
+                "newPage": false,
+                "searchKey": "jpeg.blockSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const blockSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst blockSize = 64 // A DCT block is 8x8.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w1",
+              "documentation": {
+                "identifier": "w1",
+                "newPage": false,
+                "searchKey": "jpeg.w1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w1 = 2841 // 2048*sqrt(2)*cos(1*pi/16)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w2",
+              "documentation": {
+                "identifier": "w2",
+                "newPage": false,
+                "searchKey": "jpeg.w2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w2 = 2676 // 2048*sqrt(2)*cos(2*pi/16)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w3",
+              "documentation": {
+                "identifier": "w3",
+                "newPage": false,
+                "searchKey": "jpeg.w3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w3 = 2408 // 2048*sqrt(2)*cos(3*pi/16)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w5",
+              "documentation": {
+                "identifier": "w5",
+                "newPage": false,
+                "searchKey": "jpeg.w5",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w5 = 1609 // 2048*sqrt(2)*cos(5*pi/16)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w6",
+              "documentation": {
+                "identifier": "w6",
+                "newPage": false,
+                "searchKey": "jpeg.w6",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w6"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w6 = 1108 // 2048*sqrt(2)*cos(6*pi/16)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w7",
+              "documentation": {
+                "identifier": "w7",
+                "newPage": false,
+                "searchKey": "jpeg.w7",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w7"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w7 = 565 // 2048*sqrt(2)*cos(7*pi/16)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w1pw7",
+              "documentation": {
+                "identifier": "w1pw7",
+                "newPage": false,
+                "searchKey": "jpeg.w1pw7",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w1pw7"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w1pw7 = w1 + w7\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w1mw7",
+              "documentation": {
+                "identifier": "w1mw7",
+                "newPage": false,
+                "searchKey": "jpeg.w1mw7",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w1mw7"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w1mw7 = w1 - w7\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w2pw6",
+              "documentation": {
+                "identifier": "w2pw6",
+                "newPage": false,
+                "searchKey": "jpeg.w2pw6",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w2pw6"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w2pw6 = w2 + w6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w2mw6",
+              "documentation": {
+                "identifier": "w2mw6",
+                "newPage": false,
+                "searchKey": "jpeg.w2mw6",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w2mw6"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w2mw6 = w2 - w6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w3pw5",
+              "documentation": {
+                "identifier": "w3pw5",
+                "newPage": false,
+                "searchKey": "jpeg.w3pw5",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w3pw5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w3pw5 = w3 + w5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#w3mw5",
+              "documentation": {
+                "identifier": "w3mw5",
+                "newPage": false,
+                "searchKey": "jpeg.w3mw5",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const w3mw5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst w3mw5 = w3 - w5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#r2",
+              "documentation": {
+                "identifier": "r2",
+                "newPage": false,
+                "searchKey": "jpeg.r2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const r2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst r2 = 181 // 256/sqrt(2)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#dcTable",
+              "documentation": {
+                "identifier": "dcTable",
+                "newPage": false,
+                "searchKey": "jpeg.dcTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dcTable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dcTable = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#acTable",
+              "documentation": {
+                "identifier": "acTable",
+                "newPage": false,
+                "searchKey": "jpeg.acTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const acTable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst acTable = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#maxTc",
+              "documentation": {
+                "identifier": "maxTc",
+                "newPage": false,
+                "searchKey": "jpeg.maxTc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxTc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxTc = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#maxTh",
+              "documentation": {
+                "identifier": "maxTh",
+                "newPage": false,
+                "searchKey": "jpeg.maxTh",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxTh"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxTh = 3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#maxTq",
+              "documentation": {
+                "identifier": "maxTq",
+                "newPage": false,
+                "searchKey": "jpeg.maxTq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxTq"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxTq = 3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#maxComponents",
+              "documentation": {
+                "identifier": "maxComponents",
+                "newPage": false,
+                "searchKey": "jpeg.maxComponents",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxComponents"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxComponents = 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#sof0Marker",
+              "documentation": {
+                "identifier": "sof0Marker",
+                "newPage": false,
+                "searchKey": "jpeg.sof0Marker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sof0Marker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sof0Marker = 0xc0 // Start Of Frame (Baseline Sequential).\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#sof1Marker",
+              "documentation": {
+                "identifier": "sof1Marker",
+                "newPage": false,
+                "searchKey": "jpeg.sof1Marker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sof1Marker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sof1Marker = 0xc1 // Start Of Frame (Extended Sequential).\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#sof2Marker",
+              "documentation": {
+                "identifier": "sof2Marker",
+                "newPage": false,
+                "searchKey": "jpeg.sof2Marker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sof2Marker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sof2Marker = 0xc2 // Start Of Frame (Progressive).\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#dhtMarker",
+              "documentation": {
+                "identifier": "dhtMarker",
+                "newPage": false,
+                "searchKey": "jpeg.dhtMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dhtMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dhtMarker = 0xc4 // Define Huffman Table.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#rst0Marker",
+              "documentation": {
+                "identifier": "rst0Marker",
+                "newPage": false,
+                "searchKey": "jpeg.rst0Marker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rst0Marker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rst0Marker = 0xd0 // ReSTart (0).\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#rst7Marker",
+              "documentation": {
+                "identifier": "rst7Marker",
+                "newPage": false,
+                "searchKey": "jpeg.rst7Marker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rst7Marker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rst7Marker = 0xd7 // ReSTart (7).\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#soiMarker",
+              "documentation": {
+                "identifier": "soiMarker",
+                "newPage": false,
+                "searchKey": "jpeg.soiMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const soiMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst soiMarker = 0xd8 // Start Of Image.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#eoiMarker",
+              "documentation": {
+                "identifier": "eoiMarker",
+                "newPage": false,
+                "searchKey": "jpeg.eoiMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const eoiMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst eoiMarker = 0xd9 // End Of Image.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#sosMarker",
+              "documentation": {
+                "identifier": "sosMarker",
+                "newPage": false,
+                "searchKey": "jpeg.sosMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sosMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sosMarker = 0xda // Start Of Scan.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#dqtMarker",
+              "documentation": {
+                "identifier": "dqtMarker",
+                "newPage": false,
+                "searchKey": "jpeg.dqtMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dqtMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dqtMarker = 0xdb // Define Quantization Table.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#driMarker",
+              "documentation": {
+                "identifier": "driMarker",
+                "newPage": false,
+                "searchKey": "jpeg.driMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const driMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst driMarker = 0xdd // Define Restart Interval.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#comMarker",
+              "documentation": {
+                "identifier": "comMarker",
+                "newPage": false,
+                "searchKey": "jpeg.comMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const comMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst comMarker = 0xfe // COMment.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#app0Marker",
+              "documentation": {
+                "identifier": "app0Marker",
+                "newPage": false,
+                "searchKey": "jpeg.app0Marker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const app0Marker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst app0Marker = 0xe0\n```\n\n\"APPlication specific\" markers aren't part of the JPEG spec per se, but in practice, their use is described at [https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html](https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#app14Marker",
+              "documentation": {
+                "identifier": "app14Marker",
+                "newPage": false,
+                "searchKey": "jpeg.app14Marker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const app14Marker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst app14Marker = 0xee\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#app15Marker",
+              "documentation": {
+                "identifier": "app15Marker",
+                "newPage": false,
+                "searchKey": "jpeg.app15Marker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const app15Marker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst app15Marker = 0xef\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#adobeTransformUnknown",
+              "documentation": {
+                "identifier": "adobeTransformUnknown",
+                "newPage": false,
+                "searchKey": "jpeg.adobeTransformUnknown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const adobeTransformUnknown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst adobeTransformUnknown = 0\n```\n\nSee [https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe](https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#adobeTransformYCbCr",
+              "documentation": {
+                "identifier": "adobeTransformYCbCr",
+                "newPage": false,
+                "searchKey": "jpeg.adobeTransformYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const adobeTransformYCbCr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst adobeTransformYCbCr = 1\n```\n\nSee [https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe](https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#adobeTransformYCbCrK",
+              "documentation": {
+                "identifier": "adobeTransformYCbCrK",
+                "newPage": false,
+                "searchKey": "jpeg.adobeTransformYCbCrK",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const adobeTransformYCbCrK"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst adobeTransformYCbCrK = 2\n```\n\nSee [https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe](https://www.sno.phy.queensu.ca/~phil/exiftool/TagNames/JPEG.html#Adobe) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#quantIndexLuminance",
+              "documentation": {
+                "identifier": "quantIndexLuminance",
+                "newPage": false,
+                "searchKey": "jpeg.quantIndexLuminance",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const quantIndexLuminance"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst quantIndexLuminance quantIndex = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#quantIndexChrominance",
+              "documentation": {
+                "identifier": "quantIndexChrominance",
+                "newPage": false,
+                "searchKey": "jpeg.quantIndexChrominance",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const quantIndexChrominance"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst quantIndexChrominance\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#nQuantIndex",
+              "documentation": {
+                "identifier": "nQuantIndex",
+                "newPage": false,
+                "searchKey": "jpeg.nQuantIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const nQuantIndex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst nQuantIndex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#huffIndexLuminanceDC",
+              "documentation": {
+                "identifier": "huffIndexLuminanceDC",
+                "newPage": false,
+                "searchKey": "jpeg.huffIndexLuminanceDC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const huffIndexLuminanceDC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst huffIndexLuminanceDC huffIndex = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#huffIndexLuminanceAC",
+              "documentation": {
+                "identifier": "huffIndexLuminanceAC",
+                "newPage": false,
+                "searchKey": "jpeg.huffIndexLuminanceAC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const huffIndexLuminanceAC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst huffIndexLuminanceAC\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#huffIndexChrominanceDC",
+              "documentation": {
+                "identifier": "huffIndexChrominanceDC",
+                "newPage": false,
+                "searchKey": "jpeg.huffIndexChrominanceDC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const huffIndexChrominanceDC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst huffIndexChrominanceDC\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#huffIndexChrominanceAC",
+              "documentation": {
+                "identifier": "huffIndexChrominanceAC",
+                "newPage": false,
+                "searchKey": "jpeg.huffIndexChrominanceAC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const huffIndexChrominanceAC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst huffIndexChrominanceAC\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#nHuffIndex",
+              "documentation": {
+                "identifier": "nHuffIndex",
+                "newPage": false,
+                "searchKey": "jpeg.nHuffIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const nHuffIndex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst nHuffIndex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#DefaultQuality",
+              "documentation": {
+                "identifier": "DefaultQuality",
+                "newPage": false,
+                "searchKey": "jpeg.DefaultQuality",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultQuality"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultQuality = 75\n```\n\nDefaultQuality is the default quality encoding parameter. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/jpeg#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#errShortHuffmanData",
+              "documentation": {
+                "identifier": "errShortHuffmanData",
+                "newPage": false,
+                "searchKey": "jpeg.errShortHuffmanData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errShortHuffmanData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errShortHuffmanData = FormatError(\"short Huffman data\")\n```\n\nerrShortHuffmanData means that an unexpected EOF occurred while decoding Huffman data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#errUnsupportedSubsamplingRatio",
+              "documentation": {
+                "identifier": "errUnsupportedSubsamplingRatio",
+                "newPage": false,
+                "searchKey": "jpeg.errUnsupportedSubsamplingRatio",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errUnsupportedSubsamplingRatio"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errUnsupportedSubsamplingRatio = UnsupportedError(\"luma/chroma subsampling ratio\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#unzig",
+              "documentation": {
+                "identifier": "unzig",
+                "newPage": false,
+                "searchKey": "jpeg.unzig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var unzig"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar unzig = ...\n```\n\nunzig maps from the zig-zag ordering to the natural ordering. For example, unzig[3] is the column and row of the fourth element in zig-zag order. The value is 16, which means first column (16%8 == 0) and third row (16/8 == 2). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#errMissingFF00",
+              "documentation": {
+                "identifier": "errMissingFF00",
+                "newPage": false,
+                "searchKey": "jpeg.errMissingFF00",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errMissingFF00"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errMissingFF00 = FormatError(\"missing 0xff00 sequence\")\n```\n\nerrMissingFF00 means that readByteStuffedByte encountered an 0xff byte (a marker byte) that wasn't the expected byte-stuffed sequence 0xff, 0x00. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#bitCount",
+              "documentation": {
+                "identifier": "bitCount",
+                "newPage": false,
+                "searchKey": "jpeg.bitCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bitCount"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bitCount = ...\n```\n\nbitCount counts the number of bits needed to hold an integer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#unscaledQuant",
+              "documentation": {
+                "identifier": "unscaledQuant",
+                "newPage": false,
+                "searchKey": "jpeg.unscaledQuant",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var unscaledQuant"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar unscaledQuant = ...\n```\n\nunscaledQuant are the unscaled quantization tables in zig-zag order. Each encoder copies and scales the tables according to its quality parameter. The values are derived from section K.1 after converting from natural to zig-zag order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#theHuffmanSpec",
+              "documentation": {
+                "identifier": "theHuffmanSpec",
+                "newPage": false,
+                "searchKey": "jpeg.theHuffmanSpec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var theHuffmanSpec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar theHuffmanSpec = ...\n```\n\ntheHuffmanSpec is the Huffman encoding specifications. This encoder uses the same Huffman encoding for all images. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#theHuffmanLUT",
+              "documentation": {
+                "identifier": "theHuffmanLUT",
+                "newPage": false,
+                "searchKey": "jpeg.theHuffmanLUT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var theHuffmanLUT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar theHuffmanLUT [4]huffmanLUT\n```\n\ntheHuffmanLUT are compiled representations of theHuffmanSpec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#sosHeaderY",
+              "documentation": {
+                "identifier": "sosHeaderY",
+                "newPage": false,
+                "searchKey": "jpeg.sosHeaderY",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sosHeaderY"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sosHeaderY = []byte{\n\t0xff, 0xda, 0x00, 0x08, 0x01, 0x01, 0x00, 0x00, 0x3f, 0x00,\n}\n```\n\nsosHeaderY is the SOS marker \"\\xff\\xda\" followed by 8 bytes: \n\n```\n- the marker length \"\\x00\\x08\",\n- the number of components \"\\x01\",\n- component 1 uses DC table 0 and AC table 0 \"\\x01\\x00\",\n- the bytes \"\\x00\\x3f\\x00\". Section B.2.3 of the spec says that for\n  sequential DCTs, those bytes (8-bit Ss, 8-bit Se, 4-bit Ah, 4-bit Al)\n  should be 0x00, 0x3f, 0x00<<4 | 0x00.\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#sosHeaderYCbCr",
+              "documentation": {
+                "identifier": "sosHeaderYCbCr",
+                "newPage": false,
+                "searchKey": "jpeg.sosHeaderYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sosHeaderYCbCr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sosHeaderYCbCr = ...\n```\n\nsosHeaderYCbCr is the SOS marker \"\\xff\\xda\" followed by 12 bytes: \n\n```\n- the marker length \"\\x00\\x0c\",\n- the number of components \"\\x03\",\n- component 1 uses DC table 0 and AC table 0 \"\\x01\\x00\",\n- component 2 uses DC table 1 and AC table 1 \"\\x02\\x11\",\n- component 3 uses DC table 1 and AC table 1 \"\\x03\\x11\",\n- the bytes \"\\x00\\x3f\\x00\". Section B.2.3 of the spec says that for\n  sequential DCTs, those bytes (8-bit Ss, 8-bit Se, 4-bit Ah, 4-bit Al)\n  should be 0x00, 0x3f, 0x00<<4 | 0x00.\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#cosines",
+              "documentation": {
+                "identifier": "cosines",
+                "newPage": false,
+                "searchKey": "jpeg.cosines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cosines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cosines [32]float64 // cosines[k] = cos(π/2 * k/8)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#testBlocks",
+              "documentation": {
+                "identifier": "testBlocks",
+                "newPage": false,
+                "searchKey": "jpeg.testBlocks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testBlocks"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testBlocks = ...\n```\n\ntestBlocks are the first 10 pre-IDCT blocks from ../testdata/video-001.jpeg. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#zigzag",
+              "documentation": {
+                "identifier": "zigzag",
+                "newPage": false,
+                "searchKey": "jpeg.zigzag",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var zigzag"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar zigzag = ...\n```\n\nzigzag maps from the natural ordering to the zig-zag ordering. For example, zigzag[0*8 + 3] is the zig-zag sequence number of the element in the fourth column and first row. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#unscaledQuantInNaturalOrder",
+              "documentation": {
+                "identifier": "unscaledQuantInNaturalOrder",
+                "newPage": false,
+                "searchKey": "jpeg.unscaledQuantInNaturalOrder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var unscaledQuantInNaturalOrder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar unscaledQuantInNaturalOrder = ...\n```\n\nunscaledQuantInNaturalOrder are the unscaled quantization tables in natural (not zig-zag) order, as specified in section K.1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#testCase",
+              "documentation": {
+                "identifier": "testCase",
+                "newPage": false,
+                "searchKey": "jpeg.testCase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testCase"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testCase = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/jpeg#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#huffman",
+              "documentation": {
+                "identifier": "huffman",
+                "newPage": false,
+                "searchKey": "jpeg.huffman",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type huffman struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype huffman struct {\n\t// length is the number of codes in the tree.\n\tnCodes int32\n\t// lut is the look-up table for the next lutSize bits in the bit-stream.\n\t// The high 8 bits of the uint16 are the encoded value. The low 8 bits\n\t// are 1 plus the code length, or 0 if the value is too large to fit in\n\t// lutSize bits.\n\tlut [1 << lutSize]uint16\n\t// vals are the decoded values, sorted by their encoding.\n\tvals [maxNCodes]uint8\n\t// minCodes[i] is the minimum code of length i, or -1 if there are no\n\t// codes of that length.\n\tminCodes [maxCodeLength]int32\n\t// maxCodes[i] is the maximum code of length i, or -1 if there are no\n\t// codes of that length.\n\tmaxCodes [maxCodeLength]int32\n\t// valsIndices[i] is the index into vals of minCodes[i].\n\tvalsIndices [maxCodeLength]int32\n}\n```\n\nhuffman is a Huffman decoder, specified in section C. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#block",
+              "documentation": {
+                "identifier": "block",
+                "newPage": false,
+                "searchKey": "jpeg.block",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type block [64]int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype block [blockSize]int32\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#block.String",
+                    "documentation": {
+                      "identifier": "block.String",
+                      "newPage": false,
+                      "searchKey": "jpeg.block.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *block) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *block) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#FormatError",
+              "documentation": {
+                "identifier": "FormatError",
+                "newPage": false,
+                "searchKey": "jpeg.FormatError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FormatError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FormatError string\n```\n\nA FormatError reports that the input is not a valid JPEG. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#FormatError.Error",
+                    "documentation": {
+                      "identifier": "FormatError.Error",
+                      "newPage": false,
+                      "searchKey": "jpeg.FormatError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e FormatError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e FormatError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#UnsupportedError",
+              "documentation": {
+                "identifier": "UnsupportedError",
+                "newPage": false,
+                "searchKey": "jpeg.UnsupportedError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnsupportedError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnsupportedError string\n```\n\nAn UnsupportedError reports that the input uses a valid but unimplemented JPEG feature. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#UnsupportedError.Error",
+                    "documentation": {
+                      "identifier": "UnsupportedError.Error",
+                      "newPage": false,
+                      "searchKey": "jpeg.UnsupportedError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnsupportedError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnsupportedError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#component",
+              "documentation": {
+                "identifier": "component",
+                "newPage": false,
+                "searchKey": "jpeg.component",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type component struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype component struct {\n\th  int   // Horizontal sampling factor.\n\tv  int   // Vertical sampling factor.\n\tc  uint8 // Component identifier.\n\ttq uint8 // Quantization table destination selector.\n}\n```\n\nComponent specification, specified in section B.2.2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#Reader",
+              "documentation": {
+                "identifier": "Reader",
+                "newPage": false,
+                "searchKey": "jpeg.Reader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reader interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reader interface {\n\tio.ByteReader\n\tio.Reader\n}\n```\n\nDeprecated: Reader is not used by the image/jpeg package and should not be used by others. It is kept for compatibility. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#bits",
+              "documentation": {
+                "identifier": "bits",
+                "newPage": false,
+                "searchKey": "jpeg.bits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bits struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bits struct {\n\ta uint32 // accumulator.\n\tm uint32 // mask. m==1<<(n-1) when n>0, with m==0 when n==0.\n\tn int32  // the number of unread bits in a.\n}\n```\n\nbits holds the unprocessed bits that have been taken from the byte-stream. The n least significant bits of a form the unread bits, to be read in MSB to LSB order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#decoder",
+              "documentation": {
+                "identifier": "decoder",
+                "newPage": false,
+                "searchKey": "jpeg.decoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type decoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype decoder struct {\n\tr    io.Reader\n\tbits bits\n\t// bytes is a byte buffer, similar to a bufio.Reader, except that it\n\t// has to be able to unread more than 1 byte, due to byte stuffing.\n\t// Byte stuffing is specified in section F.1.2.3.\n\tbytes struct {\n\t\t// buf[i:j] are the buffered bytes read from the underlying\n\t\t// io.Reader that haven't yet been passed further on.\n\t\tbuf  [4096]byte\n\t\ti, j int\n\t\t// nUnreadable is the number of bytes to back up i after\n\t\t// overshooting. It can be 0, 1 or 2.\n\t\tnUnreadable int\n\t}\n\twidth, height int\n\n\timg1        *image.Gray\n\timg3        *image.YCbCr\n\tblackPix    []byte\n\tblackStride int\n\n\tri    int // Restart Interval.\n\tnComp int\n\n\t// As per section 4.5, there are four modes of operation (selected by the\n\t// SOF? markers): sequential DCT, progressive DCT, lossless and\n\t// hierarchical, although this implementation does not support the latter\n\t// two non-DCT modes. Sequential DCT is further split into baseline and\n\t// extended, as per section 4.11.\n\tbaseline    bool\n\tprogressive bool\n\n\tjfif                bool\n\tadobeTransformValid bool\n\tadobeTransform      uint8\n\teobRun              uint16 // End-of-Band run, specified in section G.1.2.2.\n\n\tcomp       [maxComponents]component\n\tprogCoeffs [maxComponents][]block // Saved state between progressive-mode scans.\n\thuff       [maxTc + 1][maxTh + 1]huffman\n\tquant      [maxTq + 1]block // Quantization tables, in zig-zag order.\n\ttmp        [2 * blockSize]byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.ensureNBits",
+                    "documentation": {
+                      "identifier": "decoder.ensureNBits",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.ensureNBits",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) ensureNBits(n int32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) ensureNBits(n int32) error\n```\n\nensureNBits reads bytes from the byte buffer to ensure that d.bits.n is at least n. For best performance (avoiding function calls inside hot loops), the caller is the one responsible for first checking that d.bits.n < n. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.receiveExtend",
+                    "documentation": {
+                      "identifier": "decoder.receiveExtend",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.receiveExtend",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) receiveExtend(t uint8) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) receiveExtend(t uint8) (int32, error)\n```\n\nreceiveExtend is the composition of RECEIVE and EXTEND, specified in section F.2.2.1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.processDHT",
+                    "documentation": {
+                      "identifier": "decoder.processDHT",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.processDHT",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) processDHT(n int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) processDHT(n int) error\n```\n\nprocessDHT processes a Define Huffman Table marker, and initializes a huffman struct from its contents. Specified in section B.2.4.2. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.decodeHuffman",
+                    "documentation": {
+                      "identifier": "decoder.decodeHuffman",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.decodeHuffman",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) decodeHuffman(h *huffman) (uint8, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) decodeHuffman(h *huffman) (uint8, error)\n```\n\ndecodeHuffman returns the next Huffman-coded value from the bit-stream, decoded according to h. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.decodeBit",
+                    "documentation": {
+                      "identifier": "decoder.decodeBit",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.decodeBit",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) decodeBit() (bool, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) decodeBit() (bool, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.decodeBits",
+                    "documentation": {
+                      "identifier": "decoder.decodeBits",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.decodeBits",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) decodeBits(n int32) (uint32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) decodeBits(n int32) (uint32, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.fill",
+                    "documentation": {
+                      "identifier": "decoder.fill",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.fill",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) fill() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) fill() error\n```\n\nfill fills up the d.bytes.buf buffer from the underlying io.Reader. It should only be called when there are no unread bytes in d.bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.unreadByteStuffedByte",
+                    "documentation": {
+                      "identifier": "decoder.unreadByteStuffedByte",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.unreadByteStuffedByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) unreadByteStuffedByte()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) unreadByteStuffedByte()\n```\n\nunreadByteStuffedByte undoes the most recent readByteStuffedByte call, giving a byte of data back from d.bits to d.bytes. The Huffman look-up table requires at least 8 bits for look-up, which means that Huffman decoding can sometimes overshoot and read one or two too many bytes. Two-byte overshoot can happen when expecting to read a 0xff 0x00 byte-stuffed byte. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.readByte",
+                    "documentation": {
+                      "identifier": "decoder.readByte",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.readByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) readByte() (x byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) readByte() (x byte, err error)\n```\n\nreadByte returns the next byte, whether buffered or not buffered. It does not care about byte stuffing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.readByteStuffedByte",
+                    "documentation": {
+                      "identifier": "decoder.readByteStuffedByte",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.readByteStuffedByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) readByteStuffedByte() (x byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) readByteStuffedByte() (x byte, err error)\n```\n\nreadByteStuffedByte is like readByte but is for byte-stuffed Huffman data. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.readFull",
+                    "documentation": {
+                      "identifier": "decoder.readFull",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.readFull",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) readFull(p []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) readFull(p []byte) error\n```\n\nreadFull reads exactly len(p) bytes into p. It does not care about byte stuffing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.ignore",
+                    "documentation": {
+                      "identifier": "decoder.ignore",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.ignore",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) ignore(n int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) ignore(n int) error\n```\n\nignore ignores the next n bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.processSOF",
+                    "documentation": {
+                      "identifier": "decoder.processSOF",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.processSOF",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) processSOF(n int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) processSOF(n int) error\n```\n\nSpecified in section B.2.2. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.processDQT",
+                    "documentation": {
+                      "identifier": "decoder.processDQT",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.processDQT",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) processDQT(n int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) processDQT(n int) error\n```\n\nSpecified in section B.2.4.1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.processDRI",
+                    "documentation": {
+                      "identifier": "decoder.processDRI",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.processDRI",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) processDRI(n int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) processDRI(n int) error\n```\n\nSpecified in section B.2.4.4. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.processApp0Marker",
+                    "documentation": {
+                      "identifier": "decoder.processApp0Marker",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.processApp0Marker",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) processApp0Marker(n int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) processApp0Marker(n int) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.processApp14Marker",
+                    "documentation": {
+                      "identifier": "decoder.processApp14Marker",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.processApp14Marker",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) processApp14Marker(n int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) processApp14Marker(n int) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.decode",
+                    "documentation": {
+                      "identifier": "decoder.decode",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.decode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) decode(r io.Reader, configOnly bool) (image.Image, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) decode(r io.Reader, configOnly bool) (image.Image, error)\n```\n\ndecode reads a JPEG image from r and returns it as an image.Image. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.applyBlack",
+                    "documentation": {
+                      "identifier": "decoder.applyBlack",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.applyBlack",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) applyBlack() (image.Image, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) applyBlack() (image.Image, error)\n```\n\napplyBlack combines d.img3 and d.blackPix into a CMYK image. The formula used depends on whether the JPEG image is stored as CMYK or YCbCrK, indicated by the APP14 (Adobe) metadata. \n\nAdobe CMYK JPEG images are inverted, where 255 means no ink instead of full ink, so we apply \"v = 255 - v\" at various points. Note that a double inversion is a no-op, so inversions might be implicit in the code below. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.isRGB",
+                    "documentation": {
+                      "identifier": "decoder.isRGB",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.isRGB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) isRGB() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) isRGB() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.convertToRGB",
+                    "documentation": {
+                      "identifier": "decoder.convertToRGB",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.convertToRGB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) convertToRGB() (image.Image, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) convertToRGB() (image.Image, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.makeImg",
+                    "documentation": {
+                      "identifier": "decoder.makeImg",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.makeImg",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) makeImg(mxx, myy int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) makeImg(mxx, myy int)\n```\n\nmakeImg allocates and initializes the destination image. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.processSOS",
+                    "documentation": {
+                      "identifier": "decoder.processSOS",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.processSOS",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) processSOS(n int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) processSOS(n int) error\n```\n\nSpecified in section B.2.3. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.refine",
+                    "documentation": {
+                      "identifier": "decoder.refine",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.refine",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) refine(b *block, h *huffman, zigStart, zigEnd, delta int32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) refine(b *block, h *huffman, zigStart, zigEnd, delta int32) error\n```\n\nrefine decodes a successive approximation refinement block, as specified in section G.1.2. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.refineNonZeroes",
+                    "documentation": {
+                      "identifier": "decoder.refineNonZeroes",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.refineNonZeroes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) refineNonZeroes(b *block, zig, zigEnd, nz, delta int32) (int32, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) refineNonZeroes(b *block, zig, zigEnd, nz, delta int32) (int32, error)\n```\n\nrefineNonZeroes refines non-zero entries of b in zig-zag order. If nz >= 0, the first nz zero entries are skipped over. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.reconstructProgressiveImage",
+                    "documentation": {
+                      "identifier": "decoder.reconstructProgressiveImage",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.reconstructProgressiveImage",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) reconstructProgressiveImage() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) reconstructProgressiveImage() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#decoder.reconstructBlock",
+                    "documentation": {
+                      "identifier": "decoder.reconstructBlock",
+                      "newPage": false,
+                      "searchKey": "jpeg.decoder.reconstructBlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) reconstructBlock(b *block, bx, by, compIndex int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) reconstructBlock(b *block, bx, by, compIndex int) error\n```\n\nreconstructBlock dequantizes, performs the inverse DCT and stores the block to the image. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#quantIndex",
+              "documentation": {
+                "identifier": "quantIndex",
+                "newPage": false,
+                "searchKey": "jpeg.quantIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type quantIndex int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype quantIndex int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#huffIndex",
+              "documentation": {
+                "identifier": "huffIndex",
+                "newPage": false,
+                "searchKey": "jpeg.huffIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type huffIndex int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype huffIndex int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#huffmanSpec",
+              "documentation": {
+                "identifier": "huffmanSpec",
+                "newPage": false,
+                "searchKey": "jpeg.huffmanSpec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type huffmanSpec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype huffmanSpec struct {\n\t// count[i] is the number of codes of length i bits.\n\tcount [16]byte\n\t// value[i] is the decoded value of the i'th codeword.\n\tvalue []byte\n}\n```\n\nhuffmanSpec specifies a Huffman encoding. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#huffmanLUT",
+              "documentation": {
+                "identifier": "huffmanLUT",
+                "newPage": false,
+                "searchKey": "jpeg.huffmanLUT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type huffmanLUT []uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype huffmanLUT []uint32\n```\n\nhuffmanLUT is a compiled look-up table representation of a huffmanSpec. Each value maps to a uint32 of which the 8 most significant bits hold the codeword size in bits and the 24 least significant bits hold the codeword. The maximum codeword size is 16 bits. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#huffmanLUT.init",
+                    "documentation": {
+                      "identifier": "huffmanLUT.init",
+                      "newPage": false,
+                      "searchKey": "jpeg.huffmanLUT.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *huffmanLUT) init(s huffmanSpec)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *huffmanLUT) init(s huffmanSpec)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#writer",
+              "documentation": {
+                "identifier": "writer",
+                "newPage": false,
+                "searchKey": "jpeg.writer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writer interface {\n\tFlush() error\n\tio.Writer\n\tio.ByteWriter\n}\n```\n\nwriter is a buffered writer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#encoder",
+              "documentation": {
+                "identifier": "encoder",
+                "newPage": false,
+                "searchKey": "jpeg.encoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encoder struct {\n\t// w is the writer to write to. err is the first error encountered during\n\t// writing. All attempted writes after the first error become no-ops.\n\tw   writer\n\terr error\n\t// buf is a scratch buffer.\n\tbuf [16]byte\n\t// bits and nBits are accumulated bits to write to w.\n\tbits, nBits uint32\n\t// quant is the scaled quantization tables, in zig-zag order.\n\tquant [nQuantIndex][blockSize]byte\n}\n```\n\nencoder encodes an image to the JPEG format. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.flush",
+                    "documentation": {
+                      "identifier": "encoder.flush",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.flush",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) flush()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) flush()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.write",
+                    "documentation": {
+                      "identifier": "encoder.write",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) write(p []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) write(p []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.writeByte",
+                    "documentation": {
+                      "identifier": "encoder.writeByte",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.writeByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeByte(b byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeByte(b byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.emit",
+                    "documentation": {
+                      "identifier": "encoder.emit",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.emit",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) emit(bits, nBits uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) emit(bits, nBits uint32)\n```\n\nemit emits the least significant nBits bits of bits to the bit-stream. The precondition is bits < 1<<nBits && nBits <= 16. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.emitHuff",
+                    "documentation": {
+                      "identifier": "encoder.emitHuff",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.emitHuff",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) emitHuff(h huffIndex, value int32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) emitHuff(h huffIndex, value int32)\n```\n\nemitHuff emits the given value with the given Huffman encoder. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.emitHuffRLE",
+                    "documentation": {
+                      "identifier": "encoder.emitHuffRLE",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.emitHuffRLE",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) emitHuffRLE(h huffIndex, runLength, value int32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) emitHuffRLE(h huffIndex, runLength, value int32)\n```\n\nemitHuffRLE emits a run of runLength copies of value encoded with the given Huffman encoder. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.writeMarkerHeader",
+                    "documentation": {
+                      "identifier": "encoder.writeMarkerHeader",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.writeMarkerHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeMarkerHeader(marker uint8, markerlen int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeMarkerHeader(marker uint8, markerlen int)\n```\n\nwriteMarkerHeader writes the header for a marker with the given length. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.writeDQT",
+                    "documentation": {
+                      "identifier": "encoder.writeDQT",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.writeDQT",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeDQT()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeDQT()\n```\n\nwriteDQT writes the Define Quantization Table marker. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.writeSOF0",
+                    "documentation": {
+                      "identifier": "encoder.writeSOF0",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.writeSOF0",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeSOF0(size image.Point, nComponent int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeSOF0(size image.Point, nComponent int)\n```\n\nwriteSOF0 writes the Start Of Frame (Baseline Sequential) marker. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.writeDHT",
+                    "documentation": {
+                      "identifier": "encoder.writeDHT",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.writeDHT",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeDHT(nComponent int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeDHT(nComponent int)\n```\n\nwriteDHT writes the Define Huffman Table marker. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.writeBlock",
+                    "documentation": {
+                      "identifier": "encoder.writeBlock",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.writeBlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeBlock(b *block, q quantIndex, prevDC int32) int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeBlock(b *block, q quantIndex, prevDC int32) int32\n```\n\nwriteBlock writes a block of pixel data using the given quantization table, returning the post-quantized DC value of the DCT-transformed block. b is in natural (not zig-zag) order. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#encoder.writeSOS",
+                    "documentation": {
+                      "identifier": "encoder.writeSOS",
+                      "newPage": false,
+                      "searchKey": "jpeg.encoder.writeSOS",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) writeSOS(m image.Image)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) writeSOS(m image.Image)\n```\n\nwriteSOS writes the StartOfScan marker. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#Options",
+              "documentation": {
+                "identifier": "Options",
+                "newPage": false,
+                "searchKey": "jpeg.Options",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Options struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Options struct {\n\tQuality int\n}\n```\n\nOptions are the encoding parameters. Quality ranges from 1 to 100 inclusive, higher is better. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#eofReader",
+              "documentation": {
+                "identifier": "eofReader",
+                "newPage": false,
+                "searchKey": "jpeg.eofReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type eofReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype eofReader struct {\n\tdata     []byte // deliver from Read without EOF\n\tdataEOF  []byte // then deliver from Read with EOF on last chunk\n\tlenAtEOF int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/image/jpeg#eofReader.Read",
+                    "documentation": {
+                      "identifier": "eofReader.Read",
+                      "newPage": false,
+                      "searchKey": "jpeg.eofReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *eofReader) Read(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *eofReader) Read(b []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/image/jpeg#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#fdct",
+              "documentation": {
+                "identifier": "fdct",
+                "newPage": false,
+                "searchKey": "jpeg.fdct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fdct(b *block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fdct(b *block)\n```\n\nfdct performs a forward DCT on an 8x8 block of coefficients, including a level shift. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#idct",
+              "documentation": {
+                "identifier": "idct",
+                "newPage": false,
+                "searchKey": "jpeg.idct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func idct(src *block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc idct(src *block)\n```\n\nidct performs a 2-D Inverse Discrete Cosine Transformation. \n\nThe input coefficients should already have been multiplied by the appropriate quantization table. We use fixed-point computation, with the number of bits for the fractional component varying over the intermediate stages. \n\nFor more on the actual algorithm, see Z. Wang, \"Fast algorithms for the discrete W transform and for the discrete Fourier transform\", IEEE Trans. on ASSP, Vol. ASSP- 32, pp. 803-816, Aug. 1984. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#Decode",
+              "documentation": {
+                "identifier": "Decode",
+                "newPage": false,
+                "searchKey": "jpeg.Decode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Decode(r io.Reader) (image.Image, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Decode(r io.Reader) (image.Image, error)\n```\n\nDecode reads a JPEG image from r and returns it as an image.Image. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#DecodeConfig",
+              "documentation": {
+                "identifier": "DecodeConfig",
+                "newPage": false,
+                "searchKey": "jpeg.DecodeConfig",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecodeConfig(r io.Reader) (image.Config, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecodeConfig(r io.Reader) (image.Config, error)\n```\n\nDecodeConfig returns the color model and dimensions of a JPEG image without decoding the entire image. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "jpeg.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#min",
+              "documentation": {
+                "identifier": "min",
+                "newPage": false,
+                "searchKey": "jpeg.min",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func min(x, y int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc min(x, y int) int\n```\n\nmin returns the minimum of two integers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#div",
+              "documentation": {
+                "identifier": "div",
+                "newPage": false,
+                "searchKey": "jpeg.div",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func div(a, b int32) int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc div(a, b int32) int32\n```\n\ndiv returns a/b rounded to the nearest integer, instead of rounded to zero. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "jpeg.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#toYCbCr",
+              "documentation": {
+                "identifier": "toYCbCr",
+                "newPage": false,
+                "searchKey": "jpeg.toYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func toYCbCr(m image.Image, p image.Point, yBlock, cbBlock, crBlock *block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc toYCbCr(m image.Image, p image.Point, yBlock, cbBlock, crBlock *block)\n```\n\ntoYCbCr converts the 8x8 region of m whose top-left corner is p to its YCbCr values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#grayToY",
+              "documentation": {
+                "identifier": "grayToY",
+                "newPage": false,
+                "searchKey": "jpeg.grayToY",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func grayToY(m *image.Gray, p image.Point, yBlock *block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc grayToY(m *image.Gray, p image.Point, yBlock *block)\n```\n\ngrayToY stores the 8x8 region of m whose top-left corner is p in yBlock. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#rgbaToYCbCr",
+              "documentation": {
+                "identifier": "rgbaToYCbCr",
+                "newPage": false,
+                "searchKey": "jpeg.rgbaToYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func rgbaToYCbCr(m *image.RGBA, p image.Point, yBlock, cbBlock, crBlock *block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc rgbaToYCbCr(m *image.RGBA, p image.Point, yBlock, cbBlock, crBlock *block)\n```\n\nrgbaToYCbCr is a specialized version of toYCbCr for image.RGBA images. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#yCbCrToYCbCr",
+              "documentation": {
+                "identifier": "yCbCrToYCbCr",
+                "newPage": false,
+                "searchKey": "jpeg.yCbCrToYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func yCbCrToYCbCr(m *image.YCbCr, p image.Point, yBlock, cbBlock, crBlock *block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc yCbCrToYCbCr(m *image.YCbCr, p image.Point, yBlock, cbBlock, crBlock *block)\n```\n\nyCbCrToYCbCr is a specialized version of toYCbCr for image.YCbCr images. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#scale",
+              "documentation": {
+                "identifier": "scale",
+                "newPage": false,
+                "searchKey": "jpeg.scale",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scale(dst *block, src *[4]block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scale(dst *block, src *[4]block)\n```\n\nscale scales the 16x16 region represented by the 4 src blocks to the 8x8 dst block. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#Encode",
+              "documentation": {
+                "identifier": "Encode",
+                "newPage": false,
+                "searchKey": "jpeg.Encode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Encode(w io.Writer, m image.Image, o *Options) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Encode(w io.Writer, m image.Image, o *Options) error\n```\n\nEncode writes the Image m to w in JPEG 4:2:0 baseline format with the given options. Default parameters are used if a nil *Options is passed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#benchmarkDCT",
+              "documentation": {
+                "identifier": "benchmarkDCT",
+                "newPage": false,
+                "searchKey": "jpeg.benchmarkDCT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkDCT(b *testing.B, f func(*block))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkDCT(b *testing.B, f func(*block))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#BenchmarkFDCT",
+              "documentation": {
+                "identifier": "BenchmarkFDCT",
+                "newPage": false,
+                "searchKey": "jpeg.BenchmarkFDCT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFDCT(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFDCT(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#BenchmarkIDCT",
+              "documentation": {
+                "identifier": "BenchmarkIDCT",
+                "newPage": false,
+                "searchKey": "jpeg.BenchmarkIDCT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIDCT(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIDCT(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestDCT",
+              "documentation": {
+                "identifier": "TestDCT",
+                "newPage": false,
+                "searchKey": "jpeg.TestDCT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDCT(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDCT(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#differ",
+              "documentation": {
+                "identifier": "differ",
+                "newPage": false,
+                "searchKey": "jpeg.differ",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func differ(b0, b1 *block) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc differ(b0, b1 *block) bool\n```\n\ndiffer reports whether any pair-wise elements in b0 and b1 differ by 2 or more. That tolerance is because there isn't a single definitive decoding of a given JPEG image, even before the YCbCr to RGB conversion; implementations can have different IDCT rounding errors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#alpha",
+              "documentation": {
+                "identifier": "alpha",
+                "newPage": false,
+                "searchKey": "jpeg.alpha",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func alpha(i int) float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc alpha(i int) float64\n```\n\nalpha returns 1 if i is 0 and returns √2 otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "jpeg.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#slowFDCT",
+              "documentation": {
+                "identifier": "slowFDCT",
+                "newPage": false,
+                "searchKey": "jpeg.slowFDCT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slowFDCT(b *block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slowFDCT(b *block)\n```\n\nslowFDCT performs the 8*8 2-dimensional forward discrete cosine transform: \n\n```\ndst[u,v] = (1/8) * Σ_x Σ_y alpha(u) * alpha(v) * src[x,y] *\n\tcos((π/2) * (2*x + 1) * u / 8) *\n\tcos((π/2) * (2*y + 1) * v / 8)\n\n```\nx and y are in pixel space, and u and v are in transform space. \n\nb acts as both dst and src. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#slowIDCT",
+              "documentation": {
+                "identifier": "slowIDCT",
+                "newPage": false,
+                "searchKey": "jpeg.slowIDCT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func slowIDCT(b *block)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc slowIDCT(b *block)\n```\n\nslowIDCT performs the 8*8 2-dimensional inverse discrete cosine transform: \n\n```\ndst[x,y] = (1/8) * Σ_u Σ_v alpha(u) * alpha(v) * src[u,v] *\n\tcos((π/2) * (2*x + 1) * u / 8) *\n\tcos((π/2) * (2*y + 1) * v / 8)\n\n```\nx and y are in pixel space, and u and v are in transform space. \n\nb acts as both dst and src. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestDecodeProgressive",
+              "documentation": {
+                "identifier": "TestDecodeProgressive",
+                "newPage": false,
+                "searchKey": "jpeg.TestDecodeProgressive",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeProgressive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeProgressive(t *testing.T)\n```\n\nTestDecodeProgressive tests that decoding the baseline and progressive versions of the same image result in exactly the same pixel data, in YCbCr space for color images, and Y space for grayscale images. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#decodeFile",
+              "documentation": {
+                "identifier": "decodeFile",
+                "newPage": false,
+                "searchKey": "jpeg.decodeFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decodeFile(filename string) (image.Image, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decodeFile(filename string) (image.Image, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestDecodeEOF",
+              "documentation": {
+                "identifier": "TestDecodeEOF",
+                "newPage": false,
+                "searchKey": "jpeg.TestDecodeEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeEOF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#check",
+              "documentation": {
+                "identifier": "check",
+                "newPage": false,
+                "searchKey": "jpeg.check",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func check(bounds image.Rectangle, pix0, pix1 []byte, stride0, stride1 int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc check(bounds image.Rectangle, pix0, pix1 []byte, stride0, stride1 int) error\n```\n\ncheck checks that the two pix data are equal, within the given bounds. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#pixString",
+              "documentation": {
+                "identifier": "pixString",
+                "newPage": false,
+                "searchKey": "jpeg.pixString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pixString(pix []byte, stride, x, y int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pixString(pix []byte, stride, x, y int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestTruncatedSOSDataDoesntPanic",
+              "documentation": {
+                "identifier": "TestTruncatedSOSDataDoesntPanic",
+                "newPage": false,
+                "searchKey": "jpeg.TestTruncatedSOSDataDoesntPanic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTruncatedSOSDataDoesntPanic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTruncatedSOSDataDoesntPanic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestLargeImageWithShortData",
+              "documentation": {
+                "identifier": "TestLargeImageWithShortData",
+                "newPage": false,
+                "searchKey": "jpeg.TestLargeImageWithShortData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLargeImageWithShortData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLargeImageWithShortData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestPaddedRSTMarker",
+              "documentation": {
+                "identifier": "TestPaddedRSTMarker",
+                "newPage": false,
+                "searchKey": "jpeg.TestPaddedRSTMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPaddedRSTMarker(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPaddedRSTMarker(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestExtraneousData",
+              "documentation": {
+                "identifier": "TestExtraneousData",
+                "newPage": false,
+                "searchKey": "jpeg.TestExtraneousData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExtraneousData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExtraneousData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#benchmarkDecode",
+              "documentation": {
+                "identifier": "benchmarkDecode",
+                "newPage": false,
+                "searchKey": "jpeg.benchmarkDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkDecode(b *testing.B, filename string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkDecode(b *testing.B, filename string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#BenchmarkDecodeBaseline",
+              "documentation": {
+                "identifier": "BenchmarkDecodeBaseline",
+                "newPage": false,
+                "searchKey": "jpeg.BenchmarkDecodeBaseline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeBaseline(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeBaseline(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#BenchmarkDecodeProgressive",
+              "documentation": {
+                "identifier": "BenchmarkDecodeProgressive",
+                "newPage": false,
+                "searchKey": "jpeg.BenchmarkDecodeProgressive",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeProgressive(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeProgressive(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestZigUnzig",
+              "documentation": {
+                "identifier": "TestZigUnzig",
+                "newPage": false,
+                "searchKey": "jpeg.TestZigUnzig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZigUnzig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZigUnzig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestUnscaledQuant",
+              "documentation": {
+                "identifier": "TestUnscaledQuant",
+                "newPage": false,
+                "searchKey": "jpeg.TestUnscaledQuant",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnscaledQuant(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnscaledQuant(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#delta",
+              "documentation": {
+                "identifier": "delta",
+                "newPage": false,
+                "searchKey": "jpeg.delta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func delta(u0, u1 uint32) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc delta(u0, u1 uint32) int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#readPng",
+              "documentation": {
+                "identifier": "readPng",
+                "newPage": false,
+                "searchKey": "jpeg.readPng",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readPng(filename string) (image.Image, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readPng(filename string) (image.Image, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestWriter",
+              "documentation": {
+                "identifier": "TestWriter",
+                "newPage": false,
+                "searchKey": "jpeg.TestWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestWriteGrayscale",
+              "documentation": {
+                "identifier": "TestWriteGrayscale",
+                "newPage": false,
+                "searchKey": "jpeg.TestWriteGrayscale",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteGrayscale(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteGrayscale(t *testing.T)\n```\n\nTestWriteGrayscale tests that a grayscale images survives a round-trip through encode/decode cycle. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#averageDelta",
+              "documentation": {
+                "identifier": "averageDelta",
+                "newPage": false,
+                "searchKey": "jpeg.averageDelta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func averageDelta(m0, m1 image.Image) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc averageDelta(m0, m1 image.Image) int64\n```\n\naverageDelta returns the average delta in RGB space. The two images must have the same bounds. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#TestEncodeYCbCr",
+              "documentation": {
+                "identifier": "TestEncodeYCbCr",
+                "newPage": false,
+                "searchKey": "jpeg.TestEncodeYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeYCbCr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeYCbCr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#BenchmarkEncodeRGBA",
+              "documentation": {
+                "identifier": "BenchmarkEncodeRGBA",
+                "newPage": false,
+                "searchKey": "jpeg.BenchmarkEncodeRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeRGBA(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeRGBA(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/image/jpeg#BenchmarkEncodeYCbCr",
+              "documentation": {
+                "identifier": "BenchmarkEncodeYCbCr",
+                "newPage": false,
+                "searchKey": "jpeg.BenchmarkEncodeYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeYCbCr(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeYCbCr(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

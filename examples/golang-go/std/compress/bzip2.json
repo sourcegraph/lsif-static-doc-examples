@@ -1,0 +1,1104 @@
+{
+  "pathID": "/std/compress/bzip2",
+  "documentation": {
+    "identifier": "bzip2",
+    "newPage": true,
+    "searchKey": "std/compress/bzip2",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package bzip2"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package bzip2 implements bzip2 decompression. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/compress/bzip2#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#bzip2FileMagic",
+              "documentation": {
+                "identifier": "bzip2FileMagic",
+                "newPage": false,
+                "searchKey": "bzip2.bzip2FileMagic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bzip2FileMagic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bzip2FileMagic = 0x425a // \"BZ\"\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#bzip2BlockMagic",
+              "documentation": {
+                "identifier": "bzip2BlockMagic",
+                "newPage": false,
+                "searchKey": "bzip2.bzip2BlockMagic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bzip2BlockMagic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bzip2BlockMagic = 0x314159265359\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#bzip2FinalMagic",
+              "documentation": {
+                "identifier": "bzip2FinalMagic",
+                "newPage": false,
+                "searchKey": "bzip2.bzip2FinalMagic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bzip2FinalMagic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bzip2FinalMagic = 0x177245385090\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#invalidNodeValue",
+              "documentation": {
+                "identifier": "invalidNodeValue",
+                "newPage": false,
+                "searchKey": "bzip2.invalidNodeValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const invalidNodeValue"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst invalidNodeValue = 0xffff\n```\n\ninvalidNodeValue is an invalid index which marks a leaf node in the tree. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/compress/bzip2#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#crctab",
+              "documentation": {
+                "identifier": "crctab",
+                "newPage": false,
+                "searchKey": "bzip2.crctab",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var crctab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar crctab [256]uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#digits",
+              "documentation": {
+                "identifier": "digits",
+                "newPage": false,
+                "searchKey": "bzip2.digits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var digits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar digits = mustLoadFile(\"testdata/e.txt.bz2\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#newton",
+              "documentation": {
+                "identifier": "newton",
+                "newPage": false,
+                "searchKey": "bzip2.newton",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newton"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar newton = mustLoadFile(\"testdata/Isaac.Newton-Opticks.txt.bz2\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#random",
+              "documentation": {
+                "identifier": "random",
+                "newPage": false,
+                "searchKey": "bzip2.random",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var random"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar random = mustLoadFile(\"testdata/random.data.bz2\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/compress/bzip2#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#bitReader",
+              "documentation": {
+                "identifier": "bitReader",
+                "newPage": false,
+                "searchKey": "bzip2.bitReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bitReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bitReader struct {\n\tr    io.ByteReader\n\tn    uint64\n\tbits uint\n\terr  error\n}\n```\n\nbitReader wraps an io.Reader and provides the ability to read values, bit-by-bit, from it. Its Read* methods don't return the usual error because the error handling was verbose. Instead, any error is kept and can be checked afterwards. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#newBitReader",
+                    "documentation": {
+                      "identifier": "newBitReader",
+                      "newPage": false,
+                      "searchKey": "bzip2.newBitReader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newBitReader(r io.Reader) bitReader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newBitReader(r io.Reader) bitReader\n```\n\nnewBitReader returns a new bitReader reading from r. If r is not already an io.ByteReader, it will be converted via a bufio.Reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#bitReader.ReadBits64",
+                    "documentation": {
+                      "identifier": "bitReader.ReadBits64",
+                      "newPage": false,
+                      "searchKey": "bzip2.bitReader.ReadBits64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (br *bitReader) ReadBits64(bits uint) (n uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (br *bitReader) ReadBits64(bits uint) (n uint64)\n```\n\nReadBits64 reads the given number of bits and returns them in the least-significant part of a uint64. In the event of an error, it returns 0 and the error can be obtained by calling Err(). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#bitReader.ReadBits",
+                    "documentation": {
+                      "identifier": "bitReader.ReadBits",
+                      "newPage": false,
+                      "searchKey": "bzip2.bitReader.ReadBits",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (br *bitReader) ReadBits(bits uint) (n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (br *bitReader) ReadBits(bits uint) (n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#bitReader.ReadBit",
+                    "documentation": {
+                      "identifier": "bitReader.ReadBit",
+                      "newPage": false,
+                      "searchKey": "bzip2.bitReader.ReadBit",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (br *bitReader) ReadBit() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (br *bitReader) ReadBit() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#bitReader.Err",
+                    "documentation": {
+                      "identifier": "bitReader.Err",
+                      "newPage": false,
+                      "searchKey": "bzip2.bitReader.Err",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (br *bitReader) Err() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (br *bitReader) Err() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#StructuralError",
+              "documentation": {
+                "identifier": "StructuralError",
+                "newPage": false,
+                "searchKey": "bzip2.StructuralError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StructuralError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StructuralError string\n```\n\nA StructuralError is returned when the bzip2 data is found to be syntactically invalid. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#StructuralError.Error",
+                    "documentation": {
+                      "identifier": "StructuralError.Error",
+                      "newPage": false,
+                      "searchKey": "bzip2.StructuralError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s StructuralError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s StructuralError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#reader",
+              "documentation": {
+                "identifier": "reader",
+                "newPage": false,
+                "searchKey": "bzip2.reader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type reader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype reader struct {\n\tbr           bitReader\n\tfileCRC      uint32\n\tblockCRC     uint32\n\twantBlockCRC uint32\n\tsetupDone    bool // true if we have parsed the bzip2 header.\n\tblockSize    int  // blockSize in bytes, i.e. 900 * 1000.\n\teof          bool\n\tc            [256]uint // the ``C'' array for the inverse BWT.\n\ttt           []uint32  // mirrors the ``tt'' array in the bzip2 source and contains the P array in the upper 24 bits.\n\ttPos         uint32    // Index of the next output byte in tt.\n\n\tpreRLE      []uint32 // contains the RLE data still to be processed.\n\tpreRLEUsed  int      // number of entries of preRLE used.\n\tlastByte    int      // the last byte value seen.\n\tbyteRepeats uint     // the number of repeats of lastByte seen.\n\trepeats     uint     // the number of copies of lastByte to output.\n}\n```\n\nA reader decompresses bzip2 compressed data. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#reader.setup",
+                    "documentation": {
+                      "identifier": "reader.setup",
+                      "newPage": false,
+                      "searchKey": "bzip2.reader.setup",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bz2 *reader) setup(needMagic bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bz2 *reader) setup(needMagic bool) error\n```\n\nsetup parses the bzip2 header. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#reader.Read",
+                    "documentation": {
+                      "identifier": "reader.Read",
+                      "newPage": false,
+                      "searchKey": "bzip2.reader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bz2 *reader) Read(buf []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bz2 *reader) Read(buf []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#reader.readFromBlock",
+                    "documentation": {
+                      "identifier": "reader.readFromBlock",
+                      "newPage": false,
+                      "searchKey": "bzip2.reader.readFromBlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bz2 *reader) readFromBlock(buf []byte) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bz2 *reader) readFromBlock(buf []byte) int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#reader.read",
+                    "documentation": {
+                      "identifier": "reader.read",
+                      "newPage": false,
+                      "searchKey": "bzip2.reader.read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bz2 *reader) read(buf []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bz2 *reader) read(buf []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#reader.readBlock",
+                    "documentation": {
+                      "identifier": "reader.readBlock",
+                      "newPage": false,
+                      "searchKey": "bzip2.reader.readBlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bz2 *reader) readBlock() (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bz2 *reader) readBlock() (err error)\n```\n\nreadBlock reads a bzip2 block. The magic number should already have been consumed. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#huffmanTree",
+              "documentation": {
+                "identifier": "huffmanTree",
+                "newPage": false,
+                "searchKey": "bzip2.huffmanTree",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type huffmanTree struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype huffmanTree struct {\n\t// nodes contains all the non-leaf nodes in the tree. nodes[0] is the\n\t// root of the tree and nextNode contains the index of the next element\n\t// of nodes to use when the tree is being constructed.\n\tnodes    []huffmanNode\n\tnextNode int\n}\n```\n\nA huffmanTree is a binary tree which is navigated, bit-by-bit to reach a symbol. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#newHuffmanTree",
+                    "documentation": {
+                      "identifier": "newHuffmanTree",
+                      "newPage": false,
+                      "searchKey": "bzip2.newHuffmanTree",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newHuffmanTree(lengths []uint8) (huffmanTree, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newHuffmanTree(lengths []uint8) (huffmanTree, error)\n```\n\nnewHuffmanTree builds a Huffman tree from a slice containing the code lengths of each symbol. The maximum code length is 32 bits. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#huffmanTree.Decode",
+                    "documentation": {
+                      "identifier": "huffmanTree.Decode",
+                      "newPage": false,
+                      "searchKey": "bzip2.huffmanTree.Decode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *huffmanTree) Decode(br *bitReader) (v uint16)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *huffmanTree) Decode(br *bitReader) (v uint16)\n```\n\nDecode reads bits from the given bitReader and navigates the tree until a symbol is found. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#huffmanNode",
+              "documentation": {
+                "identifier": "huffmanNode",
+                "newPage": false,
+                "searchKey": "bzip2.huffmanNode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type huffmanNode struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype huffmanNode struct {\n\tleft, right           uint16\n\tleftValue, rightValue uint16\n}\n```\n\nA huffmanNode is a node in the tree. left and right contain indexes into the nodes slice of the tree. If left or right is invalidNodeValue then the child is a left node and its value is in leftValue/rightValue. \n\nThe symbols are uint16s because bzip2 encodes not only MTF indexes in the tree, but also two magic values for run-length encoding and an EOF symbol. Thus there are more than 256 possible symbols. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#huffmanSymbolLengthPair",
+              "documentation": {
+                "identifier": "huffmanSymbolLengthPair",
+                "newPage": false,
+                "searchKey": "bzip2.huffmanSymbolLengthPair",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type huffmanSymbolLengthPair struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype huffmanSymbolLengthPair struct {\n\tvalue  uint16\n\tlength uint8\n}\n```\n\nhuffmanSymbolLengthPair contains a symbol and its code length. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#huffmanCode",
+              "documentation": {
+                "identifier": "huffmanCode",
+                "newPage": false,
+                "searchKey": "bzip2.huffmanCode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type huffmanCode struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype huffmanCode struct {\n\tcode    uint32\n\tcodeLen uint8\n\tvalue   uint16\n}\n```\n\nhuffmanCode contains a symbol, its code and code length. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#moveToFrontDecoder",
+              "documentation": {
+                "identifier": "moveToFrontDecoder",
+                "newPage": false,
+                "searchKey": "bzip2.moveToFrontDecoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type moveToFrontDecoder []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype moveToFrontDecoder []byte\n```\n\nmoveToFrontDecoder implements a move-to-front list. Such a list is an efficient way to transform a string with repeating elements into one with many small valued numbers, which is suitable for entropy encoding. It works by starting with an initial list of symbols and references symbols by their index into that list. When a symbol is referenced, it's moved to the front of the list. Thus, a repeated symbol ends up being encoded with many zeros, as the symbol will be at the front of the list after the first access. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#newMTFDecoder",
+                    "documentation": {
+                      "identifier": "newMTFDecoder",
+                      "newPage": false,
+                      "searchKey": "bzip2.newMTFDecoder",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newMTFDecoder(symbols []byte) moveToFrontDecoder"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newMTFDecoder(symbols []byte) moveToFrontDecoder\n```\n\nnewMTFDecoder creates a move-to-front decoder with an explicit initial list of symbols. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#newMTFDecoderWithRange",
+                    "documentation": {
+                      "identifier": "newMTFDecoderWithRange",
+                      "newPage": false,
+                      "searchKey": "bzip2.newMTFDecoderWithRange",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newMTFDecoderWithRange(n int) moveToFrontDecoder"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newMTFDecoderWithRange(n int) moveToFrontDecoder\n```\n\nnewMTFDecoderWithRange creates a move-to-front decoder with an initial symbol list of 0...n-1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#moveToFrontDecoder.Decode",
+                    "documentation": {
+                      "identifier": "moveToFrontDecoder.Decode",
+                      "newPage": false,
+                      "searchKey": "bzip2.moveToFrontDecoder.Decode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m moveToFrontDecoder) Decode(n int) (b byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m moveToFrontDecoder) Decode(n int) (b byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/bzip2#moveToFrontDecoder.First",
+                    "documentation": {
+                      "identifier": "moveToFrontDecoder.First",
+                      "newPage": false,
+                      "searchKey": "bzip2.moveToFrontDecoder.First",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m moveToFrontDecoder) First() byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m moveToFrontDecoder) First() byte\n```\n\nFirst returns the symbol at the front of the list. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/compress/bzip2#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#NewReader",
+              "documentation": {
+                "identifier": "NewReader",
+                "newPage": false,
+                "searchKey": "bzip2.NewReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewReader(r io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewReader(r io.Reader) io.Reader\n```\n\nNewReader returns an io.Reader which decompresses bzip2 data from r. If r does not also implement io.ByteReader, the decompressor may read more data than necessary from r. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#inverseBWT",
+              "documentation": {
+                "identifier": "inverseBWT",
+                "newPage": false,
+                "searchKey": "bzip2.inverseBWT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func inverseBWT(tt []uint32, origPtr uint, c []uint) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc inverseBWT(tt []uint32, origPtr uint, c []uint) uint32\n```\n\ninverseBWT implements the inverse Burrows-Wheeler transform as described in [http://www.hpl.hp.com/techreports/Compaq-DEC/SRC-RR-124.pdf](http://www.hpl.hp.com/techreports/Compaq-DEC/SRC-RR-124.pdf), section 4.2. In that document, origPtr is called `I' and c is the `C' array after the first pass over the data. It's an argument here because we merge the first pass with the Huffman decoding. \n\nThis also implements the `single array' method from the bzip2 source code which leaves the output, still shuffled, in the bottom 8 bits of tt with the index of the next byte in the top 24-bits. The index of the first byte is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "bzip2.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#updateCRC",
+              "documentation": {
+                "identifier": "updateCRC",
+                "newPage": false,
+                "searchKey": "bzip2.updateCRC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateCRC(val uint32, b []byte) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateCRC(val uint32, b []byte) uint32\n```\n\nupdateCRC updates the crc value to incorporate the data in b. The initial value is 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#buildHuffmanNode",
+              "documentation": {
+                "identifier": "buildHuffmanNode",
+                "newPage": false,
+                "searchKey": "bzip2.buildHuffmanNode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildHuffmanNode(t *huffmanTree, codes []huffmanCode, level uint32) (nodeIndex uint16, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildHuffmanNode(t *huffmanTree, codes []huffmanCode, level uint32) (nodeIndex uint16, err error)\n```\n\nbuildHuffmanNode takes a slice of sorted huffmanCodes and builds a node in the Huffman tree at the given level. It returns the index of the newly constructed node. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#mustDecodeHex",
+              "documentation": {
+                "identifier": "mustDecodeHex",
+                "newPage": false,
+                "searchKey": "bzip2.mustDecodeHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustDecodeHex(s string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustDecodeHex(s string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#mustLoadFile",
+              "documentation": {
+                "identifier": "mustLoadFile",
+                "newPage": false,
+                "searchKey": "bzip2.mustLoadFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustLoadFile(f string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustLoadFile(f string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#trim",
+              "documentation": {
+                "identifier": "trim",
+                "newPage": false,
+                "searchKey": "bzip2.trim",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trim(b []byte) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trim(b []byte) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#TestReader",
+              "documentation": {
+                "identifier": "TestReader",
+                "newPage": false,
+                "searchKey": "bzip2.TestReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#TestBitReader",
+              "documentation": {
+                "identifier": "TestBitReader",
+                "newPage": false,
+                "searchKey": "bzip2.TestBitReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBitReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBitReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#TestMTF",
+              "documentation": {
+                "identifier": "TestMTF",
+                "newPage": false,
+                "searchKey": "bzip2.TestMTF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMTF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMTF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#TestZeroRead",
+              "documentation": {
+                "identifier": "TestZeroRead",
+                "newPage": false,
+                "searchKey": "bzip2.TestZeroRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZeroRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZeroRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#benchmarkDecode",
+              "documentation": {
+                "identifier": "benchmarkDecode",
+                "newPage": false,
+                "searchKey": "bzip2.benchmarkDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkDecode(b *testing.B, compressed []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkDecode(b *testing.B, compressed []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#BenchmarkDecodeDigits",
+              "documentation": {
+                "identifier": "BenchmarkDecodeDigits",
+                "newPage": false,
+                "searchKey": "bzip2.BenchmarkDecodeDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeDigits(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeDigits(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#BenchmarkDecodeNewton",
+              "documentation": {
+                "identifier": "BenchmarkDecodeNewton",
+                "newPage": false,
+                "searchKey": "bzip2.BenchmarkDecodeNewton",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeNewton(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeNewton(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/bzip2#BenchmarkDecodeRand",
+              "documentation": {
+                "identifier": "BenchmarkDecodeRand",
+                "newPage": false,
+                "searchKey": "bzip2.BenchmarkDecodeRand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeRand(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeRand(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

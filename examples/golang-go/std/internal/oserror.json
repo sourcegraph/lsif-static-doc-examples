@@ -1,0 +1,150 @@
+{
+  "pathID": "/std/internal/oserror",
+  "documentation": {
+    "identifier": "oserror",
+    "newPage": true,
+    "searchKey": "std/internal/oserror",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package oserror"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package oserror defines errors values used in the os package. \n\nThese types are defined here to permit the syscall package to reference them. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/internal/oserror#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/oserror#ErrInvalid",
+              "documentation": {
+                "identifier": "ErrInvalid",
+                "newPage": false,
+                "searchKey": "oserror.ErrInvalid",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrInvalid"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrInvalid = errors.New(\"invalid argument\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/oserror#ErrPermission",
+              "documentation": {
+                "identifier": "ErrPermission",
+                "newPage": false,
+                "searchKey": "oserror.ErrPermission",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrPermission"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrPermission = errors.New(\"permission denied\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/oserror#ErrExist",
+              "documentation": {
+                "identifier": "ErrExist",
+                "newPage": false,
+                "searchKey": "oserror.ErrExist",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrExist"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrExist = errors.New(\"file already exists\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/oserror#ErrNotExist",
+              "documentation": {
+                "identifier": "ErrNotExist",
+                "newPage": false,
+                "searchKey": "oserror.ErrNotExist",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotExist"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotExist = errors.New(\"file does not exist\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/oserror#ErrClosed",
+              "documentation": {
+                "identifier": "ErrClosed",
+                "newPage": false,
+                "searchKey": "oserror.ErrClosed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrClosed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrClosed = errors.New(\"file already closed\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

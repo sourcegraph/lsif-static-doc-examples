@@ -1,0 +1,405 @@
+{
+  "pathID": "/std/crypto/rc4",
+  "documentation": {
+    "identifier": "rc4",
+    "newPage": true,
+    "searchKey": "std/crypto/rc4",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package rc4"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package rc4 implements RC4 encryption, as defined in Bruce Schneier's Applied Cryptography. \n\nRC4 is cryptographically broken and should not be used for secure applications. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/crypto/rc4#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#golden",
+              "documentation": {
+                "identifier": "golden",
+                "newPage": false,
+                "searchKey": "rc4.golden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/rc4#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#Cipher",
+              "documentation": {
+                "identifier": "Cipher",
+                "newPage": false,
+                "searchKey": "rc4.Cipher",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Cipher struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Cipher struct {\n\ts    [256]uint32\n\ti, j uint8\n}\n```\n\nA Cipher is an instance of RC4 using a particular key. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/crypto/rc4#NewCipher",
+                    "documentation": {
+                      "identifier": "NewCipher",
+                      "newPage": false,
+                      "searchKey": "rc4.NewCipher",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewCipher(key []byte) (*Cipher, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewCipher(key []byte) (*Cipher, error)\n```\n\nNewCipher creates and returns a new Cipher. The key argument should be the RC4 key, at least 1 byte and at most 256 bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/rc4#Cipher.Reset",
+                    "documentation": {
+                      "identifier": "Cipher.Reset",
+                      "newPage": false,
+                      "searchKey": "rc4.Cipher.Reset",
+                      "tags": [
+                        "exported",
+                        "deprecated"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cipher) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cipher) Reset()\n```\n\nReset zeros the key data and makes the Cipher unusable. \n\nDeprecated: Reset can't guarantee that the key will be entirely removed from the process's memory. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/rc4#Cipher.XORKeyStream",
+                    "documentation": {
+                      "identifier": "Cipher.XORKeyStream",
+                      "newPage": false,
+                      "searchKey": "rc4.Cipher.XORKeyStream",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Cipher) XORKeyStream(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Cipher) XORKeyStream(dst, src []byte)\n```\n\nXORKeyStream sets dst to the result of XORing src with the key stream. Dst and src must overlap entirely or not at all. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#KeySizeError",
+              "documentation": {
+                "identifier": "KeySizeError",
+                "newPage": false,
+                "searchKey": "rc4.KeySizeError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type KeySizeError int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype KeySizeError int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/crypto/rc4#KeySizeError.Error",
+                    "documentation": {
+                      "identifier": "KeySizeError.Error",
+                      "newPage": false,
+                      "searchKey": "rc4.KeySizeError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k KeySizeError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k KeySizeError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#rc4Test",
+              "documentation": {
+                "identifier": "rc4Test",
+                "newPage": false,
+                "searchKey": "rc4.rc4Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type rc4Test struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype rc4Test struct {\n\tkey, keystream []byte\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/rc4#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#testEncrypt",
+              "documentation": {
+                "identifier": "testEncrypt",
+                "newPage": false,
+                "searchKey": "rc4.testEncrypt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testEncrypt(t *testing.T, desc string, c *Cipher, src, expect []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#TestGolden",
+              "documentation": {
+                "identifier": "TestGolden",
+                "newPage": false,
+                "searchKey": "rc4.TestGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#TestBlock",
+              "documentation": {
+                "identifier": "TestBlock",
+                "newPage": false,
+                "searchKey": "rc4.TestBlock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBlock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBlock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#benchmark",
+              "documentation": {
+                "identifier": "benchmark",
+                "newPage": false,
+                "searchKey": "rc4.benchmark",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmark(b *testing.B, size int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmark(b *testing.B, size int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#BenchmarkRC4_128",
+              "documentation": {
+                "identifier": "BenchmarkRC4_128",
+                "newPage": false,
+                "searchKey": "rc4.BenchmarkRC4_128",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRC4_128(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRC4_128(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#BenchmarkRC4_1K",
+              "documentation": {
+                "identifier": "BenchmarkRC4_1K",
+                "newPage": false,
+                "searchKey": "rc4.BenchmarkRC4_1K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRC4_1K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRC4_1K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/rc4#BenchmarkRC4_8K",
+              "documentation": {
+                "identifier": "BenchmarkRC4_8K",
+                "newPage": false,
+                "searchKey": "rc4.BenchmarkRC4_8K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRC4_8K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRC4_8K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

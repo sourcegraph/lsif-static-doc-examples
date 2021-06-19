@@ -1,0 +1,362 @@
+{
+  "pathID": "/std/internal/abi",
+  "documentation": {
+    "identifier": "abi",
+    "newPage": true,
+    "searchKey": "std/internal/abi",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package abi"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/internal/abi#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/abi#IntArgRegs",
+              "documentation": {
+                "identifier": "IntArgRegs",
+                "newPage": false,
+                "searchKey": "abi.IntArgRegs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IntArgRegs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IntArgRegs = 0\n```\n\nIntArgRegs is the number of registers dedicated to passing integer argument values. Result registers are identical to argument registers, so this number is used for those too. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/abi#FloatArgRegs",
+              "documentation": {
+                "identifier": "FloatArgRegs",
+                "newPage": false,
+                "searchKey": "abi.FloatArgRegs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FloatArgRegs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FloatArgRegs = 0\n```\n\nFloatArgRegs is the number of registers dedicated to passing floating-point argument values. Result registers are identical to argument registers, so this number is used for those too. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/abi#EffectiveFloatRegSize",
+              "documentation": {
+                "identifier": "EffectiveFloatRegSize",
+                "newPage": false,
+                "searchKey": "abi.EffectiveFloatRegSize",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const EffectiveFloatRegSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst EffectiveFloatRegSize = 0\n```\n\nEffectiveFloatRegSize describes the width of floating point registers on the current platform from the ABI's perspective. \n\nSince Go only supports 32-bit and 64-bit floating point primitives, this number should be either 0, 4, or 8. 0 indicates no floating point registers for the ABI or that floating point values will be passed via the softfloat ABI. \n\nFor platforms that support larger floating point register widths, such as x87's 80-bit \"registers\" (not that we support x87 currently), use 8. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/abi#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/abi#FuncPCTestFnAddr",
+              "documentation": {
+                "identifier": "FuncPCTestFnAddr",
+                "newPage": false,
+                "searchKey": "abi.FuncPCTestFnAddr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FuncPCTestFnAddr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FuncPCTestFnAddr uintptr // address of FuncPCTestFn, directly retrieved from assembly\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/abi#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/abi#RegArgs",
+              "documentation": {
+                "identifier": "RegArgs",
+                "newPage": false,
+                "searchKey": "abi.RegArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RegArgs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RegArgs struct {\n\tInts   [IntArgRegs]uintptr  // untyped integer registers\n\tFloats [FloatArgRegs]uint64 // untyped float registers\n\n\t// Ptrs is a space that duplicates Ints but with pointer type,\n\t// used to make pointers passed or returned  in registers\n\t// visible to the GC by making the type unsafe.Pointer.\n\tPtrs [IntArgRegs]unsafe.Pointer\n\n\t// ReturnIsPtr is a bitmap that indicates which registers\n\t// contain or will contain pointers on the return path from\n\t// a reflectcall. The i'th bit indicates whether the i'th\n\t// register contains or will contain a valid Go pointer.\n\tReturnIsPtr IntArgRegBitmap\n}\n```\n\nRegArgs is a struct that has space for each argument and return value register on the current architecture. \n\nAssembly code knows the layout of the first two fields of RegArgs. \n\nRegArgs also contains additional space to hold pointers when it may not be safe to keep them only in the integer register space otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/abi#IntArgRegBitmap",
+              "documentation": {
+                "identifier": "IntArgRegBitmap",
+                "newPage": false,
+                "searchKey": "abi.IntArgRegBitmap",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IntArgRegBitmap [0]uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IntArgRegBitmap [(IntArgRegs + 7) / 8]uint8\n```\n\nIntArgRegBitmap is a bitmap large enough to hold one bit per integer argument/return register. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/internal/abi#IntArgRegBitmap.Set",
+                    "documentation": {
+                      "identifier": "IntArgRegBitmap.Set",
+                      "newPage": false,
+                      "searchKey": "abi.IntArgRegBitmap.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *IntArgRegBitmap) Set(i int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *IntArgRegBitmap) Set(i int)\n```\n\nSet sets the i'th bit of the bitmap to 1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/abi#IntArgRegBitmap.Get",
+                    "documentation": {
+                      "identifier": "IntArgRegBitmap.Get",
+                      "newPage": false,
+                      "searchKey": "abi.IntArgRegBitmap.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *IntArgRegBitmap) Get(i int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *IntArgRegBitmap) Get(i int) bool\n```\n\nGet returns whether the i'th bit of the bitmap is set. \n\nnosplit because it's called in extremely sensitive contexts, like on the reflectcall return path. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/abi#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/abi#FuncPCABI0",
+              "documentation": {
+                "identifier": "FuncPCABI0",
+                "newPage": false,
+                "searchKey": "abi.FuncPCABI0",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FuncPCABI0(f interface{}) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FuncPCABI0(f interface{}) uintptr\n```\n\nFuncPCABI0 returns the entry PC of the function f, which must be a direct reference of a function defined as ABI0. Otherwise it is a compile-time error. \n\nImplemented as a compile intrinsic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/abi#FuncPCABIInternal",
+              "documentation": {
+                "identifier": "FuncPCABIInternal",
+                "newPage": false,
+                "searchKey": "abi.FuncPCABIInternal",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FuncPCABIInternal(f interface{}) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FuncPCABIInternal(f interface{}) uintptr\n```\n\nFuncPCABIInternal returns the entry PC of the function f. If f is a direct reference of a function, it must be defined as ABIInternal. Otherwise it is a compile-time error. If f is not a direct reference of a defined function, it assumes that f is a func value. Otherwise the behavior is undefined. \n\nImplemented as a compile intrinsic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/abi#FuncPCTestFn",
+              "documentation": {
+                "identifier": "FuncPCTestFn",
+                "newPage": false,
+                "searchKey": "abi.FuncPCTestFn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FuncPCTestFn()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FuncPCTestFn()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/abi#FuncPCTest",
+              "documentation": {
+                "identifier": "FuncPCTest",
+                "newPage": false,
+                "searchKey": "abi.FuncPCTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FuncPCTest() uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FuncPCTest() uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

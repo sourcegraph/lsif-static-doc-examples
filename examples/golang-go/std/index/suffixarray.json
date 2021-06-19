@@ -1,0 +1,2310 @@
+{
+  "pathID": "/std/index/suffixarray",
+  "documentation": {
+    "identifier": "suffixarray",
+    "newPage": true,
+    "searchKey": "std/index/suffixarray",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package suffixarray"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package suffixarray implements substring search in logarithmic time using an in-memory suffix array. \n\nExample use: \n\n```\n// create index for some data\nindex := suffixarray.New(data)\n\n// lookup byte slice s\noffsets1 := index.Lookup(s, -1) // the list of all indices where s occurs in data\noffsets2 := index.Lookup(s, 3)  // the list of at most 3 indices where s occurs in data\n\n```\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/index/suffixarray#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#realMaxData32",
+              "documentation": {
+                "identifier": "realMaxData32",
+                "newPage": false,
+                "searchKey": "suffixarray.realMaxData32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const realMaxData32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst realMaxData32 = math.MaxInt32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bufSize",
+              "documentation": {
+                "identifier": "bufSize",
+                "newPage": false,
+                "searchKey": "suffixarray.bufSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bufSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bufSize = 16 << 10 // reasonable for BenchmarkSaveRestore\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/index/suffixarray#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#maxData32",
+              "documentation": {
+                "identifier": "maxData32",
+                "newPage": false,
+                "searchKey": "suffixarray.maxData32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var maxData32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar maxData32 int = realMaxData32\n```\n\nCan change for testing \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#errTooBig",
+              "documentation": {
+                "identifier": "errTooBig",
+                "newPage": false,
+                "searchKey": "suffixarray.errTooBig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errTooBig"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errTooBig = errors.New(\"suffixarray: data too large\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testCases",
+              "documentation": {
+                "identifier": "testCases",
+                "newPage": false,
+                "searchKey": "suffixarray.testCases",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testCases"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testCases = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#benchdata",
+              "documentation": {
+                "identifier": "benchdata",
+                "newPage": false,
+                "searchKey": "suffixarray.benchdata",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchdata"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchdata = make([]byte, 1e6)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#benchrand",
+              "documentation": {
+                "identifier": "benchrand",
+                "newPage": false,
+                "searchKey": "suffixarray.benchrand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchrand"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchrand = make([]byte, 1e6)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/index/suffixarray#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#Index",
+              "documentation": {
+                "identifier": "Index",
+                "newPage": false,
+                "searchKey": "suffixarray.Index",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Index struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Index struct {\n\tdata []byte\n\tsa   ints // suffix array for data; sa.len() == len(data)\n}\n```\n\nIndex implements a suffix array for fast substring search. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "suffixarray.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(data []byte) *Index"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(data []byte) *Index\n```\n\nNew creates a new Index for data. Index creation time is O(N) for N = len(data). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#Index.Read",
+                    "documentation": {
+                      "identifier": "Index.Read",
+                      "newPage": false,
+                      "searchKey": "suffixarray.Index.Read",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *Index) Read(r io.Reader) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *Index) Read(r io.Reader) error\n```\n\nRead reads the index from r into x; x must not be nil. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#Index.Write",
+                    "documentation": {
+                      "identifier": "Index.Write",
+                      "newPage": false,
+                      "searchKey": "suffixarray.Index.Write",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *Index) Write(w io.Writer) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *Index) Write(w io.Writer) error\n```\n\nWrite writes the index x to w. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#Index.Bytes",
+                    "documentation": {
+                      "identifier": "Index.Bytes",
+                      "newPage": false,
+                      "searchKey": "suffixarray.Index.Bytes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *Index) Bytes() []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *Index) Bytes() []byte\n```\n\nBytes returns the data over which the index was created. It must not be modified. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#Index.at",
+                    "documentation": {
+                      "identifier": "Index.at",
+                      "newPage": false,
+                      "searchKey": "suffixarray.Index.at",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *Index) at(i int) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *Index) at(i int) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#Index.lookupAll",
+                    "documentation": {
+                      "identifier": "Index.lookupAll",
+                      "newPage": false,
+                      "searchKey": "suffixarray.Index.lookupAll",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *Index) lookupAll(s []byte) ints"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *Index) lookupAll(s []byte) ints\n```\n\nlookupAll returns a slice into the matching region of the index. The runtime is O(log(N)*len(s)). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#Index.Lookup",
+                    "documentation": {
+                      "identifier": "Index.Lookup",
+                      "newPage": false,
+                      "searchKey": "suffixarray.Index.Lookup",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *Index) Lookup(s []byte, n int) (result []int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *Index) Lookup(s []byte, n int) (result []int)\n```\n\nLookup returns an unsorted list of at most n indices where the byte string s occurs in the indexed data. If n < 0, all occurrences are returned. The result is nil if s is empty, s is not found, or n == 0. Lookup time is O(log(N)*len(s) + len(result)) where N is the size of the indexed data. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#Index.FindAllIndex",
+                    "documentation": {
+                      "identifier": "Index.FindAllIndex",
+                      "newPage": false,
+                      "searchKey": "suffixarray.Index.FindAllIndex",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *Index) FindAllIndex(r *regexp.Regexp, n int) (result [][]int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *Index) FindAllIndex(r *regexp.Regexp, n int) (result [][]int)\n```\n\nFindAllIndex returns a sorted list of non-overlapping matches of the regular expression r, where a match is a pair of indices specifying the matched slice of x.Bytes(). If n < 0, all matches are returned in successive order. Otherwise, at most n matches are returned and they may not be successive. The result is nil if there are no matches, or if n == 0. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#ints",
+              "documentation": {
+                "identifier": "ints",
+                "newPage": false,
+                "searchKey": "suffixarray.ints",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ints struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ints struct {\n\tint32 []int32\n\tint64 []int64\n}\n```\n\nAn ints is either an []int32 or an []int64. That is, one of them is empty, and one is the real data. The int64 form is used when len(data) > maxData32 \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#ints.len",
+                    "documentation": {
+                      "identifier": "ints.len",
+                      "newPage": false,
+                      "searchKey": "suffixarray.ints.len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ints) len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ints) len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#ints.get",
+                    "documentation": {
+                      "identifier": "ints.get",
+                      "newPage": false,
+                      "searchKey": "suffixarray.ints.get",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ints) get(i int) int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ints) get(i int) int64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#ints.set",
+                    "documentation": {
+                      "identifier": "ints.set",
+                      "newPage": false,
+                      "searchKey": "suffixarray.ints.set",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ints) set(i int, v int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ints) set(i int, v int64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#ints.slice",
+                    "documentation": {
+                      "identifier": "ints.slice",
+                      "newPage": false,
+                      "searchKey": "suffixarray.ints.slice",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *ints) slice(i, j int) ints"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *ints) slice(i, j int) ints\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testCase",
+              "documentation": {
+                "identifier": "testCase",
+                "newPage": false,
+                "searchKey": "suffixarray.testCase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testCase struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testCase struct {\n\tname     string   // name of test case\n\tsource   string   // source to index\n\tpatterns []string // patterns to lookup\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#index",
+              "documentation": {
+                "identifier": "index",
+                "newPage": false,
+                "searchKey": "suffixarray.index",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type index suffixarray.Index"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype index Index\n```\n\nindex is used to hide the sort.Interface \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#index.Len",
+                    "documentation": {
+                      "identifier": "index.Len",
+                      "newPage": false,
+                      "searchKey": "suffixarray.index.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *index) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *index) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#index.Less",
+                    "documentation": {
+                      "identifier": "index.Less",
+                      "newPage": false,
+                      "searchKey": "suffixarray.index.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *index) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *index) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#index.Swap",
+                    "documentation": {
+                      "identifier": "index.Swap",
+                      "newPage": false,
+                      "searchKey": "suffixarray.index.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *index) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *index) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/index/suffixarray#index.at",
+                    "documentation": {
+                      "identifier": "index.at",
+                      "newPage": false,
+                      "searchKey": "suffixarray.index.at",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *index) at(i int) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *index) at(i int) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/index/suffixarray#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#text_32",
+              "documentation": {
+                "identifier": "text_32",
+                "newPage": false,
+                "searchKey": "suffixarray.text_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func text_32(text []byte, sa []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc text_32(text []byte, sa []int32)\n```\n\ntext_32 returns the suffix array for the input text. It requires that len(text) fit in an int32 and that the caller zero sa. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#sais_8_32",
+              "documentation": {
+                "identifier": "sais_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.sais_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sais_8_32(text []byte, textMax int, sa, tmp []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sais_8_32(text []byte, textMax int, sa, tmp []int32)\n```\n\nsais_8_32 computes the suffix array of text. The text must contain only values in [0, textMax). The suffix array is stored in sa, which the caller must ensure is already zeroed. The caller must also provide temporary space tmp with len(tmp) ≥ textMax. If len(tmp) ≥ 2*textMax then the algorithm runs a little faster. If sais_8_32 modifies tmp, it sets tmp[0] = -1 on return. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#freq_8_32",
+              "documentation": {
+                "identifier": "freq_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.freq_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func freq_8_32(text []byte, freq, bucket []int32) []int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc freq_8_32(text []byte, freq, bucket []int32) []int32\n```\n\nfreq_8_32 returns the character frequencies for text, as a slice indexed by character value. If freq is nil, freq_8_32 uses and returns bucket. If freq is non-nil, freq_8_32 assumes that freq[0] >= 0 means the frequencies are already computed. If the frequency data is overwritten or uninitialized, the caller must set freq[0] = -1 to force recomputation the next time it is needed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bucketMin_8_32",
+              "documentation": {
+                "identifier": "bucketMin_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.bucketMin_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bucketMin_8_32(text []byte, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bucketMin_8_32(text []byte, freq, bucket []int32)\n```\n\nbucketMin_8_32 stores into bucket[c] the minimum index in the bucket for character c in a bucket-sort of text. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bucketMax_8_32",
+              "documentation": {
+                "identifier": "bucketMax_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.bucketMax_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bucketMax_8_32(text []byte, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bucketMax_8_32(text []byte, freq, bucket []int32)\n```\n\nbucketMax_8_32 stores into bucket[c] the maximum index in the bucket for character c in a bucket-sort of text. The bucket indexes for c are [min, max). That is, max is one past the final index in that bucket. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#placeLMS_8_32",
+              "documentation": {
+                "identifier": "placeLMS_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.placeLMS_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func placeLMS_8_32(text []byte, sa, freq, bucket []int32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc placeLMS_8_32(text []byte, sa, freq, bucket []int32) int\n```\n\nplaceLMS_8_32 places into sa the indexes of the final characters of the LMS substrings of text, sorted into the rightmost ends of their correct buckets in the suffix array. \n\nThe imaginary sentinel character at the end of the text is the final character of the final LMS substring, but there is no bucket for the imaginary sentinel character, which has a smaller value than any real character. The caller must therefore pretend that sa[-1] == len(text). \n\nThe text indexes of LMS-substring characters are always ≥ 1 (the first LMS-substring must be preceded by one or more L-type characters that are not part of any LMS-substring), so using 0 as a “not present” suffix array entry is safe, both in this function and in most later functions (until induceL_8_32 below). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceSubL_8_32",
+              "documentation": {
+                "identifier": "induceSubL_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.induceSubL_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceSubL_8_32(text []byte, sa, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceSubL_8_32(text []byte, sa, freq, bucket []int32)\n```\n\ninduceSubL_8_32 inserts the L-type text indexes of LMS-substrings into sa, assuming that the final characters of the LMS-substrings are already inserted into sa, sorted by final character, and at the right (not left) end of the corresponding character bucket. Each LMS-substring has the form (as a regexp) /S+L+S/: one or more S-type, one or more L-type, final S-type. induceSubL_8_32 leaves behind only the leftmost L-type text index for each LMS-substring. That is, it removes the final S-type indexes that are present on entry, and it inserts but then removes the interior L-type indexes too. (Only the leftmost L-type index is needed by induceSubS_8_32.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceSubS_8_32",
+              "documentation": {
+                "identifier": "induceSubS_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.induceSubS_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceSubS_8_32(text []byte, sa, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceSubS_8_32(text []byte, sa, freq, bucket []int32)\n```\n\ninduceSubS_8_32 inserts the S-type text indexes of LMS-substrings into sa, assuming that the leftmost L-type text indexes are already inserted into sa, sorted by LMS-substring suffix, and at the left end of the corresponding character bucket. Each LMS-substring has the form (as a regexp) /S+L+S/: one or more S-type, one or more L-type, final S-type. induceSubS_8_32 leaves behind only the leftmost S-type text index for each LMS-substring, in sorted order, at the right end of sa. That is, it removes the L-type indexes that are present on entry, and it inserts but then removes the interior S-type indexes too, leaving the LMS-substring start indexes packed into sa[len(sa)-numLMS:]. (Only the LMS-substring start indexes are processed by the recursion.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#length_8_32",
+              "documentation": {
+                "identifier": "length_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.length_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func length_8_32(text []byte, sa []int32, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc length_8_32(text []byte, sa []int32, numLMS int)\n```\n\nlength_8_32 computes and records the length of each LMS-substring in text. The length of the LMS-substring at index j is stored at sa[j/2], avoiding the LMS-substring indexes already stored in the top half of sa. (If index j is an LMS-substring start, then index j-1 is type L and cannot be.) There are two exceptions, made for optimizations in name_8_32 below. \n\nFirst, the final LMS-substring is recorded as having length 0, which is otherwise impossible, instead of giving it a length that includes the implicit sentinel. This ensures the final LMS-substring has length unequal to all others and therefore can be detected as different without text comparison (it is unequal because it is the only one that ends in the implicit sentinel, and the text comparison would be problematic since the implicit sentinel is not actually present at text[len(text)]). \n\nSecond, to avoid text comparison entirely, if an LMS-substring is very short, sa[j/2] records its actual text instead of its length, so that if two such substrings have matching “length,” the text need not be read at all. The definition of “very short” is that the text bytes must pack into an uint32, and the unsigned encoding e must be ≥ len(text), so that it can be distinguished from a valid length. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#assignID_8_32",
+              "documentation": {
+                "identifier": "assignID_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.assignID_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assignID_8_32(text []byte, sa []int32, numLMS int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assignID_8_32(text []byte, sa []int32, numLMS int) int\n```\n\nassignID_8_32 assigns a dense ID numbering to the set of LMS-substrings respecting string ordering and equality, returning the maximum assigned ID. For example given the input \"ababab\", the LMS-substrings are \"aba\", \"aba\", and \"ab\", renumbered as 2 2 1. sa[len(sa)-numLMS:] holds the LMS-substring indexes sorted in string order, so to assign numbers we can consider each in turn, removing adjacent duplicates. The new ID for the LMS-substring at index j is written to sa[j/2], overwriting the length previously stored there (by length_8_32 above). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#map_32",
+              "documentation": {
+                "identifier": "map_32",
+                "newPage": false,
+                "searchKey": "suffixarray.map_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func map_32(sa []int32, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc map_32(sa []int32, numLMS int)\n```\n\nmap_32 maps the LMS-substrings in text to their new IDs, producing the subproblem for the recursion. The mapping itself was mostly applied by assignID_8_32: sa[i] is either 0, the ID for the LMS-substring at index 2*i, or the ID for the LMS-substring at index 2*i+1. To produce the subproblem we need only remove the zeros and change ID into ID-1 (our IDs start at 1, but text chars start at 0). \n\nmap_32 packs the result, which is the input to the recursion, into the top of sa, so that the recursion result can be stored in the bottom of sa, which sets up for expand_8_32 well. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#recurse_32",
+              "documentation": {
+                "identifier": "recurse_32",
+                "newPage": false,
+                "searchKey": "suffixarray.recurse_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func recurse_32(sa, oldTmp []int32, numLMS, maxID int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc recurse_32(sa, oldTmp []int32, numLMS, maxID int)\n```\n\nrecurse_32 calls sais_32 recursively to solve the subproblem we've built. The subproblem is at the right end of sa, the suffix array result will be written at the left end of sa, and the middle of sa is available for use as temporary frequency and bucket storage. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#unmap_8_32",
+              "documentation": {
+                "identifier": "unmap_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.unmap_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unmap_8_32(text []byte, sa []int32, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unmap_8_32(text []byte, sa []int32, numLMS int)\n```\n\nunmap_8_32 unmaps the subproblem back to the original. sa[:numLMS] is the LMS-substring numbers, which don't matter much anymore. sa[len(sa)-numLMS:] is the sorted list of those LMS-substring numbers. The key part is that if the list says K that means the K'th substring. We can replace sa[:numLMS] with the indexes of the LMS-substrings. Then if the list says K it really means sa[K]. Having mapped the list back to LMS-substring indexes, we can place those into the right buckets. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#expand_8_32",
+              "documentation": {
+                "identifier": "expand_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.expand_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expand_8_32(text []byte, freq, bucket, sa []int32, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expand_8_32(text []byte, freq, bucket, sa []int32, numLMS int)\n```\n\nexpand_8_32 distributes the compacted, sorted LMS-suffix indexes from sa[:numLMS] into the tops of the appropriate buckets in sa, preserving the sorted order and making room for the L-type indexes to be slotted into the sorted sequence by induceL_8_32. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceL_8_32",
+              "documentation": {
+                "identifier": "induceL_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.induceL_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceL_8_32(text []byte, sa, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceL_8_32(text []byte, sa, freq, bucket []int32)\n```\n\ninduceL_8_32 inserts L-type text indexes into sa, assuming that the leftmost S-type indexes are inserted into sa, in sorted order, in the right bucket halves. It leaves all the L-type indexes in sa, but the leftmost L-type indexes are negated, to mark them for processing by induceS_8_32. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceS_8_32",
+              "documentation": {
+                "identifier": "induceS_8_32",
+                "newPage": false,
+                "searchKey": "suffixarray.induceS_8_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceS_8_32(text []byte, sa, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceS_8_32(text []byte, sa, freq, bucket []int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#text_64",
+              "documentation": {
+                "identifier": "text_64",
+                "newPage": false,
+                "searchKey": "suffixarray.text_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func text_64(text []byte, sa []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc text_64(text []byte, sa []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#sais_8_64",
+              "documentation": {
+                "identifier": "sais_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.sais_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sais_8_64(text []byte, textMax int, sa, tmp []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sais_8_64(text []byte, textMax int, sa, tmp []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#sais_32",
+              "documentation": {
+                "identifier": "sais_32",
+                "newPage": false,
+                "searchKey": "suffixarray.sais_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sais_32(text []int32, textMax int, sa, tmp []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sais_32(text []int32, textMax int, sa, tmp []int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#sais_64",
+              "documentation": {
+                "identifier": "sais_64",
+                "newPage": false,
+                "searchKey": "suffixarray.sais_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sais_64(text []int64, textMax int, sa, tmp []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sais_64(text []int64, textMax int, sa, tmp []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#freq_8_64",
+              "documentation": {
+                "identifier": "freq_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.freq_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func freq_8_64(text []byte, freq, bucket []int64) []int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc freq_8_64(text []byte, freq, bucket []int64) []int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#freq_32",
+              "documentation": {
+                "identifier": "freq_32",
+                "newPage": false,
+                "searchKey": "suffixarray.freq_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func freq_32(text []int32, freq, bucket []int32) []int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc freq_32(text []int32, freq, bucket []int32) []int32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#freq_64",
+              "documentation": {
+                "identifier": "freq_64",
+                "newPage": false,
+                "searchKey": "suffixarray.freq_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func freq_64(text []int64, freq, bucket []int64) []int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc freq_64(text []int64, freq, bucket []int64) []int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bucketMin_8_64",
+              "documentation": {
+                "identifier": "bucketMin_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.bucketMin_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bucketMin_8_64(text []byte, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bucketMin_8_64(text []byte, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bucketMin_32",
+              "documentation": {
+                "identifier": "bucketMin_32",
+                "newPage": false,
+                "searchKey": "suffixarray.bucketMin_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bucketMin_32(text []int32, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bucketMin_32(text []int32, freq, bucket []int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bucketMin_64",
+              "documentation": {
+                "identifier": "bucketMin_64",
+                "newPage": false,
+                "searchKey": "suffixarray.bucketMin_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bucketMin_64(text []int64, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bucketMin_64(text []int64, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bucketMax_8_64",
+              "documentation": {
+                "identifier": "bucketMax_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.bucketMax_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bucketMax_8_64(text []byte, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bucketMax_8_64(text []byte, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bucketMax_32",
+              "documentation": {
+                "identifier": "bucketMax_32",
+                "newPage": false,
+                "searchKey": "suffixarray.bucketMax_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bucketMax_32(text []int32, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bucketMax_32(text []int32, freq, bucket []int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#bucketMax_64",
+              "documentation": {
+                "identifier": "bucketMax_64",
+                "newPage": false,
+                "searchKey": "suffixarray.bucketMax_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bucketMax_64(text []int64, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bucketMax_64(text []int64, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#placeLMS_8_64",
+              "documentation": {
+                "identifier": "placeLMS_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.placeLMS_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func placeLMS_8_64(text []byte, sa, freq, bucket []int64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc placeLMS_8_64(text []byte, sa, freq, bucket []int64) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#placeLMS_32",
+              "documentation": {
+                "identifier": "placeLMS_32",
+                "newPage": false,
+                "searchKey": "suffixarray.placeLMS_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func placeLMS_32(text []int32, sa, freq, bucket []int32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc placeLMS_32(text []int32, sa, freq, bucket []int32) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#placeLMS_64",
+              "documentation": {
+                "identifier": "placeLMS_64",
+                "newPage": false,
+                "searchKey": "suffixarray.placeLMS_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func placeLMS_64(text []int64, sa, freq, bucket []int64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc placeLMS_64(text []int64, sa, freq, bucket []int64) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceSubL_8_64",
+              "documentation": {
+                "identifier": "induceSubL_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.induceSubL_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceSubL_8_64(text []byte, sa, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceSubL_8_64(text []byte, sa, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceSubL_32",
+              "documentation": {
+                "identifier": "induceSubL_32",
+                "newPage": false,
+                "searchKey": "suffixarray.induceSubL_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceSubL_32(text []int32, sa, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceSubL_32(text []int32, sa, freq, bucket []int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceSubL_64",
+              "documentation": {
+                "identifier": "induceSubL_64",
+                "newPage": false,
+                "searchKey": "suffixarray.induceSubL_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceSubL_64(text []int64, sa, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceSubL_64(text []int64, sa, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceSubS_8_64",
+              "documentation": {
+                "identifier": "induceSubS_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.induceSubS_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceSubS_8_64(text []byte, sa, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceSubS_8_64(text []byte, sa, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceSubS_32",
+              "documentation": {
+                "identifier": "induceSubS_32",
+                "newPage": false,
+                "searchKey": "suffixarray.induceSubS_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceSubS_32(text []int32, sa, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceSubS_32(text []int32, sa, freq, bucket []int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceSubS_64",
+              "documentation": {
+                "identifier": "induceSubS_64",
+                "newPage": false,
+                "searchKey": "suffixarray.induceSubS_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceSubS_64(text []int64, sa, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceSubS_64(text []int64, sa, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#length_8_64",
+              "documentation": {
+                "identifier": "length_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.length_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func length_8_64(text []byte, sa []int64, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc length_8_64(text []byte, sa []int64, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#length_32",
+              "documentation": {
+                "identifier": "length_32",
+                "newPage": false,
+                "searchKey": "suffixarray.length_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func length_32(text []int32, sa []int32, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc length_32(text []int32, sa []int32, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#length_64",
+              "documentation": {
+                "identifier": "length_64",
+                "newPage": false,
+                "searchKey": "suffixarray.length_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func length_64(text []int64, sa []int64, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc length_64(text []int64, sa []int64, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#assignID_8_64",
+              "documentation": {
+                "identifier": "assignID_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.assignID_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assignID_8_64(text []byte, sa []int64, numLMS int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assignID_8_64(text []byte, sa []int64, numLMS int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#assignID_32",
+              "documentation": {
+                "identifier": "assignID_32",
+                "newPage": false,
+                "searchKey": "suffixarray.assignID_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assignID_32(text []int32, sa []int32, numLMS int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assignID_32(text []int32, sa []int32, numLMS int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#assignID_64",
+              "documentation": {
+                "identifier": "assignID_64",
+                "newPage": false,
+                "searchKey": "suffixarray.assignID_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func assignID_64(text []int64, sa []int64, numLMS int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc assignID_64(text []int64, sa []int64, numLMS int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#map_64",
+              "documentation": {
+                "identifier": "map_64",
+                "newPage": false,
+                "searchKey": "suffixarray.map_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func map_64(sa []int64, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc map_64(sa []int64, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#recurse_64",
+              "documentation": {
+                "identifier": "recurse_64",
+                "newPage": false,
+                "searchKey": "suffixarray.recurse_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func recurse_64(sa, oldTmp []int64, numLMS, maxID int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc recurse_64(sa, oldTmp []int64, numLMS, maxID int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#unmap_8_64",
+              "documentation": {
+                "identifier": "unmap_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.unmap_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unmap_8_64(text []byte, sa []int64, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unmap_8_64(text []byte, sa []int64, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#unmap_32",
+              "documentation": {
+                "identifier": "unmap_32",
+                "newPage": false,
+                "searchKey": "suffixarray.unmap_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unmap_32(text []int32, sa []int32, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unmap_32(text []int32, sa []int32, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#unmap_64",
+              "documentation": {
+                "identifier": "unmap_64",
+                "newPage": false,
+                "searchKey": "suffixarray.unmap_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unmap_64(text []int64, sa []int64, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unmap_64(text []int64, sa []int64, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#expand_8_64",
+              "documentation": {
+                "identifier": "expand_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.expand_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expand_8_64(text []byte, freq, bucket, sa []int64, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expand_8_64(text []byte, freq, bucket, sa []int64, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#expand_32",
+              "documentation": {
+                "identifier": "expand_32",
+                "newPage": false,
+                "searchKey": "suffixarray.expand_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expand_32(text []int32, freq, bucket, sa []int32, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expand_32(text []int32, freq, bucket, sa []int32, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#expand_64",
+              "documentation": {
+                "identifier": "expand_64",
+                "newPage": false,
+                "searchKey": "suffixarray.expand_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expand_64(text []int64, freq, bucket, sa []int64, numLMS int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expand_64(text []int64, freq, bucket, sa []int64, numLMS int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceL_8_64",
+              "documentation": {
+                "identifier": "induceL_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.induceL_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceL_8_64(text []byte, sa, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceL_8_64(text []byte, sa, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceL_32",
+              "documentation": {
+                "identifier": "induceL_32",
+                "newPage": false,
+                "searchKey": "suffixarray.induceL_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceL_32(text []int32, sa, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceL_32(text []int32, sa, freq, bucket []int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceL_64",
+              "documentation": {
+                "identifier": "induceL_64",
+                "newPage": false,
+                "searchKey": "suffixarray.induceL_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceL_64(text []int64, sa, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceL_64(text []int64, sa, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceS_8_64",
+              "documentation": {
+                "identifier": "induceS_8_64",
+                "newPage": false,
+                "searchKey": "suffixarray.induceS_8_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceS_8_64(text []byte, sa, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceS_8_64(text []byte, sa, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceS_32",
+              "documentation": {
+                "identifier": "induceS_32",
+                "newPage": false,
+                "searchKey": "suffixarray.induceS_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceS_32(text []int32, sa, freq, bucket []int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceS_32(text []int32, sa, freq, bucket []int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#induceS_64",
+              "documentation": {
+                "identifier": "induceS_64",
+                "newPage": false,
+                "searchKey": "suffixarray.induceS_64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func induceS_64(text []int64, sa, freq, bucket []int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc induceS_64(text []int64, sa, freq, bucket []int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#writeInt",
+              "documentation": {
+                "identifier": "writeInt",
+                "newPage": false,
+                "searchKey": "suffixarray.writeInt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writeInt(w io.Writer, buf []byte, x int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writeInt(w io.Writer, buf []byte, x int) error\n```\n\nwriteInt writes an int x to w using buf to buffer the write. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#readInt",
+              "documentation": {
+                "identifier": "readInt",
+                "newPage": false,
+                "searchKey": "suffixarray.readInt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readInt(r io.Reader, buf []byte) (int64, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readInt(r io.Reader, buf []byte) (int64, error)\n```\n\nreadInt reads an int x from r using buf to buffer the read and returns x. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#writeSlice",
+              "documentation": {
+                "identifier": "writeSlice",
+                "newPage": false,
+                "searchKey": "suffixarray.writeSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writeSlice(w io.Writer, buf []byte, data ints) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writeSlice(w io.Writer, buf []byte, data ints) (n int, err error)\n```\n\nwriteSlice writes data[:n] to w and returns n. It uses buf to buffer the write. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#readSlice",
+              "documentation": {
+                "identifier": "readSlice",
+                "newPage": false,
+                "searchKey": "suffixarray.readSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readSlice(r io.Reader, buf []byte, data ints) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readSlice(r io.Reader, buf []byte, data ints) (n int, err error)\n```\n\nreadSlice reads data[:n] from r and returns n. It uses buf to buffer the read. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#find",
+              "documentation": {
+                "identifier": "find",
+                "newPage": false,
+                "searchKey": "suffixarray.find",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func find(src, s string, n int) []int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc find(src, s string, n int) []int\n```\n\nfind all occurrences of s in source; report at most n occurrences \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testLookup",
+              "documentation": {
+                "identifier": "testLookup",
+                "newPage": false,
+                "searchKey": "suffixarray.testLookup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testLookup(t *testing.T, tc *testCase, x *Index, s string, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testLookup(t *testing.T, tc *testCase, x *Index, s string, n int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testFindAllIndex",
+              "documentation": {
+                "identifier": "testFindAllIndex",
+                "newPage": false,
+                "searchKey": "suffixarray.testFindAllIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testFindAllIndex(t *testing.T, tc *testCase, x *Index, rx *regexp.Regexp, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testFindAllIndex(t *testing.T, tc *testCase, x *Index, rx *regexp.Regexp, n int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testLookups",
+              "documentation": {
+                "identifier": "testLookups",
+                "newPage": false,
+                "searchKey": "suffixarray.testLookups",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testLookups(t *testing.T, tc *testCase, x *Index, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testLookups(t *testing.T, tc *testCase, x *Index, n int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testConstruction",
+              "documentation": {
+                "identifier": "testConstruction",
+                "newPage": false,
+                "searchKey": "suffixarray.testConstruction",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testConstruction(t *testing.T, tc *testCase, x *Index)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testConstruction(t *testing.T, tc *testCase, x *Index)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#equal",
+              "documentation": {
+                "identifier": "equal",
+                "newPage": false,
+                "searchKey": "suffixarray.equal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func equal(x, y *Index) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc equal(x, y *Index) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testSaveRestore",
+              "documentation": {
+                "identifier": "testSaveRestore",
+                "newPage": false,
+                "searchKey": "suffixarray.testSaveRestore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSaveRestore(t *testing.T, tc *testCase, x *Index) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSaveRestore(t *testing.T, tc *testCase, x *Index) int\n```\n\nreturns the serialized index size \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testIndex",
+              "documentation": {
+                "identifier": "testIndex",
+                "newPage": false,
+                "searchKey": "suffixarray.testIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testIndex(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testIndex(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#TestIndex32",
+              "documentation": {
+                "identifier": "TestIndex32",
+                "newPage": false,
+                "searchKey": "suffixarray.TestIndex32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndex32(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndex32(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#TestIndex64",
+              "documentation": {
+                "identifier": "TestIndex64",
+                "newPage": false,
+                "searchKey": "suffixarray.TestIndex64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndex64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndex64(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#TestNew32",
+              "documentation": {
+                "identifier": "TestNew32",
+                "newPage": false,
+                "searchKey": "suffixarray.TestNew32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNew32(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNew32(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#TestNew64",
+              "documentation": {
+                "identifier": "TestNew64",
+                "newPage": false,
+                "searchKey": "suffixarray.TestNew64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNew64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNew64(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#test",
+              "documentation": {
+                "identifier": "test",
+                "newPage": false,
+                "searchKey": "suffixarray.test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func test(t *testing.T, build func([]byte) []int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc test(t *testing.T, build func([]byte) []int)\n```\n\ntest tests an arbitrary suffix array construction function. Generates many inputs, builds and checks suffix arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testRec",
+              "documentation": {
+                "identifier": "testRec",
+                "newPage": false,
+                "searchKey": "suffixarray.testRec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testRec(t *testing.T, x []byte, i, max int, numFail *int, build func([]byte) []int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testRec(t *testing.T, x []byte, i, max int, numFail *int, build func([]byte) []int)\n```\n\ntestRec fills x[i:] with all possible combinations of values in [1,max] and then calls testSA(t, x, build) for each one. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#testSA",
+              "documentation": {
+                "identifier": "testSA",
+                "newPage": false,
+                "searchKey": "suffixarray.testSA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSA(t *testing.T, x []byte, build func([]byte) []int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSA(t *testing.T, x []byte, build func([]byte) []int) bool\n```\n\ntestSA tests the suffix array build function on the input x. It constructs the suffix array and then checks that it is correct. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#benchmarkNew",
+              "documentation": {
+                "identifier": "benchmarkNew",
+                "newPage": false,
+                "searchKey": "suffixarray.benchmarkNew",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkNew(b *testing.B, random bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkNew(b *testing.B, random bool)\n```\n\nOf all possible inputs, the random bytes have the least amount of substring repetition, and the repeated bytes have the most. For most algorithms, the running time of every input will be between these two. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#makeText",
+              "documentation": {
+                "identifier": "makeText",
+                "newPage": false,
+                "searchKey": "suffixarray.makeText",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeText(name string) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeText(name string) ([]byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#setBits",
+              "documentation": {
+                "identifier": "setBits",
+                "newPage": false,
+                "searchKey": "suffixarray.setBits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setBits(bits int) (cleanup func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setBits(bits int) (cleanup func())\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#BenchmarkNew",
+              "documentation": {
+                "identifier": "BenchmarkNew",
+                "newPage": false,
+                "searchKey": "suffixarray.BenchmarkNew",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNew(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNew(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/index/suffixarray#BenchmarkSaveRestore",
+              "documentation": {
+                "identifier": "BenchmarkSaveRestore",
+                "newPage": false,
+                "searchKey": "suffixarray.BenchmarkSaveRestore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSaveRestore(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSaveRestore(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

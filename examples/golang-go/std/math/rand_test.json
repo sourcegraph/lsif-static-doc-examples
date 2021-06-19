@@ -1,0 +1,1424 @@
+{
+  "pathID": "/std/math/rand_test",
+  "documentation": {
+    "identifier": "rand_test",
+    "newPage": true,
+    "searchKey": "std/math/rand_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package rand_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/math/rand_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#numTestSamples",
+              "documentation": {
+                "identifier": "numTestSamples",
+                "newPage": false,
+                "searchKey": "rand_test.numTestSamples",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const numTestSamples"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst numTestSamples = 10000\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/math/rand_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#rn",
+              "documentation": {
+                "identifier": "rn",
+                "newPage": false,
+                "searchKey": "rand_test.rn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#kn",
+              "documentation": {
+                "identifier": "kn",
+                "newPage": false,
+                "searchKey": "rand_test.kn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var kn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#wn",
+              "documentation": {
+                "identifier": "wn",
+                "newPage": false,
+                "searchKey": "rand_test.wn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var wn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#fn",
+              "documentation": {
+                "identifier": "fn",
+                "newPage": false,
+                "searchKey": "rand_test.fn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rn, kn, wn, fn = GetNormalDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#re",
+              "documentation": {
+                "identifier": "re",
+                "newPage": false,
+                "searchKey": "rand_test.re",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var re"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#ke",
+              "documentation": {
+                "identifier": "ke",
+                "newPage": false,
+                "searchKey": "rand_test.ke",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ke"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#we",
+              "documentation": {
+                "identifier": "we",
+                "newPage": false,
+                "searchKey": "rand_test.we",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var we"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#fe",
+              "documentation": {
+                "identifier": "fe",
+                "newPage": false,
+                "searchKey": "rand_test.fe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar re, ke, we, fe = GetExponentialDistributionParameters()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#testSeeds",
+              "documentation": {
+                "identifier": "testSeeds",
+                "newPage": false,
+                "searchKey": "rand_test.testSeeds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testSeeds"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testSeeds = []int64{1, 1754801282, 1698661970, 1550503961}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#printgolden",
+              "documentation": {
+                "identifier": "printgolden",
+                "newPage": false,
+                "searchKey": "rand_test.printgolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var printgolden"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar printgolden = flag.Bool(\"printgolden\", false, \"print golden results for regression test\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#regressGolden",
+              "documentation": {
+                "identifier": "regressGolden",
+                "newPage": false,
+                "searchKey": "rand_test.regressGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var regressGolden"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar regressGolden = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/math/rand_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#statsResults",
+              "documentation": {
+                "identifier": "statsResults",
+                "newPage": false,
+                "searchKey": "rand_test.statsResults",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type statsResults struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype statsResults struct {\n\tmean        float64\n\tstddev      float64\n\tcloseEnough float64\n\tmaxError    float64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/math/rand_test#getStatsResults",
+                    "documentation": {
+                      "identifier": "getStatsResults",
+                      "newPage": false,
+                      "searchKey": "rand_test.getStatsResults",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func getStatsResults(samples []float64) *statsResults"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc getStatsResults(samples []float64) *statsResults\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/math/rand_test#statsResults.checkSimilarDistribution",
+                    "documentation": {
+                      "identifier": "statsResults.checkSimilarDistribution",
+                      "newPage": false,
+                      "searchKey": "rand_test.statsResults.checkSimilarDistribution",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (this *statsResults) checkSimilarDistribution(expected *statsResults) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (this *statsResults) checkSimilarDistribution(expected *statsResults) error\n```\n\ncheckSimilarDistribution returns success if the mean and stddev of the two statsResults are similar. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/math/rand_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#Example",
+              "documentation": {
+                "identifier": "Example",
+                "newPage": false,
+                "searchKey": "rand_test.Example",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#Example_rand",
+              "documentation": {
+                "identifier": "Example_rand",
+                "newPage": false,
+                "searchKey": "rand_test.Example_rand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_rand()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_rand()\n```\n\nThis example shows the use of each of the methods on a *Rand. The use of the global functions is the same, without the receiver. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#ExamplePerm",
+              "documentation": {
+                "identifier": "ExamplePerm",
+                "newPage": false,
+                "searchKey": "rand_test.ExamplePerm",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExamplePerm()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExamplePerm()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#ExampleShuffle",
+              "documentation": {
+                "identifier": "ExampleShuffle",
+                "newPage": false,
+                "searchKey": "rand_test.ExampleShuffle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleShuffle()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleShuffle()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#ExampleShuffle_slicesInUnison",
+              "documentation": {
+                "identifier": "ExampleShuffle_slicesInUnison",
+                "newPage": false,
+                "searchKey": "rand_test.ExampleShuffle_slicesInUnison",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleShuffle_slicesInUnison()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleShuffle_slicesInUnison()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#ExampleIntn",
+              "documentation": {
+                "identifier": "ExampleIntn",
+                "newPage": false,
+                "searchKey": "rand_test.ExampleIntn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIntn()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIntn()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestConcurrent",
+              "documentation": {
+                "identifier": "TestConcurrent",
+                "newPage": false,
+                "searchKey": "rand_test.TestConcurrent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConcurrent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConcurrent(t *testing.T)\n```\n\nTestConcurrent exercises the rand API concurrently, triggering situations where the race detector is likely to detect issues. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#max",
+              "documentation": {
+                "identifier": "max",
+                "newPage": false,
+                "searchKey": "rand_test.max",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func max(a, b float64) float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc max(a, b float64) float64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#nearEqual",
+              "documentation": {
+                "identifier": "nearEqual",
+                "newPage": false,
+                "searchKey": "rand_test.nearEqual",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nearEqual(a, b, closeEnough, maxError float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nearEqual(a, b, closeEnough, maxError float64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#checkSampleDistribution",
+              "documentation": {
+                "identifier": "checkSampleDistribution",
+                "newPage": false,
+                "searchKey": "rand_test.checkSampleDistribution",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkSampleDistribution(t *testing.T, samples []float64, expected *statsResults)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkSampleDistribution(t *testing.T, samples []float64, expected *statsResults)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#checkSampleSliceDistributions",
+              "documentation": {
+                "identifier": "checkSampleSliceDistributions",
+                "newPage": false,
+                "searchKey": "rand_test.checkSampleSliceDistributions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkSampleSliceDistributions(t *testing.T, samples []float64, nslices int, expected *statsResults)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkSampleSliceDistributions(t *testing.T, samples []float64, nslices int, expected *statsResults)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#generateNormalSamples",
+              "documentation": {
+                "identifier": "generateNormalSamples",
+                "newPage": false,
+                "searchKey": "rand_test.generateNormalSamples",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func generateNormalSamples(nsamples int, mean, stddev float64, seed int64) []float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc generateNormalSamples(nsamples int, mean, stddev float64, seed int64) []float64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#testNormalDistribution",
+              "documentation": {
+                "identifier": "testNormalDistribution",
+                "newPage": false,
+                "searchKey": "rand_test.testNormalDistribution",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64, seed int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNormalDistribution(t *testing.T, nsamples int, mean, stddev float64, seed int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestStandardNormalValues",
+              "documentation": {
+                "identifier": "TestStandardNormalValues",
+                "newPage": false,
+                "searchKey": "rand_test.TestStandardNormalValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStandardNormalValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStandardNormalValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestNonStandardNormalValues",
+              "documentation": {
+                "identifier": "TestNonStandardNormalValues",
+                "newPage": false,
+                "searchKey": "rand_test.TestNonStandardNormalValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonStandardNormalValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonStandardNormalValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#generateExponentialSamples",
+              "documentation": {
+                "identifier": "generateExponentialSamples",
+                "newPage": false,
+                "searchKey": "rand_test.generateExponentialSamples",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func generateExponentialSamples(nsamples int, rate float64, seed int64) []float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc generateExponentialSamples(nsamples int, rate float64, seed int64) []float64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#testExponentialDistribution",
+              "documentation": {
+                "identifier": "testExponentialDistribution",
+                "newPage": false,
+                "searchKey": "rand_test.testExponentialDistribution",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testExponentialDistribution(t *testing.T, nsamples int, rate float64, seed int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testExponentialDistribution(t *testing.T, nsamples int, rate float64, seed int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestStandardExponentialValues",
+              "documentation": {
+                "identifier": "TestStandardExponentialValues",
+                "newPage": false,
+                "searchKey": "rand_test.TestStandardExponentialValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStandardExponentialValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStandardExponentialValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestNonStandardExponentialValues",
+              "documentation": {
+                "identifier": "TestNonStandardExponentialValues",
+                "newPage": false,
+                "searchKey": "rand_test.TestNonStandardExponentialValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonStandardExponentialValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonStandardExponentialValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#initNorm",
+              "documentation": {
+                "identifier": "initNorm",
+                "newPage": false,
+                "searchKey": "rand_test.initNorm",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initNorm() (testKn []uint32, testWn, testFn []float32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initNorm() (testKn []uint32, testWn, testFn []float32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#initExp",
+              "documentation": {
+                "identifier": "initExp",
+                "newPage": false,
+                "searchKey": "rand_test.initExp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initExp() (testKe []uint32, testWe, testFe []float32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initExp() (testKe []uint32, testWe, testFe []float32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#compareUint32Slices",
+              "documentation": {
+                "identifier": "compareUint32Slices",
+                "newPage": false,
+                "searchKey": "rand_test.compareUint32Slices",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func compareUint32Slices(s1, s2 []uint32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc compareUint32Slices(s1, s2 []uint32) int\n```\n\ncompareUint32Slices returns the first index where the two slices disagree, or <0 if the lengths are the same and all elements are identical. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#compareFloat32Slices",
+              "documentation": {
+                "identifier": "compareFloat32Slices",
+                "newPage": false,
+                "searchKey": "rand_test.compareFloat32Slices",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func compareFloat32Slices(s1, s2 []float32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc compareFloat32Slices(s1, s2 []float32) int\n```\n\ncompareFloat32Slices returns the first index where the two slices disagree, or <0 if the lengths are the same and all elements are identical. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestNormTables",
+              "documentation": {
+                "identifier": "TestNormTables",
+                "newPage": false,
+                "searchKey": "rand_test.TestNormTables",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNormTables(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNormTables(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestExpTables",
+              "documentation": {
+                "identifier": "TestExpTables",
+                "newPage": false,
+                "searchKey": "rand_test.TestExpTables",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExpTables(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExpTables(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#hasSlowFloatingPoint",
+              "documentation": {
+                "identifier": "hasSlowFloatingPoint",
+                "newPage": false,
+                "searchKey": "rand_test.hasSlowFloatingPoint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasSlowFloatingPoint() bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasSlowFloatingPoint() bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestFloat32",
+              "documentation": {
+                "identifier": "TestFloat32",
+                "newPage": false,
+                "searchKey": "rand_test.TestFloat32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFloat32(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFloat32(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#testReadUniformity",
+              "documentation": {
+                "identifier": "testReadUniformity",
+                "newPage": false,
+                "searchKey": "rand_test.testReadUniformity",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReadUniformity(t *testing.T, n int, seed int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReadUniformity(t *testing.T, n int, seed int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestReadUniformity",
+              "documentation": {
+                "identifier": "TestReadUniformity",
+                "newPage": false,
+                "searchKey": "rand_test.TestReadUniformity",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadUniformity(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadUniformity(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestReadEmpty",
+              "documentation": {
+                "identifier": "TestReadEmpty",
+                "newPage": false,
+                "searchKey": "rand_test.TestReadEmpty",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadEmpty(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadEmpty(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestReadByOneByte",
+              "documentation": {
+                "identifier": "TestReadByOneByte",
+                "newPage": false,
+                "searchKey": "rand_test.TestReadByOneByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadByOneByte(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadByOneByte(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestReadSeedReset",
+              "documentation": {
+                "identifier": "TestReadSeedReset",
+                "newPage": false,
+                "searchKey": "rand_test.TestReadSeedReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadSeedReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadSeedReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestShuffleSmall",
+              "documentation": {
+                "identifier": "TestShuffleSmall",
+                "newPage": false,
+                "searchKey": "rand_test.TestShuffleSmall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShuffleSmall(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShuffleSmall(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#encodePerm",
+              "documentation": {
+                "identifier": "encodePerm",
+                "newPage": false,
+                "searchKey": "rand_test.encodePerm",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func encodePerm(s []int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc encodePerm(s []int) int\n```\n\nencodePerm converts from a permuted slice of length n, such as Perm generates, to an int in [0, n!). See [https://en.wikipedia.org/wiki/Lehmer_code](https://en.wikipedia.org/wiki/Lehmer_code). encodePerm modifies the input slice. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestUniformFactorial",
+              "documentation": {
+                "identifier": "TestUniformFactorial",
+                "newPage": false,
+                "searchKey": "rand_test.TestUniformFactorial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUniformFactorial(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUniformFactorial(t *testing.T)\n```\n\nTestUniformFactorial tests several ways of generating a uniform value in [0, n!). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkInt63Threadsafe",
+              "documentation": {
+                "identifier": "BenchmarkInt63Threadsafe",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt63Threadsafe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt63Threadsafe(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt63Threadsafe(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkInt63ThreadsafeParallel",
+              "documentation": {
+                "identifier": "BenchmarkInt63ThreadsafeParallel",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt63ThreadsafeParallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt63ThreadsafeParallel(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt63ThreadsafeParallel(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkInt63Unthreadsafe",
+              "documentation": {
+                "identifier": "BenchmarkInt63Unthreadsafe",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt63Unthreadsafe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt63Unthreadsafe(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt63Unthreadsafe(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkIntn1000",
+              "documentation": {
+                "identifier": "BenchmarkIntn1000",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkIntn1000",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIntn1000(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIntn1000(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkInt63n1000",
+              "documentation": {
+                "identifier": "BenchmarkInt63n1000",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt63n1000",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt63n1000(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt63n1000(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkInt31n1000",
+              "documentation": {
+                "identifier": "BenchmarkInt31n1000",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkInt31n1000",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkInt31n1000(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkInt31n1000(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkFloat32",
+              "documentation": {
+                "identifier": "BenchmarkFloat32",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkFloat32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFloat32(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFloat32(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkFloat64",
+              "documentation": {
+                "identifier": "BenchmarkFloat64",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkFloat64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFloat64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFloat64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkPerm3",
+              "documentation": {
+                "identifier": "BenchmarkPerm3",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkPerm3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPerm3(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPerm3(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkPerm30",
+              "documentation": {
+                "identifier": "BenchmarkPerm30",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkPerm30",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPerm30(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPerm30(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkPerm30ViaShuffle",
+              "documentation": {
+                "identifier": "BenchmarkPerm30ViaShuffle",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkPerm30ViaShuffle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPerm30ViaShuffle(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPerm30ViaShuffle(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkShuffleOverhead",
+              "documentation": {
+                "identifier": "BenchmarkShuffleOverhead",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkShuffleOverhead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkShuffleOverhead(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkShuffleOverhead(b *testing.B)\n```\n\nBenchmarkShuffleOverhead uses a minimal swap function to measure just the shuffling overhead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkRead3",
+              "documentation": {
+                "identifier": "BenchmarkRead3",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkRead3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRead3(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRead3(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkRead64",
+              "documentation": {
+                "identifier": "BenchmarkRead64",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkRead64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRead64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRead64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#BenchmarkRead1000",
+              "documentation": {
+                "identifier": "BenchmarkRead1000",
+                "newPage": false,
+                "searchKey": "rand_test.BenchmarkRead1000",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRead1000(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRead1000(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/math/rand_test#TestRegress",
+              "documentation": {
+                "identifier": "TestRegress",
+                "newPage": false,
+                "searchKey": "rand_test.TestRegress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRegress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRegress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

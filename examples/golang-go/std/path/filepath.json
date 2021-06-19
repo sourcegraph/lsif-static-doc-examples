@@ -1,0 +1,1244 @@
+{
+  "pathID": "/std/path/filepath",
+  "documentation": {
+    "identifier": "filepath",
+    "newPage": true,
+    "searchKey": "std/path/filepath",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package filepath"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package filepath implements utility routines for manipulating filename paths in a way compatible with the target operating system-defined file paths. \n\nThe filepath package uses either forward slashes or backslashes, depending on the operating system. To process paths such as URLs that always use forward slashes regardless of the operating system, see the path package. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/path/filepath#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Separator",
+              "documentation": {
+                "identifier": "Separator",
+                "newPage": false,
+                "searchKey": "filepath.Separator",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Separator"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Separator = os.PathSeparator\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#ListSeparator",
+              "documentation": {
+                "identifier": "ListSeparator",
+                "newPage": false,
+                "searchKey": "filepath.ListSeparator",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ListSeparator"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ListSeparator = os.PathListSeparator\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/path/filepath#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/path/filepath#ErrBadPattern",
+              "documentation": {
+                "identifier": "ErrBadPattern",
+                "newPage": false,
+                "searchKey": "filepath.ErrBadPattern",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrBadPattern"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrBadPattern = errors.New(\"syntax error in pattern\")\n```\n\nErrBadPattern indicates a pattern was malformed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#SkipDir",
+              "documentation": {
+                "identifier": "SkipDir",
+                "newPage": false,
+                "searchKey": "filepath.SkipDir",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var SkipDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar SkipDir error = fs.SkipDir\n```\n\nSkipDir is used as a return value from WalkFuncs to indicate that the directory named in the call is to be skipped. It is not returned as an error by any function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#lstat",
+              "documentation": {
+                "identifier": "lstat",
+                "newPage": false,
+                "searchKey": "filepath.lstat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lstat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lstat = os.Lstat // for testing\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#LstatP",
+              "documentation": {
+                "identifier": "LstatP",
+                "newPage": false,
+                "searchKey": "filepath.LstatP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var LstatP"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar LstatP = &lstat\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/path/filepath#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/path/filepath#lazybuf",
+              "documentation": {
+                "identifier": "lazybuf",
+                "newPage": false,
+                "searchKey": "filepath.lazybuf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type lazybuf struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype lazybuf struct {\n\tpath       string\n\tbuf        []byte\n\tw          int\n\tvolAndPath string\n\tvolLen     int\n}\n```\n\nA lazybuf is a lazily constructed path buffer. It supports append, reading previously appended bytes, and retrieving the final string. It does not allocate a buffer to hold the output until that output diverges from s. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/path/filepath#lazybuf.index",
+                    "documentation": {
+                      "identifier": "lazybuf.index",
+                      "newPage": false,
+                      "searchKey": "filepath.lazybuf.index",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *lazybuf) index(i int) byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *lazybuf) index(i int) byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/path/filepath#lazybuf.append",
+                    "documentation": {
+                      "identifier": "lazybuf.append",
+                      "newPage": false,
+                      "searchKey": "filepath.lazybuf.append",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *lazybuf) append(c byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *lazybuf) append(c byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/path/filepath#lazybuf.string",
+                    "documentation": {
+                      "identifier": "lazybuf.string",
+                      "newPage": false,
+                      "searchKey": "filepath.lazybuf.string",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *lazybuf) string() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *lazybuf) string() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#WalkFunc",
+              "documentation": {
+                "identifier": "WalkFunc",
+                "newPage": false,
+                "searchKey": "filepath.WalkFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WalkFunc func(path string, info io/fs.FileInfo, err error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WalkFunc func(path string, info fs.FileInfo, err error) error\n```\n\nWalkFunc is the type of the function called by Walk to visit each file or directory. \n\nThe path argument contains the argument to Walk as a prefix. That is, if Walk is called with root argument \"dir\" and finds a file named \"a\" in that directory, the walk function will be called with argument \"dir/a\". \n\nThe directory and file are joined with Join, which may clean the directory name: if Walk is called with the root argument \"x/../dir\" and finds a file named \"a\" in that directory, the walk function will be called with argument \"dir/a\", not \"x/../dir/a\". \n\nThe info argument is the fs.FileInfo for the named path. \n\nThe error result returned by the function controls how Walk continues. If the function returns the special value SkipDir, Walk skips the current directory (path if info.IsDir() is true, otherwise path's parent directory). Otherwise, if the function returns a non-nil error, Walk stops entirely and returns that error. \n\nThe err argument reports an error related to path, signaling that Walk will not walk into that directory. The function can decide how to handle that error; as described earlier, returning the error will cause Walk to stop walking the entire tree. \n\nWalk calls the function with a non-nil err argument in two cases. \n\nFirst, if an os.Lstat on the root directory or any directory or file in the tree fails, Walk calls the function with path set to that directory or file's path, info set to nil, and err set to the error from os.Lstat. \n\nSecond, if a directory's Readdirnames method fails, Walk calls the function with path set to the directory's path, info, set to an fs.FileInfo describing the directory, and err set to the error from Readdirnames. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#statDirEntry",
+              "documentation": {
+                "identifier": "statDirEntry",
+                "newPage": false,
+                "searchKey": "filepath.statDirEntry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type statDirEntry struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype statDirEntry struct {\n\tinfo fs.FileInfo\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/path/filepath#statDirEntry.Name",
+                    "documentation": {
+                      "identifier": "statDirEntry.Name",
+                      "newPage": false,
+                      "searchKey": "filepath.statDirEntry.Name",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/path/filepath#statDirEntry.IsDir",
+                    "documentation": {
+                      "identifier": "statDirEntry.IsDir",
+                      "newPage": false,
+                      "searchKey": "filepath.statDirEntry.IsDir",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/path/filepath#statDirEntry.Type",
+                    "documentation": {
+                      "identifier": "statDirEntry.Type",
+                      "newPage": false,
+                      "searchKey": "filepath.statDirEntry.Type",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) Type() fs.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) Type() fs.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/path/filepath#statDirEntry.Info",
+                    "documentation": {
+                      "identifier": "statDirEntry.Info",
+                      "newPage": false,
+                      "searchKey": "filepath.statDirEntry.Info",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *statDirEntry) Info() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *statDirEntry) Info() (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/path/filepath#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Match",
+              "documentation": {
+                "identifier": "Match",
+                "newPage": false,
+                "searchKey": "filepath.Match",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Match(pattern, name string) (matched bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Match(pattern, name string) (matched bool, err error)\n```\n\nMatch reports whether name matches the shell file name pattern. The pattern syntax is: \n\n```\npattern:\n\t{ term }\nterm:\n\t'*'         matches any sequence of non-Separator characters\n\t'?'         matches any single non-Separator character\n\t'[' [ '^' ] { character-range } ']'\n\t            character class (must be non-empty)\n\tc           matches character c (c != '*', '?', '\\\\', '[')\n\t'\\\\' c      matches character c\n\ncharacter-range:\n\tc           matches character c (c != '\\\\', '-', ']')\n\t'\\\\' c      matches character c\n\tlo '-' hi   matches character c for lo <= c <= hi\n\n```\nMatch requires pattern to match all of name, not just a substring. The only possible returned error is ErrBadPattern, when pattern is malformed. \n\nOn Windows, escaping is disabled. Instead, '\\\\' is treated as path separator. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#scanChunk",
+              "documentation": {
+                "identifier": "scanChunk",
+                "newPage": false,
+                "searchKey": "filepath.scanChunk",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func scanChunk(pattern string) (star bool, chunk, rest string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc scanChunk(pattern string) (star bool, chunk, rest string)\n```\n\nscanChunk gets the next segment of pattern, which is a non-star string possibly preceded by a star. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#matchChunk",
+              "documentation": {
+                "identifier": "matchChunk",
+                "newPage": false,
+                "searchKey": "filepath.matchChunk",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func matchChunk(chunk, s string) (rest string, ok bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc matchChunk(chunk, s string) (rest string, ok bool, err error)\n```\n\nmatchChunk checks whether chunk matches the beginning of s. If so, it returns the remainder of s (after the match). Chunk is all single-character operators: literals, char classes, and ?. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#getEsc",
+              "documentation": {
+                "identifier": "getEsc",
+                "newPage": false,
+                "searchKey": "filepath.getEsc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getEsc(chunk string) (r rune, nchunk string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getEsc(chunk string) (r rune, nchunk string, err error)\n```\n\ngetEsc gets a possibly-escaped character from chunk, for a character class. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Glob",
+              "documentation": {
+                "identifier": "Glob",
+                "newPage": false,
+                "searchKey": "filepath.Glob",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Glob(pattern string) (matches []string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Glob(pattern string) (matches []string, err error)\n```\n\nGlob returns the names of all files matching pattern or nil if there is no matching file. The syntax of patterns is the same as in Match. The pattern may describe hierarchical names such as /usr/*/bin/ed (assuming the Separator is '/'). \n\nGlob ignores file system errors such as I/O errors reading directories. The only possible returned error is ErrBadPattern, when pattern is malformed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#cleanGlobPath",
+              "documentation": {
+                "identifier": "cleanGlobPath",
+                "newPage": false,
+                "searchKey": "filepath.cleanGlobPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cleanGlobPath(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cleanGlobPath(path string) string\n```\n\ncleanGlobPath prepares path for glob matching. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#cleanGlobPathWindows",
+              "documentation": {
+                "identifier": "cleanGlobPathWindows",
+                "newPage": false,
+                "searchKey": "filepath.cleanGlobPathWindows",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cleanGlobPathWindows(path string) (prefixLen int, cleaned string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cleanGlobPathWindows(path string) (prefixLen int, cleaned string)\n```\n\ncleanGlobPathWindows is windows version of cleanGlobPath. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#glob",
+              "documentation": {
+                "identifier": "glob",
+                "newPage": false,
+                "searchKey": "filepath.glob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func glob(dir, pattern string, matches []string) (m []string, e error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc glob(dir, pattern string, matches []string) (m []string, e error)\n```\n\nglob searches for files matching pattern in the directory dir and appends them to matches. If the directory cannot be opened, it returns the existing matches. New matches are added in lexicographical order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#hasMeta",
+              "documentation": {
+                "identifier": "hasMeta",
+                "newPage": false,
+                "searchKey": "filepath.hasMeta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasMeta(path string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasMeta(path string) bool\n```\n\nhasMeta reports whether path contains any of the magic characters recognized by Match. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Clean",
+              "documentation": {
+                "identifier": "Clean",
+                "newPage": false,
+                "searchKey": "filepath.Clean",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Clean(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Clean(path string) string\n```\n\nClean returns the shortest path name equivalent to path by purely lexical processing. It applies the following rules iteratively until no further processing can be done: \n\n```\n1. Replace multiple Separator elements with a single one.\n2. Eliminate each . path name element (the current directory).\n3. Eliminate each inner .. path name element (the parent directory)\n   along with the non-.. element that precedes it.\n4. Eliminate .. elements that begin a rooted path:\n   that is, replace \"/..\" by \"/\" at the beginning of a path,\n   assuming Separator is '/'.\n\n```\nThe returned path ends in a slash only if it represents a root directory, such as \"/\" on Unix or `C:\\` on Windows. \n\nFinally, any occurrences of slash are replaced by Separator. \n\nIf the result of this process is an empty string, Clean returns the string \".\". \n\nSee also Rob Pike, `Lexical File Names in Plan 9 or Getting Dot-Dot Right,' [https://9p.io/sys/doc/lexnames.html](https://9p.io/sys/doc/lexnames.html) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#ToSlash",
+              "documentation": {
+                "identifier": "ToSlash",
+                "newPage": false,
+                "searchKey": "filepath.ToSlash",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToSlash(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToSlash(path string) string\n```\n\nToSlash returns the result of replacing each separator character in path with a slash ('/') character. Multiple separators are replaced by multiple slashes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#FromSlash",
+              "documentation": {
+                "identifier": "FromSlash",
+                "newPage": false,
+                "searchKey": "filepath.FromSlash",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FromSlash(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FromSlash(path string) string\n```\n\nFromSlash returns the result of replacing each slash ('/') character in path with a separator character. Multiple slashes are replaced by multiple separators. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#SplitList",
+              "documentation": {
+                "identifier": "SplitList",
+                "newPage": false,
+                "searchKey": "filepath.SplitList",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SplitList(path string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SplitList(path string) []string\n```\n\nSplitList splits a list of paths joined by the OS-specific ListSeparator, usually found in PATH or GOPATH environment variables. Unlike strings.Split, SplitList returns an empty slice when passed an empty string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Split",
+              "documentation": {
+                "identifier": "Split",
+                "newPage": false,
+                "searchKey": "filepath.Split",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Split(path string) (dir, file string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Split(path string) (dir, file string)\n```\n\nSplit splits path immediately following the final Separator, separating it into a directory and file name component. If there is no Separator in path, Split returns an empty dir and file set to path. The returned values have the property that path = dir+file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Join",
+              "documentation": {
+                "identifier": "Join",
+                "newPage": false,
+                "searchKey": "filepath.Join",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Join(elem ...string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Join(elem ...string) string\n```\n\nJoin joins any number of path elements into a single path, separating them with an OS specific Separator. Empty elements are ignored. The result is Cleaned. However, if the argument list is empty or all its elements are empty, Join returns an empty string. On Windows, the result will only be a UNC path if the first non-empty element is a UNC path. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Ext",
+              "documentation": {
+                "identifier": "Ext",
+                "newPage": false,
+                "searchKey": "filepath.Ext",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Ext(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Ext(path string) string\n```\n\nExt returns the file name extension used by path. The extension is the suffix beginning at the final dot in the final element of path; it is empty if there is no dot. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#EvalSymlinks",
+              "documentation": {
+                "identifier": "EvalSymlinks",
+                "newPage": false,
+                "searchKey": "filepath.EvalSymlinks",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EvalSymlinks(path string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EvalSymlinks(path string) (string, error)\n```\n\nEvalSymlinks returns the path name after the evaluation of any symbolic links. If path is relative the result will be relative to the current directory, unless one of the components is an absolute symbolic link. EvalSymlinks calls Clean on the result. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Abs",
+              "documentation": {
+                "identifier": "Abs",
+                "newPage": false,
+                "searchKey": "filepath.Abs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Abs(path string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Abs(path string) (string, error)\n```\n\nAbs returns an absolute representation of path. If the path is not absolute it will be joined with the current working directory to turn it into an absolute path. The absolute path name for a given file is not guaranteed to be unique. Abs calls Clean on the result. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#unixAbs",
+              "documentation": {
+                "identifier": "unixAbs",
+                "newPage": false,
+                "searchKey": "filepath.unixAbs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unixAbs(path string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unixAbs(path string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Rel",
+              "documentation": {
+                "identifier": "Rel",
+                "newPage": false,
+                "searchKey": "filepath.Rel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Rel(basepath, targpath string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Rel(basepath, targpath string) (string, error)\n```\n\nRel returns a relative path that is lexically equivalent to targpath when joined to basepath with an intervening separator. That is, Join(basepath, Rel(basepath, targpath)) is equivalent to targpath itself. On success, the returned path will always be relative to basepath, even if basepath and targpath share no elements. An error is returned if targpath can't be made relative to basepath or if knowing the current working directory would be necessary to compute it. Rel calls Clean on the result. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#walkDir",
+              "documentation": {
+                "identifier": "walkDir",
+                "newPage": false,
+                "searchKey": "filepath.walkDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func walkDir(path string, d fs.DirEntry, walkDirFn fs.WalkDirFunc) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc walkDir(path string, d fs.DirEntry, walkDirFn fs.WalkDirFunc) error\n```\n\nwalkDir recursively descends path, calling walkDirFn. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#walk",
+              "documentation": {
+                "identifier": "walk",
+                "newPage": false,
+                "searchKey": "filepath.walk",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func walk(path string, info fs.FileInfo, walkFn WalkFunc) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc walk(path string, info fs.FileInfo, walkFn WalkFunc) error\n```\n\nwalk recursively descends path, calling walkFn. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#WalkDir",
+              "documentation": {
+                "identifier": "WalkDir",
+                "newPage": false,
+                "searchKey": "filepath.WalkDir",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WalkDir(root string, fn fs.WalkDirFunc) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WalkDir(root string, fn fs.WalkDirFunc) error\n```\n\nWalkDir walks the file tree rooted at root, calling fn for each file or directory in the tree, including root. \n\nAll errors that arise visiting files and directories are filtered by fn: see the fs.WalkDirFunc documentation for details. \n\nThe files are walked in lexical order, which makes the output deterministic but requires WalkDir to read an entire directory into memory before proceeding to walk that directory. \n\nWalkDir does not follow symbolic links. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Walk",
+              "documentation": {
+                "identifier": "Walk",
+                "newPage": false,
+                "searchKey": "filepath.Walk",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Walk(root string, fn WalkFunc) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Walk(root string, fn WalkFunc) error\n```\n\nWalk walks the file tree rooted at root, calling fn for each file or directory in the tree, including root. \n\nAll errors that arise visiting files and directories are filtered by fn: see the WalkFunc documentation for details. \n\nThe files are walked in lexical order, which makes the output deterministic but requires Walk to read an entire directory into memory before proceeding to walk that directory. \n\nWalk does not follow symbolic links. \n\nWalk is less efficient than WalkDir, introduced in Go 1.16, which avoids calling os.Lstat on every visited file or directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#readDir",
+              "documentation": {
+                "identifier": "readDir",
+                "newPage": false,
+                "searchKey": "filepath.readDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readDir(dirname string) ([]fs.DirEntry, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readDir(dirname string) ([]fs.DirEntry, error)\n```\n\nreadDir reads the directory named by dirname and returns a sorted list of directory entries. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#readDirNames",
+              "documentation": {
+                "identifier": "readDirNames",
+                "newPage": false,
+                "searchKey": "filepath.readDirNames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readDirNames(dirname string) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readDirNames(dirname string) ([]string, error)\n```\n\nreadDirNames reads the directory named by dirname and returns a sorted list of directory entry names. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Base",
+              "documentation": {
+                "identifier": "Base",
+                "newPage": false,
+                "searchKey": "filepath.Base",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Base(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Base(path string) string\n```\n\nBase returns the last element of path. Trailing path separators are removed before extracting the last element. If the path is empty, Base returns \".\". If the path consists entirely of separators, Base returns a single separator. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#Dir",
+              "documentation": {
+                "identifier": "Dir",
+                "newPage": false,
+                "searchKey": "filepath.Dir",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Dir(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Dir(path string) string\n```\n\nDir returns all but the last element of path, typically the path's directory. After dropping the final element, Dir calls Clean on the path and trailing slashes are removed. If the path is empty, Dir returns \".\". If the path consists entirely of separators, Dir returns a single separator. The returned path does not end in a separator unless it is the root directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#VolumeName",
+              "documentation": {
+                "identifier": "VolumeName",
+                "newPage": false,
+                "searchKey": "filepath.VolumeName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func VolumeName(path string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc VolumeName(path string) string\n```\n\nVolumeName returns leading volume name. Given \"C:\\foo\\bar\" it returns \"C:\" on Windows. Given \"\\\\host\\share\\foo\" it returns \"\\\\host\\share\". On other platforms it returns \"\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#IsAbs",
+              "documentation": {
+                "identifier": "IsAbs",
+                "newPage": false,
+                "searchKey": "filepath.IsAbs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsAbs(path string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsAbs(path string) bool\n```\n\nIsAbs reports whether the path is absolute. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#volumeNameLen",
+              "documentation": {
+                "identifier": "volumeNameLen",
+                "newPage": false,
+                "searchKey": "filepath.volumeNameLen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func volumeNameLen(path string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc volumeNameLen(path string) int\n```\n\nvolumeNameLen returns length of the leading volume name on Windows. It returns 0 elsewhere. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#HasPrefix",
+              "documentation": {
+                "identifier": "HasPrefix",
+                "newPage": false,
+                "searchKey": "filepath.HasPrefix",
+                "tags": [
+                  "exported",
+                  "deprecated"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasPrefix(p, prefix string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasPrefix(p, prefix string) bool\n```\n\nHasPrefix exists for historical compatibility and should not be used. \n\nDeprecated: HasPrefix does not respect path boundaries and does not ignore case when required. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#splitList",
+              "documentation": {
+                "identifier": "splitList",
+                "newPage": false,
+                "searchKey": "filepath.splitList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func splitList(path string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc splitList(path string) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#abs",
+              "documentation": {
+                "identifier": "abs",
+                "newPage": false,
+                "searchKey": "filepath.abs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func abs(path string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc abs(path string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#join",
+              "documentation": {
+                "identifier": "join",
+                "newPage": false,
+                "searchKey": "filepath.join",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func join(elem []string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc join(elem []string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#sameWord",
+              "documentation": {
+                "identifier": "sameWord",
+                "newPage": false,
+                "searchKey": "filepath.sameWord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sameWord(a, b string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sameWord(a, b string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#walkSymlinks",
+              "documentation": {
+                "identifier": "walkSymlinks",
+                "newPage": false,
+                "searchKey": "filepath.walkSymlinks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func walkSymlinks(path string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc walkSymlinks(path string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/path/filepath#evalSymlinks",
+              "documentation": {
+                "identifier": "evalSymlinks",
+                "newPage": false,
+                "searchKey": "filepath.evalSymlinks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func evalSymlinks(path string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc evalSymlinks(path string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

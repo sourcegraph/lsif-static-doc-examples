@@ -1,0 +1,2916 @@
+{
+  "pathID": "/std/sort_test",
+  "documentation": {
+    "identifier": "sort_test",
+    "newPage": true,
+    "searchKey": "std/sort_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package sort_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/sort_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Sawtooth",
+              "documentation": {
+                "identifier": "_Sawtooth",
+                "newPage": false,
+                "searchKey": "sort_test._Sawtooth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Sawtooth"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Sawtooth = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Rand",
+              "documentation": {
+                "identifier": "_Rand",
+                "newPage": false,
+                "searchKey": "sort_test._Rand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Rand"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Rand\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Stagger",
+              "documentation": {
+                "identifier": "_Stagger",
+                "newPage": false,
+                "searchKey": "sort_test._Stagger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Stagger"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Stagger\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Plateau",
+              "documentation": {
+                "identifier": "_Plateau",
+                "newPage": false,
+                "searchKey": "sort_test._Plateau",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Plateau"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Plateau\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Shuffle",
+              "documentation": {
+                "identifier": "_Shuffle",
+                "newPage": false,
+                "searchKey": "sort_test._Shuffle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Shuffle"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Shuffle\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_NDist",
+              "documentation": {
+                "identifier": "_NDist",
+                "newPage": false,
+                "searchKey": "sort_test._NDist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _NDist"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _NDist\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Copy",
+              "documentation": {
+                "identifier": "_Copy",
+                "newPage": false,
+                "searchKey": "sort_test._Copy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Copy"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Copy = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Reverse",
+              "documentation": {
+                "identifier": "_Reverse",
+                "newPage": false,
+                "searchKey": "sort_test._Reverse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Reverse"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Reverse\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_ReverseFirstHalf",
+              "documentation": {
+                "identifier": "_ReverseFirstHalf",
+                "newPage": false,
+                "searchKey": "sort_test._ReverseFirstHalf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _ReverseFirstHalf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _ReverseFirstHalf\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_ReverseSecondHalf",
+              "documentation": {
+                "identifier": "_ReverseSecondHalf",
+                "newPage": false,
+                "searchKey": "sort_test._ReverseSecondHalf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _ReverseSecondHalf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _ReverseSecondHalf\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Sorted",
+              "documentation": {
+                "identifier": "_Sorted",
+                "newPage": false,
+                "searchKey": "sort_test._Sorted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Sorted"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Sorted\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_Dither",
+              "documentation": {
+                "identifier": "_Dither",
+                "newPage": false,
+                "searchKey": "sort_test._Dither",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _Dither"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _Dither\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#_NMode",
+              "documentation": {
+                "identifier": "_NMode",
+                "newPage": false,
+                "searchKey": "sort_test._NMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _NMode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _NMode\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/sort_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/sort_test#planets",
+              "documentation": {
+                "identifier": "planets",
+                "newPage": false,
+                "searchKey": "sort_test.planets",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var planets"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar planets = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#changes",
+              "documentation": {
+                "identifier": "changes",
+                "newPage": false,
+                "searchKey": "sort_test.changes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var changes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar changes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#data",
+              "documentation": {
+                "identifier": "data",
+                "newPage": false,
+                "searchKey": "sort_test.data",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var data"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar data = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#tests",
+              "documentation": {
+                "identifier": "tests",
+                "newPage": false,
+                "searchKey": "sort_test.tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#fdata",
+              "documentation": {
+                "identifier": "fdata",
+                "newPage": false,
+                "searchKey": "sort_test.fdata",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fdata"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fdata = []float64{0: -3.14, 1: 0, 2: 1, 3: 2, 4: 1000.7}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#sdata",
+              "documentation": {
+                "identifier": "sdata",
+                "newPage": false,
+                "searchKey": "sort_test.sdata",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sdata"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sdata = []string{0: \"f\", 1: \"foo\", 2: \"foobar\", 3: \"x\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#wrappertests",
+              "documentation": {
+                "identifier": "wrappertests",
+                "newPage": false,
+                "searchKey": "sort_test.wrappertests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var wrappertests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar wrappertests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ints",
+              "documentation": {
+                "identifier": "ints",
+                "newPage": false,
+                "searchKey": "sort_test.ints",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ints"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ints = [...]int{74, 59, 238, -784, 9845, 959, 905, 0, 0, 42, 7586, -5467984, 7586}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#float64s",
+              "documentation": {
+                "identifier": "float64s",
+                "newPage": false,
+                "searchKey": "sort_test.float64s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var float64s"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar float64s = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#strings",
+              "documentation": {
+                "identifier": "strings",
+                "newPage": false,
+                "searchKey": "sort_test.strings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var strings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar strings = [...]string{\"\", \"Hello\", \"foo\", \"bar\", \"foo\", \"f00\", \"%*&^*&^&\", \"***\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#countOpsSizes",
+              "documentation": {
+                "identifier": "countOpsSizes",
+                "newPage": false,
+                "searchKey": "sort_test.countOpsSizes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var countOpsSizes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar countOpsSizes = []int{1e2, 3e2, 1e3, 3e3, 1e4, 3e4, 1e5, 3e5, 1e6}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/sort_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/sort_test#Person",
+              "documentation": {
+                "identifier": "Person",
+                "newPage": false,
+                "searchKey": "sort_test.Person",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Person struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Person struct {\n\tName string\n\tAge  int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#Person.String",
+                    "documentation": {
+                      "identifier": "Person.String",
+                      "newPage": false,
+                      "searchKey": "sort_test.Person.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Person) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Person) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ByAge",
+              "documentation": {
+                "identifier": "ByAge",
+                "newPage": false,
+                "searchKey": "sort_test.ByAge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ByAge []sort_test.Person"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ByAge []Person\n```\n\nByAge implements sort.Interface for []Person based on the Age field. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#ByAge.Len",
+                    "documentation": {
+                      "identifier": "ByAge.Len",
+                      "newPage": false,
+                      "searchKey": "sort_test.ByAge.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a ByAge) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a ByAge) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#ByAge.Swap",
+                    "documentation": {
+                      "identifier": "ByAge.Swap",
+                      "newPage": false,
+                      "searchKey": "sort_test.ByAge.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a ByAge) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a ByAge) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#ByAge.Less",
+                    "documentation": {
+                      "identifier": "ByAge.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.ByAge.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a ByAge) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a ByAge) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#earthMass",
+              "documentation": {
+                "identifier": "earthMass",
+                "newPage": false,
+                "searchKey": "sort_test.earthMass",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type earthMass float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype earthMass float64\n```\n\nA couple of type definitions to make the units clear. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#au",
+              "documentation": {
+                "identifier": "au",
+                "newPage": false,
+                "searchKey": "sort_test.au",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type au float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype au float64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#Planet",
+              "documentation": {
+                "identifier": "Planet",
+                "newPage": false,
+                "searchKey": "sort_test.Planet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Planet struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Planet struct {\n\tname     string\n\tmass     earthMass\n\tdistance au\n}\n```\n\nA Planet defines the properties of a solar system object. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#By",
+              "documentation": {
+                "identifier": "By",
+                "newPage": false,
+                "searchKey": "sort_test.By",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type By func(p1 *std/sort_test.Planet, p2 *std/sort_test.Planet) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype By func(p1, p2 *Planet) bool\n```\n\nBy is the type of a \"less\" function that defines the ordering of its Planet arguments. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#By.Sort",
+                    "documentation": {
+                      "identifier": "By.Sort",
+                      "newPage": false,
+                      "searchKey": "sort_test.By.Sort",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (by By) Sort(planets []Planet)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (by By) Sort(planets []Planet)\n```\n\nSort is a method on the function type, By, that sorts the argument slice according to the function. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#planetSorter",
+              "documentation": {
+                "identifier": "planetSorter",
+                "newPage": false,
+                "searchKey": "sort_test.planetSorter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type planetSorter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype planetSorter struct {\n\tplanets []Planet\n\tby      func(p1, p2 *Planet) bool // Closure used in the Less method.\n}\n```\n\nplanetSorter joins a By function and a slice of Planets to be sorted. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#planetSorter.Len",
+                    "documentation": {
+                      "identifier": "planetSorter.Len",
+                      "newPage": false,
+                      "searchKey": "sort_test.planetSorter.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *planetSorter) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *planetSorter) Len() int\n```\n\nLen is part of sort.Interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#planetSorter.Swap",
+                    "documentation": {
+                      "identifier": "planetSorter.Swap",
+                      "newPage": false,
+                      "searchKey": "sort_test.planetSorter.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *planetSorter) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *planetSorter) Swap(i, j int)\n```\n\nSwap is part of sort.Interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#planetSorter.Less",
+                    "documentation": {
+                      "identifier": "planetSorter.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.planetSorter.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *planetSorter) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *planetSorter) Less(i, j int) bool\n```\n\nLess is part of sort.Interface. It is implemented by calling the \"by\" closure in the sorter. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#Change",
+              "documentation": {
+                "identifier": "Change",
+                "newPage": false,
+                "searchKey": "sort_test.Change",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Change struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Change struct {\n\tuser     string\n\tlanguage string\n\tlines    int\n}\n```\n\nA Change is a record of source code changes, recording user, language, and delta size. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#lessFunc",
+              "documentation": {
+                "identifier": "lessFunc",
+                "newPage": false,
+                "searchKey": "sort_test.lessFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type lessFunc func(p1 *std/sort_test.Change, p2 *std/sort_test.Change) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype lessFunc func(p1, p2 *Change) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#multiSorter",
+              "documentation": {
+                "identifier": "multiSorter",
+                "newPage": false,
+                "searchKey": "sort_test.multiSorter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type multiSorter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype multiSorter struct {\n\tchanges []Change\n\tless    []lessFunc\n}\n```\n\nmultiSorter implements the Sort interface, sorting the changes within. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#OrderedBy",
+                    "documentation": {
+                      "identifier": "OrderedBy",
+                      "newPage": false,
+                      "searchKey": "sort_test.OrderedBy",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func OrderedBy(less ...lessFunc) *multiSorter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc OrderedBy(less ...lessFunc) *multiSorter\n```\n\nOrderedBy returns a Sorter that sorts using the less functions, in order. Call its Sort method to sort the data. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#multiSorter.Sort",
+                    "documentation": {
+                      "identifier": "multiSorter.Sort",
+                      "newPage": false,
+                      "searchKey": "sort_test.multiSorter.Sort",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ms *multiSorter) Sort(changes []Change)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ms *multiSorter) Sort(changes []Change)\n```\n\nSort sorts the argument slice according to the less functions passed to OrderedBy. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#multiSorter.Len",
+                    "documentation": {
+                      "identifier": "multiSorter.Len",
+                      "newPage": false,
+                      "searchKey": "sort_test.multiSorter.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ms *multiSorter) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ms *multiSorter) Len() int\n```\n\nLen is part of sort.Interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#multiSorter.Swap",
+                    "documentation": {
+                      "identifier": "multiSorter.Swap",
+                      "newPage": false,
+                      "searchKey": "sort_test.multiSorter.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ms *multiSorter) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ms *multiSorter) Swap(i, j int)\n```\n\nSwap is part of sort.Interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#multiSorter.Less",
+                    "documentation": {
+                      "identifier": "multiSorter.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.multiSorter.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ms *multiSorter) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ms *multiSorter) Less(i, j int) bool\n```\n\nLess is part of sort.Interface. It is implemented by looping along the less functions until it finds a comparison that discriminates between the two items (one is less than the other). Note that it can call the less functions twice per call. We could change the functions to return -1, 0, 1 and reduce the number of calls for greater efficiency: an exercise for the reader. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#Grams",
+              "documentation": {
+                "identifier": "Grams",
+                "newPage": false,
+                "searchKey": "sort_test.Grams",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Grams int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Grams int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#Grams.String",
+                    "documentation": {
+                      "identifier": "Grams.String",
+                      "newPage": false,
+                      "searchKey": "sort_test.Grams.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (g Grams) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (g Grams) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#Organ",
+              "documentation": {
+                "identifier": "Organ",
+                "newPage": false,
+                "searchKey": "sort_test.Organ",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Organ struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Organ struct {\n\tName   string\n\tWeight Grams\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#Organs",
+              "documentation": {
+                "identifier": "Organs",
+                "newPage": false,
+                "searchKey": "sort_test.Organs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Organs []*sort_test.Organ"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Organs []*Organ\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#Organs.Len",
+                    "documentation": {
+                      "identifier": "Organs.Len",
+                      "newPage": false,
+                      "searchKey": "sort_test.Organs.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Organs) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Organs) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#Organs.Swap",
+                    "documentation": {
+                      "identifier": "Organs.Swap",
+                      "newPage": false,
+                      "searchKey": "sort_test.Organs.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Organs) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Organs) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ByName",
+              "documentation": {
+                "identifier": "ByName",
+                "newPage": false,
+                "searchKey": "sort_test.ByName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ByName struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ByName struct{ Organs }\n```\n\nByName implements sort.Interface by providing Less and using the Len and Swap methods of the embedded Organs value. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#ByName.Less",
+                    "documentation": {
+                      "identifier": "ByName.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.ByName.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s ByName) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s ByName) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ByWeight",
+              "documentation": {
+                "identifier": "ByWeight",
+                "newPage": false,
+                "searchKey": "sort_test.ByWeight",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ByWeight struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ByWeight struct{ Organs }\n```\n\nByWeight implements sort.Interface by providing Less and using the Len and Swap methods of the embedded Organs value. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#ByWeight.Less",
+                    "documentation": {
+                      "identifier": "ByWeight.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.ByWeight.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s ByWeight) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s ByWeight) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#nonDeterministicTestingData",
+              "documentation": {
+                "identifier": "nonDeterministicTestingData",
+                "newPage": false,
+                "searchKey": "sort_test.nonDeterministicTestingData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type nonDeterministicTestingData struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype nonDeterministicTestingData struct {\n\tr *rand.Rand\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#nonDeterministicTestingData.Len",
+                    "documentation": {
+                      "identifier": "nonDeterministicTestingData.Len",
+                      "newPage": false,
+                      "searchKey": "sort_test.nonDeterministicTestingData.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *nonDeterministicTestingData) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *nonDeterministicTestingData) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#nonDeterministicTestingData.Less",
+                    "documentation": {
+                      "identifier": "nonDeterministicTestingData.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.nonDeterministicTestingData.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *nonDeterministicTestingData) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *nonDeterministicTestingData) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#nonDeterministicTestingData.Swap",
+                    "documentation": {
+                      "identifier": "nonDeterministicTestingData.Swap",
+                      "newPage": false,
+                      "searchKey": "sort_test.nonDeterministicTestingData.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *nonDeterministicTestingData) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *nonDeterministicTestingData) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#testingData",
+              "documentation": {
+                "identifier": "testingData",
+                "newPage": false,
+                "searchKey": "sort_test.testingData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testingData struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testingData struct {\n\tdesc        string\n\tt           *testing.T\n\tdata        []int\n\tmaxswap     int // number of swaps allowed\n\tncmp, nswap int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#testingData.Len",
+                    "documentation": {
+                      "identifier": "testingData.Len",
+                      "newPage": false,
+                      "searchKey": "sort_test.testingData.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *testingData) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *testingData) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#testingData.Less",
+                    "documentation": {
+                      "identifier": "testingData.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.testingData.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *testingData) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *testingData) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#testingData.Swap",
+                    "documentation": {
+                      "identifier": "testingData.Swap",
+                      "newPage": false,
+                      "searchKey": "sort_test.testingData.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *testingData) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *testingData) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#adversaryTestingData",
+              "documentation": {
+                "identifier": "adversaryTestingData",
+                "newPage": false,
+                "searchKey": "sort_test.adversaryTestingData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type adversaryTestingData struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype adversaryTestingData struct {\n\tt         *testing.T\n\tdata      []int // item values, initialized to special gas value and changed by Less\n\tmaxcmp    int   // number of comparisons allowed\n\tncmp      int   // number of comparisons (calls to Less)\n\tnsolid    int   // number of elements that have been set to non-gas values\n\tcandidate int   // guess at current pivot\n\tgas       int   // special value for unset elements, higher than everything else\n}\n```\n\nThis is based on the \"antiquicksort\" implementation by M. Douglas McIlroy. See [https://www.cs.dartmouth.edu/~doug/mdmspe.pdf](https://www.cs.dartmouth.edu/~doug/mdmspe.pdf) for more info. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#newAdversaryTestingData",
+                    "documentation": {
+                      "identifier": "newAdversaryTestingData",
+                      "newPage": false,
+                      "searchKey": "sort_test.newAdversaryTestingData",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newAdversaryTestingData(t *testing.T, size int, maxcmp int) *adversaryTestingData"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newAdversaryTestingData(t *testing.T, size int, maxcmp int) *adversaryTestingData\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#adversaryTestingData.Len",
+                    "documentation": {
+                      "identifier": "adversaryTestingData.Len",
+                      "newPage": false,
+                      "searchKey": "sort_test.adversaryTestingData.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *adversaryTestingData) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *adversaryTestingData) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#adversaryTestingData.Less",
+                    "documentation": {
+                      "identifier": "adversaryTestingData.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.adversaryTestingData.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *adversaryTestingData) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *adversaryTestingData) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#adversaryTestingData.Swap",
+                    "documentation": {
+                      "identifier": "adversaryTestingData.Swap",
+                      "newPage": false,
+                      "searchKey": "sort_test.adversaryTestingData.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *adversaryTestingData) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *adversaryTestingData) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#intPairs",
+              "documentation": {
+                "identifier": "intPairs",
+                "newPage": false,
+                "searchKey": "sort_test.intPairs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type intPairs []struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype intPairs []struct {\n\ta, b int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#intPairs.Len",
+                    "documentation": {
+                      "identifier": "intPairs.Len",
+                      "newPage": false,
+                      "searchKey": "sort_test.intPairs.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d intPairs) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d intPairs) Len() int\n```\n\nIntPairs compare on a only. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#intPairs.Less",
+                    "documentation": {
+                      "identifier": "intPairs.Less",
+                      "newPage": false,
+                      "searchKey": "sort_test.intPairs.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d intPairs) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d intPairs) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#intPairs.Swap",
+                    "documentation": {
+                      "identifier": "intPairs.Swap",
+                      "newPage": false,
+                      "searchKey": "sort_test.intPairs.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d intPairs) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d intPairs) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#intPairs.initB",
+                    "documentation": {
+                      "identifier": "intPairs.initB",
+                      "newPage": false,
+                      "searchKey": "sort_test.intPairs.initB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d intPairs) initB()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d intPairs) initB()\n```\n\nRecord initial order in B. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/sort_test#intPairs.inOrder",
+                    "documentation": {
+                      "identifier": "intPairs.inOrder",
+                      "newPage": false,
+                      "searchKey": "sort_test.intPairs.inOrder",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d intPairs) inOrder() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d intPairs) inOrder() bool\n```\n\nInOrder checks if a-equal elements were not reordered. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/sort_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/sort_test#Example",
+              "documentation": {
+                "identifier": "Example",
+                "newPage": false,
+                "searchKey": "sort_test.Example",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#Example_sortKeys",
+              "documentation": {
+                "identifier": "Example_sortKeys",
+                "newPage": false,
+                "searchKey": "sort_test.Example_sortKeys",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_sortKeys()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_sortKeys()\n```\n\nExampleSortKeys demonstrates a technique for sorting a struct type using programmable sort criteria. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#Example_sortMultiKeys",
+              "documentation": {
+                "identifier": "Example_sortMultiKeys",
+                "newPage": false,
+                "searchKey": "sort_test.Example_sortMultiKeys",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_sortMultiKeys()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_sortMultiKeys()\n```\n\nExampleMultiKeys demonstrates a technique for sorting a struct type using different sets of multiple fields in the comparison. We chain together \"Less\" functions, each of which compares a single field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleSearch",
+              "documentation": {
+                "identifier": "ExampleSearch",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSearch()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSearch()\n```\n\nThis example demonstrates searching a list sorted in ascending order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleSearch_descendingOrder",
+              "documentation": {
+                "identifier": "ExampleSearch_descendingOrder",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleSearch_descendingOrder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSearch_descendingOrder()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSearch_descendingOrder()\n```\n\nThis example demonstrates searching a list sorted in descending order. The approach is the same as searching a list in ascending order, but with the condition inverted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleSearchFloat64s",
+              "documentation": {
+                "identifier": "ExampleSearchFloat64s",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleSearchFloat64s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSearchFloat64s()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSearchFloat64s()\n```\n\nThis example demonstrates searching for float64 in a list sorted in ascending order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleSearchInts",
+              "documentation": {
+                "identifier": "ExampleSearchInts",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleSearchInts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSearchInts()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSearchInts()\n```\n\nThis example demonstrates searching for int in a list sorted in ascending order. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleInts",
+              "documentation": {
+                "identifier": "ExampleInts",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleInts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleInts()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleInts()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleIntsAreSorted",
+              "documentation": {
+                "identifier": "ExampleIntsAreSorted",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleIntsAreSorted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIntsAreSorted()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIntsAreSorted()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleFloat64s",
+              "documentation": {
+                "identifier": "ExampleFloat64s",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleFloat64s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFloat64s()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFloat64s()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleFloat64sAreSorted",
+              "documentation": {
+                "identifier": "ExampleFloat64sAreSorted",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleFloat64sAreSorted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFloat64sAreSorted()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFloat64sAreSorted()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleReverse",
+              "documentation": {
+                "identifier": "ExampleReverse",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleReverse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReverse()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReverse()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleSlice",
+              "documentation": {
+                "identifier": "ExampleSlice",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSlice()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSlice()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleSliceStable",
+              "documentation": {
+                "identifier": "ExampleSliceStable",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleSliceStable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSliceStable()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSliceStable()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#ExampleStrings",
+              "documentation": {
+                "identifier": "ExampleStrings",
+                "newPage": false,
+                "searchKey": "sort_test.ExampleStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleStrings()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleStrings()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#Example_sortWrapper",
+              "documentation": {
+                "identifier": "Example_sortWrapper",
+                "newPage": false,
+                "searchKey": "sort_test.Example_sortWrapper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_sortWrapper()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_sortWrapper()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#printOrgans",
+              "documentation": {
+                "identifier": "printOrgans",
+                "newPage": false,
+                "searchKey": "sort_test.printOrgans",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func printOrgans(s []*Organ)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc printOrgans(s []*Organ)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#f",
+              "documentation": {
+                "identifier": "f",
+                "newPage": false,
+                "searchKey": "sort_test.f",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func f(a []int, x int) func(int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc f(a []int, x int) func(int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSearch",
+              "documentation": {
+                "identifier": "TestSearch",
+                "newPage": false,
+                "searchKey": "sort_test.TestSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#log2",
+              "documentation": {
+                "identifier": "log2",
+                "newPage": false,
+                "searchKey": "sort_test.log2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func log2(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc log2(x int) int\n```\n\nlog2 computes the binary logarithm of x, rounded up to the next integer. (log2(0) == 0, log2(1) == 0, log2(2) == 1, log2(3) == 2, etc.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSearchEfficiency",
+              "documentation": {
+                "identifier": "TestSearchEfficiency",
+                "newPage": false,
+                "searchKey": "sort_test.TestSearchEfficiency",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchEfficiency(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchEfficiency(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSearchWrappers",
+              "documentation": {
+                "identifier": "TestSearchWrappers",
+                "newPage": false,
+                "searchKey": "sort_test.TestSearchWrappers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchWrappers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchWrappers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#runSearchWrappers",
+              "documentation": {
+                "identifier": "runSearchWrappers",
+                "newPage": false,
+                "searchKey": "sort_test.runSearchWrappers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runSearchWrappers()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runSearchWrappers()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSearchWrappersDontAlloc",
+              "documentation": {
+                "identifier": "TestSearchWrappersDontAlloc",
+                "newPage": false,
+                "searchKey": "sort_test.TestSearchWrappersDontAlloc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchWrappersDontAlloc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchWrappersDontAlloc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSearchWrappers",
+              "documentation": {
+                "identifier": "BenchmarkSearchWrappers",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSearchWrappers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSearchWrappers(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSearchWrappers(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSearchExhaustive",
+              "documentation": {
+                "identifier": "TestSearchExhaustive",
+                "newPage": false,
+                "searchKey": "sort_test.TestSearchExhaustive",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSearchExhaustive(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSearchExhaustive(t *testing.T)\n```\n\nAbstract exhaustive test: all sizes up to 100, all possible return values. If there are any small corner cases, this test exercises them. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSortIntSlice",
+              "documentation": {
+                "identifier": "TestSortIntSlice",
+                "newPage": false,
+                "searchKey": "sort_test.TestSortIntSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSortIntSlice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSortIntSlice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSortFloat64Slice",
+              "documentation": {
+                "identifier": "TestSortFloat64Slice",
+                "newPage": false,
+                "searchKey": "sort_test.TestSortFloat64Slice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSortFloat64Slice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSortFloat64Slice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSortStringSlice",
+              "documentation": {
+                "identifier": "TestSortStringSlice",
+                "newPage": false,
+                "searchKey": "sort_test.TestSortStringSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSortStringSlice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSortStringSlice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestInts",
+              "documentation": {
+                "identifier": "TestInts",
+                "newPage": false,
+                "searchKey": "sort_test.TestInts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInts(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInts(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestFloat64s",
+              "documentation": {
+                "identifier": "TestFloat64s",
+                "newPage": false,
+                "searchKey": "sort_test.TestFloat64s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFloat64s(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFloat64s(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestStrings",
+              "documentation": {
+                "identifier": "TestStrings",
+                "newPage": false,
+                "searchKey": "sort_test.TestStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStrings(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStrings(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSlice",
+              "documentation": {
+                "identifier": "TestSlice",
+                "newPage": false,
+                "searchKey": "sort_test.TestSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSlice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSlice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSortLarge_Random",
+              "documentation": {
+                "identifier": "TestSortLarge_Random",
+                "newPage": false,
+                "searchKey": "sort_test.TestSortLarge_Random",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSortLarge_Random(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSortLarge_Random(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestReverseSortIntSlice",
+              "documentation": {
+                "identifier": "TestReverseSortIntSlice",
+                "newPage": false,
+                "searchKey": "sort_test.TestReverseSortIntSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReverseSortIntSlice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReverseSortIntSlice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestNonDeterministicComparison",
+              "documentation": {
+                "identifier": "TestNonDeterministicComparison",
+                "newPage": false,
+                "searchKey": "sort_test.TestNonDeterministicComparison",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonDeterministicComparison(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonDeterministicComparison(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSortString1K",
+              "documentation": {
+                "identifier": "BenchmarkSortString1K",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSortString1K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSortString1K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSortString1K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSortString1K_Slice",
+              "documentation": {
+                "identifier": "BenchmarkSortString1K_Slice",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSortString1K_Slice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSortString1K_Slice(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSortString1K_Slice(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkStableString1K",
+              "documentation": {
+                "identifier": "BenchmarkStableString1K",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkStableString1K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStableString1K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStableString1K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSortInt1K",
+              "documentation": {
+                "identifier": "BenchmarkSortInt1K",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSortInt1K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSortInt1K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSortInt1K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkStableInt1K",
+              "documentation": {
+                "identifier": "BenchmarkStableInt1K",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkStableInt1K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStableInt1K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStableInt1K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkStableInt1K_Slice",
+              "documentation": {
+                "identifier": "BenchmarkStableInt1K_Slice",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkStableInt1K_Slice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStableInt1K_Slice(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStableInt1K_Slice(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSortInt64K",
+              "documentation": {
+                "identifier": "BenchmarkSortInt64K",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSortInt64K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSortInt64K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSortInt64K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSortInt64K_Slice",
+              "documentation": {
+                "identifier": "BenchmarkSortInt64K_Slice",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSortInt64K_Slice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSortInt64K_Slice(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSortInt64K_Slice(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkStableInt64K",
+              "documentation": {
+                "identifier": "BenchmarkStableInt64K",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkStableInt64K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStableInt64K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStableInt64K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#min",
+              "documentation": {
+                "identifier": "min",
+                "newPage": false,
+                "searchKey": "sort_test.min",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func min(a, b int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc min(a, b int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#lg",
+              "documentation": {
+                "identifier": "lg",
+                "newPage": false,
+                "searchKey": "sort_test.lg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lg(n int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lg(n int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#testBentleyMcIlroy",
+              "documentation": {
+                "identifier": "testBentleyMcIlroy",
+                "newPage": false,
+                "searchKey": "sort_test.testBentleyMcIlroy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testBentleyMcIlroy(t *testing.T, sort func(Interface), maxswap func(int) int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testBentleyMcIlroy(t *testing.T, sort func(Interface), maxswap func(int) int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestSortBM",
+              "documentation": {
+                "identifier": "TestSortBM",
+                "newPage": false,
+                "searchKey": "sort_test.TestSortBM",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSortBM(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSortBM(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestHeapsortBM",
+              "documentation": {
+                "identifier": "TestHeapsortBM",
+                "newPage": false,
+                "searchKey": "sort_test.TestHeapsortBM",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHeapsortBM(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHeapsortBM(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestStableBM",
+              "documentation": {
+                "identifier": "TestStableBM",
+                "newPage": false,
+                "searchKey": "sort_test.TestStableBM",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStableBM(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStableBM(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestAdversary",
+              "documentation": {
+                "identifier": "TestAdversary",
+                "newPage": false,
+                "searchKey": "sort_test.TestAdversary",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAdversary(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAdversary(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestStableInts",
+              "documentation": {
+                "identifier": "TestStableInts",
+                "newPage": false,
+                "searchKey": "sort_test.TestStableInts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStableInts(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStableInts(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestStability",
+              "documentation": {
+                "identifier": "TestStability",
+                "newPage": false,
+                "searchKey": "sort_test.TestStability",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStability(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStability(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#countOps",
+              "documentation": {
+                "identifier": "countOps",
+                "newPage": false,
+                "searchKey": "sort_test.countOps",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func countOps(t *testing.T, algo func(Interface), name string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc countOps(t *testing.T, algo func(Interface), name string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestCountStableOps",
+              "documentation": {
+                "identifier": "TestCountStableOps",
+                "newPage": false,
+                "searchKey": "sort_test.TestCountStableOps",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCountStableOps(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCountStableOps(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#TestCountSortOps",
+              "documentation": {
+                "identifier": "TestCountSortOps",
+                "newPage": false,
+                "searchKey": "sort_test.TestCountSortOps",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCountSortOps(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCountSortOps(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#bench",
+              "documentation": {
+                "identifier": "bench",
+                "newPage": false,
+                "searchKey": "sort_test.bench",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bench(b *testing.B, size int, algo func(Interface), name string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bench(b *testing.B, size int, algo func(Interface), name string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSort1e2",
+              "documentation": {
+                "identifier": "BenchmarkSort1e2",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSort1e2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSort1e2(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSort1e2(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkStable1e2",
+              "documentation": {
+                "identifier": "BenchmarkStable1e2",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkStable1e2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStable1e2(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStable1e2(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSort1e4",
+              "documentation": {
+                "identifier": "BenchmarkSort1e4",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSort1e4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSort1e4(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSort1e4(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkStable1e4",
+              "documentation": {
+                "identifier": "BenchmarkStable1e4",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkStable1e4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStable1e4(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStable1e4(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkSort1e6",
+              "documentation": {
+                "identifier": "BenchmarkSort1e6",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkSort1e6",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSort1e6(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSort1e6(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/sort_test#BenchmarkStable1e6",
+              "documentation": {
+                "identifier": "BenchmarkStable1e6",
+                "newPage": false,
+                "searchKey": "sort_test.BenchmarkStable1e6",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStable1e6(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStable1e6(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

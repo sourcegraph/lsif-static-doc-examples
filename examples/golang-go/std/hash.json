@@ -1,0 +1,131 @@
+{
+  "pathID": "/std/hash",
+  "documentation": {
+    "identifier": "hash",
+    "newPage": true,
+    "searchKey": "std/hash",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package hash"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package hash provides interfaces for hash functions. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/hash#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/hash#Hash",
+              "documentation": {
+                "identifier": "Hash",
+                "newPage": false,
+                "searchKey": "hash.Hash",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Hash interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Hash interface {\n\t// Write (via the embedded io.Writer interface) adds more data to the running hash.\n\t// It never returns an error.\n\tio.Writer\n\n\t// Sum appends the current hash to b and returns the resulting slice.\n\t// It does not change the underlying hash state.\n\tSum(b []byte) []byte\n\n\t// Reset resets the Hash to its initial state.\n\tReset()\n\n\t// Size returns the number of bytes Sum will return.\n\tSize() int\n\n\t// BlockSize returns the hash's underlying block size.\n\t// The Write method must be able to accept any amount\n\t// of data, but it may operate more efficiently if all writes\n\t// are a multiple of the block size.\n\tBlockSize() int\n}\n```\n\nHash is the common interface implemented by all hash functions. \n\nHash implementations in the standard library (e.g. hash/crc32 and crypto/sha256) implement the encoding.BinaryMarshaler and encoding.BinaryUnmarshaler interfaces. Marshaling a hash implementation allows its internal state to be saved and used for additional processing later, without having to re-write the data previously written to the hash. The hash state may contain portions of the input in its original form, which users are expected to handle for any possible security implications. \n\nCompatibility: Any future changes to hash or crypto packages will endeavor to maintain compatibility with state encoded using previous versions. That is, any released versions of the packages should be able to decode data written with any previously released version, subject to issues such as security fixes. See the Go compatibility document for background: [https://golang.org/doc/go1compat](https://golang.org/doc/go1compat) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/hash#Hash32",
+              "documentation": {
+                "identifier": "Hash32",
+                "newPage": false,
+                "searchKey": "hash.Hash32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Hash32 interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Hash32 interface {\n\tHash\n\tSum32() uint32\n}\n```\n\nHash32 is the common interface implemented by all 32-bit hash functions. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/hash#Hash64",
+              "documentation": {
+                "identifier": "Hash64",
+                "newPage": false,
+                "searchKey": "hash.Hash64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Hash64 interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Hash64 interface {\n\tHash\n\tSum64() uint64\n}\n```\n\nHash64 is the common interface implemented by all 64-bit hash functions. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/std/hash/adler32"
+    },
+    {
+      "pathID": "/std/hash/crc32"
+    },
+    {
+      "pathID": "/std/hash/crc32_test"
+    },
+    {
+      "pathID": "/std/hash/crc64"
+    },
+    {
+      "pathID": "/std/hash/fnv"
+    },
+    {
+      "pathID": "/std/hash/maphash"
+    },
+    {
+      "pathID": "/std/hash/maphash_test"
+    }
+  ]
+}

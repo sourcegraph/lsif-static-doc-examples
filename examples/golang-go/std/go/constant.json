@@ -1,0 +1,3081 @@
+{
+  "pathID": "/std/go/constant",
+  "documentation": {
+    "identifier": "constant",
+    "newPage": true,
+    "searchKey": "std/go/constant",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package constant"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package constant implements Values representing untyped Go constants and their corresponding operations. \n\nA special Unknown value may be used when a value is unknown due to an error. Operations on unknown values produce unknown values unless specified otherwise. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/go/constant#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/constant#Unknown",
+              "documentation": {
+                "identifier": "Unknown",
+                "newPage": false,
+                "searchKey": "constant.Unknown",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Unknown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Unknown Kind = iota\n```\n\nunknown values \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Bool",
+              "documentation": {
+                "identifier": "Bool",
+                "newPage": false,
+                "searchKey": "constant.Bool",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Bool\n```\n\nnon-numeric values \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#String",
+              "documentation": {
+                "identifier": "String",
+                "newPage": false,
+                "searchKey": "constant.String",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const String"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst String\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Int",
+              "documentation": {
+                "identifier": "Int",
+                "newPage": false,
+                "searchKey": "constant.Int",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Int\n```\n\nnumeric values \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Float",
+              "documentation": {
+                "identifier": "Float",
+                "newPage": false,
+                "searchKey": "constant.Float",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Float"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Float\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Complex",
+              "documentation": {
+                "identifier": "Complex",
+                "newPage": false,
+                "searchKey": "constant.Complex",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Complex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Complex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#prec",
+              "documentation": {
+                "identifier": "prec",
+                "newPage": false,
+                "searchKey": "constant.prec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const prec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst prec = 512\n```\n\nMaximum supported mantissa precision. The spec requires at least 256 bits; typical implementations use 512 bits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#maxExp",
+              "documentation": {
+                "identifier": "maxExp",
+                "newPage": false,
+                "searchKey": "constant.maxExp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxExp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxExp = 4 << 10\n```\n\nPermit fractions with component sizes up to maxExp before switching to using floating-point numbers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#_m",
+              "documentation": {
+                "identifier": "_m",
+                "newPage": false,
+                "searchKey": "constant._m",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _m"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _m = ^big.Word(0)\n```\n\nCompute the size of a Word in bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#_log",
+              "documentation": {
+                "identifier": "_log",
+                "newPage": false,
+                "searchKey": "constant._log",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _log"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _log = _m>>8&1 + _m>>16&1 + _m>>32&1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#wordSize",
+              "documentation": {
+                "identifier": "wordSize",
+                "newPage": false,
+                "searchKey": "constant.wordSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const wordSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst wordSize = 1 << _log\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/constant#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/constant#floatVal0",
+              "documentation": {
+                "identifier": "floatVal0",
+                "newPage": false,
+                "searchKey": "constant.floatVal0",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var floatVal0"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar floatVal0 = floatVal{newFloat()}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#intTests",
+              "documentation": {
+                "identifier": "intTests",
+                "newPage": false,
+                "searchKey": "constant.intTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var intTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar intTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#floatTests",
+              "documentation": {
+                "identifier": "floatTests",
+                "newPage": false,
+                "searchKey": "constant.floatTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var floatTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar floatTests = ...\n```\n\nThe RHS operand may be a floating-point quotient n/d of two integer values n and d. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#imagTests",
+              "documentation": {
+                "identifier": "imagTests",
+                "newPage": false,
+                "searchKey": "constant.imagTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var imagTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar imagTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#opTests",
+              "documentation": {
+                "identifier": "opTests",
+                "newPage": false,
+                "searchKey": "constant.opTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var opTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar opTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#xxx",
+              "documentation": {
+                "identifier": "xxx",
+                "newPage": false,
+                "searchKey": "constant.xxx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var xxx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar xxx = strings.Repeat(\"x\", 68)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#issue14262",
+              "documentation": {
+                "identifier": "issue14262",
+                "newPage": false,
+                "searchKey": "constant.issue14262",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var issue14262"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar issue14262 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#stringTests",
+              "documentation": {
+                "identifier": "stringTests",
+                "newPage": false,
+                "searchKey": "constant.stringTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stringTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stringTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#optab",
+              "documentation": {
+                "identifier": "optab",
+                "newPage": false,
+                "searchKey": "constant.optab",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var optab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar optab = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#fracTests",
+              "documentation": {
+                "identifier": "fracTests",
+                "newPage": false,
+                "searchKey": "constant.fracTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fracTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fracTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#bytesTests",
+              "documentation": {
+                "identifier": "bytesTests",
+                "newPage": false,
+                "searchKey": "constant.bytesTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bytesTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bytesTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#bitLenTests",
+              "documentation": {
+                "identifier": "bitLenTests",
+                "newPage": false,
+                "searchKey": "constant.bitLenTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bitLenTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bitLenTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/constant#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/constant#Kind",
+              "documentation": {
+                "identifier": "Kind",
+                "newPage": false,
+                "searchKey": "constant.Kind",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Kind int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Kind int\n```\n\nKind specifies the kind of value represented by a Value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Value",
+              "documentation": {
+                "identifier": "Value",
+                "newPage": false,
+                "searchKey": "constant.Value",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Value interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Value interface {\n\t// Kind returns the value kind.\n\tKind() Kind\n\n\t// String returns a short, quoted (human-readable) form of the value.\n\t// For numeric values, the result may be an approximation;\n\t// for String values the result may be a shortened string.\n\t// Use ExactString for a string representing a value exactly.\n\tString() string\n\n\t// ExactString returns an exact, quoted (human-readable) form of the value.\n\t// If the Value is of Kind String, use StringVal to obtain the unquoted string.\n\tExactString() string\n\n\t// Prevent external implementations.\n\timplementsValue()\n}\n```\n\nA Value represents the value of a Go constant. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#makeInt",
+                    "documentation": {
+                      "identifier": "makeInt",
+                      "newPage": false,
+                      "searchKey": "constant.makeInt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeInt(x *big.Int) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeInt(x *big.Int) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#makeRat",
+                    "documentation": {
+                      "identifier": "makeRat",
+                      "newPage": false,
+                      "searchKey": "constant.makeRat",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeRat(x *big.Rat) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeRat(x *big.Rat) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#makeFloat",
+                    "documentation": {
+                      "identifier": "makeFloat",
+                      "newPage": false,
+                      "searchKey": "constant.makeFloat",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeFloat(x *big.Float) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeFloat(x *big.Float) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#makeComplex",
+                    "documentation": {
+                      "identifier": "makeComplex",
+                      "newPage": false,
+                      "searchKey": "constant.makeComplex",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeComplex(re, im Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeComplex(re, im Value) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#makeFloatFromLiteral",
+                    "documentation": {
+                      "identifier": "makeFloatFromLiteral",
+                      "newPage": false,
+                      "searchKey": "constant.makeFloatFromLiteral",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeFloatFromLiteral(lit string) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeFloatFromLiteral(lit string) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeUnknown",
+                    "documentation": {
+                      "identifier": "MakeUnknown",
+                      "newPage": false,
+                      "searchKey": "constant.MakeUnknown",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeUnknown() Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeUnknown() Value\n```\n\nMakeUnknown returns the Unknown value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeBool",
+                    "documentation": {
+                      "identifier": "MakeBool",
+                      "newPage": false,
+                      "searchKey": "constant.MakeBool",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeBool(b bool) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeBool(b bool) Value\n```\n\nMakeBool returns the Bool value for b. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeString",
+                    "documentation": {
+                      "identifier": "MakeString",
+                      "newPage": false,
+                      "searchKey": "constant.MakeString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeString(s string) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeString(s string) Value\n```\n\nMakeString returns the String value for s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeInt64",
+                    "documentation": {
+                      "identifier": "MakeInt64",
+                      "newPage": false,
+                      "searchKey": "constant.MakeInt64",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeInt64(x int64) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeInt64(x int64) Value\n```\n\nMakeInt64 returns the Int value for x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeUint64",
+                    "documentation": {
+                      "identifier": "MakeUint64",
+                      "newPage": false,
+                      "searchKey": "constant.MakeUint64",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeUint64(x uint64) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeUint64(x uint64) Value\n```\n\nMakeUint64 returns the Int value for x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeFloat64",
+                    "documentation": {
+                      "identifier": "MakeFloat64",
+                      "newPage": false,
+                      "searchKey": "constant.MakeFloat64",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeFloat64(x float64) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeFloat64(x float64) Value\n```\n\nMakeFloat64 returns the Float value for x. If x is -0.0, the result is 0.0. If x is not finite, the result is an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeFromLiteral",
+                    "documentation": {
+                      "identifier": "MakeFromLiteral",
+                      "newPage": false,
+                      "searchKey": "constant.MakeFromLiteral",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeFromLiteral(lit string, tok token.Token, zero uint) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeFromLiteral(lit string, tok token.Token, zero uint) Value\n```\n\nMakeFromLiteral returns the corresponding integer, floating-point, imaginary, character, or string value for a Go literal string. The tok value must be one of token.INT, token.FLOAT, token.IMAG, token.CHAR, or token.STRING. The final argument must be zero. If the literal string syntax is invalid, the result is an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#Make",
+                    "documentation": {
+                      "identifier": "Make",
+                      "newPage": false,
+                      "searchKey": "constant.Make",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Make(x interface{}) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Make(x interface{}) Value\n```\n\nMake returns the Value for x. \n\n```\ntype of x        result Kind\n----------------------------\nbool             Bool\nstring           String\nint64            Int\n*big.Int         Int\n*big.Float       Float\n*big.Rat         Float\nanything else    Unknown\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeFromBytes",
+                    "documentation": {
+                      "identifier": "MakeFromBytes",
+                      "newPage": false,
+                      "searchKey": "constant.MakeFromBytes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeFromBytes(bytes []byte) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeFromBytes(bytes []byte) Value\n```\n\nMakeFromBytes returns the Int value given the bytes of its little-endian binary representation. An empty byte slice argument represents 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#Num",
+                    "documentation": {
+                      "identifier": "Num",
+                      "newPage": false,
+                      "searchKey": "constant.Num",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Num(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Num(x Value) Value\n```\n\nNum returns the numerator of x; x must be Int, Float, or Unknown. If x is Unknown, or if it is too large or small to represent as a fraction, the result is Unknown. Otherwise the result is an Int with the same sign as x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#Denom",
+                    "documentation": {
+                      "identifier": "Denom",
+                      "newPage": false,
+                      "searchKey": "constant.Denom",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Denom(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Denom(x Value) Value\n```\n\nDenom returns the denominator of x; x must be Int, Float, or Unknown. If x is Unknown, or if it is too large or small to represent as a fraction, the result is Unknown. Otherwise the result is an Int >= 1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#MakeImag",
+                    "documentation": {
+                      "identifier": "MakeImag",
+                      "newPage": false,
+                      "searchKey": "constant.MakeImag",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeImag(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeImag(x Value) Value\n```\n\nMakeImag returns the Complex value x*i; x must be Int, Float, or Unknown. If x is Unknown, the result is Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#Real",
+                    "documentation": {
+                      "identifier": "Real",
+                      "newPage": false,
+                      "searchKey": "constant.Real",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Real(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Real(x Value) Value\n```\n\nReal returns the real part of x, which must be a numeric or unknown value. If x is Unknown, the result is Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#Imag",
+                    "documentation": {
+                      "identifier": "Imag",
+                      "newPage": false,
+                      "searchKey": "constant.Imag",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Imag(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Imag(x Value) Value\n```\n\nImag returns the imaginary part of x, which must be a numeric or unknown value. If x is Unknown, the result is Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#ToInt",
+                    "documentation": {
+                      "identifier": "ToInt",
+                      "newPage": false,
+                      "searchKey": "constant.ToInt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ToInt(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ToInt(x Value) Value\n```\n\nToInt converts x to an Int value if x is representable as an Int. Otherwise it returns an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#ToFloat",
+                    "documentation": {
+                      "identifier": "ToFloat",
+                      "newPage": false,
+                      "searchKey": "constant.ToFloat",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ToFloat(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ToFloat(x Value) Value\n```\n\nToFloat converts x to a Float value if x is representable as a Float. Otherwise it returns an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#ToComplex",
+                    "documentation": {
+                      "identifier": "ToComplex",
+                      "newPage": false,
+                      "searchKey": "constant.ToComplex",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ToComplex(x Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ToComplex(x Value) Value\n```\n\nToComplex converts x to a Complex value if x is representable as a Complex. Otherwise it returns an Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#UnaryOp",
+                    "documentation": {
+                      "identifier": "UnaryOp",
+                      "newPage": false,
+                      "searchKey": "constant.UnaryOp",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func UnaryOp(op token.Token, y Value, prec uint) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc UnaryOp(op token.Token, y Value, prec uint) Value\n```\n\nUnaryOp returns the result of the unary expression op y. The operation must be defined for the operand. If prec > 0 it specifies the ^ (xor) result size in bits. If y is Unknown, the result is Unknown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#match",
+                    "documentation": {
+                      "identifier": "match",
+                      "newPage": false,
+                      "searchKey": "constant.match",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func match(x, y Value) (_, _ Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc match(x, y Value) (_, _ Value)\n```\n\nmatch returns the matching representation (same type) with the smallest complexity for two values x and y. If one of them is numeric, both of them must be numeric. If one of them is Unknown or invalid (say, nil) both results are that value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#match0",
+                    "documentation": {
+                      "identifier": "match0",
+                      "newPage": false,
+                      "searchKey": "constant.match0",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func match0(x, y Value) (_, _ Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc match0(x, y Value) (_, _ Value)\n```\n\nmatch0 must only be called by match. Invariant: ord(x) < ord(y) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#BinaryOp",
+                    "documentation": {
+                      "identifier": "BinaryOp",
+                      "newPage": false,
+                      "searchKey": "constant.BinaryOp",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func BinaryOp(x_ Value, op token.Token, y_ Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc BinaryOp(x_ Value, op token.Token, y_ Value) Value\n```\n\nBinaryOp returns the result of the binary expression x op y. The operation must be defined for the operands. If one of the operands is Unknown, the result is Unknown. BinaryOp doesn't handle comparisons or shifts; use Compare or Shift instead. \n\nTo force integer division of Int operands, use op == token.QUO_ASSIGN instead of token.QUO; the result is guaranteed to be Int in this case. Division by zero leads to a run-time panic. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#add",
+                    "documentation": {
+                      "identifier": "add",
+                      "newPage": false,
+                      "searchKey": "constant.add",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func add(x, y Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc add(x, y Value) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#sub",
+                    "documentation": {
+                      "identifier": "sub",
+                      "newPage": false,
+                      "searchKey": "constant.sub",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func sub(x, y Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc sub(x, y Value) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#mul",
+                    "documentation": {
+                      "identifier": "mul",
+                      "newPage": false,
+                      "searchKey": "constant.mul",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func mul(x, y Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc mul(x, y Value) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#quo",
+                    "documentation": {
+                      "identifier": "quo",
+                      "newPage": false,
+                      "searchKey": "constant.quo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func quo(x, y Value) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc quo(x, y Value) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#Shift",
+                    "documentation": {
+                      "identifier": "Shift",
+                      "newPage": false,
+                      "searchKey": "constant.Shift",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Shift(x Value, op token.Token, s uint) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Shift(x Value, op token.Token, s uint) Value\n```\n\nShift returns the result of the shift expression x op s with op == token.SHL or token.SHR (<< or >>). x must be an Int or an Unknown. If x is Unknown, the result is x. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#val",
+                    "documentation": {
+                      "identifier": "val",
+                      "newPage": false,
+                      "searchKey": "constant.val",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func val(lit string) Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc val(lit string) Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#doOp",
+                    "documentation": {
+                      "identifier": "doOp",
+                      "newPage": false,
+                      "searchKey": "constant.doOp",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func doOp(x Value, op token.Token, y Value) (z Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc doOp(x Value, op token.Token, y Value) (z Value)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#unknownVal",
+              "documentation": {
+                "identifier": "unknownVal",
+                "newPage": false,
+                "searchKey": "constant.unknownVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type unknownVal struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype unknownVal struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#unknownVal.Kind",
+                    "documentation": {
+                      "identifier": "unknownVal.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.unknownVal.Kind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (unknownVal) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (unknownVal) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#unknownVal.String",
+                    "documentation": {
+                      "identifier": "unknownVal.String",
+                      "newPage": false,
+                      "searchKey": "constant.unknownVal.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (unknownVal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (unknownVal) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#unknownVal.ExactString",
+                    "documentation": {
+                      "identifier": "unknownVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.unknownVal.ExactString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x unknownVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x unknownVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#unknownVal.implementsValue",
+                    "documentation": {
+                      "identifier": "unknownVal.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.unknownVal.implementsValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (unknownVal) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (unknownVal) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#boolVal",
+              "documentation": {
+                "identifier": "boolVal",
+                "newPage": false,
+                "searchKey": "constant.boolVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type boolVal bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype boolVal bool\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#boolVal.Kind",
+                    "documentation": {
+                      "identifier": "boolVal.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.boolVal.Kind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (boolVal) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (boolVal) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#boolVal.String",
+                    "documentation": {
+                      "identifier": "boolVal.String",
+                      "newPage": false,
+                      "searchKey": "constant.boolVal.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x boolVal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x boolVal) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#boolVal.ExactString",
+                    "documentation": {
+                      "identifier": "boolVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.boolVal.ExactString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x boolVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x boolVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#boolVal.implementsValue",
+                    "documentation": {
+                      "identifier": "boolVal.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.boolVal.implementsValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (boolVal) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (boolVal) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#stringVal",
+              "documentation": {
+                "identifier": "stringVal",
+                "newPage": false,
+                "searchKey": "constant.stringVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stringVal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stringVal struct {\n\t// Lazy value: either a string (l,r==nil) or an addition (l,r!=nil).\n\tmu   sync.Mutex\n\ts    string\n\tl, r *stringVal\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#stringVal.Kind",
+                    "documentation": {
+                      "identifier": "stringVal.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.stringVal.Kind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*stringVal) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*stringVal) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#stringVal.String",
+                    "documentation": {
+                      "identifier": "stringVal.String",
+                      "newPage": false,
+                      "searchKey": "constant.stringVal.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *stringVal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *stringVal) String() string\n```\n\nString returns a possibly shortened quoted form of the String value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#stringVal.string",
+                    "documentation": {
+                      "identifier": "stringVal.string",
+                      "newPage": false,
+                      "searchKey": "constant.stringVal.string",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *stringVal) string() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *stringVal) string() string\n```\n\nstring constructs and returns the actual string literal value. If x represents an addition, then it rewrites x to be a single string, to speed future calls. This lazy construction avoids building different string values for all subpieces of a large concatenation. See golang.org/issue/23348. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#stringVal.appendReverse",
+                    "documentation": {
+                      "identifier": "stringVal.appendReverse",
+                      "newPage": false,
+                      "searchKey": "constant.stringVal.appendReverse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *stringVal) appendReverse(list []string) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *stringVal) appendReverse(list []string) []string\n```\n\nappendReverse appends to list all of x's subpieces, but in reverse, and returns the result. Appending the reversal allows processing the right side in a recursive call and the left side in a loop. Because a chain like a + b + c + d + e is actually represented as ((((a + b) + c) + d) + e), the left-side loop avoids deep recursion. x must be locked. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#stringVal.ExactString",
+                    "documentation": {
+                      "identifier": "stringVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.stringVal.ExactString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x *stringVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x *stringVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#stringVal.implementsValue",
+                    "documentation": {
+                      "identifier": "stringVal.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.stringVal.implementsValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*stringVal) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*stringVal) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#int64Val",
+              "documentation": {
+                "identifier": "int64Val",
+                "newPage": false,
+                "searchKey": "constant.int64Val",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type int64Val int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype int64Val int64 // Int values representable as an int64\n\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#int64Val.Kind",
+                    "documentation": {
+                      "identifier": "int64Val.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.int64Val.Kind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (int64Val) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (int64Val) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#int64Val.String",
+                    "documentation": {
+                      "identifier": "int64Val.String",
+                      "newPage": false,
+                      "searchKey": "constant.int64Val.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x int64Val) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x int64Val) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#int64Val.ExactString",
+                    "documentation": {
+                      "identifier": "int64Val.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.int64Val.ExactString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x int64Val) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x int64Val) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#int64Val.implementsValue",
+                    "documentation": {
+                      "identifier": "int64Val.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.int64Val.implementsValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (int64Val) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (int64Val) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#intVal",
+              "documentation": {
+                "identifier": "intVal",
+                "newPage": false,
+                "searchKey": "constant.intVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type intVal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype intVal struct{ val *big.Int } // Int values not representable as an int64\n\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#i64toi",
+                    "documentation": {
+                      "identifier": "i64toi",
+                      "newPage": false,
+                      "searchKey": "constant.i64toi",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func i64toi(x int64Val) intVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc i64toi(x int64Val) intVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#intVal.Kind",
+                    "documentation": {
+                      "identifier": "intVal.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.intVal.Kind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (intVal) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (intVal) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#intVal.String",
+                    "documentation": {
+                      "identifier": "intVal.String",
+                      "newPage": false,
+                      "searchKey": "constant.intVal.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x intVal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x intVal) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#intVal.ExactString",
+                    "documentation": {
+                      "identifier": "intVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.intVal.ExactString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x intVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x intVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#intVal.implementsValue",
+                    "documentation": {
+                      "identifier": "intVal.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.intVal.implementsValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (intVal) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (intVal) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#ratVal",
+              "documentation": {
+                "identifier": "ratVal",
+                "newPage": false,
+                "searchKey": "constant.ratVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ratVal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ratVal struct{ val *big.Rat } // Float values representable as a fraction\n\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#i64tor",
+                    "documentation": {
+                      "identifier": "i64tor",
+                      "newPage": false,
+                      "searchKey": "constant.i64tor",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func i64tor(x int64Val) ratVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc i64tor(x int64Val) ratVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#itor",
+                    "documentation": {
+                      "identifier": "itor",
+                      "newPage": false,
+                      "searchKey": "constant.itor",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func itor(x intVal) ratVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc itor(x intVal) ratVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#ratVal.Kind",
+                    "documentation": {
+                      "identifier": "ratVal.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.ratVal.Kind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ratVal) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ratVal) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#ratVal.String",
+                    "documentation": {
+                      "identifier": "ratVal.String",
+                      "newPage": false,
+                      "searchKey": "constant.ratVal.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x ratVal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x ratVal) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#ratVal.ExactString",
+                    "documentation": {
+                      "identifier": "ratVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.ratVal.ExactString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x ratVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x ratVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#ratVal.implementsValue",
+                    "documentation": {
+                      "identifier": "ratVal.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.ratVal.implementsValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ratVal) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ratVal) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#floatVal",
+              "documentation": {
+                "identifier": "floatVal",
+                "newPage": false,
+                "searchKey": "constant.floatVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type floatVal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype floatVal struct{ val *big.Float } // Float values not representable as a fraction\n\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#i64tof",
+                    "documentation": {
+                      "identifier": "i64tof",
+                      "newPage": false,
+                      "searchKey": "constant.i64tof",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func i64tof(x int64Val) floatVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc i64tof(x int64Val) floatVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#itof",
+                    "documentation": {
+                      "identifier": "itof",
+                      "newPage": false,
+                      "searchKey": "constant.itof",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func itof(x intVal) floatVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc itof(x intVal) floatVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#rtof",
+                    "documentation": {
+                      "identifier": "rtof",
+                      "newPage": false,
+                      "searchKey": "constant.rtof",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func rtof(x ratVal) floatVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc rtof(x ratVal) floatVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#floatVal.Kind",
+                    "documentation": {
+                      "identifier": "floatVal.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.floatVal.Kind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (floatVal) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (floatVal) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#floatVal.String",
+                    "documentation": {
+                      "identifier": "floatVal.String",
+                      "newPage": false,
+                      "searchKey": "constant.floatVal.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x floatVal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x floatVal) String() string\n```\n\nString returns a decimal approximation of the Float value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#floatVal.ExactString",
+                    "documentation": {
+                      "identifier": "floatVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.floatVal.ExactString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x floatVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x floatVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#floatVal.implementsValue",
+                    "documentation": {
+                      "identifier": "floatVal.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.floatVal.implementsValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (floatVal) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (floatVal) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#complexVal",
+              "documentation": {
+                "identifier": "complexVal",
+                "newPage": false,
+                "searchKey": "constant.complexVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type complexVal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype complexVal struct{ re, im Value }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#vtoc",
+                    "documentation": {
+                      "identifier": "vtoc",
+                      "newPage": false,
+                      "searchKey": "constant.vtoc",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func vtoc(x Value) complexVal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc vtoc(x Value) complexVal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#complexVal.Kind",
+                    "documentation": {
+                      "identifier": "complexVal.Kind",
+                      "newPage": false,
+                      "searchKey": "constant.complexVal.Kind",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (complexVal) Kind() Kind"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (complexVal) Kind() Kind\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#complexVal.String",
+                    "documentation": {
+                      "identifier": "complexVal.String",
+                      "newPage": false,
+                      "searchKey": "constant.complexVal.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x complexVal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x complexVal) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#complexVal.ExactString",
+                    "documentation": {
+                      "identifier": "complexVal.ExactString",
+                      "newPage": false,
+                      "searchKey": "constant.complexVal.ExactString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (x complexVal) ExactString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (x complexVal) ExactString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#complexVal.implementsValue",
+                    "documentation": {
+                      "identifier": "complexVal.implementsValue",
+                      "newPage": false,
+                      "searchKey": "constant.complexVal.implementsValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (complexVal) implementsValue()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (complexVal) implementsValue()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#makeTestCase",
+              "documentation": {
+                "identifier": "makeTestCase",
+                "newPage": false,
+                "searchKey": "constant.makeTestCase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type makeTestCase struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype makeTestCase struct {\n\tkind      Kind\n\targ, want interface{}\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/constant#dup",
+                    "documentation": {
+                      "identifier": "dup",
+                      "newPage": false,
+                      "searchKey": "constant.dup",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func dup(k Kind, x interface{}) makeTestCase"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc dup(k Kind, x interface{}) makeTestCase\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/constant#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/constant#reverse",
+              "documentation": {
+                "identifier": "reverse",
+                "newPage": false,
+                "searchKey": "constant.reverse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reverse(x []string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reverse(x []string) []string\n```\n\nreverse reverses x in place and returns it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#newInt",
+              "documentation": {
+                "identifier": "newInt",
+                "newPage": false,
+                "searchKey": "constant.newInt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newInt() *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newInt() *big.Int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#newRat",
+              "documentation": {
+                "identifier": "newRat",
+                "newPage": false,
+                "searchKey": "constant.newRat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newRat() *big.Rat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newRat() *big.Rat\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#newFloat",
+              "documentation": {
+                "identifier": "newFloat",
+                "newPage": false,
+                "searchKey": "constant.newFloat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newFloat() *big.Float"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newFloat() *big.Float\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#smallInt",
+              "documentation": {
+                "identifier": "smallInt",
+                "newPage": false,
+                "searchKey": "constant.smallInt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func smallInt(x *big.Int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc smallInt(x *big.Int) bool\n```\n\nsmallInt reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#smallFloat64",
+              "documentation": {
+                "identifier": "smallFloat64",
+                "newPage": false,
+                "searchKey": "constant.smallFloat64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func smallFloat64(x float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc smallFloat64(x float64) bool\n```\n\nsmallFloat64 reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#smallFloat",
+              "documentation": {
+                "identifier": "smallFloat",
+                "newPage": false,
+                "searchKey": "constant.smallFloat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func smallFloat(x *big.Float) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc smallFloat(x *big.Float) bool\n```\n\nsmallFloat reports whether x would lead to \"reasonably\"-sized fraction if converted to a *big.Rat. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#BoolVal",
+              "documentation": {
+                "identifier": "BoolVal",
+                "newPage": false,
+                "searchKey": "constant.BoolVal",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BoolVal(x Value) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BoolVal(x Value) bool\n```\n\nBoolVal returns the Go boolean value of x, which must be a Bool or an Unknown. If x is Unknown, the result is false. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#StringVal",
+              "documentation": {
+                "identifier": "StringVal",
+                "newPage": false,
+                "searchKey": "constant.StringVal",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StringVal(x Value) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StringVal(x Value) string\n```\n\nStringVal returns the Go string value of x, which must be a String or an Unknown. If x is Unknown, the result is \"\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Int64Val",
+              "documentation": {
+                "identifier": "Int64Val",
+                "newPage": false,
+                "searchKey": "constant.Int64Val",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Int64Val(x Value) (int64, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Int64Val(x Value) (int64, bool)\n```\n\nInt64Val returns the Go int64 value of x and whether the result is exact; x must be an Int or an Unknown. If the result is not exact, its value is undefined. If x is Unknown, the result is (0, false). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Uint64Val",
+              "documentation": {
+                "identifier": "Uint64Val",
+                "newPage": false,
+                "searchKey": "constant.Uint64Val",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Uint64Val(x Value) (uint64, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Uint64Val(x Value) (uint64, bool)\n```\n\nUint64Val returns the Go uint64 value of x and whether the result is exact; x must be an Int or an Unknown. If the result is not exact, its value is undefined. If x is Unknown, the result is (0, false). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Float32Val",
+              "documentation": {
+                "identifier": "Float32Val",
+                "newPage": false,
+                "searchKey": "constant.Float32Val",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Float32Val(x Value) (float32, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Float32Val(x Value) (float32, bool)\n```\n\nFloat32Val is like Float64Val but for float32 instead of float64. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Float64Val",
+              "documentation": {
+                "identifier": "Float64Val",
+                "newPage": false,
+                "searchKey": "constant.Float64Val",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Float64Val(x Value) (float64, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Float64Val(x Value) (float64, bool)\n```\n\nFloat64Val returns the nearest Go float64 value of x and whether the result is exact; x must be numeric or an Unknown, but not Complex. For values too small (too close to 0) to represent as float64, Float64Val silently underflows to 0. The result sign always matches the sign of x, even for 0. If x is Unknown, the result is (0, false). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Val",
+              "documentation": {
+                "identifier": "Val",
+                "newPage": false,
+                "searchKey": "constant.Val",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Val(x Value) interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Val(x Value) interface{}\n```\n\nVal returns the underlying value for a given constant. Since it returns an interface, it is up to the caller to type assert the result to the expected type. The possible dynamic return types are: \n\n```\nx Kind             type of result\n-----------------------------------------\nBool               bool\nString             string\nInt                int64 or *big.Int\nFloat              *big.Float or *big.Rat\neverything else    nil\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#BitLen",
+              "documentation": {
+                "identifier": "BitLen",
+                "newPage": false,
+                "searchKey": "constant.BitLen",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BitLen(x Value) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BitLen(x Value) int\n```\n\nBitLen returns the number of bits required to represent the absolute value x in binary representation; x must be an Int or an Unknown. If x is Unknown, the result is 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Sign",
+              "documentation": {
+                "identifier": "Sign",
+                "newPage": false,
+                "searchKey": "constant.Sign",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sign(x Value) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sign(x Value) int\n```\n\nSign returns -1, 0, or 1 depending on whether x < 0, x == 0, or x > 0; x must be numeric or Unknown. For complex values x, the sign is 0 if x == 0, otherwise it is != 0. If x is Unknown, the result is 1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Bytes",
+              "documentation": {
+                "identifier": "Bytes",
+                "newPage": false,
+                "searchKey": "constant.Bytes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Bytes(x Value) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Bytes(x Value) []byte\n```\n\nBytes returns the bytes for the absolute value of x in little- endian binary representation; x must be an Int. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#is32bit",
+              "documentation": {
+                "identifier": "is32bit",
+                "newPage": false,
+                "searchKey": "constant.is32bit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func is32bit(x int64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc is32bit(x int64) bool\n```\n\nis32bit reports whether x can be represented using 32 bits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#is63bit",
+              "documentation": {
+                "identifier": "is63bit",
+                "newPage": false,
+                "searchKey": "constant.is63bit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func is63bit(x int64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc is63bit(x int64) bool\n```\n\nis63bit reports whether x can be represented using 63 bits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#ord",
+              "documentation": {
+                "identifier": "ord",
+                "newPage": false,
+                "searchKey": "constant.ord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ord(x Value) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ord(x Value) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#cmpZero",
+              "documentation": {
+                "identifier": "cmpZero",
+                "newPage": false,
+                "searchKey": "constant.cmpZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cmpZero(x int, op token.Token) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cmpZero(x int, op token.Token) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#Compare",
+              "documentation": {
+                "identifier": "Compare",
+                "newPage": false,
+                "searchKey": "constant.Compare",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Compare(x_ Value, op token.Token, y_ Value) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Compare(x_ Value, op token.Token, y_ Value) bool\n```\n\nCompare returns the result of the comparison x op y. The comparison must be defined for the operands. If one of the operands is Unknown, the result is false. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#testNumbers",
+              "documentation": {
+                "identifier": "testNumbers",
+                "newPage": false,
+                "searchKey": "constant.testNumbers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNumbers(t *testing.T, kind token.Token, tests []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNumbers(t *testing.T, kind token.Token, tests []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestNumbers",
+              "documentation": {
+                "identifier": "TestNumbers",
+                "newPage": false,
+                "searchKey": "constant.TestNumbers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNumbers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNumbers(t *testing.T)\n```\n\nTestNumbers verifies that differently written literals representing the same number do have the same value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestOps",
+              "documentation": {
+                "identifier": "TestOps",
+                "newPage": false,
+                "searchKey": "constant.TestOps",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOps(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOps(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#eql",
+              "documentation": {
+                "identifier": "eql",
+                "newPage": false,
+                "searchKey": "constant.eql",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eql(x, y Value) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eql(x, y Value) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestString",
+              "documentation": {
+                "identifier": "TestString",
+                "newPage": false,
+                "searchKey": "constant.TestString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#panicHandler",
+              "documentation": {
+                "identifier": "panicHandler",
+                "newPage": false,
+                "searchKey": "constant.panicHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func panicHandler(v *Value)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc panicHandler(v *Value)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestFractions",
+              "documentation": {
+                "identifier": "TestFractions",
+                "newPage": false,
+                "searchKey": "constant.TestFractions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFractions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFractions(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestBytes",
+              "documentation": {
+                "identifier": "TestBytes",
+                "newPage": false,
+                "searchKey": "constant.TestBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBytes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBytes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestUnknown",
+              "documentation": {
+                "identifier": "TestUnknown",
+                "newPage": false,
+                "searchKey": "constant.TestUnknown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnknown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnknown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestMakeFloat64",
+              "documentation": {
+                "identifier": "TestMakeFloat64",
+                "newPage": false,
+                "searchKey": "constant.TestMakeFloat64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMakeFloat64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMakeFloat64(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestMake",
+              "documentation": {
+                "identifier": "TestMake",
+                "newPage": false,
+                "searchKey": "constant.TestMake",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMake(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMake(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#BenchmarkStringAdd",
+              "documentation": {
+                "identifier": "BenchmarkStringAdd",
+                "newPage": false,
+                "searchKey": "constant.BenchmarkStringAdd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStringAdd(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStringAdd(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/constant#TestBitLen",
+              "documentation": {
+                "identifier": "TestBitLen",
+                "newPage": false,
+                "searchKey": "constant.TestBitLen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBitLen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBitLen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,424 @@
+{
+  "pathID": "/std/encoding/xml_test",
+  "documentation": {
+    "identifier": "xml_test",
+    "newPage": true,
+    "searchKey": "std/encoding/xml_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package xml_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/encoding/xml_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Unknown",
+              "documentation": {
+                "identifier": "Unknown",
+                "newPage": false,
+                "searchKey": "xml_test.Unknown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Unknown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Unknown Animal = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Gopher",
+              "documentation": {
+                "identifier": "Gopher",
+                "newPage": false,
+                "searchKey": "xml_test.Gopher",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Gopher"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Gopher\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Zebra",
+              "documentation": {
+                "identifier": "Zebra",
+                "newPage": false,
+                "searchKey": "xml_test.Zebra",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Zebra"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Zebra\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Unrecognized",
+              "documentation": {
+                "identifier": "Unrecognized",
+                "newPage": false,
+                "searchKey": "xml_test.Unrecognized",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Unrecognized"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Unrecognized Size = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Small",
+              "documentation": {
+                "identifier": "Small",
+                "newPage": false,
+                "searchKey": "xml_test.Small",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Small"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Small\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Large",
+              "documentation": {
+                "identifier": "Large",
+                "newPage": false,
+                "searchKey": "xml_test.Large",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Large"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Large\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/encoding/xml_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Animal",
+              "documentation": {
+                "identifier": "Animal",
+                "newPage": false,
+                "searchKey": "xml_test.Animal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Animal int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Animal int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/encoding/xml_test#Animal.UnmarshalXML",
+                    "documentation": {
+                      "identifier": "Animal.UnmarshalXML",
+                      "newPage": false,
+                      "searchKey": "xml_test.Animal.UnmarshalXML",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *Animal) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *Animal) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/encoding/xml_test#Animal.MarshalXML",
+                    "documentation": {
+                      "identifier": "Animal.MarshalXML",
+                      "newPage": false,
+                      "searchKey": "xml_test.Animal.MarshalXML",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a Animal) MarshalXML(e *xml.Encoder, start xml.StartElement) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a Animal) MarshalXML(e *xml.Encoder, start xml.StartElement) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Size",
+              "documentation": {
+                "identifier": "Size",
+                "newPage": false,
+                "searchKey": "xml_test.Size",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Size int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Size int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/encoding/xml_test#Size.UnmarshalText",
+                    "documentation": {
+                      "identifier": "Size.UnmarshalText",
+                      "newPage": false,
+                      "searchKey": "xml_test.Size.UnmarshalText",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Size) UnmarshalText(text []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Size) UnmarshalText(text []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/encoding/xml_test#Size.MarshalText",
+                    "documentation": {
+                      "identifier": "Size.MarshalText",
+                      "newPage": false,
+                      "searchKey": "xml_test.Size.MarshalText",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s Size) MarshalText() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s Size) MarshalText() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/encoding/xml_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Example_customMarshalXML",
+              "documentation": {
+                "identifier": "Example_customMarshalXML",
+                "newPage": false,
+                "searchKey": "xml_test.Example_customMarshalXML",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_customMarshalXML()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_customMarshalXML()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#ExampleMarshalIndent",
+              "documentation": {
+                "identifier": "ExampleMarshalIndent",
+                "newPage": false,
+                "searchKey": "xml_test.ExampleMarshalIndent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMarshalIndent()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMarshalIndent()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#ExampleEncoder",
+              "documentation": {
+                "identifier": "ExampleEncoder",
+                "newPage": false,
+                "searchKey": "xml_test.ExampleEncoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleEncoder()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleEncoder()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#ExampleUnmarshal",
+              "documentation": {
+                "identifier": "ExampleUnmarshal",
+                "newPage": false,
+                "searchKey": "xml_test.ExampleUnmarshal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleUnmarshal()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleUnmarshal()\n```\n\nThis example demonstrates unmarshaling an XML excerpt into a value with some preset fields. Note that the Phone field isn't modified and that the XML <Company> element is ignored. Also, the Groups field is assigned considering the element path provided in its tag. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/xml_test#Example_textMarshalXML",
+              "documentation": {
+                "identifier": "Example_textMarshalXML",
+                "newPage": false,
+                "searchKey": "xml_test.Example_textMarshalXML",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_textMarshalXML()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_textMarshalXML()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,621 @@
+{
+  "pathID": "/std/testing_test",
+  "documentation": {
+    "identifier": "testing_test",
+    "newPage": true,
+    "searchKey": "std/testing_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package testing_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/testing_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/testing_test#global",
+              "documentation": {
+                "identifier": "global",
+                "newPage": false,
+                "searchKey": "testing_test.global",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var global"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar global interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#allocsPerRunTests",
+              "documentation": {
+                "identifier": "allocsPerRunTests",
+                "newPage": false,
+                "searchKey": "testing_test.allocsPerRunTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var allocsPerRunTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar allocsPerRunTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#prettyPrintTests",
+              "documentation": {
+                "identifier": "prettyPrintTests",
+                "newPage": false,
+                "searchKey": "testing_test.prettyPrintTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var prettyPrintTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar prettyPrintTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#testPanicTest",
+              "documentation": {
+                "identifier": "testPanicTest",
+                "newPage": false,
+                "searchKey": "testing_test.testPanicTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testPanicTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testPanicTest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#testPanicParallel",
+              "documentation": {
+                "identifier": "testPanicParallel",
+                "newPage": false,
+                "searchKey": "testing_test.testPanicParallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testPanicParallel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testPanicParallel = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#testPanicCleanup",
+              "documentation": {
+                "identifier": "testPanicCleanup",
+                "newPage": false,
+                "searchKey": "testing_test.testPanicCleanup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testPanicCleanup"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testPanicCleanup = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#testPanicCleanupPanic",
+              "documentation": {
+                "identifier": "testPanicCleanupPanic",
+                "newPage": false,
+                "searchKey": "testing_test.testPanicCleanupPanic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testPanicCleanupPanic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testPanicCleanupPanic = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/testing_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestAllocsPerRun",
+              "documentation": {
+                "identifier": "TestAllocsPerRun",
+                "newPage": false,
+                "searchKey": "testing_test.TestAllocsPerRun",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAllocsPerRun(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAllocsPerRun(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestPrettyPrint",
+              "documentation": {
+                "identifier": "TestPrettyPrint",
+                "newPage": false,
+                "searchKey": "testing_test.TestPrettyPrint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrettyPrint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrettyPrint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestResultString",
+              "documentation": {
+                "identifier": "TestResultString",
+                "newPage": false,
+                "searchKey": "testing_test.TestResultString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResultString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResultString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestRunParallel",
+              "documentation": {
+                "identifier": "TestRunParallel",
+                "newPage": false,
+                "searchKey": "testing_test.TestRunParallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunParallel(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunParallel(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestRunParallelFail",
+              "documentation": {
+                "identifier": "TestRunParallelFail",
+                "newPage": false,
+                "searchKey": "testing_test.TestRunParallelFail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunParallelFail(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunParallelFail(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestRunParallelFatal",
+              "documentation": {
+                "identifier": "TestRunParallelFatal",
+                "newPage": false,
+                "searchKey": "testing_test.TestRunParallelFatal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunParallelFatal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunParallelFatal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestRunParallelSkipNow",
+              "documentation": {
+                "identifier": "TestRunParallelSkipNow",
+                "newPage": false,
+                "searchKey": "testing_test.TestRunParallelSkipNow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunParallelSkipNow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunParallelSkipNow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#ExampleB_RunParallel",
+              "documentation": {
+                "identifier": "ExampleB_RunParallel",
+                "newPage": false,
+                "searchKey": "testing_test.ExampleB_RunParallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleB_RunParallel()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleB_RunParallel()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestReportMetric",
+              "documentation": {
+                "identifier": "TestReportMetric",
+                "newPage": false,
+                "searchKey": "testing_test.TestReportMetric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReportMetric(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReportMetric(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#ExampleB_ReportMetric",
+              "documentation": {
+                "identifier": "ExampleB_ReportMetric",
+                "newPage": false,
+                "searchKey": "testing_test.ExampleB_ReportMetric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleB_ReportMetric()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleB_ReportMetric()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestPanic",
+              "documentation": {
+                "identifier": "TestPanic",
+                "newPage": false,
+                "searchKey": "testing_test.TestPanic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPanic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPanic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#makeRegexp",
+              "documentation": {
+                "identifier": "makeRegexp",
+                "newPage": false,
+                "searchKey": "testing_test.makeRegexp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeRegexp(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeRegexp(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestPanicHelper",
+              "documentation": {
+                "identifier": "TestPanicHelper",
+                "newPage": false,
+                "searchKey": "testing_test.TestPanicHelper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPanicHelper(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPanicHelper(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "testing_test.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestTempDirInCleanup",
+              "documentation": {
+                "identifier": "TestTempDirInCleanup",
+                "newPage": false,
+                "searchKey": "testing_test.TestTempDirInCleanup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempDirInCleanup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempDirInCleanup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestTempDirInBenchmark",
+              "documentation": {
+                "identifier": "TestTempDirInBenchmark",
+                "newPage": false,
+                "searchKey": "testing_test.TestTempDirInBenchmark",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempDirInBenchmark(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempDirInBenchmark(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestTempDir",
+              "documentation": {
+                "identifier": "TestTempDir",
+                "newPage": false,
+                "searchKey": "testing_test.TestTempDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTempDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTempDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#testTempDir",
+              "documentation": {
+                "identifier": "testTempDir",
+                "newPage": false,
+                "searchKey": "testing_test.testTempDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testTempDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testTempDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestSetenv",
+              "documentation": {
+                "identifier": "TestSetenv",
+                "newPage": false,
+                "searchKey": "testing_test.TestSetenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetenv(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetenv(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestSetenvWithParallelAfterSetenv",
+              "documentation": {
+                "identifier": "TestSetenvWithParallelAfterSetenv",
+                "newPage": false,
+                "searchKey": "testing_test.TestSetenvWithParallelAfterSetenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetenvWithParallelAfterSetenv(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetenvWithParallelAfterSetenv(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing_test#TestSetenvWithParallelBeforeSetenv",
+              "documentation": {
+                "identifier": "TestSetenvWithParallelBeforeSetenv",
+                "newPage": false,
+                "searchKey": "testing_test.TestSetenvWithParallelBeforeSetenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetenvWithParallelBeforeSetenv(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetenvWithParallelBeforeSetenv(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

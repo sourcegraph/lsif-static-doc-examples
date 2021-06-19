@@ -1,0 +1,3519 @@
+{
+  "pathID": "/std/go/doc",
+  "documentation": {
+    "identifier": "doc",
+    "newPage": true,
+    "searchKey": "std/go/doc",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package doc"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package doc extracts source code documentation from a Go AST. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/go/doc#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/doc#ldquo",
+              "documentation": {
+                "identifier": "ldquo",
+                "newPage": false,
+                "searchKey": "doc.ldquo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ldquo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ldquo = \"&ldquo;\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#rdquo",
+              "documentation": {
+                "identifier": "rdquo",
+                "newPage": false,
+                "searchKey": "doc.rdquo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const rdquo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst rdquo = \"&rdquo;\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#ulquo",
+              "documentation": {
+                "identifier": "ulquo",
+                "newPage": false,
+                "searchKey": "doc.ulquo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ulquo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ulquo = \"“\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#urquo",
+              "documentation": {
+                "identifier": "urquo",
+                "newPage": false,
+                "searchKey": "doc.urquo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const urquo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst urquo = \"”\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#identRx",
+              "documentation": {
+                "identifier": "identRx",
+                "newPage": false,
+                "searchKey": "doc.identRx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const identRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst identRx = `[\\pL_][\\pL_0-9]*`\n```\n\nRegexp for Go identifiers \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#protoPart",
+              "documentation": {
+                "identifier": "protoPart",
+                "newPage": false,
+                "searchKey": "doc.protoPart",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const protoPart"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst protoPart = `(https?|ftp|file|gopher|mailto|nntp)`\n```\n\nprotocol (required) e.g. http \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#hostPart",
+              "documentation": {
+                "identifier": "hostPart",
+                "newPage": false,
+                "searchKey": "doc.hostPart",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const hostPart"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst hostPart = `([a-zA-Z0-9_@\\-.\\[\\]:]+)`\n```\n\nhost (required) e.g. www.example.com or [::1]:8080 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#pathPart",
+              "documentation": {
+                "identifier": "pathPart",
+                "newPage": false,
+                "searchKey": "doc.pathPart",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pathPart"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pathPart = `([.,:;?!]*[a-zA-Z0-9$'()*+&#=@~_/\\-\\[\\]%])*`\n```\n\npath+query+fragment (optional) e.g. /path/index.html?q=foo#bar \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#urlRx",
+              "documentation": {
+                "identifier": "urlRx",
+                "newPage": false,
+                "searchKey": "doc.urlRx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const urlRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst urlRx = protoPart + `://` + hostPart + pathPart\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#opPara",
+              "documentation": {
+                "identifier": "opPara",
+                "newPage": false,
+                "searchKey": "doc.opPara",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const opPara"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst opPara op = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#opHead",
+              "documentation": {
+                "identifier": "opHead",
+                "newPage": false,
+                "searchKey": "doc.opHead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const opHead"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst opHead\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#opPre",
+              "documentation": {
+                "identifier": "opPre",
+                "newPage": false,
+                "searchKey": "doc.opPre",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const opPre"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst opPre\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#AllDecls",
+              "documentation": {
+                "identifier": "AllDecls",
+                "newPage": false,
+                "searchKey": "doc.AllDecls",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AllDecls"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AllDecls Mode = 1 << iota\n```\n\nAllDecls says to extract documentation for all package-level declarations, not just exported ones. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#AllMethods",
+              "documentation": {
+                "identifier": "AllMethods",
+                "newPage": false,
+                "searchKey": "doc.AllMethods",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AllMethods"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AllMethods\n```\n\nAllMethods says to show all embedded methods, not just the ones of invisible (unexported) anonymous fields. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#PreserveAST",
+              "documentation": {
+                "identifier": "PreserveAST",
+                "newPage": false,
+                "searchKey": "doc.PreserveAST",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PreserveAST"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PreserveAST\n```\n\nPreserveAST says to leave the AST unmodified. Originally, pieces of the AST such as function bodies were nil-ed out to save memory in godoc, but not all programs want that behavior. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#keepNL",
+              "documentation": {
+                "identifier": "keepNL",
+                "newPage": false,
+                "searchKey": "doc.keepNL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const keepNL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst keepNL = 1 << iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#dataDir",
+              "documentation": {
+                "identifier": "dataDir",
+                "newPage": false,
+                "searchKey": "doc.dataDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dataDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dataDir = \"testdata\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/doc#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/doc#htmlQuoteReplacer",
+              "documentation": {
+                "identifier": "htmlQuoteReplacer",
+                "newPage": false,
+                "searchKey": "doc.htmlQuoteReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var htmlQuoteReplacer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar htmlQuoteReplacer = strings.NewReplacer(ulquo, ldquo, urquo, rdquo)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#unicodeQuoteReplacer",
+              "documentation": {
+                "identifier": "unicodeQuoteReplacer",
+                "newPage": false,
+                "searchKey": "doc.unicodeQuoteReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var unicodeQuoteReplacer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar unicodeQuoteReplacer = strings.NewReplacer(\"``\", ulquo, \"''\", urquo)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#matchRx",
+              "documentation": {
+                "identifier": "matchRx",
+                "newPage": false,
+                "searchKey": "doc.matchRx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var matchRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar matchRx = lazyregexp.New(`(` + urlRx + `)|(` + identRx + `)`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_a",
+              "documentation": {
+                "identifier": "html_a",
+                "newPage": false,
+                "searchKey": "doc.html_a",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_a"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_a = []byte(`<a href=\"`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_aq",
+              "documentation": {
+                "identifier": "html_aq",
+                "newPage": false,
+                "searchKey": "doc.html_aq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_aq"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_aq = []byte(`\">`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_enda",
+              "documentation": {
+                "identifier": "html_enda",
+                "newPage": false,
+                "searchKey": "doc.html_enda",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_enda"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_enda = []byte(\"</a>\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_i",
+              "documentation": {
+                "identifier": "html_i",
+                "newPage": false,
+                "searchKey": "doc.html_i",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_i"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_i = []byte(\"<i>\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_endi",
+              "documentation": {
+                "identifier": "html_endi",
+                "newPage": false,
+                "searchKey": "doc.html_endi",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_endi"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_endi = []byte(\"</i>\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_p",
+              "documentation": {
+                "identifier": "html_p",
+                "newPage": false,
+                "searchKey": "doc.html_p",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_p"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_p = []byte(\"<p>\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_endp",
+              "documentation": {
+                "identifier": "html_endp",
+                "newPage": false,
+                "searchKey": "doc.html_endp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_endp"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_endp = []byte(\"</p>\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_pre",
+              "documentation": {
+                "identifier": "html_pre",
+                "newPage": false,
+                "searchKey": "doc.html_pre",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_pre"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_pre = []byte(\"<pre>\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_endpre",
+              "documentation": {
+                "identifier": "html_endpre",
+                "newPage": false,
+                "searchKey": "doc.html_endpre",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_endpre"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_endpre = []byte(\"</pre>\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_h",
+              "documentation": {
+                "identifier": "html_h",
+                "newPage": false,
+                "searchKey": "doc.html_h",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_h"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_h = []byte(`<h3 id=\"`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_hq",
+              "documentation": {
+                "identifier": "html_hq",
+                "newPage": false,
+                "searchKey": "doc.html_hq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_hq"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_hq = []byte(`\">`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#html_endh",
+              "documentation": {
+                "identifier": "html_endh",
+                "newPage": false,
+                "searchKey": "doc.html_endh",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var html_endh"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar html_endh = []byte(\"</h3>\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#nonAlphaNumRx",
+              "documentation": {
+                "identifier": "nonAlphaNumRx",
+                "newPage": false,
+                "searchKey": "doc.nonAlphaNumRx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nonAlphaNumRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar nonAlphaNumRx = lazyregexp.New(`[^a-zA-Z0-9]`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#nl",
+              "documentation": {
+                "identifier": "nl",
+                "newPage": false,
+                "searchKey": "doc.nl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nl"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar nl = []byte(\"\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#space",
+              "documentation": {
+                "identifier": "space",
+                "newPage": false,
+                "searchKey": "doc.space",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var space"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar space = []byte(\" \")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#prefix",
+              "documentation": {
+                "identifier": "prefix",
+                "newPage": false,
+                "searchKey": "doc.prefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var prefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar prefix = []byte(\"// \")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#outputPrefix",
+              "documentation": {
+                "identifier": "outputPrefix",
+                "newPage": false,
+                "searchKey": "doc.outputPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var outputPrefix"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar outputPrefix = lazyregexp.New(`(?i)^[[:space:]]*(unordered )?output:`)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#underscore",
+              "documentation": {
+                "identifier": "underscore",
+                "newPage": false,
+                "searchKey": "doc.underscore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var underscore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar underscore = ast.NewIdent(\"_\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#noteMarker",
+              "documentation": {
+                "identifier": "noteMarker",
+                "newPage": false,
+                "searchKey": "doc.noteMarker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var noteMarker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar noteMarker // MARKER(uid), MARKER at least 2 chars, uid at least 1 char\n = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#noteMarkerRx",
+              "documentation": {
+                "identifier": "noteMarkerRx",
+                "newPage": false,
+                "searchKey": "doc.noteMarkerRx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var noteMarkerRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar noteMarkerRx = lazyregexp.New(`^[ \\t]*` + noteMarker) // MARKER(uid) at text start\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#noteCommentRx",
+              "documentation": {
+                "identifier": "noteCommentRx",
+                "newPage": false,
+                "searchKey": "doc.noteCommentRx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var noteCommentRx"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar noteCommentRx = lazyregexp.New(`^/[/*][ \\t]*` + noteMarker) // MARKER(uid) at comment start\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#predeclaredTypes",
+              "documentation": {
+                "identifier": "predeclaredTypes",
+                "newPage": false,
+                "searchKey": "doc.predeclaredTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var predeclaredTypes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar predeclaredTypes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#predeclaredFuncs",
+              "documentation": {
+                "identifier": "predeclaredFuncs",
+                "newPage": false,
+                "searchKey": "doc.predeclaredFuncs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var predeclaredFuncs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar predeclaredFuncs = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#predeclaredConstants",
+              "documentation": {
+                "identifier": "predeclaredConstants",
+                "newPage": false,
+                "searchKey": "doc.predeclaredConstants",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var predeclaredConstants"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar predeclaredConstants = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#IllegalPrefixes",
+              "documentation": {
+                "identifier": "IllegalPrefixes",
+                "newPage": false,
+                "searchKey": "doc.IllegalPrefixes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var IllegalPrefixes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar IllegalPrefixes = []string{\n\t\"copyright\",\n\t\"all rights\",\n\t\"author\",\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#headingTests",
+              "documentation": {
+                "identifier": "headingTests",
+                "newPage": false,
+                "searchKey": "doc.headingTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var headingTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar headingTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#blocksTests",
+              "documentation": {
+                "identifier": "blocksTests",
+                "newPage": false,
+                "searchKey": "doc.blocksTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var blocksTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar blocksTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#emphasizeTests",
+              "documentation": {
+                "identifier": "emphasizeTests",
+                "newPage": false,
+                "searchKey": "doc.emphasizeTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var emphasizeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar emphasizeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#update",
+              "documentation": {
+                "identifier": "update",
+                "newPage": false,
+                "searchKey": "doc.update",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var update"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar update = flag.Bool(\"update\", false, \"update golden (.out) files\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#files",
+              "documentation": {
+                "identifier": "files",
+                "newPage": false,
+                "searchKey": "doc.files",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var files"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar files = flag.String(\"files\", \"\", \"consider only Go test files matching this regular expression\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#templateTxt",
+              "documentation": {
+                "identifier": "templateTxt",
+                "newPage": false,
+                "searchKey": "doc.templateTxt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var templateTxt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar templateTxt = readTemplate(\"template.txt\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#tests",
+              "documentation": {
+                "identifier": "tests",
+                "newPage": false,
+                "searchKey": "doc.tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/doc#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/doc#op",
+              "documentation": {
+                "identifier": "op",
+                "newPage": false,
+                "searchKey": "doc.op",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type op int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype op int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#block",
+              "documentation": {
+                "identifier": "block",
+                "newPage": false,
+                "searchKey": "doc.block",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type block struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype block struct {\n\top    op\n\tlines []string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#lineWrapper",
+              "documentation": {
+                "identifier": "lineWrapper",
+                "newPage": false,
+                "searchKey": "doc.lineWrapper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type lineWrapper struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype lineWrapper struct {\n\tout       io.Writer\n\tprinted   bool\n\twidth     int\n\tindent    string\n\tn         int\n\tpendSpace int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#lineWrapper.write",
+                    "documentation": {
+                      "identifier": "lineWrapper.write",
+                      "newPage": false,
+                      "searchKey": "doc.lineWrapper.write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *lineWrapper) write(text string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *lineWrapper) write(text string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#lineWrapper.flush",
+                    "documentation": {
+                      "identifier": "lineWrapper.flush",
+                      "newPage": false,
+                      "searchKey": "doc.lineWrapper.flush",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *lineWrapper) flush()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *lineWrapper) flush()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Package",
+              "documentation": {
+                "identifier": "Package",
+                "newPage": false,
+                "searchKey": "doc.Package",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Package struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Package struct {\n\tDoc        string\n\tName       string\n\tImportPath string\n\tImports    []string\n\tFilenames  []string\n\tNotes      map[string][]*Note\n\n\t// Deprecated: For backward compatibility Bugs is still populated,\n\t// but all new code should use Notes instead.\n\tBugs []string\n\n\t// declarations\n\tConsts []*Value\n\tTypes  []*Type\n\tVars   []*Value\n\tFuncs  []*Func\n\n\t// Examples is a sorted list of examples associated with\n\t// the package. Examples are extracted from _test.go files\n\t// provided to NewFromFiles.\n\tExamples []*Example\n}\n```\n\nPackage is the documentation for an entire package. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "doc.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(pkg *ast.Package, importPath string, mode Mode) *Package"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(pkg *ast.Package, importPath string, mode Mode) *Package\n```\n\nNew computes the package documentation for the given package AST. New takes ownership of the AST pkg and may edit or overwrite it. To have the Examples fields populated, use NewFromFiles and include the package's _test.go files. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#NewFromFiles",
+                    "documentation": {
+                      "identifier": "NewFromFiles",
+                      "newPage": false,
+                      "searchKey": "doc.NewFromFiles",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewFromFiles(fset *token.FileSet, files []*ast.File, importPath string, opts ...interface{}) (*Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewFromFiles(fset *token.FileSet, files []*ast.File, importPath string, opts ...interface{}) (*Package, error)\n```\n\nNewFromFiles computes documentation for a package. \n\nThe package is specified by a list of *ast.Files and corresponding file set, which must not be nil. NewFromFiles uses all provided files when computing documentation, so it is the caller's responsibility to provide only the files that match the desired build context. \"go/build\".Context.MatchFile can be used for determining whether a file matches a build context with the desired GOOS and GOARCH values, and other build constraints. The import path of the package is specified by importPath. \n\nExamples found in _test.go files are associated with the corresponding type, function, method, or the package, based on their name. If the example has a suffix in its name, it is set in the Example.Suffix field. Examples with malformed names are skipped. \n\nOptionally, a single extra argument of type Mode can be provided to control low-level aspects of the documentation extraction behavior. \n\nNewFromFiles takes ownership of the AST files and may edit them, unless the PreserveAST Mode bit is on. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#Package.Filter",
+                    "documentation": {
+                      "identifier": "Package.Filter",
+                      "newPage": false,
+                      "searchKey": "doc.Package.Filter",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Package) Filter(f Filter)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Package) Filter(f Filter)\n```\n\nFilter eliminates documentation for names that don't pass through the filter f. TODO(gri): Recognize \"Type.Method\" as a name. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Value",
+              "documentation": {
+                "identifier": "Value",
+                "newPage": false,
+                "searchKey": "doc.Value",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Value struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Value struct {\n\tDoc   string\n\tNames []string // var or const names in declaration order\n\tDecl  *ast.GenDecl\n\n\torder int\n}\n```\n\nValue is the documentation for a (possibly grouped) var or const declaration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Type",
+              "documentation": {
+                "identifier": "Type",
+                "newPage": false,
+                "searchKey": "doc.Type",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Type struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Type struct {\n\tDoc  string\n\tName string\n\tDecl *ast.GenDecl\n\n\t// associated declarations\n\tConsts  []*Value // sorted list of constants of (mostly) this type\n\tVars    []*Value // sorted list of variables of (mostly) this type\n\tFuncs   []*Func  // sorted list of functions returning this type\n\tMethods []*Func  // sorted list of methods (including embedded ones) of this type\n\n\t// Examples is a sorted list of examples associated with\n\t// this type. Examples are extracted from _test.go files\n\t// provided to NewFromFiles.\n\tExamples []*Example\n}\n```\n\nType is the documentation for a type declaration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Func",
+              "documentation": {
+                "identifier": "Func",
+                "newPage": false,
+                "searchKey": "doc.Func",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Func struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Func struct {\n\tDoc  string\n\tName string\n\tDecl *ast.FuncDecl\n\n\t// methods\n\t// (for functions, these fields have the respective zero value)\n\tRecv  string // actual   receiver \"T\" or \"*T\"\n\tOrig  string // original receiver \"T\" or \"*T\"\n\tLevel int    // embedding level; 0 means not embedded\n\n\t// Examples is a sorted list of examples associated with this\n\t// function or method. Examples are extracted from _test.go files\n\t// provided to NewFromFiles.\n\tExamples []*Example\n}\n```\n\nFunc is the documentation for a func declaration. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#customizeRecv",
+                    "documentation": {
+                      "identifier": "customizeRecv",
+                      "newPage": false,
+                      "searchKey": "doc.customizeRecv",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func customizeRecv(f *Func, recvTypeName string, embeddedIsPtr bool, level int) *Func"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc customizeRecv(f *Func, recvTypeName string, embeddedIsPtr bool, level int) *Func\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Note",
+              "documentation": {
+                "identifier": "Note",
+                "newPage": false,
+                "searchKey": "doc.Note",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Note struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Note struct {\n\tPos, End token.Pos // position range of the comment containing the marker\n\tUID      string    // uid found with the marker\n\tBody     string    // note body text\n}\n```\n\nA Note represents a marked comment starting with \"MARKER(uid): note body\". Any note with a marker of 2 or more upper case [A-Z] letters and a uid of at least one character is recognized. The \":\" following the uid is optional. Notes are collected in the Package.Notes map indexed by the notes marker. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Mode",
+              "documentation": {
+                "identifier": "Mode",
+                "newPage": false,
+                "searchKey": "doc.Mode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Mode int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Mode int\n```\n\nMode values control the operation of New and NewFromFiles. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Example",
+              "documentation": {
+                "identifier": "Example",
+                "newPage": false,
+                "searchKey": "doc.Example",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Example struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Example struct {\n\tName        string // name of the item being exemplified (including optional suffix)\n\tSuffix      string // example suffix, without leading '_' (only populated by NewFromFiles)\n\tDoc         string // example function doc string\n\tCode        ast.Node\n\tPlay        *ast.File // a whole program version of the example\n\tComments    []*ast.CommentGroup\n\tOutput      string // expected output\n\tUnordered   bool\n\tEmptyOutput bool // expect empty output\n\tOrder       int  // original source code order\n}\n```\n\nAn Example represents an example function found in a test source file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Filter",
+              "documentation": {
+                "identifier": "Filter",
+                "newPage": false,
+                "searchKey": "doc.Filter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Filter func(string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Filter func(string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#methodSet",
+              "documentation": {
+                "identifier": "methodSet",
+                "newPage": false,
+                "searchKey": "doc.methodSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type methodSet map[string]*doc.Func"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype methodSet map[string]*Func\n```\n\nA methodSet describes a set of methods. Entries where Decl == nil are conflict entries (more than one method with the same name at the same embedding level). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#methodSet.set",
+                    "documentation": {
+                      "identifier": "methodSet.set",
+                      "newPage": false,
+                      "searchKey": "doc.methodSet.set",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mset methodSet) set(f *ast.FuncDecl, preserveAST bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mset methodSet) set(f *ast.FuncDecl, preserveAST bool)\n```\n\nset creates the corresponding Func for f and adds it to mset. If there are multiple f's with the same name, set keeps the first one with documentation; conflicts are ignored. The boolean specifies whether to leave the AST untouched. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#methodSet.add",
+                    "documentation": {
+                      "identifier": "methodSet.add",
+                      "newPage": false,
+                      "searchKey": "doc.methodSet.add",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mset methodSet) add(m *Func)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mset methodSet) add(m *Func)\n```\n\nadd adds method m to the method set; m is ignored if the method set already contains a method with the same name at the same or a higher level than m. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#embeddedSet",
+              "documentation": {
+                "identifier": "embeddedSet",
+                "newPage": false,
+                "searchKey": "doc.embeddedSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type embeddedSet map[*doc.namedType]bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype embeddedSet map[*namedType]bool\n```\n\nAn embeddedSet describes a set of embedded types. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#namedType",
+              "documentation": {
+                "identifier": "namedType",
+                "newPage": false,
+                "searchKey": "doc.namedType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type namedType struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype namedType struct {\n\tdoc  string       // doc comment for type\n\tname string       // type name\n\tdecl *ast.GenDecl // nil if declaration hasn't been seen yet\n\n\tisEmbedded bool        // true if this type is embedded\n\tisStruct   bool        // true if this type is a struct\n\tembedded   embeddedSet // true if the embedded type is a pointer\n\n\t// associated declarations\n\tvalues  []*Value // consts and vars\n\tfuncs   methodSet\n\tmethods methodSet\n}\n```\n\nA namedType represents a named unqualified (package local, or possibly predeclared) type. The namedType for a type name is always found via reader.lookupType. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#reader",
+              "documentation": {
+                "identifier": "reader",
+                "newPage": false,
+                "searchKey": "doc.reader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type reader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype reader struct {\n\tmode Mode\n\n\t// package properties\n\tdoc       string // package documentation, if any\n\tfilenames []string\n\tnotes     map[string][]*Note\n\n\t// declarations\n\timports   map[string]int\n\thasDotImp bool     // if set, package contains a dot import\n\tvalues    []*Value // consts and vars\n\torder     int      // sort order of const and var declarations (when we can't use a name)\n\ttypes     map[string]*namedType\n\tfuncs     methodSet\n\n\t// support for package-local error type declarations\n\terrorDecl bool                 // if set, type \"error\" was declared locally\n\tfixlist   []*ast.InterfaceType // list of interfaces containing anonymous field \"error\"\n}\n```\n\nreader accumulates documentation for a single package. It modifies the AST: Comments (declaration documentation) that have been collected by the reader are set to nil in the respective AST nodes so that they are not printed twice (once when printing the documentation and once when printing the corresponding AST node). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.filterFieldList",
+                    "documentation": {
+                      "identifier": "reader.filterFieldList",
+                      "newPage": false,
+                      "searchKey": "doc.reader.filterFieldList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) filterFieldList(parent *namedType, fields *ast.FieldList, ityp *ast.InterfaceType) (removedFields bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) filterFieldList(parent *namedType, fields *ast.FieldList, ityp *ast.InterfaceType) (removedFields bool)\n```\n\nfilterFieldList removes unexported fields (field names) from the field list in place and reports whether fields were removed. Anonymous fields are recorded with the parent type. filterType is called with the types of all remaining fields. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.filterParamList",
+                    "documentation": {
+                      "identifier": "reader.filterParamList",
+                      "newPage": false,
+                      "searchKey": "doc.reader.filterParamList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) filterParamList(fields *ast.FieldList)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) filterParamList(fields *ast.FieldList)\n```\n\nfilterParamList applies filterType to each parameter type in fields. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.filterType",
+                    "documentation": {
+                      "identifier": "reader.filterType",
+                      "newPage": false,
+                      "searchKey": "doc.reader.filterType",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) filterType(parent *namedType, typ ast.Expr)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) filterType(parent *namedType, typ ast.Expr)\n```\n\nfilterType strips any unexported struct fields or method types from typ in place. If fields (or methods) have been removed, the corresponding struct or interface type has the Incomplete field set to true. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.filterSpec",
+                    "documentation": {
+                      "identifier": "reader.filterSpec",
+                      "newPage": false,
+                      "searchKey": "doc.reader.filterSpec",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) filterSpec(spec ast.Spec) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) filterSpec(spec ast.Spec) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.filterSpecList",
+                    "documentation": {
+                      "identifier": "reader.filterSpecList",
+                      "newPage": false,
+                      "searchKey": "doc.reader.filterSpecList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) filterSpecList(list []ast.Spec, tok token.Token) []ast.Spec"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) filterSpecList(list []ast.Spec, tok token.Token) []ast.Spec\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.filterDecl",
+                    "documentation": {
+                      "identifier": "reader.filterDecl",
+                      "newPage": false,
+                      "searchKey": "doc.reader.filterDecl",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) filterDecl(decl ast.Decl) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) filterDecl(decl ast.Decl) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.fileExports",
+                    "documentation": {
+                      "identifier": "reader.fileExports",
+                      "newPage": false,
+                      "searchKey": "doc.reader.fileExports",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) fileExports(src *ast.File)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) fileExports(src *ast.File)\n```\n\nfileExports removes unexported declarations from src in place. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.isVisible",
+                    "documentation": {
+                      "identifier": "reader.isVisible",
+                      "newPage": false,
+                      "searchKey": "doc.reader.isVisible",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) isVisible(name string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) isVisible(name string) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.lookupType",
+                    "documentation": {
+                      "identifier": "reader.lookupType",
+                      "newPage": false,
+                      "searchKey": "doc.reader.lookupType",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) lookupType(name string) *namedType"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) lookupType(name string) *namedType\n```\n\nlookupType returns the base type with the given name. If the base type has not been encountered yet, a new type with the given name but no associated declaration is added to the type map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.recordAnonymousField",
+                    "documentation": {
+                      "identifier": "reader.recordAnonymousField",
+                      "newPage": false,
+                      "searchKey": "doc.reader.recordAnonymousField",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) recordAnonymousField(parent *namedType, fieldType ast.Expr) (fname string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) recordAnonymousField(parent *namedType, fieldType ast.Expr) (fname string)\n```\n\nrecordAnonymousField registers fieldType as the type of an anonymous field in the parent type. If the field is imported (qualified name) or the parent is nil, the field is ignored. The function returns the field name. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.readDoc",
+                    "documentation": {
+                      "identifier": "reader.readDoc",
+                      "newPage": false,
+                      "searchKey": "doc.reader.readDoc",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) readDoc(comment *ast.CommentGroup)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) readDoc(comment *ast.CommentGroup)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.remember",
+                    "documentation": {
+                      "identifier": "reader.remember",
+                      "newPage": false,
+                      "searchKey": "doc.reader.remember",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) remember(typ *ast.InterfaceType)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) remember(typ *ast.InterfaceType)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.readValue",
+                    "documentation": {
+                      "identifier": "reader.readValue",
+                      "newPage": false,
+                      "searchKey": "doc.reader.readValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) readValue(decl *ast.GenDecl)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) readValue(decl *ast.GenDecl)\n```\n\nreadValue processes a const or var declaration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.readType",
+                    "documentation": {
+                      "identifier": "reader.readType",
+                      "newPage": false,
+                      "searchKey": "doc.reader.readType",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) readType(decl *ast.GenDecl, spec *ast.TypeSpec)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) readType(decl *ast.GenDecl, spec *ast.TypeSpec)\n```\n\nreadType processes a type declaration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.isPredeclared",
+                    "documentation": {
+                      "identifier": "reader.isPredeclared",
+                      "newPage": false,
+                      "searchKey": "doc.reader.isPredeclared",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) isPredeclared(n string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) isPredeclared(n string) bool\n```\n\nisPredeclared reports whether n denotes a predeclared type. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.readFunc",
+                    "documentation": {
+                      "identifier": "reader.readFunc",
+                      "newPage": false,
+                      "searchKey": "doc.reader.readFunc",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) readFunc(fun *ast.FuncDecl)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) readFunc(fun *ast.FuncDecl)\n```\n\nreadFunc processes a func or method declaration. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.readNote",
+                    "documentation": {
+                      "identifier": "reader.readNote",
+                      "newPage": false,
+                      "searchKey": "doc.reader.readNote",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) readNote(list []*ast.Comment)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) readNote(list []*ast.Comment)\n```\n\nreadNote collects a single note from a sequence of comments. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.readNotes",
+                    "documentation": {
+                      "identifier": "reader.readNotes",
+                      "newPage": false,
+                      "searchKey": "doc.reader.readNotes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) readNotes(comments []*ast.CommentGroup)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) readNotes(comments []*ast.CommentGroup)\n```\n\nreadNotes extracts notes from comments. A note must start at the beginning of a comment with \"MARKER(uid):\" and is followed by the note body (e.g., \"// BUG(gri): fix this\"). The note ends at the end of the comment group or at the start of another note in the same comment group, whichever comes first. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.readFile",
+                    "documentation": {
+                      "identifier": "reader.readFile",
+                      "newPage": false,
+                      "searchKey": "doc.reader.readFile",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) readFile(src *ast.File)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) readFile(src *ast.File)\n```\n\nreadFile adds the AST for a source file to the reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.readPackage",
+                    "documentation": {
+                      "identifier": "reader.readPackage",
+                      "newPage": false,
+                      "searchKey": "doc.reader.readPackage",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) readPackage(pkg *ast.Package, mode Mode)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) readPackage(pkg *ast.Package, mode Mode)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.collectEmbeddedMethods",
+                    "documentation": {
+                      "identifier": "reader.collectEmbeddedMethods",
+                      "newPage": false,
+                      "searchKey": "doc.reader.collectEmbeddedMethods",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) collectEmbeddedMethods(mset methodSet, typ *namedType, recvTypeName string, embeddedIsPtr bool, level int, visited embeddedSet)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) collectEmbeddedMethods(mset methodSet, typ *namedType, recvTypeName string, embeddedIsPtr bool, level int, visited embeddedSet)\n```\n\ncollectEmbeddedMethods collects the embedded methods of typ in mset. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.computeMethodSets",
+                    "documentation": {
+                      "identifier": "reader.computeMethodSets",
+                      "newPage": false,
+                      "searchKey": "doc.reader.computeMethodSets",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) computeMethodSets()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) computeMethodSets()\n```\n\ncomputeMethodSets determines the actual method sets for each type encountered. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#reader.cleanupTypes",
+                    "documentation": {
+                      "identifier": "reader.cleanupTypes",
+                      "newPage": false,
+                      "searchKey": "doc.reader.cleanupTypes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *reader) cleanupTypes()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *reader) cleanupTypes()\n```\n\ncleanupTypes removes the association of functions and methods with types that have no declaration. Instead, these functions and methods are shown at the package level. It also removes types with missing declarations or which are not visible. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#data",
+              "documentation": {
+                "identifier": "data",
+                "newPage": false,
+                "searchKey": "doc.data",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type data struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype data struct {\n\tn    int\n\tswap func(i, j int)\n\tless func(i, j int) bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#data.Len",
+                    "documentation": {
+                      "identifier": "data.Len",
+                      "newPage": false,
+                      "searchKey": "doc.data.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *data) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *data) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#data.Swap",
+                    "documentation": {
+                      "identifier": "data.Swap",
+                      "newPage": false,
+                      "searchKey": "doc.data.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *data) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *data) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/go/doc#data.Less",
+                    "documentation": {
+                      "identifier": "data.Less",
+                      "newPage": false,
+                      "searchKey": "doc.data.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *data) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *data) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#bundle",
+              "documentation": {
+                "identifier": "bundle",
+                "newPage": false,
+                "searchKey": "doc.bundle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bundle struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bundle struct {\n\t*Package\n\tFSet *token.FileSet\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/go/doc#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/go/doc#commentEscape",
+              "documentation": {
+                "identifier": "commentEscape",
+                "newPage": false,
+                "searchKey": "doc.commentEscape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func commentEscape(w io.Writer, text string, nice bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc commentEscape(w io.Writer, text string, nice bool)\n```\n\nEscape comment text for HTML. If nice is set, also turn ` into &ldquo; and ' into &rdquo;. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#convertQuotes",
+              "documentation": {
+                "identifier": "convertQuotes",
+                "newPage": false,
+                "searchKey": "doc.convertQuotes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func convertQuotes(text string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc convertQuotes(text string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#emphasize",
+              "documentation": {
+                "identifier": "emphasize",
+                "newPage": false,
+                "searchKey": "doc.emphasize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func emphasize(w io.Writer, line string, words map[string]string, nice bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc emphasize(w io.Writer, line string, words map[string]string, nice bool)\n```\n\nEmphasize and escape a line of text for HTML. URLs are converted into links; if the URL also appears in the words map, the link is taken from the map (if the corresponding map value is the empty string, the URL is not converted into a link). Go identifiers that appear in the words map are italicized; if the corresponding map value is not the empty string, it is considered a URL and the word is converted into a link. If nice is set, the remaining text's appearance is improved where it makes sense (e.g., ` is turned into &ldquo; and ' into &rdquo;). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#indentLen",
+              "documentation": {
+                "identifier": "indentLen",
+                "newPage": false,
+                "searchKey": "doc.indentLen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func indentLen(s string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc indentLen(s string) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#isBlank",
+              "documentation": {
+                "identifier": "isBlank",
+                "newPage": false,
+                "searchKey": "doc.isBlank",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isBlank(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isBlank(s string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#commonPrefix",
+              "documentation": {
+                "identifier": "commonPrefix",
+                "newPage": false,
+                "searchKey": "doc.commonPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func commonPrefix(a, b string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc commonPrefix(a, b string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#unindent",
+              "documentation": {
+                "identifier": "unindent",
+                "newPage": false,
+                "searchKey": "doc.unindent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unindent(block []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unindent(block []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#heading",
+              "documentation": {
+                "identifier": "heading",
+                "newPage": false,
+                "searchKey": "doc.heading",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func heading(line string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc heading(line string) string\n```\n\nheading returns the trimmed line if it passes as a section heading; otherwise it returns the empty string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#anchorID",
+              "documentation": {
+                "identifier": "anchorID",
+                "newPage": false,
+                "searchKey": "doc.anchorID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func anchorID(line string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc anchorID(line string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#ToHTML",
+              "documentation": {
+                "identifier": "ToHTML",
+                "newPage": false,
+                "searchKey": "doc.ToHTML",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToHTML(w io.Writer, text string, words map[string]string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToHTML(w io.Writer, text string, words map[string]string)\n```\n\nToHTML converts comment text to formatted HTML. The comment was prepared by DocReader, so it is known not to have leading, trailing blank lines nor to have trailing spaces at the end of lines. The comment markers have already been removed. \n\nEach span of unindented non-blank lines is converted into a single paragraph. There is one exception to the rule: a span that consists of a single line, is followed by another paragraph span, begins with a capital letter, and contains no punctuation other than parentheses and commas is formatted as a heading. \n\nA span of indented lines is converted into a <pre> block, with the common indent prefix removed. \n\nURLs in the comment text are converted into links; if the URL also appears in the words map, the link is taken from the map (if the corresponding map value is the empty string, the URL is not converted into a link). \n\nA pair of (consecutive) backticks (`) is converted to a unicode left quote (“), and a pair of (consecutive) single quotes (') is converted to a unicode right quote (”). \n\nGo identifiers that appear in the words map are italicized; if the corresponding map value is not the empty string, it is considered a URL and the word is converted into a link. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#blocks",
+              "documentation": {
+                "identifier": "blocks",
+                "newPage": false,
+                "searchKey": "doc.blocks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func blocks(text string) []block"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc blocks(text string) []block\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#ToText",
+              "documentation": {
+                "identifier": "ToText",
+                "newPage": false,
+                "searchKey": "doc.ToText",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToText(w io.Writer, text string, indent, preIndent string, width int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToText(w io.Writer, text string, indent, preIndent string, width int)\n```\n\nToText prepares comment text for presentation in textual output. It wraps paragraphs of text to width or fewer Unicode code points and then prefixes each line with the indent. In preformatted sections (such as program text), it prefixes each non-blank line with preIndent. \n\nA pair of (consecutive) backticks (`) is converted to a unicode left quote (“), and a pair of (consecutive) single quotes (') is converted to a unicode right quote (”). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#simpleImporter",
+              "documentation": {
+                "identifier": "simpleImporter",
+                "newPage": false,
+                "searchKey": "doc.simpleImporter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func simpleImporter(imports map[string]*ast.Object, path string) (*ast.Object, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc simpleImporter(imports map[string]*ast.Object, path string) (*ast.Object, error)\n```\n\nsimpleImporter returns a (dummy) package object named by the last path component of the provided package path (as is the convention for packages). This is sufficient to resolve package identifiers without doing an actual import. It never returns an error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Examples",
+              "documentation": {
+                "identifier": "Examples",
+                "newPage": false,
+                "searchKey": "doc.Examples",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Examples(testFiles ...*ast.File) []*Example"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Examples(testFiles ...*ast.File) []*Example\n```\n\nExamples returns the examples found in testFiles, sorted by Name field. The Order fields record the order in which the examples were encountered. The Suffix field is not populated when Examples is called directly, it is only populated by NewFromFiles for examples it finds in _test.go files. \n\nPlayable Examples must be in a package whose name ends in \"_test\". An Example is \"playable\" (the Play field is non-nil) in either of these circumstances: \n\n```\n- The example function is self-contained: the function references only\n  identifiers from other packages (or predeclared identifiers, such as\n  \"int\") and the test file does not include a dot import.\n- The entire test file is the example: the file contains exactly one\n  example function, zero test or benchmark functions, and at least one\n  top-level function, type, variable, or constant declaration other\n  than the example function.\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#exampleOutput",
+              "documentation": {
+                "identifier": "exampleOutput",
+                "newPage": false,
+                "searchKey": "doc.exampleOutput",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func exampleOutput(b *ast.BlockStmt, comments []*ast.CommentGroup) (output string, unordered, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc exampleOutput(b *ast.BlockStmt, comments []*ast.CommentGroup) (output string, unordered, ok bool)\n```\n\nExtracts the expected output and whether there was a valid output comment \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#isTest",
+              "documentation": {
+                "identifier": "isTest",
+                "newPage": false,
+                "searchKey": "doc.isTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isTest(name, prefix string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isTest(name, prefix string) bool\n```\n\nisTest tells whether name looks like a test, example, or benchmark. It is a Test (say) if there is a character after Test that is not a lower-case letter. (We don't want Testiness.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#playExample",
+              "documentation": {
+                "identifier": "playExample",
+                "newPage": false,
+                "searchKey": "doc.playExample",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func playExample(file *ast.File, f *ast.FuncDecl) *ast.File"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc playExample(file *ast.File, f *ast.FuncDecl) *ast.File\n```\n\nplayExample synthesizes a new *ast.File based on the provided file with the provided function body as the body of main. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#playExampleFile",
+              "documentation": {
+                "identifier": "playExampleFile",
+                "newPage": false,
+                "searchKey": "doc.playExampleFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func playExampleFile(file *ast.File) *ast.File"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc playExampleFile(file *ast.File) *ast.File\n```\n\nplayExampleFile takes a whole file example and synthesizes a new *ast.File such that the example is function main in package main. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#stripOutputComment",
+              "documentation": {
+                "identifier": "stripOutputComment",
+                "newPage": false,
+                "searchKey": "doc.stripOutputComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stripOutputComment(body *ast.BlockStmt, comments []*ast.CommentGroup) (*ast.BlockStmt, []*ast.CommentGroup)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stripOutputComment(body *ast.BlockStmt, comments []*ast.CommentGroup) (*ast.BlockStmt, []*ast.CommentGroup)\n```\n\nstripOutputComment finds and removes the \"Output:\" or \"Unordered output:\" comment from body and comments, and adjusts the body block's end position. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#lastComment",
+              "documentation": {
+                "identifier": "lastComment",
+                "newPage": false,
+                "searchKey": "doc.lastComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lastComment(b *ast.BlockStmt, c []*ast.CommentGroup) (i int, last *ast.CommentGroup)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lastComment(b *ast.BlockStmt, c []*ast.CommentGroup) (i int, last *ast.CommentGroup)\n```\n\nlastComment returns the last comment inside the provided block. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#classifyExamples",
+              "documentation": {
+                "identifier": "classifyExamples",
+                "newPage": false,
+                "searchKey": "doc.classifyExamples",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func classifyExamples(p *Package, examples []*Example)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc classifyExamples(p *Package, examples []*Example)\n```\n\nclassifyExamples classifies examples and assigns them to the Examples field of the relevant Func, Type, or Package that the example is associated with. \n\nThe classification process is ambiguous in some cases: \n\n```\n- ExampleFoo_Bar matches a type named Foo_Bar\n  or a method named Foo.Bar.\n- ExampleFoo_bar matches a type named Foo_bar\n  or Foo (with a \"bar\" suffix).\n\n```\nExamples with malformed names are not associated with anything. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#splitExampleName",
+              "documentation": {
+                "identifier": "splitExampleName",
+                "newPage": false,
+                "searchKey": "doc.splitExampleName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func splitExampleName(s string, i int) (prefix, suffix string, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc splitExampleName(s string, i int) (prefix, suffix string, ok bool)\n```\n\nsplitExampleName attempts to split example name s at index i, and reports if that produces a valid split. The suffix may be absent. Otherwise, it must start with a lower-case letter and be preceded by '_'. \n\nOne of i == len(s) or s[i] == '_' must be true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#isExampleSuffix",
+              "documentation": {
+                "identifier": "isExampleSuffix",
+                "newPage": false,
+                "searchKey": "doc.isExampleSuffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isExampleSuffix(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isExampleSuffix(s string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#filterIdentList",
+              "documentation": {
+                "identifier": "filterIdentList",
+                "newPage": false,
+                "searchKey": "doc.filterIdentList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterIdentList(list []*ast.Ident) []*ast.Ident"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterIdentList(list []*ast.Ident) []*ast.Ident\n```\n\nfilterIdentList removes unexported names from list in place and returns the resulting list. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#filterCompositeLit",
+              "documentation": {
+                "identifier": "filterCompositeLit",
+                "newPage": false,
+                "searchKey": "doc.filterCompositeLit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterCompositeLit(lit *ast.CompositeLit, filter Filter, export bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterCompositeLit(lit *ast.CompositeLit, filter Filter, export bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#filterExprList",
+              "documentation": {
+                "identifier": "filterExprList",
+                "newPage": false,
+                "searchKey": "doc.filterExprList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterExprList(list []ast.Expr, filter Filter, export bool) []ast.Expr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterExprList(list []ast.Expr, filter Filter, export bool) []ast.Expr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#updateIdentList",
+              "documentation": {
+                "identifier": "updateIdentList",
+                "newPage": false,
+                "searchKey": "doc.updateIdentList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func updateIdentList(list []*ast.Ident) (hasExported bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc updateIdentList(list []*ast.Ident) (hasExported bool)\n```\n\nupdateIdentList replaces all unexported identifiers with underscore and reports whether at least one exported name exists. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#hasExportedName",
+              "documentation": {
+                "identifier": "hasExportedName",
+                "newPage": false,
+                "searchKey": "doc.hasExportedName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasExportedName(list []*ast.Ident) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasExportedName(list []*ast.Ident) bool\n```\n\nhasExportedName reports whether list contains any exported names. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#removeErrorField",
+              "documentation": {
+                "identifier": "removeErrorField",
+                "newPage": false,
+                "searchKey": "doc.removeErrorField",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func removeErrorField(ityp *ast.InterfaceType)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc removeErrorField(ityp *ast.InterfaceType)\n```\n\nremoveErrorField removes anonymous fields named \"error\" from an interface. This is called when \"error\" has been determined to be a local name, not the predeclared type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#copyConstType",
+              "documentation": {
+                "identifier": "copyConstType",
+                "newPage": false,
+                "searchKey": "doc.copyConstType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copyConstType(typ ast.Expr, pos token.Pos) ast.Expr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copyConstType(typ ast.Expr, pos token.Pos) ast.Expr\n```\n\ncopyConstType returns a copy of typ with position pos. typ must be a valid constant type. In practice, only (possibly qualified) identifiers are possible. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#matchFields",
+              "documentation": {
+                "identifier": "matchFields",
+                "newPage": false,
+                "searchKey": "doc.matchFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func matchFields(fields *ast.FieldList, f Filter) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc matchFields(fields *ast.FieldList, f Filter) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#matchDecl",
+              "documentation": {
+                "identifier": "matchDecl",
+                "newPage": false,
+                "searchKey": "doc.matchDecl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func matchDecl(d *ast.GenDecl, f Filter) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc matchDecl(d *ast.GenDecl, f Filter) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#filterValues",
+              "documentation": {
+                "identifier": "filterValues",
+                "newPage": false,
+                "searchKey": "doc.filterValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterValues(a []*Value, f Filter) []*Value"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterValues(a []*Value, f Filter) []*Value\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#filterFuncs",
+              "documentation": {
+                "identifier": "filterFuncs",
+                "newPage": false,
+                "searchKey": "doc.filterFuncs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterFuncs(a []*Func, f Filter) []*Func"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterFuncs(a []*Func, f Filter) []*Func\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#filterTypes",
+              "documentation": {
+                "identifier": "filterTypes",
+                "newPage": false,
+                "searchKey": "doc.filterTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterTypes(a []*Type, f Filter) []*Type"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterTypes(a []*Type, f Filter) []*Type\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#recvString",
+              "documentation": {
+                "identifier": "recvString",
+                "newPage": false,
+                "searchKey": "doc.recvString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func recvString(recv ast.Expr) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc recvString(recv ast.Expr) string\n```\n\nrecvString returns a string representation of recv of the form \"T\", \"*T\", or \"BADRECV\" (if not a proper receiver type). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#baseTypeName",
+              "documentation": {
+                "identifier": "baseTypeName",
+                "newPage": false,
+                "searchKey": "doc.baseTypeName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func baseTypeName(x ast.Expr) (name string, imported bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc baseTypeName(x ast.Expr) (name string, imported bool)\n```\n\nbaseTypeName returns the name of the base type of x (or \"\") and whether the type is imported or not. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#specNames",
+              "documentation": {
+                "identifier": "specNames",
+                "newPage": false,
+                "searchKey": "doc.specNames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func specNames(specs []ast.Spec) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc specNames(specs []ast.Spec) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#fields",
+              "documentation": {
+                "identifier": "fields",
+                "newPage": false,
+                "searchKey": "doc.fields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fields(typ ast.Expr) (list []*ast.Field, isStruct bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fields(typ ast.Expr) (list []*ast.Field, isStruct bool)\n```\n\nfields returns a struct's fields or an interface's methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#sortBy",
+              "documentation": {
+                "identifier": "sortBy",
+                "newPage": false,
+                "searchKey": "doc.sortBy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortBy(less func(i, j int) bool, swap func(i, j int), n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortBy(less func(i, j int) bool, swap func(i, j int), n int)\n```\n\nsortBy is a helper function for sorting \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#sortedKeys",
+              "documentation": {
+                "identifier": "sortedKeys",
+                "newPage": false,
+                "searchKey": "doc.sortedKeys",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortedKeys(m map[string]int) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortedKeys(m map[string]int) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#sortingName",
+              "documentation": {
+                "identifier": "sortingName",
+                "newPage": false,
+                "searchKey": "doc.sortingName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortingName(d *ast.GenDecl) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortingName(d *ast.GenDecl) string\n```\n\nsortingName returns the name to use when sorting d into place. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#sortedValues",
+              "documentation": {
+                "identifier": "sortedValues",
+                "newPage": false,
+                "searchKey": "doc.sortedValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortedValues(m []*Value, tok token.Token) []*Value"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortedValues(m []*Value, tok token.Token) []*Value\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#sortedTypes",
+              "documentation": {
+                "identifier": "sortedTypes",
+                "newPage": false,
+                "searchKey": "doc.sortedTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortedTypes(m map[string]*namedType, allMethods bool) []*Type"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortedTypes(m map[string]*namedType, allMethods bool) []*Type\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#removeStar",
+              "documentation": {
+                "identifier": "removeStar",
+                "newPage": false,
+                "searchKey": "doc.removeStar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func removeStar(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc removeStar(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#sortedFuncs",
+              "documentation": {
+                "identifier": "sortedFuncs",
+                "newPage": false,
+                "searchKey": "doc.sortedFuncs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortedFuncs(m methodSet, allMethods bool) []*Func"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortedFuncs(m methodSet, allMethods bool) []*Func\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#noteBodies",
+              "documentation": {
+                "identifier": "noteBodies",
+                "newPage": false,
+                "searchKey": "doc.noteBodies",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func noteBodies(notes []*Note) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc noteBodies(notes []*Note) []string\n```\n\nnoteBodies returns a list of note body strings given a list of notes. This is only used to populate the deprecated Package.Bugs field. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#IsPredeclared",
+              "documentation": {
+                "identifier": "IsPredeclared",
+                "newPage": false,
+                "searchKey": "doc.IsPredeclared",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsPredeclared(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsPredeclared(s string) bool\n```\n\nIsPredeclared reports whether s is a predeclared identifier. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#firstSentenceLen",
+              "documentation": {
+                "identifier": "firstSentenceLen",
+                "newPage": false,
+                "searchKey": "doc.firstSentenceLen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func firstSentenceLen(s string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc firstSentenceLen(s string) int\n```\n\nfirstSentenceLen returns the length of the first sentence in s. The sentence ends after the first period followed by space and not preceded by exactly one uppercase letter. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#clean",
+              "documentation": {
+                "identifier": "clean",
+                "newPage": false,
+                "searchKey": "doc.clean",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func clean(s string, flags int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc clean(s string, flags int) string\n```\n\nclean replaces each sequence of space, \\n, \\r, or \\t characters with a single space and removes any trailing and leading spaces. If the keepNL flag is set, newline characters are passed through instead of being change to spaces. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Synopsis",
+              "documentation": {
+                "identifier": "Synopsis",
+                "newPage": false,
+                "searchKey": "doc.Synopsis",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Synopsis(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Synopsis(s string) string\n```\n\nSynopsis returns a cleaned version of the first sentence in s. That sentence ends after the first period followed by space and not preceded by exactly one uppercase letter. The result string has no \\n, \\r, or \\t characters and uses only single spaces between words. If s starts with any of the IllegalPrefixes, the result is the empty string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#TestIsHeading",
+              "documentation": {
+                "identifier": "TestIsHeading",
+                "newPage": false,
+                "searchKey": "doc.TestIsHeading",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsHeading(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsHeading(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#TestBlocks",
+              "documentation": {
+                "identifier": "TestBlocks",
+                "newPage": false,
+                "searchKey": "doc.TestBlocks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBlocks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBlocks(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#TestToText",
+              "documentation": {
+                "identifier": "TestToText",
+                "newPage": false,
+                "searchKey": "doc.TestToText",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestToText(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestToText(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#TestEmphasize",
+              "documentation": {
+                "identifier": "TestEmphasize",
+                "newPage": false,
+                "searchKey": "doc.TestEmphasize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmphasize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmphasize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#TestCommentEscape",
+              "documentation": {
+                "identifier": "TestCommentEscape",
+                "newPage": false,
+                "searchKey": "doc.TestCommentEscape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommentEscape(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommentEscape(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#readTemplate",
+              "documentation": {
+                "identifier": "readTemplate",
+                "newPage": false,
+                "searchKey": "doc.readTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readTemplate(filename string) *template.Template"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readTemplate(filename string) *template.Template\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#nodeFmt",
+              "documentation": {
+                "identifier": "nodeFmt",
+                "newPage": false,
+                "searchKey": "doc.nodeFmt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nodeFmt(node interface{}, fset *token.FileSet) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nodeFmt(node interface{}, fset *token.FileSet) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#synopsisFmt",
+              "documentation": {
+                "identifier": "synopsisFmt",
+                "newPage": false,
+                "searchKey": "doc.synopsisFmt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func synopsisFmt(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc synopsisFmt(s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#indentFmt",
+              "documentation": {
+                "identifier": "indentFmt",
+                "newPage": false,
+                "searchKey": "doc.indentFmt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func indentFmt(indent, s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc indentFmt(indent, s string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#isGoFile",
+              "documentation": {
+                "identifier": "isGoFile",
+                "newPage": false,
+                "searchKey": "doc.isGoFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isGoFile(fi fs.FileInfo) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isGoFile(fi fs.FileInfo) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#test",
+              "documentation": {
+                "identifier": "test",
+                "newPage": false,
+                "searchKey": "doc.test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func test(t *testing.T, mode Mode)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc test(t *testing.T, mode Mode)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#Test",
+              "documentation": {
+                "identifier": "Test",
+                "newPage": false,
+                "searchKey": "doc.Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#TestAnchorID",
+              "documentation": {
+                "identifier": "TestAnchorID",
+                "newPage": false,
+                "searchKey": "doc.TestAnchorID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAnchorID(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAnchorID(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/go/doc#TestSynopsis",
+              "documentation": {
+                "identifier": "TestSynopsis",
+                "newPage": false,
+                "searchKey": "doc.TestSynopsis",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSynopsis(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSynopsis(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

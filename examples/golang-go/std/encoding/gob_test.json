@@ -1,0 +1,324 @@
+{
+  "pathID": "/std/encoding/gob_test",
+  "documentation": {
+    "identifier": "gob_test",
+    "newPage": true,
+    "searchKey": "std/encoding/gob_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package gob_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/encoding/gob_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#Vector",
+              "documentation": {
+                "identifier": "Vector",
+                "newPage": false,
+                "searchKey": "gob_test.Vector",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Vector struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Vector struct {\n\tx, y, z int\n}\n```\n\nThe Vector type has unexported fields, which the package cannot access. We therefore write a BinaryMarshal/BinaryUnmarshal method pair to allow us to send and receive the type with the gob package. These interfaces are defined in the \"encoding\" package. We could equivalently use the locally defined GobEncode/GobDecoder interfaces. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/encoding/gob_test#Vector.MarshalBinary",
+                    "documentation": {
+                      "identifier": "Vector.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "gob_test.Vector.MarshalBinary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v Vector) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v Vector) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/encoding/gob_test#Vector.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "Vector.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "gob_test.Vector.UnmarshalBinary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Vector) UnmarshalBinary(data []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Vector) UnmarshalBinary(data []byte) error\n```\n\nUnmarshalBinary modifies the receiver so it must take a pointer receiver. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#Point",
+              "documentation": {
+                "identifier": "Point",
+                "newPage": false,
+                "searchKey": "gob_test.Point",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Point struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Point struct {\n\tX, Y int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/encoding/gob_test#Point.Hypotenuse",
+                    "documentation": {
+                      "identifier": "Point.Hypotenuse",
+                      "newPage": false,
+                      "searchKey": "gob_test.Point.Hypotenuse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p Point) Hypotenuse() float64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p Point) Hypotenuse() float64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#Pythagoras",
+              "documentation": {
+                "identifier": "Pythagoras",
+                "newPage": false,
+                "searchKey": "gob_test.Pythagoras",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Pythagoras interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Pythagoras interface {\n\tHypotenuse() float64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/encoding/gob_test#interfaceDecode",
+                    "documentation": {
+                      "identifier": "interfaceDecode",
+                      "newPage": false,
+                      "searchKey": "gob_test.interfaceDecode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func interfaceDecode(dec *gob.Decoder) Pythagoras"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc interfaceDecode(dec *gob.Decoder) Pythagoras\n```\n\ninterfaceDecode decodes the next interface value from the stream and returns it. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#P",
+              "documentation": {
+                "identifier": "P",
+                "newPage": false,
+                "searchKey": "gob_test.P",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type P struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype P struct {\n\tX, Y, Z int\n\tName    string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#Q",
+              "documentation": {
+                "identifier": "Q",
+                "newPage": false,
+                "searchKey": "gob_test.Q",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Q struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Q struct {\n\tX, Y *int32\n\tName string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/encoding/gob_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#Example_encodeDecode",
+              "documentation": {
+                "identifier": "Example_encodeDecode",
+                "newPage": false,
+                "searchKey": "gob_test.Example_encodeDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_encodeDecode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_encodeDecode()\n```\n\nThis example transmits a value that implements the custom encoding and decoding methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#Example_interface",
+              "documentation": {
+                "identifier": "Example_interface",
+                "newPage": false,
+                "searchKey": "gob_test.Example_interface",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_interface()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_interface()\n```\n\nThis example shows how to encode an interface value. The key distinction from regular types is to register the concrete type that implements the interface. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#interfaceEncode",
+              "documentation": {
+                "identifier": "interfaceEncode",
+                "newPage": false,
+                "searchKey": "gob_test.interfaceEncode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func interfaceEncode(enc *gob.Encoder, p Pythagoras)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc interfaceEncode(enc *gob.Encoder, p Pythagoras)\n```\n\ninterfaceEncode encodes the interface value into the encoder. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/encoding/gob_test#Example_basic",
+              "documentation": {
+                "identifier": "Example_basic",
+                "newPage": false,
+                "searchKey": "gob_test.Example_basic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_basic()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_basic()\n```\n\nThis example shows the basic usage of the package: Create an encoder, transmit some values, receive them with a decoder. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

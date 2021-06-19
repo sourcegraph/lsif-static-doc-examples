@@ -1,0 +1,187 @@
+{
+  "pathID": "/std/time/tzdata",
+  "documentation": {
+    "identifier": "tzdata",
+    "newPage": true,
+    "searchKey": "std/time/tzdata",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package tzdata"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package tzdata provides an embedded copy of the timezone database. If this package is imported anywhere in the program, then if the time package cannot find tzdata files on the system, it will use this embedded information. \n\nImporting this package will increase the size of a program by about 450 KB. \n\nThis package should normally be imported by a program's main package, not by a library. Libraries normally shouldn't decide whether to include the timezone database in a program. \n\nThis package will be automatically imported if you build with -tags timetzdata. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/time/tzdata#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/time/tzdata#zipdata",
+              "documentation": {
+                "identifier": "zipdata",
+                "newPage": false,
+                "searchKey": "tzdata.zipdata",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const zipdata"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst zipdata = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/time/tzdata#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/time/tzdata#registerLoadFromEmbeddedTZData",
+              "documentation": {
+                "identifier": "registerLoadFromEmbeddedTZData",
+                "newPage": false,
+                "searchKey": "tzdata.registerLoadFromEmbeddedTZData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func registerLoadFromEmbeddedTZData(func(string) (string, error))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc registerLoadFromEmbeddedTZData(func(string) (string, error))\n```\n\nregisterLoadFromEmbeddedTZData is defined in package time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/time/tzdata#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "tzdata.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/time/tzdata#get4s",
+              "documentation": {
+                "identifier": "get4s",
+                "newPage": false,
+                "searchKey": "tzdata.get4s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func get4s(s string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc get4s(s string) int\n```\n\nget4s returns the little-endian 32-bit value at the start of s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/time/tzdata#get2s",
+              "documentation": {
+                "identifier": "get2s",
+                "newPage": false,
+                "searchKey": "tzdata.get2s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func get2s(s string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc get2s(s string) int\n```\n\nget2s returns the little-endian 16-bit value at the start of s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/time/tzdata#loadFromEmbeddedTZData",
+              "documentation": {
+                "identifier": "loadFromEmbeddedTZData",
+                "newPage": false,
+                "searchKey": "tzdata.loadFromEmbeddedTZData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadFromEmbeddedTZData(name string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadFromEmbeddedTZData(name string) (string, error)\n```\n\nloadFromEmbeddedTZData returns the contents of the file with the given name in an uncompressed zip file, where the contents of the file can be found in embeddedTzdata. This is similar to time.loadTzinfoFromZip. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

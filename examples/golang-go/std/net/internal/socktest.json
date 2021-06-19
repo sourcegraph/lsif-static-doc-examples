@@ -1,0 +1,925 @@
+{
+  "pathID": "/std/net/internal/socktest",
+  "documentation": {
+    "identifier": "socktest",
+    "newPage": true,
+    "searchKey": "std/net/internal/socktest",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package socktest"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package socktest provides utilities for socket testing. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/net/internal/socktest#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#FilterSocket",
+              "documentation": {
+                "identifier": "FilterSocket",
+                "newPage": false,
+                "searchKey": "socktest.FilterSocket",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FilterSocket"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FilterSocket FilterType = iota // for Socket\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#FilterConnect",
+              "documentation": {
+                "identifier": "FilterConnect",
+                "newPage": false,
+                "searchKey": "socktest.FilterConnect",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FilterConnect"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FilterConnect // for Connect or ConnectEx\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#FilterListen",
+              "documentation": {
+                "identifier": "FilterListen",
+                "newPage": false,
+                "searchKey": "socktest.FilterListen",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FilterListen"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FilterListen // for Listen\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#FilterAccept",
+              "documentation": {
+                "identifier": "FilterAccept",
+                "newPage": false,
+                "searchKey": "socktest.FilterAccept",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FilterAccept"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FilterAccept // for Accept, Accept4 or AcceptEx\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#FilterGetsockoptInt",
+              "documentation": {
+                "identifier": "FilterGetsockoptInt",
+                "newPage": false,
+                "searchKey": "socktest.FilterGetsockoptInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FilterGetsockoptInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FilterGetsockoptInt // for GetsockoptInt\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#FilterClose",
+              "documentation": {
+                "identifier": "FilterClose",
+                "newPage": false,
+                "searchKey": "socktest.FilterClose",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FilterClose"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FilterClose // for Close or Closesocket\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/net/internal/socktest#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#Switch",
+              "documentation": {
+                "identifier": "Switch",
+                "newPage": false,
+                "searchKey": "socktest.Switch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Switch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Switch struct {\n\tonce sync.Once\n\n\tfmu   sync.RWMutex\n\tfltab map[FilterType]Filter\n\n\tsmu   sync.RWMutex\n\tsotab Sockets\n\tstats stats\n}\n```\n\nA Switch represents a callpath point switch for socket system calls. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.init",
+                    "documentation": {
+                      "identifier": "Switch.init",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) init()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) init()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.Stats",
+                    "documentation": {
+                      "identifier": "Switch.Stats",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.Stats",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) Stats() []Stat"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) Stats() []Stat\n```\n\nStats returns a list of per-cookie socket statistics. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.Sockets",
+                    "documentation": {
+                      "identifier": "Switch.Sockets",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.Sockets",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) Sockets() Sockets"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) Sockets() Sockets\n```\n\nSockets returns mappings of socket descriptor to socket status. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.Set",
+                    "documentation": {
+                      "identifier": "Switch.Set",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) Set(t FilterType, f Filter)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) Set(t FilterType, f Filter)\n```\n\nSet deploys the socket system call filter f for the filter type t. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.sockso",
+                    "documentation": {
+                      "identifier": "Switch.sockso",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.sockso",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) sockso(s int) *Status"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) sockso(s int) *Status\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.addLocked",
+                    "documentation": {
+                      "identifier": "Switch.addLocked",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.addLocked",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) addLocked(s, family, sotype, proto int) *Status"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) addLocked(s, family, sotype, proto int) *Status\n```\n\naddLocked returns a new Status without locking. sw.smu must be held before call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.Socket",
+                    "documentation": {
+                      "identifier": "Switch.Socket",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.Socket",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) Socket(family, sotype, proto int) (s int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) Socket(family, sotype, proto int) (s int, err error)\n```\n\nSocket wraps syscall.Socket. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.Close",
+                    "documentation": {
+                      "identifier": "Switch.Close",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) Close(s int) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) Close(s int) (err error)\n```\n\nClose wraps syscall.Close. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.Connect",
+                    "documentation": {
+                      "identifier": "Switch.Connect",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.Connect",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) Connect(s int, sa syscall.Sockaddr) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) Connect(s int, sa syscall.Sockaddr) (err error)\n```\n\nConnect wraps syscall.Connect. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.Listen",
+                    "documentation": {
+                      "identifier": "Switch.Listen",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.Listen",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) Listen(s, backlog int) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) Listen(s, backlog int) (err error)\n```\n\nListen wraps syscall.Listen. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.Accept",
+                    "documentation": {
+                      "identifier": "Switch.Accept",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.Accept",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) Accept(s int) (ns int, sa syscall.Sockaddr, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) Accept(s int) (ns int, sa syscall.Sockaddr, err error)\n```\n\nAccept wraps syscall.Accept. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Switch.GetsockoptInt",
+                    "documentation": {
+                      "identifier": "Switch.GetsockoptInt",
+                      "newPage": false,
+                      "searchKey": "socktest.Switch.GetsockoptInt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sw *Switch) GetsockoptInt(s, level, opt int) (soerr int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sw *Switch) GetsockoptInt(s, level, opt int) (soerr int, err error)\n```\n\nGetsockoptInt wraps syscall.GetsockoptInt. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#Cookie",
+              "documentation": {
+                "identifier": "Cookie",
+                "newPage": false,
+                "searchKey": "socktest.Cookie",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Cookie uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Cookie uint64\n```\n\nA Cookie represents a 3-tuple of a socket; address family, socket type and protocol number. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#cookie",
+                    "documentation": {
+                      "identifier": "cookie",
+                      "newPage": false,
+                      "searchKey": "socktest.cookie",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func cookie(family, sotype, proto int) Cookie"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc cookie(family, sotype, proto int) Cookie\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Cookie.Family",
+                    "documentation": {
+                      "identifier": "Cookie.Family",
+                      "newPage": false,
+                      "searchKey": "socktest.Cookie.Family",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Cookie) Family() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Cookie) Family() int\n```\n\nFamily returns an address family. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Cookie.Type",
+                    "documentation": {
+                      "identifier": "Cookie.Type",
+                      "newPage": false,
+                      "searchKey": "socktest.Cookie.Type",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Cookie) Type() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Cookie) Type() int\n```\n\nType returns a socket type. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Cookie.Protocol",
+                    "documentation": {
+                      "identifier": "Cookie.Protocol",
+                      "newPage": false,
+                      "searchKey": "socktest.Cookie.Protocol",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c Cookie) Protocol() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c Cookie) Protocol() int\n```\n\nProtocol returns a protocol number. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#Status",
+              "documentation": {
+                "identifier": "Status",
+                "newPage": false,
+                "searchKey": "socktest.Status",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Status struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Status struct {\n\tCookie    Cookie\n\tErr       error // error status of socket system call\n\tSocketErr error // error status of socket by SO_ERROR\n}\n```\n\nA Status represents the status of a socket. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Status.String",
+                    "documentation": {
+                      "identifier": "Status.String",
+                      "newPage": false,
+                      "searchKey": "socktest.Status.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (so Status) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (so Status) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#Stat",
+              "documentation": {
+                "identifier": "Stat",
+                "newPage": false,
+                "searchKey": "socktest.Stat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Stat struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Stat struct {\n\tFamily   int // address family\n\tType     int // socket type\n\tProtocol int // protocol number\n\n\tOpened    uint64 // number of sockets opened\n\tConnected uint64 // number of sockets connected\n\tListened  uint64 // number of sockets listened\n\tAccepted  uint64 // number of sockets accepted\n\tClosed    uint64 // number of sockets closed\n\n\tOpenFailed    uint64 // number of sockets open failed\n\tConnectFailed uint64 // number of sockets connect failed\n\tListenFailed  uint64 // number of sockets listen failed\n\tAcceptFailed  uint64 // number of sockets accept failed\n\tCloseFailed   uint64 // number of sockets close failed\n}\n```\n\nA Stat represents a per-cookie socket statistics. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Stat.String",
+                    "documentation": {
+                      "identifier": "Stat.String",
+                      "newPage": false,
+                      "searchKey": "socktest.Stat.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (st Stat) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (st Stat) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#stats",
+              "documentation": {
+                "identifier": "stats",
+                "newPage": false,
+                "searchKey": "socktest.stats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stats map[socktest.Cookie]*socktest.Stat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stats map[Cookie]*Stat\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#stats.getLocked",
+                    "documentation": {
+                      "identifier": "stats.getLocked",
+                      "newPage": false,
+                      "searchKey": "socktest.stats.getLocked",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (st stats) getLocked(c Cookie) *Stat"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (st stats) getLocked(c Cookie) *Stat\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#FilterType",
+              "documentation": {
+                "identifier": "FilterType",
+                "newPage": false,
+                "searchKey": "socktest.FilterType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FilterType int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FilterType int\n```\n\nA FilterType represents a filter type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#Filter",
+              "documentation": {
+                "identifier": "Filter",
+                "newPage": false,
+                "searchKey": "socktest.Filter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Filter func(*std/net/internal/socktest.Status) (std/net/internal/socktest.AfterFilter, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Filter func(*Status) (AfterFilter, error)\n```\n\nA Filter represents a socket system call filter. \n\nIt will only be executed before a system call for a socket that has an entry in internal table. If the filter returns a non-nil error, the execution of system call will be canceled and the system call function returns the non-nil error. It can return a non-nil AfterFilter for filtering after the execution of the system call. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#Filter.apply",
+                    "documentation": {
+                      "identifier": "Filter.apply",
+                      "newPage": false,
+                      "searchKey": "socktest.Filter.apply",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f Filter) apply(st *Status) (AfterFilter, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f Filter) apply(st *Status) (AfterFilter, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#AfterFilter",
+              "documentation": {
+                "identifier": "AfterFilter",
+                "newPage": false,
+                "searchKey": "socktest.AfterFilter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type AfterFilter func(*std/net/internal/socktest.Status) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype AfterFilter func(*Status) error\n```\n\nAn AfterFilter represents a socket system call filter after an execution of a system call. \n\nIt will only be executed after a system call for a socket that has an entry in internal table. If the filter returns a non-nil error, the system call function returns the non-nil error. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/net/internal/socktest#AfterFilter.apply",
+                    "documentation": {
+                      "identifier": "AfterFilter.apply",
+                      "newPage": false,
+                      "searchKey": "socktest.AfterFilter.apply",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f AfterFilter) apply(st *Status) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f AfterFilter) apply(st *Status) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#Sockets",
+              "documentation": {
+                "identifier": "Sockets",
+                "newPage": false,
+                "searchKey": "socktest.Sockets",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Sockets map[int]socktest.Status"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Sockets map[int]Status\n```\n\nSockets maps a socket descriptor to the status of socket. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/net/internal/socktest#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#familyString",
+              "documentation": {
+                "identifier": "familyString",
+                "newPage": false,
+                "searchKey": "socktest.familyString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func familyString(family int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc familyString(family int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#typeString",
+              "documentation": {
+                "identifier": "typeString",
+                "newPage": false,
+                "searchKey": "socktest.typeString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func typeString(sotype int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc typeString(sotype int) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/net/internal/socktest#protocolString",
+              "documentation": {
+                "identifier": "protocolString",
+                "newPage": false,
+                "searchKey": "socktest.protocolString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func protocolString(proto int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc protocolString(proto int) string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

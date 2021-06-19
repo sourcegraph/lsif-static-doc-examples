@@ -1,0 +1,455 @@
+{
+  "pathID": "/std/crypto/hmac",
+  "documentation": {
+    "identifier": "hmac",
+    "newPage": true,
+    "searchKey": "std/crypto/hmac",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package hmac"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package hmac implements the Keyed-Hash Message Authentication Code (HMAC) as defined in U.S. Federal Information Processing Standards Publication 198. An HMAC is a cryptographic hash that uses a key to sign a message. The receiver verifies the hash by recomputing it using the same key. \n\nReceivers should be careful to use Equal to compare MACs in order to avoid timing side-channels: \n\n```\n// ValidMAC reports whether messageMAC is a valid HMAC tag for message.\nfunc ValidMAC(message, messageMAC, key []byte) bool {\n\tmac := hmac.New(sha256.New, key)\n\tmac.Write(message)\n\texpectedMAC := mac.Sum(nil)\n\treturn hmac.Equal(messageMAC, expectedMAC)\n}\n\n```\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/crypto/hmac#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#hmacTests",
+              "documentation": {
+                "identifier": "hmacTests",
+                "newPage": false,
+                "searchKey": "hmac.hmacTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hmacTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hmacTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/hmac#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#marshalable",
+              "documentation": {
+                "identifier": "marshalable",
+                "newPage": false,
+                "searchKey": "hmac.marshalable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type marshalable interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype marshalable interface {\n\tMarshalBinary() ([]byte, error)\n\tUnmarshalBinary([]byte) error\n}\n```\n\nMarshalable is the combination of encoding.BinaryMarshaler and encoding.BinaryUnmarshaler. Their method definitions are repeated here to avoid a dependency on the encoding package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#hmac",
+              "documentation": {
+                "identifier": "hmac",
+                "newPage": false,
+                "searchKey": "hmac.hmac",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type hmac struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype hmac struct {\n\topad, ipad   []byte\n\touter, inner hash.Hash\n\n\t// If marshaled is true, then opad and ipad do not contain a padded\n\t// copy of the key, but rather the marshaled state of outer/inner after\n\t// opad/ipad has been fed into it.\n\tmarshaled bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/crypto/hmac#hmac.Sum",
+                    "documentation": {
+                      "identifier": "hmac.Sum",
+                      "newPage": false,
+                      "searchKey": "hmac.hmac.Sum",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *hmac) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *hmac) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/hmac#hmac.Write",
+                    "documentation": {
+                      "identifier": "hmac.Write",
+                      "newPage": false,
+                      "searchKey": "hmac.hmac.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *hmac) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *hmac) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/hmac#hmac.Size",
+                    "documentation": {
+                      "identifier": "hmac.Size",
+                      "newPage": false,
+                      "searchKey": "hmac.hmac.Size",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *hmac) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *hmac) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/hmac#hmac.BlockSize",
+                    "documentation": {
+                      "identifier": "hmac.BlockSize",
+                      "newPage": false,
+                      "searchKey": "hmac.hmac.BlockSize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *hmac) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *hmac) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/crypto/hmac#hmac.Reset",
+                    "documentation": {
+                      "identifier": "hmac.Reset",
+                      "newPage": false,
+                      "searchKey": "hmac.hmac.Reset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *hmac) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *hmac) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#hmacTest",
+              "documentation": {
+                "identifier": "hmacTest",
+                "newPage": false,
+                "searchKey": "hmac.hmacTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type hmacTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype hmacTest struct {\n\thash      func() hash.Hash\n\tkey       []byte\n\tin        []byte\n\tout       string\n\tsize      int\n\tblocksize int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#justHash",
+              "documentation": {
+                "identifier": "justHash",
+                "newPage": false,
+                "searchKey": "hmac.justHash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type justHash struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype justHash struct {\n\thash.Hash\n}\n```\n\njustHash implements just the hash.Hash methods and nothing else \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/crypto/hmac#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#New",
+              "documentation": {
+                "identifier": "New",
+                "newPage": false,
+                "searchKey": "hmac.New",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New(h func() hash.Hash, key []byte) hash.Hash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New(h func() hash.Hash, key []byte) hash.Hash\n```\n\nNew returns a new HMAC hash using the given hash.Hash type and key. New functions like sha256.New from crypto/sha256 can be used as h. h must return a new Hash every time it is called. Note that unlike other hash implementations in the standard library, the returned Hash does not implement encoding.BinaryMarshaler or encoding.BinaryUnmarshaler. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#Equal",
+              "documentation": {
+                "identifier": "Equal",
+                "newPage": false,
+                "searchKey": "hmac.Equal",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Equal(mac1, mac2 []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Equal(mac1, mac2 []byte) bool\n```\n\nEqual compares two MACs for equality without leaking timing information. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#TestHMAC",
+              "documentation": {
+                "identifier": "TestHMAC",
+                "newPage": false,
+                "searchKey": "hmac.TestHMAC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHMAC(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHMAC(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#TestNonUniqueHash",
+              "documentation": {
+                "identifier": "TestNonUniqueHash",
+                "newPage": false,
+                "searchKey": "hmac.TestNonUniqueHash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonUniqueHash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonUniqueHash(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#TestEqual",
+              "documentation": {
+                "identifier": "TestEqual",
+                "newPage": false,
+                "searchKey": "hmac.TestEqual",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEqual(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEqual(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#BenchmarkHMACSHA256_1K",
+              "documentation": {
+                "identifier": "BenchmarkHMACSHA256_1K",
+                "newPage": false,
+                "searchKey": "hmac.BenchmarkHMACSHA256_1K",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHMACSHA256_1K(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHMACSHA256_1K(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#BenchmarkHMACSHA256_32",
+              "documentation": {
+                "identifier": "BenchmarkHMACSHA256_32",
+                "newPage": false,
+                "searchKey": "hmac.BenchmarkHMACSHA256_32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHMACSHA256_32(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHMACSHA256_32(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/crypto/hmac#BenchmarkNewWriteSum",
+              "documentation": {
+                "identifier": "BenchmarkNewWriteSum",
+                "newPage": false,
+                "searchKey": "hmac.BenchmarkNewWriteSum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNewWriteSum(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNewWriteSum(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

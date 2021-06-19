@@ -1,0 +1,3731 @@
+{
+  "pathID": "/std/fmt",
+  "documentation": {
+    "identifier": "fmt",
+    "newPage": true,
+    "searchKey": "std/fmt",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package fmt"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package fmt implements formatted I/O with functions analogous to C's printf and scanf.  The format 'verbs' are derived from C's but are simpler. \n\n### hdr-PrintingPrinting\nThe verbs: \n\nGeneral: \n\n```\n%v\tthe value in a default format\n\twhen printing structs, the plus flag (%+v) adds field names\n%#v\ta Go-syntax representation of the value\n%T\ta Go-syntax representation of the type of the value\n%%\ta literal percent sign; consumes no value\n\n```\nBoolean: \n\n```\n%t\tthe word true or false\n\n```\nInteger: \n\n```\n%b\tbase 2\n%c\tthe character represented by the corresponding Unicode code point\n%d\tbase 10\n%o\tbase 8\n%O\tbase 8 with 0o prefix\n%q\ta single-quoted character literal safely escaped with Go syntax.\n%x\tbase 16, with lower-case letters for a-f\n%X\tbase 16, with upper-case letters for A-F\n%U\tUnicode format: U+1234; same as \"U+%04X\"\n\n```\nFloating-point and complex constituents: \n\n```\n%b\tdecimalless scientific notation with exponent a power of two,\n\tin the manner of strconv.FormatFloat with the 'b' format,\n\te.g. -123456p-78\n%e\tscientific notation, e.g. -1.234456e+78\n%E\tscientific notation, e.g. -1.234456E+78\n%f\tdecimal point but no exponent, e.g. 123.456\n%F\tsynonym for %f\n%g\t%e for large exponents, %f otherwise. Precision is discussed below.\n%G\t%E for large exponents, %F otherwise\n%x\thexadecimal notation (with decimal power of two exponent), e.g. -0x1.23abcp+20\n%X\tupper-case hexadecimal notation, e.g. -0X1.23ABCP+20\n\n```\nString and slice of bytes (treated equivalently with these verbs): \n\n```\n%s\tthe uninterpreted bytes of the string or slice\n%q\ta double-quoted string safely escaped with Go syntax\n%x\tbase 16, lower-case, two characters per byte\n%X\tbase 16, upper-case, two characters per byte\n\n```\nSlice: \n\n```\n%p\taddress of 0th element in base 16 notation, with leading 0x\n\n```\nPointer: \n\n```\n%p\tbase 16 notation, with leading 0x\nThe %b, %d, %o, %x and %X verbs also work with pointers,\nformatting the value exactly as if it were an integer.\n\n```\nThe default format for %v is: \n\n```\nbool:                    %t\nint, int8 etc.:          %d\nuint, uint8 etc.:        %d, %#x if printed with %#v\nfloat32, complex64, etc: %g\nstring:                  %s\nchan:                    %p\npointer:                 %p\n\n```\nFor compound objects, the elements are printed using these rules, recursively, laid out like this: \n\n```\nstruct:             {field0 field1 ...}\narray, slice:       [elem0 elem1 ...]\nmaps:               map[key1:value1 key2:value2 ...]\npointer to above:   &{}, &[], &map[]\n\n```\nWidth is specified by an optional decimal number immediately preceding the verb. If absent, the width is whatever is necessary to represent the value. Precision is specified after the (optional) width by a period followed by a decimal number. If no period is present, a default precision is used. A period with no following number specifies a precision of zero. Examples: \n\n```\n%f     default width, default precision\n%9f    width 9, default precision\n%.2f   default width, precision 2\n%9.2f  width 9, precision 2\n%9.f   width 9, precision 0\n\n```\nWidth and precision are measured in units of Unicode code points, that is, runes. (This differs from C's printf where the units are always measured in bytes.) Either or both of the flags may be replaced with the character '*', causing their values to be obtained from the next operand (preceding the one to format), which must be of type int. \n\nFor most values, width is the minimum number of runes to output, padding the formatted form with spaces if necessary. \n\nFor strings, byte slices and byte arrays, however, precision limits the length of the input to be formatted (not the size of the output), truncating if necessary. Normally it is measured in runes, but for these types when formatted with the %x or %X format it is measured in bytes. \n\nFor floating-point values, width sets the minimum width of the field and precision sets the number of places after the decimal, if appropriate, except that for %g/%G precision sets the maximum number of significant digits (trailing zeros are removed). For example, given 12.345 the format %6.3f prints 12.345 while %.3g prints 12.3. The default precision for %e, %f and %#g is 6; for %g it is the smallest number of digits necessary to identify the value uniquely. \n\nFor complex numbers, the width and precision apply to the two components independently and the result is parenthesized, so %f applied to 1.2+3.4i produces (1.200000+3.400000i). \n\nOther flags: \n\n```\n+\talways print a sign for numeric values;\n\tguarantee ASCII-only output for %q (%+q)\n-\tpad with spaces on the right rather than the left (left-justify the field)\n#\talternate format: add leading 0b for binary (%#b), 0 for octal (%#o),\n\t0x or 0X for hex (%#x or %#X); suppress 0x for %p (%#p);\n\tfor %q, print a raw (backquoted) string if strconv.CanBackquote\n\treturns true;\n\talways print a decimal point for %e, %E, %f, %F, %g and %G;\n\tdo not remove trailing zeros for %g and %G;\n\twrite e.g. U+0078 'x' if the character is printable for %U (%#U).\n' '\t(space) leave a space for elided sign in numbers (% d);\n\tput spaces between bytes printing strings or slices in hex (% x, % X)\n0\tpad with leading zeros rather than spaces;\n\tfor numbers, this moves the padding after the sign\n\n```\nFlags are ignored by verbs that do not expect them. For example there is no alternate decimal format, so %#d and %d behave identically. \n\nFor each Printf-like function, there is also a Print function that takes no format and is equivalent to saying %v for every operand.  Another variant Println inserts blanks between operands and appends a newline. \n\nRegardless of the verb, if an operand is an interface value, the internal concrete value is used, not the interface itself. Thus: \n\n```\nvar i interface{} = 23\nfmt.Printf(\"%v\\n\", i)\n\n```\nwill print 23. \n\nExcept when printed using the verbs %T and %p, special formatting considerations apply for operands that implement certain interfaces. In order of application: \n\n1. If the operand is a reflect.Value, the operand is replaced by the concrete value that it holds, and printing continues with the next rule. \n\n2. If an operand implements the Formatter interface, it will be invoked. In this case the interpretation of verbs and flags is controlled by that implementation. \n\n3. If the %v verb is used with the # flag (%#v) and the operand implements the GoStringer interface, that will be invoked. \n\nIf the format (which is implicitly %v for Println etc.) is valid for a string (%s %q %v %x %X), the following two rules apply: \n\n4. If an operand implements the error interface, the Error method will be invoked to convert the object to a string, which will then be formatted as required by the verb (if any). \n\n5. If an operand implements method String() string, that method will be invoked to convert the object to a string, which will then be formatted as required by the verb (if any). \n\nFor compound operands such as slices and structs, the format applies to the elements of each operand, recursively, not to the operand as a whole. Thus %q will quote each element of a slice of strings, and %6.2f will control formatting for each element of a floating-point array. \n\nHowever, when printing a byte slice with a string-like verb (%s %q %x %X), it is treated identically to a string, as a single item. \n\nTo avoid recursion in cases such as \n\n```\ntype X string\nfunc (x X) String() string { return Sprintf(\"<%s>\", x) }\n\n```\nconvert the value before recurring: \n\n```\nfunc (x X) String() string { return Sprintf(\"<%s>\", string(x)) }\n\n```\nInfinite recursion can also be triggered by self-referential data structures, such as a slice that contains itself as an element, if that type has a String method. Such pathologies are rare, however, and the package does not protect against them. \n\nWhen printing a struct, fmt cannot and therefore does not invoke formatting methods such as Error or String on unexported fields. \n\n### hdr-Explicit_argument_indexesExplicit argument indexes\nIn Printf, Sprintf, and Fprintf, the default behavior is for each formatting verb to format successive arguments passed in the call. However, the notation [n] immediately before the verb indicates that the nth one-indexed argument is to be formatted instead. The same notation before a '*' for a width or precision selects the argument index holding the value. After processing a bracketed expression [n], subsequent verbs will use arguments n+1, n+2, etc. unless otherwise directed. \n\nFor example, \n\n```\nfmt.Sprintf(\"%[2]d %[1]d\\n\", 11, 22)\n\n```\nwill yield \"22 11\", while \n\n```\nfmt.Sprintf(\"%[3]*.[2]*[1]f\", 12.0, 2, 6)\n\n```\nequivalent to \n\n```\nfmt.Sprintf(\"%6.2f\", 12.0)\n\n```\nwill yield \" 12.00\". Because an explicit index affects subsequent verbs, this notation can be used to print the same values multiple times by resetting the index for the first argument to be repeated: \n\n```\nfmt.Sprintf(\"%d %d %#[1]x %#x\", 16, 17)\n\n```\nwill yield \"16 17 0x10 0x11\". \n\n### hdr-Format_errorsFormat errors\nIf an invalid argument is given for a verb, such as providing a string to %d, the generated string will contain a description of the problem, as in these examples: \n\n```\nWrong type or unknown verb: %!verb(type=value)\n\tPrintf(\"%d\", \"hi\"):        %!d(string=hi)\nToo many arguments: %!(EXTRA type=value)\n\tPrintf(\"hi\", \"guys\"):      hi%!(EXTRA string=guys)\nToo few arguments: %!verb(MISSING)\n\tPrintf(\"hi%d\"):            hi%!d(MISSING)\nNon-int for width or precision: %!(BADWIDTH) or %!(BADPREC)\n\tPrintf(\"%*s\", 4.5, \"hi\"):  %!(BADWIDTH)hi\n\tPrintf(\"%.*s\", 4.5, \"hi\"): %!(BADPREC)hi\nInvalid or invalid use of argument index: %!(BADINDEX)\n\tPrintf(\"%*[2]d\", 7):       %!d(BADINDEX)\n\tPrintf(\"%.[2]d\", 7):       %!d(BADINDEX)\n\n```\nAll errors begin with the string \"%!\" followed sometimes by a single character (the verb) and end with a parenthesized description. \n\nIf an Error or String method triggers a panic when called by a print routine, the fmt package reformats the error message from the panic, decorating it with an indication that it came through the fmt package.  For example, if a String method calls panic(\"bad\"), the resulting formatted message will look like \n\n```\n%!s(PANIC=bad)\n\n```\nThe %!s just shows the print verb in use when the failure occurred. If the panic is caused by a nil receiver to an Error or String method, however, the output is the undecorated string, \"<nil>\". \n\n### hdr-ScanningScanning\nAn analogous set of functions scans formatted text to yield values.  Scan, Scanf and Scanln read from os.Stdin; Fscan, Fscanf and Fscanln read from a specified io.Reader; Sscan, Sscanf and Sscanln read from an argument string. \n\nScan, Fscan, Sscan treat newlines in the input as spaces. \n\nScanln, Fscanln and Sscanln stop scanning at a newline and require that the items be followed by a newline or EOF. \n\nScanf, Fscanf, and Sscanf parse the arguments according to a format string, analogous to that of Printf. In the text that follows, 'space' means any Unicode whitespace character except newline. \n\nIn the format string, a verb introduced by the % character consumes and parses input; these verbs are described in more detail below. A character other than %, space, or newline in the format consumes exactly that input character, which must be present. A newline with zero or more spaces before it in the format string consumes zero or more spaces in the input followed by a single newline or the end of the input. A space following a newline in the format string consumes zero or more spaces in the input. Otherwise, any run of one or more spaces in the format string consumes as many spaces as possible in the input. Unless the run of spaces in the format string appears adjacent to a newline, the run must consume at least one space from the input or find the end of the input. \n\nThe handling of spaces and newlines differs from that of C's scanf family: in C, newlines are treated as any other space, and it is never an error when a run of spaces in the format string finds no spaces to consume in the input. \n\nThe verbs behave analogously to those of Printf. For example, %x will scan an integer as a hexadecimal number, and %v will scan the default representation format for the value. The Printf verbs %p and %T and the flags # and + are not implemented. For floating-point and complex values, all valid formatting verbs (%b %e %E %f %F %g %G %x %X and %v) are equivalent and accept both decimal and hexadecimal notation (for example: \"2.3e+7\", \"0x4.5p-8\") and digit-separating underscores (for example: \"3.14159_26535_89793\"). \n\nInput processed by verbs is implicitly space-delimited: the implementation of every verb except %c starts by discarding leading spaces from the remaining input, and the %s verb (and %v reading into a string) stops consuming input at the first space or newline character. \n\nThe familiar base-setting prefixes 0b (binary), 0o and 0 (octal), and 0x (hexadecimal) are accepted when scanning integers without a format or with the %v verb, as are digit-separating underscores. \n\nWidth is interpreted in the input text but there is no syntax for scanning with a precision (no %5.2f, just %5f). If width is provided, it applies after leading spaces are trimmed and specifies the maximum number of runes to read to satisfy the verb. For example, \n\n```\nSscanf(\" 1234567 \", \"%5s%d\", &s, &i)\n\n```\nwill set s to \"12345\" and i to 67 while \n\n```\nSscanf(\" 12 34 567 \", \"%5s%d\", &s, &i)\n\n```\nwill set s to \"12\" and i to 34. \n\nIn all the scanning functions, a carriage return followed immediately by a newline is treated as a plain newline (\\r\\n means the same as \\n). \n\nIn all the scanning functions, if an operand implements method Scan (that is, it implements the Scanner interface) that method will be used to scan the text for that operand.  Also, if the number of arguments scanned is less than the number of arguments provided, an error is returned. \n\nAll arguments to be scanned must be either pointers to basic types or implementations of the Scanner interface. \n\nLike Scanf and Fscanf, Sscanf need not consume its entire input. There is no way to recover how much of the input string Sscanf used. \n\nNote: Fscan etc. can read one character (rune) past the input they return, which means that a loop calling a scan routine may skip some of the input.  This is usually a problem only when there is no space between input values.  If the reader provided to Fscan implements ReadRune, that method will be used to read characters.  If the reader also implements UnreadRune, that method will be used to save the character and successive calls will not lose data.  To attach ReadRune and UnreadRune methods to a reader without that capability, use bufio.NewReader. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/fmt#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/fmt#ldigits",
+              "documentation": {
+                "identifier": "ldigits",
+                "newPage": false,
+                "searchKey": "fmt.ldigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ldigits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ldigits = \"0123456789abcdefx\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#udigits",
+              "documentation": {
+                "identifier": "udigits",
+                "newPage": false,
+                "searchKey": "fmt.udigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const udigits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst udigits = \"0123456789ABCDEFX\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#signed",
+              "documentation": {
+                "identifier": "signed",
+                "newPage": false,
+                "searchKey": "fmt.signed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const signed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst signed = true\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#unsigned",
+              "documentation": {
+                "identifier": "unsigned",
+                "newPage": false,
+                "searchKey": "fmt.unsigned",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const unsigned"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst unsigned = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#commaSpaceString",
+              "documentation": {
+                "identifier": "commaSpaceString",
+                "newPage": false,
+                "searchKey": "fmt.commaSpaceString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const commaSpaceString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst commaSpaceString = \", \"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#nilAngleString",
+              "documentation": {
+                "identifier": "nilAngleString",
+                "newPage": false,
+                "searchKey": "fmt.nilAngleString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const nilAngleString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst nilAngleString = \"<nil>\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#nilParenString",
+              "documentation": {
+                "identifier": "nilParenString",
+                "newPage": false,
+                "searchKey": "fmt.nilParenString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const nilParenString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst nilParenString = \"(nil)\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#nilString",
+              "documentation": {
+                "identifier": "nilString",
+                "newPage": false,
+                "searchKey": "fmt.nilString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const nilString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst nilString = \"nil\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#mapString",
+              "documentation": {
+                "identifier": "mapString",
+                "newPage": false,
+                "searchKey": "fmt.mapString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mapString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mapString = \"map[\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#percentBangString",
+              "documentation": {
+                "identifier": "percentBangString",
+                "newPage": false,
+                "searchKey": "fmt.percentBangString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const percentBangString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst percentBangString = \"%!\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#missingString",
+              "documentation": {
+                "identifier": "missingString",
+                "newPage": false,
+                "searchKey": "fmt.missingString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const missingString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst missingString = \"(MISSING)\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#badIndexString",
+              "documentation": {
+                "identifier": "badIndexString",
+                "newPage": false,
+                "searchKey": "fmt.badIndexString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const badIndexString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst badIndexString = \"(BADINDEX)\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#panicString",
+              "documentation": {
+                "identifier": "panicString",
+                "newPage": false,
+                "searchKey": "fmt.panicString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const panicString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst panicString = \"(PANIC=\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#extraString",
+              "documentation": {
+                "identifier": "extraString",
+                "newPage": false,
+                "searchKey": "fmt.extraString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const extraString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst extraString = \"%!(EXTRA \"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#badWidthString",
+              "documentation": {
+                "identifier": "badWidthString",
+                "newPage": false,
+                "searchKey": "fmt.badWidthString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const badWidthString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst badWidthString = \"%!(BADWIDTH)\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#badPrecString",
+              "documentation": {
+                "identifier": "badPrecString",
+                "newPage": false,
+                "searchKey": "fmt.badPrecString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const badPrecString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst badPrecString = \"%!(BADPREC)\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#noVerbString",
+              "documentation": {
+                "identifier": "noVerbString",
+                "newPage": false,
+                "searchKey": "fmt.noVerbString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const noVerbString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst noVerbString = \"%!(NOVERB)\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#invReflectString",
+              "documentation": {
+                "identifier": "invReflectString",
+                "newPage": false,
+                "searchKey": "fmt.invReflectString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const invReflectString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst invReflectString = \"<invalid reflect.Value>\"\n```\n\nStrings for use with buffer.WriteString. This is less overhead than using buffer.Write with byte arrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#eof",
+              "documentation": {
+                "identifier": "eof",
+                "newPage": false,
+                "searchKey": "fmt.eof",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const eof"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst eof = -1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#binaryDigits",
+              "documentation": {
+                "identifier": "binaryDigits",
+                "newPage": false,
+                "searchKey": "fmt.binaryDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const binaryDigits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst binaryDigits = \"01\"\n```\n\nNumerical elements \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#octalDigits",
+              "documentation": {
+                "identifier": "octalDigits",
+                "newPage": false,
+                "searchKey": "fmt.octalDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const octalDigits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst octalDigits = \"01234567\"\n```\n\nNumerical elements \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#decimalDigits",
+              "documentation": {
+                "identifier": "decimalDigits",
+                "newPage": false,
+                "searchKey": "fmt.decimalDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const decimalDigits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst decimalDigits = \"0123456789\"\n```\n\nNumerical elements \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#hexadecimalDigits",
+              "documentation": {
+                "identifier": "hexadecimalDigits",
+                "newPage": false,
+                "searchKey": "fmt.hexadecimalDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const hexadecimalDigits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst hexadecimalDigits = \"0123456789aAbBcCdDeEfF\"\n```\n\nNumerical elements \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#sign",
+              "documentation": {
+                "identifier": "sign",
+                "newPage": false,
+                "searchKey": "fmt.sign",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const sign"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst sign = \"+-\"\n```\n\nNumerical elements \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#period",
+              "documentation": {
+                "identifier": "period",
+                "newPage": false,
+                "searchKey": "fmt.period",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const period"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst period = \".\"\n```\n\nNumerical elements \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#exponent",
+              "documentation": {
+                "identifier": "exponent",
+                "newPage": false,
+                "searchKey": "fmt.exponent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const exponent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst exponent = \"eEpP\"\n```\n\nNumerical elements \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#floatVerbs",
+              "documentation": {
+                "identifier": "floatVerbs",
+                "newPage": false,
+                "searchKey": "fmt.floatVerbs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const floatVerbs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst floatVerbs = \"beEfFgGv\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#hugeWid",
+              "documentation": {
+                "identifier": "hugeWid",
+                "newPage": false,
+                "searchKey": "fmt.hugeWid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const hugeWid"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst hugeWid = 1 << 30\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#intBits",
+              "documentation": {
+                "identifier": "intBits",
+                "newPage": false,
+                "searchKey": "fmt.intBits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const intBits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst intBits = 32 << (^uint(0) >> 63)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#uintptrBits",
+              "documentation": {
+                "identifier": "uintptrBits",
+                "newPage": false,
+                "searchKey": "fmt.uintptrBits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const uintptrBits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst uintptrBits = 32 << (^uintptr(0) >> 63)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/fmt#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/fmt#ppFree",
+              "documentation": {
+                "identifier": "ppFree",
+                "newPage": false,
+                "searchKey": "fmt.ppFree",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ppFree"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ppFree = sync.Pool{\n\tNew: func() interface{} { return new(pp) },\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#space",
+              "documentation": {
+                "identifier": "space",
+                "newPage": false,
+                "searchKey": "fmt.space",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var space"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar space = ...\n```\n\nspace is a copy of the unicode.White_Space ranges, to avoid depending on package unicode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#ssFree",
+              "documentation": {
+                "identifier": "ssFree",
+                "newPage": false,
+                "searchKey": "fmt.ssFree",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ssFree"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ssFree = sync.Pool{\n\tNew: func() interface{} { return new(ss) },\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#complexError",
+              "documentation": {
+                "identifier": "complexError",
+                "newPage": false,
+                "searchKey": "fmt.complexError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var complexError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar complexError = errors.New(\"syntax error scanning complex number\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#boolError",
+              "documentation": {
+                "identifier": "boolError",
+                "newPage": false,
+                "searchKey": "fmt.boolError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var boolError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar boolError = errors.New(\"syntax error scanning boolean\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#IsSpace",
+              "documentation": {
+                "identifier": "IsSpace",
+                "newPage": false,
+                "searchKey": "fmt.IsSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var IsSpace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar IsSpace = isSpace\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Parsenum",
+              "documentation": {
+                "identifier": "Parsenum",
+                "newPage": false,
+                "searchKey": "fmt.Parsenum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Parsenum"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Parsenum = parsenum\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/fmt#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/fmt#wrapError",
+              "documentation": {
+                "identifier": "wrapError",
+                "newPage": false,
+                "searchKey": "fmt.wrapError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type wrapError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype wrapError struct {\n\tmsg string\n\terr error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/fmt#wrapError.Error",
+                    "documentation": {
+                      "identifier": "wrapError.Error",
+                      "newPage": false,
+                      "searchKey": "fmt.wrapError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *wrapError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *wrapError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#wrapError.Unwrap",
+                    "documentation": {
+                      "identifier": "wrapError.Unwrap",
+                      "newPage": false,
+                      "searchKey": "fmt.wrapError.Unwrap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *wrapError) Unwrap() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *wrapError) Unwrap() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#fmtFlags",
+              "documentation": {
+                "identifier": "fmtFlags",
+                "newPage": false,
+                "searchKey": "fmt.fmtFlags",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fmtFlags struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fmtFlags struct {\n\twidPresent  bool\n\tprecPresent bool\n\tminus       bool\n\tplus        bool\n\tsharp       bool\n\tspace       bool\n\tzero        bool\n\n\t// For the formats %+v %#v, we set the plusV/sharpV flags\n\t// and clear the plus/sharp flags since %+v and %#v are in effect\n\t// different, flagless formats set at the top level.\n\tplusV  bool\n\tsharpV bool\n}\n```\n\nflags placed in a separate struct for easy clearing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#fmt",
+              "documentation": {
+                "identifier": "fmt",
+                "newPage": false,
+                "searchKey": "fmt.fmt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fmt struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fmt struct {\n\tbuf *buffer\n\n\tfmtFlags\n\n\twid  int // width\n\tprec int // precision\n\n\t// intbuf is large enough to store %b of an int64 with a sign and\n\t// avoids padding at the end of the struct on 32 bit architectures.\n\tintbuf [68]byte\n}\n```\n\nA fmt is the raw formatter used by Printf etc. It prints into a buffer that must be set up separately. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.clearflags",
+                    "documentation": {
+                      "identifier": "fmt.clearflags",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.clearflags",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) clearflags()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) clearflags()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.init",
+                    "documentation": {
+                      "identifier": "fmt.init",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) init(buf *buffer)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) init(buf *buffer)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.writePadding",
+                    "documentation": {
+                      "identifier": "fmt.writePadding",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.writePadding",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) writePadding(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) writePadding(n int)\n```\n\nwritePadding generates n bytes of padding. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.pad",
+                    "documentation": {
+                      "identifier": "fmt.pad",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.pad",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) pad(b []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) pad(b []byte)\n```\n\npad appends b to f.buf, padded on left (!f.minus) or right (f.minus). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.padString",
+                    "documentation": {
+                      "identifier": "fmt.padString",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.padString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) padString(s string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) padString(s string)\n```\n\npadString appends s to f.buf, padded on left (!f.minus) or right (f.minus). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtBoolean",
+                    "documentation": {
+                      "identifier": "fmt.fmtBoolean",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtBoolean",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtBoolean(v bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtBoolean(v bool)\n```\n\nfmtBoolean formats a boolean. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtUnicode",
+                    "documentation": {
+                      "identifier": "fmt.fmtUnicode",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtUnicode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtUnicode(u uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtUnicode(u uint64)\n```\n\nfmtUnicode formats a uint64 as \"U+0078\" or with f.sharp set as \"U+0078 'x'\". \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtInteger",
+                    "documentation": {
+                      "identifier": "fmt.fmtInteger",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtInteger",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtInteger(u uint64, base int, isSigned bool, verb rune, digits string)\n```\n\nfmtInteger formats signed and unsigned integers. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.truncateString",
+                    "documentation": {
+                      "identifier": "fmt.truncateString",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.truncateString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) truncateString(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) truncateString(s string) string\n```\n\ntruncateString truncates the string s to the specified precision, if present. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.truncate",
+                    "documentation": {
+                      "identifier": "fmt.truncate",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.truncate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) truncate(b []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) truncate(b []byte) []byte\n```\n\ntruncate truncates the byte slice b as a string of the specified precision, if present. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtS",
+                    "documentation": {
+                      "identifier": "fmt.fmtS",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtS",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtS(s string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtS(s string)\n```\n\nfmtS formats a string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtBs",
+                    "documentation": {
+                      "identifier": "fmt.fmtBs",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtBs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtBs(b []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtBs(b []byte)\n```\n\nfmtBs formats the byte slice b as if it was formatted as string with fmtS. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtSbx",
+                    "documentation": {
+                      "identifier": "fmt.fmtSbx",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtSbx",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtSbx(s string, b []byte, digits string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtSbx(s string, b []byte, digits string)\n```\n\nfmtSbx formats a string or byte slice as a hexadecimal encoding of its bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtSx",
+                    "documentation": {
+                      "identifier": "fmt.fmtSx",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtSx",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtSx(s, digits string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtSx(s, digits string)\n```\n\nfmtSx formats a string as a hexadecimal encoding of its bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtBx",
+                    "documentation": {
+                      "identifier": "fmt.fmtBx",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtBx",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtBx(b []byte, digits string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtBx(b []byte, digits string)\n```\n\nfmtBx formats a byte slice as a hexadecimal encoding of its bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtQ",
+                    "documentation": {
+                      "identifier": "fmt.fmtQ",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtQ",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtQ(s string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtQ(s string)\n```\n\nfmtQ formats a string as a double-quoted, escaped Go string constant. If f.sharp is set a raw (backquoted) string may be returned instead if the string does not contain any control characters other than tab. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtC",
+                    "documentation": {
+                      "identifier": "fmt.fmtC",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtC",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtC(c uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtC(c uint64)\n```\n\nfmtC formats an integer as a Unicode character. If the character is not valid Unicode, it will print '\\ufffd'. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtQc",
+                    "documentation": {
+                      "identifier": "fmt.fmtQc",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtQc",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtQc(c uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtQc(c uint64)\n```\n\nfmtQc formats an integer as a single-quoted, escaped Go character constant. If the character is not valid Unicode, it will print '\\ufffd'. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#fmt.fmtFloat",
+                    "documentation": {
+                      "identifier": "fmt.fmtFloat",
+                      "newPage": false,
+                      "searchKey": "fmt.fmt.fmtFloat",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *fmt) fmtFloat(v float64, size int, verb rune, prec int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *fmt) fmtFloat(v float64, size int, verb rune, prec int)\n```\n\nfmtFloat formats a float64. It assumes that verb is a valid format specifier for strconv.AppendFloat and therefore fits into a byte. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#State",
+              "documentation": {
+                "identifier": "State",
+                "newPage": false,
+                "searchKey": "fmt.State",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type State interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype State interface {\n\t// Write is the function to call to emit formatted output to be printed.\n\tWrite(b []byte) (n int, err error)\n\t// Width returns the value of the width option and whether it has been set.\n\tWidth() (wid int, ok bool)\n\t// Precision returns the value of the precision option and whether it has been set.\n\tPrecision() (prec int, ok bool)\n\n\t// Flag reports whether the flag c, a character, has been set.\n\tFlag(c int) bool\n}\n```\n\nState represents the printer state passed to custom formatters. It provides access to the io.Writer interface plus information about the flags and options for the operand's format specifier. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Formatter",
+              "documentation": {
+                "identifier": "Formatter",
+                "newPage": false,
+                "searchKey": "fmt.Formatter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Formatter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Formatter interface {\n\tFormat(f State, verb rune)\n}\n```\n\nFormatter is implemented by any value that has a Format method. The implementation controls how State and rune are interpreted, and may call Sprint(f) or Fprint(f) etc. to generate its output. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Stringer",
+              "documentation": {
+                "identifier": "Stringer",
+                "newPage": false,
+                "searchKey": "fmt.Stringer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Stringer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Stringer interface {\n\tString() string\n}\n```\n\nStringer is implemented by any value that has a String method, which defines the `native' format for that value. The String method is used to print values passed as an operand to any format that accepts a string or to an unformatted printer such as Print. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#GoStringer",
+              "documentation": {
+                "identifier": "GoStringer",
+                "newPage": false,
+                "searchKey": "fmt.GoStringer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GoStringer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GoStringer interface {\n\tGoString() string\n}\n```\n\nGoStringer is implemented by any value that has a GoString method, which defines the Go syntax for that value. The GoString method is used to print values passed as an operand to a %#v format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#buffer",
+              "documentation": {
+                "identifier": "buffer",
+                "newPage": false,
+                "searchKey": "fmt.buffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type buffer []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype buffer []byte\n```\n\nUse simple []byte instead of bytes.Buffer to avoid large dependency. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/fmt#buffer.write",
+                    "documentation": {
+                      "identifier": "buffer.write",
+                      "newPage": false,
+                      "searchKey": "fmt.buffer.write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *buffer) write(p []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *buffer) write(p []byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#buffer.writeString",
+                    "documentation": {
+                      "identifier": "buffer.writeString",
+                      "newPage": false,
+                      "searchKey": "fmt.buffer.writeString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *buffer) writeString(s string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *buffer) writeString(s string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#buffer.writeByte",
+                    "documentation": {
+                      "identifier": "buffer.writeByte",
+                      "newPage": false,
+                      "searchKey": "fmt.buffer.writeByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *buffer) writeByte(c byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *buffer) writeByte(c byte)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#buffer.writeRune",
+                    "documentation": {
+                      "identifier": "buffer.writeRune",
+                      "newPage": false,
+                      "searchKey": "fmt.buffer.writeRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bp *buffer) writeRune(r rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bp *buffer) writeRune(r rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#pp",
+              "documentation": {
+                "identifier": "pp",
+                "newPage": false,
+                "searchKey": "fmt.pp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pp struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pp struct {\n\tbuf buffer\n\n\t// arg holds the current item, as an interface{}.\n\targ interface{}\n\n\t// value is used instead of arg for reflect values.\n\tvalue reflect.Value\n\n\t// fmt is used to format basic items such as integers or strings.\n\tfmt fmt\n\n\t// reordered records whether the format string used argument reordering.\n\treordered bool\n\t// goodArgNum records whether the most recent reordering directive was valid.\n\tgoodArgNum bool\n\t// panicking is set by catchPanic to avoid infinite panic, recover, panic, ... recursion.\n\tpanicking bool\n\t// erroring is set when printing an error string to guard against calling handleMethods.\n\terroring bool\n\t// wrapErrs is set when the format string may contain a %w verb.\n\twrapErrs bool\n\t// wrappedErr records the target of the %w verb.\n\twrappedErr error\n}\n```\n\npp is used to store a printer's state and is reused with sync.Pool to avoid allocations. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/fmt#newPrinter",
+                    "documentation": {
+                      "identifier": "newPrinter",
+                      "newPage": false,
+                      "searchKey": "fmt.newPrinter",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newPrinter() *pp"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newPrinter() *pp\n```\n\nnewPrinter allocates a new pp struct or grabs a cached one. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.free",
+                    "documentation": {
+                      "identifier": "pp.free",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.free",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) free()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) free()\n```\n\nfree saves used pp structs in ppFree; avoids an allocation per invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.Width",
+                    "documentation": {
+                      "identifier": "pp.Width",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.Width",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) Width() (wid int, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) Width() (wid int, ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.Precision",
+                    "documentation": {
+                      "identifier": "pp.Precision",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.Precision",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) Precision() (prec int, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) Precision() (prec int, ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.Flag",
+                    "documentation": {
+                      "identifier": "pp.Flag",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.Flag",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) Flag(b int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) Flag(b int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.Write",
+                    "documentation": {
+                      "identifier": "pp.Write",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) Write(b []byte) (ret int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) Write(b []byte) (ret int, err error)\n```\n\nImplement Write so we can call Fprintf on a pp (through State), for recursive use in custom verbs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.WriteString",
+                    "documentation": {
+                      "identifier": "pp.WriteString",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) WriteString(s string) (ret int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) WriteString(s string) (ret int, err error)\n```\n\nImplement WriteString so that we can call io.WriteString on a pp (through state), for efficiency. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.unknownType",
+                    "documentation": {
+                      "identifier": "pp.unknownType",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.unknownType",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) unknownType(v reflect.Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) unknownType(v reflect.Value)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.badVerb",
+                    "documentation": {
+                      "identifier": "pp.badVerb",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.badVerb",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) badVerb(verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) badVerb(verb rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.fmtBool",
+                    "documentation": {
+                      "identifier": "pp.fmtBool",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.fmtBool",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) fmtBool(v bool, verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) fmtBool(v bool, verb rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.fmt0x64",
+                    "documentation": {
+                      "identifier": "pp.fmt0x64",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.fmt0x64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) fmt0x64(v uint64, leading0x bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) fmt0x64(v uint64, leading0x bool)\n```\n\nfmt0x64 formats a uint64 in hexadecimal and prefixes it with 0x or not, as requested, by temporarily setting the sharp flag. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.fmtInteger",
+                    "documentation": {
+                      "identifier": "pp.fmtInteger",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.fmtInteger",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) fmtInteger(v uint64, isSigned bool, verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) fmtInteger(v uint64, isSigned bool, verb rune)\n```\n\nfmtInteger formats a signed or unsigned integer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.fmtFloat",
+                    "documentation": {
+                      "identifier": "pp.fmtFloat",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.fmtFloat",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) fmtFloat(v float64, size int, verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) fmtFloat(v float64, size int, verb rune)\n```\n\nfmtFloat formats a float. The default precision for each verb is specified as last argument in the call to fmt_float. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.fmtComplex",
+                    "documentation": {
+                      "identifier": "pp.fmtComplex",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.fmtComplex",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) fmtComplex(v complex128, size int, verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) fmtComplex(v complex128, size int, verb rune)\n```\n\nfmtComplex formats a complex number v with r = real(v) and j = imag(v) as (r+ji) using fmtFloat for r and j formatting. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.fmtString",
+                    "documentation": {
+                      "identifier": "pp.fmtString",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.fmtString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) fmtString(v string, verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) fmtString(v string, verb rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.fmtBytes",
+                    "documentation": {
+                      "identifier": "pp.fmtBytes",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.fmtBytes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) fmtBytes(v []byte, verb rune, typeString string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) fmtBytes(v []byte, verb rune, typeString string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.fmtPointer",
+                    "documentation": {
+                      "identifier": "pp.fmtPointer",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.fmtPointer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) fmtPointer(value reflect.Value, verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) fmtPointer(value reflect.Value, verb rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.catchPanic",
+                    "documentation": {
+                      "identifier": "pp.catchPanic",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.catchPanic",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) catchPanic(arg interface{}, verb rune, method string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) catchPanic(arg interface{}, verb rune, method string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.handleMethods",
+                    "documentation": {
+                      "identifier": "pp.handleMethods",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.handleMethods",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) handleMethods(verb rune) (handled bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) handleMethods(verb rune) (handled bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.printArg",
+                    "documentation": {
+                      "identifier": "pp.printArg",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.printArg",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) printArg(arg interface{}, verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) printArg(arg interface{}, verb rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.printValue",
+                    "documentation": {
+                      "identifier": "pp.printValue",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.printValue",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) printValue(value reflect.Value, verb rune, depth int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) printValue(value reflect.Value, verb rune, depth int)\n```\n\nprintValue is similar to printArg but starts with a reflect value, not an interface{} value. It does not handle 'p' and 'T' verbs because these should have been already handled by printArg. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.argNumber",
+                    "documentation": {
+                      "identifier": "pp.argNumber",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.argNumber",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) argNumber(argNum int, format string, i int, numArgs int) (newArgNum, newi int, found bool)\n```\n\nargNumber returns the next argument to evaluate, which is either the value of the passed-in argNum or the value of the bracketed integer that begins format[i:]. It also returns the new value of i, that is, the index of the next byte of the format to process. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.badArgNum",
+                    "documentation": {
+                      "identifier": "pp.badArgNum",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.badArgNum",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) badArgNum(verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) badArgNum(verb rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.missingArg",
+                    "documentation": {
+                      "identifier": "pp.missingArg",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.missingArg",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) missingArg(verb rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) missingArg(verb rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.doPrintf",
+                    "documentation": {
+                      "identifier": "pp.doPrintf",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.doPrintf",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) doPrintf(format string, a []interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) doPrintf(format string, a []interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.doPrint",
+                    "documentation": {
+                      "identifier": "pp.doPrint",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.doPrint",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) doPrint(a []interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) doPrint(a []interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#pp.doPrintln",
+                    "documentation": {
+                      "identifier": "pp.doPrintln",
+                      "newPage": false,
+                      "searchKey": "fmt.pp.doPrintln",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pp) doPrintln(a []interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pp) doPrintln(a []interface{})\n```\n\ndoPrintln is like doPrint but always adds a space between arguments and a newline after the last argument. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#ScanState",
+              "documentation": {
+                "identifier": "ScanState",
+                "newPage": false,
+                "searchKey": "fmt.ScanState",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ScanState interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ScanState interface {\n\t// ReadRune reads the next rune (Unicode code point) from the input.\n\t// If invoked during Scanln, Fscanln, or Sscanln, ReadRune() will\n\t// return EOF after returning the first '\\n' or when reading beyond\n\t// the specified width.\n\tReadRune() (r rune, size int, err error)\n\t// UnreadRune causes the next call to ReadRune to return the same rune.\n\tUnreadRune() error\n\t// SkipSpace skips space in the input. Newlines are treated appropriately\n\t// for the operation being performed; see the package documentation\n\t// for more information.\n\tSkipSpace()\n\t// Token skips space in the input if skipSpace is true, then returns the\n\t// run of Unicode code points c satisfying f(c).  If f is nil,\n\t// !unicode.IsSpace(c) is used; that is, the token will hold non-space\n\t// characters. Newlines are treated appropriately for the operation being\n\t// performed; see the package documentation for more information.\n\t// The returned slice points to shared data that may be overwritten\n\t// by the next call to Token, a call to a Scan function using the ScanState\n\t// as input, or when the calling Scan method returns.\n\tToken(skipSpace bool, f func(rune) bool) (token []byte, err error)\n\t// Width returns the value of the width option and whether it has been set.\n\t// The unit is Unicode code points.\n\tWidth() (wid int, ok bool)\n\t// Because ReadRune is implemented by the interface, Read should never be\n\t// called by the scanning routines and a valid implementation of\n\t// ScanState may choose always to return an error from Read.\n\tRead(buf []byte) (n int, err error)\n}\n```\n\nScanState represents the scanner state passed to custom scanners. Scanners may do rune-at-a-time scanning or ask the ScanState to discover the next space-delimited token. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Scanner",
+              "documentation": {
+                "identifier": "Scanner",
+                "newPage": false,
+                "searchKey": "fmt.Scanner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Scanner interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Scanner interface {\n\tScan(state ScanState, verb rune) error\n}\n```\n\nScanner is implemented by any value that has a Scan method, which scans the input for the representation of a value and stores the result in the receiver, which must be a pointer to be useful. The Scan method is called for any argument to Scan, Scanf, or Scanln that implements it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#stringReader",
+              "documentation": {
+                "identifier": "stringReader",
+                "newPage": false,
+                "searchKey": "fmt.stringReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stringReader string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stringReader string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/fmt#stringReader.Read",
+                    "documentation": {
+                      "identifier": "stringReader.Read",
+                      "newPage": false,
+                      "searchKey": "fmt.stringReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *stringReader) Read(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *stringReader) Read(b []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#scanError",
+              "documentation": {
+                "identifier": "scanError",
+                "newPage": false,
+                "searchKey": "fmt.scanError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type scanError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype scanError struct {\n\terr error\n}\n```\n\nscanError represents an error generated by the scanning software. It's used as a unique signature to identify such errors when recovering. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#ss",
+              "documentation": {
+                "identifier": "ss",
+                "newPage": false,
+                "searchKey": "fmt.ss",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ss struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ss struct {\n\trs    io.RuneScanner // where to read input\n\tbuf   buffer         // token accumulator\n\tcount int            // runes consumed so far.\n\tatEOF bool           // already read EOF\n\tssave\n}\n```\n\nss is the internal implementation of ScanState. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/fmt#newScanState",
+                    "documentation": {
+                      "identifier": "newScanState",
+                      "newPage": false,
+                      "searchKey": "fmt.newScanState",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newScanState(r io.Reader, nlIsSpace, nlIsEnd bool) (s *ss, old ssave)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newScanState(r io.Reader, nlIsSpace, nlIsEnd bool) (s *ss, old ssave)\n```\n\nnewScanState allocates a new ss struct or grab a cached one. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.Read",
+                    "documentation": {
+                      "identifier": "ss.Read",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) Read(buf []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) Read(buf []byte) (n int, err error)\n```\n\nThe Read method is only in ScanState so that ScanState satisfies io.Reader. It will never be called when used as intended, so there is no need to make it actually work. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.ReadRune",
+                    "documentation": {
+                      "identifier": "ss.ReadRune",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.ReadRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) ReadRune() (r rune, size int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) ReadRune() (r rune, size int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.Width",
+                    "documentation": {
+                      "identifier": "ss.Width",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.Width",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) Width() (wid int, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) Width() (wid int, ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.getRune",
+                    "documentation": {
+                      "identifier": "ss.getRune",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.getRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) getRune() (r rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) getRune() (r rune)\n```\n\nThe public method returns an error; this private one panics. If getRune reaches EOF, the return value is EOF (-1). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.mustReadRune",
+                    "documentation": {
+                      "identifier": "ss.mustReadRune",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.mustReadRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) mustReadRune() (r rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) mustReadRune() (r rune)\n```\n\nmustReadRune turns io.EOF into a panic(io.ErrUnexpectedEOF). It is called in cases such as string scanning where an EOF is a syntax error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.UnreadRune",
+                    "documentation": {
+                      "identifier": "ss.UnreadRune",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.UnreadRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) UnreadRune() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) UnreadRune() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.error",
+                    "documentation": {
+                      "identifier": "ss.error",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) error(err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) error(err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.errorString",
+                    "documentation": {
+                      "identifier": "ss.errorString",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.errorString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) errorString(err string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) errorString(err string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.Token",
+                    "documentation": {
+                      "identifier": "ss.Token",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.Token",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) Token(skipSpace bool, f func(rune) bool) (tok []byte, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.free",
+                    "documentation": {
+                      "identifier": "ss.free",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.free",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) free(old ssave)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) free(old ssave)\n```\n\nfree saves used ss structs in ssFree; avoid an allocation per invocation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.SkipSpace",
+                    "documentation": {
+                      "identifier": "ss.SkipSpace",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.SkipSpace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) SkipSpace()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) SkipSpace()\n```\n\nSkipSpace provides Scan methods the ability to skip space and newline characters in keeping with the current scanning mode set by format strings and Scan/Scanln. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.token",
+                    "documentation": {
+                      "identifier": "ss.token",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.token",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) token(skipSpace bool, f func(rune) bool) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) token(skipSpace bool, f func(rune) bool) []byte\n```\n\ntoken returns the next space-delimited string from the input. It skips white space. For Scanln, it stops at newlines. For Scan, newlines are treated as spaces. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.consume",
+                    "documentation": {
+                      "identifier": "ss.consume",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.consume",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) consume(ok string, accept bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) consume(ok string, accept bool) bool\n```\n\nconsume reads the next rune in the input and reports whether it is in the ok string. If accept is true, it puts the character into the input token. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.peek",
+                    "documentation": {
+                      "identifier": "ss.peek",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.peek",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) peek(ok string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) peek(ok string) bool\n```\n\npeek reports whether the next character is in the ok string, without consuming it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.notEOF",
+                    "documentation": {
+                      "identifier": "ss.notEOF",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.notEOF",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) notEOF()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) notEOF()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.accept",
+                    "documentation": {
+                      "identifier": "ss.accept",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.accept",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) accept(ok string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) accept(ok string) bool\n```\n\naccept checks the next rune in the input. If it's a byte (sic) in the string, it puts it in the buffer and returns true. Otherwise it return false. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.okVerb",
+                    "documentation": {
+                      "identifier": "ss.okVerb",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.okVerb",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) okVerb(verb rune, okVerbs, typ string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) okVerb(verb rune, okVerbs, typ string) bool\n```\n\nokVerb verifies that the verb is present in the list, setting s.err appropriately if not. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanBool",
+                    "documentation": {
+                      "identifier": "ss.scanBool",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanBool",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanBool(verb rune) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanBool(verb rune) bool\n```\n\nscanBool returns the value of the boolean represented by the next token. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.getBase",
+                    "documentation": {
+                      "identifier": "ss.getBase",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.getBase",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) getBase(verb rune) (base int, digits string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) getBase(verb rune) (base int, digits string)\n```\n\ngetBase returns the numeric base represented by the verb and its digit string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanNumber",
+                    "documentation": {
+                      "identifier": "ss.scanNumber",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanNumber",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanNumber(digits string, haveDigits bool) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanNumber(digits string, haveDigits bool) string\n```\n\nscanNumber returns the numerical string with specified digits starting here. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanRune",
+                    "documentation": {
+                      "identifier": "ss.scanRune",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanRune(bitSize int) int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanRune(bitSize int) int64\n```\n\nscanRune returns the next rune value in the input. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanBasePrefix",
+                    "documentation": {
+                      "identifier": "ss.scanBasePrefix",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanBasePrefix",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanBasePrefix() (base int, digits string, zeroFound bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanBasePrefix() (base int, digits string, zeroFound bool)\n```\n\nscanBasePrefix reports whether the integer begins with a base prefix and returns the base, digit string, and whether a zero was found. It is called only if the verb is %v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanInt",
+                    "documentation": {
+                      "identifier": "ss.scanInt",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanInt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanInt(verb rune, bitSize int) int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanInt(verb rune, bitSize int) int64\n```\n\nscanInt returns the value of the integer represented by the next token, checking for overflow. Any error is stored in s.err. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanUint",
+                    "documentation": {
+                      "identifier": "ss.scanUint",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanUint",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanUint(verb rune, bitSize int) uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanUint(verb rune, bitSize int) uint64\n```\n\nscanUint returns the value of the unsigned integer represented by the next token, checking for overflow. Any error is stored in s.err. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.floatToken",
+                    "documentation": {
+                      "identifier": "ss.floatToken",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.floatToken",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) floatToken() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) floatToken() string\n```\n\nfloatToken returns the floating-point number starting here, no longer than swid if the width is specified. It's not rigorous about syntax because it doesn't check that we have at least some digits, but Atof will do that. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.complexTokens",
+                    "documentation": {
+                      "identifier": "ss.complexTokens",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.complexTokens",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) complexTokens() (real, imag string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) complexTokens() (real, imag string)\n```\n\ncomplexTokens returns the real and imaginary parts of the complex number starting here. The number might be parenthesized and has the format (N+Ni) where N is a floating-point number and there are no spaces within. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.convertFloat",
+                    "documentation": {
+                      "identifier": "ss.convertFloat",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.convertFloat",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) convertFloat(str string, n int) float64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) convertFloat(str string, n int) float64\n```\n\nconvertFloat converts the string to a float64value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanComplex",
+                    "documentation": {
+                      "identifier": "ss.scanComplex",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanComplex",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanComplex(verb rune, n int) complex128"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanComplex(verb rune, n int) complex128\n```\n\nconvertComplex converts the next token to a complex128 value. The atof argument is a type-specific reader for the underlying type. If we're reading complex64, atof will parse float32s and convert them to float64's to avoid reproducing this code for each complex type. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.convertString",
+                    "documentation": {
+                      "identifier": "ss.convertString",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.convertString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) convertString(verb rune) (str string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) convertString(verb rune) (str string)\n```\n\nconvertString returns the string represented by the next input characters. The format of the input is determined by the verb. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.quotedString",
+                    "documentation": {
+                      "identifier": "ss.quotedString",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.quotedString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) quotedString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) quotedString() string\n```\n\nquotedString returns the double- or back-quoted string represented by the next input characters. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.hexByte",
+                    "documentation": {
+                      "identifier": "ss.hexByte",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.hexByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) hexByte() (b byte, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) hexByte() (b byte, ok bool)\n```\n\nhexByte returns the next hex-encoded (two-character) byte from the input. It returns ok==false if the next bytes in the input do not encode a hex byte. If the first byte is hex and the second is not, processing stops. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.hexString",
+                    "documentation": {
+                      "identifier": "ss.hexString",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.hexString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) hexString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) hexString() string\n```\n\nhexString returns the space-delimited hexpair-encoded string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanPercent",
+                    "documentation": {
+                      "identifier": "ss.scanPercent",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanPercent",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanPercent()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanPercent()\n```\n\nscanPercent scans a literal percent character. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.scanOne",
+                    "documentation": {
+                      "identifier": "ss.scanOne",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.scanOne",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) scanOne(verb rune, arg interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) scanOne(verb rune, arg interface{})\n```\n\nscanOne scans a single value, deriving the scanner from the type of the argument. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.doScan",
+                    "documentation": {
+                      "identifier": "ss.doScan",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.doScan",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) doScan(a []interface{}) (numProcessed int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) doScan(a []interface{}) (numProcessed int, err error)\n```\n\ndoScan does the real work for scanning without a format string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.advance",
+                    "documentation": {
+                      "identifier": "ss.advance",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.advance",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) advance(format string) (i int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) advance(format string) (i int)\n```\n\nadvance determines whether the next characters in the input match those of the format. It returns the number of bytes (sic) consumed in the format. All runs of space characters in either input or format behave as a single space. Newlines are special, though: newlines in the format must match those in the input and vice versa. This routine also handles the %% case. If the return value is zero, either format starts with a % (with no following %) or the input is empty. If it is negative, the input did not match the string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#ss.doScanf",
+                    "documentation": {
+                      "identifier": "ss.doScanf",
+                      "newPage": false,
+                      "searchKey": "fmt.ss.doScanf",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *ss) doScanf(format string, a []interface{}) (numProcessed int, err error)\n```\n\ndoScanf does the real work when scanning with a format string. At the moment, it handles only pointers to basic types. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#ssave",
+              "documentation": {
+                "identifier": "ssave",
+                "newPage": false,
+                "searchKey": "fmt.ssave",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ssave struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ssave struct {\n\tvalidSave bool // is or was a part of an actual ss.\n\tnlIsEnd   bool // whether newline terminates scan\n\tnlIsSpace bool // whether newline counts as white space\n\targLimit  int  // max value of ss.count for this arg; argLimit <= limit\n\tlimit     int  // max value of ss.count.\n\tmaxWid    int  // width of this arg.\n}\n```\n\nssave holds the parts of ss that need to be saved and restored on recursive scans. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/fmt#newScanState",
+                    "documentation": {
+                      "identifier": "newScanState",
+                      "newPage": false,
+                      "searchKey": "fmt.newScanState",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newScanState(r io.Reader, nlIsSpace, nlIsEnd bool) (s *ss, old ssave)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newScanState(r io.Reader, nlIsSpace, nlIsEnd bool) (s *ss, old ssave)\n```\n\nnewScanState allocates a new ss struct or grab a cached one. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#readRune",
+              "documentation": {
+                "identifier": "readRune",
+                "newPage": false,
+                "searchKey": "fmt.readRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readRune struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readRune struct {\n\treader   io.Reader\n\tbuf      [utf8.UTFMax]byte // used only inside ReadRune\n\tpending  int               // number of bytes in pendBuf; only >0 for bad UTF-8\n\tpendBuf  [utf8.UTFMax]byte // bytes left over\n\tpeekRune rune              // if >=0 next rune; when <0 is ^(previous Rune)\n}\n```\n\nreadRune is a structure to enable reading UTF-8 encoded code points from an io.Reader. It is used if the Reader given to the scanner does not already implement io.RuneScanner. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/fmt#readRune.readByte",
+                    "documentation": {
+                      "identifier": "readRune.readByte",
+                      "newPage": false,
+                      "searchKey": "fmt.readRune.readByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *readRune) readByte() (b byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *readRune) readByte() (b byte, err error)\n```\n\nreadByte returns the next byte from the input, which may be left over from a previous read if the UTF-8 was ill-formed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#readRune.ReadRune",
+                    "documentation": {
+                      "identifier": "readRune.ReadRune",
+                      "newPage": false,
+                      "searchKey": "fmt.readRune.ReadRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *readRune) ReadRune() (rr rune, size int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *readRune) ReadRune() (rr rune, size int, err error)\n```\n\nReadRune returns the next UTF-8 encoded code point from the io.Reader inside r. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/fmt#readRune.UnreadRune",
+                    "documentation": {
+                      "identifier": "readRune.UnreadRune",
+                      "newPage": false,
+                      "searchKey": "fmt.readRune.UnreadRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *readRune) UnreadRune() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *readRune) UnreadRune() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/fmt#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/fmt#Errorf",
+              "documentation": {
+                "identifier": "Errorf",
+                "newPage": false,
+                "searchKey": "fmt.Errorf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Errorf(format string, a ...interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Errorf(format string, a ...interface{}) error\n```\n\nErrorf formats according to a format specifier and returns the string as a value that satisfies error. \n\nIf the format specifier includes a %w verb with an error operand, the returned error will implement an Unwrap method returning the operand. It is invalid to include more than one %w verb or to supply it with an operand that does not implement the error interface. The %w verb is otherwise a synonym for %v. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Fprintf",
+              "documentation": {
+                "identifier": "Fprintf",
+                "newPage": false,
+                "searchKey": "fmt.Fprintf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fprintf(w io.Writer, format string, a ...interface{}) (n int, err error)\n```\n\nFprintf formats according to a format specifier and writes to w. It returns the number of bytes written and any write error encountered. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Printf",
+              "documentation": {
+                "identifier": "Printf",
+                "newPage": false,
+                "searchKey": "fmt.Printf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Printf(format string, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Printf(format string, a ...interface{}) (n int, err error)\n```\n\nPrintf formats according to a format specifier and writes to standard output. It returns the number of bytes written and any write error encountered. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Sprintf",
+              "documentation": {
+                "identifier": "Sprintf",
+                "newPage": false,
+                "searchKey": "fmt.Sprintf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sprintf(format string, a ...interface{}) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sprintf(format string, a ...interface{}) string\n```\n\nSprintf formats according to a format specifier and returns the resulting string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Fprint",
+              "documentation": {
+                "identifier": "Fprint",
+                "newPage": false,
+                "searchKey": "fmt.Fprint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fprint(w io.Writer, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fprint(w io.Writer, a ...interface{}) (n int, err error)\n```\n\nFprint formats using the default formats for its operands and writes to w. Spaces are added between operands when neither is a string. It returns the number of bytes written and any write error encountered. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Print",
+              "documentation": {
+                "identifier": "Print",
+                "newPage": false,
+                "searchKey": "fmt.Print",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Print(a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Print(a ...interface{}) (n int, err error)\n```\n\nPrint formats using the default formats for its operands and writes to standard output. Spaces are added between operands when neither is a string. It returns the number of bytes written and any write error encountered. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Sprint",
+              "documentation": {
+                "identifier": "Sprint",
+                "newPage": false,
+                "searchKey": "fmt.Sprint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sprint(a ...interface{}) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sprint(a ...interface{}) string\n```\n\nSprint formats using the default formats for its operands and returns the resulting string. Spaces are added between operands when neither is a string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Fprintln",
+              "documentation": {
+                "identifier": "Fprintln",
+                "newPage": false,
+                "searchKey": "fmt.Fprintln",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fprintln(w io.Writer, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fprintln(w io.Writer, a ...interface{}) (n int, err error)\n```\n\nFprintln formats using the default formats for its operands and writes to w. Spaces are always added between operands and a newline is appended. It returns the number of bytes written and any write error encountered. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Println",
+              "documentation": {
+                "identifier": "Println",
+                "newPage": false,
+                "searchKey": "fmt.Println",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Println(a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Println(a ...interface{}) (n int, err error)\n```\n\nPrintln formats using the default formats for its operands and writes to standard output. Spaces are always added between operands and a newline is appended. It returns the number of bytes written and any write error encountered. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Sprintln",
+              "documentation": {
+                "identifier": "Sprintln",
+                "newPage": false,
+                "searchKey": "fmt.Sprintln",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sprintln(a ...interface{}) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sprintln(a ...interface{}) string\n```\n\nSprintln formats using the default formats for its operands and returns the resulting string. Spaces are always added between operands and a newline is appended. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#getField",
+              "documentation": {
+                "identifier": "getField",
+                "newPage": false,
+                "searchKey": "fmt.getField",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getField(v reflect.Value, i int) reflect.Value"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getField(v reflect.Value, i int) reflect.Value\n```\n\ngetField gets the i'th field of the struct value. If the field is itself is an interface, return a value for the thing inside the interface, not the interface itself. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#tooLarge",
+              "documentation": {
+                "identifier": "tooLarge",
+                "newPage": false,
+                "searchKey": "fmt.tooLarge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tooLarge(x int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tooLarge(x int) bool\n```\n\ntooLarge reports whether the magnitude of the integer is too large to be used as a formatting width or precision. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#parsenum",
+              "documentation": {
+                "identifier": "parsenum",
+                "newPage": false,
+                "searchKey": "fmt.parsenum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parsenum(s string, start, end int) (num int, isnum bool, newi int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parsenum(s string, start, end int) (num int, isnum bool, newi int)\n```\n\nparsenum converts ASCII to integer.  num is 0 (and isnum is false) if no number present. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#intFromArg",
+              "documentation": {
+                "identifier": "intFromArg",
+                "newPage": false,
+                "searchKey": "fmt.intFromArg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func intFromArg(a []interface{}, argNum int) (num int, isInt bool, newArgNum int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc intFromArg(a []interface{}, argNum int) (num int, isInt bool, newArgNum int)\n```\n\nintFromArg gets the argNumth element of a. On return, isInt reports whether the argument has integer type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#parseArgNumber",
+              "documentation": {
+                "identifier": "parseArgNumber",
+                "newPage": false,
+                "searchKey": "fmt.parseArgNumber",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseArgNumber(format string) (index int, wid int, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseArgNumber(format string) (index int, wid int, ok bool)\n```\n\nparseArgNumber returns the value of the bracketed number, minus 1 (explicit argument numbers are one-indexed but we want zero-indexed). The opening bracket is known to be present at format[0]. The returned values are the index, the number of bytes to consume up to the closing paren, if present, and whether the number parsed ok. The bytes to consume will be 1 if no closing paren is present. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Scan",
+              "documentation": {
+                "identifier": "Scan",
+                "newPage": false,
+                "searchKey": "fmt.Scan",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Scan(a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Scan(a ...interface{}) (n int, err error)\n```\n\nScan scans text read from standard input, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Scanln",
+              "documentation": {
+                "identifier": "Scanln",
+                "newPage": false,
+                "searchKey": "fmt.Scanln",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Scanln(a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Scanln(a ...interface{}) (n int, err error)\n```\n\nScanln is similar to Scan, but stops scanning at a newline and after the final item there must be a newline or EOF. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Scanf",
+              "documentation": {
+                "identifier": "Scanf",
+                "newPage": false,
+                "searchKey": "fmt.Scanf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Scanf(format string, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Scanf(format string, a ...interface{}) (n int, err error)\n```\n\nScanf scans text read from standard input, storing successive space-separated values into successive arguments as determined by the format. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. Newlines in the input must match newlines in the format. The one exception: the verb %c always scans the next rune in the input, even if it is a space (or tab etc.) or newline. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Sscan",
+              "documentation": {
+                "identifier": "Sscan",
+                "newPage": false,
+                "searchKey": "fmt.Sscan",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sscan(str string, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sscan(str string, a ...interface{}) (n int, err error)\n```\n\nSscan scans the argument string, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Sscanln",
+              "documentation": {
+                "identifier": "Sscanln",
+                "newPage": false,
+                "searchKey": "fmt.Sscanln",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sscanln(str string, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sscanln(str string, a ...interface{}) (n int, err error)\n```\n\nSscanln is similar to Sscan, but stops scanning at a newline and after the final item there must be a newline or EOF. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Sscanf",
+              "documentation": {
+                "identifier": "Sscanf",
+                "newPage": false,
+                "searchKey": "fmt.Sscanf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sscanf(str string, format string, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sscanf(str string, format string, a ...interface{}) (n int, err error)\n```\n\nSscanf scans the argument string, storing successive space-separated values into successive arguments as determined by the format. It returns the number of items successfully parsed. Newlines in the input must match newlines in the format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Fscan",
+              "documentation": {
+                "identifier": "Fscan",
+                "newPage": false,
+                "searchKey": "fmt.Fscan",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fscan(r io.Reader, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fscan(r io.Reader, a ...interface{}) (n int, err error)\n```\n\nFscan scans text read from r, storing successive space-separated values into successive arguments. Newlines count as space. It returns the number of items successfully scanned. If that is less than the number of arguments, err will report why. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Fscanln",
+              "documentation": {
+                "identifier": "Fscanln",
+                "newPage": false,
+                "searchKey": "fmt.Fscanln",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fscanln(r io.Reader, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fscanln(r io.Reader, a ...interface{}) (n int, err error)\n```\n\nFscanln is similar to Fscan, but stops scanning at a newline and after the final item there must be a newline or EOF. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#Fscanf",
+              "documentation": {
+                "identifier": "Fscanf",
+                "newPage": false,
+                "searchKey": "fmt.Fscanf",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fscanf(r io.Reader, format string, a ...interface{}) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fscanf(r io.Reader, format string, a ...interface{}) (n int, err error)\n```\n\nFscanf scans text read from r, storing successive space-separated values into successive arguments as determined by the format. It returns the number of items successfully parsed. Newlines in the input must match newlines in the format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#isSpace",
+              "documentation": {
+                "identifier": "isSpace",
+                "newPage": false,
+                "searchKey": "fmt.isSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSpace(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSpace(r rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#notSpace",
+              "documentation": {
+                "identifier": "notSpace",
+                "newPage": false,
+                "searchKey": "fmt.notSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func notSpace(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc notSpace(r rune) bool\n```\n\nnotSpace is the default scanning function used in Token. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#indexRune",
+              "documentation": {
+                "identifier": "indexRune",
+                "newPage": false,
+                "searchKey": "fmt.indexRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func indexRune(s string, r rune) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc indexRune(s string, r rune) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#hasX",
+              "documentation": {
+                "identifier": "hasX",
+                "newPage": false,
+                "searchKey": "fmt.hasX",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasX(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasX(s string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#hexDigit",
+              "documentation": {
+                "identifier": "hexDigit",
+                "newPage": false,
+                "searchKey": "fmt.hexDigit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hexDigit(d rune) (int, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hexDigit(d rune) (int, bool)\n```\n\nhexDigit returns the value of the hexadecimal digit. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/fmt#errorHandler",
+              "documentation": {
+                "identifier": "errorHandler",
+                "newPage": false,
+                "searchKey": "fmt.errorHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errorHandler(errp *error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errorHandler(errp *error)\n```\n\nerrorHandler turns local panics into error returns. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

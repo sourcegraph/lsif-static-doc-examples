@@ -1,0 +1,1253 @@
+{
+  "pathID": "/std/os/user",
+  "documentation": {
+    "identifier": "user",
+    "newPage": true,
+    "searchKey": "std/os/user",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package user"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package user allows user account lookups by name or id. \n\nFor most Unix systems, this package has two internal implementations of resolving user and group ids to names. One is written in pure Go and parses /etc/passwd and /etc/group. The other is cgo-based and relies on the standard C library (libc) routines such as getpwuid_r and getgrnam_r. \n\nWhen cgo is available, cgo-based (libc-backed) code is used by default. This can be overridden by using osusergo build tag, which enforces the pure Go implementation. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/os/user#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/os/user#userBuffer",
+              "documentation": {
+                "identifier": "userBuffer",
+                "newPage": false,
+                "searchKey": "user.userBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const userBuffer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst userBuffer = bufferKind((_Ciconst__SC_GETPW_R_SIZE_MAX))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#groupBuffer",
+              "documentation": {
+                "identifier": "groupBuffer",
+                "newPage": false,
+                "searchKey": "user.groupBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const groupBuffer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst groupBuffer = bufferKind((_Ciconst__SC_GETGR_R_SIZE_MAX))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#maxBufferSize",
+              "documentation": {
+                "identifier": "maxBufferSize",
+                "newPage": false,
+                "searchKey": "user.maxBufferSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxBufferSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxBufferSize = 1 << 20\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#maxGroups",
+              "documentation": {
+                "identifier": "maxGroups",
+                "newPage": false,
+                "searchKey": "user.maxGroups",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxGroups"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxGroups = 2048\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/os/user#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/os/user#cache",
+              "documentation": {
+                "identifier": "cache",
+                "newPage": false,
+                "searchKey": "user.cache",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cache"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cache struct {\n\tsync.Once\n\tu   *User\n\terr error\n}\n```\n\ncache of the current user \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#userImplemented",
+              "documentation": {
+                "identifier": "userImplemented",
+                "newPage": false,
+                "searchKey": "user.userImplemented",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var userImplemented"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar userImplemented = true // set to false by lookup_stubs.go's init\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#groupImplemented",
+              "documentation": {
+                "identifier": "groupImplemented",
+                "newPage": false,
+                "searchKey": "user.groupImplemented",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var groupImplemented"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar groupImplemented = true // set to false by lookup_stubs.go's init\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/os/user#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/os/user#User",
+              "documentation": {
+                "identifier": "User",
+                "newPage": false,
+                "searchKey": "user.User",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type User struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype User struct {\n\t// Uid is the user ID.\n\t// On POSIX systems, this is a decimal number representing the uid.\n\t// On Windows, this is a security identifier (SID) in a string format.\n\t// On Plan 9, this is the contents of /dev/user.\n\tUid string\n\t// Gid is the primary group ID.\n\t// On POSIX systems, this is a decimal number representing the gid.\n\t// On Windows, this is a SID in a string format.\n\t// On Plan 9, this is the contents of /dev/user.\n\tGid string\n\t// Username is the login name.\n\tUsername string\n\t// Name is the user's real or display name.\n\t// It might be blank.\n\t// On POSIX systems, this is the first (or only) entry in the GECOS field\n\t// list.\n\t// On Windows, this is the user's display name.\n\t// On Plan 9, this is the contents of /dev/user.\n\tName string\n\t// HomeDir is the path to the user's home directory (if they have one).\n\tHomeDir string\n}\n```\n\nUser represents a user account. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/os/user#Current",
+                    "documentation": {
+                      "identifier": "Current",
+                      "newPage": false,
+                      "searchKey": "user.Current",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Current() (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Current() (*User, error)\n```\n\nCurrent returns the current user. \n\nThe first call will cache the current user information. Subsequent calls will return the cached value and will not reflect changes to the current user. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#Lookup",
+                    "documentation": {
+                      "identifier": "Lookup",
+                      "newPage": false,
+                      "searchKey": "user.Lookup",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Lookup(username string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Lookup(username string) (*User, error)\n```\n\nLookup looks up a user by username. If the user cannot be found, the returned error is of type UnknownUserError. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#LookupId",
+                    "documentation": {
+                      "identifier": "LookupId",
+                      "newPage": false,
+                      "searchKey": "user.LookupId",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func LookupId(uid string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc LookupId(uid string) (*User, error)\n```\n\nLookupId looks up a user by userid. If the user cannot be found, the returned error is of type UnknownUserIdError. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#current",
+                    "documentation": {
+                      "identifier": "current",
+                      "newPage": false,
+                      "searchKey": "user.current",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func current() (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc current() (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#lookupUser",
+                    "documentation": {
+                      "identifier": "lookupUser",
+                      "newPage": false,
+                      "searchKey": "user.lookupUser",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupUser(username string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupUser(username string) (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#lookupUserId",
+                    "documentation": {
+                      "identifier": "lookupUserId",
+                      "newPage": false,
+                      "searchKey": "user.lookupUserId",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupUserId(uid string) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupUserId(uid string) (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#lookupUnixUid",
+                    "documentation": {
+                      "identifier": "lookupUnixUid",
+                      "newPage": false,
+                      "searchKey": "user.lookupUnixUid",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupUnixUid(uid int) (*User, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupUnixUid(uid int) (*User, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#buildUser",
+                    "documentation": {
+                      "identifier": "buildUser",
+                      "newPage": false,
+                      "searchKey": "user.buildUser",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func buildUser(pwd *_Ctype_struct_passwd) *User"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc buildUser(pwd *_Ctype_struct_passwd) *User\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#User.GroupIds",
+                    "documentation": {
+                      "identifier": "User.GroupIds",
+                      "newPage": false,
+                      "searchKey": "user.User.GroupIds",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (u *User) GroupIds() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (u *User) GroupIds() ([]string, error)\n```\n\nGroupIds returns the list of group IDs that the user is a member of. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#Group",
+              "documentation": {
+                "identifier": "Group",
+                "newPage": false,
+                "searchKey": "user.Group",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Group struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Group struct {\n\tGid  string // group ID\n\tName string // group name\n}\n```\n\nGroup represents a grouping of users. \n\nOn POSIX systems Gid contains a decimal number representing the group ID. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/os/user#LookupGroup",
+                    "documentation": {
+                      "identifier": "LookupGroup",
+                      "newPage": false,
+                      "searchKey": "user.LookupGroup",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func LookupGroup(name string) (*Group, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc LookupGroup(name string) (*Group, error)\n```\n\nLookupGroup looks up a group by name. If the group cannot be found, the returned error is of type UnknownGroupError. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#LookupGroupId",
+                    "documentation": {
+                      "identifier": "LookupGroupId",
+                      "newPage": false,
+                      "searchKey": "user.LookupGroupId",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func LookupGroupId(gid string) (*Group, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc LookupGroupId(gid string) (*Group, error)\n```\n\nLookupGroupId looks up a group by groupid. If the group cannot be found, the returned error is of type UnknownGroupIdError. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#lookupGroup",
+                    "documentation": {
+                      "identifier": "lookupGroup",
+                      "newPage": false,
+                      "searchKey": "user.lookupGroup",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupGroup(groupname string) (*Group, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupGroup(groupname string) (*Group, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#lookupGroupId",
+                    "documentation": {
+                      "identifier": "lookupGroupId",
+                      "newPage": false,
+                      "searchKey": "user.lookupGroupId",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupGroupId(gid string) (*Group, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupGroupId(gid string) (*Group, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#lookupUnixGid",
+                    "documentation": {
+                      "identifier": "lookupUnixGid",
+                      "newPage": false,
+                      "searchKey": "user.lookupUnixGid",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookupUnixGid(gid int) (*Group, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookupUnixGid(gid int) (*Group, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#buildGroup",
+                    "documentation": {
+                      "identifier": "buildGroup",
+                      "newPage": false,
+                      "searchKey": "user.buildGroup",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func buildGroup(grp *_Ctype_struct_group) *Group"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc buildGroup(grp *_Ctype_struct_group) *Group\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#UnknownUserIdError",
+              "documentation": {
+                "identifier": "UnknownUserIdError",
+                "newPage": false,
+                "searchKey": "user.UnknownUserIdError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnknownUserIdError int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnknownUserIdError int\n```\n\nUnknownUserIdError is returned by LookupId when a user cannot be found. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/os/user#UnknownUserIdError.Error",
+                    "documentation": {
+                      "identifier": "UnknownUserIdError.Error",
+                      "newPage": false,
+                      "searchKey": "user.UnknownUserIdError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnknownUserIdError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnknownUserIdError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#UnknownUserError",
+              "documentation": {
+                "identifier": "UnknownUserError",
+                "newPage": false,
+                "searchKey": "user.UnknownUserError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnknownUserError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnknownUserError string\n```\n\nUnknownUserError is returned by Lookup when a user cannot be found. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/os/user#UnknownUserError.Error",
+                    "documentation": {
+                      "identifier": "UnknownUserError.Error",
+                      "newPage": false,
+                      "searchKey": "user.UnknownUserError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnknownUserError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnknownUserError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#UnknownGroupIdError",
+              "documentation": {
+                "identifier": "UnknownGroupIdError",
+                "newPage": false,
+                "searchKey": "user.UnknownGroupIdError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnknownGroupIdError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnknownGroupIdError string\n```\n\nUnknownGroupIdError is returned by LookupGroupId when a group cannot be found. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/os/user#UnknownGroupIdError.Error",
+                    "documentation": {
+                      "identifier": "UnknownGroupIdError.Error",
+                      "newPage": false,
+                      "searchKey": "user.UnknownGroupIdError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnknownGroupIdError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnknownGroupIdError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#UnknownGroupError",
+              "documentation": {
+                "identifier": "UnknownGroupError",
+                "newPage": false,
+                "searchKey": "user.UnknownGroupError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type UnknownGroupError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype UnknownGroupError string\n```\n\nUnknownGroupError is returned by LookupGroup when a group cannot be found. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/os/user#UnknownGroupError.Error",
+                    "documentation": {
+                      "identifier": "UnknownGroupError.Error",
+                      "newPage": false,
+                      "searchKey": "user.UnknownGroupError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e UnknownGroupError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e UnknownGroupError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#bufferKind",
+              "documentation": {
+                "identifier": "bufferKind",
+                "newPage": false,
+                "searchKey": "user.bufferKind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bufferKind user._Ctype_int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bufferKind _Ctype_int /*line :200:22*/\n\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/os/user#bufferKind.initialSize",
+                    "documentation": {
+                      "identifier": "bufferKind.initialSize",
+                      "newPage": false,
+                      "searchKey": "user.bufferKind.initialSize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (k bufferKind) initialSize() _Ctype_size_t"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (k bufferKind) initialSize() _Ctype_size_t\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#memBuffer",
+              "documentation": {
+                "identifier": "memBuffer",
+                "newPage": false,
+                "searchKey": "user.memBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type memBuffer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype memBuffer struct {\n\tptr  unsafe.Pointer\n\tsize _Ctype_size_t /*line :224:15*/\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/os/user#alloc",
+                    "documentation": {
+                      "identifier": "alloc",
+                      "newPage": false,
+                      "searchKey": "user.alloc",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func alloc(kind bufferKind) *memBuffer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc alloc(kind bufferKind) *memBuffer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#memBuffer.resize",
+                    "documentation": {
+                      "identifier": "memBuffer.resize",
+                      "newPage": false,
+                      "searchKey": "user.memBuffer.resize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mb *memBuffer) resize(newSize _Ctype_size_t)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mb *memBuffer) resize(newSize _Ctype_size_t)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/os/user#memBuffer.free",
+                    "documentation": {
+                      "identifier": "memBuffer.free",
+                      "newPage": false,
+                      "searchKey": "user.memBuffer.free",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mb *memBuffer) free()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mb *memBuffer) free()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/os/user#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/os/user#TestNegativeUid",
+              "documentation": {
+                "identifier": "TestNegativeUid",
+                "newPage": false,
+                "searchKey": "user.TestNegativeUid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNegativeUid(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNegativeUid(t *testing.T)\n```\n\nIssue 22739 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#checkUser",
+              "documentation": {
+                "identifier": "checkUser",
+                "newPage": false,
+                "searchKey": "user.checkUser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkUser(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkUser(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#TestCurrent",
+              "documentation": {
+                "identifier": "TestCurrent",
+                "newPage": false,
+                "searchKey": "user.TestCurrent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCurrent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCurrent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#BenchmarkCurrent",
+              "documentation": {
+                "identifier": "BenchmarkCurrent",
+                "newPage": false,
+                "searchKey": "user.BenchmarkCurrent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCurrent(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCurrent(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#compare",
+              "documentation": {
+                "identifier": "compare",
+                "newPage": false,
+                "searchKey": "user.compare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func compare(t *testing.T, want, got *User)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc compare(t *testing.T, want, got *User)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#TestLookup",
+              "documentation": {
+                "identifier": "TestLookup",
+                "newPage": false,
+                "searchKey": "user.TestLookup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#TestLookupId",
+              "documentation": {
+                "identifier": "TestLookupId",
+                "newPage": false,
+                "searchKey": "user.TestLookupId",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookupId(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookupId(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#checkGroup",
+              "documentation": {
+                "identifier": "checkGroup",
+                "newPage": false,
+                "searchKey": "user.checkGroup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkGroup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkGroup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#TestLookupGroup",
+              "documentation": {
+                "identifier": "TestLookupGroup",
+                "newPage": false,
+                "searchKey": "user.TestLookupGroup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookupGroup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookupGroup(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#TestGroupIds",
+              "documentation": {
+                "identifier": "TestGroupIds",
+                "newPage": false,
+                "searchKey": "user.TestGroupIds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGroupIds(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGroupIds(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#containsID",
+              "documentation": {
+                "identifier": "containsID",
+                "newPage": false,
+                "searchKey": "user.containsID",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func containsID(ids []string, id string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc containsID(ids []string, id string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#retryWithBuffer",
+              "documentation": {
+                "identifier": "retryWithBuffer",
+                "newPage": false,
+                "searchKey": "user.retryWithBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func retryWithBuffer(buf *memBuffer, f func() syscall.Errno) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc retryWithBuffer(buf *memBuffer, f func() syscall.Errno) error\n```\n\nretryWithBuffer repeatedly calls f(), increasing the size of the buffer each time, until f succeeds, fails with a non-ERANGE error, or the buffer exceeds a reasonable limit. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#isSizeReasonable",
+              "documentation": {
+                "identifier": "isSizeReasonable",
+                "newPage": false,
+                "searchKey": "user.isSizeReasonable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSizeReasonable(sz int64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSizeReasonable(sz int64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#structPasswdForNegativeTest",
+              "documentation": {
+                "identifier": "structPasswdForNegativeTest",
+                "newPage": false,
+                "searchKey": "user.structPasswdForNegativeTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func structPasswdForNegativeTest() _Ctype_struct_passwd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc structPasswdForNegativeTest() _Ctype_struct_passwd\n```\n\nBecause we can't use cgo in tests: \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#getGroupList",
+              "documentation": {
+                "identifier": "getGroupList",
+                "newPage": false,
+                "searchKey": "user.getGroupList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getGroupList(name *_Ctype_char, userGID _Ctype_gid_t, gids *_Ctype_gid_t, n *_Ctype_int) _Ctype_int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getGroupList(name *_Ctype_char, userGID _Ctype_gid_t, gids *_Ctype_gid_t, n *_Ctype_int) _Ctype_int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#groupRetry",
+              "documentation": {
+                "identifier": "groupRetry",
+                "newPage": false,
+                "searchKey": "user.groupRetry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func groupRetry(username string, name []byte, userGID _Ctype_gid_t, gids *[]_Ctype_gid_t, n *_Ctype_int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc groupRetry(username string, name []byte, userGID _Ctype_gid_t, gids *[]_Ctype_gid_t, n *_Ctype_int) error\n```\n\ngroupRetry retries getGroupList with an increasingly large size for n. The result is stored in gids. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/os/user#listGroups",
+              "documentation": {
+                "identifier": "listGroups",
+                "newPage": false,
+                "searchKey": "user.listGroups",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func listGroups(u *User) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc listGroups(u *User) ([]string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

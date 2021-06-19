@@ -1,0 +1,1887 @@
+{
+  "pathID": "/std/context",
+  "documentation": {
+    "identifier": "context",
+    "newPage": true,
+    "searchKey": "std/context",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package context"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package context defines the Context type, which carries deadlines, cancellation signals, and other request-scoped values across API boundaries and between processes. \n\nIncoming requests to a server should create a Context, and outgoing calls to servers should accept a Context. The chain of function calls between them must propagate the Context, optionally replacing it with a derived Context created using WithCancel, WithDeadline, WithTimeout, or WithValue. When a Context is canceled, all Contexts derived from it are also canceled. \n\nThe WithCancel, WithDeadline, and WithTimeout functions take a Context (the parent) and return a derived Context (the child) and a CancelFunc. Calling the CancelFunc cancels the child and its children, removes the parent's reference to the child, and stops any associated timers. Failing to call the CancelFunc leaks the child and its children until the parent is canceled or the timer fires. The go vet tool checks that CancelFuncs are used on all control-flow paths. \n\nPrograms that use Contexts should follow these rules to keep interfaces consistent across packages and enable static analysis tools to check context propagation: \n\nDo not store Contexts inside a struct type; instead, pass a Context explicitly to each function that needs it. The Context should be the first parameter, typically named ctx: \n\n```\nfunc DoSomething(ctx context.Context, arg Arg) error {\n\t// ... use ctx ...\n}\n\n```\nDo not pass a nil Context, even if a function permits it. Pass context.TODO if you are unsure about which Context to use. \n\nUse context Values only for request-scoped data that transits processes and APIs, not for passing optional parameters to functions. \n\nThe same Context may be passed to functions running in different goroutines; Contexts are safe for simultaneous use by multiple goroutines. \n\nSee [https://blog.golang.org/context](https://blog.golang.org/context) for example code for a server that uses Contexts. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/context#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/context#shortDuration",
+              "documentation": {
+                "identifier": "shortDuration",
+                "newPage": false,
+                "searchKey": "context.shortDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const shortDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst shortDuration = 1 * time.Millisecond // a reasonable duration to block in a test\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#veryLongDuration",
+              "documentation": {
+                "identifier": "veryLongDuration",
+                "newPage": false,
+                "searchKey": "context.veryLongDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const veryLongDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst veryLongDuration = 1000 * time.Hour // an arbitrary upper bound on the test's running time\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/context#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/context#Canceled",
+              "documentation": {
+                "identifier": "Canceled",
+                "newPage": false,
+                "searchKey": "context.Canceled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Canceled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Canceled = errors.New(\"context canceled\")\n```\n\nCanceled is the error returned by Context.Err when the context is canceled. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#DeadlineExceeded",
+              "documentation": {
+                "identifier": "DeadlineExceeded",
+                "newPage": false,
+                "searchKey": "context.DeadlineExceeded",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DeadlineExceeded"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DeadlineExceeded error = deadlineExceededError{}\n```\n\nDeadlineExceeded is the error returned by Context.Err when the context's deadline passes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#background",
+              "documentation": {
+                "identifier": "background",
+                "newPage": false,
+                "searchKey": "context.background",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var background"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar background = new(emptyCtx)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#todo",
+              "documentation": {
+                "identifier": "todo",
+                "newPage": false,
+                "searchKey": "context.todo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var todo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar todo = new(emptyCtx)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#goroutines",
+              "documentation": {
+                "identifier": "goroutines",
+                "newPage": false,
+                "searchKey": "context.goroutines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goroutines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goroutines int32\n```\n\ngoroutines counts the number of goroutines ever created; for testing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#cancelCtxKey",
+              "documentation": {
+                "identifier": "cancelCtxKey",
+                "newPage": false,
+                "searchKey": "context.cancelCtxKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cancelCtxKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cancelCtxKey int\n```\n\n&cancelCtxKey is the key that a cancelCtx returns itself for. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#closedchan",
+              "documentation": {
+                "identifier": "closedchan",
+                "newPage": false,
+                "searchKey": "context.closedchan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var closedchan"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar closedchan = make(chan struct{})\n```\n\nclosedchan is a reusable closed channel. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#k1",
+              "documentation": {
+                "identifier": "k1",
+                "newPage": false,
+                "searchKey": "context.k1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var k1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar k1 = key1(1)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#k2",
+              "documentation": {
+                "identifier": "k2",
+                "newPage": false,
+                "searchKey": "context.k2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var k2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar k2 = key2(1) // same int as k1, different type\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#k3",
+              "documentation": {
+                "identifier": "k3",
+                "newPage": false,
+                "searchKey": "context.k3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var k3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar k3 = key2(3) // same type as k2, different int\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/context#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/context#Context",
+              "documentation": {
+                "identifier": "Context",
+                "newPage": false,
+                "searchKey": "context.Context",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Context interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Context interface {\n\t// Deadline returns the time when work done on behalf of this context\n\t// should be canceled. Deadline returns ok==false when no deadline is\n\t// set. Successive calls to Deadline return the same results.\n\tDeadline() (deadline time.Time, ok bool)\n\n\t// Done returns a channel that's closed when work done on behalf of this\n\t// context should be canceled. Done may return nil if this context can\n\t// never be canceled. Successive calls to Done return the same value.\n\t// The close of the Done channel may happen asynchronously,\n\t// after the cancel function returns.\n\t//\n\t// WithCancel arranges for Done to be closed when cancel is called;\n\t// WithDeadline arranges for Done to be closed when the deadline\n\t// expires; WithTimeout arranges for Done to be closed when the timeout\n\t// elapses.\n\t//\n\t// Done is provided for use in select statements:\n\t//\n\t//  // Stream generates values with DoSomething and sends them to out\n\t//  // until DoSomething returns an error or ctx.Done is closed.\n\t//  func Stream(ctx context.Context, out chan<- Value) error {\n\t//  \tfor {\n\t//  \t\tv, err := DoSomething(ctx)\n\t//  \t\tif err != nil {\n\t//  \t\t\treturn err\n\t//  \t\t}\n\t//  \t\tselect {\n\t//  \t\tcase <-ctx.Done():\n\t//  \t\t\treturn ctx.Err()\n\t//  \t\tcase out <- v:\n\t//  \t\t}\n\t//  \t}\n\t//  }\n\t//\n\t// See https://blog.golang.org/pipelines for more examples of how to use\n\t// a Done channel for cancellation.\n\tDone() <-chan struct{}\n\n\t// If Done is not yet closed, Err returns nil.\n\t// If Done is closed, Err returns a non-nil error explaining why:\n\t// Canceled if the context was canceled\n\t// or DeadlineExceeded if the context's deadline passed.\n\t// After Err returns a non-nil error, successive calls to Err return the same error.\n\tErr() error\n\n\t// Value returns the value associated with this context for key, or nil\n\t// if no value is associated with key. Successive calls to Value with\n\t// the same key returns the same result.\n\t//\n\t// Use context values only for request-scoped data that transits\n\t// processes and API boundaries, not for passing optional parameters to\n\t// functions.\n\t//\n\t// A key identifies a specific value in a Context. Functions that wish\n\t// to store values in Context typically allocate a key in a global\n\t// variable then use that key as the argument to context.WithValue and\n\t// Context.Value. A key can be any type that supports equality;\n\t// packages should define keys as an unexported type to avoid\n\t// collisions.\n\t//\n\t// Packages that define a Context key should provide type-safe accessors\n\t// for the values stored using that key:\n\t//\n\t// \t// Package user defines a User type that's stored in Contexts.\n\t// \tpackage user\n\t//\n\t// \timport \"context\"\n\t//\n\t// \t// User is the type of value stored in the Contexts.\n\t// \ttype User struct {...}\n\t//\n\t// \t// key is an unexported type for keys defined in this package.\n\t// \t// This prevents collisions with keys defined in other packages.\n\t// \ttype key int\n\t//\n\t// \t// userKey is the key for user.User values in Contexts. It is\n\t// \t// unexported; clients use user.NewContext and user.FromContext\n\t// \t// instead of using this key directly.\n\t// \tvar userKey key\n\t//\n\t// \t// NewContext returns a new Context that carries value u.\n\t// \tfunc NewContext(ctx context.Context, u *User) context.Context {\n\t// \t\treturn context.WithValue(ctx, userKey, u)\n\t// \t}\n\t//\n\t// \t// FromContext returns the User value stored in ctx, if any.\n\t// \tfunc FromContext(ctx context.Context) (*User, bool) {\n\t// \t\tu, ok := ctx.Value(userKey).(*User)\n\t// \t\treturn u, ok\n\t// \t}\n\tValue(key interface{}) interface{}\n}\n```\n\nA Context carries a deadline, a cancellation signal, and other values across API boundaries. \n\nContext's methods may be called by multiple goroutines simultaneously. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/context#Background",
+                    "documentation": {
+                      "identifier": "Background",
+                      "newPage": false,
+                      "searchKey": "context.Background",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Background() Context"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Background() Context\n```\n\nBackground returns a non-nil, empty Context. It is never canceled, has no values, and has no deadline. It is typically used by the main function, initialization, and tests, and as the top-level Context for incoming requests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#TODO",
+                    "documentation": {
+                      "identifier": "TODO",
+                      "newPage": false,
+                      "searchKey": "context.TODO",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func TODO() Context"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc TODO() Context\n```\n\nTODO returns a non-nil, empty Context. Code should use context.TODO when it's unclear which Context to use or it is not yet available (because the surrounding function has not yet been extended to accept a Context parameter). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#WithCancel",
+                    "documentation": {
+                      "identifier": "WithCancel",
+                      "newPage": false,
+                      "searchKey": "context.WithCancel",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithCancel(parent Context) (ctx Context, cancel CancelFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithCancel(parent Context) (ctx Context, cancel CancelFunc)\n```\n\nWithCancel returns a copy of parent with a new Done channel. The returned context's Done channel is closed when the returned cancel function is called or when the parent context's Done channel is closed, whichever happens first. \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#WithDeadline",
+                    "documentation": {
+                      "identifier": "WithDeadline",
+                      "newPage": false,
+                      "searchKey": "context.WithDeadline",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithDeadline(parent Context, d time.Time) (Context, CancelFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithDeadline(parent Context, d time.Time) (Context, CancelFunc)\n```\n\nWithDeadline returns a copy of the parent context with the deadline adjusted to be no later than d. If the parent's deadline is already earlier than d, WithDeadline(parent, d) is semantically equivalent to parent. The returned context's Done channel is closed when the deadline expires, when the returned cancel function is called, or when the parent context's Done channel is closed, whichever happens first. \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#WithTimeout",
+                    "documentation": {
+                      "identifier": "WithTimeout",
+                      "newPage": false,
+                      "searchKey": "context.WithTimeout",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)\n```\n\nWithTimeout returns WithDeadline(parent, time.Now().Add(timeout)). \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete: \n\n```\nfunc slowOperationWithTimeout(ctx context.Context) (Result, error) {\n\tctx, cancel := context.WithTimeout(ctx, 100*time.Millisecond)\n\tdefer cancel()  // releases resources if slowOperation completes before timeout elapses\n\treturn slowOperation(ctx)\n}\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#WithValue",
+                    "documentation": {
+                      "identifier": "WithValue",
+                      "newPage": false,
+                      "searchKey": "context.WithValue",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithValue(parent Context, key, val interface{}) Context"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithValue(parent Context, key, val interface{}) Context\n```\n\nWithValue returns a copy of parent in which the value associated with key is val. \n\nUse context Values only for request-scoped data that transits processes and APIs, not for passing optional parameters to functions. \n\nThe provided key must be comparable and should not be of type string or any other built-in type to avoid collisions between packages using context. Users of WithValue should define their own types for keys. To avoid allocating when assigning to an interface{}, context keys often have concrete type struct{}. Alternatively, exported context key variables' static type should be a pointer or interface. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#deadlineExceededError",
+              "documentation": {
+                "identifier": "deadlineExceededError",
+                "newPage": false,
+                "searchKey": "context.deadlineExceededError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type deadlineExceededError struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype deadlineExceededError struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/context#deadlineExceededError.Error",
+                    "documentation": {
+                      "identifier": "deadlineExceededError.Error",
+                      "newPage": false,
+                      "searchKey": "context.deadlineExceededError.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (deadlineExceededError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (deadlineExceededError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#deadlineExceededError.Timeout",
+                    "documentation": {
+                      "identifier": "deadlineExceededError.Timeout",
+                      "newPage": false,
+                      "searchKey": "context.deadlineExceededError.Timeout",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (deadlineExceededError) Timeout() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (deadlineExceededError) Timeout() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#deadlineExceededError.Temporary",
+                    "documentation": {
+                      "identifier": "deadlineExceededError.Temporary",
+                      "newPage": false,
+                      "searchKey": "context.deadlineExceededError.Temporary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (deadlineExceededError) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (deadlineExceededError) Temporary() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#emptyCtx",
+              "documentation": {
+                "identifier": "emptyCtx",
+                "newPage": false,
+                "searchKey": "context.emptyCtx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type emptyCtx int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype emptyCtx int\n```\n\nAn emptyCtx is never canceled, has no values, and has no deadline. It is not struct{}, since vars of this type must have distinct addresses. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/context#emptyCtx.Deadline",
+                    "documentation": {
+                      "identifier": "emptyCtx.Deadline",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.Deadline",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*emptyCtx) Deadline() (deadline time.Time, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*emptyCtx) Deadline() (deadline time.Time, ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#emptyCtx.Done",
+                    "documentation": {
+                      "identifier": "emptyCtx.Done",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.Done",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*emptyCtx) Done() <-chan struct{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*emptyCtx) Done() <-chan struct{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#emptyCtx.Err",
+                    "documentation": {
+                      "identifier": "emptyCtx.Err",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.Err",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*emptyCtx) Err() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*emptyCtx) Err() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#emptyCtx.Value",
+                    "documentation": {
+                      "identifier": "emptyCtx.Value",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.Value",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*emptyCtx) Value(key interface{}) interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*emptyCtx) Value(key interface{}) interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#emptyCtx.String",
+                    "documentation": {
+                      "identifier": "emptyCtx.String",
+                      "newPage": false,
+                      "searchKey": "context.emptyCtx.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *emptyCtx) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *emptyCtx) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#CancelFunc",
+              "documentation": {
+                "identifier": "CancelFunc",
+                "newPage": false,
+                "searchKey": "context.CancelFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CancelFunc func()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CancelFunc func()\n```\n\nA CancelFunc tells an operation to abandon its work. A CancelFunc does not wait for the work to stop. A CancelFunc may be called by multiple goroutines simultaneously. After the first call, subsequent calls to a CancelFunc do nothing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/context#WithCancel",
+                    "documentation": {
+                      "identifier": "WithCancel",
+                      "newPage": false,
+                      "searchKey": "context.WithCancel",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithCancel(parent Context) (ctx Context, cancel CancelFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithCancel(parent Context) (ctx Context, cancel CancelFunc)\n```\n\nWithCancel returns a copy of parent with a new Done channel. The returned context's Done channel is closed when the returned cancel function is called or when the parent context's Done channel is closed, whichever happens first. \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#WithDeadline",
+                    "documentation": {
+                      "identifier": "WithDeadline",
+                      "newPage": false,
+                      "searchKey": "context.WithDeadline",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithDeadline(parent Context, d time.Time) (Context, CancelFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithDeadline(parent Context, d time.Time) (Context, CancelFunc)\n```\n\nWithDeadline returns a copy of the parent context with the deadline adjusted to be no later than d. If the parent's deadline is already earlier than d, WithDeadline(parent, d) is semantically equivalent to parent. The returned context's Done channel is closed when the deadline expires, when the returned cancel function is called, or when the parent context's Done channel is closed, whichever happens first. \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#WithTimeout",
+                    "documentation": {
+                      "identifier": "WithTimeout",
+                      "newPage": false,
+                      "searchKey": "context.WithTimeout",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc)\n```\n\nWithTimeout returns WithDeadline(parent, time.Now().Add(timeout)). \n\nCanceling this context releases resources associated with it, so code should call cancel as soon as the operations running in this Context complete: \n\n```\nfunc slowOperationWithTimeout(ctx context.Context) (Result, error) {\n\tctx, cancel := context.WithTimeout(ctx, 100*time.Millisecond)\n\tdefer cancel()  // releases resources if slowOperation completes before timeout elapses\n\treturn slowOperation(ctx)\n}\n\n```\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#canceler",
+              "documentation": {
+                "identifier": "canceler",
+                "newPage": false,
+                "searchKey": "context.canceler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type canceler interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype canceler interface {\n\tcancel(removeFromParent bool, err error)\n\tDone() <-chan struct{}\n}\n```\n\nA canceler is a context type that can be canceled directly. The implementations are *cancelCtx and *timerCtx. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#cancelCtx",
+              "documentation": {
+                "identifier": "cancelCtx",
+                "newPage": false,
+                "searchKey": "context.cancelCtx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cancelCtx struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cancelCtx struct {\n\tContext\n\n\tmu       sync.Mutex            // protects following fields\n\tdone     atomic.Value          // of chan struct{}, created lazily, closed by first cancel call\n\tchildren map[canceler]struct{} // set to nil by the first cancel call\n\terr      error                 // set to non-nil by the first cancel call\n}\n```\n\nA cancelCtx can be canceled. When canceled, it also cancels any children that implement canceler. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/context#newCancelCtx",
+                    "documentation": {
+                      "identifier": "newCancelCtx",
+                      "newPage": false,
+                      "searchKey": "context.newCancelCtx",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newCancelCtx(parent Context) cancelCtx"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newCancelCtx(parent Context) cancelCtx\n```\n\nnewCancelCtx returns an initialized cancelCtx. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#parentCancelCtx",
+                    "documentation": {
+                      "identifier": "parentCancelCtx",
+                      "newPage": false,
+                      "searchKey": "context.parentCancelCtx",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func parentCancelCtx(parent Context) (*cancelCtx, bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc parentCancelCtx(parent Context) (*cancelCtx, bool)\n```\n\nparentCancelCtx returns the underlying *cancelCtx for parent. It does this by looking up parent.Value(&cancelCtxKey) to find the innermost enclosing *cancelCtx and then checking whether parent.Done() matches that *cancelCtx. (If not, the *cancelCtx has been wrapped in a custom implementation providing a different done channel, in which case we should not bypass it.) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#cancelCtx.Value",
+                    "documentation": {
+                      "identifier": "cancelCtx.Value",
+                      "newPage": false,
+                      "searchKey": "context.cancelCtx.Value",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cancelCtx) Value(key interface{}) interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cancelCtx) Value(key interface{}) interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#cancelCtx.Done",
+                    "documentation": {
+                      "identifier": "cancelCtx.Done",
+                      "newPage": false,
+                      "searchKey": "context.cancelCtx.Done",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cancelCtx) Done() <-chan struct{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cancelCtx) Done() <-chan struct{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#cancelCtx.Err",
+                    "documentation": {
+                      "identifier": "cancelCtx.Err",
+                      "newPage": false,
+                      "searchKey": "context.cancelCtx.Err",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cancelCtx) Err() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cancelCtx) Err() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#cancelCtx.String",
+                    "documentation": {
+                      "identifier": "cancelCtx.String",
+                      "newPage": false,
+                      "searchKey": "context.cancelCtx.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cancelCtx) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cancelCtx) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#cancelCtx.cancel",
+                    "documentation": {
+                      "identifier": "cancelCtx.cancel",
+                      "newPage": false,
+                      "searchKey": "context.cancelCtx.cancel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *cancelCtx) cancel(removeFromParent bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *cancelCtx) cancel(removeFromParent bool, err error)\n```\n\ncancel closes c.done, cancels each of c's children, and, if removeFromParent is true, removes c from its parent's children. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#stringer",
+              "documentation": {
+                "identifier": "stringer",
+                "newPage": false,
+                "searchKey": "context.stringer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stringer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stringer interface {\n\tString() string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#timerCtx",
+              "documentation": {
+                "identifier": "timerCtx",
+                "newPage": false,
+                "searchKey": "context.timerCtx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type timerCtx struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype timerCtx struct {\n\tcancelCtx\n\ttimer *time.Timer // Under cancelCtx.mu.\n\n\tdeadline time.Time\n}\n```\n\nA timerCtx carries a timer and a deadline. It embeds a cancelCtx to implement Done and Err. It implements cancel by stopping its timer then delegating to cancelCtx.cancel. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/context#timerCtx.Deadline",
+                    "documentation": {
+                      "identifier": "timerCtx.Deadline",
+                      "newPage": false,
+                      "searchKey": "context.timerCtx.Deadline",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *timerCtx) Deadline() (deadline time.Time, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *timerCtx) Deadline() (deadline time.Time, ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#timerCtx.String",
+                    "documentation": {
+                      "identifier": "timerCtx.String",
+                      "newPage": false,
+                      "searchKey": "context.timerCtx.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *timerCtx) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *timerCtx) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#timerCtx.cancel",
+                    "documentation": {
+                      "identifier": "timerCtx.cancel",
+                      "newPage": false,
+                      "searchKey": "context.timerCtx.cancel",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *timerCtx) cancel(removeFromParent bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *timerCtx) cancel(removeFromParent bool, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#valueCtx",
+              "documentation": {
+                "identifier": "valueCtx",
+                "newPage": false,
+                "searchKey": "context.valueCtx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type valueCtx struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype valueCtx struct {\n\tContext\n\tkey, val interface{}\n}\n```\n\nA valueCtx carries a key-value pair. It implements Value for that key and delegates all other calls to the embedded Context. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/context#valueCtx.String",
+                    "documentation": {
+                      "identifier": "valueCtx.String",
+                      "newPage": false,
+                      "searchKey": "context.valueCtx.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *valueCtx) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *valueCtx) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/context#valueCtx.Value",
+                    "documentation": {
+                      "identifier": "valueCtx.Value",
+                      "newPage": false,
+                      "searchKey": "context.valueCtx.Value",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *valueCtx) Value(key interface{}) interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *valueCtx) Value(key interface{}) interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#testingT",
+              "documentation": {
+                "identifier": "testingT",
+                "newPage": false,
+                "searchKey": "context.testingT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testingT interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testingT interface {\n\tDeadline() (time.Time, bool)\n\tError(args ...interface{})\n\tErrorf(format string, args ...interface{})\n\tFail()\n\tFailNow()\n\tFailed() bool\n\tFatal(args ...interface{})\n\tFatalf(format string, args ...interface{})\n\tHelper()\n\tLog(args ...interface{})\n\tLogf(format string, args ...interface{})\n\tName() string\n\tParallel()\n\tSkip(args ...interface{})\n\tSkipNow()\n\tSkipf(format string, args ...interface{})\n\tSkipped() bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#otherContext",
+              "documentation": {
+                "identifier": "otherContext",
+                "newPage": false,
+                "searchKey": "context.otherContext",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type otherContext struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype otherContext struct {\n\tContext\n}\n```\n\notherContext is a Context that's not one of the types defined in context.go. This lets us test code paths that differ based on the underlying type of the Context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#key1",
+              "documentation": {
+                "identifier": "key1",
+                "newPage": false,
+                "searchKey": "context.key1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type key1 int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype key1 int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#key2",
+              "documentation": {
+                "identifier": "key2",
+                "newPage": false,
+                "searchKey": "context.key2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type key2 int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype key2 int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#myCtx",
+              "documentation": {
+                "identifier": "myCtx",
+                "newPage": false,
+                "searchKey": "context.myCtx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type myCtx struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype myCtx struct {\n\tContext\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#myDoneCtx",
+              "documentation": {
+                "identifier": "myDoneCtx",
+                "newPage": false,
+                "searchKey": "context.myDoneCtx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type myDoneCtx struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype myDoneCtx struct {\n\tContext\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/context#myDoneCtx.Done",
+                    "documentation": {
+                      "identifier": "myDoneCtx.Done",
+                      "newPage": false,
+                      "searchKey": "context.myDoneCtx.Done",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *myDoneCtx) Done() <-chan struct{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *myDoneCtx) Done() <-chan struct{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/context#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/context#propagateCancel",
+              "documentation": {
+                "identifier": "propagateCancel",
+                "newPage": false,
+                "searchKey": "context.propagateCancel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func propagateCancel(parent Context, child canceler)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc propagateCancel(parent Context, child canceler)\n```\n\npropagateCancel arranges for child to be canceled when parent is. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#removeChild",
+              "documentation": {
+                "identifier": "removeChild",
+                "newPage": false,
+                "searchKey": "context.removeChild",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func removeChild(parent Context, child canceler)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc removeChild(parent Context, child canceler)\n```\n\nremoveChild removes a context from its parent. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "context.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#contextName",
+              "documentation": {
+                "identifier": "contextName",
+                "newPage": false,
+                "searchKey": "context.contextName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contextName(c Context) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contextName(c Context) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#stringify",
+              "documentation": {
+                "identifier": "stringify",
+                "newPage": false,
+                "searchKey": "context.stringify",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stringify(v interface{}) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stringify(v interface{}) string\n```\n\nstringify tries a bit to stringify v, without using fmt, since we don't want context depending on the unicode tables. This is only used by *valueCtx.String(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#quiescent",
+              "documentation": {
+                "identifier": "quiescent",
+                "newPage": false,
+                "searchKey": "context.quiescent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quiescent(t testingT) time.Duration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quiescent(t testingT) time.Duration\n```\n\nquiescent returns an arbitrary duration by which the program should have completed any remaining work and reached a steady (idle) state. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestBackground",
+              "documentation": {
+                "identifier": "XTestBackground",
+                "newPage": false,
+                "searchKey": "context.XTestBackground",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestBackground(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestBackground(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestTODO",
+              "documentation": {
+                "identifier": "XTestTODO",
+                "newPage": false,
+                "searchKey": "context.XTestTODO",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestTODO(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestTODO(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestWithCancel",
+              "documentation": {
+                "identifier": "XTestWithCancel",
+                "newPage": false,
+                "searchKey": "context.XTestWithCancel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestWithCancel(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestWithCancel(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#contains",
+              "documentation": {
+                "identifier": "contains",
+                "newPage": false,
+                "searchKey": "context.contains",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contains(m map[canceler]struct{}, key canceler) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contains(m map[canceler]struct{}, key canceler) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestParentFinishesChild",
+              "documentation": {
+                "identifier": "XTestParentFinishesChild",
+                "newPage": false,
+                "searchKey": "context.XTestParentFinishesChild",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestParentFinishesChild(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestParentFinishesChild(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestChildFinishesFirst",
+              "documentation": {
+                "identifier": "XTestChildFinishesFirst",
+                "newPage": false,
+                "searchKey": "context.XTestChildFinishesFirst",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestChildFinishesFirst(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestChildFinishesFirst(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#testDeadline",
+              "documentation": {
+                "identifier": "testDeadline",
+                "newPage": false,
+                "searchKey": "context.testDeadline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDeadline(c Context, name string, t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDeadline(c Context, name string, t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestDeadline",
+              "documentation": {
+                "identifier": "XTestDeadline",
+                "newPage": false,
+                "searchKey": "context.XTestDeadline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestDeadline(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestDeadline(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestTimeout",
+              "documentation": {
+                "identifier": "XTestTimeout",
+                "newPage": false,
+                "searchKey": "context.XTestTimeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestTimeout(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestTimeout(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestCanceledTimeout",
+              "documentation": {
+                "identifier": "XTestCanceledTimeout",
+                "newPage": false,
+                "searchKey": "context.XTestCanceledTimeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestCanceledTimeout(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestCanceledTimeout(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestValues",
+              "documentation": {
+                "identifier": "XTestValues",
+                "newPage": false,
+                "searchKey": "context.XTestValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestValues(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestValues(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestAllocs",
+              "documentation": {
+                "identifier": "XTestAllocs",
+                "newPage": false,
+                "searchKey": "context.XTestAllocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestAllocs(t testingT, testingShort func() bool, testingAllocsPerRun func(int, func()) float64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestAllocs(t testingT, testingShort func() bool, testingAllocsPerRun func(int, func()) float64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestSimultaneousCancels",
+              "documentation": {
+                "identifier": "XTestSimultaneousCancels",
+                "newPage": false,
+                "searchKey": "context.XTestSimultaneousCancels",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestSimultaneousCancels(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestSimultaneousCancels(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestInterlockedCancels",
+              "documentation": {
+                "identifier": "XTestInterlockedCancels",
+                "newPage": false,
+                "searchKey": "context.XTestInterlockedCancels",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestInterlockedCancels(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestInterlockedCancels(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestLayersCancel",
+              "documentation": {
+                "identifier": "XTestLayersCancel",
+                "newPage": false,
+                "searchKey": "context.XTestLayersCancel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestLayersCancel(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestLayersCancel(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestLayersTimeout",
+              "documentation": {
+                "identifier": "XTestLayersTimeout",
+                "newPage": false,
+                "searchKey": "context.XTestLayersTimeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestLayersTimeout(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestLayersTimeout(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#testLayers",
+              "documentation": {
+                "identifier": "testLayers",
+                "newPage": false,
+                "searchKey": "context.testLayers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testLayers(t testingT, seed int64, testTimeout bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testLayers(t testingT, seed int64, testTimeout bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestCancelRemoves",
+              "documentation": {
+                "identifier": "XTestCancelRemoves",
+                "newPage": false,
+                "searchKey": "context.XTestCancelRemoves",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestCancelRemoves(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestCancelRemoves(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestWithCancelCanceledParent",
+              "documentation": {
+                "identifier": "XTestWithCancelCanceledParent",
+                "newPage": false,
+                "searchKey": "context.XTestWithCancelCanceledParent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestWithCancelCanceledParent(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestWithCancelCanceledParent(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestWithValueChecksKey",
+              "documentation": {
+                "identifier": "XTestWithValueChecksKey",
+                "newPage": false,
+                "searchKey": "context.XTestWithValueChecksKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestWithValueChecksKey(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestWithValueChecksKey(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestInvalidDerivedFail",
+              "documentation": {
+                "identifier": "XTestInvalidDerivedFail",
+                "newPage": false,
+                "searchKey": "context.XTestInvalidDerivedFail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestInvalidDerivedFail(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestInvalidDerivedFail(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#recoveredValue",
+              "documentation": {
+                "identifier": "recoveredValue",
+                "newPage": false,
+                "searchKey": "context.recoveredValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func recoveredValue(fn func()) (v interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc recoveredValue(fn func()) (v interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestDeadlineExceededSupportsTimeout",
+              "documentation": {
+                "identifier": "XTestDeadlineExceededSupportsTimeout",
+                "newPage": false,
+                "searchKey": "context.XTestDeadlineExceededSupportsTimeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestDeadlineExceededSupportsTimeout(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestDeadlineExceededSupportsTimeout(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/context#XTestCustomContextGoroutines",
+              "documentation": {
+                "identifier": "XTestCustomContextGoroutines",
+                "newPage": false,
+                "searchKey": "context.XTestCustomContextGoroutines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func XTestCustomContextGoroutines(t testingT)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc XTestCustomContextGoroutines(t testingT)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

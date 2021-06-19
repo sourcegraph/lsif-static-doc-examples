@@ -1,0 +1,1542 @@
+{
+  "pathID": "/std/log/syslog",
+  "documentation": {
+    "identifier": "syslog",
+    "newPage": true,
+    "searchKey": "std/log/syslog",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package syslog"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package syslog provides a simple interface to the system log service. It can send messages to the syslog daemon using UNIX domain sockets, UDP or TCP. \n\nOnly one call to Dial is necessary. On write failures, the syslog client will attempt to reconnect to the server and write again. \n\nThe syslog package is frozen and is not accepting new features. Some external packages provide more functionality. See: \n\n```\n[https://godoc.org/?q=syslog](https://godoc.org/?q=syslog)\n\n```\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/log/syslog#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/log/syslog#severityMask",
+              "documentation": {
+                "identifier": "severityMask",
+                "newPage": false,
+                "searchKey": "syslog.severityMask",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const severityMask"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst severityMask = 0x07\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#facilityMask",
+              "documentation": {
+                "identifier": "facilityMask",
+                "newPage": false,
+                "searchKey": "syslog.facilityMask",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const facilityMask"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst facilityMask = 0xf8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_EMERG",
+              "documentation": {
+                "identifier": "LOG_EMERG",
+                "newPage": false,
+                "searchKey": "syslog.LOG_EMERG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_EMERG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_EMERG Priority = iota\n```\n\nFrom /usr/include/sys/syslog.h. These are the same on Linux, BSD, and OS X. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_ALERT",
+              "documentation": {
+                "identifier": "LOG_ALERT",
+                "newPage": false,
+                "searchKey": "syslog.LOG_ALERT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_ALERT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_ALERT\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_CRIT",
+              "documentation": {
+                "identifier": "LOG_CRIT",
+                "newPage": false,
+                "searchKey": "syslog.LOG_CRIT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_CRIT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_CRIT\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_ERR",
+              "documentation": {
+                "identifier": "LOG_ERR",
+                "newPage": false,
+                "searchKey": "syslog.LOG_ERR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_ERR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_ERR\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_WARNING",
+              "documentation": {
+                "identifier": "LOG_WARNING",
+                "newPage": false,
+                "searchKey": "syslog.LOG_WARNING",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_WARNING"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_WARNING\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_NOTICE",
+              "documentation": {
+                "identifier": "LOG_NOTICE",
+                "newPage": false,
+                "searchKey": "syslog.LOG_NOTICE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_NOTICE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_NOTICE\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_INFO",
+              "documentation": {
+                "identifier": "LOG_INFO",
+                "newPage": false,
+                "searchKey": "syslog.LOG_INFO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_INFO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_INFO\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_DEBUG",
+              "documentation": {
+                "identifier": "LOG_DEBUG",
+                "newPage": false,
+                "searchKey": "syslog.LOG_DEBUG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_DEBUG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_DEBUG\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_KERN",
+              "documentation": {
+                "identifier": "LOG_KERN",
+                "newPage": false,
+                "searchKey": "syslog.LOG_KERN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_KERN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_KERN Priority = iota << 3\n```\n\nFrom /usr/include/sys/syslog.h. These are the same up to LOG_FTP on Linux, BSD, and OS X. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_USER",
+              "documentation": {
+                "identifier": "LOG_USER",
+                "newPage": false,
+                "searchKey": "syslog.LOG_USER",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_USER"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_USER\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_MAIL",
+              "documentation": {
+                "identifier": "LOG_MAIL",
+                "newPage": false,
+                "searchKey": "syslog.LOG_MAIL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_MAIL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_MAIL\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_DAEMON",
+              "documentation": {
+                "identifier": "LOG_DAEMON",
+                "newPage": false,
+                "searchKey": "syslog.LOG_DAEMON",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_DAEMON"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_DAEMON\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_AUTH",
+              "documentation": {
+                "identifier": "LOG_AUTH",
+                "newPage": false,
+                "searchKey": "syslog.LOG_AUTH",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_AUTH"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_AUTH\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_SYSLOG",
+              "documentation": {
+                "identifier": "LOG_SYSLOG",
+                "newPage": false,
+                "searchKey": "syslog.LOG_SYSLOG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_SYSLOG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_SYSLOG\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LPR",
+              "documentation": {
+                "identifier": "LOG_LPR",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LPR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LPR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LPR\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_NEWS",
+              "documentation": {
+                "identifier": "LOG_NEWS",
+                "newPage": false,
+                "searchKey": "syslog.LOG_NEWS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_NEWS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_NEWS\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_UUCP",
+              "documentation": {
+                "identifier": "LOG_UUCP",
+                "newPage": false,
+                "searchKey": "syslog.LOG_UUCP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_UUCP"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_UUCP\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_CRON",
+              "documentation": {
+                "identifier": "LOG_CRON",
+                "newPage": false,
+                "searchKey": "syslog.LOG_CRON",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_CRON"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_CRON\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_AUTHPRIV",
+              "documentation": {
+                "identifier": "LOG_AUTHPRIV",
+                "newPage": false,
+                "searchKey": "syslog.LOG_AUTHPRIV",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_AUTHPRIV"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_AUTHPRIV\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_FTP",
+              "documentation": {
+                "identifier": "LOG_FTP",
+                "newPage": false,
+                "searchKey": "syslog.LOG_FTP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_FTP"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_FTP\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LOCAL0",
+              "documentation": {
+                "identifier": "LOG_LOCAL0",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LOCAL0",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LOCAL0"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LOCAL0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LOCAL1",
+              "documentation": {
+                "identifier": "LOG_LOCAL1",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LOCAL1",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LOCAL1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LOCAL1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LOCAL2",
+              "documentation": {
+                "identifier": "LOG_LOCAL2",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LOCAL2",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LOCAL2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LOCAL2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LOCAL3",
+              "documentation": {
+                "identifier": "LOG_LOCAL3",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LOCAL3",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LOCAL3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LOCAL3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LOCAL4",
+              "documentation": {
+                "identifier": "LOG_LOCAL4",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LOCAL4",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LOCAL4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LOCAL4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LOCAL5",
+              "documentation": {
+                "identifier": "LOG_LOCAL5",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LOCAL5",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LOCAL5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LOCAL5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LOCAL6",
+              "documentation": {
+                "identifier": "LOG_LOCAL6",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LOCAL6",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LOCAL6"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LOCAL6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#LOG_LOCAL7",
+              "documentation": {
+                "identifier": "LOG_LOCAL7",
+                "newPage": false,
+                "searchKey": "syslog.LOG_LOCAL7",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LOG_LOCAL7"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LOG_LOCAL7\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/log/syslog#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/log/syslog#crashy",
+              "documentation": {
+                "identifier": "crashy",
+                "newPage": false,
+                "searchKey": "syslog.crashy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var crashy"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar crashy = false\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/log/syslog#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/log/syslog#Priority",
+              "documentation": {
+                "identifier": "Priority",
+                "newPage": false,
+                "searchKey": "syslog.Priority",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Priority int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Priority int\n```\n\nThe Priority is a combination of the syslog facility and severity. For example, LOG_ALERT | LOG_FTP sends an alert severity message from the FTP facility. The default severity is LOG_EMERG; the default facility is LOG_KERN. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#Writer",
+              "documentation": {
+                "identifier": "Writer",
+                "newPage": false,
+                "searchKey": "syslog.Writer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Writer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Writer struct {\n\tpriority Priority\n\ttag      string\n\thostname string\n\tnetwork  string\n\traddr    string\n\n\tmu   sync.Mutex // guards conn\n\tconn serverConn\n}\n```\n\nA Writer is a connection to a syslog server. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "syslog.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(priority Priority, tag string) (*Writer, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(priority Priority, tag string) (*Writer, error)\n```\n\nNew establishes a new connection to the system log daemon. Each write to the returned writer sends a log message with the given priority (a combination of the syslog facility and severity) and prefix tag. If tag is empty, the os.Args[0] is used. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Dial",
+                    "documentation": {
+                      "identifier": "Dial",
+                      "newPage": false,
+                      "searchKey": "syslog.Dial",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Dial(network, raddr string, priority Priority, tag string) (*Writer, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Dial(network, raddr string, priority Priority, tag string) (*Writer, error)\n```\n\nDial establishes a connection to a log daemon by connecting to address raddr on the specified network. Each write to the returned writer sends a log message with the facility and severity (from priority) and tag. If tag is empty, the os.Args[0] is used. If network is empty, Dial will connect to the local syslog server. Otherwise, see the documentation for net.Dial for valid values of network and raddr. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.connect",
+                    "documentation": {
+                      "identifier": "Writer.connect",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.connect",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) connect() (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) connect() (err error)\n```\n\nconnect makes a connection to the syslog server. It must be called with w.mu held. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Write",
+                    "documentation": {
+                      "identifier": "Writer.Write",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Write",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Write(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Write(b []byte) (int, error)\n```\n\nWrite sends a log message to the syslog daemon. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Close",
+                    "documentation": {
+                      "identifier": "Writer.Close",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Close() error\n```\n\nClose closes a connection to the syslog daemon. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Emerg",
+                    "documentation": {
+                      "identifier": "Writer.Emerg",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Emerg",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Emerg(m string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Emerg(m string) error\n```\n\nEmerg logs a message with severity LOG_EMERG, ignoring the severity passed to New. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Alert",
+                    "documentation": {
+                      "identifier": "Writer.Alert",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Alert",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Alert(m string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Alert(m string) error\n```\n\nAlert logs a message with severity LOG_ALERT, ignoring the severity passed to New. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Crit",
+                    "documentation": {
+                      "identifier": "Writer.Crit",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Crit",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Crit(m string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Crit(m string) error\n```\n\nCrit logs a message with severity LOG_CRIT, ignoring the severity passed to New. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Err",
+                    "documentation": {
+                      "identifier": "Writer.Err",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Err",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Err(m string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Err(m string) error\n```\n\nErr logs a message with severity LOG_ERR, ignoring the severity passed to New. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Warning",
+                    "documentation": {
+                      "identifier": "Writer.Warning",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Warning",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Warning(m string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Warning(m string) error\n```\n\nWarning logs a message with severity LOG_WARNING, ignoring the severity passed to New. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Notice",
+                    "documentation": {
+                      "identifier": "Writer.Notice",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Notice",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Notice(m string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Notice(m string) error\n```\n\nNotice logs a message with severity LOG_NOTICE, ignoring the severity passed to New. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Info",
+                    "documentation": {
+                      "identifier": "Writer.Info",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Info",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Info(m string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Info(m string) error\n```\n\nInfo logs a message with severity LOG_INFO, ignoring the severity passed to New. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.Debug",
+                    "documentation": {
+                      "identifier": "Writer.Debug",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.Debug",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Debug(m string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Debug(m string) error\n```\n\nDebug logs a message with severity LOG_DEBUG, ignoring the severity passed to New. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.writeAndRetry",
+                    "documentation": {
+                      "identifier": "Writer.writeAndRetry",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.writeAndRetry",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) writeAndRetry(p Priority, s string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) writeAndRetry(p Priority, s string) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#Writer.write",
+                    "documentation": {
+                      "identifier": "Writer.write",
+                      "newPage": false,
+                      "searchKey": "syslog.Writer.write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) write(p Priority, msg string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) write(p Priority, msg string) (int, error)\n```\n\nwrite generates and writes a syslog formatted string. The format is as follows: <PRI>TIMESTAMP HOSTNAME TAG[PID]: MSG \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#serverConn",
+              "documentation": {
+                "identifier": "serverConn",
+                "newPage": false,
+                "searchKey": "syslog.serverConn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type serverConn interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype serverConn interface {\n\twriteString(p Priority, hostname, tag, s, nl string) error\n\tclose() error\n}\n```\n\nThis interface and the separate syslog_unix.go file exist for Solaris support as implemented by gccgo. On Solaris you cannot simply open a TCP connection to the syslog daemon. The gccgo sources have a syslog_solaris.go file that implements unixSyslog to return a type that satisfies this interface and simply calls the C library syslog function. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#unixSyslog",
+                    "documentation": {
+                      "identifier": "unixSyslog",
+                      "newPage": false,
+                      "searchKey": "syslog.unixSyslog",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func unixSyslog() (conn serverConn, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc unixSyslog() (conn serverConn, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#netConn",
+              "documentation": {
+                "identifier": "netConn",
+                "newPage": false,
+                "searchKey": "syslog.netConn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type netConn struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype netConn struct {\n\tlocal bool\n\tconn  net.Conn\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#netConn.writeString",
+                    "documentation": {
+                      "identifier": "netConn.writeString",
+                      "newPage": false,
+                      "searchKey": "syslog.netConn.writeString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *netConn) writeString(p Priority, hostname, tag, msg, nl string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *netConn) writeString(p Priority, hostname, tag, msg, nl string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/log/syslog#netConn.close",
+                    "documentation": {
+                      "identifier": "netConn.close",
+                      "newPage": false,
+                      "searchKey": "syslog.netConn.close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (n *netConn) close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (n *netConn) close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/log/syslog#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/log/syslog#NewLogger",
+              "documentation": {
+                "identifier": "NewLogger",
+                "newPage": false,
+                "searchKey": "syslog.NewLogger",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewLogger(p Priority, logFlag int) (*log.Logger, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewLogger(p Priority, logFlag int) (*log.Logger, error)\n```\n\nNewLogger creates a log.Logger whose output is written to the system log service with the specified priority, a combination of the syslog facility and severity. The logFlag argument is the flag set passed through to log.New to create the Logger. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#runPktSyslog",
+              "documentation": {
+                "identifier": "runPktSyslog",
+                "newPage": false,
+                "searchKey": "syslog.runPktSyslog",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runPktSyslog(c net.PacketConn, done chan<- string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runPktSyslog(c net.PacketConn, done chan<- string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#testableNetwork",
+              "documentation": {
+                "identifier": "testableNetwork",
+                "newPage": false,
+                "searchKey": "syslog.testableNetwork",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testableNetwork(network string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testableNetwork(network string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#runStreamSyslog",
+              "documentation": {
+                "identifier": "runStreamSyslog",
+                "newPage": false,
+                "searchKey": "syslog.runStreamSyslog",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runStreamSyslog(l net.Listener, done chan<- string, wg *sync.WaitGroup)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runStreamSyslog(l net.Listener, done chan<- string, wg *sync.WaitGroup)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#startServer",
+              "documentation": {
+                "identifier": "startServer",
+                "newPage": false,
+                "searchKey": "syslog.startServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startServer(n, la string, done chan<- string) (addr string, sock io.Closer, wg *sync.WaitGroup)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startServer(n, la string, done chan<- string) (addr string, sock io.Closer, wg *sync.WaitGroup)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#TestWithSimulated",
+              "documentation": {
+                "identifier": "TestWithSimulated",
+                "newPage": false,
+                "searchKey": "syslog.TestWithSimulated",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWithSimulated(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWithSimulated(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#TestFlap",
+              "documentation": {
+                "identifier": "TestFlap",
+                "newPage": false,
+                "searchKey": "syslog.TestFlap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFlap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFlap(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#TestNew",
+              "documentation": {
+                "identifier": "TestNew",
+                "newPage": false,
+                "searchKey": "syslog.TestNew",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNew(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNew(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#TestNewLogger",
+              "documentation": {
+                "identifier": "TestNewLogger",
+                "newPage": false,
+                "searchKey": "syslog.TestNewLogger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewLogger(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewLogger(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#TestDial",
+              "documentation": {
+                "identifier": "TestDial",
+                "newPage": false,
+                "searchKey": "syslog.TestDial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDial(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDial(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#check",
+              "documentation": {
+                "identifier": "check",
+                "newPage": false,
+                "searchKey": "syslog.check",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func check(t *testing.T, in, out, transport string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc check(t *testing.T, in, out, transport string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#TestWrite",
+              "documentation": {
+                "identifier": "TestWrite",
+                "newPage": false,
+                "searchKey": "syslog.TestWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#TestConcurrentWrite",
+              "documentation": {
+                "identifier": "TestConcurrentWrite",
+                "newPage": false,
+                "searchKey": "syslog.TestConcurrentWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConcurrentWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConcurrentWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/log/syslog#TestConcurrentReconnect",
+              "documentation": {
+                "identifier": "TestConcurrentReconnect",
+                "newPage": false,
+                "searchKey": "syslog.TestConcurrentReconnect",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConcurrentReconnect(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConcurrentReconnect(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

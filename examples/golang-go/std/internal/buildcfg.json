@@ -1,0 +1,761 @@
+{
+  "pathID": "/std/internal/buildcfg",
+  "documentation": {
+    "identifier": "buildcfg",
+    "newPage": true,
+    "searchKey": "std/internal/buildcfg",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package buildcfg"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package buildcfg provides access to the build configuration described by the current environment. It is for use by build tools such as cmd/go or cmd/compile and for setting up go/build's Default context. \n\nNote that it does NOT provide access to the build configuration used to build the currently-running binary. For that, use runtime.GOOS etc as well as internal/goexperiment. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/internal/buildcfg#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#defaultGOROOT",
+              "documentation": {
+                "identifier": "defaultGOROOT",
+                "newPage": false,
+                "searchKey": "buildcfg.defaultGOROOT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultGOROOT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultGOROOT string // set by linker\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOROOT",
+              "documentation": {
+                "identifier": "GOROOT",
+                "newPage": false,
+                "searchKey": "buildcfg.GOROOT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GOROOT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GOROOT = envOr(\"GOROOT\", defaultGOROOT)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOARCH",
+              "documentation": {
+                "identifier": "GOARCH",
+                "newPage": false,
+                "searchKey": "buildcfg.GOARCH",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GOARCH"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GOARCH = envOr(\"GOARCH\", defaultGOARCH)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOOS",
+              "documentation": {
+                "identifier": "GOOS",
+                "newPage": false,
+                "searchKey": "buildcfg.GOOS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GOOS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GOOS = envOr(\"GOOS\", defaultGOOS)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GO386",
+              "documentation": {
+                "identifier": "GO386",
+                "newPage": false,
+                "searchKey": "buildcfg.GO386",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GO386"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GO386 = envOr(\"GO386\", defaultGO386)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOARM",
+              "documentation": {
+                "identifier": "GOARM",
+                "newPage": false,
+                "searchKey": "buildcfg.GOARM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GOARM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GOARM = goarm()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOMIPS",
+              "documentation": {
+                "identifier": "GOMIPS",
+                "newPage": false,
+                "searchKey": "buildcfg.GOMIPS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GOMIPS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GOMIPS = gomips()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOMIPS64",
+              "documentation": {
+                "identifier": "GOMIPS64",
+                "newPage": false,
+                "searchKey": "buildcfg.GOMIPS64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GOMIPS64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GOMIPS64 = gomips64()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOPPC64",
+              "documentation": {
+                "identifier": "GOPPC64",
+                "newPage": false,
+                "searchKey": "buildcfg.GOPPC64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GOPPC64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GOPPC64 = goppc64()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOWASM",
+              "documentation": {
+                "identifier": "GOWASM",
+                "newPage": false,
+                "searchKey": "buildcfg.GOWASM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GOWASM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GOWASM = gowasm()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GO_LDSO",
+              "documentation": {
+                "identifier": "GO_LDSO",
+                "newPage": false,
+                "searchKey": "buildcfg.GO_LDSO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var GO_LDSO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar GO_LDSO = defaultGO_LDSO\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#Version",
+              "documentation": {
+                "identifier": "Version",
+                "newPage": false,
+                "searchKey": "buildcfg.Version",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Version"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Version = version\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#Error",
+              "documentation": {
+                "identifier": "Error",
+                "newPage": false,
+                "searchKey": "buildcfg.Error",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Error error\n```\n\nError is one of the errors found (if any) in the build configuration. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#Experiment",
+              "documentation": {
+                "identifier": "Experiment",
+                "newPage": false,
+                "searchKey": "buildcfg.Experiment",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Experiment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Experiment goexperiment.Flags = parseExperiments()\n```\n\nExperiment contains the toolchain experiments enabled for the current build. \n\n(This is not necessarily the set of experiments the compiler itself was built with.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#regabiSupported",
+              "documentation": {
+                "identifier": "regabiSupported",
+                "newPage": false,
+                "searchKey": "buildcfg.regabiSupported",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var regabiSupported"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar regabiSupported = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#experimentBaseline",
+              "documentation": {
+                "identifier": "experimentBaseline",
+                "newPage": false,
+                "searchKey": "buildcfg.experimentBaseline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var experimentBaseline"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar experimentBaseline = ...\n```\n\nexperimentBaseline specifies the experiment flags that are enabled by default in the current toolchain. This is, in effect, the \"control\" configuration and any variation from this is an experiment. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#FramePointerEnabled",
+              "documentation": {
+                "identifier": "FramePointerEnabled",
+                "newPage": false,
+                "searchKey": "buildcfg.FramePointerEnabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FramePointerEnabled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FramePointerEnabled = GOARCH == \"amd64\" || GOARCH == \"arm64\"\n```\n\nFramePointerEnabled enables the use of platform conventions for saving frame pointers. \n\nThis used to be an experiment, but now it's always enabled on platforms that support it. \n\nNote: must agree with runtime.framepointer_enabled. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/buildcfg#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#gowasmFeatures",
+              "documentation": {
+                "identifier": "gowasmFeatures",
+                "newPage": false,
+                "searchKey": "buildcfg.gowasmFeatures",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gowasmFeatures struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gowasmFeatures struct {\n\tSignExt bool\n\tSatConv bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/internal/buildcfg#gowasm",
+                    "documentation": {
+                      "identifier": "gowasm",
+                      "newPage": false,
+                      "searchKey": "buildcfg.gowasm",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func gowasm() (f gowasmFeatures)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc gowasm() (f gowasmFeatures)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/internal/buildcfg#gowasmFeatures.String",
+                    "documentation": {
+                      "identifier": "gowasmFeatures.String",
+                      "newPage": false,
+                      "searchKey": "buildcfg.gowasmFeatures.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f gowasmFeatures) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f gowasmFeatures) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/buildcfg#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#Check",
+              "documentation": {
+                "identifier": "Check",
+                "newPage": false,
+                "searchKey": "buildcfg.Check",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Check()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Check()\n```\n\nCheck exits the program with a fatal error if Error is non-nil. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#envOr",
+              "documentation": {
+                "identifier": "envOr",
+                "newPage": false,
+                "searchKey": "buildcfg.envOr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func envOr(key, value string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc envOr(key, value string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#goarm",
+              "documentation": {
+                "identifier": "goarm",
+                "newPage": false,
+                "searchKey": "buildcfg.goarm",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func goarm() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc goarm() int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#gomips",
+              "documentation": {
+                "identifier": "gomips",
+                "newPage": false,
+                "searchKey": "buildcfg.gomips",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gomips() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gomips() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#gomips64",
+              "documentation": {
+                "identifier": "gomips64",
+                "newPage": false,
+                "searchKey": "buildcfg.gomips64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func gomips64() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc gomips64() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#goppc64",
+              "documentation": {
+                "identifier": "goppc64",
+                "newPage": false,
+                "searchKey": "buildcfg.goppc64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func goppc64() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc goppc64() int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#Getgoextlinkenabled",
+              "documentation": {
+                "identifier": "Getgoextlinkenabled",
+                "newPage": false,
+                "searchKey": "buildcfg.Getgoextlinkenabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Getgoextlinkenabled() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Getgoextlinkenabled() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#parseExperiments",
+              "documentation": {
+                "identifier": "parseExperiments",
+                "newPage": false,
+                "searchKey": "buildcfg.parseExperiments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseExperiments() goexperiment.Flags"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseExperiments() goexperiment.Flags\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#expList",
+              "documentation": {
+                "identifier": "expList",
+                "newPage": false,
+                "searchKey": "buildcfg.expList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expList(exp, base *goexperiment.Flags, all bool) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expList(exp, base *goexperiment.Flags, all bool) []string\n```\n\nexpList returns the list of lower-cased experiment names for experiments that differ from base. base may be nil to indicate no experiments. If all is true, then include all experiment flags, regardless of base. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#GOEXPERIMENT",
+              "documentation": {
+                "identifier": "GOEXPERIMENT",
+                "newPage": false,
+                "searchKey": "buildcfg.GOEXPERIMENT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func GOEXPERIMENT() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc GOEXPERIMENT() string\n```\n\nGOEXPERIMENT is a comma-separated list of enabled or disabled experiments that differ from the baseline experiment configuration. GOEXPERIMENT is exactly what a user would set on the command line to get the set of enabled experiments. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#EnabledExperiments",
+              "documentation": {
+                "identifier": "EnabledExperiments",
+                "newPage": false,
+                "searchKey": "buildcfg.EnabledExperiments",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EnabledExperiments() []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EnabledExperiments() []string\n```\n\nEnabledExperiments returns a list of enabled experiments, as lower-cased experiment names. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/buildcfg#AllExperiments",
+              "documentation": {
+                "identifier": "AllExperiments",
+                "newPage": false,
+                "searchKey": "buildcfg.AllExperiments",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AllExperiments() []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AllExperiments() []string\n```\n\nAllExperiments returns a list of all experiment settings. Disabled experiments appear in the list prefixed by \"no\". \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

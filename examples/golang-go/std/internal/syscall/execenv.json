@@ -1,0 +1,62 @@
+{
+  "pathID": "/std/internal/syscall/execenv",
+  "documentation": {
+    "identifier": "execenv",
+    "newPage": true,
+    "searchKey": "std/internal/syscall/execenv",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package execenv"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/internal/syscall/execenv#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/syscall/execenv#Default",
+              "documentation": {
+                "identifier": "Default",
+                "newPage": false,
+                "searchKey": "execenv.Default",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Default(sys *syscall.SysProcAttr) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Default(sys *syscall.SysProcAttr) ([]string, error)\n```\n\nDefault will return the default environment variables based on the process attributes provided. \n\nDefaults to syscall.Environ() on all platforms other than Windows. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "pathID": "/std/internal/race",
+  "documentation": {
+    "identifier": "race",
+    "newPage": true,
+    "searchKey": "std/internal/race",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package race"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package race contains helper functions for manually instrumenting code for the race detector. \n\nThe runtime package intentionally exports these functions only in the race build; this package exports them unconditionally but without the \"race\" build tag they are no-ops. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/internal/race#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/race#Enabled",
+              "documentation": {
+                "identifier": "Enabled",
+                "newPage": false,
+                "searchKey": "race.Enabled",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Enabled"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Enabled = false\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/internal/race#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/internal/race#Acquire",
+              "documentation": {
+                "identifier": "Acquire",
+                "newPage": false,
+                "searchKey": "race.Acquire",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Acquire(addr unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Acquire(addr unsafe.Pointer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#Release",
+              "documentation": {
+                "identifier": "Release",
+                "newPage": false,
+                "searchKey": "race.Release",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Release(addr unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Release(addr unsafe.Pointer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#ReleaseMerge",
+              "documentation": {
+                "identifier": "ReleaseMerge",
+                "newPage": false,
+                "searchKey": "race.ReleaseMerge",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReleaseMerge(addr unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReleaseMerge(addr unsafe.Pointer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#Disable",
+              "documentation": {
+                "identifier": "Disable",
+                "newPage": false,
+                "searchKey": "race.Disable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Disable()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Disable()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#Enable",
+              "documentation": {
+                "identifier": "Enable",
+                "newPage": false,
+                "searchKey": "race.Enable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Enable()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Enable()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#Read",
+              "documentation": {
+                "identifier": "Read",
+                "newPage": false,
+                "searchKey": "race.Read",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Read(addr unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Read(addr unsafe.Pointer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#Write",
+              "documentation": {
+                "identifier": "Write",
+                "newPage": false,
+                "searchKey": "race.Write",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Write(addr unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Write(addr unsafe.Pointer)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#ReadRange",
+              "documentation": {
+                "identifier": "ReadRange",
+                "newPage": false,
+                "searchKey": "race.ReadRange",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadRange(addr unsafe.Pointer, len int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadRange(addr unsafe.Pointer, len int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#WriteRange",
+              "documentation": {
+                "identifier": "WriteRange",
+                "newPage": false,
+                "searchKey": "race.WriteRange",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WriteRange(addr unsafe.Pointer, len int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WriteRange(addr unsafe.Pointer, len int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/internal/race#Errors",
+              "documentation": {
+                "identifier": "Errors",
+                "newPage": false,
+                "searchKey": "race.Errors",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Errors() int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Errors() int\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

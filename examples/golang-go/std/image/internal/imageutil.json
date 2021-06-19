@@ -1,0 +1,62 @@
+{
+  "pathID": "/std/image/internal/imageutil",
+  "documentation": {
+    "identifier": "imageutil",
+    "newPage": true,
+    "searchKey": "std/image/internal/imageutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package imageutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package imageutil contains code shared by image-related packages. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/image/internal/imageutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/image/internal/imageutil#DrawYCbCr",
+              "documentation": {
+                "identifier": "DrawYCbCr",
+                "newPage": false,
+                "searchKey": "imageutil.DrawYCbCr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DrawYCbCr(dst *image.RGBA, r image.Rectangle, src *image.YCbCr, sp image.Point) (ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DrawYCbCr(dst *image.RGBA, r image.Rectangle, src *image.YCbCr, sp image.Point) (ok bool)\n```\n\nDrawYCbCr draws the YCbCr source image on the RGBA destination image with r.Min in dst aligned with sp in src. It reports whether the draw was successful. If it returns false, no dst pixels were changed. \n\nThis function assumes that r is entirely within dst's bounds and the translation of r from dst coordinate space to src coordinate space is entirely within src's bounds. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

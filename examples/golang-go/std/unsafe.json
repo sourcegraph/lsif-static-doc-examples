@@ -1,0 +1,244 @@
+{
+  "pathID": "/std/unsafe",
+  "documentation": {
+    "identifier": "unsafe",
+    "newPage": true,
+    "searchKey": "std/unsafe",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package unsafe"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package unsafe contains operations that step around the type safety of Go programs. \n\nPackages that import unsafe may be non-portable and are not protected by the Go 1 compatibility guidelines. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/unsafe#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unsafe#ArbitraryType",
+              "documentation": {
+                "identifier": "ArbitraryType",
+                "newPage": false,
+                "searchKey": "unsafe.ArbitraryType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ArbitraryType int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ArbitraryType int\n```\n\nArbitraryType is here for the purposes of documentation only and is not actually part of the unsafe package. It represents the type of an arbitrary Go expression. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unsafe#IntegerType",
+              "documentation": {
+                "identifier": "IntegerType",
+                "newPage": false,
+                "searchKey": "unsafe.IntegerType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IntegerType int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IntegerType int\n```\n\nIntegerType is here for the purposes of documentation only and is not actually part of the unsafe package. It represents any arbitrary integer type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unsafe#Pointer",
+              "documentation": {
+                "identifier": "Pointer",
+                "newPage": false,
+                "searchKey": "unsafe.Pointer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Pointer *unsafe.ArbitraryType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Pointer *ArbitraryType\n```\n\nPointer represents a pointer to an arbitrary type. There are four special operations available for type Pointer that are not available for other types: \n\n```\n- A pointer value of any type can be converted to a Pointer.\n- A Pointer can be converted to a pointer value of any type.\n- A uintptr can be converted to a Pointer.\n- A Pointer can be converted to a uintptr.\n\n```\nPointer therefore allows a program to defeat the type system and read and write arbitrary memory. It should be used with extreme care. \n\nThe following patterns involving Pointer are valid. Code not using these patterns is likely to be invalid today or to become invalid in the future. Even the valid patterns below come with important caveats. \n\nRunning \"go vet\" can help find uses of Pointer that do not conform to these patterns, but silence from \"go vet\" is not a guarantee that the code is valid. \n\n(1) Conversion of a *T1 to Pointer to *T2. \n\nProvided that T2 is no larger than T1 and that the two share an equivalent memory layout, this conversion allows reinterpreting data of one type as data of another type. An example is the implementation of math.Float64bits: \n\n```\nfunc Float64bits(f float64) uint64 {\n\treturn *(*uint64)(unsafe.Pointer(&f))\n}\n\n```\n(2) Conversion of a Pointer to a uintptr (but not back to Pointer). \n\nConverting a Pointer to a uintptr produces the memory address of the value pointed at, as an integer. The usual use for such a uintptr is to print it. \n\nConversion of a uintptr back to Pointer is not valid in general. \n\nA uintptr is an integer, not a reference. Converting a Pointer to a uintptr creates an integer value with no pointer semantics. Even if a uintptr holds the address of some object, the garbage collector will not update that uintptr's value if the object moves, nor will that uintptr keep the object from being reclaimed. \n\nThe remaining patterns enumerate the only valid conversions from uintptr to Pointer. \n\n(3) Conversion of a Pointer to a uintptr and back, with arithmetic. \n\nIf p points into an allocated object, it can be advanced through the object by conversion to uintptr, addition of an offset, and conversion back to Pointer. \n\n```\np = unsafe.Pointer(uintptr(p) + offset)\n\n```\nThe most common use of this pattern is to access fields in a struct or elements of an array: \n\n```\n// equivalent to f := unsafe.Pointer(&s.f)\nf := unsafe.Pointer(uintptr(unsafe.Pointer(&s)) + unsafe.Offsetof(s.f))\n\n// equivalent to e := unsafe.Pointer(&x[i])\ne := unsafe.Pointer(uintptr(unsafe.Pointer(&x[0])) + i*unsafe.Sizeof(x[0]))\n\n```\nIt is valid both to add and to subtract offsets from a pointer in this way. It is also valid to use &^ to round pointers, usually for alignment. In all cases, the result must continue to point into the original allocated object. \n\nUnlike in C, it is not valid to advance a pointer just beyond the end of its original allocation: \n\n```\n// INVALID: end points outside allocated space.\nvar s thing\nend = unsafe.Pointer(uintptr(unsafe.Pointer(&s)) + unsafe.Sizeof(s))\n\n// INVALID: end points outside allocated space.\nb := make([]byte, n)\nend = unsafe.Pointer(uintptr(unsafe.Pointer(&b[0])) + uintptr(n))\n\n```\nNote that both conversions must appear in the same expression, with only the intervening arithmetic between them: \n\n```\n// INVALID: uintptr cannot be stored in variable\n// before conversion back to Pointer.\nu := uintptr(p)\np = unsafe.Pointer(u + offset)\n\n```\nNote that the pointer must point into an allocated object, so it may not be nil. \n\n```\n// INVALID: conversion of nil pointer\nu := unsafe.Pointer(nil)\np := unsafe.Pointer(uintptr(u) + offset)\n\n```\n(4) Conversion of a Pointer to a uintptr when calling syscall.Syscall. \n\nThe Syscall functions in package syscall pass their uintptr arguments directly to the operating system, which then may, depending on the details of the call, reinterpret some of them as pointers. That is, the system call implementation is implicitly converting certain arguments back from uintptr to pointer. \n\nIf a pointer argument must be converted to uintptr for use as an argument, that conversion must appear in the call expression itself: \n\n```\nsyscall.Syscall(SYS_READ, uintptr(fd), uintptr(unsafe.Pointer(p)), uintptr(n))\n\n```\nThe compiler handles a Pointer converted to a uintptr in the argument list of a call to a function implemented in assembly by arranging that the referenced allocated object, if any, is retained and not moved until the call completes, even though from the types alone it would appear that the object is no longer needed during the call. \n\nFor the compiler to recognize this pattern, the conversion must appear in the argument list: \n\n```\n// INVALID: uintptr cannot be stored in variable\n// before implicit conversion back to Pointer during system call.\nu := uintptr(unsafe.Pointer(p))\nsyscall.Syscall(SYS_READ, uintptr(fd), u, uintptr(n))\n\n```\n(5) Conversion of the result of reflect.Value.Pointer or reflect.Value.UnsafeAddr from uintptr to Pointer. \n\nPackage reflect's Value methods named Pointer and UnsafeAddr return type uintptr instead of unsafe.Pointer to keep callers from changing the result to an arbitrary type without first importing \"unsafe\". However, this means that the result is fragile and must be converted to Pointer immediately after making the call, in the same expression: \n\n```\np := (*int)(unsafe.Pointer(reflect.ValueOf(new(int)).Pointer()))\n\n```\nAs in the cases above, it is invalid to store the result before the conversion: \n\n```\n// INVALID: uintptr cannot be stored in variable\n// before conversion back to Pointer.\nu := reflect.ValueOf(new(int)).Pointer()\np := (*int)(unsafe.Pointer(u))\n\n```\n(6) Conversion of a reflect.SliceHeader or reflect.StringHeader Data field to or from Pointer. \n\nAs in the previous case, the reflect data structures SliceHeader and StringHeader declare the field Data as a uintptr to keep callers from changing the result to an arbitrary type without first importing \"unsafe\". However, this means that SliceHeader and StringHeader are only valid when interpreting the content of an actual slice or string value. \n\n```\nvar s string\nhdr := (*reflect.StringHeader)(unsafe.Pointer(&s)) // case 1\nhdr.Data = uintptr(unsafe.Pointer(p))              // case 6 (this case)\nhdr.Len = n\n\n```\nIn this usage hdr.Data is really an alternate way to refer to the underlying pointer in the string header, not a uintptr variable itself. \n\nIn general, reflect.SliceHeader and reflect.StringHeader should be used only as *reflect.SliceHeader and *reflect.StringHeader pointing at actual slices or strings, never as plain structs. A program should not declare or allocate variables of these struct types. \n\n```\n// INVALID: a directly-declared header will not hold Data as a reference.\nvar hdr reflect.StringHeader\nhdr.Data = uintptr(unsafe.Pointer(p))\nhdr.Len = n\ns := *(*string)(unsafe.Pointer(&hdr)) // p possibly already lost\n\n```\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/unsafe#Add",
+                    "documentation": {
+                      "identifier": "Add",
+                      "newPage": false,
+                      "searchKey": "unsafe.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Add(ptr Pointer, len IntegerType) Pointer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Add(ptr Pointer, len IntegerType) Pointer\n```\n\nThe function Add adds len to ptr and returns the updated pointer Pointer(uintptr(ptr) + uintptr(len)). The len argument must be of integer type or an untyped constant. A constant len argument must be representable by a value of type int; if it is an untyped constant it is given type int. The rules for valid uses of Pointer still apply. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/unsafe#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/unsafe#Sizeof",
+              "documentation": {
+                "identifier": "Sizeof",
+                "newPage": false,
+                "searchKey": "unsafe.Sizeof",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Sizeof(x ArbitraryType) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Sizeof(x ArbitraryType) uintptr\n```\n\nSizeof takes an expression x of any type and returns the size in bytes of a hypothetical variable v as if v was declared via var v = x. The size does not include any memory possibly referenced by x. For instance, if x is a slice, Sizeof returns the size of the slice descriptor, not the size of the memory referenced by the slice. The return value of Sizeof is a Go constant. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unsafe#Offsetof",
+              "documentation": {
+                "identifier": "Offsetof",
+                "newPage": false,
+                "searchKey": "unsafe.Offsetof",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Offsetof(x ArbitraryType) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Offsetof(x ArbitraryType) uintptr\n```\n\nOffsetof returns the offset within the struct of the field represented by x, which must be of the form structValue.field. In other words, it returns the number of bytes between the start of the struct and the start of the field. The return value of Offsetof is a Go constant. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unsafe#Alignof",
+              "documentation": {
+                "identifier": "Alignof",
+                "newPage": false,
+                "searchKey": "unsafe.Alignof",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Alignof(x ArbitraryType) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Alignof(x ArbitraryType) uintptr\n```\n\nAlignof takes an expression x of any type and returns the required alignment of a hypothetical variable v as if v was declared via var v = x. It is the largest value m such that the address of v is always zero mod m. It is the same as the value returned by reflect.TypeOf(x).Align(). As a special case, if a variable s is of struct type and f is a field within that struct, then Alignof(s.f) will return the required alignment of a field of that type within a struct. This case is the same as the value returned by reflect.TypeOf(s.f).FieldAlign(). The return value of Alignof is a Go constant. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/unsafe#Slice",
+              "documentation": {
+                "identifier": "Slice",
+                "newPage": false,
+                "searchKey": "unsafe.Slice",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Slice(ptr *ArbitraryType, len IntegerType) []ArbitraryType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Slice(ptr *ArbitraryType, len IntegerType) []ArbitraryType\n```\n\nThe function Slice returns a slice whose underlying array starts at ptr and whose length and capacity are len: \n\n```\n(*[len]ArbitraryType)(unsafe.Pointer(ptr))[:]\n\n```\nThe len argument must be of integer type or an untyped constant. A constant len argument must be non-negative and representable by a value of type int; if it is an untyped constant it is given type int. If ptr is nil or len is negative at run time, a run-time panic occurs. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2093 @@
+{
+  "pathID": "/std/mime",
+  "documentation": {
+    "identifier": "mime",
+    "newPage": true,
+    "searchKey": "std/mime",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package mime"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package mime implements parts of the MIME spec. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/mime#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/mime#BEncoding",
+              "documentation": {
+                "identifier": "BEncoding",
+                "newPage": false,
+                "searchKey": "mime.BEncoding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const BEncoding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst BEncoding = WordEncoder('b')\n```\n\nBEncoding represents Base64 encoding scheme as defined by RFC 2045. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#QEncoding",
+              "documentation": {
+                "identifier": "QEncoding",
+                "newPage": false,
+                "searchKey": "mime.QEncoding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const QEncoding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst QEncoding = WordEncoder('q')\n```\n\nQEncoding represents the Q-encoding scheme as defined by RFC 2047. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#maxEncodedWordLen",
+              "documentation": {
+                "identifier": "maxEncodedWordLen",
+                "newPage": false,
+                "searchKey": "mime.maxEncodedWordLen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxEncodedWordLen"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxEncodedWordLen = 75\n```\n\nThe maximum length of an encoded-word is 75 characters. See RFC 2047, section 2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#maxContentLen",
+              "documentation": {
+                "identifier": "maxContentLen",
+                "newPage": false,
+                "searchKey": "mime.maxContentLen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxContentLen"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxContentLen = maxEncodedWordLen - len(\"=?UTF-8?q?\") - len(\"?=\")\n```\n\nmaxContentLen is how much content can be encoded, ignoring the header and 2-byte footer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#upperhex",
+              "documentation": {
+                "identifier": "upperhex",
+                "newPage": false,
+                "searchKey": "mime.upperhex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const upperhex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst upperhex = \"0123456789ABCDEF\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/mime#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/mime#errInvalidWord",
+              "documentation": {
+                "identifier": "errInvalidWord",
+                "newPage": false,
+                "searchKey": "mime.errInvalidWord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errInvalidWord"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errInvalidWord = errors.New(\"mime: invalid RFC 2047 encoded-word\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#maxBase64Len",
+              "documentation": {
+                "identifier": "maxBase64Len",
+                "newPage": false,
+                "searchKey": "mime.maxBase64Len",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var maxBase64Len"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar maxBase64Len = base64.StdEncoding.DecodedLen(maxContentLen)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#ErrInvalidMediaParameter",
+              "documentation": {
+                "identifier": "ErrInvalidMediaParameter",
+                "newPage": false,
+                "searchKey": "mime.ErrInvalidMediaParameter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrInvalidMediaParameter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrInvalidMediaParameter = errors.New(\"mime: invalid media parameter\")\n```\n\nErrInvalidMediaParameter is returned by ParseMediaType if the media type value was found but there was an error parsing the optional parameters \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#mimeTypes",
+              "documentation": {
+                "identifier": "mimeTypes",
+                "newPage": false,
+                "searchKey": "mime.mimeTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mimeTypes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mimeTypes sync.Map // map[string]string; \".Z\" => \"application/x-compress\"\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#mimeTypesLower",
+              "documentation": {
+                "identifier": "mimeTypesLower",
+                "newPage": false,
+                "searchKey": "mime.mimeTypesLower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mimeTypesLower"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mimeTypesLower sync.Map // map[string]string; \".z\" => \"application/x-compress\"\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#extensionsMu",
+              "documentation": {
+                "identifier": "extensionsMu",
+                "newPage": false,
+                "searchKey": "mime.extensionsMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var extensionsMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar extensionsMu sync.Mutex // Guards stores (but not loads) on extensions.\n\n```\n\nextensions maps from MIME type to list of lowercase file extensions: \"image/jpeg\" => [\".jpg\", \".jpeg\"] \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#extensions",
+              "documentation": {
+                "identifier": "extensions",
+                "newPage": false,
+                "searchKey": "mime.extensions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var extensions"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar extensions sync.Map // map[string][]string; slice values are append-only.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#builtinTypesLower",
+              "documentation": {
+                "identifier": "builtinTypesLower",
+                "newPage": false,
+                "searchKey": "mime.builtinTypesLower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var builtinTypesLower"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar builtinTypesLower = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#once",
+              "documentation": {
+                "identifier": "once",
+                "newPage": false,
+                "searchKey": "mime.once",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var once"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar once sync.Once // guards initMime\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#testInitMime",
+              "documentation": {
+                "identifier": "testInitMime",
+                "newPage": false,
+                "searchKey": "mime.testInitMime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testInitMime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testInitMime, osInitMime func()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#osInitMime",
+              "documentation": {
+                "identifier": "osInitMime",
+                "newPage": false,
+                "searchKey": "mime.osInitMime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var osInitMime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testInitMime, osInitMime func()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#mimeGlobs",
+              "documentation": {
+                "identifier": "mimeGlobs",
+                "newPage": false,
+                "searchKey": "mime.mimeGlobs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mimeGlobs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mimeGlobs = []string{\n\t\"/usr/local/share/mime/globs2\",\n\t\"/usr/share/mime/globs2\",\n}\n```\n\nSee [https://specifications.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-0.21.html](https://specifications.freedesktop.org/shared-mime-info-spec/shared-mime-info-spec-0.21.html) for the FreeDesktop Shared MIME-info Database specification. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#typeFiles",
+              "documentation": {
+                "identifier": "typeFiles",
+                "newPage": false,
+                "searchKey": "mime.typeFiles",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var typeFiles"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar typeFiles = ...\n```\n\nCommon locations for mime.types files on unix. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#badMediaTypeTests",
+              "documentation": {
+                "identifier": "badMediaTypeTests",
+                "newPage": false,
+                "searchKey": "mime.badMediaTypeTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var badMediaTypeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar badMediaTypeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#formatTests",
+              "documentation": {
+                "identifier": "formatTests",
+                "newPage": false,
+                "searchKey": "mime.formatTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var formatTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar formatTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/mime#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/mime#WordEncoder",
+              "documentation": {
+                "identifier": "WordEncoder",
+                "newPage": false,
+                "searchKey": "mime.WordEncoder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WordEncoder byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WordEncoder byte\n```\n\nA WordEncoder is an RFC 2047 encoded-word encoder. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordEncoder.Encode",
+                    "documentation": {
+                      "identifier": "WordEncoder.Encode",
+                      "newPage": false,
+                      "searchKey": "mime.WordEncoder.Encode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e WordEncoder) Encode(charset, s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e WordEncoder) Encode(charset, s string) string\n```\n\nEncode returns the encoded-word form of s. If s is ASCII without special characters, it is returned unchanged. The provided charset is the IANA charset name of s. It is case insensitive. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordEncoder.encodeWord",
+                    "documentation": {
+                      "identifier": "WordEncoder.encodeWord",
+                      "newPage": false,
+                      "searchKey": "mime.WordEncoder.encodeWord",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e WordEncoder) encodeWord(charset, s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e WordEncoder) encodeWord(charset, s string) string\n```\n\nencodeWord encodes a string into an encoded-word. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordEncoder.bEncode",
+                    "documentation": {
+                      "identifier": "WordEncoder.bEncode",
+                      "newPage": false,
+                      "searchKey": "mime.WordEncoder.bEncode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e WordEncoder) bEncode(buf *strings.Builder, charset, s string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e WordEncoder) bEncode(buf *strings.Builder, charset, s string)\n```\n\nbEncode encodes s using base64 encoding and writes it to buf. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordEncoder.qEncode",
+                    "documentation": {
+                      "identifier": "WordEncoder.qEncode",
+                      "newPage": false,
+                      "searchKey": "mime.WordEncoder.qEncode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e WordEncoder) qEncode(buf *strings.Builder, charset, s string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e WordEncoder) qEncode(buf *strings.Builder, charset, s string)\n```\n\nqEncode encodes s using Q encoding and writes it to buf. It splits the encoded-words when necessary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordEncoder.openWord",
+                    "documentation": {
+                      "identifier": "WordEncoder.openWord",
+                      "newPage": false,
+                      "searchKey": "mime.WordEncoder.openWord",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e WordEncoder) openWord(buf *strings.Builder, charset string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e WordEncoder) openWord(buf *strings.Builder, charset string)\n```\n\nopenWord writes the beginning of an encoded-word into buf. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordEncoder.splitWord",
+                    "documentation": {
+                      "identifier": "WordEncoder.splitWord",
+                      "newPage": false,
+                      "searchKey": "mime.WordEncoder.splitWord",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e WordEncoder) splitWord(buf *strings.Builder, charset string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e WordEncoder) splitWord(buf *strings.Builder, charset string)\n```\n\nsplitWord closes the current encoded-word and opens a new one. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#WordDecoder",
+              "documentation": {
+                "identifier": "WordDecoder",
+                "newPage": false,
+                "searchKey": "mime.WordDecoder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WordDecoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WordDecoder struct {\n\t// CharsetReader, if non-nil, defines a function to generate\n\t// charset-conversion readers, converting from the provided\n\t// charset into UTF-8.\n\t// Charsets are always lower-case. utf-8, iso-8859-1 and us-ascii charsets\n\t// are handled by default.\n\t// One of the CharsetReader's result values must be non-nil.\n\tCharsetReader func(charset string, input io.Reader) (io.Reader, error)\n}\n```\n\nA WordDecoder decodes MIME headers containing RFC 2047 encoded-words. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordDecoder.Decode",
+                    "documentation": {
+                      "identifier": "WordDecoder.Decode",
+                      "newPage": false,
+                      "searchKey": "mime.WordDecoder.Decode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *WordDecoder) Decode(word string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *WordDecoder) Decode(word string) (string, error)\n```\n\nDecode decodes an RFC 2047 encoded-word. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordDecoder.DecodeHeader",
+                    "documentation": {
+                      "identifier": "WordDecoder.DecodeHeader",
+                      "newPage": false,
+                      "searchKey": "mime.WordDecoder.DecodeHeader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *WordDecoder) DecodeHeader(header string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *WordDecoder) DecodeHeader(header string) (string, error)\n```\n\nDecodeHeader decodes all encoded-words of the given string. It returns an error if and only if CharsetReader of d returns an error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/mime#WordDecoder.convert",
+                    "documentation": {
+                      "identifier": "WordDecoder.convert",
+                      "newPage": false,
+                      "searchKey": "mime.WordDecoder.convert",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *WordDecoder) convert(buf *strings.Builder, charset string, content []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *WordDecoder) convert(buf *strings.Builder, charset string, content []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#mediaTypeTest",
+              "documentation": {
+                "identifier": "mediaTypeTest",
+                "newPage": false,
+                "searchKey": "mime.mediaTypeTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type mediaTypeTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype mediaTypeTest struct {\n\tin string\n\tt  string\n\tp  map[string]string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#badMediaTypeTest",
+              "documentation": {
+                "identifier": "badMediaTypeTest",
+                "newPage": false,
+                "searchKey": "mime.badMediaTypeTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type badMediaTypeTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype badMediaTypeTest struct {\n\tin  string\n\tmt  string\n\terr string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#formatTest",
+              "documentation": {
+                "identifier": "formatTest",
+                "newPage": false,
+                "searchKey": "mime.formatTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type formatTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype formatTest struct {\n\ttyp    string\n\tparams map[string]string\n\twant   string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/mime#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/mime#needsEncoding",
+              "documentation": {
+                "identifier": "needsEncoding",
+                "newPage": false,
+                "searchKey": "mime.needsEncoding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func needsEncoding(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc needsEncoding(s string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#writeQString",
+              "documentation": {
+                "identifier": "writeQString",
+                "newPage": false,
+                "searchKey": "mime.writeQString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writeQString(buf *strings.Builder, s string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writeQString(buf *strings.Builder, s string)\n```\n\nwriteQString encodes s using Q encoding and writes it to buf. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#closeWord",
+              "documentation": {
+                "identifier": "closeWord",
+                "newPage": false,
+                "searchKey": "mime.closeWord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func closeWord(buf *strings.Builder)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc closeWord(buf *strings.Builder)\n```\n\ncloseWord writes the end of an encoded-word into buf. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#isUTF8",
+              "documentation": {
+                "identifier": "isUTF8",
+                "newPage": false,
+                "searchKey": "mime.isUTF8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isUTF8(charset string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isUTF8(charset string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#decode",
+              "documentation": {
+                "identifier": "decode",
+                "newPage": false,
+                "searchKey": "mime.decode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decode(encoding byte, text string) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decode(encoding byte, text string) ([]byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#hasNonWhitespace",
+              "documentation": {
+                "identifier": "hasNonWhitespace",
+                "newPage": false,
+                "searchKey": "mime.hasNonWhitespace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasNonWhitespace(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasNonWhitespace(s string) bool\n```\n\nhasNonWhitespace reports whether s (assumed to be ASCII) contains at least one byte of non-whitespace. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#qDecode",
+              "documentation": {
+                "identifier": "qDecode",
+                "newPage": false,
+                "searchKey": "mime.qDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func qDecode(s string) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc qDecode(s string) ([]byte, error)\n```\n\nqDecode decodes a Q encoded string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#readHexByte",
+              "documentation": {
+                "identifier": "readHexByte",
+                "newPage": false,
+                "searchKey": "mime.readHexByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readHexByte(a, b byte) (byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readHexByte(a, b byte) (byte, error)\n```\n\nreadHexByte returns the byte from its quoted-printable representation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#fromHex",
+              "documentation": {
+                "identifier": "fromHex",
+                "newPage": false,
+                "searchKey": "mime.fromHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromHex(b byte) (byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromHex(b byte) (byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#isTSpecial",
+              "documentation": {
+                "identifier": "isTSpecial",
+                "newPage": false,
+                "searchKey": "mime.isTSpecial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isTSpecial(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isTSpecial(r rune) bool\n```\n\nisTSpecial reports whether rune is in 'tspecials' as defined by RFC 1521 and RFC 2045. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#isTokenChar",
+              "documentation": {
+                "identifier": "isTokenChar",
+                "newPage": false,
+                "searchKey": "mime.isTokenChar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isTokenChar(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isTokenChar(r rune) bool\n```\n\nisTokenChar reports whether rune is in 'token' as defined by RFC 1521 and RFC 2045. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#isToken",
+              "documentation": {
+                "identifier": "isToken",
+                "newPage": false,
+                "searchKey": "mime.isToken",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isToken(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isToken(s string) bool\n```\n\nisToken reports whether s is a 'token' as defined by RFC 1521 and RFC 2045. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#FormatMediaType",
+              "documentation": {
+                "identifier": "FormatMediaType",
+                "newPage": false,
+                "searchKey": "mime.FormatMediaType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FormatMediaType(t string, param map[string]string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FormatMediaType(t string, param map[string]string) string\n```\n\nFormatMediaType serializes mediatype t and the parameters param as a media type conforming to RFC 2045 and RFC 2616. The type and parameter names are written in lower-case. When any of the arguments result in a standard violation then FormatMediaType returns the empty string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#checkMediaTypeDisposition",
+              "documentation": {
+                "identifier": "checkMediaTypeDisposition",
+                "newPage": false,
+                "searchKey": "mime.checkMediaTypeDisposition",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkMediaTypeDisposition(s string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkMediaTypeDisposition(s string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#ParseMediaType",
+              "documentation": {
+                "identifier": "ParseMediaType",
+                "newPage": false,
+                "searchKey": "mime.ParseMediaType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseMediaType(v string) (mediatype string, params map[string]string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseMediaType(v string) (mediatype string, params map[string]string, err error)\n```\n\nParseMediaType parses a media type value and any optional parameters, per RFC 1521.  Media types are the values in Content-Type and Content-Disposition headers (RFC 2183). On success, ParseMediaType returns the media type converted to lowercase and trimmed of white space and a non-nil map. If there is an error parsing the optional parameter, the media type will be returned along with the error ErrInvalidMediaParameter. The returned map, params, maps from the lowercase attribute to the attribute value with its case preserved. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#decode2231Enc",
+              "documentation": {
+                "identifier": "decode2231Enc",
+                "newPage": false,
+                "searchKey": "mime.decode2231Enc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decode2231Enc(v string) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decode2231Enc(v string) (string, bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#isNotTokenChar",
+              "documentation": {
+                "identifier": "isNotTokenChar",
+                "newPage": false,
+                "searchKey": "mime.isNotTokenChar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isNotTokenChar(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isNotTokenChar(r rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#consumeToken",
+              "documentation": {
+                "identifier": "consumeToken",
+                "newPage": false,
+                "searchKey": "mime.consumeToken",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func consumeToken(v string) (token, rest string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc consumeToken(v string) (token, rest string)\n```\n\nconsumeToken consumes a token from the beginning of provided string, per RFC 2045 section 5.1 (referenced from 2183), and return the token consumed and the rest of the string. Returns (\"\", v) on failure to consume at least one character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#consumeValue",
+              "documentation": {
+                "identifier": "consumeValue",
+                "newPage": false,
+                "searchKey": "mime.consumeValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func consumeValue(v string) (value, rest string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc consumeValue(v string) (value, rest string)\n```\n\nconsumeValue consumes a \"value\" per RFC 2045, where a value is either a 'token' or a 'quoted-string'.  On success, consumeValue returns the value consumed (and de-quoted/escaped, if a quoted-string) and the rest of the string. On failure, returns (\"\", v). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#consumeMediaParam",
+              "documentation": {
+                "identifier": "consumeMediaParam",
+                "newPage": false,
+                "searchKey": "mime.consumeMediaParam",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func consumeMediaParam(v string) (param, value, rest string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc consumeMediaParam(v string) (param, value, rest string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#percentHexUnescape",
+              "documentation": {
+                "identifier": "percentHexUnescape",
+                "newPage": false,
+                "searchKey": "mime.percentHexUnescape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func percentHexUnescape(s string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc percentHexUnescape(s string) (string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#ishex",
+              "documentation": {
+                "identifier": "ishex",
+                "newPage": false,
+                "searchKey": "mime.ishex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ishex(c byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ishex(c byte) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#unhex",
+              "documentation": {
+                "identifier": "unhex",
+                "newPage": false,
+                "searchKey": "mime.unhex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unhex(c byte) byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unhex(c byte) byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#clearSyncMap",
+              "documentation": {
+                "identifier": "clearSyncMap",
+                "newPage": false,
+                "searchKey": "mime.clearSyncMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func clearSyncMap(m *sync.Map)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc clearSyncMap(m *sync.Map)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#setMimeTypes",
+              "documentation": {
+                "identifier": "setMimeTypes",
+                "newPage": false,
+                "searchKey": "mime.setMimeTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setMimeTypes(lowerExt, mixExt map[string]string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setMimeTypes(lowerExt, mixExt map[string]string)\n```\n\nsetMimeTypes is used by initMime's non-test path, and by tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#initMime",
+              "documentation": {
+                "identifier": "initMime",
+                "newPage": false,
+                "searchKey": "mime.initMime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initMime()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initMime()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TypeByExtension",
+              "documentation": {
+                "identifier": "TypeByExtension",
+                "newPage": false,
+                "searchKey": "mime.TypeByExtension",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TypeByExtension(ext string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TypeByExtension(ext string) string\n```\n\nTypeByExtension returns the MIME type associated with the file extension ext. The extension ext should begin with a leading dot, as in \".html\". When ext has no associated type, TypeByExtension returns \"\". \n\nExtensions are looked up first case-sensitively, then case-insensitively. \n\nThe built-in table is small but on unix it is augmented by the local system's MIME-info database or mime.types file(s) if available under one or more of these names: \n\n```\n/usr/local/share/mime/globs2\n/usr/share/mime/globs2\n/etc/mime.types\n/etc/apache2/mime.types\n/etc/apache/mime.types\n\n```\nOn Windows, MIME types are extracted from the registry. \n\nText types have the charset parameter set to \"utf-8\" by default. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#ExtensionsByType",
+              "documentation": {
+                "identifier": "ExtensionsByType",
+                "newPage": false,
+                "searchKey": "mime.ExtensionsByType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExtensionsByType(typ string) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExtensionsByType(typ string) ([]string, error)\n```\n\nExtensionsByType returns the extensions known to be associated with the MIME type typ. The returned extensions will each begin with a leading dot, as in \".html\". When typ has no associated extensions, ExtensionsByType returns an nil slice. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#AddExtensionType",
+              "documentation": {
+                "identifier": "AddExtensionType",
+                "newPage": false,
+                "searchKey": "mime.AddExtensionType",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AddExtensionType(ext, typ string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AddExtensionType(ext, typ string) error\n```\n\nAddExtensionType sets the MIME type associated with the extension ext to typ. The extension should begin with a leading dot, as in \".html\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#setExtensionType",
+              "documentation": {
+                "identifier": "setExtensionType",
+                "newPage": false,
+                "searchKey": "mime.setExtensionType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setExtensionType(extension, mimeType string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setExtensionType(extension, mimeType string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "mime.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#loadMimeGlobsFile",
+              "documentation": {
+                "identifier": "loadMimeGlobsFile",
+                "newPage": false,
+                "searchKey": "mime.loadMimeGlobsFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadMimeGlobsFile(filename string) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadMimeGlobsFile(filename string) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#loadMimeFile",
+              "documentation": {
+                "identifier": "loadMimeFile",
+                "newPage": false,
+                "searchKey": "mime.loadMimeFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loadMimeFile(filename string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loadMimeFile(filename string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#initMimeUnix",
+              "documentation": {
+                "identifier": "initMimeUnix",
+                "newPage": false,
+                "searchKey": "mime.initMimeUnix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initMimeUnix()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initMimeUnix()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#initMimeForTests",
+              "documentation": {
+                "identifier": "initMimeForTests",
+                "newPage": false,
+                "searchKey": "mime.initMimeForTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initMimeForTests() map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initMimeForTests() map[string]string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestEncodeWord",
+              "documentation": {
+                "identifier": "TestEncodeWord",
+                "newPage": false,
+                "searchKey": "mime.TestEncodeWord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodeWord(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodeWord(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestEncodedWordLength",
+              "documentation": {
+                "identifier": "TestEncodedWordLength",
+                "newPage": false,
+                "searchKey": "mime.TestEncodedWordLength",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodedWordLength(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodedWordLength(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestDecodeWord",
+              "documentation": {
+                "identifier": "TestDecodeWord",
+                "newPage": false,
+                "searchKey": "mime.TestDecodeWord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeWord(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeWord(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestDecodeHeader",
+              "documentation": {
+                "identifier": "TestDecodeHeader",
+                "newPage": false,
+                "searchKey": "mime.TestDecodeHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeHeader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestCharsetDecoder",
+              "documentation": {
+                "identifier": "TestCharsetDecoder",
+                "newPage": false,
+                "searchKey": "mime.TestCharsetDecoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCharsetDecoder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCharsetDecoder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestCharsetDecoderError",
+              "documentation": {
+                "identifier": "TestCharsetDecoderError",
+                "newPage": false,
+                "searchKey": "mime.TestCharsetDecoderError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCharsetDecoderError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCharsetDecoderError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#BenchmarkQEncodeWord",
+              "documentation": {
+                "identifier": "BenchmarkQEncodeWord",
+                "newPage": false,
+                "searchKey": "mime.BenchmarkQEncodeWord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkQEncodeWord(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkQEncodeWord(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#BenchmarkQDecodeWord",
+              "documentation": {
+                "identifier": "BenchmarkQDecodeWord",
+                "newPage": false,
+                "searchKey": "mime.BenchmarkQDecodeWord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkQDecodeWord(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkQDecodeWord(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#BenchmarkQDecodeHeader",
+              "documentation": {
+                "identifier": "BenchmarkQDecodeHeader",
+                "newPage": false,
+                "searchKey": "mime.BenchmarkQDecodeHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkQDecodeHeader(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkQDecodeHeader(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestConsumeToken",
+              "documentation": {
+                "identifier": "TestConsumeToken",
+                "newPage": false,
+                "searchKey": "mime.TestConsumeToken",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConsumeToken(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConsumeToken(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestConsumeValue",
+              "documentation": {
+                "identifier": "TestConsumeValue",
+                "newPage": false,
+                "searchKey": "mime.TestConsumeValue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConsumeValue(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConsumeValue(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestConsumeMediaParam",
+              "documentation": {
+                "identifier": "TestConsumeMediaParam",
+                "newPage": false,
+                "searchKey": "mime.TestConsumeMediaParam",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConsumeMediaParam(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConsumeMediaParam(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestParseMediaType",
+              "documentation": {
+                "identifier": "TestParseMediaType",
+                "newPage": false,
+                "searchKey": "mime.TestParseMediaType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseMediaType(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseMediaType(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestParseMediaTypeBogus",
+              "documentation": {
+                "identifier": "TestParseMediaTypeBogus",
+                "newPage": false,
+                "searchKey": "mime.TestParseMediaTypeBogus",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseMediaTypeBogus(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseMediaTypeBogus(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestFormatMediaType",
+              "documentation": {
+                "identifier": "TestFormatMediaType",
+                "newPage": false,
+                "searchKey": "mime.TestFormatMediaType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatMediaType(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatMediaType(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#setMimeInit",
+              "documentation": {
+                "identifier": "setMimeInit",
+                "newPage": false,
+                "searchKey": "mime.setMimeInit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setMimeInit(fn func()) (cleanup func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setMimeInit(fn func()) (cleanup func())\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#clearMimeTypes",
+              "documentation": {
+                "identifier": "clearMimeTypes",
+                "newPage": false,
+                "searchKey": "mime.clearMimeTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func clearMimeTypes()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc clearMimeTypes()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#setType",
+              "documentation": {
+                "identifier": "setType",
+                "newPage": false,
+                "searchKey": "mime.setType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setType(ext, typ string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setType(ext, typ string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestTypeByExtension",
+              "documentation": {
+                "identifier": "TestTypeByExtension",
+                "newPage": false,
+                "searchKey": "mime.TestTypeByExtension",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypeByExtension(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypeByExtension(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestTypeByExtension_LocalData",
+              "documentation": {
+                "identifier": "TestTypeByExtension_LocalData",
+                "newPage": false,
+                "searchKey": "mime.TestTypeByExtension_LocalData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypeByExtension_LocalData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypeByExtension_LocalData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestTypeByExtensionCase",
+              "documentation": {
+                "identifier": "TestTypeByExtensionCase",
+                "newPage": false,
+                "searchKey": "mime.TestTypeByExtensionCase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypeByExtensionCase(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypeByExtensionCase(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestExtensionsByType",
+              "documentation": {
+                "identifier": "TestExtensionsByType",
+                "newPage": false,
+                "searchKey": "mime.TestExtensionsByType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExtensionsByType(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExtensionsByType(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestLookupMallocs",
+              "documentation": {
+                "identifier": "TestLookupMallocs",
+                "newPage": false,
+                "searchKey": "mime.TestLookupMallocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookupMallocs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookupMallocs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#BenchmarkTypeByExtension",
+              "documentation": {
+                "identifier": "BenchmarkTypeByExtension",
+                "newPage": false,
+                "searchKey": "mime.BenchmarkTypeByExtension",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTypeByExtension(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTypeByExtension(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#BenchmarkExtensionsByType",
+              "documentation": {
+                "identifier": "BenchmarkExtensionsByType",
+                "newPage": false,
+                "searchKey": "mime.BenchmarkExtensionsByType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkExtensionsByType(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkExtensionsByType(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestExtensionsByType2",
+              "documentation": {
+                "identifier": "TestExtensionsByType2",
+                "newPage": false,
+                "searchKey": "mime.TestExtensionsByType2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExtensionsByType2(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExtensionsByType2(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#initMimeUnixTest",
+              "documentation": {
+                "identifier": "initMimeUnixTest",
+                "newPage": false,
+                "searchKey": "mime.initMimeUnixTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initMimeUnixTest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initMimeUnixTest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/mime#TestTypeByExtensionUNIX",
+              "documentation": {
+                "identifier": "TestTypeByExtensionUNIX",
+                "newPage": false,
+                "searchKey": "mime.TestTypeByExtensionUNIX",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypeByExtensionUNIX(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypeByExtensionUNIX(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/std/mime/multipart"
+    },
+    {
+      "pathID": "/std/mime/multipart_test"
+    },
+    {
+      "pathID": "/std/mime/quotedprintable"
+    },
+    {
+      "pathID": "/std/mime/quotedprintable_test"
+    }
+  ]
+}

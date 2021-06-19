@@ -1,0 +1,1142 @@
+{
+  "pathID": "/std/compress/lzw",
+  "documentation": {
+    "identifier": "lzw",
+    "newPage": true,
+    "searchKey": "std/compress/lzw",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package lzw"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package lzw implements the Lempel-Ziv-Welch compressed data format, described in T. A. Welch, `A Technique for High-Performance Data Compression', Computer, 17(6) (June 1984), pp 8-19. \n\nIn particular, it implements LZW as used by the GIF and PDF file formats, which means variable-width codes up to 12 bits and the first two non-literal codes are a clear code and an EOF code. \n\nThe TIFF file format uses a similar but incompatible version of the LZW algorithm. See the golang.org/x/image/tiff/lzw package for an implementation. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/compress/lzw#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#LSB",
+              "documentation": {
+                "identifier": "LSB",
+                "newPage": false,
+                "searchKey": "lzw.LSB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LSB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LSB Order = iota\n```\n\nLSB means Least Significant Bits first, as used in the GIF file format. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#MSB",
+              "documentation": {
+                "identifier": "MSB",
+                "newPage": false,
+                "searchKey": "lzw.MSB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MSB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MSB\n```\n\nMSB means Most Significant Bits first, as used in the TIFF and PDF file formats. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#maxWidth",
+              "documentation": {
+                "identifier": "maxWidth",
+                "newPage": false,
+                "searchKey": "lzw.maxWidth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxWidth"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxWidth = 12\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#decoderInvalidCode",
+              "documentation": {
+                "identifier": "decoderInvalidCode",
+                "newPage": false,
+                "searchKey": "lzw.decoderInvalidCode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const decoderInvalidCode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst decoderInvalidCode = 0xffff\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#flushBuffer",
+              "documentation": {
+                "identifier": "flushBuffer",
+                "newPage": false,
+                "searchKey": "lzw.flushBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const flushBuffer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst flushBuffer = 1 << maxWidth\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#maxCode",
+              "documentation": {
+                "identifier": "maxCode",
+                "newPage": false,
+                "searchKey": "lzw.maxCode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxCode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxCode = 1<<12 - 1\n```\n\nA code is a 12 bit value, stored as a uint32 when encoding to avoid type conversions when shifting bits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#invalidCode",
+              "documentation": {
+                "identifier": "invalidCode",
+                "newPage": false,
+                "searchKey": "lzw.invalidCode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const invalidCode"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst invalidCode = 1<<32 - 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#tableSize",
+              "documentation": {
+                "identifier": "tableSize",
+                "newPage": false,
+                "searchKey": "lzw.tableSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const tableSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst tableSize = 4 * 1 << 12\n```\n\nThere are 1<<12 possible codes, which is an upper bound on the number of valid hash table entries at any given point in time. tableSize is 4x that. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#tableMask",
+              "documentation": {
+                "identifier": "tableMask",
+                "newPage": false,
+                "searchKey": "lzw.tableMask",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const tableMask"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst tableMask = tableSize - 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#invalidEntry",
+              "documentation": {
+                "identifier": "invalidEntry",
+                "newPage": false,
+                "searchKey": "lzw.invalidEntry",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const invalidEntry"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst invalidEntry = 0\n```\n\nA hash table entry is a uint32. Zero is an invalid entry since the lower 12 bits of a valid entry must be a non-literal code. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/compress/lzw#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#errClosed",
+              "documentation": {
+                "identifier": "errClosed",
+                "newPage": false,
+                "searchKey": "lzw.errClosed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errClosed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errClosed = errors.New(\"lzw: reader/writer is closed\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#errOutOfCodes",
+              "documentation": {
+                "identifier": "errOutOfCodes",
+                "newPage": false,
+                "searchKey": "lzw.errOutOfCodes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errOutOfCodes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errOutOfCodes = errors.New(\"lzw: out of codes\")\n```\n\nerrOutOfCodes is an internal error that means that the writer has run out of unused codes and a clear code needs to be sent next. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#lzwTests",
+              "documentation": {
+                "identifier": "lzwTests",
+                "newPage": false,
+                "searchKey": "lzw.lzwTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lzwTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lzwTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#filenames",
+              "documentation": {
+                "identifier": "filenames",
+                "newPage": false,
+                "searchKey": "lzw.filenames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var filenames"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar filenames = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/compress/lzw#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#Order",
+              "documentation": {
+                "identifier": "Order",
+                "newPage": false,
+                "searchKey": "lzw.Order",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Order int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Order int\n```\n\nOrder specifies the bit ordering in an LZW data stream. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#Reader",
+              "documentation": {
+                "identifier": "Reader",
+                "newPage": false,
+                "searchKey": "lzw.Reader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reader struct {\n\tr        io.ByteReader\n\tbits     uint32\n\tnBits    uint\n\twidth    uint\n\tread     func(*Reader) (uint16, error) // readLSB or readMSB\n\tlitWidth int                           // width in bits of literal codes\n\terr      error\n\n\t// The first 1<<litWidth codes are literal codes.\n\t// The next two codes mean clear and EOF.\n\t// Other valid codes are in the range [lo, hi] where lo := clear + 2,\n\t// with the upper bound incrementing on each code seen.\n\t//\n\t// overflow is the code at which hi overflows the code width. It always\n\t// equals 1 << width.\n\t//\n\t// last is the most recently seen code, or decoderInvalidCode.\n\t//\n\t// An invariant is that hi < overflow.\n\tclear, eof, hi, overflow, last uint16\n\n\t// Each code c in [lo, hi] expands to two or more bytes. For c != hi:\n\t//   suffix[c] is the last of these bytes.\n\t//   prefix[c] is the code for all but the last byte.\n\t//   This code can either be a literal code or another code in [lo, c).\n\t// The c == hi case is a special case.\n\tsuffix [1 << maxWidth]uint8\n\tprefix [1 << maxWidth]uint16\n\n\t// output is the temporary output buffer.\n\t// Literal codes are accumulated from the start of the buffer.\n\t// Non-literal codes decode to a sequence of suffixes that are first\n\t// written right-to-left from the end of the buffer before being copied\n\t// to the start of the buffer.\n\t// It is flushed when it contains >= 1<<maxWidth bytes,\n\t// so that there is always room to decode an entire code.\n\toutput [2 * 1 << maxWidth]byte\n\to      int    // write index into output\n\ttoRead []byte // bytes to return from Read\n}\n```\n\nReader is an io.Reader which can be used to read compressed data in the LZW format. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#newReader",
+                    "documentation": {
+                      "identifier": "newReader",
+                      "newPage": false,
+                      "searchKey": "lzw.newReader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newReader(src io.Reader, order Order, litWidth int) *Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newReader(src io.Reader, order Order, litWidth int) *Reader\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Reader.readLSB",
+                    "documentation": {
+                      "identifier": "Reader.readLSB",
+                      "newPage": false,
+                      "searchKey": "lzw.Reader.readLSB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) readLSB() (uint16, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) readLSB() (uint16, error)\n```\n\nreadLSB returns the next code for \"Least Significant Bits first\" data. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Reader.readMSB",
+                    "documentation": {
+                      "identifier": "Reader.readMSB",
+                      "newPage": false,
+                      "searchKey": "lzw.Reader.readMSB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) readMSB() (uint16, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) readMSB() (uint16, error)\n```\n\nreadMSB returns the next code for \"Most Significant Bits first\" data. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Reader.Read",
+                    "documentation": {
+                      "identifier": "Reader.Read",
+                      "newPage": false,
+                      "searchKey": "lzw.Reader.Read",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Read(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Read(b []byte) (int, error)\n```\n\nRead implements io.Reader, reading uncompressed bytes from its underlying Reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Reader.decode",
+                    "documentation": {
+                      "identifier": "Reader.decode",
+                      "newPage": false,
+                      "searchKey": "lzw.Reader.decode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) decode()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) decode()\n```\n\ndecode decompresses bytes from r and leaves them in d.toRead. read specifies how to decode bytes into codes. litWidth is the width in bits of literal codes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Reader.Close",
+                    "documentation": {
+                      "identifier": "Reader.Close",
+                      "newPage": false,
+                      "searchKey": "lzw.Reader.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Close() error\n```\n\nClose closes the Reader and returns an error for any future read operation. It does not close the underlying io.Reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Reader.Reset",
+                    "documentation": {
+                      "identifier": "Reader.Reset",
+                      "newPage": false,
+                      "searchKey": "lzw.Reader.Reset",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Reset(src io.Reader, order Order, litWidth int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Reset(src io.Reader, order Order, litWidth int)\n```\n\nReset clears the Reader's state and allows it to be reused again as a new Reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Reader.init",
+                    "documentation": {
+                      "identifier": "Reader.init",
+                      "newPage": false,
+                      "searchKey": "lzw.Reader.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) init(src io.Reader, order Order, litWidth int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) init(src io.Reader, order Order, litWidth int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#writer",
+              "documentation": {
+                "identifier": "writer",
+                "newPage": false,
+                "searchKey": "lzw.writer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writer interface {\n\tio.ByteWriter\n\tFlush() error\n}\n```\n\nA writer is a buffered, flushable writer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#Writer",
+              "documentation": {
+                "identifier": "Writer",
+                "newPage": false,
+                "searchKey": "lzw.Writer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Writer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Writer struct {\n\t// w is the writer that compressed bytes are written to.\n\tw writer\n\t// order, write, bits, nBits and width are the state for\n\t// converting a code stream into a byte stream.\n\torder Order\n\twrite func(*Writer, uint32) error\n\tbits  uint32\n\tnBits uint\n\twidth uint\n\t// litWidth is the width in bits of literal codes.\n\tlitWidth uint\n\t// hi is the code implied by the next code emission.\n\t// overflow is the code at which hi overflows the code width.\n\thi, overflow uint32\n\t// savedCode is the accumulated code at the end of the most recent Write\n\t// call. It is equal to invalidCode if there was no such call.\n\tsavedCode uint32\n\t// err is the first error encountered during writing. Closing the writer\n\t// will make any future Write calls return errClosed\n\terr error\n\t// table is the hash table from 20-bit keys to 12-bit values. Each table\n\t// entry contains key<<12|val and collisions resolve by linear probing.\n\t// The keys consist of a 12-bit code prefix and an 8-bit byte suffix.\n\t// The values are a 12-bit code.\n\ttable [tableSize]uint32\n}\n```\n\nWriter is an LZW compressor. It writes the compressed form of the data to an underlying writer (see NewWriter). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#newWriter",
+                    "documentation": {
+                      "identifier": "newWriter",
+                      "newPage": false,
+                      "searchKey": "lzw.newWriter",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newWriter(dst io.Writer, order Order, litWidth int) *Writer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newWriter(dst io.Writer, order Order, litWidth int) *Writer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Writer.writeLSB",
+                    "documentation": {
+                      "identifier": "Writer.writeLSB",
+                      "newPage": false,
+                      "searchKey": "lzw.Writer.writeLSB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) writeLSB(c uint32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) writeLSB(c uint32) error\n```\n\nwriteLSB writes the code c for \"Least Significant Bits first\" data. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Writer.writeMSB",
+                    "documentation": {
+                      "identifier": "Writer.writeMSB",
+                      "newPage": false,
+                      "searchKey": "lzw.Writer.writeMSB",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) writeMSB(c uint32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) writeMSB(c uint32) error\n```\n\nwriteMSB writes the code c for \"Most Significant Bits first\" data. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Writer.incHi",
+                    "documentation": {
+                      "identifier": "Writer.incHi",
+                      "newPage": false,
+                      "searchKey": "lzw.Writer.incHi",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) incHi() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) incHi() error\n```\n\nincHi increments e.hi and checks for both overflow and running out of unused codes. In the latter case, incHi sends a clear code, resets the writer state and returns errOutOfCodes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Writer.Write",
+                    "documentation": {
+                      "identifier": "Writer.Write",
+                      "newPage": false,
+                      "searchKey": "lzw.Writer.Write",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Write(p []byte) (n int, err error)\n```\n\nWrite writes a compressed representation of p to w's underlying writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Writer.Close",
+                    "documentation": {
+                      "identifier": "Writer.Close",
+                      "newPage": false,
+                      "searchKey": "lzw.Writer.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Close() error\n```\n\nClose closes the Writer, flushing any pending output. It does not close w's underlying writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Writer.Reset",
+                    "documentation": {
+                      "identifier": "Writer.Reset",
+                      "newPage": false,
+                      "searchKey": "lzw.Writer.Reset",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) Reset(dst io.Writer, order Order, litWidth int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) Reset(dst io.Writer, order Order, litWidth int)\n```\n\nReset clears the Writer's state and allows it to be reused again as a new Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#Writer.init",
+                    "documentation": {
+                      "identifier": "Writer.init",
+                      "newPage": false,
+                      "searchKey": "lzw.Writer.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) init(dst io.Writer, order Order, litWidth int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) init(dst io.Writer, order Order, litWidth int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#lzwTest",
+              "documentation": {
+                "identifier": "lzwTest",
+                "newPage": false,
+                "searchKey": "lzw.lzwTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type lzwTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype lzwTest struct {\n\tdesc       string\n\traw        string\n\tcompressed string\n\terr        error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#devZero",
+              "documentation": {
+                "identifier": "devZero",
+                "newPage": false,
+                "searchKey": "lzw.devZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type devZero struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype devZero struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/compress/lzw#devZero.Read",
+                    "documentation": {
+                      "identifier": "devZero.Read",
+                      "newPage": false,
+                      "searchKey": "lzw.devZero.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (devZero) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (devZero) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/compress/lzw#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#NewReader",
+              "documentation": {
+                "identifier": "NewReader",
+                "newPage": false,
+                "searchKey": "lzw.NewReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewReader(r io.Reader, order Order, litWidth int) io.ReadCloser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewReader(r io.Reader, order Order, litWidth int) io.ReadCloser\n```\n\nNewReader creates a new io.ReadCloser. Reads from the returned io.ReadCloser read and decompress data from r. If r does not also implement io.ByteReader, the decompressor may read more data than necessary from r. It is the caller's responsibility to call Close on the ReadCloser when finished reading. The number of bits to use for literal codes, litWidth, must be in the range [2,8] and is typically 8. It must equal the litWidth used during compression. \n\nIt is guaranteed that the underlying type of the returned io.ReadCloser is a *Reader. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#NewWriter",
+              "documentation": {
+                "identifier": "NewWriter",
+                "newPage": false,
+                "searchKey": "lzw.NewWriter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewWriter(w io.Writer, order Order, litWidth int) io.WriteCloser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewWriter(w io.Writer, order Order, litWidth int) io.WriteCloser\n```\n\nNewWriter creates a new io.WriteCloser. Writes to the returned io.WriteCloser are compressed and written to w. It is the caller's responsibility to call Close on the WriteCloser when finished writing. The number of bits to use for literal codes, litWidth, must be in the range [2,8] and is typically 8. Input bytes must be less than 1<<litWidth. \n\nIt is guaranteed that the underlying type of the returned io.WriteCloser is a *Writer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#TestReader",
+              "documentation": {
+                "identifier": "TestReader",
+                "newPage": false,
+                "searchKey": "lzw.TestReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#TestReaderReset",
+              "documentation": {
+                "identifier": "TestReaderReset",
+                "newPage": false,
+                "searchKey": "lzw.TestReaderReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#TestHiCodeDoesNotOverflow",
+              "documentation": {
+                "identifier": "TestHiCodeDoesNotOverflow",
+                "newPage": false,
+                "searchKey": "lzw.TestHiCodeDoesNotOverflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHiCodeDoesNotOverflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHiCodeDoesNotOverflow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#TestNoLongerSavingPriorExpansions",
+              "documentation": {
+                "identifier": "TestNoLongerSavingPriorExpansions",
+                "newPage": false,
+                "searchKey": "lzw.TestNoLongerSavingPriorExpansions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNoLongerSavingPriorExpansions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNoLongerSavingPriorExpansions(t *testing.T)\n```\n\nTestNoLongerSavingPriorExpansions tests the decoder state when codes other than clear codes continue to be seen after decoder.hi and decoder.width reach their maximum values (4095 and 12), i.e. after we no longer save prior expansions. In particular, it tests seeing the highest possible code, 4095. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#BenchmarkDecoder",
+              "documentation": {
+                "identifier": "BenchmarkDecoder",
+                "newPage": false,
+                "searchKey": "lzw.BenchmarkDecoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecoder(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecoder(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#testFile",
+              "documentation": {
+                "identifier": "testFile",
+                "newPage": false,
+                "searchKey": "lzw.testFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testFile(t *testing.T, fn string, order Order, litWidth int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testFile(t *testing.T, fn string, order Order, litWidth int)\n```\n\ntestFile tests that compressing and then decompressing the given file with the given options yields equivalent bytes to the original file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#TestWriter",
+              "documentation": {
+                "identifier": "TestWriter",
+                "newPage": false,
+                "searchKey": "lzw.TestWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#TestWriterReset",
+              "documentation": {
+                "identifier": "TestWriterReset",
+                "newPage": false,
+                "searchKey": "lzw.TestWriterReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#TestWriterReturnValues",
+              "documentation": {
+                "identifier": "TestWriterReturnValues",
+                "newPage": false,
+                "searchKey": "lzw.TestWriterReturnValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReturnValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReturnValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#TestSmallLitWidth",
+              "documentation": {
+                "identifier": "TestSmallLitWidth",
+                "newPage": false,
+                "searchKey": "lzw.TestSmallLitWidth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSmallLitWidth(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSmallLitWidth(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/compress/lzw#BenchmarkEncoder",
+              "documentation": {
+                "identifier": "BenchmarkEncoder",
+                "newPage": false,
+                "searchKey": "lzw.BenchmarkEncoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncoder(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncoder(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

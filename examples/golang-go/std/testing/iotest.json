@@ -1,0 +1,1040 @@
+{
+  "pathID": "/std/testing/iotest",
+  "documentation": {
+    "identifier": "iotest",
+    "newPage": true,
+    "searchKey": "std/testing/iotest",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package iotest"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package iotest implements Readers and Writers useful mainly for testing. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/std/testing/iotest#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#ErrTimeout",
+              "documentation": {
+                "identifier": "ErrTimeout",
+                "newPage": false,
+                "searchKey": "iotest.ErrTimeout",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrTimeout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrTimeout = errors.New(\"timeout\")\n```\n\nErrTimeout is a fake timeout error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#truncateWriterTests",
+              "documentation": {
+                "identifier": "truncateWriterTests",
+                "newPage": false,
+                "searchKey": "iotest.truncateWriterTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var truncateWriterTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar truncateWriterTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/testing/iotest#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#writeLogger",
+              "documentation": {
+                "identifier": "writeLogger",
+                "newPage": false,
+                "searchKey": "iotest.writeLogger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writeLogger struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writeLogger struct {\n\tprefix string\n\tw      io.Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#writeLogger.Write",
+                    "documentation": {
+                      "identifier": "writeLogger.Write",
+                      "newPage": false,
+                      "searchKey": "iotest.writeLogger.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *writeLogger) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *writeLogger) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#readLogger",
+              "documentation": {
+                "identifier": "readLogger",
+                "newPage": false,
+                "searchKey": "iotest.readLogger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readLogger struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readLogger struct {\n\tprefix string\n\tr      io.Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#readLogger.Read",
+                    "documentation": {
+                      "identifier": "readLogger.Read",
+                      "newPage": false,
+                      "searchKey": "iotest.readLogger.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *readLogger) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *readLogger) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#oneByteReader",
+              "documentation": {
+                "identifier": "oneByteReader",
+                "newPage": false,
+                "searchKey": "iotest.oneByteReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type oneByteReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype oneByteReader struct {\n\tr io.Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#oneByteReader.Read",
+                    "documentation": {
+                      "identifier": "oneByteReader.Read",
+                      "newPage": false,
+                      "searchKey": "iotest.oneByteReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *oneByteReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *oneByteReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#halfReader",
+              "documentation": {
+                "identifier": "halfReader",
+                "newPage": false,
+                "searchKey": "iotest.halfReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type halfReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype halfReader struct {\n\tr io.Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#halfReader.Read",
+                    "documentation": {
+                      "identifier": "halfReader.Read",
+                      "newPage": false,
+                      "searchKey": "iotest.halfReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *halfReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *halfReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#dataErrReader",
+              "documentation": {
+                "identifier": "dataErrReader",
+                "newPage": false,
+                "searchKey": "iotest.dataErrReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dataErrReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dataErrReader struct {\n\tr      io.Reader\n\tunread []byte\n\tdata   []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#dataErrReader.Read",
+                    "documentation": {
+                      "identifier": "dataErrReader.Read",
+                      "newPage": false,
+                      "searchKey": "iotest.dataErrReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *dataErrReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *dataErrReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#timeoutReader",
+              "documentation": {
+                "identifier": "timeoutReader",
+                "newPage": false,
+                "searchKey": "iotest.timeoutReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type timeoutReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype timeoutReader struct {\n\tr     io.Reader\n\tcount int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#timeoutReader.Read",
+                    "documentation": {
+                      "identifier": "timeoutReader.Read",
+                      "newPage": false,
+                      "searchKey": "iotest.timeoutReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *timeoutReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *timeoutReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#errReader",
+              "documentation": {
+                "identifier": "errReader",
+                "newPage": false,
+                "searchKey": "iotest.errReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errReader struct {\n\terr error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#errReader.Read",
+                    "documentation": {
+                      "identifier": "errReader.Read",
+                      "newPage": false,
+                      "searchKey": "iotest.errReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *errReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *errReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#smallByteReader",
+              "documentation": {
+                "identifier": "smallByteReader",
+                "newPage": false,
+                "searchKey": "iotest.smallByteReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type smallByteReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype smallByteReader struct {\n\tr   io.Reader\n\toff int\n\tn   int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#smallByteReader.Read",
+                    "documentation": {
+                      "identifier": "smallByteReader.Read",
+                      "newPage": false,
+                      "searchKey": "iotest.smallByteReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *smallByteReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *smallByteReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#truncateWriter",
+              "documentation": {
+                "identifier": "truncateWriter",
+                "newPage": false,
+                "searchKey": "iotest.truncateWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type truncateWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype truncateWriter struct {\n\tw io.Writer\n\tn int64\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#truncateWriter.Write",
+                    "documentation": {
+                      "identifier": "truncateWriter.Write",
+                      "newPage": false,
+                      "searchKey": "iotest.truncateWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *truncateWriter) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *truncateWriter) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#errWriter",
+              "documentation": {
+                "identifier": "errWriter",
+                "newPage": false,
+                "searchKey": "iotest.errWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errWriter struct {\n\terr error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/std/testing/iotest#errWriter.Write",
+                    "documentation": {
+                      "identifier": "errWriter.Write",
+                      "newPage": false,
+                      "searchKey": "iotest.errWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w errWriter) Write([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w errWriter) Write([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/std/testing/iotest#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#NewWriteLogger",
+              "documentation": {
+                "identifier": "NewWriteLogger",
+                "newPage": false,
+                "searchKey": "iotest.NewWriteLogger",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewWriteLogger(prefix string, w io.Writer) io.Writer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewWriteLogger(prefix string, w io.Writer) io.Writer\n```\n\nNewWriteLogger returns a writer that behaves like w except that it logs (using log.Printf) each write to standard error, printing the prefix and the hexadecimal data written. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#NewReadLogger",
+              "documentation": {
+                "identifier": "NewReadLogger",
+                "newPage": false,
+                "searchKey": "iotest.NewReadLogger",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewReadLogger(prefix string, r io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewReadLogger(prefix string, r io.Reader) io.Reader\n```\n\nNewReadLogger returns a reader that behaves like r except that it logs (using log.Printf) each read to standard error, printing the prefix and the hexadecimal data read. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#OneByteReader",
+              "documentation": {
+                "identifier": "OneByteReader",
+                "newPage": false,
+                "searchKey": "iotest.OneByteReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func OneByteReader(r io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc OneByteReader(r io.Reader) io.Reader\n```\n\nOneByteReader returns a Reader that implements each non-empty Read by reading one byte from r. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#HalfReader",
+              "documentation": {
+                "identifier": "HalfReader",
+                "newPage": false,
+                "searchKey": "iotest.HalfReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HalfReader(r io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HalfReader(r io.Reader) io.Reader\n```\n\nHalfReader returns a Reader that implements Read by reading half as many requested bytes from r. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#DataErrReader",
+              "documentation": {
+                "identifier": "DataErrReader",
+                "newPage": false,
+                "searchKey": "iotest.DataErrReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DataErrReader(r io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DataErrReader(r io.Reader) io.Reader\n```\n\nDataErrReader changes the way errors are handled by a Reader. Normally, a Reader returns an error (typically EOF) from the first Read call after the last piece of data is read. DataErrReader wraps a Reader and changes its behavior so the final error is returned along with the final data, instead of in the first call after the final data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TimeoutReader",
+              "documentation": {
+                "identifier": "TimeoutReader",
+                "newPage": false,
+                "searchKey": "iotest.TimeoutReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TimeoutReader(r io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TimeoutReader(r io.Reader) io.Reader\n```\n\nTimeoutReader returns ErrTimeout on the second read with no data. Subsequent calls to read succeed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#ErrReader",
+              "documentation": {
+                "identifier": "ErrReader",
+                "newPage": false,
+                "searchKey": "iotest.ErrReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ErrReader(err error) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ErrReader(err error) io.Reader\n```\n\nErrReader returns an io.Reader that returns 0, err from all Read calls. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestReader",
+              "documentation": {
+                "identifier": "TestReader",
+                "newPage": false,
+                "searchKey": "iotest.TestReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReader(r io.Reader, content []byte) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReader(r io.Reader, content []byte) error\n```\n\nTestReader tests that reading from r returns the expected file content. It does reads of different sizes, until EOF. If r implements io.ReaderAt or io.Seeker, TestReader also checks that those operations behave as they should. \n\nIf TestReader finds any misbehaviors, it returns an error reporting them. The error text may span multiple lines. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TruncateWriter",
+              "documentation": {
+                "identifier": "TruncateWriter",
+                "newPage": false,
+                "searchKey": "iotest.TruncateWriter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TruncateWriter(w io.Writer, n int64) io.Writer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TruncateWriter(w io.Writer, n int64) io.Writer\n```\n\nTruncateWriter returns a Writer that writes to w but stops silently after n bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestWriteLogger",
+              "documentation": {
+                "identifier": "TestWriteLogger",
+                "newPage": false,
+                "searchKey": "iotest.TestWriteLogger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteLogger(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteLogger(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestWriteLogger_errorOnWrite",
+              "documentation": {
+                "identifier": "TestWriteLogger_errorOnWrite",
+                "newPage": false,
+                "searchKey": "iotest.TestWriteLogger_errorOnWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteLogger_errorOnWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteLogger_errorOnWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestReadLogger",
+              "documentation": {
+                "identifier": "TestReadLogger",
+                "newPage": false,
+                "searchKey": "iotest.TestReadLogger",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadLogger(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadLogger(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestReadLogger_errorOnRead",
+              "documentation": {
+                "identifier": "TestReadLogger_errorOnRead",
+                "newPage": false,
+                "searchKey": "iotest.TestReadLogger_errorOnRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadLogger_errorOnRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadLogger_errorOnRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestOneByteReader_nonEmptyReader",
+              "documentation": {
+                "identifier": "TestOneByteReader_nonEmptyReader",
+                "newPage": false,
+                "searchKey": "iotest.TestOneByteReader_nonEmptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOneByteReader_nonEmptyReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOneByteReader_nonEmptyReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestOneByteReader_emptyReader",
+              "documentation": {
+                "identifier": "TestOneByteReader_emptyReader",
+                "newPage": false,
+                "searchKey": "iotest.TestOneByteReader_emptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOneByteReader_emptyReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOneByteReader_emptyReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestHalfReader_nonEmptyReader",
+              "documentation": {
+                "identifier": "TestHalfReader_nonEmptyReader",
+                "newPage": false,
+                "searchKey": "iotest.TestHalfReader_nonEmptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHalfReader_nonEmptyReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHalfReader_nonEmptyReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestHalfReader_emptyReader",
+              "documentation": {
+                "identifier": "TestHalfReader_emptyReader",
+                "newPage": false,
+                "searchKey": "iotest.TestHalfReader_emptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHalfReader_emptyReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHalfReader_emptyReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestTimeOutReader_nonEmptyReader",
+              "documentation": {
+                "identifier": "TestTimeOutReader_nonEmptyReader",
+                "newPage": false,
+                "searchKey": "iotest.TestTimeOutReader_nonEmptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeOutReader_nonEmptyReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeOutReader_nonEmptyReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestTimeOutReader_emptyReader",
+              "documentation": {
+                "identifier": "TestTimeOutReader_emptyReader",
+                "newPage": false,
+                "searchKey": "iotest.TestTimeOutReader_emptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeOutReader_emptyReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeOutReader_emptyReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestDataErrReader_nonEmptyReader",
+              "documentation": {
+                "identifier": "TestDataErrReader_nonEmptyReader",
+                "newPage": false,
+                "searchKey": "iotest.TestDataErrReader_nonEmptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDataErrReader_nonEmptyReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDataErrReader_nonEmptyReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestDataErrReader_emptyReader",
+              "documentation": {
+                "identifier": "TestDataErrReader_emptyReader",
+                "newPage": false,
+                "searchKey": "iotest.TestDataErrReader_emptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDataErrReader_emptyReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDataErrReader_emptyReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestErrReader",
+              "documentation": {
+                "identifier": "TestErrReader",
+                "newPage": false,
+                "searchKey": "iotest.TestErrReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestStringsReader",
+              "documentation": {
+                "identifier": "TestStringsReader",
+                "newPage": false,
+                "searchKey": "iotest.TestStringsReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStringsReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStringsReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/std/testing/iotest#TestTruncateWriter",
+              "documentation": {
+                "identifier": "TestTruncateWriter",
+                "newPage": false,
+                "searchKey": "iotest.TestTruncateWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTruncateWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTruncateWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
