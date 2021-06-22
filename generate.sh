@@ -15,6 +15,7 @@ pushd examples/gorilla-mux
 lsif-static-doc ../../repos/gorilla-mux/dump.lsif . .                         
 popd
 
+go clean -cache # https://github.com/golang/go/issues/45890
 pushd repos/golang-go/src && lsif-go && popd
 mkdir -p examples/golang-go
 pushd examples/golang-go
